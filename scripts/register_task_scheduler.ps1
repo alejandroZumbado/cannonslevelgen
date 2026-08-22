@@ -16,8 +16,14 @@ $python = (Get-Command python).Source
 $script = Join-Path $projectRoot "run_learning_cycle.py"
 $logFile = Join-Path $projectRoot "state\task_scheduler.log"
 
-$action = New-ScheduledTaskAction -Execute $python -Argument "`"$script`" >> `"$logFile`" 2>&1" -WorkingDirectory $projectRoot
-$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 15) -RepetitionDuration ([TimeSpan]::MaxValue)
+# cmd.exe /c is required for ">>" redirection to actually work — Task
+# Scheduler calls CreateProcess directly on $python, it does not go through a
+# shell, so passing ">>" straight to python.exe would just be a literal (and
+# meaningless) argument to python, not a redirect.
+$action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"`"$python`" `"$script`" >> `"$logFile`" 2>&1`"" -WorkingDirectory $projectRoot
+# Task Scheduler's XML schema rejects [TimeSpan]::MaxValue (duration out of
+# range) — 10 years comfortably covers a month-long run without hitting that.
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 15) -RepetitionDuration (New-TimeSpan -Days 3650)
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopOnIdleEnd -ExecutionTimeLimit (New-TimeSpan -Minutes 10)
 
 Register-ScheduledTask -TaskName "CannonsLevelGen-LearningCycle" `

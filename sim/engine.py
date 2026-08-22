@@ -160,11 +160,22 @@ class GameEngine:
 
 def run_level(level: Level, policy, max_rounds: int = 200) -> GameEngine:
     """Plays `level` to completion using `policy.choose_action(engine) -> Action`.
-    Returns the finished engine (engine.won tells the outcome)."""
+    Returns the finished engine (engine.won tells the outcome).
+
+    A policy that raises (bad logic, malformed action, whatever) or returns an
+    action apply_action rejects counts as an immediate loss for that level,
+    not a crash — these are AI-generated policies benchmarked unattended for
+    a month; a buggy candidate must score badly, not take the process down.
+    This was not theoretical: a real scheduled run hit exactly this."""
     engine = GameEngine(level)
     rounds = 0
     while not engine.is_over() and rounds < max_rounds:
-        action = policy.choose_action(engine)
-        engine.play_round(action)
+        try:
+            action = policy.choose_action(engine)
+            engine.play_round(action)
+        except Exception:  # noqa: BLE001 — deliberately broad, see docstring
+            engine.game_ended = True
+            engine.won = False
+            break
         rounds += 1
     return engine
