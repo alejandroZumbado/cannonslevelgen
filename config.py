@@ -1,0 +1,55 @@
+"""Loads .env (no external dependency — a hand-rolled parser is enough for
+KEY=VALUE lines) and exposes project-wide constants."""
+from __future__ import annotations
+
+import os
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+ENV_PATH = ROOT / ".env"
+
+
+def _load_env(path: Path) -> None:
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key, value = key.strip(), value.strip()
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_env(ENV_PATH)
+
+AI_PROVIDER = os.environ.get("AI_PROVIDER", "groq")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5")
+
+# Groq free tier for openai/gpt-oss-120b (verified 2026-08-21, see .claude/groq-status.md
+# in the Cannons repo — re-check console.groq.com/docs/models if this pipeline starts
+# getting 429s, the catalog has changed before without notice).
+GROQ_RPM_LIMIT = 30
+GROQ_TPM_LIMIT = 8_000
+GROQ_RPD_LIMIT = 1_000
+GROQ_TPD_LIMIT = 200_000
+
+# Stay under the daily cap with margin so a slightly-off token estimate never
+# causes a hard 429 mid-cycle.
+DAILY_TOKEN_BUDGET = int(os.environ.get("DAILY_TOKEN_BUDGET", 180_000))
+
+CANNONS_REPO = Path(os.environ.get("CANNONS_REPO_PATH", ROOT.parent / "Cannons"))
+INCOMING_LEVELS_DIR = CANNONS_REPO / "GeneratedLevels" / "incoming"
+
+STATE_DIR = ROOT / "state"
+KNOWLEDGE_DIR = ROOT / "knowledge"
+LEARNING_LOG_DIR = ROOT / "learning_log"
+POLICY_HISTORY_DIR = ROOT / "policy" / "history"
+AUDIT_DIR = ROOT / "audit"
+
+for d in (STATE_DIR, KNOWLEDGE_DIR, LEARNING_LOG_DIR, POLICY_HISTORY_DIR, INCOMING_LEVELS_DIR, AUDIT_DIR):
+    d.mkdir(parents=True, exist_ok=True)
