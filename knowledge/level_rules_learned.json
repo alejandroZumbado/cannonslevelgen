@@ -47,5 +47,12 @@
     "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=4, columns=[0, 2]) played with current policy (baseline_v0): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "Hypothesis: Horizontal crowding does not impede the cannon’s line of fire; a pirate can be damaged across multiple rows even if other pirates occupy the same row in adjacent columns, so a lone high‑HP pirate surrounded horizontally can be killed without any merges as long as enough rows exist to deliver the required base damage. => confirmed NOT winnable by test level.",
+    "evidence": "level 'A1234' (6 pirates, 5 filas, max_hp=5, columns=[0, 1, 2, 3, 4]) played with current policy (baseline_v0): LOST in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
