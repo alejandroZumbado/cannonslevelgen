@@ -40,5 +40,12 @@
     "evidence": "level 'Z0001' (6 pirates, 2 filas, max_hp=1, columns=[0, 1, 2, 3, 4]) played with current policy (baseline_v0): LOST in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "A lone non‑final pirate (tipo 1) with HP = 4 is beatable without any merges as long as the level contains at least four filas (including the pirate’s own fila) and no other pirates occupy its column, because the cannon’s base damage = 1 can be applied once per fila. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=4, columns=[0, 2]) played with current policy (baseline_v0): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
