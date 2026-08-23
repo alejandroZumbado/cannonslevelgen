@@ -68,5 +68,12 @@
     "evidence": "level 'Z0001' (2 pirates, 4 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "**Hypothesis:**  \nIf, for each pirate in a given column, its HP does not exceed the count of filas from the pirate’s own fila down to the final fila (inclusive), then the level is winnable without performing any merges, regardless of other columns. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
