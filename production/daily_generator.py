@@ -17,6 +17,7 @@ from llm import client, audit
 from learning import knowledge
 from policy.loader import load_policy_from_file, PolicyLoadError
 from production.cannons_sync import push_generated_level
+from production.level_registry import scan_existing_levels, ensure_unique_password
 from sim.engine import run_level
 from sim.level import Level
 
@@ -58,13 +59,19 @@ def _extract_json(text: str) -> dict | None:
         return None
 
 
-def generate_one_level(level_number: int) -> Level | None:
+def generate_one_level(level_number: int, used_passwords: set[str]) -> Level | None:
     """Returns None if every attempt was tried and none beat the learned
     policy — a real, expected outcome (see main()), NOT the same thing as
     PolicyLoadError below, which callers should treat as an actual failure
     (there's no point retrying level generation if the policy itself is
     broken) and is deliberately left to propagate rather than being caught
-    here."""
+    here.
+
+    `level_number` and `used_passwords` come from level_registry.py scanning
+    the REAL Assets/Levels/ contents — don't trust the LLM's own levelNumber
+    field (it has no reliable way to know what's already there, and got this
+    badly wrong for real on the first cloud run: see level_registry.py's
+    docstring)."""
     policy = load_policy_from_file(CURRENT_POLICY_PATH)  # raises PolicyLoadError - let it propagate
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
@@ -85,6 +92,12 @@ def generate_one_level(level_number: int) -> Level | None:
                                outcome={"accepted": False, "reason": f"schema_error: {e}", "attempt": attempt})
             continue
 
+        # enforce, don't just ask nicely: the level number is ours to assign
+        # (the LLM's guess is discarded), and the password only gets replaced
+        # if it actually collides with something already in the game.
+        level.levelNumber = level_number
+        level.password = ensure_unique_password(level.password, used_passwords)
+
         engine = run_level(level, policy)
         outcome = {
             "accepted": engine.won, "attempt": attempt, "rounds_played": engine.rounds_played,
@@ -100,11 +113,28 @@ def generate_one_level(level_number: int) -> Level | None:
 
 
 def main() -> int:
-    level_number = int(sys.argv[1]) if len(sys.argv) > 1 else datetime.now().toordinal()
     exit_code = 0
 
+    if len(sys.argv) > 1:
+        level_number = int(sys.argv[1])
+        used_passwords: set[str] = set()
+    elif config.CANNONS_REPO.exists():
+        level_number, used_passwords = scan_existing_levels(config.CANNONS_REPO)
+        level_number += 1
+        print(f"scanned {config.CANNONS_REPO}: next level number = {level_number}, "
+              f"{len(used_passwords)} passwords already in use")
+    else:
+        # no Cannons checkout available (e.g. running this file standalone
+        # without the daily_production.yml workflow's second checkout) —
+        # can't know the real next number, so don't guess with something
+        # like today's date ordinal again (see level_registry.py docstring
+        # for how badly that went the first time).
+        print(f"Cannons repo not found at {config.CANNONS_REPO} and no level number given on the "
+              f"command line — refusing to guess a level number. Pass one explicitly to test standalone.")
+        return 1
+
     try:
-        level = generate_one_level(level_number)
+        level = generate_one_level(level_number, used_passwords)
     except PolicyLoadError as e:
         # unlike "no candidate won" below, this means production is broken,
         # not just unlucky today — worth a real red X.

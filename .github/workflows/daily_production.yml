@@ -20,6 +20,16 @@ on:
 permissions:
   contents: write
 
+# Same group as learning.yml ON PURPOSE — both workflows read/write the same
+# state/budget.json in this repo. Without a shared group, a learning cycle
+# and a production run could each check the remaining daily budget before
+# either has pushed its spend, and together spend past the real cap (each
+# only sees whatever was last committed, not what the other is mid-spending).
+# Queuing instead of running in parallel closes that race.
+concurrency:
+  group: cannonslevelgen-learning-cycle
+  cancel-in-progress: false
+
 jobs:
   daily-production:
     runs-on: ubuntu-latest

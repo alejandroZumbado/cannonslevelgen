@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
-from datetime import date
+from datetime import datetime, timezone
 
 import config
 
@@ -28,7 +28,12 @@ def _path():
 
 
 def _today() -> str:
-    return date.today().isoformat()
+    # UTC, not local system time — GitHub Actions runners are UTC, and this
+    # state file is now shared (via git_sync.py) between those runs and any
+    # local test runs on a machine set to a different timezone. Using local
+    # time would let the "day" boundary disagree between environments and
+    # reset the budget early/late depending on which one touched it last.
+    return datetime.now(timezone.utc).date().isoformat()
 
 
 def _load() -> _State:
