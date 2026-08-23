@@ -96,5 +96,12 @@
     "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "**Hypothesis:**  \nIf the pirates in a single column have strictly decreasing HP values from the topmost pirate to the bottommost pirate, the level is always winnable without performing any merges, even when the total HP in that column exceeds the total number of filas in the level. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=5, columns=[2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
