@@ -54,5 +54,12 @@
     "evidence": "level 'A1234' (6 pirates, 5 filas, max_hp=5, columns=[0, 1, 2, 3, 4]) played with current policy (baseline_v0): LOST in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "**Hypothesis:**  \nWhen the sum of all pirates’ HP in a level exceeds the total number of filas, the level cannot be cleared without performing at least one merge (i.e., base‑damage = 1 per fila is insufficient to reduce all HP to 0). => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=2, columns=[0, 1, 2, 3, 4]) played with current policy (danger_first_merge_v1): WON in 6 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
