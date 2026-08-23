@@ -82,5 +82,12 @@
     "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=3, columns=[0, 2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = 1 can be eliminated without any merges only if any pirate directly in front of it (in the same column on the immediately preceding fila) has HP ≤ 1; if that blocking pirate has HP ≥ 2, the level becomes unwinnable without performing a merge. => confirmed winnable by test level.",
+    "evidence": "level 'K1234' (2 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
