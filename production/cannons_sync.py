@@ -1,7 +1,7 @@
 """Commits and pushes a generated level file into the Cannons game repo
 itself (not this project's own repo — see git_sync.py for that).
 
-Cannons lives at github.com/mandrix/cannons, a separate repo from this one.
+Cannons lives at github.com/alejandroZumbado/cannons, a separate repo from this one.
 The daily production workflow (.github/workflows/daily_production.yml)
 checks it out into a side directory using a token with push access to BOTH
 repos (secrets.CANNONS_PUSH_TOKEN — the default per-workflow GITHUB_TOKEN
@@ -56,5 +56,5 @@ def push_generated_level(cannons_repo_path: Path, level_file: Path) -> bool:
         print(f"cannons_sync: git push failed: {out}")
         return False
 
-    print(f"cannons_sync: pushed {rel_path} to mandrix/cannons")
+    print(f"cannons_sync: pushed {rel_path} to alejandroZumbado/cannons")
     return True

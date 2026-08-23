@@ -1,7 +1,7 @@
 name: CannonsLevelGen Daily Production
 
 # Month-2+ workflow: generates ONE validated-winnable level and pushes it
-# straight into mandrix/cannons (GeneratedLevels/incoming/), fully cloud-side
+# straight into alejandroZumbado/cannons (GeneratedLevels/incoming/), fully cloud-side
 # — checks out BOTH repos on a disposable runner, no local machine involved.
 #
 # The `schedule` trigger is commented out ON PURPOSE. This pushes content
@@ -45,7 +45,7 @@ jobs:
       - name: Checkout Cannons (the game repo — separate push target)
         uses: actions/checkout@v4
         with:
-          repository: mandrix/cannons
+          repository: alejandroZumbado/cannons
           fetch-depth: 0
           token: ${{ secrets.CANNONS_PUSH_TOKEN }}
           path: cannons_checkout

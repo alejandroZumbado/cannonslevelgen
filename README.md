@@ -43,21 +43,26 @@ relates to `learning_log/` and `state/budget.json`).
 
 **Month 2+ — daily production (cheap, ~1 LLM call/day):**
 `production/daily_generator.py` uses the policy and rules learned in month 1
-to generate and validate one level, then drops it as JSON in
-`../Cannons/GeneratedLevels/incoming/`.
+to generate and validate one level, then pushes it as JSON into
+`GeneratedLevels/incoming/` in the Cannons repo itself — see "Getting it into
+the actual game" below for how.
 
 ## Getting it into the actual game
 
-NOT wired up yet (deliberately deferred — month 1 doesn't produce levels).
-`production/daily_generator.py` currently writes straight to a local
-`../Cannons/GeneratedLevels/incoming/` folder, which only makes sense if this
-project and Cannons are checked out on the same machine. Since the learning
-phase moved to GitHub Actions (see above), month 2's delivery needs the same
-treatment: `daily_generator.py` pushing its one JSON/day to the `mandrix/cannons`
-GitHub repo (which already exists — `git@github.com:mandrix/cannons.git`),
-so you `git pull` it locally and run `Levels > Import Generated Levels
-(JSON)` (`Cannons/Assets/Editor/LevelImporter.cs`) in the Unity Editor. Not
-built yet — revisit this before month 2.
+Wired up and verified with real cloud runs: `.github/workflows/daily_production.yml`
+checks out both this repo and `alejandroZumbado/cannons` on the same disposable
+runner, generates one validated level using `production/level_registry.py` to
+pick the real next `levelNumber` and avoid password collisions (scanned from
+the actual `Assets/Levels/*.asset` files — don't reintroduce a guessed number
+like `datetime.now().toordinal()`, that shipped a `levelNumber: 739851` into
+the real game repo once already), and `production/cannons_sync.py` pushes it
+straight to `GeneratedLevels/incoming/` there. You `git pull` it locally and
+run `Levels > Import Generated Levels (JSON)`
+(`Cannons/Assets/Editor/LevelImporter.cs`) in the Unity Editor — untested
+inside the actual Unity Editor as of this writing, verify it there before
+trusting it blindly. The `schedule` trigger in `daily_production.yml` is
+still commented out on purpose (see the file) until month 1's learned policy
+is trusted enough to publish into the game repo unattended.
 
 ## Setup
 
