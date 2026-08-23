@@ -7,7 +7,10 @@ on:
     # so it doesn't need your PC on. GitHub may delay a schedule slightly
     # under load; that's fine, llm/budget.py gates spend by calendar day,
     # not by exact cron precision.
-    - cron: '*/15 * * * *'
+    # Offset from :00/:15/:30/:45 on purpose — those are the most oversubscribed
+    # minutes on GitHub's scheduler (everyone's cron fires there), which caused
+    # real multi-hour delays right after this schedule went live.
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
     # manual "Run workflow" button in the Actions tab, for testing
 
