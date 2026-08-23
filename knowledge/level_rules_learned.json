@@ -89,5 +89,12 @@
     "evidence": "level 'K1234' (2 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = 2 can be cleared without any merges if the pirate directly in front of it (same column, immediately preceding fila) has HP = 1 **and** there is at least one empty fila separating them, allowing the final pirate to receive two separate base‑damage hits (one in the empty fila’s wave and one in its own wave). => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
