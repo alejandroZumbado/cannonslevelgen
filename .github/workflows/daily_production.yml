@@ -57,4 +57,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
           CI: true
-        run: python production/daily_generator.py
+        # -m (not a bare path) so Python puts the repo root on sys.path —
+        # daily_generator.py does `import config`, `from llm import ...` etc,
+        # which only resolve when run as a module from repo root, not when
+        # invoked as production/daily_generator.py (that puts production/
+        # itself on sys.path[0] instead). Verified this failed for real on
+        # the first cloud run before this fix.
+        run: python -m production.daily_generator
