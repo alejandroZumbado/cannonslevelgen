@@ -59,11 +59,13 @@ def _extract_json(text: str) -> dict | None:
 
 
 def generate_one_level(level_number: int) -> Level | None:
-    try:
-        policy = load_policy_from_file(CURRENT_POLICY_PATH)
-    except PolicyLoadError as e:
-        print(f"cannot load current policy: {e}")
-        return None
+    """Returns None if every attempt was tried and none beat the learned
+    policy — a real, expected outcome (see main()), NOT the same thing as
+    PolicyLoadError below, which callers should treat as an actual failure
+    (there's no point retrying level generation if the policy itself is
+    broken) and is deliberately left to propagate rather than being caught
+    here."""
+    policy = load_policy_from_file(CURRENT_POLICY_PATH)  # raises PolicyLoadError - let it propagate
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
         system, user = _build_prompt(level_number)
@@ -100,11 +102,28 @@ def generate_one_level(level_number: int) -> Level | None:
 def main() -> int:
     level_number = int(sys.argv[1]) if len(sys.argv) > 1 else datetime.now().toordinal()
     exit_code = 0
-    level = generate_one_level(level_number)
+
+    try:
+        level = generate_one_level(level_number)
+    except PolicyLoadError as e:
+        # unlike "no candidate won" below, this means production is broken,
+        # not just unlucky today — worth a real red X.
+        print(f"cannot load current policy: {e}")
+        level = None
+        exit_code = 1
 
     if level is None:
-        print("failed to produce a winnable level today")
-        exit_code = 1
+        if exit_code == 0:
+            # every candidate the LLM proposed lost against the learned policy
+            # after MAX_ATTEMPTS retries — a real (and logged, and audited)
+            # outcome, not a crash. Same principle as NewsPulse's orchestrator:
+            # a cycle that produces nothing because nothing cleared the bar is
+            # a healthy no-op, not a failure — exit_code stays 0, otherwise
+            # this would paint the GitHub Actions run red every day the
+            # learned policy is still weak, which is expected early on, not
+            # an incident. (exit_code == 1 here instead means PolicyLoadError
+            # above — that message already printed, this stays quiet.)
+            print("no candidate level beat the learned policy today — nothing to publish, will try again next run")
     else:
         out_path = config.INCOMING_LEVELS_DIR / f"Level_{level.levelNumber}_{datetime.now():%Y%m%d}.json"
         level.save(out_path)
