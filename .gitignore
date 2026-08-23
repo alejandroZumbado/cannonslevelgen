@@ -2,6 +2,15 @@
 __pycache__/
 *.pyc
 
+# The daily production workflow checks out mandrix/cannons into this exact
+# path (see .github/workflows/daily_production.yml). It's a separate git
+# repo nested inside this one's workspace — without this ignore, `git add -A`
+# in git_sync.py treats its .git as a submodule boundary and commits a
+# gitlink (a phantom submodule reference) instead of leaving it alone. This
+# happened for real on the first cloud run; see git history around
+# "cannons_checkout" if this comment ever seems stale.
+cannons_checkout/
+
 # NOTE: state/, knowledge/, learning_log/, policy/history/, and audit/*.jsonl
 # are intentionally NOT ignored. This project runs on ephemeral GitHub Actions
 # runners (see .github/workflows/learning.yml) — nothing survives between
