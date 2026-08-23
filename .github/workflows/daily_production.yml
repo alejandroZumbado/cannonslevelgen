@@ -1,0 +1,60 @@
+name: CannonsLevelGen Daily Production
+
+# Month-2+ workflow: generates ONE validated-winnable level and pushes it
+# straight into mandrix/cannons (GeneratedLevels/incoming/), fully cloud-side
+# — checks out BOTH repos on a disposable runner, no local machine involved.
+#
+# The `schedule` trigger is commented out ON PURPOSE. This pushes content
+# into your actual game repo, which is a more consequential action than the
+# learning workflow (which only ever touches its own repo) — so it stays
+# manual (workflow_dispatch) until you've decided month 1's learned policy is
+# good enough to trust unattended. To go live: uncomment the schedule block
+# below and push.
+#
+# on:
+#   schedule:
+#     - cron: '0 6 * * *'   # once daily, 6am UTC — pick any time you like
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout CannonsLevelGen (this repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons (the game repo — separate push target)
+        uses: actions/checkout@v4
+        with:
+          repository: mandrix/cannons
+          fetch-depth: 0
+          token: ${{ secrets.CANNONS_PUSH_TOKEN }}
+          path: cannons_checkout
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate and push one level
+        env:
+          AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'groq' }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'openai/gpt-oss-120b' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          CI: true
+        run: python production/daily_generator.py

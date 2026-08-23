@@ -16,6 +16,7 @@ import config
 from llm import client, audit
 from learning import knowledge
 from policy.loader import load_policy_from_file, PolicyLoadError
+from production.cannons_sync import push_generated_level
 from sim.engine import run_level
 from sim.level import Level
 
@@ -98,15 +99,39 @@ def generate_one_level(level_number: int) -> Level | None:
 
 def main() -> int:
     level_number = int(sys.argv[1]) if len(sys.argv) > 1 else datetime.now().toordinal()
+    exit_code = 0
     level = generate_one_level(level_number)
+
     if level is None:
         print("failed to produce a winnable level today")
-        return 1
+        exit_code = 1
+    else:
+        out_path = config.INCOMING_LEVELS_DIR / f"Level_{level.levelNumber}_{datetime.now():%Y%m%d}.json"
+        level.save(out_path)
+        print(f"wrote {out_path}")
 
-    out_path = config.INCOMING_LEVELS_DIR / f"Level_{level.levelNumber}_{datetime.now():%Y%m%d}.json"
-    level.save(out_path)
-    print(f"wrote {out_path}")
-    return 0
+        if not config.CANNONS_REPO.exists():
+            print(f"Cannons repo not found at {config.CANNONS_REPO} — file written locally only, "
+                  f"not pushed. Set CANNONS_REPO_PATH if this should point somewhere else.")
+        else:
+            pushed = push_generated_level(config.CANNONS_REPO, out_path)
+            if not pushed:
+                print("did not push (see reason above) — the level file is still on disk, safe to retry")
+
+    # every attempt (successful or not) spent real tokens and wrote audit/budget
+    # state in THIS repo (CannonsLevelGen) — push that back regardless of outcome,
+    # same reasoning as run_learning_cycle.py's unconditional git_sync call.
+    try:
+        import git_sync
+        from datetime import timezone
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        git_sync.commit_and_push(f"[bot] daily production run - {now}")
+    except Exception:  # noqa: BLE001
+        import traceback
+        print("git_sync: failed, see traceback below (this run's own audit/budget state may be lost)")
+        traceback.print_exc()
+
+    return exit_code
 
 
 if __name__ == "__main__":
