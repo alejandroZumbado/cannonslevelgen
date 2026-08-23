@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "E:\Users\Alejandro\Opal\CannonsLevelGen\run_learning_cycle.py", line 31, in main
+    result = strategy_learner.run_cycle()
+  File "E:\Users\Alejandro\Opal\CannonsLevelGen\learning\strategy_learner.py", line 122, in run_cycle
+    candidate_score = evaluate(candidate_policy, suite)
+  File "E:\Users\Alejandro\Opal\CannonsLevelGen\sim\evaluate.py", line 29, in evaluate
+    engine = run_level(level, policy, max_rounds=max_rounds)
+  File "E:\Users\Alejandro\Opal\CannonsLevelGen\sim\engine.py", line 167, in run_level
+    action = policy.choose_action(engine)
+  File "<policy>", line 26, in choose_action
+  File "<policy>", line 50, in _simulate
+TypeError: unsupported operand type(s) for +=: 'Cannon' and 'int'
+[2026-08-22T16:58:21] learning cycle starting (budget remaining today: 166697 tokens, 7 calls made)
+  strategy_learner: unexpected error, see traceback below
+  level_designer: {'recorded': True, 'won': True, 'hypothesis': '**Hypothesis:**  \nA final pirate (\u202ftipo\u202f4\u202f) with HP\u202f=\u202f1 can be eliminated without any merges even when it is blocked by another pirate in the same column on the immediately preceding fila.', 'level_password': 'B5678'}
+[2026-08-22T16:58:55] cycle done (budget remaining: 160061 tokens)
+[2026-08-22T17:13:16] learning cycle starting (budget remaining today: 160061 tokens, 9 calls made)
+  strategy_learner: {'promoted': False, 'reason': 'not_better', 'old_win_rate': 0.8275862068965517, 'candidate_win_rate': 0.3103448275862069}
+  level_designer: {'recorded': True, 'won': True, 'hypothesis': '**Hypothesis:**  \nA non‑final pirate (tipo\u202f1‑3) with HP\u202f≥\u202f5 cannot be eliminated without performing at least one merge, even when it is the only pirate in its column and there are no other pirates in the level that could be merged with it.', 'level_password': 'B5678'}
+[2026-08-22T17:13:54] cycle done (budget remaining: 153339 tokens)
+[2026-08-22T17:28:14] learning cycle starting (budget remaining today: 153339 tokens, 11 calls made)
+  strategy_learner: {'promoted': False, 'reason': 'not_better', 'old_win_rate': 0.7586206896551724, 'candidate_win_rate': 0.6896551724137931}
+  level_designer: {'recorded': True, 'won': True, 'hypothesis': '**Hypothesis:**  \nA pirate that is blocked by another pirate in the same column can still be eliminated without any merges, provided the blocking pirate is killed first and there are enough remaining rows (including the row where the blocked pirate appears) for the cannon’s base damage\u202f=\u202f1 to be applied once per row and reduce the blocked pirate’s HP to\u202f0.', 'level_password': 'A1234'}
+[2026-08-22T17:28:49] cycle done (budget remaining: 147477 tokens)
+[2026-08-22T17:30:35] learning cycle starting (budget remaining today: 147477 tokens, 13 calls made)
+  strategy_learner: {'promoted': False, 'reason': 'not_better', 'old_win_rate': 0.8620689655172413, 'candidate_win_rate': 0.8620689655172413}
+  level_designer: {'recorded': True, 'won': False, 'hypothesis': '**Hypothesis:**  \nIf a single fila contains pirates in all five columns (i.e., five pirates), the level cannot be cleared without performing at least one merge, regardless of the pirates’ HP (as long as each HP\u202f≥\u202f1).', 'level_password': 'Z0001'}
+[2026-08-22T17:31:11] cycle done (budget remaining: 140931 tokens)

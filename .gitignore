@@ -1,8 +1,10 @@
 .env
 __pycache__/
 *.pyc
-state/
-knowledge/
-learning_log/
-policy/history/
-audit/*.jsonl
+
+# NOTE: state/, knowledge/, learning_log/, policy/history/, and audit/*.jsonl
+# are intentionally NOT ignored. This project runs on ephemeral GitHub Actions
+# runners (see .github/workflows/learning.yml) — nothing survives between
+# runs except what's committed back to the repo, same pattern as NewsPulse's
+# pipeline/publisher.py. If you ever move this back to running only on your
+# own always-on machine, you can re-ignore these; until then, don't.

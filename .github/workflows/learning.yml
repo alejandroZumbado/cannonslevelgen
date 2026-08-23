@@ -1,0 +1,49 @@
+name: CannonsLevelGen Learning Cycle
+
+on:
+  schedule:
+    # every 15 minutes, all day, every day — same cadence this ran at
+    # locally under Windows Task Scheduler before moving to GitHub Actions
+    # so it doesn't need your PC on. GitHub may delay a schedule slightly
+    # under load; that's fine, llm/budget.py gates spend by calendar day,
+    # not by exact cron precision.
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    # manual "Run workflow" button in the Actions tab, for testing
+
+permissions:
+  contents: write   # needed for git_sync.py to push policy/knowledge/audit back
+
+concurrency:
+  group: cannonslevelgen-learning-cycle
+  cancel-in-progress: false   # queue, don't kill an in-progress cycle
+
+jobs:
+  learning-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # full history so `git pull --rebase` in git_sync.py works
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run one learning cycle
+        env:
+          AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'groq' }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'openai/gpt-oss-120b' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CI: true
+        run: python run_learning_cycle.py

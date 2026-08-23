@@ -35,7 +35,11 @@ $action = New-ScheduledTaskAction -Execute "wscript.exe" -Argument "`"$vbsPath`"
 # Task Scheduler's XML schema rejects [TimeSpan]::MaxValue (duration out of
 # range) — 10 years comfortably covers a month-long run without hitting that.
 $trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 15) -RepetitionDuration (New-TimeSpan -Days 3650)
-$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopOnIdleEnd -ExecutionTimeLimit (New-TimeSpan -Minutes 10) -Hidden
+# AllowStartIfOnBatteries / DontStopIfGoingOnBatteries: this is meant to run
+# unattended for months, including on a laptop that's sometimes unplugged —
+# without these it silently stops (no error, just skipped runs) whenever the
+# machine isn't on AC power, which could go unnoticed for a long time.
+$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopOnIdleEnd -ExecutionTimeLimit (New-TimeSpan -Minutes 10) -Hidden -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 
 Register-ScheduledTask -TaskName "CannonsLevelGen-LearningCycle" `
     -Action $action -Trigger $trigger -Settings $settings -Force `

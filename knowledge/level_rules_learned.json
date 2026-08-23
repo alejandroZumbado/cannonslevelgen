@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-08-22",
+    "statement": "A pirate that is in the same column as another pirate but separated by at least one empty fila is no longer blocked; the cannon can hit it without needing a merge. => confirmed winnable by test level.",
+    "evidence": "level 'B5678' (3 pirates, 5 filas, max_hp=2, columns=[0, 2]) played with current policy (baseline_v0): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
+  },
+  {
+    "date": "2026-08-22",
+    "statement": "**Hypothesis:**  \nIf the final pirate (tipo 4) has HP > 1 and is placed in the same column as a pirate in the immediately preceding fila, the level cannot be cleared without performing a merge (i.e., the cannon’s base damage alone is insufficient to kill the final pirate). => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=2, columns=[2]) played with current policy (baseline_v0): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
+  },
+  {
+    "date": "2026-08-22",
+    "statement": "**Hypothesis:**  \nA final pirate ( tipo 4 ) with HP = 1 can be eliminated without any merges even when it is blocked by another pirate in the same column on the immediately preceding fila. => confirmed winnable by test level.",
+    "evidence": "level 'B5678' (2 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (baseline_v0): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
+  },
+  {
+    "date": "2026-08-22",
+    "statement": "**Hypothesis:**  \nA non‑final pirate (tipo 1‑3) with HP ≥ 5 cannot be eliminated without performing at least one merge, even when it is the only pirate in its column and there are no other pirates in the level that could be merged with it. => confirmed winnable by test level.",
+    "evidence": "level 'B5678' (2 pirates, 3 filas, max_hp=5, columns=[0, 2]) played with current policy (baseline_v0): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
+  },
+  {
+    "date": "2026-08-22",
+    "statement": "**Hypothesis:**  \nA pirate that is blocked by another pirate in the same column can still be eliminated without any merges, provided the blocking pirate is killed first and there are enough remaining rows (including the row where the blocked pirate appears) for the cannon’s base damage = 1 to be applied once per row and reduce the blocked pirate’s HP to 0. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (3 pirates, 4 filas, max_hp=3, columns=[0, 2]) played with current policy (baseline_v0): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
+  },
+  {
+    "date": "2026-08-22",
+    "statement": "**Hypothesis:**  \nIf a single fila contains pirates in all five columns (i.e., five pirates), the level cannot be cleared without performing at least one merge, regardless of the pirates’ HP (as long as each HP ≥ 1). => confirmed NOT winnable by test level.",
+    "evidence": "level 'Z0001' (6 pirates, 2 filas, max_hp=1, columns=[0, 1, 2, 3, 4]) played with current policy (baseline_v0): LOST in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
+  }
+]

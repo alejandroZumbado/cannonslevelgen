@@ -18,15 +18,26 @@ Two loops run continuously, one LLM call each, alternating:
   and a level built to test it, plays it with the current best policy, and
   records the empirical result to `knowledge/level_rules_learned.json`.
 
-Both are driven by `run_learning_cycle.py`, meant to run every ~15 minutes,
-all day, for about a month — see `scripts/register_task_scheduler.ps1`.
+Both are driven by `run_learning_cycle.py`, run every ~15 minutes, all day,
+by **`.github/workflows/learning.yml` — GitHub Actions, not your own PC.**
+Each run gets a fresh disposable VM; there is no local state to lose, because
+every run ends by committing+pushing whatever it learned back to this repo
+(`git_sync.py`, same pattern as the NewsPulse project's `publisher.py`) —
+the next run, on a different disposable VM, starts by checking that out.
+This means the learning phase keeps going even with your computer off.
+(`scripts/register_task_scheduler.ps1` still exists for local-machine testing
+— see "Running locally vs. in the cloud" below — but it is NOT what actually
+runs the month-long phase.)
+
 The daily token budget (`llm/budget.py`, default 180k tokens/day, under
-Groq's 200k free-tier cap) makes this safe to leave running unattended: once
-a day's budget is spent, cycles no-op until the next calendar day.
+Groq's 200k free-tier cap) is itself part of what gets committed
+(`state/budget.json`) — without that, every disposable VM would think it had
+a fresh 180k-token day, and the free-tier cap would mean nothing.
 
 Progress is human-readable in `learning_log/YYYY-MM-DD.md` (one file per day)
-— read that for a quick check-in. For a full audit — every call made, exact
-token cost, complete prompt/response, and what it achieved — see `audit/`
+— read that for a quick check-in, from anywhere, since it's just a file in
+this repo now. For a full audit — every call made, exact token cost,
+complete prompt/response, and what it achieved — see `audit/`
 (`python audit/report.py` for a readable rollup, `audit/README.md` for how it
 relates to `learning_log/` and `state/budget.json`).
 
@@ -37,13 +48,16 @@ to generate and validate one level, then drops it as JSON in
 
 ## Getting it into the actual game
 
-Both projects run on the same machine, so delivery is a plain local file, no
-git involved. In the Unity Editor: `Levels > Import Generated Levels (JSON)`
-(`Cannons/Assets/Editor/LevelImporter.cs`) reads everything in
-`GeneratedLevels/incoming/`, creates a `Level` ScriptableObject + registers it
-in `LevelDatabase` the same way the existing `LevelGenerator.cs` does, and
-moves the source JSON to `GeneratedLevels/processed/`. Nothing is auto-added
-to the game without you running that menu item.
+NOT wired up yet (deliberately deferred — month 1 doesn't produce levels).
+`production/daily_generator.py` currently writes straight to a local
+`../Cannons/GeneratedLevels/incoming/` folder, which only makes sense if this
+project and Cannons are checked out on the same machine. Since the learning
+phase moved to GitHub Actions (see above), month 2's delivery needs the same
+treatment: `daily_generator.py` pushing its one JSON/day to the `mandrix/cannons`
+GitHub repo (which already exists — `git@github.com:mandrix/cannons.git`),
+so you `git pull` it locally and run `Levels > Import Generated Levels
+(JSON)` (`Cannons/Assets/Editor/LevelImporter.cs`) in the Unity Editor. Not
+built yet — revisit this before month 2.
 
 ## Setup
 
@@ -53,26 +67,33 @@ python tests/test_engine.py        # sanity-check the simulator matches the game
 ```
 
 `.env` already has `GROQ_API_KEY` / `ANTHROPIC_API_KEY` (moved here from
-`Cannons/.env`, which no longer has them). `AI_PROVIDER` picks which one
+`Cannons/.env`, which no longer has them) — used for local runs. In GitHub
+Actions the same values live as **repo secrets**, not in `.env` (which is
+gitignored and never leaves your machine). `AI_PROVIDER` picks which one
 `llm/client.py` calls; Groq is free-tier, Anthropic is pay-per-token (used as
 overflow if you ever want to burn past the Groq daily cap on a given day).
 
-To start the month-1 learning phase for real:
-```
-.\scripts\register_task_scheduler.ps1
-```
-This registers a Windows Task Scheduler job. It is NOT run automatically by
-anything else — you run it once, deliberately, when ready.
+The month-1 learning phase runs on its own via
+`.github/workflows/learning.yml` once this repo is pushed to GitHub with
+those secrets set — nothing further to run or leave open on your machine.
 
-To run a single cycle manually (e.g. to sanity-check the wiring before
-committing to a month):
-```
-python run_learning_cycle.py
-```
+### Running locally vs. in the cloud
+
+Running `python run_learning_cycle.py` locally still works exactly like the
+GitHub Actions run does — same code, same git_sync.py push at the end — it's
+just one more contributor to the same repo's history, useful for testing a
+change to the learning loop itself before it goes out to the scheduled job.
+`scripts/register_task_scheduler.ps1` (Windows Task Scheduler, every 15 min)
+is kept only for that kind of local testing loop; **do not run it at the same
+time as the GitHub Actions workflow is enabled** — both would spend against
+the same Groq key with no coordination between them, since each only knows
+about the budget state in its own worktree until the next push/pull.
 
 ## Layout
 
 ```
+.github/workflows/learning.yml   cron (every 15 min) + manual trigger, runs on GitHub's own VMs
+git_sync.py     commits+pushes runtime state back to this repo at the end of every cycle
 sim/            headless game engine — level schema, round simulation, benchmark suites, scoring
 policy/         current.py = active strategy (AI-rewritten), baseline.py = fixed v0 reference, history/ = every past version
 llm/            Groq/Anthropic REST client + persisted daily token budget
