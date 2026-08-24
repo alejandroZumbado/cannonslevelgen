@@ -16,12 +16,28 @@ from pathlib import Path
 
 import config
 from llm import client, budget, audit
-from learning import knowledge
+from learning import knowledge, strategy_history
 from policy.loader import load_policy_from_file, load_policy_from_source, PolicyLoadError
 from sim.benchmark import fixed_suite, random_suite
 from sim.evaluate import evaluate
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
+
+# Cycles in a row without a promotion before switching from "propose a full
+# rewrite" to "propose one small targeted fix to the current champion". Added
+# 2026-08-24 after the rewrite-only framing went 10 straight cycles rejected
+# (only 1 promotion ever, 76%->79%, in the whole history so far) — a full
+# redesign every time lets the LLM bounce between different-but-equally-
+# mediocre approaches instead of actually improving on the best one found.
+_REFINE_MODE_STREAK_THRESHOLD = 3
+
+# 25 random + 4 fixed (29 total) gave noisy win-rate deltas of several
+# percentage points between otherwise-identical policies just from which
+# random levels got drawn (verified empirically 2026-08-24) — enough to
+# plausibly reject a genuinely-better candidate as "not better". Bumped to
+# 100 random + 4 fixed; simulation is pure Python with no LLM cost, so this
+# is free (measured <20ms for the whole suite even at 150).
+_RANDOM_SUITE_SIZE = 100
 
 _ENGINE_SPEC = """\
 Interface you can rely on (do not invent other attributes/methods):
@@ -58,14 +74,44 @@ def _extract_code(text: str) -> str | None:
     return match.group(1).strip() if match else None
 
 
-def _build_prompt(current_source: str, current_score, rng_seed: int) -> tuple[str, str]:
-    system = (
-        "You are iterating on a game-playing policy for a small tower-defense game "
-        "called Cannons. You write plain Python, no imports, no I/O. Your goal is a "
-        "policy that wins as many levels as possible. You have full freedom to "
-        "redesign the strategy, including using lookahead/simulation over the action "
-        "list if useful — engine objects are plain data, cheap to reason about."
+def _build_prompt(current_source: str, current_score, rng_seed: int, *,
+                   refine_mode: bool, recent_attempts: str) -> tuple[str, str]:
+    recent_block = (
+        f"\nRecently rejected attempts — do NOT propose something that amounts to the "
+        f"same idea again, they already lost to the current champion:\n{recent_attempts}\n"
+        if recent_attempts else ""
     )
+
+    if refine_mode:
+        system = (
+            "You are iterating on a game-playing policy for a small tower-defense game "
+            "called Cannons. You write plain Python, no imports, no I/O. The last several "
+            "full-rewrite proposals all failed to beat the current champion policy — stop "
+            "redesigning from scratch and instead make ONE small, targeted change to the "
+            "champion below that fixes a specific weakness you can identify."
+        )
+        task = (
+            "The current policy is a proven champion — full rewrites keep losing to it. "
+            "Propose ONE small, targeted change to THIS EXACT policy (not a redesign): "
+            "adjust one threshold, add one new condition/branch, reorder one priority, or "
+            "fix one specific case you can point to. Keep everything else identical. "
+            "State in 1-2 sentences exactly which weakness of the current policy (ideally "
+            "referencing a concrete column/HP/round scenario) your change addresses."
+        )
+    else:
+        system = (
+            "You are iterating on a game-playing policy for a small tower-defense game "
+            "called Cannons. You write plain Python, no imports, no I/O. Your goal is a "
+            "policy that wins as many levels as possible. You have full freedom to "
+            "redesign the strategy, including using lookahead/simulation over the action "
+            "list if useful — engine objects are plain data, cheap to reason about."
+        )
+        task = (
+            "Propose an improved full replacement for this policy. Explain in 2-3 sentences "
+            "what idea you're trying that's genuinely different from the recently rejected "
+            "attempts above, not a small variation on the same theme."
+        )
+
     user = f"""{_ENGINE_SPEC}
 
 Current policy source (win rate {current_score.win_rate:.2%} over {current_score.total} test levels):
@@ -76,8 +122,8 @@ Current policy source (win rate {current_score.win_rate:.2%} over {current_score
 
 Learned rules so far (from independent play-testing, may be useful context):
 {knowledge.rules_as_prompt_block()}
-
-Propose an improved full replacement for this policy. Requirements:
+{recent_block}
+{task} Requirements:
 - Must define `class Policy` with method `choose_action(self, engine)`.
 - No imports, no file/network access, no infinite loops.
 - Keep it deterministic (no randomness) so benchmarking is reproducible.
@@ -97,16 +143,23 @@ def run_cycle() -> dict:
     current_source = CURRENT_POLICY_PATH.read_text(encoding="utf-8")
     current_policy = load_policy_from_file(CURRENT_POLICY_PATH)
 
-    suite = fixed_suite() + random_suite(n=25, seed=datetime.now().microsecond)
+    suite = fixed_suite() + random_suite(n=_RANDOM_SUITE_SIZE, seed=datetime.now().microsecond)
     current_score = evaluate(current_policy, suite)
 
-    system, user = _build_prompt(current_source, current_score, rng_seed=datetime.now().microsecond)
+    streak = strategy_history.consecutive_rejections()
+    refine_mode = streak >= _REFINE_MODE_STREAK_THRESHOLD
+    recent_attempts = strategy_history.recent_attempts_block()
+
+    system, user = _build_prompt(current_source, current_score, rng_seed=datetime.now().microsecond,
+                                  refine_mode=refine_mode, recent_attempts=recent_attempts)
     completion = client.complete(system, user, max_tokens=4000)
     response = completion.text
 
     code = _extract_code(response)
     if code is None:
         knowledge.append_log("strategy_learner: rejected", "LLM response had no python code block.")
+        strategy_history.record(promoted=False, win_rate=current_score.win_rate, candidate_win_rate=0.0,
+                                 summary="no python code block in response")
         outcome = {"promoted": False, "reason": "no_code_block"}
         audit.record_call(caller="strategy_learner", completion=completion, system=system, user=user, outcome=outcome)
         return outcome
@@ -115,6 +168,8 @@ def run_cycle() -> dict:
         candidate_policy = load_policy_from_source(code)
     except PolicyLoadError as e:
         knowledge.append_log("strategy_learner: rejected", f"Candidate failed to load: {e}")
+        strategy_history.record(promoted=False, win_rate=current_score.win_rate, candidate_win_rate=0.0,
+                                 summary=f"candidate failed to load: {e}")
         outcome = {"promoted": False, "reason": f"load_error: {e}"}
         audit.record_call(caller="strategy_learner", completion=completion, system=system, user=user, outcome=outcome)
         return outcome
@@ -132,10 +187,13 @@ def run_cycle() -> dict:
             f"(avg rounds {current_score.avg_rounds_played:.1f} -> {candidate_score.avg_rounds_played:.1f})\n\n"
             f"Reasoning given: {reasoning}",
         )
+        strategy_history.record(promoted=True, win_rate=current_score.win_rate,
+                                 candidate_win_rate=candidate_score.win_rate, summary=reasoning)
         outcome = {
             "promoted": True,
             "old_win_rate": current_score.win_rate,
             "new_win_rate": candidate_score.win_rate,
+            "refine_mode": refine_mode,
         }
         audit.record_call(caller="strategy_learner", completion=completion, system=system, user=user, outcome=outcome)
         return outcome
@@ -145,11 +203,14 @@ def run_cycle() -> dict:
         f"candidate win rate {candidate_score.win_rate:.2%} vs current {current_score.win_rate:.2%}\n\n"
         f"Reasoning given: {reasoning}",
     )
+    strategy_history.record(promoted=False, win_rate=current_score.win_rate,
+                             candidate_win_rate=candidate_score.win_rate, summary=reasoning)
     outcome = {
         "promoted": False,
         "reason": "not_better",
         "old_win_rate": current_score.win_rate,
         "candidate_win_rate": candidate_score.win_rate,
+        "refine_mode": refine_mode,
     }
     audit.record_call(caller="strategy_learner", completion=completion, system=system, user=user, outcome=outcome)
     return outcome
