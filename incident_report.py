@@ -16,7 +16,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import incident_log  # noqa: E402
-from llm import rate_limits  # noqa: E402
+from llm import cooldown, rate_limits  # noqa: E402
 
 
 def main() -> int:
@@ -25,15 +25,32 @@ def main() -> int:
     quota_events = rate_limits.read_all()
     errors = incident_log.read_errors()
 
-    print("=== Provider rate-limit events (Groq/Anthropic's fault) ===")
+    print("=== Active cooldowns right now (calls being skipped, not spammed) ===")
+    any_active = False
+    for provider in ("groq", "anthropic"):
+        when = cooldown.resume_at(provider)
+        if when is not None:
+            any_active = True
+            print(f"  {provider}: paused until {when.isoformat(timespec='seconds')}")
+    if not any_active:
+        print("  (none — next call attempt will go through normally)")
+
+    print("\n=== Provider rate-limit events (Groq/Anthropic's fault) ===")
     if not quota_events:
         print("  (none recorded)")
     else:
-        gave_up = [e for e in quota_events if e["gave_up"]]
-        print(f"  {len(quota_events)} total 429s, {len(gave_up)} we gave up on "
-              f"(retry-after exceeded threshold)")
+        skipped = [e for e in quota_events if e["attempt"] == -1]
+        real_429s = [e for e in quota_events if e["attempt"] != -1]
+        gave_up = [e for e in real_429s if e["gave_up"]]
+        print(f"  {len(real_429s)} real 429 responses ({len(gave_up)} we gave up on), "
+              f"{len(skipped)} calls skipped entirely due to an active cooldown")
         for e in quota_events:
-            tag = "GAVE UP" if e["gave_up"] else "retried"
+            if e["attempt"] == -1:
+                tag = "SKIPPED (cooldown)"
+            elif e["gave_up"]:
+                tag = "GAVE UP"
+            else:
+                tag = "retried"
             print(f"  [{e['timestamp']}] {e['provider']} attempt {e['attempt']} "
                   f"wait={e['wait_seconds']}s -> {tag}")
             if verbose:

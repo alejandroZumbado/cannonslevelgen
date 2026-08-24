@@ -22,11 +22,12 @@ from __future__ import annotations
 import re
 import time
 from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 
 import requests
 
 import config
-from llm import budget, rate_limits
+from llm import budget, cooldown, rate_limits
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
@@ -77,8 +78,28 @@ def complete(system: str, user: str, max_tokens: int = 2000, provider: str | Non
     together with the outcome they derived from it, to llm.audit.record_call
     — this function only handles transport + the aggregate daily counter, it
     does not write the per-call audit trail itself (the caller knows the
-    outcome, this function doesn't)."""
+    outcome, this function doesn't).
+
+    Also raises ProviderQuotaExhausted WITHOUT making any HTTP request if
+    `provider` is still inside a persisted cooldown from a previous hard 429
+    (see llm/cooldown.py) — once a provider tells us its quota is exhausted
+    for N minutes, every call attempt in that window (including from a brand
+    new disposable CI runner with no memory of its own) skips straight to
+    this instead of spending another guaranteed-429 request."""
     provider = provider or config.AI_PROVIDER
+
+    cooling_until = cooldown.resume_at(provider)
+    if cooling_until is not None:
+        remaining = (cooling_until - datetime.now(timezone.utc)).total_seconds()
+        rate_limits.record(provider=provider, attempt=-1, wait_seconds=remaining, gave_up=True,
+                            detail=f"skipped call entirely — persisted cooldown active until "
+                                   f"{cooling_until.isoformat(timespec='seconds')}")
+        raise ProviderQuotaExhausted(
+            f"{provider} is in a persisted cooldown until {cooling_until.isoformat(timespec='seconds')} "
+            f"({remaining:.0f}s left) — skipping this call rather than spamming a provider we "
+            f"already know is out of quota."
+        )
+
     estimated_in = _estimate_tokens(system, user)
     budget.check_can_spend(estimated_in + max_tokens)
 
@@ -137,11 +158,13 @@ def _call_groq(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             if wait > config.MAX_RETRY_WAIT_SECONDS:
                 rate_limits.record(provider="groq", attempt=attempt, wait_seconds=wait,
                                     gave_up=True, detail=resp.text)
+                cooldown.set_cooldown("groq", datetime.now(timezone.utc) + timedelta(seconds=wait),
+                                       detail=resp.text)
                 raise ProviderQuotaExhausted(
                     f"Groq 429 with retry-after={wait:.0f}s exceeds the "
                     f"{config.MAX_RETRY_WAIT_SECONDS:.0f}s threshold — looks like a daily/hourly "
                     f"cap, not a TPM burst. Giving up now instead of sleeping past this job's "
-                    f"timeout. Raw: {resp.text[:300]}"
+                    f"timeout, and remembering not to try again until then. Raw: {resp.text[:300]}"
                 )
             rate_limits.record(provider="groq", attempt=attempt, wait_seconds=wait,
                                 gave_up=(attempt == _MAX_429_RETRIES), detail=resp.text)
@@ -150,6 +173,7 @@ def _call_groq(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             time.sleep(wait)
             continue
         resp.raise_for_status()
+        cooldown.clear("groq")
         data = resp.json()
         text = data["choices"][0]["message"]["content"]
         used = data.get("usage", {}).get("total_tokens") or _estimate_tokens(system, user, text)
@@ -183,10 +207,12 @@ def _call_anthropic(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             if wait > config.MAX_RETRY_WAIT_SECONDS:
                 rate_limits.record(provider="anthropic", attempt=attempt, wait_seconds=wait,
                                     gave_up=True, detail=resp.text)
+                cooldown.set_cooldown("anthropic", datetime.now(timezone.utc) + timedelta(seconds=wait),
+                                       detail=resp.text)
                 raise ProviderQuotaExhausted(
                     f"Anthropic 429 with retry-after={wait:.0f}s exceeds the "
-                    f"{config.MAX_RETRY_WAIT_SECONDS:.0f}s threshold — treating as a hard cap. "
-                    f"Raw: {resp.text[:300]}"
+                    f"{config.MAX_RETRY_WAIT_SECONDS:.0f}s threshold — treating as a hard cap, "
+                    f"remembering not to try again until then. Raw: {resp.text[:300]}"
                 )
             rate_limits.record(provider="anthropic", attempt=attempt, wait_seconds=wait,
                                 gave_up=(attempt == _MAX_429_RETRIES), detail=resp.text)
@@ -195,6 +221,7 @@ def _call_anthropic(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             time.sleep(wait)
             continue
         resp.raise_for_status()
+        cooldown.clear("anthropic")
         data = resp.json()
         text = "".join(block.get("text", "") for block in data.get("content", []))
         usage = data.get("usage", {})
