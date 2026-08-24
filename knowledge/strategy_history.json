@@ -124,5 +124,12 @@
     "win_rate": 0.8077,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary** – The original champion breaks ties only by lexical order, so when several actions give the same total‑deficit it can pick a spawn in a harmless column while a pirate is already at position 2 in anothe"
+  },
+  {
+    "timestamp": "2026-08-24T22:10:52+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary** – The original policy breaks ties only by lexical order, so when several actions give the same total‑deficit it can ignore the column that actually has the most urgent pirate (a pirate already at posit"
   }
 ]
