@@ -26,5 +26,12 @@
     "win_rate": 0.6923,
     "candidate_win_rate": 0.6827,
     "summary": "**Change summary**  \nThe original policy only checks whether the current cannon can kill the *front* pirate before it reaches the loss row. When a column contains a second pirate with high HP, the cannon may be sufficien"
+  },
+  {
+    "timestamp": "2026-08-24T07:45:43+00:00",
+    "promoted": false,
+    "win_rate": 0.7212,
+    "candidate_win_rate": 0.7212,
+    "summary": "**Change summary**  \nThe champion policy only reacts to the *front* pirate in each column. When the front pirate is easy to kill but a second pirate behind it still has more HP than the cannon can deliver before reaching"
   }
 ]
