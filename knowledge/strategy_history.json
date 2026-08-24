@@ -103,5 +103,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary**  \nThe champion sometimes chooses a “spawn” action that leaves the same total deficit as another spawn, but it does not favour the column where a pirate is closest to the loss row. When scores tie the p"
+  },
+  {
+    "timestamp": "2026-08-24T18:55:09+00:00",
+    "promoted": false,
+    "win_rate": 0.7981,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe champion sometimes ties on total deficit and then picks the first action in lexical order, which can ignore the column that is actually most urgent (a pirate already at position 2). I add a tie‑b"
   }
 ]
