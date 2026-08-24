@@ -42,6 +42,14 @@ GROQ_TPD_LIMIT = 200_000
 # causes a hard 429 mid-cycle.
 DAILY_TOKEN_BUDGET = int(os.environ.get("DAILY_TOKEN_BUDGET", 180_000))
 
+# If a 429's own retry-after exceeds this, llm/client.py treats it as a hard
+# provider-side quota (daily/hourly cap), not the known TPM burst, and gives
+# up immediately instead of sleeping through it. Learned the hard way on
+# 2026-08-23: a genuine TPM 429 backs off for single-digit-to-low-double-digit
+# seconds; sleeping past this instead means the job's own timeout-minutes
+# kills it mid-sleep with zero clean output. See llm/rate_limits.py.
+MAX_RETRY_WAIT_SECONDS = 90.0
+
 CANNONS_REPO = Path(os.environ.get("CANNONS_REPO_PATH", ROOT.parent / "Cannons"))
 INCOMING_LEVELS_DIR = CANNONS_REPO / "GeneratedLevels" / "incoming"
 

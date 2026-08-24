@@ -26,7 +26,7 @@ from dataclasses import dataclass
 import requests
 
 import config
-from llm import budget
+from llm import budget, rate_limits
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
@@ -44,6 +44,14 @@ _last_call_time = 0.0
 
 
 class LLMError(Exception):
+    pass
+
+
+class ProviderQuotaExhausted(LLMError):
+    """A 429 whose own retry-after is longer than config.MAX_RETRY_WAIT_SECONDS
+    — treated as a hard provider-side cap (daily/hourly), not the known TPM
+    burst. Callers should treat this like budget.BudgetExceeded: stop the
+    cycle cleanly, don't retry. See llm/rate_limits.py for why this exists."""
     pass
 
 
@@ -125,9 +133,20 @@ def _call_groq(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             timeout=120,
         )
         if resp.status_code == 429:
+            wait = _parse_retry_after(resp) + 1.0  # small margin over the server's own estimate
+            if wait > config.MAX_RETRY_WAIT_SECONDS:
+                rate_limits.record(provider="groq", attempt=attempt, wait_seconds=wait,
+                                    gave_up=True, detail=resp.text)
+                raise ProviderQuotaExhausted(
+                    f"Groq 429 with retry-after={wait:.0f}s exceeds the "
+                    f"{config.MAX_RETRY_WAIT_SECONDS:.0f}s threshold — looks like a daily/hourly "
+                    f"cap, not a TPM burst. Giving up now instead of sleeping past this job's "
+                    f"timeout. Raw: {resp.text[:300]}"
+                )
+            rate_limits.record(provider="groq", attempt=attempt, wait_seconds=wait,
+                                gave_up=(attempt == _MAX_429_RETRIES), detail=resp.text)
             if attempt == _MAX_429_RETRIES:
                 raise LLMError(f"Groq rate-limited (429) after {attempt} retries: {resp.text[:300]}")
-            wait = _parse_retry_after(resp) + 1.0  # small margin over the server's own estimate
             time.sleep(wait)
             continue
         resp.raise_for_status()
@@ -160,9 +179,20 @@ def _call_anthropic(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             timeout=120,
         )
         if resp.status_code == 429:
+            wait = _parse_retry_after(resp) + 1.0
+            if wait > config.MAX_RETRY_WAIT_SECONDS:
+                rate_limits.record(provider="anthropic", attempt=attempt, wait_seconds=wait,
+                                    gave_up=True, detail=resp.text)
+                raise ProviderQuotaExhausted(
+                    f"Anthropic 429 with retry-after={wait:.0f}s exceeds the "
+                    f"{config.MAX_RETRY_WAIT_SECONDS:.0f}s threshold — treating as a hard cap. "
+                    f"Raw: {resp.text[:300]}"
+                )
+            rate_limits.record(provider="anthropic", attempt=attempt, wait_seconds=wait,
+                                gave_up=(attempt == _MAX_429_RETRIES), detail=resp.text)
             if attempt == _MAX_429_RETRIES:
                 raise LLMError(f"Anthropic rate-limited (429) after {attempt} retries: {resp.text[:300]}")
-            time.sleep(_parse_retry_after(resp) + 1.0)
+            time.sleep(wait)
             continue
         resp.raise_for_status()
         data = resp.json()

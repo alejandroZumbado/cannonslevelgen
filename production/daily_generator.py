@@ -13,7 +13,10 @@ from datetime import datetime
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import config
+import incident_log
 from llm import client, audit
+from llm.budget import BudgetExceeded
+from llm.client import ProviderQuotaExhausted
 from learning import knowledge
 from policy.loader import load_policy_from_file, PolicyLoadError
 from production.cannons_sync import push_generated_level
@@ -139,6 +142,21 @@ def main() -> int:
         # unlike "no candidate won" below, this means production is broken,
         # not just unlucky today — worth a real red X.
         print(f"cannot load current policy: {e}")
+        incident_log.record_exception("daily_generator")
+        level = None
+        exit_code = 1
+    except BudgetExceeded as e:
+        print(f"budget exhausted for today ({e}) — stopping cleanly, will resume automatically.")
+        level = None
+    except ProviderQuotaExhausted as e:
+        print(f"provider rate-limited hard ({e}) — stopping cleanly, this is Groq/Anthropic's "
+              f"cap, not our bug. See state/rate_limit_events.jsonl.")
+        level = None
+    except Exception:  # noqa: BLE001 — an unexpected bug is still ours, log it and keep going to git_sync
+        import traceback
+        print("unexpected error generating a level, see traceback below")
+        traceback.print_exc()
+        incident_log.record_exception("daily_generator")
         level = None
         exit_code = 1
 

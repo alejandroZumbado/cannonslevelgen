@@ -26,44 +26,56 @@ from datetime import datetime
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 from llm.budget import BudgetExceeded, remaining_tokens, calls_made_today
+from llm.client import ProviderQuotaExhausted
 from learning import strategy_learner, level_designer
 import git_sync
+import incident_log
 
 
 def main() -> int:
     print(f"[{datetime.now().isoformat(timespec='seconds')}] learning cycle starting "
-          f"(budget remaining today: {remaining_tokens()} tokens, {calls_made_today()} calls made)")
+          f"(budget remaining today: {remaining_tokens()} tokens, {calls_made_today()} calls made)", flush=True)
 
     budget_exhausted = False
 
     try:
         result = strategy_learner.run_cycle()
-        print(f"  strategy_learner: {result}")
+        print(f"  strategy_learner: {result}", flush=True)
     except BudgetExceeded as e:
-        print(f"  strategy_learner: budget exhausted for today ({e}) — stopping cleanly.")
+        print(f"  strategy_learner: budget exhausted for today ({e}) — stopping cleanly.", flush=True)
+        budget_exhausted = True
+    except ProviderQuotaExhausted as e:
+        print(f"  strategy_learner: provider rate-limited hard ({e}) — stopping cleanly, "
+              f"this is Groq/Anthropic's cap, not our bug. See state/rate_limit_events.jsonl.", flush=True)
         budget_exhausted = True
     except Exception:  # noqa: BLE001
-        print("  strategy_learner: unexpected error, see traceback below")
+        print("  strategy_learner: unexpected error, see traceback below", flush=True)
         traceback.print_exc()
+        incident_log.record_exception("strategy_learner")
 
     if not budget_exhausted:
         try:
             result = level_designer.run_cycle()
-            print(f"  level_designer: {result}")
+            print(f"  level_designer: {result}", flush=True)
         except BudgetExceeded as e:
-            print(f"  level_designer: budget exhausted for today ({e}) — stopping cleanly.")
+            print(f"  level_designer: budget exhausted for today ({e}) — stopping cleanly.", flush=True)
+        except ProviderQuotaExhausted as e:
+            print(f"  level_designer: provider rate-limited hard ({e}) — stopping cleanly, "
+                  f"this is Groq/Anthropic's cap, not our bug. See state/rate_limit_events.jsonl.", flush=True)
         except Exception:  # noqa: BLE001
-            print("  level_designer: unexpected error, see traceback below")
+            print("  level_designer: unexpected error, see traceback below", flush=True)
             traceback.print_exc()
+            incident_log.record_exception("level_designer")
 
     print(f"[{datetime.now().isoformat(timespec='seconds')}] cycle done "
-          f"(budget remaining: {remaining_tokens()} tokens)")
+          f"(budget remaining: {remaining_tokens()} tokens)", flush=True)
 
     try:
         git_sync.sync_cycle_results()
     except Exception:  # noqa: BLE001 — a sync failure shouldn't mask the cycle's own result
-        print("  git_sync: failed, see traceback below (this run's results may be lost)")
+        print("  git_sync: failed, see traceback below (this run's results may be lost)", flush=True)
         traceback.print_exc()
+        incident_log.record_exception("git_sync")
 
     return 0
 

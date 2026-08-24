@@ -49,4 +49,8 @@ jobs:
           GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'openai/gpt-oss-120b' }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CI: true
+          # unbuffered so prints show up live in the Actions log instead of
+          # being lost if the job ever gets killed before a buffer flush —
+          # this is exactly what hid the 2026-08-23 timeout incident's cause
+          PYTHONUNBUFFERED: "1"
         run: python run_learning_cycle.py
