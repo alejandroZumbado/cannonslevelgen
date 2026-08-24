@@ -103,5 +103,12 @@
     "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=5, columns=[2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-23",
+    "statement": "A final pirate (tipo 4) with HP = 2 can be cleared without any merges even when the pirate directly in front of it in the same column also has HP = 2, as long as there is at least one empty fila separating them (allowing the final pirate to receive two separate base‑damage hits after the blocker is killed). => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 5 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
