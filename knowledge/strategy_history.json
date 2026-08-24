@@ -68,5 +68,12 @@
     "win_rate": 0.7308,
     "candidate_win_rate": 0.7981,
     "summary": "**Idea:**  \nInstead of estimating damage only from the front pirate, the new policy simulates the whole next round for every possible action (all spawns and all moves). It accounts for sequential killing of multiple pira"
+  },
+  {
+    "timestamp": "2026-08-24T13:26:26+00:00",
+    "promoted": false,
+    "win_rate": 0.7692,
+    "candidate_win_rate": 0.6827,
+    "summary": "**Idea** – Instead of judging an action only by a one‑round “deficit” estimate, this policy performs a short exhaustive look‑ahead (up to 4 future rounds).  It searches the game tree for an action that *guarantees* a win"
   }
 ]
