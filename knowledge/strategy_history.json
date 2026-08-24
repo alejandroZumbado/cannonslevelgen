@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2026-08-24T03:13:03+00:00",
+    "promoted": false,
+    "win_rate": 0.7308,
+    "candidate_win_rate": 0.1442,
+    "summary": "**Explanation**  \nThe new policy replaces the ad‑hoc “danger first” heuristics with a quantitative *damage‑deficit* analysis: for every column we compute how many hit‑points cannot be removed by the current cannon before"
+  }
+]
