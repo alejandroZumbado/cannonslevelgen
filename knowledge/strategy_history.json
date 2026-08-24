@@ -5,5 +5,12 @@
     "win_rate": 0.7308,
     "candidate_win_rate": 0.1442,
     "summary": "**Explanation**  \nThe new policy replaces the ad‑hoc “danger first” heuristics with a quantitative *damage‑deficit* analysis: for every column we compute how many hit‑points cannot be removed by the current cannon before"
+  },
+  {
+    "timestamp": "2026-08-24T04:11:11+00:00",
+    "promoted": false,
+    "win_rate": 0.7115,
+    "candidate_win_rate": 0.6731,
+    "summary": "**Idea:** Instead of estimating a “damage‑deficit” with simple formulas, this policy enumerates every legal action (all spawns and all possible moves) and simulates the *exact* outcome of the current round: placement/mer"
   }
 ]
