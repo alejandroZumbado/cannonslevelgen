@@ -3,99 +3,147 @@ MAX_POSITION = 3  # reaching this loses the game
 
 
 class Policy:
-    name = "column_deficit_v1"
+    name = "lookahead_merge_v2"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
-        # 1️⃣  Gather pirates per column, sorted by position descending
-        col_pirates = {c: [] for c in range(NUM_COLUMNS)}
-        for p in engine.pirates:
-            col_pirates[p.column].append(p)
-        for lst in col_pirates.values():
-            lst.sort(key=lambda pp: pp.position, reverse=True)
+        # Gather current state
+        cannons = {c: engine.cannons[c].damage for c in engine.cannons}
+        pirates = [
+            {"column": p.column, "position": p.position, "hp": p.hp}
+            for p in engine.pirates
+        ]
 
-        # 2️⃣  Compute deficit and urgency for every column that has pirates
-        deficits = []          # list of (deficit, urgency, column)
-        for col, pirates in col_pirates.items():
-            if not pirates:
+        # ------------------------------------------------------------------
+        # Helper: simulate one full round (damage + advance) for a given
+        #         cannon layout and pirate list.
+        def simulate_round(cannons_map, pirates_list):
+            # copy mutable structures
+            cannons = dict(cannons_map)
+            pirates = [dict(p) for p in pirates_list]
+
+            # 1) damage phase – each column hits its front pirate
+            for col, dmg in cannons.items():
+                if dmg <= 0:
+                    continue
+                # pirates in this column
+                col_p = [p for p in pirates if p["column"] == col]
+                if not col_p:
+                    continue
+                # front pirate = highest position (closest to loss)
+                front = max(col_p, key=lambda p: p["position"])
+                front["hp"] -= dmg
+                if front["hp"] <= 0:
+                    pirates.remove(front)
+
+            # 2) advance phase – all surviving pirates move forward
+            for p in pirates:
+                p["position"] += 1
+
+            # 3) check immediate loss
+            loss = any(p["position"] >= MAX_POSITION for p in pirates)
+            return cannons, pirates, loss
+
+        # ------------------------------------------------------------------
+        # Helper: compute how much total damage can still be dealt in a column
+        #         before a pirate would reach the loss row, assuming the
+        #         current cannon damage stays constant.
+        def possible_damage(cannon_dmg, col_pirates):
+            # make copies
+            pirates = [dict(p) for p in col_pirates]
+            total = 0
+            while pirates:
+                # front pirate
+                front = max(pirates, key=lambda p: p["position"])
+                front["hp"] -= cannon_dmg
+                total += cannon_dmg
+                if front["hp"] <= 0:
+                    pirates.remove(front)
+                # advance all
+                for p in pirates:
+                    p["position"] += 1
+                # stop if any would reach loss
+                if any(p["position"] >= MAX_POSITION for p in pirates):
+                    break
+            return total
+
+        # ------------------------------------------------------------------
+        # Compute total deficit for a given state (after a round)
+        def total_deficit(cannons_map, pirates_list):
+            deficit = 0
+            # group pirates by column
+            col_groups = {c: [] for c in range(NUM_COLUMNS)}
+            for p in pirates_list:
+                col_groups[p["column"]].append(p)
+
+            for col, plist in col_groups.items():
+                if not plist:
+                    continue
+                total_hp = sum(p["hp"] for p in plist)
+                dmg = cannons_map.get(col, 0)
+                possible = possible_damage(dmg, plist)
+                if total_hp > possible:
+                    deficit += total_hp - possible
+            return deficit
+
+        # ------------------------------------------------------------------
+        # Enumerate all legal actions
+        actions = []
+
+        # spawn actions (including merges)
+        for col in range(NUM_COLUMNS):
+            actions.append(("spawn", col))
+
+        # move actions (donor != target, donor must have a cannon)
+        for donor in cannons:
+            for target in range(NUM_COLUMNS):
+                if donor == target:
+                    continue
+                actions.append(("move", donor, target))
+
+        best_action = None
+        best_score = None  # lower is better (total deficit)
+        # deterministic tie‑break by action tuple order
+        for act in actions:
+            # ----- apply action to get new cannon layout -----
+            new_cannons = dict(cannons)
+
+            if act[0] == "spawn":
+                col = act[1]
+                new_cannons[col] = new_cannons.get(col, 0) + 1
+            else:  # move
+                donor, target = act[1], act[2]
+                # donor disappears, its damage added to target
+                dmg = new_cannons.pop(donor)
+                new_cannons[target] = new_cannons.get(target, 0) + dmg
+                # the pending spawn cannon is lost this round – no extra effect
+
+            # ----- simulate one round -----
+            post_cannons, post_pirates, loss = simulate_round(new_cannons, pirates)
+            if loss:
+                # action leads to immediate defeat – discard
                 continue
 
-            total_hp = sum(p.hp for p in pirates)
-            top_pos = min(p.position for p in pirates)          # closest to loss
-            rounds_left = MAX_POSITION - top_pos                # rounds before loss
+            # ----- evaluate remaining deficit -----
+            score = total_deficit(post_cannons, post_pirates)
 
-            cannon = engine.cannons.get(col)
-            dmg = cannon.damage if cannon else 0
-            possible_damage = dmg * rounds_left
+            if best_score is None or score < best_score or (
+                score == best_score and act < best_action
+            ):
+                best_score = score
+                best_action = act
 
-            deficit = total_hp - possible_damage
-            if deficit > 0:
-                # urgency = how soon the front pirate would reach the loss row
-                front_pos = pirates[0].position
-                time_to_loss = MAX_POSITION - front_pos
-                deficits.append((deficit, time_to_loss, col))
+            # early exit: perfect state (no deficit) – we can stop searching
+            if best_score == 0:
+                break
 
-        # 3️⃣  If any column needs more damage, handle the most urgent one
-        if deficits:
-            # pick column with largest deficit, break ties by earliest time_to_loss,
-            # then by lowest column index for determinism
-            deficits.sort(key=lambda x: (-x[0], x[1], x[2]))
-            _, _, target = deficits[0]
+        # If for some reason no safe action was found (should be rare),
+        # fall back to a very simple deterministic rule.
+        if best_action is None:
+            # spawn on first empty column, else spawn on column 0
+            for col in range(NUM_COLUMNS):
+                if col not in engine.cannons:
+                    return ("spawn", col)
+            return ("spawn", 0)
 
-            # If the target column has no cannon yet → spawn there
-            if target not in engine.cannons:
-                return ("spawn", target)
-
-            # Otherwise try to merge the weakest donor into the target
-            donor = self._weakest_cannon_excluding(engine.cannons, exclude=target)
-            if donor is not None:
-                return ("move", donor, target)
-
-            # No donor available (should not happen often) → just spawn (will merge next round)
-            return ("spawn", target)
-
-        # 4️⃣  No immediate deficit → growth / housekeeping phase
-        # a) Prefer spawning on an empty column that already hosts a pirate
-        empty_with_pirate = [
-            c for c in range(NUM_COLUMNS)
-            if c not in engine.cannons and col_pirates[c]
-        ]
-        if empty_with_pirate:
-            # choose the column whose front pirate is furthest forward
-            chosen = max(empty_with_pirate,
-                         key=lambda c: col_pirates[c][0].position)
-            return ("spawn", chosen)
-
-        # b) Otherwise, spawn on the column with the smallest damage that still has pirates
-        cols_with_cannon = [c for c in engine.cannons if col_pirates[c]]
-        if cols_with_cannon:
-            weakest = min(cols_with_cannon,
-                          key=lambda c: (engine.cannons[c].damage, c))
-            return ("spawn", weakest)
-
-        # c) All columns occupied and no pirates left → merge weakest into strongest
-        if engine.cannons:
-            weakest = min(engine.cannons.items(),
-                          key=lambda kv: (kv[1].damage, kv[0]))[0]
-            # target = column with highest damage (or most threatening front pirate)
-            target = max(engine.cannons.items(),
-                         key=lambda kv: (kv[1].damage, kv[0]))[0]
-            if weakest != target:
-                return ("move", weakest, target)
-            # fallback: spawn on weakest (self‑merge)
-            return ("spawn", weakest)
-
-        # d) No cannons at all (unlikely) – just spawn in first column
-        return ("spawn", 0)
-
-    # ------------------------------------------------------------------ #
-    @staticmethod
-    def _weakest_cannon_excluding(cannons, exclude):
-        """Return column of the weakest cannon not equal to *exclude*,
-        or None if none exists."""
-        candidates = [(col, c.damage) for col, c in cannons.items()
-                      if col != exclude]
-        if not candidates:
-            return None
-        # deterministic: weakest damage, then lowest column
-        return min(candidates, key=lambda kv: (kv[1], kv[0]))[0]
+        return best_action

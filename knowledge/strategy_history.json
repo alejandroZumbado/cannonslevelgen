@@ -61,5 +61,12 @@
     "win_rate": 0.7212,
     "candidate_win_rate": 0.7308,
     "summary": "**Idea:**  \nInstead of looking only at the front pirate, the new policy evaluates the *whole column* – it adds up the HP of every pirate in the column and compares it with the total damage the column can still deliver be"
+  },
+  {
+    "timestamp": "2026-08-24T12:19:16+00:00",
+    "promoted": true,
+    "win_rate": 0.7308,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Idea:**  \nInstead of estimating damage only from the front pirate, the new policy simulates the whole next round for every possible action (all spawns and all moves). It accounts for sequential killing of multiple pira"
   }
 ]
