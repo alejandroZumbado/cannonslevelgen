@@ -89,5 +89,12 @@
     "win_rate": 0.8077,
     "candidate_win_rate": 0.3942,
     "summary": "**Idea** – Instead of measuring a one‑round “deficit” or doing a short exhaustive tree search, this policy estimates how many hits each column can still deliver if we **optimistically spawn a new cannon in that column ev"
+  },
+  {
+    "timestamp": "2026-08-24T16:51:59+00:00",
+    "promoted": false,
+    "win_rate": 0.7788,
+    "candidate_win_rate": 0.7788,
+    "summary": "**Change summary**  \nThe champion only minimises the *total* HP‑deficit after one round, so when two actions give the same total deficit it may arbitrarily pick a spawn that does not help the column that is actually “dan"
   }
 ]
