@@ -110,5 +110,12 @@
     "win_rate": 0.7981,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary**  \nThe champion sometimes ties on total deficit and then picks the first action in lexical order, which can ignore the column that is actually most urgent (a pirate already at position 2). I add a tie‑b"
+  },
+  {
+    "timestamp": "2026-08-24T20:14:01+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change summary**  \nWhen two actions give the same total‑deficit score the original champion breaks the tie purely by lexical order, which can cause it to ignore the column that actually has the most urgent pirate (a pi"
   }
 ]
