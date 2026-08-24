@@ -117,5 +117,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8173,
     "summary": "**Change summary**  \nWhen two actions give the same total‑deficit score the original champion breaks the tie purely by lexical order, which can cause it to ignore the column that actually has the most urgent pirate (a pi"
+  },
+  {
+    "timestamp": "2026-08-24T21:39:31+00:00",
+    "promoted": false,
+    "win_rate": 0.8077,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary** – The original champion breaks ties only by lexical order, so when several actions give the same total‑deficit it can pick a spawn in a harmless column while a pirate is already at position 2 in anothe"
   }
 ]
