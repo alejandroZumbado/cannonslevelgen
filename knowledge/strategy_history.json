@@ -12,5 +12,12 @@
     "win_rate": 0.7115,
     "candidate_win_rate": 0.6731,
     "summary": "**Idea:** Instead of estimating a “damage‑deficit” with simple formulas, this policy enumerates every legal action (all spawns and all possible moves) and simulates the *exact* outcome of the current round: placement/mer"
+  },
+  {
+    "timestamp": "2026-08-24T05:06:22+00:00",
+    "promoted": false,
+    "win_rate": 0.7019,
+    "candidate_win_rate": 0.0,
+    "summary": "**Idea:**  \nInstead of looking only at the front pirate or enumerating every action’s exact one‑round outcome, this policy evaluates the *whole column* of pirates. For each column it computes how many cannon‑hits are req"
   }
 ]
