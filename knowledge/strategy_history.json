@@ -131,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary** – The original policy breaks ties only by lexical order, so when several actions give the same total‑deficit it can ignore the column that actually has the most urgent pirate (a pirate already at posit"
+  },
+  {
+    "timestamp": "2026-08-24T23:11:08+00:00",
+    "promoted": true,
+    "win_rate": 0.8269,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary** – The champion breaks ties only by lexical order, which can cause it to ignore an imminent threat (a pirate already at position 2) when several actions give the same total‑deficit. I add a second tie‑b"
   }
 ]

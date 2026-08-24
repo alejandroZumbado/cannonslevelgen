@@ -3,7 +3,7 @@ MAX_POSITION = 3  # reaching this loses the game
 
 
 class Policy:
-    name = "lookahead_merge_v2_tie_urgency"
+    name = "lookahead_merge_v2"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -102,10 +102,8 @@ class Policy:
                 actions.append(("move", donor, target))
 
         best_action = None
-        best_score = None          # lower is better (total deficit)
-        best_max_pos = None        # lower is better (max pirate position after round)
-
-        # deterministic tie‑break by action tuple order as final fallback
+        best_score = None  # lower is better (total deficit)
+        # deterministic tie‑break by action tuple order
         for act in actions:
             # ----- apply action to get new cannon layout -----
             new_cannons = dict(cannons)
@@ -115,9 +113,10 @@ class Policy:
                 new_cannons[col] = new_cannons.get(col, 0) + 1
             else:  # move
                 donor, target = act[1], act[2]
+                # donor disappears, its damage added to target
                 dmg = new_cannons.pop(donor)
                 new_cannons[target] = new_cannons.get(target, 0) + dmg
-                # pending spawn cannon is lost this round – no extra effect
+                # the pending spawn cannon is lost this round – no extra effect
 
             # ----- simulate one round -----
             post_cannons, post_pirates, loss = simulate_round(new_cannons, pirates)
@@ -128,35 +127,20 @@ class Policy:
             # ----- evaluate remaining deficit -----
             score = total_deficit(post_cannons, post_pirates)
 
-            # compute urgency metric: highest pirate position after this round
-            if post_pirates:
-                max_pos = max(p["position"] for p in post_pirates)
-            else:
-                max_pos = -1   # no pirates left -> best possible
-
-            # ----- select best action -----
-            better = False
-            if best_score is None or score < best_score:
-                better = True
-            elif score == best_score:
-                # secondary tie‑breaker: lower max pirate position is preferred
-                if max_pos < best_max_pos:
-                    better = True
-                elif max_pos == best_max_pos and act < best_action:
-                    # final deterministic lexical fallback
-                    better = True
-
-            if better:
+            if best_score is None or score < best_score or (
+                score == best_score and act < best_action
+            ):
                 best_score = score
                 best_action = act
-                best_max_pos = max_pos
 
-            # early exit: perfect state (no deficit and no pirates ahead)
-            if best_score == 0 and best_max_pos <= 1:
+            # early exit: perfect state (no deficit) – we can stop searching
+            if best_score == 0:
                 break
 
-        # fallback if no safe action (should be rare)
+        # If for some reason no safe action was found (should be rare),
+        # fall back to a very simple deterministic rule.
         if best_action is None:
+            # spawn on first empty column, else spawn on column 0
             for col in range(NUM_COLUMNS):
                 if col not in engine.cannons:
                     return ("spawn", col)
