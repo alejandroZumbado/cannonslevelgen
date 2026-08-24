@@ -54,5 +54,12 @@
     "win_rate": 0.7404,
     "candidate_win_rate": 0.5962,
     "summary": "**Idea:**  \nThe previous champion only reacted to the front pirate, which lets a hidden “second‑line” pirate survive after the front one dies. This version computes, for each column, whether the current cannon damage can"
+  },
+  {
+    "timestamp": "2026-08-24T11:39:40+00:00",
+    "promoted": true,
+    "win_rate": 0.7212,
+    "candidate_win_rate": 0.7308,
+    "summary": "**Idea:**  \nInstead of looking only at the front pirate, the new policy evaluates the *whole column* – it adds up the HP of every pirate in the column and compares it with the total damage the column can still deliver be"
   }
 ]

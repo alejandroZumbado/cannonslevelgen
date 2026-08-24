@@ -3,100 +3,99 @@ MAX_POSITION = 3  # reaching this loses the game
 
 
 class Policy:
-    name = "danger_first_merge_v1_fixed"
+    name = "column_deficit_v1"
 
+    # ------------------------------------------------------------------ #
     def choose_action(self, engine):
-        # 1️⃣  Find the most advanced pirate per column
-        front = self._front_pirates(engine)
-
-        # 2️⃣  Look for a column where the pirate will survive the remaining rounds
-        for col, pirate in front.items():
-            if pirate is None:
-                continue
-            cannon = engine.cannons.get(col)
-            rounds_left = MAX_POSITION - pirate.position
-
-            # ---- NEW URGENT SPAWN CHECK ----
-            # No cannon yet, but even base damage (1 per round) cannot kill the pirate
-            if cannon is None:
-                if pirate.hp > rounds_left:          # cannot survive without a cannon
-                    return ("spawn", col)            # spawn now (or merge next round)
-                # otherwise not urgent – keep looking
-                continue
-            # --------------------------------
-
-            # Existing cannon – see if it can kill the front pirate in time
-            dmg = cannon.damage
-            if dmg * rounds_left < pirate.hp:
-                # Need more damage now → try to merge another cannon into this column
-                src = self._choose_donor(engine.cannons, exclude=col)
-                if src is not None:
-                    return ("move", src, col)
-                # No donor available, fall back to spawning (will merge next round)
-                break
-
-        # 3️⃣  No urgent merges – decide where to spawn
-        # Prefer empty columns that already have a threatening pirate
-        empty_threat = [
-            c for c in range(NUM_COLUMNS)
-            if c not in engine.cannons and front.get(c) is not None
-        ]
-        if empty_threat:
-            # choose the column with the furthest pirate (largest position)
-            col = max(empty_threat, key=lambda c: front[c].position)
-            return ("spawn", col)
-
-        # Next, columns with a cannon that is still undersized for its front pirate
-        undersized = []
-        for col, cannon in engine.cannons.items():
-            pirate = front.get(col)
-            if pirate is None:
-                continue
-            needed = pirate.hp
-            if cannon.damage < needed:
-                undersized.append(col)
-        if undersized:
-            col = max(undersized, key=lambda c: front[c].position)
-            return ("spawn", col)
-
-        # If there are still empty columns, just fill the first one
-        empty = [c for c in range(NUM_COLUMNS) if c not in engine.cannons]
-        if empty:
-            return ("spawn", empty[0])
-
-        # All columns occupied and no urgent need – merge the weakest into the
-        # column with the most threatening pirate to keep damage growing.
-        weakest = min(engine.cannons.items(), key=lambda kv: kv[1].damage)[0]
-        # pick a target column (the one with highest front pirate position)
-        target = max(
-            (c for c in engine.cannons if front.get(c) is not None),
-            key=lambda c: front[c].position,
-            default=weakest,
-        )
-        if weakest != target:
-            return ("move", weakest, target)
-
-        # Fallback: spawn on the weakest column (will merge with itself)
-        return ("spawn", weakest)
-
-    # --------------------------------------------------------------------- #
-    @staticmethod
-    def _front_pirates(engine):
-        """Return dict column → most‑advanced Pirate (or None)."""
-        front = {c: None for c in range(NUM_COLUMNS)}
+        # 1️⃣  Gather pirates per column, sorted by position descending
+        col_pirates = {c: [] for c in range(NUM_COLUMNS)}
         for p in engine.pirates:
-            cur = front[p.column]
-            if cur is None or p.position > cur.position:
-                front[p.column] = p
-        return front
+            col_pirates[p.column].append(p)
+        for lst in col_pirates.values():
+            lst.sort(key=lambda pp: pp.position, reverse=True)
 
+        # 2️⃣  Compute deficit and urgency for every column that has pirates
+        deficits = []          # list of (deficit, urgency, column)
+        for col, pirates in col_pirates.items():
+            if not pirates:
+                continue
+
+            total_hp = sum(p.hp for p in pirates)
+            top_pos = min(p.position for p in pirates)          # closest to loss
+            rounds_left = MAX_POSITION - top_pos                # rounds before loss
+
+            cannon = engine.cannons.get(col)
+            dmg = cannon.damage if cannon else 0
+            possible_damage = dmg * rounds_left
+
+            deficit = total_hp - possible_damage
+            if deficit > 0:
+                # urgency = how soon the front pirate would reach the loss row
+                front_pos = pirates[0].position
+                time_to_loss = MAX_POSITION - front_pos
+                deficits.append((deficit, time_to_loss, col))
+
+        # 3️⃣  If any column needs more damage, handle the most urgent one
+        if deficits:
+            # pick column with largest deficit, break ties by earliest time_to_loss,
+            # then by lowest column index for determinism
+            deficits.sort(key=lambda x: (-x[0], x[1], x[2]))
+            _, _, target = deficits[0]
+
+            # If the target column has no cannon yet → spawn there
+            if target not in engine.cannons:
+                return ("spawn", target)
+
+            # Otherwise try to merge the weakest donor into the target
+            donor = self._weakest_cannon_excluding(engine.cannons, exclude=target)
+            if donor is not None:
+                return ("move", donor, target)
+
+            # No donor available (should not happen often) → just spawn (will merge next round)
+            return ("spawn", target)
+
+        # 4️⃣  No immediate deficit → growth / housekeeping phase
+        # a) Prefer spawning on an empty column that already hosts a pirate
+        empty_with_pirate = [
+            c for c in range(NUM_COLUMNS)
+            if c not in engine.cannons and col_pirates[c]
+        ]
+        if empty_with_pirate:
+            # choose the column whose front pirate is furthest forward
+            chosen = max(empty_with_pirate,
+                         key=lambda c: col_pirates[c][0].position)
+            return ("spawn", chosen)
+
+        # b) Otherwise, spawn on the column with the smallest damage that still has pirates
+        cols_with_cannon = [c for c in engine.cannons if col_pirates[c]]
+        if cols_with_cannon:
+            weakest = min(cols_with_cannon,
+                          key=lambda c: (engine.cannons[c].damage, c))
+            return ("spawn", weakest)
+
+        # c) All columns occupied and no pirates left → merge weakest into strongest
+        if engine.cannons:
+            weakest = min(engine.cannons.items(),
+                          key=lambda kv: (kv[1].damage, kv[0]))[0]
+            # target = column with highest damage (or most threatening front pirate)
+            target = max(engine.cannons.items(),
+                         key=lambda kv: (kv[1].damage, kv[0]))[0]
+            if weakest != target:
+                return ("move", weakest, target)
+            # fallback: spawn on weakest (self‑merge)
+            return ("spawn", weakest)
+
+        # d) No cannons at all (unlikely) – just spawn in first column
+        return ("spawn", 0)
+
+    # ------------------------------------------------------------------ #
     @staticmethod
-    def _choose_donor(cannons, exclude):
+    def _weakest_cannon_excluding(cannons, exclude):
         """Return column of the weakest cannon not equal to *exclude*,
-        or None if no such cannon exists."""
-        candidates = [(col, c.damage) for col, c in cannons.items() if col != exclude]
+        or None if none exists."""
+        candidates = [(col, c.damage) for col, c in cannons.items()
+                      if col != exclude]
         if not candidates:
             return None
-        # deterministic: pick the weakest, tie‑break by lowest column
-        donor = min(candidates, key=lambda kv: (kv[1], kv[0]))[0]
-        return donor
+        # deterministic: weakest damage, then lowest column
+        return min(candidates, key=lambda kv: (kv[1], kv[0]))[0]
