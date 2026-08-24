@@ -119,6 +119,17 @@ def complete(system: str, user: str, max_tokens: int = 2000, provider: str | Non
 _RETRY_SECONDS_RE = re.compile(r"try again in ([\d.]+)s", re.IGNORECASE)
 _MAX_429_RETRIES = 4
 
+# Groq's daily-quota 429 body spells out exact numbers, e.g.:
+#   "...on tokens per day (TPD): Limit 200000, Used 194404, Requested 6817..."
+# Unlike TPM/RPM, this is NOT exposed on response headers (verified
+# empirically 2026-08-24 — a normal 200 response only carries
+# x-ratelimit-*-tokens/requests for the per-minute window, nothing daily) so
+# this 429 body text is the ONLY way to see real daily usage; there's no way
+# to check it proactively before hitting the wall once.
+_TPD_RE = re.compile(
+    r"on tokens per day \(TPD\): Limit (\d+), Used (\d+), Requested (\d+)", re.IGNORECASE
+)
+
 
 def _parse_retry_after(resp) -> float:
     header = resp.headers.get("retry-after")
@@ -131,6 +142,14 @@ def _parse_retry_after(resp) -> float:
     if match:
         return float(match.group(1))
     return 5.0  # unknown reason for the 429, back off a bit anyway
+
+
+def _parse_tpd(resp) -> dict | None:
+    match = _TPD_RE.search(resp.text)
+    if not match:
+        return None
+    limit, used, requested = (int(g) for g in match.groups())
+    return {"limit": limit, "used": used, "requested": requested}
 
 
 def _call_groq(system: str, user: str, max_tokens: int) -> tuple[str, int]:
@@ -157,7 +176,7 @@ def _call_groq(system: str, user: str, max_tokens: int) -> tuple[str, int]:
             wait = _parse_retry_after(resp) + 1.0  # small margin over the server's own estimate
             if wait > config.MAX_RETRY_WAIT_SECONDS:
                 rate_limits.record(provider="groq", attempt=attempt, wait_seconds=wait,
-                                    gave_up=True, detail=resp.text)
+                                    gave_up=True, detail=resp.text, tpd=_parse_tpd(resp))
                 cooldown.set_cooldown("groq", datetime.now(timezone.utc) + timedelta(seconds=wait),
                                        detail=resp.text)
                 raise ProviderQuotaExhausted(

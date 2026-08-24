@@ -51,8 +51,10 @@ def main() -> int:
                 tag = "GAVE UP"
             else:
                 tag = "retried"
+            tpd = e.get("tpd")
+            tpd_note = f"  [TPD {tpd['used']}/{tpd['limit']}]" if tpd else ""
             print(f"  [{e['timestamp']}] {e['provider']} attempt {e['attempt']} "
-                  f"wait={e['wait_seconds']}s -> {tag}")
+                  f"wait={e['wait_seconds']}s -> {tag}{tpd_note}")
             if verbose:
                 print(f"      {e['detail']}")
 
