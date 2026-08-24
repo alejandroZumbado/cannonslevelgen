@@ -75,5 +75,12 @@
     "win_rate": 0.7692,
     "candidate_win_rate": 0.6827,
     "summary": "**Idea** – Instead of judging an action only by a one‑round “deficit” estimate, this policy performs a short exhaustive look‑ahead (up to 4 future rounds).  It searches the game tree for an action that *guarantees* a win"
+  },
+  {
+    "timestamp": "2026-08-24T14:22:02+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Idea:**  \nInstead of estimating a “deficit” from a single round, the new policy computes for every column the *exact* extra damage that would be required (by future spawns or merges) to clear that column before any pir"
   }
 ]
