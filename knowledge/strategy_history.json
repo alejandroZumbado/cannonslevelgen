@@ -96,5 +96,12 @@
     "win_rate": 0.7788,
     "candidate_win_rate": 0.7788,
     "summary": "**Change summary**  \nThe champion only minimises the *total* HP‑deficit after one round, so when two actions give the same total deficit it may arbitrarily pick a spawn that does not help the column that is actually “dan"
+  },
+  {
+    "timestamp": "2026-08-24T18:01:52+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary**  \nThe champion sometimes chooses a “spawn” action that leaves the same total deficit as another spawn, but it does not favour the column where a pirate is closest to the loss row. When scores tie the p"
   }
 ]
