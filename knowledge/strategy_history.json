@@ -33,5 +33,12 @@
     "win_rate": 0.7212,
     "candidate_win_rate": 0.7212,
     "summary": "**Change summary**  \nThe champion policy only reacts to the *front* pirate in each column. When the front pirate is easy to kill but a second pirate behind it still has more HP than the cannon can deliver before reaching"
+  },
+  {
+    "timestamp": "2026-08-24T08:31:36+00:00",
+    "promoted": false,
+    "win_rate": 0.7692,
+    "candidate_win_rate": 0.7596,
+    "summary": "**Change summary** – The original champion only looks at the *front* pirate when deciding whether a merge is urgent. If the front pirate can be killed with the current cannon but a second pirate behind it would survive t"
   }
 ]
