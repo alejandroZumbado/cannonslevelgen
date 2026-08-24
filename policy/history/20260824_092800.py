@@ -3,7 +3,7 @@ MAX_POSITION = 3  # reaching this loses the game
 
 
 class Policy:
-    name = "danger_first_merge_v1_fixed"
+    name = "danger_first_merge_v1"
 
     def choose_action(self, engine):
         # 1️⃣  Find the most advanced pirate per column
@@ -14,18 +14,11 @@ class Policy:
             if pirate is None:
                 continue
             cannon = engine.cannons.get(col)
-            rounds_left = MAX_POSITION - pirate.position
-
-            # ---- NEW URGENT SPAWN CHECK ----
-            # No cannon yet, but even base damage (1 per round) cannot kill the pirate
             if cannon is None:
-                if pirate.hp > rounds_left:          # cannot survive without a cannon
-                    return ("spawn", col)            # spawn now (or merge next round)
-                # otherwise not urgent – keep looking
+                # No cannon yet – we can spawn here later, not urgent
                 continue
-            # --------------------------------
-
-            # Existing cannon – see if it can kill the front pirate in time
+            rounds_left = MAX_POSITION - pirate.position
+            # Damage this cannon will deal each round (unless we merge later)
             dmg = cannon.damage
             if dmg * rounds_left < pirate.hp:
                 # Need more damage now → try to merge another cannon into this column

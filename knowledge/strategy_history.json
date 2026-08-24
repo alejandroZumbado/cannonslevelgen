@@ -40,5 +40,12 @@
     "win_rate": 0.7692,
     "candidate_win_rate": 0.7596,
     "summary": "**Change summary** – The original champion only looks at the *front* pirate when deciding whether a merge is urgent. If the front pirate can be killed with the current cannon but a second pirate behind it would survive t"
+  },
+  {
+    "timestamp": "2026-08-24T09:28:00+00:00",
+    "promoted": true,
+    "win_rate": 0.6731,
+    "candidate_win_rate": 0.6731,
+    "summary": "**Change summary** – The champion only looks for *urgent merges* when a cannon already exists. If a column has **no cannon yet** but the front pirate’s HP exceeds the number of remaining rows (so base‑damage = 1 would ne"
   }
 ]
