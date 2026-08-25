@@ -166,5 +166,12 @@
     "evidence": "level 'A1234' (2 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (two_round_lookahead_urgency): WON in 2 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis**  \nA pirate of tipo 2 cannot be eliminated using only the cannon’s base damage = 1, even when there are enough waves (filas) to deal its total HP; it requires at least one merge unless its HP ≤ 2. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 6 filas, max_hp=3, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 6 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
