@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T05:06:22+00:00",
-    "promoted": false,
-    "win_rate": 0.7019,
-    "candidate_win_rate": 0.0,
-    "summary": "**Idea:**  \nInstead of looking only at the front pirate or enumerating every action’s exact one‑round outcome, this policy evaluates the *whole column* of pirates. For each column it computes how many cannon‑hits are req"
-  },
-  {
     "timestamp": "2026-08-24T06:39:14+00:00",
     "promoted": false,
     "win_rate": 0.6923,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8077,
     "summary": "**Idea** – Instead of enumerating every possible spawn in the second round, we treat the next *H* rounds as a pool of *H* extra damage points (one per round) that can be allocated to any column. After applying the candid"
+  },
+  {
+    "timestamp": "2026-08-25T07:04:28+00:00",
+    "promoted": false,
+    "win_rate": 0.7788,
+    "candidate_win_rate": 0.6538,
+    "summary": "**Idea:** Instead of only looking one‑step ahead with a single optimistic spawn, this policy performs a bounded depth‑3 search that branches over both *spawn* and *move* actions for the next two rounds.  At each node it "
   }
 ]
