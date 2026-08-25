@@ -138,5 +138,12 @@
     "evidence": "level 'Z0001' (1 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis:**  \nIf, in any single column, the sum of the HP of all pirates from the first (topmost) pirate in that column down to the final fila exceeds the number of filas spanned by that segment (i.e., the count of rows from that first pirate to the last fila inclusive), then the level cannot be cleared without performing at least one merge, even when each individual pirate’s HP is low enough to be killable on its own. => confirmed winnable by test level.",
+    "evidence": "level 'Z0001' (4 pirates, 5 filas, max_hp=2, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
