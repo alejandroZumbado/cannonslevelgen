@@ -187,5 +187,12 @@
     "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=3, columns=[1, 3]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis:**  \nA pirate of type 1, 2, or 4 does **not** receive any cannon damage during empty filas that occur before the wave in which it first appears; its HP can only be reduced starting from its own fila onward. => confirmed winnable by test level.",
+    "evidence": "level 'B5678' (2 pirates, 4 filas, max_hp=3, columns=[0, 1]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
