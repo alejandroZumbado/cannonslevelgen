@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T11:39:40+00:00",
-    "promoted": true,
-    "win_rate": 0.7212,
-    "candidate_win_rate": 0.7308,
-    "summary": "**Idea:**  \nInstead of looking only at the front pirate, the new policy evaluates the *whole column* – it adds up the HP of every pirate in the column and compares it with the total damage the column can still deliver be"
-  },
-  {
     "timestamp": "2026-08-24T12:19:16+00:00",
     "promoted": true,
     "win_rate": 0.7308,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.1827,
     "summary": "**Change summary**  \nThe champion assumes every front pirate can be damaged, so it over‑estimates safety when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I add the pirate’s `tipo` to the "
+  },
+  {
+    "timestamp": "2026-08-25T22:49:59+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.7788,
+    "summary": "**Change summary** – The champion policy treats every front pirate as damageable, so it under‑estimates danger when a *tipo 3* pirate (immune to the base‑damage = 1) is at the front of a column. I added a simple immunity"
   }
 ]
