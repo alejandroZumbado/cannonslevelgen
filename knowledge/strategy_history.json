@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T04:11:11+00:00",
-    "promoted": false,
-    "win_rate": 0.7115,
-    "candidate_win_rate": 0.6731,
-    "summary": "**Idea:** Instead of estimating a “damage‑deficit” with simple formulas, this policy enumerates every legal action (all spawns and all possible moves) and simulates the *exact* outcome of the current round: placement/mer"
-  },
-  {
     "timestamp": "2026-08-24T05:06:22+00:00",
     "promoted": false,
     "win_rate": 0.7019,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8558,
     "summary": "**Idea:** Instead of deciding only from the immediate‑round deficit, the new policy looks two rounds ahead. For each legal action it simulates the first round, then *optimistically* simulates the best possible spawn in t"
+  },
+  {
+    "timestamp": "2026-08-25T04:04:54+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Idea** – Instead of enumerating every possible spawn in the second round, we treat the next *H* rounds as a pool of *H* extra damage points (one per round) that can be allocated to any column. After applying the candid"
   }
 ]
