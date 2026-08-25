@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T09:28:00+00:00",
-    "promoted": true,
-    "win_rate": 0.6731,
-    "candidate_win_rate": 0.6731,
-    "summary": "**Change summary** – The champion only looks for *urgent merges* when a cannon already exists. If a column has **no cannon yet** but the front pirate’s HP exceeds the number of remaining rows (so base‑damage = 1 would ne"
-  },
-  {
     "timestamp": "2026-08-24T10:20:31+00:00",
     "promoted": false,
     "win_rate": 0.7404,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.1923,
     "summary": "**Change summary**  \nThe champion assumes every front pirate can be damaged, so it under‑estimates danger when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I added the pirate’s `tipo` to t"
+  },
+  {
+    "timestamp": "2026-08-25T20:50:57+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.2692,
+    "summary": "**Change summary** – The champion assumes every front pirate can be damaged, so it under‑estimates danger when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I add the pirate’s `tipo` to the"
   }
 ]
