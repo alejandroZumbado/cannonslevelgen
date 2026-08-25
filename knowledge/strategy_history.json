@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T06:39:14+00:00",
-    "promoted": false,
-    "win_rate": 0.6923,
-    "candidate_win_rate": 0.6827,
-    "summary": "**Change summary**  \nThe original policy only checks whether the current cannon can kill the *front* pirate before it reaches the loss row. When a column contains a second pirate with high HP, the cannon may be sufficien"
-  },
-  {
     "timestamp": "2026-08-24T07:45:43+00:00",
     "promoted": false,
     "win_rate": 0.7212,
@@ -138,5 +131,12 @@
     "win_rate": 0.7788,
     "candidate_win_rate": 0.6538,
     "summary": "**Idea:** Instead of only looking one‑step ahead with a single optimistic spawn, this policy performs a bounded depth‑3 search that branches over both *spawn* and *move* actions for the next two rounds.  At each node it "
+  },
+  {
+    "timestamp": "2026-08-25T08:55:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Idea:**  \nInstead of enumerating future spawns, the new policy evaluates each legal action by looking at the *urgency* of every front‑pirate: how many rounds remain before it reaches the loss row and how much extra dam"
   }
 ]
