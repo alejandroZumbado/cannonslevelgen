@@ -180,5 +180,12 @@
     "evidence": "level 'B0001' (2 pirates, 2 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis**  \nA pirate (of tipo 1, 2, or 4) with HP = k cannot be eliminated without performing a merge if the number of remaining filas from the wave in which it first appears (including that wave) is fewer than k, since the cannon can inflict at most one point of damage to its column per wave. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=3, columns=[1, 3]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
