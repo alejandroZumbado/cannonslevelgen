@@ -131,5 +131,12 @@
     "evidence": "level 'A1234' (3 pirates, 2 filas, max_hp=2, columns=[0, 1, 4]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) does **not** receive the cannon’s base damage = 1 during empty filas that occur before its own fila; it can only be damaged starting from its own wave. Consequently, a level that places a final pirate with HP > 1 after only empty filas should be unwinnable without performing a merge. => confirmed winnable by test level.",
+    "evidence": "level 'Z0001' (1 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
