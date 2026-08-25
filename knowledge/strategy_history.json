@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T03:13:03+00:00",
-    "promoted": false,
-    "win_rate": 0.7308,
-    "candidate_win_rate": 0.1442,
-    "summary": "**Explanation**  \nThe new policy replaces the ad‑hoc “danger first” heuristics with a quantitative *damage‑deficit* analysis: for every column we compute how many hit‑points cannot be removed by the current cannon before"
-  },
-  {
     "timestamp": "2026-08-24T04:11:11+00:00",
     "promoted": false,
     "win_rate": 0.7115,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary** – The champion breaks ties only by lexical order, which can cause it to ignore an imminent threat (a pirate already at position 2) when several actions give the same total‑deficit. I add a second tie‑b"
+  },
+  {
+    "timestamp": "2026-08-25T02:06:12+00:00",
+    "promoted": true,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Idea:** Instead of deciding only from the immediate‑round deficit, the new policy looks two rounds ahead. For each legal action it simulates the first round, then *optimistically* simulates the best possible spawn in t"
   }
 ]

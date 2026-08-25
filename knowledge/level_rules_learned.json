@@ -117,5 +117,12 @@
     "evidence": "level 'Z0001' (2 pirates, 4 filas, max_hp=3, columns=[0, 2]) played with current policy (lookahead_merge_v2_tie_urgency): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = k can be eliminated without any merges if there are at least k consecutive empty filas directly above it in the same column, because the cannon’s base damage = 1 is applied on every wave, including empty ones. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 6 filas, max_hp=3, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 7 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
