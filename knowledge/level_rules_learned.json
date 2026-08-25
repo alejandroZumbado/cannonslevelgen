@@ -124,5 +124,12 @@
     "evidence": "level 'A1234' (2 pirates, 6 filas, max_hp=3, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 7 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis:**  \nThe cannon can fire at only one column per wave (i.e., each wave delivers a single point of damage to a single chosen column). Consequently, a level that places two or more pirates with total HP > (number of filas) in different columns becomes unwinnable without merges, even though each column individually would receive enough damage if the cannon could hit all columns simultaneously. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (3 pirates, 2 filas, max_hp=2, columns=[0, 1, 4]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
