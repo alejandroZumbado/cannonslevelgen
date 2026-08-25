@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T10:20:31+00:00",
-    "promoted": false,
-    "win_rate": 0.7404,
-    "candidate_win_rate": 0.5962,
-    "summary": "**Idea:**  \nThe previous champion only reacted to the front pirate, which lets a hidden “second‑line” pirate survive after the front one dies. This version computes, for each column, whether the current cannon damage can"
-  },
-  {
     "timestamp": "2026-08-24T11:39:40+00:00",
     "promoted": true,
     "win_rate": 0.7212,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.2692,
     "summary": "**Change summary** – The champion assumes every front pirate can be damaged, so it under‑estimates danger when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I add the pirate’s `tipo` to the"
+  },
+  {
+    "timestamp": "2026-08-25T21:49:02+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.1827,
+    "summary": "**Change summary**  \nThe champion assumes every front pirate can be damaged, so it over‑estimates safety when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I add the pirate’s `tipo` to the "
   }
 ]
