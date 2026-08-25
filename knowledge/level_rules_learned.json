@@ -145,5 +145,12 @@
     "evidence": "level 'Z0001' (4 pirates, 5 filas, max_hp=2, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-25",
+    "statement": "**Hypothesis:**  \nIf a column contains pirates whose HP values are not non‑increasing (i.e., a lower pirate has higher HP than a pirate above it), the level can be unwinnable without any merges even when each pirate’s HP does not exceed the number of filas remaining from its own fila to the final fila. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (3 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
