@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T14:22:02+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Idea:**  \nInstead of estimating a “deficit” from a single round, the new policy computes for every column the *exact* extra damage that would be required (by future spawns or merges) to clear that column before any pir"
-  },
-  {
     "timestamp": "2026-08-24T16:00:02+00:00",
     "promoted": false,
     "win_rate": 0.8077,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.7115,
     "summary": "**Change summary** – The champion treats every front pirate as damageable, so it over‑estimates safety when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column. I added a single check in the damage phas"
+  },
+  {
+    "timestamp": "2026-08-26T07:29:23+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.6442,
+    "summary": "**Change summary** – The champion assumes every front pirate takes the cannon’s damage, so when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column the policy can deem a move safe even though the pirate"
   }
 ]
