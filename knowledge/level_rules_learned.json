@@ -194,5 +194,12 @@
     "evidence": "level 'B5678' (2 pirates, 4 filas, max_hp=3, columns=[0, 1]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-26",
+    "statement": "**Hypothesis:**  \nIf, in a single column, the sum of the HP of all pirates from the first pirate in that column down to the final fila equals the number of filas spanned by that segment, the level can be cleared without performing any merges. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=3, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
