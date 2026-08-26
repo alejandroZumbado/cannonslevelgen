@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T18:01:52+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change summary**  \nThe champion sometimes chooses a “spawn” action that leaves the same total deficit as another spawn, but it does not favour the column where a pirate is closest to the loss row. When scores tie the p"
-  },
-  {
     "timestamp": "2026-08-24T18:55:09+00:00",
     "promoted": false,
     "win_rate": 0.7981,
@@ -138,5 +131,12 @@
     "win_rate": 0.7885,
     "candidate_win_rate": 0.6442,
     "summary": "**Change** – The champion assumes every front pirate can be hurt by the cannon’s damage.  \nWhen the front pirate is a **tipo 3** (immune to the base‑damage = 1) this over‑estimates safety, causing the policy to choose ac"
+  },
+  {
+    "timestamp": "2026-08-26T16:04:06+00:00",
+    "promoted": false,
+    "win_rate": 0.8077,
+    "candidate_win_rate": 0.625,
+    "summary": "**Change summary** – The champion treats every front pirate as damageable, so when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column the policy over‑estimates safety and may select an unsafe action.  "
   }
 ]
