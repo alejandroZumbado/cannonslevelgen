@@ -1,6 +1,6 @@
 {
   "groq": {
-    "resume_at": "2026-08-26T07:54:45+00:00",
-    "detail": "{\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kw551zdreqx97b2kfe94txjm` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198166, Requested 5351. Please try again in 25m19.344s. Need more tokens? Upgrade to Dev Tier today at https:/"
+    "resume_at": "2026-08-26T09:15:22+00:00",
+    "detail": "{\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kw551zdreqx97b2kfe94txjm` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199775, Requested 7696. Please try again in 53m47.471999999s. Need more tokens? Upgrade to Dev Tier today at h"
   }
 }
