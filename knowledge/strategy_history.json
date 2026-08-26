@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T16:51:59+00:00",
-    "promoted": false,
-    "win_rate": 0.7788,
-    "candidate_win_rate": 0.7788,
-    "summary": "**Change summary**  \nThe champion only minimises the *total* HP‑deficit after one round, so when two actions give the same total deficit it may arbitrarily pick a spawn that does not help the column that is actually “dan"
-  },
-  {
     "timestamp": "2026-08-24T18:01:52+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.7885,
     "candidate_win_rate": 0.5962,
     "summary": "**Change summary** – The champion treats every front pirate as damageable, so when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column the policy under‑estimates the deficit and may choose unsafe action"
+  },
+  {
+    "timestamp": "2026-08-26T13:38:16+00:00",
+    "promoted": false,
+    "win_rate": 0.7885,
+    "candidate_win_rate": 0.6442,
+    "summary": "**Change** – The champion assumes every front pirate can be hurt by the cannon’s damage.  \nWhen the front pirate is a **tipo 3** (immune to the base‑damage = 1) this over‑estimates safety, causing the policy to choose ac"
   }
 ]
