@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T13:26:26+00:00",
-    "promoted": false,
-    "win_rate": 0.7692,
-    "candidate_win_rate": 0.6827,
-    "summary": "**Idea** – Instead of judging an action only by a one‑round “deficit” estimate, this policy performs a short exhaustive look‑ahead (up to 4 future rounds).  It searches the game tree for an action that *guarantees* a win"
-  },
-  {
     "timestamp": "2026-08-24T14:22:02+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8077,
     "summary": "**Change explanation (2 sentences)**  \nThe champion’s `possible_damage` routine assumes every front pirate can be hurt by the cannon’s current damage, so when a *tipo 3* (immune to the base‑1 damage) is leading a column "
+  },
+  {
+    "timestamp": "2026-08-26T04:20:37+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.7115,
+    "summary": "**Change summary** – The champion treats every front pirate as damageable, so it over‑estimates safety when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column. I added a single check in the damage phas"
   }
 ]
