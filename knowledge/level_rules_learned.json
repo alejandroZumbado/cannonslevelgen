@@ -222,5 +222,12 @@
     "evidence": "level 'A1234' (3 pirates, 2 filas, max_hp=1, columns=[0, 1, 2]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-26",
+    "statement": "A tipo 3 pirate blocks the line of fire for any pirate below it in the same column, even when there are empty filas between them; therefore a final tipo 4 pirate under a tipo 3 (with any number of empty rows separating them) cannot be killed without first merging or removing the tipo 3. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 5 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
