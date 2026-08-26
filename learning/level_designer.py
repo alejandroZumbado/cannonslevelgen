@@ -18,6 +18,7 @@ from datetime import datetime
 import config
 from llm import client, audit
 from learning import knowledge
+from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from sim.engine import run_level
 from sim.level import Level
@@ -49,9 +50,13 @@ def _build_prompt() -> tuple[str, str]:
         "You design levels for a small tower-defense game (Cannons) and test your "
         "own design hypotheses by simulation before trusting them. Be specific and "
         "falsifiable: state a hypothesis, then build ONE level designed to be a "
-        "sharp test of it (not a generic level)."
+        "sharp test of it (not a generic level). Ground hypotheses in the real "
+        "rules below — never invent a mechanic that isn't stated there, no matter "
+        "how plausible it sounds."
     )
-    user = f"""{_LEVEL_SCHEMA}
+    user = f"""{GAME_RULES}
+
+{_LEVEL_SCHEMA}
 
 Confirmed rules so far from previous cycles:
 {knowledge.rules_as_prompt_block()}

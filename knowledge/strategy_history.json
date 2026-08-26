@@ -74,69 +74,69 @@
     "promoted": false,
     "win_rate": 0.8558,
     "candidate_win_rate": 0.1923,
-    "summary": "**Change summary**  \nThe champion assumes every front pirate can be damaged, so it under‑estimates danger when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I added the pirate’s `tipo` to t"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-25T20:50:57+00:00",
     "promoted": false,
     "win_rate": 0.875,
     "candidate_win_rate": 0.2692,
-    "summary": "**Change summary** – The champion assumes every front pirate can be damaged, so it under‑estimates danger when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I add the pirate’s `tipo` to the"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-25T21:49:02+00:00",
     "promoted": false,
     "win_rate": 0.8942,
     "candidate_win_rate": 0.1827,
-    "summary": "**Change summary**  \nThe champion assumes every front pirate can be damaged, so it over‑estimates safety when a *tipo 3* pirate (immune to the base 1 damage) is at the front of a column. I add the pirate’s `tipo` to the "
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-25T22:49:59+00:00",
     "promoted": false,
     "win_rate": 0.875,
     "candidate_win_rate": 0.7788,
-    "summary": "**Change summary** – The champion policy treats every front pirate as damageable, so it under‑estimates danger when a *tipo 3* pirate (immune to the base‑damage = 1) is at the front of a column. I added a simple immunity"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-26T02:12:06+00:00",
     "promoted": false,
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8077,
-    "summary": "**Change explanation (2 sentences)**  \nThe champion’s `possible_damage` routine assumes every front pirate can be hurt by the cannon’s current damage, so when a *tipo 3* (immune to the base‑1 damage) is leading a column "
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-26T04:20:37+00:00",
     "promoted": false,
     "win_rate": 0.8942,
     "candidate_win_rate": 0.7115,
-    "summary": "**Change summary** – The champion treats every front pirate as damageable, so it over‑estimates safety when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column. I added a single check in the damage phas"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-26T07:29:23+00:00",
     "promoted": false,
     "win_rate": 0.875,
     "candidate_win_rate": 0.6442,
-    "summary": "**Change summary** – The champion assumes every front pirate takes the cannon’s damage, so when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column the policy can deem a move safe even though the pirate"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-26T10:48:00+00:00",
     "promoted": false,
     "win_rate": 0.7885,
     "candidate_win_rate": 0.5962,
-    "summary": "**Change summary** – The champion treats every front pirate as damageable, so when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column the policy under‑estimates the deficit and may choose unsafe action"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-26T13:38:16+00:00",
     "promoted": false,
     "win_rate": 0.7885,
     "candidate_win_rate": 0.6442,
-    "summary": "**Change** – The champion assumes every front pirate can be hurt by the cannon’s damage.  \nWhen the front pirate is a **tipo 3** (immune to the base‑damage = 1) this over‑estimates safety, causing the policy to choose ac"
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   },
   {
     "timestamp": "2026-08-26T16:04:06+00:00",
     "promoted": false,
     "win_rate": 0.8077,
     "candidate_win_rate": 0.625,
-    "summary": "**Change summary** – The champion treats every front pirate as damageable, so when a *tipo 3* pirate (immune to the base‑damage = 1) is leading a column the policy over‑estimates safety and may select an unsafe action.  "
+    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
   }
 ]

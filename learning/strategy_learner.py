@@ -17,6 +17,7 @@ from pathlib import Path
 import config
 from llm import client, budget, audit
 from learning import knowledge, strategy_history
+from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, load_policy_from_source, PolicyLoadError
 from sim.benchmark import fixed_suite, random_suite
 from sim.evaluate import evaluate
@@ -51,7 +52,8 @@ engine.pirates: list[Pirate]         # all pirates currently alive on the board
   Pirate.position: int                # 0, 1, or 2 (valid); a pirate that would reach
                                        # position 3 ends the game in a loss
   Pirate.hp: int
-  Pirate.tipo: int
+  Pirate.tipo: int                    # COSMETIC ONLY — see GAME RULES below.
+                                       # Never affects damage/blocking/targeting.
 
 engine.round: int                     # current round number
 engine.rounds_played: int
@@ -88,7 +90,9 @@ def _build_prompt(current_source: str, current_score, rng_seed: int, *,
             "called Cannons. You write plain Python, no imports, no I/O. The last several "
             "full-rewrite proposals all failed to beat the current champion policy — stop "
             "redesigning from scratch and instead make ONE small, targeted change to the "
-            "champion below that fixes a specific weakness you can identify."
+            "champion below that fixes a specific weakness you can identify. Base that "
+            "weakness on the real rules given below — never invent a mechanic (e.g. tying "
+            "behavior to `tipo`) that isn't stated there."
         )
         task = (
             "The current policy is a proven champion — full rewrites keep losing to it. "
@@ -112,7 +116,9 @@ def _build_prompt(current_source: str, current_score, rng_seed: int, *,
             "attempts above, not a small variation on the same theme."
         )
 
-    user = f"""{_ENGINE_SPEC}
+    user = f"""{GAME_RULES}
+
+{_ENGINE_SPEC}
 
 Current policy source (win rate {current_score.win_rate:.2%} over {current_score.total} test levels):
 

@@ -155,13 +155,6 @@
   },
   {
     "date": "2026-08-25",
-    "statement": "**Hypothesis:**  \nPirates of tipo 3 are immune to the cannon’s base damage = 1; they can be eliminated only by merging with another pirate (i.e., a level that contains a solo tipo 3 pirate must require a merge to be winnable). => confirmed winnable by test level.",
-    "evidence": "level 'Z1234' (2 pirates, 4 filas, max_hp=1, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-25",
     "statement": "**Hypothesis**  \nWhen a pirate that blocks the line of fire is killed in a wave, the cannon’s damage continues in that same wave to affect the next pirate in the same column (i.e., damage can pass through a killed blocker within the same wave). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (2 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (two_round_lookahead_urgency): WON in 2 rounds",
     "confidence": 0.5,
@@ -171,13 +164,6 @@
     "date": "2026-08-25",
     "statement": "**Hypothesis**  \nA pirate of tipo 2 cannot be eliminated using only the cannon’s base damage = 1, even when there are enough waves (filas) to deal its total HP; it requires at least one merge unless its HP ≤ 2. => confirmed winnable by test level.",
     "evidence": "level 'A1234' (2 pirates, 6 filas, max_hp=3, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 6 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-25",
-    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = 1 cannot be eliminated without performing a merge if the pirate directly in front of it (same column, immediately preceding fila) is of tipo 3, because tipo 3 pirates are immune to the cannon’s base damage and therefore block the line of fire permanently. => confirmed winnable by test level.",
-    "evidence": "level 'B0001' (2 pirates, 2 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
   },
@@ -220,13 +206,6 @@
     "date": "2026-08-26",
     "statement": "**Hypothesis**  \nA cannon can fire multiple times within a single wave: after dealing damage (and possibly killing) a pirate in one column, you may immediately fire again at a different column in the same wave, provided the first column’s pirate is dead. If this is false, a level that places two 1‑HP pirates in the same fila but different columns will be unwinnable without a merge. => confirmed winnable by test level.",
     "evidence": "level 'A1234' (3 pirates, 2 filas, max_hp=1, columns=[0, 1, 2]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-26",
-    "statement": "A tipo 3 pirate blocks the line of fire for any pirate below it in the same column, even when there are empty filas between them; therefore a final tipo 4 pirate under a tipo 3 (with any number of empty rows separating them) cannot be killed without first merging or removing the tipo 3. => confirmed winnable by test level.",
-    "evidence": "level 'A0001' (2 pirates, 5 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
   }
