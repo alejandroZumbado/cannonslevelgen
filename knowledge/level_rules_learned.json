@@ -215,5 +215,12 @@
     "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=1, columns=[0, 1]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-26",
+    "statement": "**Hypothesis**  \nA cannon can fire multiple times within a single wave: after dealing damage (and possibly killing) a pirate in one column, you may immediately fire again at a different column in the same wave, provided the first column’s pirate is dead. If this is false, a level that places two 1‑HP pirates in the same fila but different columns will be unwinnable without a merge. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (3 pirates, 2 filas, max_hp=1, columns=[0, 1, 2]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
