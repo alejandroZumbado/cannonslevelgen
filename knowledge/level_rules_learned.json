@@ -201,5 +201,12 @@
     "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=3, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-26",
+    "statement": "**Hypothesis:**  \nIf two or more pirates occupy the same fila (row) in different columns, they block each other’s line of fire – the cannon cannot target any column that contains a pirate while another pirate in the same fila is still alive. Consequently, a level that has any fila with multiple alive pirates should be unwinnable without performing merges. => confirmed NOT winnable by test level.",
+    "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=1, columns=[0, 1, 2, 3, 4]) played with current policy (two_round_lookahead_urgency): LOST in 4 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
