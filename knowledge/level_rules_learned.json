@@ -222,5 +222,12 @@
     "evidence": "level 'A0001' (2 pirates, 7 filas, max_hp=5, columns=[0, 1]) played with current policy (two_round_lookahead_urgency): WON in 7 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-27",
+    "statement": "**Hypothesis:**  \nWhen a cannon is moved from one column to another, it keeps the damage value it has accumulated from previous merges; the act of moving does not reset the cannon’s damage back to the base 1. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 5 filas, max_hp=4, columns=[4]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
