@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T18:55:09+00:00",
-    "promoted": false,
-    "win_rate": 0.7981,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Change summary**  \nThe champion sometimes ties on total deficit and then picks the first action in lexical order, which can ignore the column that is actually most urgent (a pirate already at position 2). I add a tie‑b"
-  },
-  {
     "timestamp": "2026-08-24T20:14:01+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8077,
     "candidate_win_rate": 0.625,
     "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
+  },
+  {
+    "timestamp": "2026-08-28T21:27:40+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.7788,
+    "summary": "**Change summary**  \nThe champion policy stops searching as soon as it finds any action that yields a “perfect” two‑round outlook (`deficit1 == 0`, `maxpos1 <= 1`, `best_def2 == 0`, `best_max2 <= 1`). This can cause it t"
   }
 ]

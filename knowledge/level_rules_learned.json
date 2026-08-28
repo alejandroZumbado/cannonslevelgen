@@ -229,5 +229,12 @@
     "evidence": "level 'A0001' (1 pirates, 5 filas, max_hp=4, columns=[4]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-28",
+    "statement": "**Hypothesis:**  \nThere is no hidden upper limit on a cannon’s damage; by repeatedly merging a cannon onto the same column during empty rows you can raise its damage arbitrarily (up to the game’s maximum pirate HP of 10), so a level that requires a cannon of damage 10 after ten empty rows should be winnable. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 11 filas, max_hp=10, columns=[0]) played with current policy (two_round_lookahead_urgency): WON in 11 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
