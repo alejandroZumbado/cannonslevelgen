@@ -158,7 +158,14 @@ def run_cycle() -> dict:
 
     system, user = _build_prompt(current_source, current_score, rng_seed=datetime.now().microsecond,
                                   refine_mode=refine_mode, recent_attempts=recent_attempts)
-    completion = client.complete(system, user, max_tokens=4000)
+    # 4000 -> 3000 on 2026-08-28: prompt (policy source + GAME_RULES + learned
+    # rules + recent attempts) measured ~4450 tokens; with max_tokens=4000 the
+    # combined request+completion budget (~8450) tripped Groq's 413 on every
+    # single cycle from 2026-08-26T19:17 onward (see knowledge.py's
+    # _MAX_RULES_IN_PROMPT comment for the full incident). 3000 is the documented
+    # floor for openai/gpt-oss-120b (client.py) — do not go lower without
+    # re-verifying the empty-response gotcha.
+    completion = client.complete(system, user, max_tokens=3000)
     response = completion.text
 
     code = _extract_code(response)

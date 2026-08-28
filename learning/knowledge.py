@@ -38,13 +38,20 @@ def all_rules() -> list[dict]:
     return _load_rules()
 
 
-_MAX_RULES_IN_PROMPT = 15  # trailing window for PROMPT INJECTION ONLY. The JSON
+_MAX_RULES_IN_PROMPT = 8  # trailing window for PROMPT INJECTION ONLY. The JSON
 # file keeps every rule ever confirmed forever (add_rule/all_rules are untouched) —
 # this cap just bounds what gets sent to the LLM each cycle. Added 2026-08-25 after
 # rules_as_prompt_block() growing unbounded (26 rules, ~8.9k chars, plus ~6k chars of
 # policy source) tripped Groq's request-size limit twice in one day (413 Payload Too
 # Large, strategy_learner, 13:23 and 15:25 UTC) — same shape of bug as the plateau fix
 # in strategy_history.py, which already windows what it injects for the same reason.
+# Lowered 15 -> 8 on 2026-08-28: adding GAME_RULES to strategy_learner's prompt
+# (ba49387, 2026-08-26) pushed the same prompt back over Groq's limit — EVERY
+# strategy_learner cycle failed with 413 from 2026-08-26T19:17 through at least
+# 2026-08-28T11:16 (100% failure, confirmed via state/error_events.jsonl and zero
+# strategy_learner entries in audit/2026-08-27.jsonl / 2026-08-28.jsonl), so the
+# 15-rule cap alone wasn't enough margin once a second component grew. Paired with
+# the max_tokens cut in strategy_learner.py — see that file for the token budget.
 
 
 def rules_as_prompt_block() -> str:
