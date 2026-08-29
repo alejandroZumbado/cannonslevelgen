@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-28T21:27:40+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.7788,
-    "summary": "**Change summary**  \nThe champion policy stops searching as soon as it finds any action that yields a “perfect” two‑round outlook (`deficit1 == 0`, `maxpos1 <= 1`, `best_def2 == 0`, `best_max2 <= 1`). This can cause it t"
-  },
-  {
     "timestamp": "2026-08-29T07:54:33+00:00",
     "promoted": true,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.875,
     "summary": "**Idea:**  \nThe biggest cause of loss is a pirate already on the loss‑dangerous row (`position == 2`). The previous policy only looked at total deficit, so it sometimes kept a dangerous pirate alive even when another act"
+  },
+  {
+    "timestamp": "2026-08-29T08:13:16+00:00",
+    "promoted": true,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Idea:**  \nThe new policy first checks whether an action can *immediately* eliminate any pirate that is already on the loss‑dangerous row (position 2). Killing such a pirate this round guarantees we avoid an instant los"
   }
 ]

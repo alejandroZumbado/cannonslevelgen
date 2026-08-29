@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_pos2_first_with_lookahead"
+    name = "three_round_urgency_lookahead_fixed"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -16,8 +16,7 @@ class Policy:
 
         # ----- core simulation helpers -----
         def simulate_round(cann_map, pir_list):
-            """Apply one full round: damage then advance.
-               Returns (new_cannons, new_pirates, loss_flag)."""
+            """Apply one full round: damage then advance."""
             cann = dict(cann_map)
             pir = [dict(p) for p in pir_list]
 
@@ -53,6 +52,7 @@ class Policy:
                 if not plist:
                     continue
                 dmg = cann_map.get(col, 0)
+                # simulate only this column with its current damage
                 col_pirates = [dict(p) for p in plist]
                 total_hp = sum(p["hp"] for p in col_pirates)
                 possible = 0
@@ -70,10 +70,15 @@ class Policy:
                     deficit += total_hp - possible
             return deficit
 
+        def urgency_score(pir_list):
+            """Higher score = more urgent (pirates nearer to loss)."""
+            # weight grows with position so position‑2 pirates are most urgent
+            return sum((p["position"] + 1) * p["hp"] for p in pir_list)
+
         def max_position(pir_list):
             return max((p["position"] for p in pir_list), default=-1)
 
-        # ----- future look‑ahead (same as champion, depth 2) ----- #
+        # ----- recursive look‑ahead for future spawns only -----
         def future_deficit(cann_map, pir_list, rounds_left):
             """Best possible deficit after `rounds_left` future spawn rounds."""
             if rounds_left == 0:
@@ -81,6 +86,7 @@ class Policy:
 
             best = None
             for col in range(NUM_COLUMNS):
+                # spawn a new cannon (damage 1) in column col
                 nxt_cann = dict(cann_map)
                 nxt_cann[col] = nxt_cann.get(col, 0) + 1
                 nxt_cann, nxt_pir, loss = simulate_round(nxt_cann, pir_list)
@@ -89,6 +95,7 @@ class Policy:
                 val = future_deficit(nxt_cann, nxt_pir, rounds_left - 1)
                 if best is None or val < best:
                     best = val
+            # if every spawn leads to loss, treat as very bad
             return best if best is not None else 10 ** 9
 
         # ----- enumerate all legal actions -----
@@ -109,7 +116,7 @@ class Policy:
         best_key = None   # tuple used for comparison (lower is better)
 
         for act in actions:
-            # ----- apply the chosen action (before round) -----
+            # ----- apply the chosen action -----
             new_cann = dict(cannons)
 
             if act[0] == "spawn":
@@ -119,46 +126,25 @@ class Policy:
                 donor, target = act[1], act[2]
                 dmg = new_cann.pop(donor)
                 new_cann[target] = new_cann.get(target, 0) + dmg
-                # pending spawn cannon is lost this round (no extra effect)
+                # the pending spawn cannon is lost this round (no extra effect)
 
-            # ----- damage phase with kill‑pos2 detection -----
-            killed_pos2 = False
-            # copy pirates for this simulation
-            pir = [dict(p) for p in pirates]
-            for col, dmg in new_cann.items():
-                if dmg <= 0:
-                    continue
-                col_p = [p for p in pir if p["column"] == col]
-                if not col_p:
-                    continue
-                front = max(col_p, key=lambda p: p["position"])
-                if front["position"] == 2 and dmg >= front["hp"]:
-                    killed_pos2 = True
-                front["hp"] -= dmg
-                if front["hp"] <= 0:
-                    pir.remove(front)
-
-            # advance pirates
-            for p in pir:
-                p["position"] += 1
-
-            loss = any(p["position"] >= MAX_POSITION for p in pir)
+            # ----- simulate the round that this action participates in -----
+            post_cann, post_pir, loss = simulate_round(new_cann, pirates)
             if loss:
                 continue          # unsafe action, discard
 
-            post_cann, post_pir, _ = simulate_round(new_cann, pirates)  # reuse for consistency
-            # (the above simulate_round repeats the same damage/advance; we keep it for later metrics)
-
-            # ----- evaluation metrics -----
-            primary = 0 if killed_pos2 else 1                     # kill pos‑2 pirates first
+            # immediate evaluation
             deficit_now = total_deficit(post_cann, post_pir)
             maxpos_now = max_position(post_pir)
+            urgency_now = urgency_score(post_pir)
+
+            # look‑ahead two more spawn rounds (total three rounds)
             future_def = future_deficit(post_cann, post_pir, rounds_left=2)
 
-            # tie‑breaker: prefer spawn over move, then lower column numbers
+            # tie‑breaker: prefer spawn over move, then lower column numbers for determinism
             tie = (0 if act[0] == "spawn" else 1, act)
 
-            key = (primary, deficit_now, maxpos_now, future_def, tie)
+            key = (deficit_now, maxpos_now, future_def, urgency_now, tie)
 
             if best_key is None or key < best_key:
                 best_key = key
