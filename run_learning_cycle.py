@@ -1,11 +1,19 @@
 #!/usr/bin/env python
 """Entry point for the month-1 learning phase. Runs on a GitHub Actions
 schedule (.github/workflows/learning.yml), NOT on your own machine — each
-invocation gets a fresh, disposable VM, runs one strategy cycle + one
-level-design cycle, commits+pushes whatever it learned back to this repo
-(git_sync.py) so the next run — on a completely different disposable VM —
+invocation gets a fresh, disposable VM, loops strategy/level-design cycles
+back-to-back until the daily token budget or this job's own time budget runs
+out, committing+pushing (git_sync.py) after every cycle so the next
+invocation — on a completely different disposable VM, possibly hours away —
 picks up where this one left off. Also fine to run locally for testing; it
 still pushes, same as any other command in this repo would.
+
+Looping instead of running exactly one cycle per invocation is deliberate
+(added 2026-08-29): this repo/account is new enough that GitHub's scheduler
+only actually grants this workflow ~1-2 real runs/day regardless of the cron
+interval requested (see config.JOB_TIME_BUDGET_SECONDS for the full story).
+One cycle per run wasted almost the entire day's token budget sitting idle;
+looping means each rare run spends as much of that budget as it can.
 
 The daily token budget (llm/budget.py) is tracked in state/budget.json,
 which IS committed (see .gitignore) specifically so it survives across
@@ -18,6 +26,7 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 import traceback
 from datetime import datetime
 
@@ -39,6 +48,13 @@ _RUNNERS = {
     "strategy_learner": strategy_learner.run_cycle,
     "level_designer": level_designer.run_cycle,
 }
+
+# Pure safety net, not the real stopping condition (config.JOB_TIME_BUDGET_SECONDS
+# is) — guards against an unforeseen bug making every cycle fail near-instantly
+# with zero real API latency, which could otherwise spin and spam commits for
+# the whole time budget instead of tripping BudgetExceeded/ProviderQuotaExhausted
+# like a normal day does.
+_MAX_CYCLE_PAIRS_PER_RUN = 300
 
 
 def _next_order() -> list[str]:
@@ -82,24 +98,43 @@ def _run_one(name: str) -> bool:
 
 
 def main() -> int:
+    start = time.monotonic()
+    deadline = start + config.JOB_TIME_BUDGET_SECONDS
     print(f"[{datetime.now().isoformat(timespec='seconds')}] learning cycle starting "
-          f"(budget remaining today: {remaining_tokens()} tokens, {calls_made_today()} calls made)", flush=True)
+          f"(budget remaining today: {remaining_tokens()} tokens, {calls_made_today()} calls made, "
+          f"time budget this run: {config.JOB_TIME_BUDGET_SECONDS}s)", flush=True)
 
-    first, second = _next_order()
-    print(f"  order this cycle: {first} -> {second}", flush=True)
+    pairs_run = 0
+    while pairs_run < _MAX_CYCLE_PAIRS_PER_RUN:
+        pairs_run += 1
+        first, second = _next_order()
+        print(f"  pair {pairs_run}: order {first} -> {second} "
+              f"({time.monotonic() - start:.0f}s elapsed)", flush=True)
 
-    if not _run_one(first):
-        _run_one(second)
+        exhausted = _run_one(first)
+        if not exhausted:
+            exhausted = _run_one(second)
 
-    print(f"[{datetime.now().isoformat(timespec='seconds')}] cycle done "
-          f"(budget remaining: {remaining_tokens()} tokens)", flush=True)
+        try:
+            git_sync.sync_cycle_results()
+        except Exception:  # noqa: BLE001 — a sync failure shouldn't mask the cycle's own result
+            print("  git_sync: failed, see traceback below (this cycle's results may be lost)", flush=True)
+            traceback.print_exc()
+            incident_log.record_exception("git_sync")
 
-    try:
-        git_sync.sync_cycle_results()
-    except Exception:  # noqa: BLE001 — a sync failure shouldn't mask the cycle's own result
-        print("  git_sync: failed, see traceback below (this run's results may be lost)", flush=True)
-        traceback.print_exc()
-        incident_log.record_exception("git_sync")
+        if exhausted:
+            print("  stopping loop: today's budget/provider quota is exhausted.", flush=True)
+            break
+        if time.monotonic() >= deadline:
+            print(f"  stopping loop: hit this run's {config.JOB_TIME_BUDGET_SECONDS}s time budget "
+                  f"after {pairs_run} pair(s) — next run picks up from here.", flush=True)
+            break
+    else:
+        print(f"  stopping loop: hit the {_MAX_CYCLE_PAIRS_PER_RUN}-pair safety cap — "
+              f"investigate if cycles are failing near-instantly.", flush=True)
+
+    print(f"[{datetime.now().isoformat(timespec='seconds')}] run done after {pairs_run} pair(s), "
+          f"{time.monotonic() - start:.0f}s (budget remaining: {remaining_tokens()} tokens)", flush=True)
 
     return 0
 

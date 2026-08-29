@@ -50,6 +50,20 @@ DAILY_TOKEN_BUDGET = int(os.environ.get("DAILY_TOKEN_BUDGET", 180_000))
 # kills it mid-sleep with zero clean output. See llm/rate_limits.py.
 MAX_RETRY_WAIT_SECONDS = 90.0
 
+# How long run_learning_cycle.py is allowed to keep looping cycles within a
+# single invocation before it stops on its own and lets the job exit cleanly.
+# Added 2026-08-29: this repo/account is new enough that GitHub's scheduler
+# batches it into a low-priority queue swept only ~1-2x/day regardless of the
+# cron interval requested (same symptom as github.com/orgs/community/
+# discussions/201738). Asking for a shorter interval doesn't buy more real
+# firings, so each firing now loops many cycles back-to-back instead of just
+# one, to actually spend the day's token budget when GitHub does grant a run.
+# Set well below the workflow's timeout-minutes (see learning.yml) so there's
+# always time left for a final git push before GitHub kills the job. The
+# default here (no env var set) is for local/manual runs, which don't need a
+# long loop.
+JOB_TIME_BUDGET_SECONDS = int(os.environ.get("JOB_TIME_BUDGET_SECONDS", 480))
+
 CANNONS_REPO = Path(os.environ.get("CANNONS_REPO_PATH", ROOT.parent / "Cannons"))
 INCOMING_LEVELS_DIR = CANNONS_REPO / "GeneratedLevels" / "incoming"
 

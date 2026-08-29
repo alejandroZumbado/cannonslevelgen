@@ -2,15 +2,18 @@ name: CannonsLevelGen Learning Cycle
 
 on:
   schedule:
-    # every 15 minutes, all day, every day — same cadence this ran at
-    # locally under Windows Task Scheduler before moving to GitHub Actions
-    # so it doesn't need your PC on. GitHub may delay a schedule slightly
-    # under load; that's fine, llm/budget.py gates spend by calendar day,
-    # not by exact cron precision.
-    # Offset from :00/:15/:30/:45 on purpose — those are the most oversubscribed
-    # minutes on GitHub's scheduler (everyone's cron fires there), which caused
-    # real multi-hour delays right after this schedule went live.
-    - cron: '7,22,37,52 * * * *'
+    # Was every 15 min ('7,22,37,52 * * * *') until 2026-08-29. Dropped to
+    # hourly after confirming (via gh run list timestamps + github.com/orgs/
+    # community/discussions/201738) that this repo/account is new enough that
+    # GitHub batches its schedule into a low-priority queue swept only ~1-2x/
+    # day regardless of the interval requested — asking for 15 min bought
+    # nothing real, just more queued-then-dropped events. Whenever GitHub
+    # actually does grant a run, run_learning_cycle.py now loops cycles for
+    # up to JOB_TIME_BUDGET_SECONDS below instead of doing just one, so each
+    # rare real run spends as much of the day's token budget as it can.
+    # Offset from :00 on purpose — the top of the hour is the most
+    # oversubscribed minute on GitHub's scheduler.
+    - cron: '23 * * * *'
   workflow_dispatch:
     # manual "Run workflow" button in the Actions tab, for testing
 
@@ -24,7 +27,13 @@ concurrency:
 jobs:
   learning-cycle:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Was 10 (one cycle per run). Bumped to 180 on 2026-08-29 so a single run
+    # can loop many cycles (see run_learning_cycle.py) — public repos get
+    # unlimited GitHub-hosted runner minutes, so this costs nothing even on
+    # days it isn't needed. JOB_TIME_BUDGET_SECONDS below stays well under
+    # this so the script always leaves time for checkout/pip install (which
+    # count against timeout-minutes too) and a final git push.
+    timeout-minutes: 180
 
     steps:
       - name: Checkout repo
@@ -42,13 +51,17 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run one learning cycle
+      - name: Run learning cycles (loops until budget/time runs out)
         env:
           AI_PROVIDER: ${{ secrets.AI_PROVIDER || 'groq' }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GROQ_MODEL: ${{ secrets.GROQ_MODEL || 'openai/gpt-oss-120b' }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CI: true
+          # 170 min: 10 min under timeout-minutes above, to leave room for
+          # checkout/pip install (already spent by the time this step starts)
+          # and a final git push before GitHub kills the job outright.
+          JOB_TIME_BUDGET_SECONDS: "10200"
           # unbuffered so prints show up live in the Actions log instead of
           # being lost if the job ever gets killed before a buffer flush —
           # this is exactly what hid the 2026-08-23 timeout incident's cause
