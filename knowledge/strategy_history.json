@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T22:10:52+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary** – The original policy breaks ties only by lexical order, so when several actions give the same total‑deficit it can ignore the column that actually has the most urgent pirate (a pirate already at posit"
-  },
-  {
     "timestamp": "2026-08-24T23:11:08+00:00",
     "promoted": true,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.7981,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary** – The new policy looks three rounds ahead (the current round + two future spawns) instead of only two, and it evaluates states with an *urgency* score that heavily penalises pirates that are close to t"
+  },
+  {
+    "timestamp": "2026-08-29T07:56:12+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.1442,
+    "summary": "**Idea**  \nInstead of evaluating a generic deficit over three future rounds, this policy concentrates damage early into a single “super‑cannon” and only moves it when a pirate is one step from loss (position 2) and canno"
   }
 ]
