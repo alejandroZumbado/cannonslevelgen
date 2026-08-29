@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T17:01:18+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary**  \nThe champion only looks one step ahead with *spawn* actions; it never considers that a *move* in the second round can reposition damage where it is most needed. In levels where an urgent pirate is in"
-  },
-  {
     "timestamp": "2026-08-25T19:43:26+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.875,
     "summary": "**Change explanation**  \nThe current key orders `future_def` before `urgency_now`. When two actions have the same immediate deficit and max position, the policy can favor an action that looks better a few rounds ahead ev"
+  },
+  {
+    "timestamp": "2026-08-29T08:01:25+00:00",
+    "promoted": false,
+    "win_rate": 0.8269,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe current policy breaks ties by looking ahead (`future_def`) before considering how urgently a pirate is about to reach the loss position. In situations where two actions have identical immediate d"
   }
 ]
