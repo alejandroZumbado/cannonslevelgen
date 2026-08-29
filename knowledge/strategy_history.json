@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-26T13:38:16+00:00",
-    "promoted": false,
-    "win_rate": 0.7885,
-    "candidate_win_rate": 0.6442,
-    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
-  },
-  {
     "timestamp": "2026-08-26T16:04:06+00:00",
     "promoted": false,
     "win_rate": 0.8077,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary**  \nThe original `urgency_score` rewards pirates that are *farther* from the loss row because it uses `(MAX_POSITION - p[\"position\"])`. This makes the policy undervalue actions that eliminate a pirate al"
+  },
+  {
+    "timestamp": "2026-08-29T08:10:16+00:00",
+    "promoted": true,
+    "win_rate": 0.9231,
+    "candidate_win_rate": 0.9327,
+    "summary": "**Change summary** – The original `urgency_score` rewards pirates that are *farther* from the loss row (`position 0` gets the highest weight). Consequently the policy can overlook an action that instantly kills a pirate "
   }
 ]

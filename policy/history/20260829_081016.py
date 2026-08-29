@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "three_round_urgency_lookahead_fixed"
+    name = "three_round_urgency_lookahead"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -72,8 +72,7 @@ class Policy:
 
         def urgency_score(pir_list):
             """Higher score = more urgent (pirates nearer to loss)."""
-            # weight grows with position so position‑2 pirates are most urgent
-            return sum((p["position"] + 1) * p["hp"] for p in pir_list)
+            return sum((MAX_POSITION - p["position"]) * p["hp"] for p in pir_list)
 
         def max_position(pir_list):
             return max((p["position"] for p in pir_list), default=-1)
