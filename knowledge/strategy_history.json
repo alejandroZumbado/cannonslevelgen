@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T19:43:26+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.1923,
-    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
-  },
-  {
     "timestamp": "2026-08-25T20:50:57+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary**  \nThe current policy breaks ties by looking ahead (`future_def`) before considering how urgently a pirate is about to reach the loss position. In situations where two actions have identical immediate d"
+  },
+  {
+    "timestamp": "2026-08-29T08:02:21+00:00",
+    "promoted": false,
+    "win_rate": 0.7692,
+    "candidate_win_rate": 0.7596,
+    "summary": "**Change summary**  \nThe current tie‑breaker evaluates `future_def` before the *urgency* of the board, so when two actions have identical immediate deficit and identical highest pirate position the policy may pick a move"
   }
 ]
