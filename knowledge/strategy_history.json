@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:56:12+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.1442,
-    "summary": "**Idea**  \nInstead of evaluating a generic deficit over three future rounds, this policy concentrates damage early into a single “super‑cannon” and only moves it when a pirate is one step from loss (position 2) and canno"
-  },
-  {
     "timestamp": "2026-08-29T07:57:06+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.2885,
     "summary": "**Idea** – Instead of only “kill‑pos‑2 first”, this policy treats the board as two phases each round: *emergency* (any pirate on position 2 must be eliminated this round if possible) and *charging* (when there is no emer"
+  },
+  {
+    "timestamp": "2026-08-29T08:15:46+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.6731,
+    "summary": "**Idea:** Instead of focusing mainly on “kill‑position‑2 first” or a raw deficit, this policy evaluates every legal action by the *total weighted threat* that remains after the round – each pirate contributes `(MAX_POSIT"
   }
 ]
