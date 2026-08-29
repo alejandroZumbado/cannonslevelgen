@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:55:29+00:00",
-    "promoted": true,
-    "win_rate": 0.7981,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary** – The new policy looks three rounds ahead (the current round + two future spawns) instead of only two, and it evaluates states with an *urgency* score that heavily penalises pirates that are close to t"
-  },
-  {
     "timestamp": "2026-08-29T07:56:12+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.7019,
     "summary": "**Idea:**  \nInstead of only looking at a generic “deficit” or a short‑range look‑ahead, this policy treats any pirate on the loss‑danger row (position 2) as an immediate emergency. It first tries to kill a position‑2 pir"
+  },
+  {
+    "timestamp": "2026-08-29T08:14:55+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.2885,
+    "summary": "**Idea** – Instead of only “kill‑pos‑2 first”, this policy treats the board as two phases each round: *emergency* (any pirate on position 2 must be eliminated this round if possible) and *charging* (when there is no emer"
   }
 ]
