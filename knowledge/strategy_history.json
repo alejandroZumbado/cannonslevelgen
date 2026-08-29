@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:54:33+00:00",
-    "promoted": true,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nWhen two actions are otherwise equal (same deficit, same current max pirate position and same optimistic two‑round outlook) the original policy breaks ties by the raw action tuple, which makes *move*"
-  },
-  {
     "timestamp": "2026-08-29T07:55:29+00:00",
     "promoted": true,
     "win_rate": 0.7981,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Idea:**  \nThe new policy first checks whether an action can *immediately* eliminate any pirate that is already on the loss‑dangerous row (position 2). Killing such a pirate this round guarantees we avoid an instant los"
+  },
+  {
+    "timestamp": "2026-08-29T08:14:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8269,
+    "candidate_win_rate": 0.7019,
+    "summary": "**Idea:**  \nInstead of only looking at a generic “deficit” or a short‑range look‑ahead, this policy treats any pirate on the loss‑danger row (position 2) as an immediate emergency. It first tries to kill a position‑2 pir"
   }
 ]
