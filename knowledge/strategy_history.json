@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T21:39:31+00:00",
-    "promoted": false,
-    "win_rate": 0.8077,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Change summary** – The original champion breaks ties only by lexical order, so when several actions give the same total‑deficit it can pick a spawn in a harmless column while a pirate is already at position 2 in anothe"
-  },
-  {
     "timestamp": "2026-08-24T22:10:52+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nWhen two actions are otherwise equal (same deficit, same current max pirate position and same optimistic two‑round outlook) the original policy breaks ties by the raw action tuple, which makes *move*"
+  },
+  {
+    "timestamp": "2026-08-29T07:55:29+00:00",
+    "promoted": true,
+    "win_rate": 0.7981,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary** – The new policy looks three rounds ahead (the current round + two future spawns) instead of only two, and it evaluates states with an *urgency* score that heavily penalises pirates that are close to t"
   }
 ]
