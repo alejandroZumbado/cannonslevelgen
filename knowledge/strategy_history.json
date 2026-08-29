@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T23:11:08+00:00",
-    "promoted": true,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary** – The champion breaks ties only by lexical order, which can cause it to ignore an imminent threat (a pirate already at position 2) when several actions give the same total‑deficit. I add a second tie‑b"
-  },
-  {
     "timestamp": "2026-08-25T02:06:12+00:00",
     "promoted": true,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.1442,
     "summary": "**Idea**  \nInstead of evaluating a generic deficit over three future rounds, this policy concentrates damage early into a single “super‑cannon” and only moves it when a pirate is one step from loss (position 2) and canno"
+  },
+  {
+    "timestamp": "2026-08-29T07:57:06+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.7019,
+    "summary": "**Idea:**  \nInstead of trying to exhaustively minimise a “deficit” over three future spawns, this policy evaluates every legal action by simulating the current round and then scoring the resulting board with a *urgency‑w"
   }
 ]
