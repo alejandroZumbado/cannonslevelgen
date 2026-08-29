@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:57:59+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Idea:** Instead of trying to minimise a vague “deficit” over three future spawns, this policy treats every column as an independent “time‑to‑loss” problem. For each column it simulates how much total damage can be deal"
-  },
-  {
     "timestamp": "2026-08-29T07:58:45+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, act)`).  \nWhen the other evaluation metrics are equal this can make the bot ignore"
+  },
+  {
+    "timestamp": "2026-08-29T13:52:20+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.9038,
+    "summary": "**Change summary**  \nThe champion policy always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, act)`).  \nWhen two actions are otherwise identical this can discard a *move* that "
   }
 ]
