@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-26T02:12:06+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8077,
-    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
-  },
-  {
     "timestamp": "2026-08-26T04:20:37+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary** – The current policy can overlook an action that instantly kills a pirate that is already on the loss‑dangerous row (`position == 2`). When the deficit and other scores are equal, the tie‑breaker does "
+  },
+  {
+    "timestamp": "2026-08-29T08:05:30+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe original policy can overlook an action that instantly kills a pirate already on the loss‑dangerous row (`position == 2`) because its tie‑breaker does not consider that fact. I added a small flag "
   }
 ]

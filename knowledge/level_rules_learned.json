@@ -236,5 +236,12 @@
     "evidence": "level 'A0001' (1 pirates, 11 filas, max_hp=10, columns=[0]) played with current policy (two_round_lookahead_urgency): WON in 11 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-29",
+    "statement": "**Hypothesis:**  \nIf a cannon is placed onto a column that already contains a living pirate (regardless of the pirate’s current position), the cannon will fire at that pirate during the same round’s shooting phase, allowing the pirate to be killed before it can advance further. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 2 filas, max_hp=1, columns=[0]) played with current policy (three_round_urgency_lookahead): WON in 1 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
