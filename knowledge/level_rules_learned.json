@@ -243,5 +243,12 @@
     "evidence": "level 'A0001' (1 pirates, 2 filas, max_hp=1, columns=[0]) played with current policy (three_round_urgency_lookahead): WON in 1 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-29",
+    "statement": "Hypothesis: When a cannon’s damage exceeds a pirate’s remaining HP, the surplus damage is discarded; it does **not** carry over to damage a pirate in a different column during the same shooting phase. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 3 filas, max_hp=1, columns=[0, 1]) played with current policy (three_round_urgency_lookahead): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
