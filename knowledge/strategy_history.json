@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T08:55:03+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Idea:**  \nInstead of enumerating future spawns, the new policy evaluates each legal action by looking at the *urgency* of every front‑pirate: how many rounds remain before it reaches the loss row and how much extra dam"
-  },
-  {
     "timestamp": "2026-08-25T17:01:18+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.8269,
     "summary": "**Change explanation**  \nThe current policy sometimes lets a pirate that is already on the last safe row (position 2) survive a round even though the cannon could kill it this turn; the loss is then inevitable in the nex"
+  },
+  {
+    "timestamp": "2026-08-29T08:00:32+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change explanation**  \nThe current key orders `future_def` before `urgency_now`. When two actions have the same immediate deficit and max position, the policy can favor an action that looks better a few rounds ahead ev"
   }
 ]
