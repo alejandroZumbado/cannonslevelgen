@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T21:49:02+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.1827,
-    "summary": "rejected: proposed tying pirate behavior to tipo (invented mechanic, not real) — superseded by explicit GAME_RULES block added to the prompt"
-  },
-  {
     "timestamp": "2026-08-25T22:49:59+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary**  \nThe current policy can choose between actions that look equally good in terms of immediate deficit and highest pirate position, yet only one of them actually eliminates a pirate that is already on th"
+  },
+  {
+    "timestamp": "2026-08-29T08:03:50+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nThe champion sometimes ignores an action that would instantly kill a pirate already on the loss‑dangerous row (`position == 2`). Even when the overall deficit and other scores are equal, killing that"
   }
 ]
