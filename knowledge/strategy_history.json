@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:57:06+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.7019,
-    "summary": "**Idea:**  \nInstead of trying to exhaustively minimise a “deficit” over three future spawns, this policy evaluates every legal action by simulating the current round and then scoring the resulting board with a *urgency‑w"
-  },
-  {
     "timestamp": "2026-08-29T07:57:59+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.6731,
     "summary": "**Idea:** Instead of focusing mainly on “kill‑position‑2 first” or a raw deficit, this policy evaluates every legal action by the *total weighted threat* that remains after the round – each pirate contributes `(MAX_POSIT"
+  },
+  {
+    "timestamp": "2026-08-29T08:16:26+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, act)`).  \nWhen the other evaluation metrics are equal this can make the bot ignore"
   }
 ]
