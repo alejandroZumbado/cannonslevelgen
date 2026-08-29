@@ -3,7 +3,7 @@ MAX_POSITION = 3  # reaching this loses the game
 
 
 class Policy:
-    name = "two_round_lookahead_urgency_fixed"
+    name = "two_round_lookahead_urgency"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -139,11 +139,8 @@ class Policy:
                 best_def2 = 10 ** 9
                 best_max2 = 10 ** 9
 
-            # tie‑breaker: prefer spawn over move when everything else equal
-            tie_breaker = 0 if act[0] == "spawn" else 1
-
             # comparison key: lower is better
-            key = (deficit1, maxpos1, best_def2, best_max2, tie_breaker, act)
+            key = (deficit1, maxpos1, best_def2, best_max2, act)
 
             if (best_key is None) or (key < best_key):
                 best_key = key

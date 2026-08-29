@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-24T20:14:01+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary**  \nWhen two actions give the same total‑deficit score the original champion breaks the tie purely by lexical order, which can cause it to ignore the column that actually has the most urgent pirate (a pi"
-  },
-  {
     "timestamp": "2026-08-24T21:39:31+00:00",
     "promoted": false,
     "win_rate": 0.8077,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.7788,
     "summary": "**Change summary**  \nThe champion policy stops searching as soon as it finds any action that yields a “perfect” two‑round outlook (`deficit1 == 0`, `maxpos1 <= 1`, `best_def2 == 0`, `best_max2 <= 1`). This can cause it t"
+  },
+  {
+    "timestamp": "2026-08-29T07:54:33+00:00",
+    "promoted": true,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nWhen two actions are otherwise equal (same deficit, same current max pirate position and same optimistic two‑round outlook) the original policy breaks ties by the raw action tuple, which makes *move*"
   }
 ]
