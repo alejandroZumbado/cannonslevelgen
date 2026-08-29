@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-25T02:06:12+00:00",
-    "promoted": true,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Idea:** Instead of deciding only from the immediate‑round deficit, the new policy looks two rounds ahead. For each legal action it simulates the first round, then *optimistically* simulates the best possible spawn in t"
-  },
-  {
     "timestamp": "2026-08-25T04:04:54+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.7019,
     "summary": "**Idea:**  \nInstead of trying to exhaustively minimise a “deficit” over three future spawns, this policy evaluates every legal action by simulating the current round and then scoring the resulting board with a *urgency‑w"
+  },
+  {
+    "timestamp": "2026-08-29T07:57:59+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Idea:** Instead of trying to minimise a vague “deficit” over three future spawns, this policy treats every column as an independent “time‑to‑loss” problem. For each column it simulates how much total damage can be deal"
   }
 ]
