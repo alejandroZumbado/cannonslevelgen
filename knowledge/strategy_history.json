@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:58:45+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-08-29T07:59:35+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.9038,
     "summary": "**Change summary**  \nThe champion policy always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, act)`).  \nWhen two actions are otherwise identical this can discard a *move* that "
+  },
+  {
+    "timestamp": "2026-08-29T13:53:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe champion simulates the board twice each turn: it first applies damage/advance manually, then calls `simulate_round` again on the *original* pirate list. This double‑counts a round, making the def"
   }
 ]
