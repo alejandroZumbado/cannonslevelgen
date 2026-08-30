@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:10:16+00:00",
-    "promoted": true,
-    "win_rate": 0.9231,
-    "candidate_win_rate": 0.9327,
-    "summary": "**Change summary** – The original `urgency_score` rewards pirates that are *farther* from the loss row (`position 0` gets the highest weight). Consequently the policy can overlook an action that instantly kills a pirate "
-  },
-  {
     "timestamp": "2026-08-29T08:12:19+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.9135,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary** – The champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, which actually simu"
+  },
+  {
+    "timestamp": "2026-08-30T05:44:45+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
