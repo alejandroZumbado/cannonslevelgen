@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:13:16+00:00",
-    "promoted": true,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Idea:**  \nThe new policy first checks whether an action can *immediately* eliminate any pirate that is already on the loss‑dangerous row (position 2). Killing such a pirate this round guarantees we avoid an instant los"
-  },
-  {
     "timestamp": "2026-08-29T08:14:03+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-08-30T05:46:33+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change explanation**  \nThe champion evaluates each action twice: it first applies damage/advance manually (to detect a *kill‑pos‑2*) and then calls `simulate_round(new_cann, pirates)`, which runs the same round again o"
   }
 ]
