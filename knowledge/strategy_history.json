@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:00:32+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change explanation**  \nThe current key orders `future_def` before `urgency_now`. When two actions have the same immediate deficit and max position, the policy can favor an action that looks better a few rounds ahead ev"
-  },
-  {
     "timestamp": "2026-08-29T08:01:25+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nThe champion policy mistakenly calls `simulate_round` a second time on the *original* pirate list (`pirates`) after it has already applied damage and advancement once. This double‑counts the current "
+  },
+  {
+    "timestamp": "2026-08-30T05:32:26+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nThe champion policy simulated the round twice: it first applied damage / advance manually (producing `pir`), then called `simulate_round` again on the *original* pirate list (`pirates`). This double‑"
   }
 ]
