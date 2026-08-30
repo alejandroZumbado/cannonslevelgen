@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:12:19+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.875,
-    "summary": "**Idea:**  \nThe biggest cause of loss is a pirate already on the loss‑dangerous row (`position == 2`). The previous policy only looked at total deficit, so it sometimes kept a dangerous pirate alive even when another act"
-  },
-  {
     "timestamp": "2026-08-29T08:13:16+00:00",
     "promoted": true,
     "win_rate": 0.875,
@@ -136,6 +129,13 @@
     "timestamp": "2026-08-30T05:44:45+00:00",
     "promoted": false,
     "win_rate": 0.8654,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-08-30T05:45:43+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
