@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:01:25+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Change summary**  \nThe current policy breaks ties by looking ahead (`future_def`) before considering how urgently a pirate is about to reach the loss position. In situations where two actions have identical immediate d"
-  },
-  {
     "timestamp": "2026-08-29T08:02:21+00:00",
     "promoted": false,
     "win_rate": 0.7692,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary**  \nThe champion policy simulated the round twice: it first applied damage / advance manually (producing `pir`), then called `simulate_round` again on the *original* pirate list (`pirates`). This double‑"
+  },
+  {
+    "timestamp": "2026-08-30T05:33:23+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe champion simulates the round twice: it first applies damage/advance manually (building `pir`), then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, effectively counting t"
   }
 ]
