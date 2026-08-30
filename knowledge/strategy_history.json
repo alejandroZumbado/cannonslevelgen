@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:14:03+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.7019,
-    "summary": "**Idea:**  \nInstead of only looking at a generic “deficit” or a short‑range look‑ahead, this policy treats any pirate on the loss‑danger row (position 2) as an immediate emergency. It first tries to kill a position‑2 pir"
-  },
-  {
     "timestamp": "2026-08-29T08:14:55+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change explanation**  \nThe champion evaluates each action twice: it first applies damage/advance manually (to detect a *kill‑pos‑2*) and then calls `simulate_round(new_cann, pirates)`, which runs the same round again o"
+  },
+  {
+    "timestamp": "2026-08-30T05:47:30+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change explanation (2 sentences)**  \nThe champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same round on"
   }
 ]
