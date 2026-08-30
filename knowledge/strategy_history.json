@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:03:03+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe current policy can choose between actions that look equally good in terms of immediate deficit and highest pirate position, yet only one of them actually eliminates a pirate that is already on th"
-  },
-  {
     "timestamp": "2026-08-29T08:03:50+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary** – The champion policy simulates the round twice: it first applies damage / advance manually (building `pir`), then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, which double‑"
+  },
+  {
+    "timestamp": "2026-08-30T05:35:44+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary**  \nThe champion policy first applies damage + advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list again. This double‑applies the round, giv"
   }
 ]
