@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:03:50+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe champion sometimes ignores an action that would instantly kill a pirate already on the loss‑dangerous row (`position == 2`). Even when the overall deficit and other scores are equal, killing that"
-  },
-  {
     "timestamp": "2026-08-29T08:04:46+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary**  \nThe champion policy first applies damage + advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list again. This double‑applies the round, giv"
+  },
+  {
+    "timestamp": "2026-08-30T05:37:18+00:00",
+    "promoted": false,
+    "win_rate": 0.9231,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
