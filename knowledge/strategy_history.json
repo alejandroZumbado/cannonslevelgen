@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:16:26+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, act)`).  \nWhen the other evaluation metrics are equal this can make the bot ignore"
-  },
-  {
     "timestamp": "2026-08-29T13:52:20+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change explanation (2 sentences)**  \nThe champion only looks two rounds ahead when estimating the future deficit, so on levels that give three consecutive empty waves before a strong pirate appears it cannot recognise "
+  },
+  {
+    "timestamp": "2026-08-30T12:01:50+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change:** The champion evaluates the “post‑round” state by calling `simulate_round(new_cann, pirates)`, which re‑applies the same damage/advance a second time on the original pirate list. This double‑counts the current"
   }
 ]
