@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:05:30+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary**  \nThe original policy can overlook an action that instantly kills a pirate already on the loss‑dangerous row (`position == 2`) because its tie‑breaker does not consider that fact. I added a small flag "
-  },
-  {
     "timestamp": "2026-08-29T08:06:55+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary** – The champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, which advances the "
+  },
+  {
+    "timestamp": "2026-08-30T05:39:02+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary** – The champion simulates the round twice: it first applies damage / advance manually (building `pir`), then calls `simulate_round(new_cann, pirates)` on the *original* pirate list again. This second ca"
   }
 ]
