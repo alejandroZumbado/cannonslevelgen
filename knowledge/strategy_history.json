@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T07:59:35+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change explanation**  \nThe current policy sometimes lets a pirate that is already on the last safe row (position 2) survive a round even though the cannon could kill it this turn; the loss is then inevitable in the nex"
-  },
-  {
     "timestamp": "2026-08-29T08:00:32+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary**  \nThe champion simulates the board twice each turn: it first applies damage/advance manually, then calls `simulate_round` again on the *original* pirate list. This double‑counts a round, making the def"
+  },
+  {
+    "timestamp": "2026-08-30T05:31:27+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe champion policy mistakenly calls `simulate_round` a second time on the *original* pirate list (`pirates`) after it has already applied damage and advancement once. This double‑counts the current "
   }
 ]
