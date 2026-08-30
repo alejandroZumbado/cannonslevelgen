@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:32:26+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe champion policy simulated the round twice: it first applied damage / advance manually (producing `pir`), then called `simulate_round` again on the *original* pirate list (`pirates`). This double‑"
-  },
-  {
     "timestamp": "2026-08-30T05:33:23+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary:**  \nThe champion simulates the current round twice – it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑advan"
+  },
+  {
+    "timestamp": "2026-08-30T12:05:07+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe champion counts the current round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑advance on"
   }
 ]
