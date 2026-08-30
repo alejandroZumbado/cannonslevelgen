@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T13:52:20+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.9038,
-    "summary": "**Change summary**  \nThe champion policy always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, act)`).  \nWhen two actions are otherwise identical this can discard a *move* that "
-  },
-  {
     "timestamp": "2026-08-29T13:53:18+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Change:** The champion evaluates the “post‑round” state by calling `simulate_round(new_cann, pirates)`, which re‑applies the same damage/advance a second time on the original pirate list. This double‑counts the current"
+  },
+  {
+    "timestamp": "2026-08-30T12:02:34+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change explanation**  \nThe champion simulates the current round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑adv"
   }
 ]
