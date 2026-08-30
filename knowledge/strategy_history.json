@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-29T08:09:20+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary**  \nThe original `urgency_score` rewards pirates that are *farther* from the loss row because it uses `(MAX_POSITION - p[\"position\"])`. This makes the policy undervalue actions that eliminate a pirate al"
-  },
-  {
     "timestamp": "2026-08-29T08:10:16+00:00",
     "promoted": true,
     "win_rate": 0.9231,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same round on the original pira"
+  },
+  {
+    "timestamp": "2026-08-30T05:41:54+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary** – The champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, which actually simu"
   }
 ]
