@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:34:59+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary** – The champion policy simulates the round twice: it first applies damage / advance manually (building `pir`), then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, which double‑"
-  },
-  {
     "timestamp": "2026-08-30T05:35:44+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary**  \nThe champion simulated the current round twice: it first applied damage/advance manually (building `pir`) and then called `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑advanc"
+  },
+  {
+    "timestamp": "2026-08-30T16:46:03+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe current champion breaks ties by preferring *spawn* actions over *move* actions (`tie = (0 if act[0] == \"spawn\" else 1, …)`). In some levels a move that brings a high‑damage cannon onto a column w"
   }
 ]
