@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T12:01:50+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change:** The champion evaluates the “post‑round” state by calling `simulate_round(new_cann, pirates)`, which re‑applies the same damage/advance a second time on the original pirate list. This double‑counts the current"
-  },
-  {
     "timestamp": "2026-08-30T12:02:34+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.7981,
     "candidate_win_rate": 0.8365,
     "summary": "**Idea:** Instead of evaluating a single‑round “deficit” only, the new policy looks two rounds ahead. For every legal first action it simulates the immediate round, then assumes the best possible spawn (the most helpful "
+  },
+  {
+    "timestamp": "2026-08-31T08:44:47+00:00",
+    "promoted": false,
+    "win_rate": 0.7885,
+    "candidate_win_rate": 0.7692,
+    "summary": "**Idea** – Instead of estimating a “damage deficit”, this policy scores each possible first action by the *remaining hit‑points* of all pirates after a two‑step look‑ahead, but it adds a strong *urgency* term that penali"
   }
 ]
