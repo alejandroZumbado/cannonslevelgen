@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:35:44+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary**  \nThe champion policy first applies damage + advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list again. This double‑applies the round, giv"
-  },
-  {
     "timestamp": "2026-08-30T05:37:18+00:00",
     "promoted": false,
     "win_rate": 0.9231,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary**  \nThe current champion breaks ties by preferring *spawn* actions over *move* actions (`tie = (0 if act[0] == \"spawn\" else 1, …)`). In some levels a move that brings a high‑damage cannon onto a column w"
+  },
+  {
+    "timestamp": "2026-08-31T01:24:09+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary**  \nThe champion only gives a top‑level bonus when it kills a pirate that is already at position 2. In many levels a pirate at position 1 (or 0) will become a position 2 next round and then require extra"
   }
 ]
