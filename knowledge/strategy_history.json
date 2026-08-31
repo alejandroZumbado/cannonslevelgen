@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:46:33+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change explanation**  \nThe champion evaluates each action twice: it first applies damage/advance manually (to detect a *kill‑pos‑2*) and then calls `simulate_round(new_cann, pirates)`, which runs the same round again o"
-  },
-  {
     "timestamp": "2026-08-30T05:47:30+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.7981,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary**  \nThe champion only treats killing a pirate that is already on position 2 as a high‑priority “kill‑pos2” action. However, a pirate on position 1 that can be killed this round will become a position 2 p"
+  },
+  {
+    "timestamp": "2026-08-31T01:33:05+00:00",
+    "promoted": false,
+    "win_rate": 0.8077,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
