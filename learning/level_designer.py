@@ -90,16 +90,17 @@ def run_cycle() -> dict:
     """Runs exactly one propose -> simulate -> record cycle. Raises
     llm.budget.BudgetExceeded if the daily cap is spent."""
     system, user = _build_prompt()
-    # 3500 -> 7000 on 2026-08-29: audited every level_designer call across the
-    # project's history (audit/2026-08-*.jsonl) and found 14/51 (~27%) came
-    # back with a completely empty response — the known openai/gpt-oss-120b
-    # gotcha (client.py) where internal reasoning eats max_tokens before any
-    # visible output. Every one of those 14 failures used a token count right
-    # up against the old ceiling; successful calls typically used far less
-    # (raw response bodies were 449-990 chars), so doubling the ceiling costs
-    # nothing on the calls that were already succeeding — it only gives the
-    # ~1-in-4 calls that were reasoning-starved room to actually finish.
-    completion = client.complete(system, user, max_tokens=7000)
+    # 7000 -> 3000 on 2026-08-31: the 7000 ceiling set on 2026-08-29 to fix
+    # empty responses caused a worse regression — measured prompt (~1.7-2k
+    # tokens) + max_tokens=7000 sums to ~8700-8900 requested tokens, over
+    # whatever hard request-size limit Groq enforces on this tier (the same
+    # class of 413 Payload Too Large already diagnosed and fixed twice for
+    # strategy_learner — see learning/knowledge.py and strategy_learner.py).
+    # ~87% of calls (21/24) failed with 413 between 2026-08-29 and 2026-08-31.
+    # 3000 matches strategy_learner's already-proven-safe value: same
+    # documented floor (client.py) that avoids the empty-response gotcha,
+    # while keeping prompt+max_tokens (~4700-4900) well under the 413 limit.
+    completion = client.complete(system, user, max_tokens=3000)
     response = completion.text
 
     hypothesis = response.split("```")[0].strip()
