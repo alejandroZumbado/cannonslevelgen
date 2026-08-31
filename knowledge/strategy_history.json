@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:28:36+00:00",
-    "promoted": false,
-    "win_rate": 0.8077,
-    "candidate_win_rate": 0.7692,
-    "summary": "**Change summary**  \nThe champion only gives the top priority when it kills a pirate that is already on *position 2*.  \nIn many levels a pirate on *position 1* with low HP will become a position‑2 next round, and killing"
-  },
-  {
     "timestamp": "2026-08-31T01:29:20+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8846,
     "summary": "**Change explanation:**  \nWhen two actions score identically the policy always prefers a *spawn* because of the tie‑breaker `tie = (0 if act[0] == \"spawn\" else 1, …)`. In tight situations a *move* of an already‑strong ca"
+  },
+  {
+    "timestamp": "2026-08-31T17:10:08+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Change summary** – The original `deficit` function assumes a cannon can damage *all* pirates in its column each round, ignoring the blocking rule that only the most‑advanced pirate can be hit. This can make the policy "
   }
 ]
