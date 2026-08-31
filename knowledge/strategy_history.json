@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:44:45+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-08-30T05:45:43+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary** – The champion breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, …)`). When two actions are otherwise identical (same killed‑pos2 flag, same deficit, same max‑po"
+  },
+  {
+    "timestamp": "2026-08-31T01:30:50+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe champion only looks two rounds ahead when estimating future deficit (`future_deficit(..., rounds_left=2)`). On levels that require pre‑charging a cannon several waves before a tough pirate appear"
   }
 ]
