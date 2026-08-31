@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:39:02+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change summary** – The champion simulates the round twice: it first applies damage / advance manually (building `pir`), then calls `simulate_round(new_cann, pirates)` on the *original* pirate list again. This second ca"
-  },
-  {
     "timestamp": "2026-08-30T05:40:00+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary** – The champion only looks ahead by *spawning* new cannons in the next rounds; it never evaluates the benefit of *moving* an already‑merged cannon during the look‑ahead. In levels where a high‑damage ca"
+  },
+  {
+    "timestamp": "2026-08-31T01:26:55+00:00",
+    "promoted": false,
+    "win_rate": 0.8173,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change summary** – The champion always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a high‑damage cannon can be moved onto a column that already has a pirate, t"
   }
 ]
