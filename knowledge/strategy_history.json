@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:47:30+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change explanation (2 sentences)**  \nThe champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same round on"
-  },
-  {
     "timestamp": "2026-08-30T05:48:28+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8077,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-08-31T01:34:41+00:00",
+    "promoted": true,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Idea** – Instead of looking a fixed number of rounds ahead, the new policy evaluates every legal action with a *deadline‑aware* heuristic: for each pirate it computes how much HP cannot be removed before the pirate wou"
   }
 ]
