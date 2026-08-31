@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T12:00:55+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change explanation (2 sentences)**  \nThe champion only looks two rounds ahead when estimating the future deficit, so on levels that give three consecutive empty waves before a strong pirate appears it cannot recognise "
-  },
-  {
     "timestamp": "2026-08-30T12:01:50+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.7981,
     "summary": "**Idea** – Instead of estimating a “deficit” of damage, this policy directly measures how *urgent* the remaining pirates are.  For every pirate we compute `urgency = hp × (3 ‑ position)`, i.e. a pirate that is close to t"
+  },
+  {
+    "timestamp": "2026-08-31T08:43:55+00:00",
+    "promoted": true,
+    "win_rate": 0.7981,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Idea:** Instead of evaluating a single‑round “deficit” only, the new policy looks two rounds ahead. For every legal first action it simulates the immediate round, then assumes the best possible spawn (the most helpful "
   }
 ]

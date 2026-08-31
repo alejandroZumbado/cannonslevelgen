@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "two_step_lookahead"
+    name = "deadline_deficit_heuristic"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -25,7 +25,7 @@ class Policy:
                 donor, target = act[1], act[2]
                 dmg = new.pop(donor)                     # donor disappears
                 new[target] = new.get(target, 0) + dmg   # damage stacks
-                # pending spawn cannon is lost – nothing else to do
+                # the pending spawn cannon is lost – nothing else to do
             return new
 
         def simulate_round(cann_map, pir_list):
@@ -51,18 +51,26 @@ class Policy:
             loss = any(p["position"] >= MAX_POSITION for p in pir)
             return pir, loss
 
-        def deficit(cann_map, pir_list):
-            """Total HP that cannot be dealt before pirates reach position 3."""
+        def weighted_deficit(cann_map, pir_list):
+            """
+            Sum over all pirates of the HP that cannot be dealt before they
+            would reach position 3, assuming the current cannon damage stays
+            constant for the remaining rounds of that pirate.
+            """
             total = 0
             for p in pir_list:
-                steps = MAX_POSITION - p["position"]
+                steps = MAX_POSITION - p["position"]          # rounds left before loss
                 dmg = cann_map.get(p["column"], 0)
+                # total damage we could inflict before it reaches position 3
                 possible = dmg * steps
                 need = max(0, p["hp"] - possible)
                 total += need
             return total
 
-        # ----- enumerate all legal first actions -----
+        def max_position(pir_list):
+            return max((p["position"] for p in pir_list), default=-1)
+
+        # ----- enumerate all legal actions -----
         actions = []
 
         # spawn actions (including merges)
@@ -80,33 +88,26 @@ class Policy:
         best_key = None   # tuple used for comparison (lower is better)
 
         for act in actions:
-            # ----- first round simulation -----
-            cann_after_first = apply_action(cannons, act)
-            pirates_after_first, loss1 = simulate_round(cann_after_first, pirates)
-            if loss1:
-                continue          # unsafe first action
+            # ----- apply the chosen action (before round) -----
+            new_cann = apply_action(cannons, act)
 
-            # ----- second round: try every possible spawn (the only sensible move) -----
-            second_deficit = None
-            for col in range(NUM_COLUMNS):
-                # second action is always a spawn (moving would waste the pending cannon)
-                cann_after_second = apply_action(cann_after_first, ("spawn", col))
-                pirates_after_second, loss2 = simulate_round(cann_after_second, pirates_after_first)
-                if loss2:
-                    continue      # this second spawn would already lose; ignore
-                d = deficit(cann_after_second, pirates_after_second)
-                if second_deficit is None or d < second_deficit:
-                    second_deficit = d
+            # ----- simulate this round -----
+            post_pir, loss = simulate_round(new_cann, pirates)
+            if loss:
+                continue          # unsafe action, discard
 
-            # if every possible second spawn loses, treat the future deficit as huge
-            if second_deficit is None:
-                second_deficit = 10**9
+            # ----- evaluation metrics -----
+            deficit = weighted_deficit(new_cann, post_pir)
+            maxpos = max_position(post_pir)
+            total_cannon_damage = sum(new_cann.values())
 
-            # ----- evaluation key -----
-            first_def = deficit(cann_after_first, pirates_after_first)
-            total_damage = sum(cann_after_first.values())
-            tie = (0 if act[0] == "spawn" else 1, act)   # prefer spawn, then lower cols
-            key = (second_deficit, first_def, -total_damage, tie)
+            # Primary ordering:
+            #   1. smallest deficit (hardest to survive)
+            #   2. smallest max pirate position (keep them back)
+            #   3. largest total cannon damage (prefer merges that build power)
+            #   4. prefer spawn over move, then lower column numbers (deterministic)
+            tie = (0 if act[0] == "spawn" else 1, act)
+            key = (deficit, maxpos, -total_cannon_damage, tie)
 
             if best_key is None or key < best_key:
                 best_key = key
