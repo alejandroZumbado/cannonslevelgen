@@ -264,5 +264,12 @@
     "evidence": "level 'A0001' (2 pirates, 3 filas, max_hp=3, columns=[0, 1]) played with current policy (kill_pos2_first_with_lookahead): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-08-31",
+    "statement": "**Hypothesis:**  \nEach merge increases a cannon’s damage by exactly 1 (the base‑damage of the newly placed cannon), so a cannon’s damage can grow by at most 1 per round; consequently, to reach damage D you need at least D‑1 rounds that perform a merge. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 5 filas, max_hp=5, columns=[0]) played with current policy (kill_pos2_first_with_lookahead): WON in 5 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]

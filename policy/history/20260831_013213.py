@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_pos2_or_pos1_next_with_lookahead"
+    name = "kill_pos2_first_with_lookahead"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -121,7 +121,7 @@ class Policy:
                 new_cann[target] = new_cann.get(target, 0) + dmg
                 # pending spawn cannon is lost this round (no extra effect)
 
-            # ----- damage phase with kill‑pos2 (and pos1‑next) detection -----
+            # ----- damage phase with kill‑pos2 detection -----
             killed_pos2 = False
             # copy pirates for this simulation
             pir = [dict(p) for p in pirates]
@@ -132,11 +132,7 @@ class Policy:
                 if not col_p:
                     continue
                 front = max(col_p, key=lambda p: p["position"])
-                # treat killing a pos‑2 pirate as priority
                 if front["position"] == 2 and dmg >= front["hp"]:
-                    killed_pos2 = True
-                # also treat killing a pos‑1 pirate (which will become pos‑2) as priority
-                elif front["position"] == 1 and dmg >= front["hp"]:
                     killed_pos2 = True
                 front["hp"] -= dmg
                 if front["hp"] <= 0:
@@ -151,9 +147,10 @@ class Policy:
                 continue          # unsafe action, discard
 
             post_cann, post_pir, _ = simulate_round(new_cann, pirates)  # reuse for consistency
+            # (the above simulate_round repeats the same damage/advance; we keep it for later metrics)
 
             # ----- evaluation metrics -----
-            primary = 0 if killed_pos2 else 1                     # kill pos‑2 (or pos‑1‑to‑pos2) pirates first
+            primary = 0 if killed_pos2 else 1                     # kill pos‑2 pirates first
             deficit_now = total_deficit(post_cann, post_pir)
             maxpos_now = max_position(post_pir)
             future_def = future_deficit(post_cann, post_pir, rounds_left=2)

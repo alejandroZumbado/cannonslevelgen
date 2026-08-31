@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:45:43+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-08-30T05:46:33+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe champion only looks two rounds ahead when estimating future deficit (`future_deficit(..., rounds_left=2)`). On levels that require pre‑charging a cannon several waves before a tough pirate appear"
+  },
+  {
+    "timestamp": "2026-08-31T01:32:13+00:00",
+    "promoted": true,
+    "win_rate": 0.7981,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe champion only treats killing a pirate that is already on position 2 as a high‑priority “kill‑pos2” action. However, a pirate on position 1 that can be killed this round will become a position 2 p"
   }
 ]
