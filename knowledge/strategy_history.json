@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T12:04:11+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary:**  \nThe champion simulates the current round twice – it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑advan"
-  },
-  {
     "timestamp": "2026-08-30T12:05:07+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.6731,
     "summary": "**Idea** – Instead of estimating a “damage deficit”, this policy ranks actions by what *actually happens* in the next round: it first discards any move that would let a pirate reach the loss position, then prefers action"
+  },
+  {
+    "timestamp": "2026-08-31T08:47:14+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Change summary**  \nThe champion only looks at *spawn* actions for the second round, ignoring that a *move* (which keeps the pending‑spawn cannon for the next round) can sometimes be the only safe way to protect a colum"
   }
 ]
