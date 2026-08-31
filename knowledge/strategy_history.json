@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T12:02:34+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change explanation**  \nThe champion simulates the current round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑adv"
-  },
-  {
     "timestamp": "2026-08-30T12:03:28+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.7885,
     "candidate_win_rate": 0.7692,
     "summary": "**Idea** – Instead of estimating a “damage deficit”, this policy scores each possible first action by the *remaining hit‑points* of all pirates after a two‑step look‑ahead, but it adds a strong *urgency* term that penali"
+  },
+  {
+    "timestamp": "2026-08-31T08:45:28+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.6731,
+    "summary": "**Idea:** Instead of estimating a “damage deficit”, this policy looks at the *time‑to‑death* of every pirate after the next round. If a pirate would survive to position 2 (one step away from losing) we give the action a "
   }
 ]
