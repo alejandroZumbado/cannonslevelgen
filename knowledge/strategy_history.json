@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:40:00+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-08-30T05:40:57+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8173,
     "candidate_win_rate": 0.8173,
     "summary": "**Change summary** – The champion always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a high‑damage cannon can be moved onto a column that already has a pirate, t"
+  },
+  {
+    "timestamp": "2026-08-31T01:28:36+00:00",
+    "promoted": false,
+    "win_rate": 0.8077,
+    "candidate_win_rate": 0.7692,
+    "summary": "**Change summary**  \nThe champion only gives the top priority when it kills a pirate that is already on *position 2*.  \nIn many levels a pirate on *position 1* with low HP will become a position‑2 next round, and killing"
   }
 ]
