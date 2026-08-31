@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:37:18+00:00",
-    "promoted": false,
-    "win_rate": 0.9231,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-08-30T05:38:16+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary**  \nThe champion only gives a top‑level bonus when it kills a pirate that is already at position 2. In many levels a pirate at position 1 (or 0) will become a position 2 next round and then require extra"
+  },
+  {
+    "timestamp": "2026-08-31T01:25:06+00:00",
+    "promoted": false,
+    "win_rate": 0.8173,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change explanation**  \nThe champion simulates the current round twice: it first applies damage and advances manually (building `pir`), then calls `simulate_round(new_cann, pirates)` which repeats the same damage‑and‑ad"
   }
 ]
