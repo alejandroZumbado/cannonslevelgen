@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "two_step_lookahead_plus_move"
+    name = "two_step_lookahead"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -86,27 +86,19 @@ class Policy:
             if loss1:
                 continue          # unsafe first action
 
-            # ----- second round: try every possible spawn **or move** -----
+            # ----- second round: try every possible spawn (the only sensible move) -----
             second_deficit = None
-            # possible second actions: all spawns
-            second_candidates = [("spawn", col) for col in range(NUM_COLUMNS)]
-            # plus all moves that are legal after the first action
-            for donor in cann_after_first:
-                for target in range(NUM_COLUMNS):
-                    if donor == target:
-                        continue
-                    second_candidates.append(("move", donor, target))
-
-            for second_act in second_candidates:
-                cann_after_second = apply_action(cann_after_first, second_act)
+            for col in range(NUM_COLUMNS):
+                # second action is always a spawn (moving would waste the pending cannon)
+                cann_after_second = apply_action(cann_after_first, ("spawn", col))
                 pirates_after_second, loss2 = simulate_round(cann_after_second, pirates_after_first)
                 if loss2:
-                    continue      # this second action would already lose; ignore
+                    continue      # this second spawn would already lose; ignore
                 d = deficit(cann_after_second, pirates_after_second)
                 if second_deficit is None or d < second_deficit:
                     second_deficit = d
 
-            # if every possible second action loses, treat the future deficit as huge
+            # if every possible second spawn loses, treat the future deficit as huge
             if second_deficit is None:
                 second_deficit = 10**9
 

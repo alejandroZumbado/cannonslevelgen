@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:30:02+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary** – The champion breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, …)`). When two actions are otherwise identical (same killed‑pos2 flag, same deficit, same max‑po"
-  },
-  {
     "timestamp": "2026-08-31T01:30:50+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-08-31T17:12:22+00:00",
+    "promoted": true,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.9038,
+    "summary": "**Change summary**  \nThe current champion only looks at *spawn* actions for the second round, never considering that a *move* (which can relocate a high‑damage cannon onto a column with a dangerous pirate) might be the s"
   }
 ]
