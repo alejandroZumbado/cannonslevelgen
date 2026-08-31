@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:25:06+00:00",
-    "promoted": false,
-    "win_rate": 0.8173,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change explanation**  \nThe champion simulates the current round twice: it first applies damage and advances manually (building `pir`), then calls `simulate_round(new_cann, pirates)` which repeats the same damage‑and‑ad"
-  },
-  {
     "timestamp": "2026-08-31T01:26:07+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary** – The champion only looks at *spawn* actions for the second round.  \nIf every possible spawn would immediately lose, it gives the action a huge penalty and never tries a *move* that could rescue the bo"
+  },
+  {
+    "timestamp": "2026-08-31T17:07:45+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary** – The original policy only evaluates *spawn* actions for the second round. If every possible spawn would cause an immediate loss, the policy never looks at a *move* that could rescue the board, so it l"
   }
 ]
