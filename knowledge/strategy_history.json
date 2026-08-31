@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T16:46:03+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary**  \nThe current champion breaks ties by preferring *spawn* actions over *move* actions (`tie = (0 if act[0] == \"spawn\" else 1, …)`). In some levels a move that brings a high‑damage cannon onto a column w"
-  },
-  {
     "timestamp": "2026-08-31T01:24:09+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8173,
     "candidate_win_rate": 0.8173,
     "summary": "**Change summary:**  \nThe champion only evaluates *spawn* actions for the second round, so when the only safe way to stop a pirate that is about to reach position 3 is to *move* an existing high‑damage cannon, the policy"
+  },
+  {
+    "timestamp": "2026-08-31T08:49:22+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary** – The champion only looks at *spawn* actions for the second round. If every possible spawn would immediately lose, it assigns a huge penalty and never considers that a *move* of an existing cannon coul"
   }
 ]
