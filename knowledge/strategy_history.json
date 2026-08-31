@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:24:09+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary**  \nThe champion only gives a top‑level bonus when it kills a pirate that is already at position 2. In many levels a pirate at position 1 (or 0) will become a position 2 next round and then require extra"
-  },
-  {
     "timestamp": "2026-08-31T01:25:06+00:00",
     "promoted": false,
     "win_rate": 0.8173,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary** – The champion only looks at *spawn* actions for the second round. If every possible spawn would immediately lose, it assigns a huge penalty and never considers that a *move* of an existing cannon coul"
+  },
+  {
+    "timestamp": "2026-08-31T17:06:51+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary** – The champion only looks at *spawn* actions for the second round.  \nIf every possible spawn would immediately lose, it gives the action a huge penalty and never tries a *move* that could rescue the bo"
   }
 ]
