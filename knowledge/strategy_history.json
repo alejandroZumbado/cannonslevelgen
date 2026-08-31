@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:38:16+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary** – The champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)` on the *original* pirate list, which advances the "
-  },
-  {
     "timestamp": "2026-08-30T05:39:02+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8173,
     "candidate_win_rate": 0.8173,
     "summary": "**Change explanation**  \nThe champion simulates the current round twice: it first applies damage and advances manually (building `pir`), then calls `simulate_round(new_cann, pirates)` which repeats the same damage‑and‑ad"
+  },
+  {
+    "timestamp": "2026-08-31T01:26:07+00:00",
+    "promoted": false,
+    "win_rate": 0.8269,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary** – The champion only looks ahead by *spawning* new cannons in the next rounds; it never evaluates the benefit of *moving* an already‑merged cannon during the look‑ahead. In levels where a high‑damage ca"
   }
 ]
