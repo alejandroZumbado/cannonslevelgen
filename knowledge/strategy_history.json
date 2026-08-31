@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:48:28+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe current champion only looks two rounds ahead when estimating future deficit, which can miss the benefit of charging a cannon during a longer stretch of empty waves before a strong pirate appears."
-  },
-  {
     "timestamp": "2026-08-30T12:00:55+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8846,
     "summary": "**Idea** – Instead of looking a fixed number of rounds ahead, the new policy evaluates every legal action with a *deadline‑aware* heuristic: for each pirate it computes how much HP cannot be removed before the pirate wou"
+  },
+  {
+    "timestamp": "2026-08-31T08:43:09+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Idea** – Instead of estimating a “deficit” of damage, this policy directly measures how *urgent* the remaining pirates are.  For every pirate we compute `urgency = hp × (3 ‑ position)`, i.e. a pirate that is close to t"
   }
 ]
