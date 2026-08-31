@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T05:40:57+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary**  \nThe champion simulates the round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same round on the original pira"
-  },
-  {
     "timestamp": "2026-08-30T05:41:54+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8077,
     "candidate_win_rate": 0.7692,
     "summary": "**Change summary**  \nThe champion only gives the top priority when it kills a pirate that is already on *position 2*.  \nIn many levels a pirate on *position 1* with low HP will become a position‑2 next round, and killing"
+  },
+  {
+    "timestamp": "2026-08-31T01:29:20+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.7596,
+    "summary": "**Change description**  \nThe champion always breaks ties by preferring a *spawn* over a *move*.  \nWhen two actions are otherwise equal (same killed‑pos2 flag, same deficit, same max‑position, same future‑deficit) this ca"
   }
 ]
