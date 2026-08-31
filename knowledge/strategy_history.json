@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:26:07+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary** – The champion only looks ahead by *spawning* new cannons in the next rounds; it never evaluates the benefit of *moving* an already‑merged cannon during the look‑ahead. In levels where a high‑damage ca"
-  },
-  {
     "timestamp": "2026-08-31T01:26:55+00:00",
     "promoted": false,
     "win_rate": 0.8173,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary** – The original policy only evaluates *spawn* actions for the second round. If every possible spawn would cause an immediate loss, the policy never looks at a *move* that could rescue the board, so it l"
+  },
+  {
+    "timestamp": "2026-08-31T17:08:37+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change explanation**  \nThe current evaluation breaks ties by preferring *spawn* actions (`tie = (0 if act[0] == \"spawn\" else 1, …)`). When a move and a spawn have identical numeric scores (same deficit, same total dama"
   }
 ]
