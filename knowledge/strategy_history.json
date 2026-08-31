@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:29:20+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.7596,
-    "summary": "**Change description**  \nThe champion always breaks ties by preferring a *spawn* over a *move*.  \nWhen two actions are otherwise equal (same killed‑pos2 flag, same deficit, same max‑position, same future‑deficit) this ca"
-  },
-  {
     "timestamp": "2026-08-31T01:30:02+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary** – The original `deficit` function assumes a cannon can damage *all* pirates in its column each round, ignoring the blocking rule that only the most‑advanced pirate can be hit. This can make the policy "
+  },
+  {
+    "timestamp": "2026-08-31T17:11:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
