@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-30T12:05:07+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary**  \nThe champion counts the current round twice: it first applies damage/advance manually (building `pir`) and then calls `simulate_round(new_cann, pirates)`, which repeats the same damage‑and‑advance on"
-  },
-  {
     "timestamp": "2026-08-30T12:06:05+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary**  \nThe champion only looks at *spawn* actions for the second round, ignoring that a *move* (which keeps the pending‑spawn cannon for the next round) can sometimes be the only safe way to protect a colum"
+  },
+  {
+    "timestamp": "2026-08-31T08:48:02+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe champion only looks at *spawn* actions for the second round, so when the only safe way to stop a pirate that is about to reach position 3 is to *move* an existing high‑damage cannon, the policy m"
   }
 ]
