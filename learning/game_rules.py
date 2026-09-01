@@ -51,6 +51,22 @@ mechanically, stop — re-read this block first.
   resident.
 - Loss: any pirate reaching position 3 ends the game immediately.
 - Win: all filas (waves) have been spawned AND no pirates remain alive.
+- Shot budget is FIXED at 3 per pirate, period — NOT "however many filas the
+  level has left". Every pirate advances one position every single round from
+  the moment it spawns, whether or not it took damage that round (position
+  advance is unconditional, not tied to being shot at). Position 3 = loss.
+  So an unblocked pirate always gets exactly 3 shots (the shoot phase in the
+  round it spawns, +1, +2) before it must be dead or the game is over — this
+  number never grows just because the level has more filas after it, or
+  because there were empty filas before it, or because of anything else.
+  Concretely: a level with 500 filas gives a lone HP-5 pirate exactly the
+  same 3 shots as a level with 5 filas — it is UNBEATABLE without a merge in
+  both. If you're about to justify a hypothesis with "there are N filas left,
+  so it can absorb N hits" — stop, that reasoning is wrong; the cap is always
+  min(3, filas actually remaining in the level), never just "filas remaining".
+  A blocked pirate's own 3-shot clock still runs while it's blocked (it's
+  advancing every round like every other pirate) — being blocked costs it
+  shots, it never grants extra time.
 
 Ground every hypothesis in these rules (or in what sim/engine.py's source
 actually does, if you have reason to check it) — never invent behavior for a
