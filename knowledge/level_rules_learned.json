@@ -285,5 +285,12 @@
     "evidence": "level 'A0001' (1 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (two_step_lookahead): WON in 2 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-01",
+    "statement": "**Hypothesis:**  \nWhen a cannon is moved from one column to another, it does **not** fire at the original column during that round’s shooting phase; it only fires from its new column after the move. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 7 filas, max_hp=1, columns=[0, 1]) played with current policy (two_step_lookahead_plus_move): WON in 7 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
