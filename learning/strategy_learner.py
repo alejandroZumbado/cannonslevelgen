@@ -154,7 +154,16 @@ def run_cycle() -> dict:
 
     streak = strategy_history.consecutive_rejections()
     refine_mode = streak >= _REFINE_MODE_STREAK_THRESHOLD
-    recent_attempts = strategy_history.recent_attempts_block()
+    # n=4 -> 10 on 2026-09-01: knowledge/strategy_history.json (20-entry rolling
+    # window) shows the same 2-3 ideas ("prefer move over spawn on ties",
+    # "extend second-round lookahead to include moves") getting rejected over
+    # and over across the full window (7/20 and 9/20 hits respectively) - the
+    # old n=4 view was too narrow to stop them resurfacing a few cycles later,
+    # wasting real Groq budget re-testing already-dead ideas. Measured locally:
+    # n=10 adds ~850 chars (~210 tokens) to the prompt, landing total request
+    # tokens at ~6680 - still inside the zone this caller already runs safely
+    # in today (~6470 at n=4), well under the known 413 threshold (~8450).
+    recent_attempts = strategy_history.recent_attempts_block(10)
 
     system, user = _build_prompt(current_source, current_score, rng_seed=datetime.now().microsecond,
                                   refine_mode=refine_mode, recent_attempts=recent_attempts)
