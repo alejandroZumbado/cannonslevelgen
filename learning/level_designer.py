@@ -93,17 +93,18 @@ def run_cycle() -> dict:
     """Runs exactly one propose -> simulate -> record cycle. Raises
     llm.budget.BudgetExceeded if the daily cap is spent."""
     system, user = _build_prompt()
-    # 7000 -> 3000 on 2026-08-31: the 7000 ceiling set on 2026-08-29 to fix
-    # empty responses caused a worse regression — measured prompt (~1.7-2k
-    # tokens) + max_tokens=7000 sums to ~8700-8900 requested tokens, over
-    # whatever hard request-size limit Groq enforces on this tier (the same
-    # class of 413 Payload Too Large already diagnosed and fixed twice for
-    # strategy_learner — see learning/knowledge.py and strategy_learner.py).
-    # ~87% of calls (21/24) failed with 413 between 2026-08-29 and 2026-08-31.
-    # 3000 matches strategy_learner's already-proven-safe value: same
-    # documented floor (client.py) that avoids the empty-response gotcha,
-    # while keeping prompt+max_tokens (~4700-4900) well under the 413 limit.
-    completion = client.complete(system, user, max_tokens=3000)
+    # 7000 -> 3000 (2026-08-31) -> 5000 (2026-09-01). The 3000 ceiling killed
+    # the 413s but audited raw responses (audit/2026-08-30/31 + 09-01) show
+    # ~half of "no_json" failures aren't empty — they're valid JSON cut off
+    # mid-structure, with tokens_used pinned at the prompt+max_tokens ceiling
+    # every time (reasoning + hypothesis text + a multi-fila level often
+    # doesn't fit in 3000). strategy_learner runs with a BIGGER prompt
+    # (~3.7-3.9k tokens, includes the full policy source) at max_tokens=3000
+    # and sees zero 413s in production — so ~6200-6900 total tokens is a
+    # proven-safe zone on this tier. level_designer's own prompt is only
+    # ~1.7-2k tokens, so max_tokens=5000 lands it in that same proven-safe
+    # zone (~6700-7000 total) while giving ~67% more room to finish the JSON.
+    completion = client.complete(system, user, max_tokens=5000)
     response = completion.text
 
     hypothesis = response.split("```")[0].strip()

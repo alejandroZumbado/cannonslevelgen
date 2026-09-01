@@ -43,13 +43,6 @@
   },
   {
     "date": "2026-08-23",
-    "statement": "Hypothesis: Horizontal crowding does not impede the cannon’s line of fire; a pirate can be damaged across multiple rows even if other pirates occupy the same row in adjacent columns, so a lone high‑HP pirate surrounded horizontally can be killed without any merges as long as enough rows exist to deliver the required base damage. => confirmed NOT winnable by test level.",
-    "evidence": "level 'A1234' (6 pirates, 5 filas, max_hp=5, columns=[0, 1, 2, 3, 4]) played with current policy (baseline_v0): LOST in 3 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-23",
     "statement": "**Hypothesis:**  \nWhen the sum of all pirates’ HP in a level exceeds the total number of filas, the level cannot be cleared without performing at least one merge (i.e., base‑damage = 1 per fila is insufficient to reduce all HP to 0). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=2, columns=[0, 1, 2, 3, 4]) played with current policy (danger_first_merge_v1): WON in 6 rounds",
     "confidence": 0.5,
@@ -178,13 +171,6 @@
     "date": "2026-08-26",
     "statement": "**Hypothesis:**  \nIf, in a single column, the sum of the HP of all pirates from the first pirate in that column down to the final fila equals the number of filas spanned by that segment, the level can be cleared without performing any merges. => confirmed winnable by test level.",
     "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=3, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-26",
-    "statement": "**Hypothesis:**  \nIf two or more pirates occupy the same fila (row) in different columns, they block each other’s line of fire – the cannon cannot target any column that contains a pirate while another pirate in the same fila is still alive. Consequently, a level that has any fila with multiple alive pirates should be unwinnable without performing merges. => confirmed NOT winnable by test level.",
-    "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=1, columns=[0, 1, 2, 3, 4]) played with current policy (two_round_lookahead_urgency): LOST in 4 rounds",
     "confidence": 0.5,
     "source": "level_designer"
   },
