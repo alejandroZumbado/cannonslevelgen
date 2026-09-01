@@ -21,20 +21,6 @@
     "source": "level_designer"
   },
   {
-    "date": "2026-08-22",
-    "statement": "**Hypothesis:**  \nIf a single fila contains pirates in all five columns (i.e., five pirates), the level cannot be cleared without performing at least one merge, regardless of the pirates’ HP (as long as each HP ≥ 1). => confirmed NOT winnable by test level.",
-    "evidence": "level 'Z0001' (6 pirates, 2 filas, max_hp=1, columns=[0, 1, 2, 3, 4]) played with current policy (baseline_v0): LOST in 3 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-23",
-    "statement": "**Hypothesis:**  \nWhen the sum of all pirates’ HP in a level exceeds the total number of filas, the level cannot be cleared without performing at least one merge (i.e., base‑damage = 1 per fila is insufficient to reduce all HP to 0). => confirmed winnable by test level.",
-    "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=2, columns=[0, 1, 2, 3, 4]) played with current policy (danger_first_merge_v1): WON in 6 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
     "date": "2026-08-23",
     "statement": "**Hypothesis:**  \nIf the sum of HP of all pirates in any single column exceeds the total number of filas in the level, then the level cannot be cleared without performing at least one merge. => confirmed winnable by test level.",
     "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=3, columns=[0, 2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
@@ -52,13 +38,6 @@
     "date": "2026-08-23",
     "statement": "A final pirate (tipo 4) with HP = 2 can be cleared without any merges even when the pirate directly in front of it in the same column also has HP = 2, as long as there is at least one empty fila separating them (allowing the final pirate to receive two separate base‑damage hits after the blocker is killed). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (2 pirates, 5 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-25",
-    "statement": "**Hypothesis:**  \nThe cannon can fire at only one column per wave (i.e., each wave delivers a single point of damage to a single chosen column). Consequently, a level that places two or more pirates with total HP > (number of filas) in different columns becomes unwinnable without merges, even though each column individually would receive enough damage if the cannon could hit all columns simultaneously. => confirmed winnable by test level.",
-    "evidence": "level 'A1234' (3 pirates, 2 filas, max_hp=2, columns=[0, 1, 4]) played with current policy (two_round_lookahead_urgency): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
   },
