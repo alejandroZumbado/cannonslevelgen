@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:49:22+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary** – The champion only looks at *spawn* actions for the second round. If every possible spawn would immediately lose, it assigns a huge penalty and never considers that a *move* of an existing cannon coul"
-  },
-  {
     "timestamp": "2026-08-31T17:06:51+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-01T16:47:54+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary** – The champion sometimes prefers a plain spawn over a move that *immediately kills a pirate that is already on the lethal position 2*. When the numeric scores (second‑round deficit, first‑round deficit"
   }
 ]
