@@ -21,13 +21,18 @@ from learning import knowledge
 from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from sim.engine import run_level
-from sim.level import Level
+from sim.level import Level, pad_leading, pad_trailing
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
 
+# How many extra empty filas the robustness sweep pads on each side of the
+# model's own level before re-playing it. See run_cycle()'s comment for why.
+_ROBUSTNESS_PAD = 5
+
 _LEVEL_SCHEMA = """\
-Level JSON schema (must match exactly):
+Response JSON schema (must match exactly):
 {
+  "predicted_outcome": "winnable" | "unwinnable",
   "levelNumber": <int>,
   "password": "<1 uppercase letter + 4 digits, e.g. Q1234>",
   "isHard": <bool>,
@@ -36,6 +41,9 @@ Level JSON schema (must match exactly):
     ...
   ]
 }
+"predicted_outcome" is your claim about this level's own result, checked
+against the real simulation before your rule is trusted — must agree with
+your hypothesis text.
 Each "fila" is one wave/round. "cuadros" may be an empty list (a breathing-room
 round with no pirates). "index" is the column (0=right .. 4=left). "tipo" 1-3
 are visually-different normal pirates (same difficulty), 4 marks the last
@@ -75,6 +83,11 @@ Propose ONE hypothesis (1-2 sentences) about what makes a level winnable or fun
 that isn't already confirmed above, then ONE level (JSON) built specifically to
 test it sharply. Respond with the hypothesis as plain text, then the JSON in a
 single ```json code block.
+
+Your level gets auto-retested with extra empty filas added before and after
+it — if that changes the result, your rule gets discarded regardless of this
+run. Avoid hypotheses that depend on total filas count or on timing relative
+to the level's start/end.
 """
     return system, user
 
@@ -115,6 +128,16 @@ def run_cycle() -> dict:
         audit.record_call(caller="level_designer", completion=completion, system=system, user=user, outcome=outcome)
         return outcome
 
+    predicted_outcome = level_dict.get("predicted_outcome")
+    if predicted_outcome not in ("winnable", "unwinnable"):
+        knowledge.append_log(
+            "level_designer: rejected",
+            f"Missing or invalid predicted_outcome: {predicted_outcome!r}",
+        )
+        outcome = {"recorded": False, "reason": "missing_prediction"}
+        audit.record_call(caller="level_designer", completion=completion, system=system, user=user, outcome=outcome)
+        return outcome
+
     try:
         level = Level.from_dict(level_dict)
     except (KeyError, TypeError) as e:
@@ -140,11 +163,53 @@ def run_cycle() -> dict:
         f"{'WON' if engine.won else 'LOST'} in {engine.rounds_played} rounds"
     )
 
+    # Check 1: does the model's own explicit prediction match what actually
+    # happened? A "confirmed" rule whose hypothesis predicted the opposite of
+    # the real result isn't confirming anything — it's self-contradictory.
+    # Added 2026-09-01 after finding exactly this in the knowledge base twice
+    # (a hypothesis text predicting "winnable" stored alongside a level that
+    # LOST, and vice versa) - see cannonslevelgen audit that day.
+    predicted_won = predicted_outcome == "winnable"
+    if predicted_won != engine.won:
+        knowledge.append_log(
+            "level_designer: refuted",
+            f"Hypothesis: {hypothesis}\n\nPredicted {predicted_outcome}, but "
+            f"the level actually {'WON' if engine.won else 'LOST'}. {evidence}",
+        )
+        outcome = {"recorded": False, "reason": "predicted_mismatch", "hypothesis": hypothesis}
+        audit.record_call(caller="level_designer", completion=completion, system=system, user=user, outcome=outcome)
+        return outcome
+
+    # Check 2: does the SAME claim still hold if this exact scenario happens
+    # earlier or later in a longer level? Added 2026-09-01 after finding that
+    # most purged rules were really just "true for this one filas count" -
+    # the real game has no such dependency (a pirate's fate is fixed by its
+    # own HP/position/blocking, never by how many filas the level has before
+    # or after it - see game_rules.py). Free to check: pure local simulation,
+    # no extra LLM tokens spent.
+    variants = {
+        "padded before": pad_leading(level, _ROBUSTNESS_PAD),
+        "padded after": pad_trailing(level, _ROBUSTNESS_PAD),
+    }
+    for label, variant in variants.items():
+        variant_engine = run_level(variant, policy)
+        if variant_engine.won != engine.won:
+            knowledge.append_log(
+                "level_designer: parameter-sensitive",
+                f"Hypothesis: {hypothesis}\n\nBase level {'WON' if engine.won else 'LOST'}, "
+                f"but flipped to {'WON' if variant_engine.won else 'LOST'} when {label} with "
+                f"{_ROBUSTNESS_PAD} empty filas - not a real rule, just this level's specific "
+                f"timing. {evidence}",
+            )
+            outcome = {"recorded": False, "reason": "parameter_sensitive", "hypothesis": hypothesis}
+            audit.record_call(caller="level_designer", completion=completion, system=system, user=user, outcome=outcome)
+            return outcome
+
     knowledge.add_rule(knowledge.LearnedRule(
         date=datetime.now().date().isoformat(),
         statement=f"{hypothesis} => {'confirmed winnable' if engine.won else 'confirmed NOT winnable'} by test level.",
-        evidence=evidence,
-        confidence=0.5,  # single-trial; strategy_learner's ongoing benchmark corroborates or erodes this over time
+        evidence=f"{evidence} (robustness: consistent when padded with {_ROBUSTNESS_PAD} empty filas on either side)",
+        confidence=0.7,  # bumped from 0.5 now that predicted-outcome + robustness sweep both passed
         source="level_designer",
     ))
     knowledge.append_log("level_designer", f"Hypothesis: {hypothesis}\n\nEvidence: {evidence}")
