@@ -22,13 +22,6 @@
   },
   {
     "date": "2026-08-23",
-    "statement": "**Hypothesis:**  \nIf the sum of HP of all pirates in any single column exceeds the total number of filas in the level, then the level cannot be cleared without performing at least one merge. => confirmed winnable by test level.",
-    "evidence": "level 'A1234' (3 pirates, 5 filas, max_hp=3, columns=[0, 2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-23",
     "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = 2 can be cleared without any merges if the pirate directly in front of it (same column, immediately preceding fila) has HP = 1 **and** there is at least one empty fila separating them, allowing the final pirate to receive two separate base‑damage hits (one in the empty fila’s wave and one in its own wave). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
     "confidence": 0.5,
@@ -52,13 +45,6 @@
     "date": "2026-08-25",
     "statement": "**Hypothesis:**  \nIf a column contains pirates whose HP values are not non‑increasing (i.e., a lower pirate has higher HP than a pirate above it), the level can be unwinnable without any merges even when each pirate’s HP does not exceed the number of filas remaining from its own fila to the final fila. => confirmed winnable by test level.",
     "evidence": "level 'A0001' (3 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (two_round_lookahead_urgency): WON in 4 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-25",
-    "statement": "**Hypothesis**  \nA pirate (of tipo 1, 2, or 4) with HP = k cannot be eliminated without performing a merge if the number of remaining filas from the wave in which it first appears (including that wave) is fewer than k, since the cannon can inflict at most one point of damage to its column per wave. => confirmed winnable by test level.",
-    "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=3, columns=[1, 3]) played with current policy (two_round_lookahead_urgency): WON in 5 rounds",
     "confidence": 0.5,
     "source": "level_designer"
   },

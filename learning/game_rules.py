@@ -63,10 +63,22 @@ mechanically, stop — re-read this block first.
   same 3 shots as a level with 5 filas — it is UNBEATABLE without a merge in
   both. If you're about to justify a hypothesis with "there are N filas left,
   so it can absorb N hits" — stop, that reasoning is wrong; the cap is always
-  min(3, filas actually remaining in the level), never just "filas remaining".
+  exactly 3, full stop, never "however many filas remain".
   A blocked pirate's own 3-shot clock still runs while it's blocked (it's
   advancing every round like every other pirate) — being blocked costs it
   shots, it never grants extra time.
+- The game does NOT end just because every fila has been spawned. Spawning
+  stops (no new pirate appears), but rounds keep being played — pirates keep
+  advancing, keep getting shot at — until every remaining pirate is dead
+  (win) or one reaches position 3 (loss). So "total filas in the level" or
+  "filas remaining before/after a pirate's own spawn" is NEVER what bounds
+  whether that pirate can be killed — verified directly: a pirate spawned on
+  a level's very LAST fila (officially zero filas left) still gets its full,
+  ordinary 3 shots, because the game simply keeps running rounds with no new
+  spawns until it's resolved. The only two things that ever matter for a
+  single pirate are its HP (vs. the fixed 3-shot cap, or more if a blocker in
+  front ate some of those 3 rounds first) and whether merges raised the
+  cannon's damage — never any fila/round count in the level.
 
 Ground every hypothesis in these rules (or in what sim/engine.py's source
 actually does, if you have reason to check it) — never invent behavior for a
