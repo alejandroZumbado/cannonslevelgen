@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:32:13+00:00",
-    "promoted": true,
-    "win_rate": 0.7981,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Change summary**  \nThe champion only treats killing a pirate that is already on position 2 as a high‑priority “kill‑pos2” action. However, a pirate on position 1 that can be killed this round will become a position 2 p"
-  },
-  {
     "timestamp": "2026-08-31T01:33:05+00:00",
     "promoted": false,
     "win_rate": 0.8077,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.7981,
     "summary": "**Idea:** Before doing any look‑ahead we first check whether the current round contains a *must‑kill* pirate (position 2). If an action can guarantee that pirate dies this round (by spawning or moving a cannon so its dam"
+  },
+  {
+    "timestamp": "2026-09-01T01:21:27+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
