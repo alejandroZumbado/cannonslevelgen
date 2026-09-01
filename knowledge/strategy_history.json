@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:48:43+00:00",
-    "promoted": false,
-    "win_rate": 0.8173,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary:**  \nThe champion only evaluates *spawn* actions for the second round, so when the only safe way to stop a pirate that is about to reach position 3 is to *move* an existing high‑damage cannon, the policy"
-  },
-  {
     "timestamp": "2026-08-31T08:49:22+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.7788,
     "candidate_win_rate": 0.7788,
     "summary": "**Change explanation**  \nThe current policy never gives a special boost to actions that can kill a pirate that is already on the lethal position 2 in the current round. Such a kill can be the only way to avoid an immedia"
+  },
+  {
+    "timestamp": "2026-09-01T16:44:43+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
