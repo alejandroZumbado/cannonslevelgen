@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:44:47+00:00",
-    "promoted": false,
-    "win_rate": 0.7885,
-    "candidate_win_rate": 0.7692,
-    "summary": "**Idea** – Instead of estimating a “damage deficit”, this policy scores each possible first action by the *remaining hit‑points* of all pirates after a two‑step look‑ahead, but it adds a strong *urgency* term that penali"
-  },
-  {
     "timestamp": "2026-08-31T08:45:28+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Explanation**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move* (the `tie` component).  \nWhen a cannon can be moved onto a column that contains a pirate at position 2, killing that pirate t"
+  },
+  {
+    "timestamp": "2026-09-01T06:18:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary** – The original policy never gives special priority to actions that can kill a pirate that is already at the lethal position 2 in the current round. Such a kill is often the only way to avoid an immedia"
   }
 ]

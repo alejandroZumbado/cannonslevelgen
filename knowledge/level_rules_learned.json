@@ -152,5 +152,12 @@
     "evidence": "level 'A0001' (1 pirates, 3 filas, max_hp=3, columns=[0]) played with current policy (two_step_lookahead_plus_move): WON in 2 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-01",
+    "statement": "Cannon damage accumulates over multiple merges: each time a cannon is merged onto another, the moving cannon’s **current** damage (including any damage it has already gained from previous merges) is added to the resident cannon’s damage, so damage can increase beyond a single‑merge addition. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 3 filas, max_hp=6, columns=[0]) played with current policy (two_step_lookahead_plus_move): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]
