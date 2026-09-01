@@ -18,6 +18,7 @@ from llm import client, audit
 from llm.budget import BudgetExceeded
 from llm.client import ProviderQuotaExhausted
 from learning import knowledge
+from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from production.cannons_sync import push_generated_level
 from production.level_registry import scan_existing_levels, ensure_unique_password
@@ -39,10 +40,17 @@ tipo 1-3 = normal pirate (skin variety only), tipo 4 = last pirate of the level
 
 
 def _build_prompt(level_number: int) -> tuple[str, str]:
-    system = "You design one winnable, well-paced level for the tower-defense game Cannons."
-    user = f"""{_LEVEL_SCHEMA}
+    system = (
+        "You design one winnable, well-paced level for the tower-defense game "
+        "Cannons. Ground everything in the real rules below — never invent a "
+        "mechanic that isn't stated there, no matter how plausible it sounds."
+    )
+    user = f"""{GAME_RULES}
 
-Rules confirmed by a month of self-play (trust these over generic guesses):
+{_LEVEL_SCHEMA}
+
+Rules confirmed by a month of self-play (trust these over generic guesses,
+but never over the authoritative rules above if the two ever disagree):
 {knowledge.rules_as_prompt_block()}
 
 Design level number {level_number}. Vary the pattern from typical alternating
