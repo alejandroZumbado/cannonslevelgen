@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T17:07:45+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary** – The original policy only evaluates *spawn* actions for the second round. If every possible spawn would cause an immediate loss, the policy never looks at a *move* that could rescue the board, so it l"
-  },
-  {
     "timestamp": "2026-08-31T17:08:37+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.7981,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move*.  \nWhen a pirate is already on the lethal position 2, a *move* that kills it can be the only safe choice, but the tie‑brea"
+  },
+  {
+    "timestamp": "2026-09-01T20:00:06+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change explanation**  \nThe champion policy never gives a special advantage to actions that kill a pirate already on the lethal position 2; when scores tie it prefers a spawn, which can let a losing pirate slip to posit"
   }
 ]
