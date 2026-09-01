@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T17:08:37+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change explanation**  \nThe current evaluation breaks ties by preferring *spawn* actions (`tie = (0 if act[0] == \"spawn\" else 1, …)`). When a move and a spawn have identical numeric scores (same deficit, same total dama"
-  },
-  {
     "timestamp": "2026-08-31T17:09:16+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change explanation**  \nThe champion policy never gives a special advantage to actions that kill a pirate already on the lethal position 2; when scores tie it prefers a spawn, which can let a losing pirate slip to posit"
+  },
+  {
+    "timestamp": "2026-09-01T22:39:59+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
