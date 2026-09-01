@@ -292,5 +292,12 @@
     "evidence": "level 'A0001' (2 pirates, 7 filas, max_hp=1, columns=[0, 1]) played with current policy (two_step_lookahead_plus_move): WON in 7 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-01",
+    "statement": "Moving a cannon onto a column that already contains a cannon merges the two cannons (their damage values are summed) **and the resulting merged cannon fires in the same round’s shooting phase**, targeting the most‑advanced pirate in that column. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 3 filas, max_hp=3, columns=[0]) played with current policy (two_step_lookahead_plus_move): WON in 2 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]

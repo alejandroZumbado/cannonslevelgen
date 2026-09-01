@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:43:55+00:00",
-    "promoted": true,
-    "win_rate": 0.7981,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Idea:** Instead of evaluating a single‑round “deficit” only, the new policy looks two rounds ahead. For every legal first action it simulates the immediate round, then assumes the best possible spawn (the most helpful "
-  },
-  {
     "timestamp": "2026-08-31T08:44:47+00:00",
     "promoted": false,
     "win_rate": 0.7885,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-01T01:27:20+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Explanation**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move* (the `tie` component).  \nWhen a cannon can be moved onto a column that contains a pirate at position 2, killing that pirate t"
   }
 ]
