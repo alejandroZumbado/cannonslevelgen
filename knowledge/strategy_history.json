@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T01:30:50+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary**  \nThe champion only looks two rounds ahead when estimating future deficit (`future_deficit(..., rounds_left=2)`). On levels that require pre‑charging a cannon several waves before a tough pirate appear"
-  },
-  {
     "timestamp": "2026-08-31T01:32:13+00:00",
     "promoted": true,
     "win_rate": 0.7981,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.9038,
     "summary": "**Change summary**  \nThe current champion only looks at *spawn* actions for the second round, never considering that a *move* (which can relocate a high‑damage cannon onto a column with a dangerous pirate) might be the s"
+  },
+  {
+    "timestamp": "2026-09-01T01:19:12+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Idea:** Before doing any look‑ahead we first check whether the current round contains a *must‑kill* pirate (position 2). If an action can guarantee that pirate dies this round (by spawning or moving a cannon so its dam"
   }
 ]
