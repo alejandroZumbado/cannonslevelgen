@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:43:09+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Idea** – Instead of estimating a “deficit” of damage, this policy directly measures how *urgent* the remaining pirates are.  For every pirate we compute `urgency = hp × (3 ‑ position)`, i.e. a pirate that is close to t"
-  },
-  {
     "timestamp": "2026-08-31T08:43:55+00:00",
     "promoted": true,
     "win_rate": 0.7981,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.9038,
     "summary": "**Change summary**  \nThe original policy sometimes overlooks an immediate‑kill opportunity on a pirate that is already at the lethal position 2 – it may choose an action with a slightly better *deficit* score even though"
+  },
+  {
+    "timestamp": "2026-09-01T01:25:21+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
