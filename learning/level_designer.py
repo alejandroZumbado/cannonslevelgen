@@ -65,7 +65,10 @@ Seed hypotheses worth stress-testing (human-authored guesses, not verified by
 your own play — confirm, refine, or overturn them):
 - With cannon base damage 1, a lone pirate needs HP <= 3 to be beatable without
   any merge.
-- Two pirates in the same column on consecutive rows block each other's shots.
+- Blocking has nothing to do with row distance: the most-advanced pirate in a
+  column always absorbs the shot, no matter how far behind the next one is —
+  a gap only buys the pirate behind extra rounds once the one in front dies,
+  it never lets both take damage in the same round (see GAME_RULES above).
 - Merge budget roughly scales with number of rows minus ~5.
 
 Propose ONE hypothesis (1-2 sentences) about what makes a level winnable or fun
