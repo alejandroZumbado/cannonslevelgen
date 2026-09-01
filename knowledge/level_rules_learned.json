@@ -159,5 +159,12 @@
     "evidence": "level 'A0001' (1 pirates, 3 filas, max_hp=6, columns=[0]) played with current policy (two_step_lookahead_plus_move): WON in 3 rounds",
     "confidence": 0.5,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-01",
+    "statement": "**Hypothesis:**  \nWhen a cannon kills the most‑advanced pirate in a column, it does **not** fire again at any other pirate in that same column during the same shooting phase; only one shot is resolved per column per round. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (3 pirates, 3 filas, max_hp=3, columns=[0, 4]) played with current policy (two_step_lookahead_plus_move): WON in 3 rounds",
+    "confidence": 0.5,
+    "source": "level_designer"
   }
 ]

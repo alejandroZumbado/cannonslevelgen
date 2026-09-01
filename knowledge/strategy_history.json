@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:45:28+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.6731,
-    "summary": "**Idea:** Instead of estimating a “damage deficit”, this policy looks at the *time‑to‑death* of every pirate after the next round. If a pirate would survive to position 2 (one step away from losing) we give the action a "
-  },
-  {
     "timestamp": "2026-08-31T08:46:22+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary** – The original policy never gives special priority to actions that can kill a pirate that is already at the lethal position 2 in the current round. Such a kill is often the only way to avoid an immedia"
+  },
+  {
+    "timestamp": "2026-09-01T06:19:15+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change explanation**  \nThe champion policy prefers spawning over moving when all other scores are equal, which can cause it to miss a *must‑kill* opportunity: a pirate already at position 2 can be killed instantly by m"
   }
 ]
