@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T08:47:14+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary**  \nThe champion only looks at *spawn* actions for the second round, ignoring that a *move* (which keeps the pending‑spawn cannon for the next round) can sometimes be the only safe way to protect a colum"
-  },
-  {
     "timestamp": "2026-08-31T08:48:02+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-01T11:49:25+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary** – The champion policy prefers spawning over moving when all numeric scores tie, which can cause it to ignore a *must‑kill* move that would eliminate a pirate already at the lethal position 2 this round"
   }
 ]
