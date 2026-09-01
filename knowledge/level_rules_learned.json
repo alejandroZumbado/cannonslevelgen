@@ -187,5 +187,12 @@
     "evidence": "level 'Q1234' (1 pirates, 1 filas, max_hp=4, columns=[0]) played with current policy (two_step_lookahead_plus_move): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-01",
+    "statement": "Merging a cannon onto a column that currently has no pirate retains the summed damage for all future rounds (the merged cannon keeps its combined damage and does not reset to base damage). => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (1 pirates, 4 filas, max_hp=6, columns=[0]) played with current policy (two_step_lookahead_plus_move): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
