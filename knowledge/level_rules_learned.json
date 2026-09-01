@@ -36,13 +36,6 @@
   },
   {
     "date": "2026-08-23",
-    "statement": "A lone non‑final pirate (tipo 1) with HP = 4 is beatable without any merges as long as the level contains at least four filas (including the pirate’s own fila) and no other pirates occupy its column, because the cannon’s base damage = 1 can be applied once per fila. => confirmed winnable by test level.",
-    "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=4, columns=[0, 2]) played with current policy (baseline_v0): WON in 4 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-23",
     "statement": "**Hypothesis:**  \nWhen the sum of all pirates’ HP in a level exceeds the total number of filas, the level cannot be cleared without performing at least one merge (i.e., base‑damage = 1 per fila is insufficient to reduce all HP to 0). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=2, columns=[0, 1, 2, 3, 4]) played with current policy (danger_first_merge_v1): WON in 6 rounds",
     "confidence": 0.5,
@@ -71,13 +64,6 @@
   },
   {
     "date": "2026-08-23",
-    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = 1 can be eliminated without any merges only if any pirate directly in front of it (in the same column on the immediately preceding fila) has HP ≤ 1; if that blocking pirate has HP ≥ 2, the level becomes unwinnable without performing a merge. => confirmed winnable by test level.",
-    "evidence": "level 'K1234' (2 pirates, 3 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-23",
     "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = 2 can be cleared without any merges if the pirate directly in front of it (same column, immediately preceding fila) has HP = 1 **and** there is at least one empty fila separating them, allowing the final pirate to receive two separate base‑damage hits (one in the empty fila’s wave and one in its own wave). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (2 pirates, 4 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 4 rounds",
     "confidence": 0.5,
@@ -94,20 +80,6 @@
     "date": "2026-08-23",
     "statement": "A final pirate (tipo 4) with HP = 2 can be cleared without any merges even when the pirate directly in front of it in the same column also has HP = 2, as long as there is at least one empty fila separating them (allowing the final pirate to receive two separate base‑damage hits after the blocker is killed). => confirmed winnable by test level.",
     "evidence": "level 'A1234' (2 pirates, 5 filas, max_hp=2, columns=[2]) played with current policy (danger_first_merge_v1): WON in 5 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-25",
-    "statement": "**Hypothesis:**  \nThe cannon’s base damage of 1 is applied on every wave, even in waves that contain no pirates; therefore empty filas before a pirate appears still contribute damage toward reducing that pirate’s HP. => confirmed winnable by test level.",
-    "evidence": "level 'Z0001' (2 pirates, 4 filas, max_hp=3, columns=[0, 2]) played with current policy (lookahead_merge_v2_tie_urgency): WON in 4 rounds",
-    "confidence": 0.5,
-    "source": "level_designer"
-  },
-  {
-    "date": "2026-08-25",
-    "statement": "**Hypothesis:**  \nA final pirate (tipo 4) with HP = k can be eliminated without any merges if there are at least k consecutive empty filas directly above it in the same column, because the cannon’s base damage = 1 is applied on every wave, including empty ones. => confirmed winnable by test level.",
-    "evidence": "level 'A1234' (2 pirates, 6 filas, max_hp=3, columns=[0, 2]) played with current policy (two_round_lookahead_urgency): WON in 7 rounds",
     "confidence": 0.5,
     "source": "level_designer"
   },
