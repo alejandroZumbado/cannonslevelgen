@@ -173,5 +173,12 @@
     "evidence": "level 'A0001' (2 pirates, 4 filas, max_hp=2, columns=[0, 4]) played with current policy (two_step_lookahead_plus_move): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-01",
+    "statement": "A merged cannon keeps the total damage it has accumulated when it is later moved to a different column. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (1 pirates, 4 filas, max_hp=4, columns=[1]) played with current policy (two_step_lookahead_plus_move): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
