@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "two_step_lookahead_plus_move_fix"
+    name = "two_step_lookahead_plus_move"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -62,29 +62,6 @@ class Policy:
                 total += need
             return total
 
-        def kills_lethal(act, cann_map, pir_list):
-            """
-            Returns True if this action will kill a pirate that is currently
-            at position 2 (the lethal position) in its column during this round.
-            """
-            # Determine which column will receive the damage this round
-            if act[0] == "spawn":
-                col = act[1]
-            else:  # move
-                col = act[2]
-
-            dmg = cann_map.get(col, 0)
-            if dmg <= 0:
-                return False
-
-            # Find the front pirate in that column before damage
-            col_pirates = [p for p in pir_list if p["column"] == col]
-            if not col_pirates:
-                return False
-            front = max(col_pirates, key=lambda p: p["position"])
-            # Is it on the lethal position and will the damage kill it?
-            return front["position"] == 2 and front["hp"] <= dmg
-
         # ----- enumerate all legal first actions -----
         actions = []
 
@@ -136,12 +113,8 @@ class Policy:
             # ----- evaluation key -----
             first_def = deficit(cann_after_first, pirates_after_first)
             total_damage = sum(cann_after_first.values())
-            # bonus flag: 1 if this action kills a lethal (position‑2) pirate now
-            kill_bonus = 1 if kills_lethal(act, cann_after_first, pirates) else 0
-            # tie‑breaker: prefer spawn only when everything else equal and no kill‑bonus
-            tie = (0 if act[0] == "spawn" else 1, act)
-            # note: we use -kill_bonus so that a killing move (kill_bonus=1) gets a smaller key
-            key = (second_deficit, first_def, -total_damage, -kill_bonus, tie)
+            tie = (0 if act[0] == "spawn" else 1, act)   # prefer spawn, then lower cols
+            key = (second_deficit, first_def, -total_damage, tie)
 
             if best_key is None or key < best_key:
                 best_key = key

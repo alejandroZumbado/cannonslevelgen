@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T06:18:18+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary** – The original policy never gives special priority to actions that can kill a pirate that is already at the lethal position 2 in the current round. Such a kill is often the only way to avoid an immedia"
-  },
-  {
     "timestamp": "2026-09-01T06:19:15+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary** – The current policy prefers a spawn over a move when all other scores tie. This makes it miss a *must‑kill* move when a pirate is already on the lethal position 2: moving a cannon onto that column (or"
+  },
+  {
+    "timestamp": "2026-09-02T22:42:25+00:00",
+    "promoted": true,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change explanation**  \nThe champion policy prefers spawning over moving when all numeric scores tie, which makes it miss a *must‑kill* move when a pirate is already on the lethal position 2. I add a tiny bonus to any a"
   }
 ]
