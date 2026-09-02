@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T01:27:20+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Explanation**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move* (the `tie` component).  \nWhen a cannon can be moved onto a column that contains a pirate at position 2, killing that pirate t"
-  },
-  {
     "timestamp": "2026-09-01T06:18:18+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change explanation**  \nThe champion policy always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a pirate is already on the lethal position 2, a *move* that merge"
+  },
+  {
+    "timestamp": "2026-09-02T19:52:40+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Change summary** – The current policy prefers a spawn over a move when all other scores tie. This makes it miss a *must‑kill* move when a pirate is already on the lethal position 2: moving a cannon onto that column (or"
   }
 ]
