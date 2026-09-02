@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T01:22:21+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Idea:**  \nThe current champion only looks two rounds ahead and treats all actions uniformly.  I add a *must‑kill* shortcut: if any action can guarantee the death of a pirate that is already at the lethal position 2 thi"
-  },
-  {
     "timestamp": "2026-09-01T01:24:25+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary** – The champion policy always prefers a spawn over a move when all other scores tie (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a pirate is already on the lethal position 2, a *move* that merge"
+  },
+  {
+    "timestamp": "2026-09-02T16:41:39+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change explanation**  \nThe champion policy always breaks ties by preferring a spawn (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a pirate is already on the lethal position 2, a *move* that merges a cannon onto "
   }
 ]
