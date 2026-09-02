@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T17:09:16+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change explanation:**  \nWhen two actions score identically the policy always prefers a *spawn* because of the tie‑breaker `tie = (0 if act[0] == \"spawn\" else 1, …)`. In tight situations a *move* of an already‑strong ca"
-  },
-  {
     "timestamp": "2026-08-31T17:10:08+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-02T01:05:52+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary** – The champion policy always breaks ties by preferring a *spawn* over a *move*. This makes it miss a crucial “must‑kill” move when a pirate is already on the lethal position 2 and the move would kill i"
   }
 ]
