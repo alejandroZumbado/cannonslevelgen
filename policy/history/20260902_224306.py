@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_priority_two_step_lookahead"
+    name = "two_step_lookahead_plus_move_fix"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -63,29 +63,27 @@ class Policy:
             return total
 
         def kills_lethal(act, cann_map, pir_list):
-            """True if this action kills a pirate that is currently on position 2."""
-            # column that will fire this round
-            col = act[1] if act[0] == "spawn" else act[2]
-            dmg = cann_map.get(col, 0)
-            if dmg <= 0:
-                return False
-            col_pirates = [p for p in pir_list if p["column"] == col]
-            if not col_pirates:
-                return False
-            front = max(col_pirates, key=lambda p: p["position"])
-            return front["position"] == 2 and front["hp"] <= dmg
+            """
+            Returns True if this action will kill a pirate that is currently
+            at position 2 (the lethal position) in its column during this round.
+            """
+            # Determine which column will receive the damage this round
+            if act[0] == "spawn":
+                col = act[1]
+            else:  # move
+                col = act[2]
 
-        def kills_any(act, cann_map, pir_list):
-            """True if this action kills the front pirate in its column (any position)."""
-            col = act[1] if act[0] == "spawn" else act[2]
             dmg = cann_map.get(col, 0)
             if dmg <= 0:
                 return False
+
+            # Find the front pirate in that column before damage
             col_pirates = [p for p in pir_list if p["column"] == col]
             if not col_pirates:
                 return False
             front = max(col_pirates, key=lambda p: p["position"])
-            return front["hp"] <= dmg
+            # Is it on the lethal position and will the damage kill it?
+            return front["position"] == 2 and front["hp"] <= dmg
 
         # ----- enumerate all legal first actions -----
         actions = []
@@ -113,7 +111,9 @@ class Policy:
 
             # ----- second round: try every possible spawn **or move** -----
             second_deficit = None
+            # possible second actions: all spawns
             second_candidates = [("spawn", col) for col in range(NUM_COLUMNS)]
+            # plus all moves that are legal after the first action
             for donor in cann_after_first:
                 for target in range(NUM_COLUMNS):
                     if donor == target:
@@ -124,40 +124,24 @@ class Policy:
                 cann_after_second = apply_action(cann_after_first, second_act)
                 pirates_after_second, loss2 = simulate_round(cann_after_second, pirates_after_first)
                 if loss2:
-                    continue
+                    continue      # this second action would already lose; ignore
                 d = deficit(cann_after_second, pirates_after_second)
                 if second_deficit is None or d < second_deficit:
                     second_deficit = d
 
+            # if every possible second action loses, treat the future deficit as huge
             if second_deficit is None:
-                second_deficit = 10 ** 9   # hopeless
+                second_deficit = 10**9
 
             # ----- evaluation key -----
             first_def = deficit(cann_after_first, pirates_after_first)
             total_damage = sum(cann_after_first.values())
-            kill_lethal = 1 if kills_lethal(act, cann_after_first, pirates) else 0
-            kill_any = 1 if kills_any(act, cann_after_first, pirates) else 0
-
-            # Prefer moves over spawns when everything else ties
-            tie_pref = 0 if act[0] == "move" else 1
-
-            # key order:
-            # 1. second‑round deficit (lower is better)
-            # 2. first‑round deficit
-            # 3. total cannon damage (higher is better)
-            # 4. kill‑lethal bonus (higher is better)
-            # 5. kill‑any bonus (higher is better)
-            # 6. prefer move over spawn
-            # 7. deterministic action tuple
-            key = (
-                second_deficit,
-                first_def,
-                -total_damage,
-                -kill_lethal,
-                -kill_any,
-                tie_pref,
-                act,
-            )
+            # bonus flag: 1 if this action kills a lethal (position‑2) pirate now
+            kill_bonus = 1 if kills_lethal(act, cann_after_first, pirates) else 0
+            # tie‑breaker: prefer spawn only when everything else equal and no kill‑bonus
+            tie = (0 if act[0] == "spawn" else 1, act)
+            # note: we use -kill_bonus so that a killing move (kill_bonus=1) gets a smaller key
+            key = (second_deficit, first_def, -total_damage, -kill_bonus, tie)
 
             if best_key is None or key < best_key:
                 best_key = key
