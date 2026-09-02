@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-08-31T17:10:08+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary** – The original `deficit` function assumes a cannon can damage *all* pirates in its column each round, ignoring the blocking rule that only the most‑advanced pirate can be hit. This can make the policy "
-  },
-  {
     "timestamp": "2026-08-31T17:11:03+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary** – The champion policy always breaks ties by preferring a *spawn* over a *move*. This makes it miss a crucial “must‑kill” move when a pirate is already on the lethal position 2 and the move would kill i"
+  },
+  {
+    "timestamp": "2026-09-02T05:56:04+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary** – The champion policy always breaks ties by preferring a spawn (`tie = (0 if act[0] == \"spawn\" else 1, …)`), which makes it ignore a *must‑kill* move when a pirate is already on the lethal position 2. "
   }
 ]
