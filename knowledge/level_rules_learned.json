@@ -243,5 +243,12 @@
     "evidence": "level 'A0001' (1 pirates, 5 filas, max_hp=5, columns=[2]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-03",
+    "statement": "Hypothesis: A cannon that has previously merged (and thus has damage > 1) keeps its accumulated damage when it is later moved onto another cannon; the resulting cannon’s damage equals the sum of the two cannons’ damages, and this summed damage is applied immediately in that same shooting phase. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 4 filas, max_hp=3, columns=[1]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

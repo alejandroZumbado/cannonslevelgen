@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T05:57:05+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change summary** – The champion policy always breaks ties by preferring a *spawn* over a *move*.  \nWhen a pirate is already on the lethal position 2, a *move* that merges a cannon onto that column and kills the pirate "
-  },
-  {
     "timestamp": "2026-09-02T11:27:43+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8462,
     "summary": "**Idea:** Instead of minimizing the *total* HP that cannot be dealt (the sum‑deficit used by the champion), this policy focuses on the *bottleneck* column – the column with the highest remaining unmet damage after the cu"
+  },
+  {
+    "timestamp": "2026-09-03T16:35:01+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
