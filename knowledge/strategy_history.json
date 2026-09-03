@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T20:00:06+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change explanation**  \nThe champion policy never gives a special advantage to actions that kill a pirate already on the lethal position 2; when scores tie it prefers a spawn, which can let a losing pirate slip to posit"
-  },
-  {
     "timestamp": "2026-09-01T22:39:59+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary**  \nThe champion policy ranks actions by *total cannon damage* before it rewards a *lethal‑kill* (`kill_lethal`). When a pirate is already on the critical position 2, an action that would kill it can be "
+  },
+  {
+    "timestamp": "2026-09-03T11:27:48+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary**  \nThe original policy checks `kills_lethal` / `kills_any` against the *pre‑action* cannon damage, so a spawn or merge that actually adds enough damage to kill a pirate on the lethal square (position 2)"
   }
 ]
