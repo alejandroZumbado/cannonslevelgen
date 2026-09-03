@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T11:49:25+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary** – The champion policy prefers spawning over moving when all numeric scores tie, which can cause it to ignore a *must‑kill* move that would eliminate a pirate already at the lethal position 2 this round"
-  },
-  {
     "timestamp": "2026-09-01T11:50:11+00:00",
     "promoted": false,
     "win_rate": 0.7788,
@@ -138,5 +131,12 @@
     "win_rate": 0.9231,
     "candidate_win_rate": 0.8846,
     "summary": "**Idea:**  \nThe current champion only *rewards* killing a pirate on the lethal square (2) as a low‑priority bonus, so it can miss a decisive move when several actions look equally good. This policy makes “lethal‑kill” th"
+  },
+  {
+    "timestamp": "2026-09-03T05:54:24+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Idea** – Instead of only evaluating the first two rounds, the new policy runs a short *greedy* simulation of the rest of the game after the first action (always spawning the cannon that gives the lowest remaining defic"
   }
 ]
