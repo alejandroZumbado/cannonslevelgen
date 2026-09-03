@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T16:44:43+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-01T16:47:54+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8173,
     "summary": "**Idea** – Instead of only counting raw deficit or a two‑step look‑ahead, this policy evaluates every legal first action by the *damage‑threshold* it creates: for each column we compute the minimum cannon damage needed t"
+  },
+  {
+    "timestamp": "2026-09-03T05:57:19+00:00",
+    "promoted": false,
+    "win_rate": 0.9231,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
