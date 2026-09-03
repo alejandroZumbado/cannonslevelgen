@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-01T19:59:06+00:00",
-    "promoted": false,
-    "win_rate": 0.7981,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Change summary**  \nThe champion policy breaks ties by always preferring a *spawn* over a *move*.  \nWhen a pirate is already on the lethal position 2, a *move* that kills it can be the only safe choice, but the tie‑brea"
-  },
-  {
     "timestamp": "2026-09-01T20:00:06+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change explanation**  \nThe current policy ranks actions first by deficits, then by *total cannon damage* before rewarding a *lethal‑kill* on a pirate that is already on the critical position 2. When a move that would i"
+  },
+  {
+    "timestamp": "2026-09-03T11:25:48+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary**  \nThe champion policy ranks actions by *total cannon damage* before it rewards a *lethal‑kill* (`kill_lethal`). When a pirate is already on the critical position 2, an action that would kill it can be "
   }
 ]
