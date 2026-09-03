@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T11:30:43+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-02T11:31:42+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8365,
     "summary": "**Change explanation**  \nThe champion policy prefers the smallest *first‑round deficit* before rewarding a lethal kill on a pirate that is already on the critical square (position 2). This can make it choose an action th"
+  },
+  {
+    "timestamp": "2026-09-03T19:56:16+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
