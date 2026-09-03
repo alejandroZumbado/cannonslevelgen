@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T05:56:04+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary** – The champion policy always breaks ties by preferring a spawn (`tie = (0 if act[0] == \"spawn\" else 1, …)`), which makes it ignore a *must‑kill* move when a pirate is already on the lethal position 2. "
-  },
-  {
     "timestamp": "2026-09-02T05:57:05+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.9231,
     "candidate_win_rate": 0.9038,
     "summary": "**Idea:**  \nThe previous champion only looked two rounds ahead, which can miss long‑term consequences of early merges or of a pirate that needs several shots to die. This policy evaluates every possible first action by *"
+  },
+  {
+    "timestamp": "2026-09-03T16:32:33+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Idea:** Instead of minimizing the *total* HP that cannot be dealt (the sum‑deficit used by the champion), this policy focuses on the *bottleneck* column – the column with the highest remaining unmet damage after the cu"
   }
 ]
