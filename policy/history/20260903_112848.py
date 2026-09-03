@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_priority_two_step_lookahead_fixed"
+    name = "kill_priority_two_step_lookahead"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -64,6 +64,7 @@ class Policy:
 
         def kills_lethal(act, cann_map, pir_list):
             """True if this action kills a pirate that is currently on position 2."""
+            # column that will fire this round
             col = act[1] if act[0] == "spawn" else act[2]
             dmg = cann_map.get(col, 0)
             if dmg <= 0:
@@ -140,15 +141,22 @@ class Policy:
             # Prefer moves over spawns when everything else ties
             tie_pref = 0 if act[0] == "move" else 1
 
-            # New ordering: prioritize lethal/any kills before raw damage
+            # key order:
+            # 1. second‑round deficit (lower is better)
+            # 2. first‑round deficit
+            # 3. total cannon damage (higher is better)
+            # 4. kill‑lethal bonus (higher is better)
+            # 5. kill‑any bonus (higher is better)
+            # 6. prefer move over spawn
+            # 7. deterministic action tuple
             key = (
-                second_deficit,          # lower is better
-                first_def,               # lower is better
-                -kill_lethal,            # higher kill‑lethal is better
-                -kill_any,               # higher kill‑any is better
-                -total_damage,           # higher total damage is better
-                tie_pref,                # prefer move
-                act,                     # deterministic tie‑breaker
+                second_deficit,
+                first_def,
+                -total_damage,
+                -kill_lethal,
+                -kill_any,
+                tie_pref,
+                act,
             )
 
             if best_key is None or key < best_key:
