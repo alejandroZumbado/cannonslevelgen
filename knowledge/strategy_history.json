@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T19:51:17+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change explanation**  \nThe champion policy always breaks ties by preferring a *spawn* over a *move* (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a pirate is already on the lethal position 2, a *move* that merge"
-  },
-  {
     "timestamp": "2026-09-02T19:52:40+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-04T01:04:39+00:00",
     "promoted": false,
     "win_rate": 0.8173,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-04T01:06:43+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
