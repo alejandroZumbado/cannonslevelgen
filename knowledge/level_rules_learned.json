@@ -285,5 +285,12 @@
     "evidence": "level 'A1234' (1 pirates, 3 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-04",
+    "statement": "A single cannon can be moved each round to a different column and will fire immediately after the move, so with base damage 1 it can kill three separate HP‑1 pirates appearing in three successive waves in distinct columns without any merges. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (3 pirates, 3 filas, max_hp=1, columns=[0, 1, 2]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
