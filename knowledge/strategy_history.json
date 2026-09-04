@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T22:43:06+00:00",
-    "promoted": true,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Explanation:**  \nThe main weakness of the champion was that it always preferred a spawn over a move when all numeric scores tied, so it missed *must‑kill* moves that merge a cannon onto a column where a pirate is alrea"
-  },
-  {
     "timestamp": "2026-09-03T01:10:40+00:00",
     "promoted": false,
     "win_rate": 0.9231,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary**  \nThe champion policy only rewards kills that happen **in the first round** of the look‑ahead.  \nWhen a pirate is on position 1 and can be killed on the **second** round after we damage it now, the pol"
+  },
+  {
+    "timestamp": "2026-09-04T11:27:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary**  \nThe champion policy evaluates *deficit* before rewarding a kill of a pirate that is already on the critical square (position 2). In levels where a pirate is on position 2, failing to kill it immediat"
   }
 ]
