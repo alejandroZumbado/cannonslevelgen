@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T22:42:25+00:00",
-    "promoted": true,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change explanation**  \nThe champion policy prefers spawning over moving when all numeric scores tie, which makes it miss a *must‑kill* move when a pirate is already on the lethal position 2. I add a tiny bonus to any a"
-  },
-  {
     "timestamp": "2026-09-02T22:43:06+00:00",
     "promoted": true,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-04T06:01:17+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary**  \nThe champion policy only rewards kills that happen **in the first round** of the look‑ahead.  \nWhen a pirate is on position 1 and can be killed on the **second** round after we damage it now, the pol"
   }
 ]
