@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T11:25:48+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary**  \nThe champion policy ranks actions by *total cannon damage* before it rewards a *lethal‑kill* (`kill_lethal`). When a pirate is already on the critical position 2, an action that would kill it can be "
-  },
-  {
     "timestamp": "2026-09-03T11:27:48+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change explanation**  \nThe champion policy only rewards kills that happen **this round** (`kill_lethal` / `kill_any`).  \nIf a cannon damages a pirate on position 1 (or 0) so that the pirate’s remaining HP is ≤ the cann"
+  },
+  {
+    "timestamp": "2026-09-04T19:40:26+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Idea:**  \nThe current champion only cares about killing *now* or about a raw “deficit” number, so it can still let a pirate sit on the death‑square (position 2) survive a round as long as the deficit looks ok.  This po"
   }
 ]
