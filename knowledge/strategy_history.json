@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T16:41:39+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change explanation**  \nThe champion policy always breaks ties by preferring a spawn (`tie = (0 if act[0] == \"spawn\" else 1, …)`).  \nWhen a pirate is already on the lethal position 2, a *move* that merges a cannon onto "
-  },
-  {
     "timestamp": "2026-09-02T16:42:39+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-04T01:03:58+00:00",
+    "promoted": false,
+    "win_rate": 0.8077,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary**  \nThe current policy evaluates actions after the first round by first minimizing the *first‑round deficit* and only then rewarding a lethal kill on a pirate that is already on the critical square (posi"
   }
 ]
