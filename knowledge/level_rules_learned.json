@@ -257,5 +257,12 @@
     "evidence": "level 'A0001' (1 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-04",
+    "statement": "**Hypothesis:**  \nIf there is at least one empty fila before a pirate appears, the player can use that empty round to place a cannon and then, on the next round, merge a second cannon onto the same column before the pirate’s first shot. This yields a damage‑2 cannon in time to kill an HP‑5 pirate within its three‑shot window, making the level winnable; without the preceding empty fila the same pirate would be unwinnable. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 2 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

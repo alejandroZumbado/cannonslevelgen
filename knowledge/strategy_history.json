@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-02T19:52:40+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary** – The current policy prefers a spawn over a move when all other scores tie. This makes it miss a *must‑kill* move when a pirate is already on the lethal position 2: moving a cannon onto that column (or"
-  },
-  {
     "timestamp": "2026-09-02T22:42:25+00:00",
     "promoted": true,
     "win_rate": 0.875,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-04T01:06:43+00:00",
     "promoted": false,
     "win_rate": 0.875,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-04T06:00:15+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
