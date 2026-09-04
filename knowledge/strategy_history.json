@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T01:10:40+00:00",
-    "promoted": false,
-    "win_rate": 0.9231,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Idea:**  \nThe current champion only *rewards* killing a pirate on the lethal square (2) as a low‑priority bonus, so it can miss a decisive move when several actions look equally good. This policy makes “lethal‑kill” th"
-  },
-  {
     "timestamp": "2026-09-03T05:54:24+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary**  \nThe champion policy evaluates *deficit* before rewarding a kill of a pirate that is already on the critical square (position 2). In levels where a pirate is on position 2, failing to kill it immediat"
+  },
+  {
+    "timestamp": "2026-09-04T11:29:28+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe current policy only rewards kills that happen in the first round (`kill_lethal` / `kill_any`). It ignores a pirate that will be killed in the *second* round after we damage it now, which can caus"
   }
 ]

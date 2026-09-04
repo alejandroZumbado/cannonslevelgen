@@ -271,5 +271,12 @@
     "evidence": "level 'A0001' (1 pirates, 4 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-04",
+    "statement": "**Hypothesis:**  \nIf a player merges enough cannon damage early, the front (most‑advanced) pirate can be killed before it blocks the pirate behind it, allowing the behind pirate to be hit within its three‑shot window and making the level winnable even when the front pirate’s HP exceeds the base damage. => confirmed winnable by test level.",
+    "evidence": "level 'M1234' (2 pirates, 3 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
