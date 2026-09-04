@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T05:54:24+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Idea** – Instead of only evaluating the first two rounds, the new policy runs a short *greedy* simulation of the rest of the game after the first action (always spawning the cannon that gives the lowest remaining defic"
-  },
-  {
     "timestamp": "2026-09-03T05:56:17+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary**  \nThe current policy only rewards kills that happen in the first round (`kill_lethal` / `kill_any`). It ignores a pirate that will be killed in the *second* round after we damage it now, which can caus"
+  },
+  {
+    "timestamp": "2026-09-04T11:30:15+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
