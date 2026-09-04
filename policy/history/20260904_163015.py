@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill"
+    name = "kill_priority_two_step_lookahead_fixed"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -86,19 +86,6 @@ class Policy:
             front = max(col_pirates, key=lambda p: p["position"])
             return front["hp"] <= dmg
 
-        def kills_next(act, cann_map, pir_after_first):
-            """True if after this round the front pirate will surely die next round."""
-            col = act[1] if act[0] == "spawn" else act[2]
-            dmg = cann_map.get(col, 0)
-            if dmg <= 0:
-                return False
-            col_pirates = [p for p in pir_after_first if p["column"] == col]
-            if not col_pirates:
-                return False
-            front = max(col_pirates, key=lambda p: p["position"])
-            # front will be hit again next round; if its remaining hp <= dmg it is guaranteed to die
-            return front["hp"] <= dmg and front["position"] < MAX_POSITION
-
         # ----- enumerate all legal first actions -----
         actions = []
 
@@ -149,19 +136,16 @@ class Policy:
             total_damage = sum(cann_after_first.values())
             kill_lethal = 1 if kills_lethal(act, cann_after_first, pirates) else 0
             kill_any = 1 if kills_any(act, cann_after_first, pirates) else 0
-            kill_next = 1 if kills_next(act, cann_after_first, pirates_after_first) else 0
 
             # Prefer moves over spawns when everything else ties
             tie_pref = 0 if act[0] == "move" else 1
 
-            # New ordering: prioritize lethal/any kills before raw damage,
-            # and now also reward guaranteed kills next round.
+            # New ordering: prioritize lethal/any kills before raw damage
             key = (
                 second_deficit,          # lower is better
                 first_def,               # lower is better
                 -kill_lethal,            # higher kill‑lethal is better
                 -kill_any,               # higher kill‑any is better
-                -kill_next,              # higher kill‑next is better
                 -total_damage,           # higher total damage is better
                 tie_pref,                # prefer move
                 act,                     # deterministic tie‑breaker

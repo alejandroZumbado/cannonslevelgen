@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T11:24:47+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change explanation**  \nThe current policy ranks actions first by deficits, then by *total cannon damage* before rewarding a *lethal‑kill* on a pirate that is already on the critical position 2. When a move that would i"
-  },
-  {
     "timestamp": "2026-09-03T11:25:48+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8365,
     "summary": "**Change summary**  \nThe champion policy only rewards kills that happen *immediately* (the current round) and never values a pirate that will certainly die in the *next* round after we damage it now. In a common situatio"
+  },
+  {
+    "timestamp": "2026-09-04T16:30:15+00:00",
+    "promoted": true,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change explanation**  \nThe champion policy only rewards kills that happen **this round** (`kill_lethal` / `kill_any`).  \nIf a cannon damages a pirate on position 1 (or 0) so that the pirate’s remaining HP is ≤ the cann"
   }
 ]
