@@ -299,5 +299,12 @@
     "evidence": "level 'A0001' (2 pirates, 2 filas, max_hp=2, columns=[2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-05",
+    "statement": "A cannon keeps whatever damage it has already accumulated when it is moved onto an empty column, so that later merges can further increase its damage. => confirmed winnable by test level.",
+    "evidence": "level 'Q1234' (2 pirates, 4 filas, max_hp=7, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
