@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T01:04:39+00:00",
-    "promoted": false,
-    "win_rate": 0.8173,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-04T01:06:43+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* whenever all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this wastes the "
+  },
+  {
+    "timestamp": "2026-09-05T10:45:37+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe champion prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this discards the pending sp"
   }
 ]
