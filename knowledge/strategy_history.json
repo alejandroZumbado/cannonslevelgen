@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T06:00:15+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-04T06:01:17+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8269,
     "candidate_win_rate": 0.8269,
     "summary": "**Change explanation**  \nThe original `deficit` counted *all* pirates in a column as if the cannon could hit each of them every round. Because only the front (most‑advanced) pirate can be damaged, this over‑estimates how"
+  },
+  {
+    "timestamp": "2026-09-05T13:54:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe current policy prefers a *move* over a *spawn* when every other evaluation key ties (`tie_pref = 0` for moves, `1` for spawns).  When two actions are otherwise identical this discards the pending"
   }
 ]
