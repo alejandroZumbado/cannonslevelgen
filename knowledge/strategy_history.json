@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T01:03:58+00:00",
-    "promoted": false,
-    "win_rate": 0.8077,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary**  \nThe current policy evaluates actions after the first round by first minimizing the *first‑round deficit* and only then rewarding a lethal kill on a pirate that is already on the critical square (posi"
-  },
-  {
     "timestamp": "2026-09-04T01:04:39+00:00",
     "promoted": false,
     "win_rate": 0.8173,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* when every other evaluation key ties (`tie_pref = 0` for moves, `1` for spawns). Moving discards the pending spawn cannon, which can be crucial fo"
+  },
+  {
+    "timestamp": "2026-09-05T10:43:49+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* whenever all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this wastes the "
   }
 ]
