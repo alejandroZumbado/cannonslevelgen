@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T01:06:43+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-04T06:00:15+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nThe champion prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this discards the pending sp"
+  },
+  {
+    "timestamp": "2026-09-05T10:46:21+00:00",
+    "promoted": false,
+    "win_rate": 0.8269,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change explanation**  \nThe original `deficit` counted *all* pirates in a column as if the cannon could hit each of them every round. Because only the front (most‑advanced) pirate can be damaged, this over‑estimates how"
   }
 ]
