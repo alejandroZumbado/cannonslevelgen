@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T16:31:52+00:00",
-    "promoted": false,
-    "win_rate": 0.9231,
-    "candidate_win_rate": 0.9038,
-    "summary": "**Idea:**  \nThe previous champion only looked two rounds ahead, which can miss long‑term consequences of early merges or of a pirate that needs several shots to die. This policy evaluates every possible first action by *"
-  },
-  {
     "timestamp": "2026-09-03T16:32:33+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-05T01:05:41+00:00",
     "promoted": false,
     "win_rate": 0.875,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-05T01:06:38+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
