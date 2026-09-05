@@ -174,7 +174,21 @@ def run_cycle() -> dict:
     # _MAX_RULES_IN_PROMPT comment for the full incident). 3000 is the documented
     # floor for openai/gpt-oss-120b (client.py) — do not go lower without
     # re-verifying the empty-response gotcha.
-    completion = client.complete(system, user, max_tokens=3000)
+    #
+    # 3000 -> 3400 on 2026-09-05: the prompt grew since 08-28 (recent_attempts
+    # window 4->10 on 09-01, policy/knowledge both grew) to ~4730-4820 tokens
+    # measured locally (_build_prompt with the real current policy, both
+    # refine_mode values). audit/2026-09-05.jsonl showed 4 of 5 calls that day
+    # failing with reason "no_code_block" at tokens_used ~7550-7650 — the
+    # model was spending its *entire* 3000-token completion budget on internal
+    # reasoning and getting cut off mid code-block (same gotcha as
+    # level_designer's old truncated-JSON bug, just manifesting here now).
+    # 3400 puts the worst-case total at ~8220, still ~230 tokens under the
+    # measured 413 ceiling (~8450) — a real but deliberately thin margin since
+    # the prompt keeps growing over time. If 413s reappear for this caller,
+    # the fix is trimming the prompt (e.g. the recent-attempts window), not
+    # pushing max_tokens further — this margin has no more room to give.
+    completion = client.complete(system, user, max_tokens=3400)
     response = completion.text
 
     code = _extract_code(response)

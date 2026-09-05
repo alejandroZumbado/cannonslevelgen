@@ -22,11 +22,24 @@ from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from production.cannons_sync import push_generated_level
 from production.level_registry import scan_existing_levels, ensure_unique_password
+from sim.benchmark import fixed_suite, random_suite
 from sim.engine import run_level
+from sim.evaluate import evaluate
 from sim.level import Level
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
 MAX_ATTEMPTS = 5
+
+# Gate added 2026-09-05: this script only ever validated the ONE level it
+# just generated against the current policy (engine.won) — it never checked
+# whether the policy itself is any good in aggregate. A policy that regressed
+# (a bad promotion slipping through strategy_learner, or a bug) could still
+# generate and push a "valid" level built around a weak strategy, straight
+# into the real game, with nothing to stop it. Reusing the same benchmark
+# suite/threshold-free style strategy_learner already uses for promotions —
+# if the champion can't clear this bar, don't generate anything today rather
+# than ship a level tuned to a policy you wouldn't have promoted.
+CHAMPION_WIN_RATE_THRESHOLD = 0.85
 
 _LEVEL_SCHEMA = """\
 Level JSON schema:
@@ -145,7 +158,17 @@ def main() -> int:
         return 1
 
     try:
-        level = generate_one_level(level_number, used_passwords)
+        policy_check = load_policy_from_file(CURRENT_POLICY_PATH)
+        suite = fixed_suite() + random_suite(n=100, seed=0)
+        champion_score = evaluate(policy_check, suite)
+        if champion_score.win_rate < CHAMPION_WIN_RATE_THRESHOLD:
+            print(f"champion policy win rate {champion_score.win_rate:.2%} is below the "
+                  f"{CHAMPION_WIN_RATE_THRESHOLD:.0%} production threshold — refusing to generate "
+                  f"a level today. This is a healthy no-op (learning phase still improving the "
+                  f"policy), not an incident.")
+            level = None
+        else:
+            level = generate_one_level(level_number, used_passwords)
     except PolicyLoadError as e:
         # unlike "no candidate won" below, this means production is broken,
         # not just unlucky today — worth a real red X.
