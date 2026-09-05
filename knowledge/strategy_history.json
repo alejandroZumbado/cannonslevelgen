@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T11:27:48+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary**  \nThe original policy checks `kills_lethal` / `kills_any` against the *pre‑action* cannon damage, so a spawn or merge that actually adds enough damage to kill a pirate on the lethal square (position 2)"
-  },
-  {
     "timestamp": "2026-09-03T11:28:48+00:00",
     "promoted": true,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.7981,
     "summary": "**Idea:**  \nThe current champion only cares about killing *now* or about a raw “deficit” number, so it can still let a pirate sit on the death‑square (position 2) survive a round as long as the deficit looks ok.  This po"
+  },
+  {
+    "timestamp": "2026-09-05T01:03:41+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.7404,
+    "summary": "**Idea:**  \nThe current champion only looks two rounds ahead and rewards kills that happen immediately, so it can miss a safe action that would certainly kill a pirate on the third round (the last shot a pirate gets).  \n"
   }
 ]
