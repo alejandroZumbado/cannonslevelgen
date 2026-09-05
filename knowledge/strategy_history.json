@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T19:56:16+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-03T19:57:00+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-05T05:52:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8269,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 1` for spawn, `0` for move).  \nWhen the situation is truly tied, moving a cannon can waste an exis"
   }
 ]
