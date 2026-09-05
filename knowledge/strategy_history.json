@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T16:32:33+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Idea:** Instead of minimizing the *total* HP that cannot be dealt (the sum‑deficit used by the champion), this policy focuses on the *bottleneck* column – the column with the highest remaining unmet damage after the cu"
-  },
-  {
     "timestamp": "2026-09-03T16:35:01+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-05T01:06:38+00:00",
     "promoted": false,
     "win_rate": 0.8654,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-05T01:09:05+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
