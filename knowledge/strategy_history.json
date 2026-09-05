@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-03T11:28:48+00:00",
-    "promoted": true,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary** – The champion ranks actions by *total cannon damage* before it rewards a *lethal‑kill* (`kill_lethal`) or any kill (`kill_any`). When a move would instantly kill a pirate on the critical square 2 but "
-  },
-  {
     "timestamp": "2026-09-03T16:31:52+00:00",
     "promoted": false,
     "win_rate": 0.9231,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.7404,
     "summary": "**Idea:**  \nThe current champion only looks two rounds ahead and rewards kills that happen immediately, so it can miss a safe action that would certainly kill a pirate on the third round (the last shot a pirate gets).  \n"
+  },
+  {
+    "timestamp": "2026-09-05T01:05:41+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
