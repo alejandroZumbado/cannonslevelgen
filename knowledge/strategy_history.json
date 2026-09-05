@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T06:01:17+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary**  \nThe champion policy only rewards kills that happen **in the first round** of the look‑ahead.  \nWhen a pirate is on position 1 and can be killed on the **second** round after we damage it now, the pol"
-  },
-  {
     "timestamp": "2026-09-04T11:27:18+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nThe current policy prefers a *move* over a *spawn* when every other evaluation key ties (`tie_pref = 0` for moves, `1` for spawns).  When two actions are otherwise identical this discards the pending"
+  },
+  {
+    "timestamp": "2026-09-05T16:51:49+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* when every other evaluation component ties (`tie_pref = 0` for moves, `1` for spawns). When the tie occurs this discards the pending spawn cannon,"
   }
 ]
