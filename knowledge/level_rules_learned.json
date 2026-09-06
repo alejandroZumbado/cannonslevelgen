@@ -327,5 +327,12 @@
     "evidence": "level 'A0001' (1 pirates, 7 filas, max_hp=7, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 7 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-06",
+    "statement": "Hypothesis: Merging (placing) a cannon onto a column that already contains a pirate never provides a win advantage; an optimal strategy can always postpone any merge until after that pirate is dead without affecting the level’s winnability. => confirmed winnable by test level.",
+    "evidence": "level 'Q0001' (2 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
