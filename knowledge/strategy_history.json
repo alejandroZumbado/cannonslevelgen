@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T16:27:52+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-04T16:29:42+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.9038,
     "summary": "**Change explanation**  \nThe champion always prefers a *move* over a *spawn* when all other evaluation criteria tie (`tie_pref = 0` for moves, `1` for spawns). When the move is just a relocation to an empty column it dis"
+  },
+  {
+    "timestamp": "2026-09-06T11:05:53+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe original `deficit` treats every pirate in a column as if it could be hit every remaining round, ignoring the blocking rule that only the most‑advanced pirate can be damaged. This can make the pla"
   }
 ]
