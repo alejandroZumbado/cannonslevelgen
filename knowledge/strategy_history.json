@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T11:30:15+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-04T16:27:52+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Change explanation**  \nThe original champion always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the move only relocates a cannon to an empty col"
+  },
+  {
+    "timestamp": "2026-09-06T06:06:29+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.9038,
+    "summary": "**Change explanation**  \nThe champion always prefers a *move* over a *spawn* when all other evaluation criteria tie (`tie_pref = 0` for moves, `1` for spawns). When the move is just a relocation to an empty column it dis"
   }
 ]

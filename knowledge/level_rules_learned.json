@@ -369,5 +369,12 @@
     "evidence": "level 'B0001' (3 pirates, 3 filas, max_hp=2, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-06",
+    "statement": "Pre‑emptive cannon merges on an empty column before any pirate appears can raise the cannon’s damage enough to kill a high‑HP pirate that would be impossible to kill without those early merges. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 4 filas, max_hp=8, columns=[2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
