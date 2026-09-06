@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T16:29:42+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary**  \nThe champion policy only rewards kills that happen *immediately* (the current round) and never values a pirate that will certainly die in the *next* round after we damage it now. In a common situatio"
-  },
-  {
     "timestamp": "2026-09-04T16:30:15+00:00",
     "promoted": true,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nThe original `deficit` treats every pirate in a column as if it could be hit every remaining round, ignoring the blocking rule that only the most‑advanced pirate can be damaged. This can make the pla"
+  },
+  {
+    "timestamp": "2026-09-06T11:08:23+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe champion always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns). When the move only relocates a cannon to an empty column it discards"
   }
 ]

@@ -376,5 +376,12 @@
     "evidence": "level 'A0001' (1 pirates, 4 filas, max_hp=8, columns=[2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-06",
+    "statement": "A cannon keeps its accumulated damage after being moved to a different column; therefore a single merged cannon can be relocated to kill another high‑HP pirate without further merges. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 8 filas, max_hp=5, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 8 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
