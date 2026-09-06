@@ -362,5 +362,12 @@
     "evidence": "level 'A1234' (2 pirates, 5 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-06",
+    "statement": "The hypothesis:  \n**In a single column, a level can be cleared without any cannon merges if and only if the sum of the HP of all pirates in that column is less than or equal to (number of pirates + 2).**  \n\nBelow is a level that sits exactly on the boundary of this condition (3 pirates, total HP = 3 + 2 = 5). If the hypothesis is correct the level should be winnable; if not it will be unwinnable. => confirmed winnable by test level.",
+    "evidence": "level 'B0001' (3 pirates, 3 filas, max_hp=2, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
