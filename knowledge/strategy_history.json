@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T11:27:18+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary**  \nThe champion policy evaluates *deficit* before rewarding a kill of a pirate that is already on the critical square (position 2). In levels where a pirate is on position 2, failing to kill it immediat"
-  },
-  {
     "timestamp": "2026-09-04T11:29:28+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* when every other evaluation component ties (`tie_pref = 0` for moves, `1` for spawns). When the tie occurs this discards the pending spawn cannon,"
+  },
+  {
+    "timestamp": "2026-09-06T01:03:17+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nThe original policy always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the move is to an empty column it merely relocates the"
   }
 ]
