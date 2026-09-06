@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T11:29:28+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary**  \nThe current policy only rewards kills that happen in the first round (`kill_lethal` / `kill_any`). It ignores a pirate that will be killed in the *second* round after we damage it now, which can caus"
-  },
-  {
     "timestamp": "2026-09-04T11:30:15+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary**  \nThe original policy always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the move is to an empty column it merely relocates the"
+  },
+  {
+    "timestamp": "2026-09-06T06:01:57+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change explanation**  \nThe original champion always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the move only relocates a cannon to an empty col"
   }
 ]
