@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-04T19:40:26+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Idea:**  \nThe current champion only cares about killing *now* or about a raw “deficit” number, so it can still let a pirate sit on the death‑square (position 2) survive a round as long as the deficit looks ok.  This po"
-  },
-  {
     "timestamp": "2026-09-05T01:03:41+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8077,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary**  \nThe original `deficit` assumes every pirate in a column can be damaged each round, which ignores the blocking rule (only the most‑advanced pirate can be hit). This under‑estimates the remaining HP th"
+  },
+  {
+    "timestamp": "2026-09-07T00:02:29+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary**  \nThe current `deficit` assumes *every* pirate in a column can be hit each remaining round, which ignores the blocking rule that only the most‑advanced pirate receives damage. This can make the policy "
   }
 ]
