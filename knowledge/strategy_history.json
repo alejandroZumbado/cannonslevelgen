@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-05T01:03:41+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.7404,
-    "summary": "**Idea:**  \nThe current champion only looks two rounds ahead and rewards kills that happen immediately, so it can miss a safe action that would certainly kill a pirate on the third round (the last shot a pirate gets).  \n"
-  },
-  {
     "timestamp": "2026-09-05T01:05:41+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary**  \nThe current `deficit` assumes *every* pirate in a column can be hit each remaining round, which ignores the blocking rule that only the most‑advanced pirate receives damage. This can make the policy "
+  },
+  {
+    "timestamp": "2026-09-07T00:03:29+00:00",
+    "promoted": false,
+    "win_rate": 0.8173,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change** – When every other evaluation component ties, the policy now prefers a **spawn** action rather than a move. The previous “move‑wins‑ties” discards the pending spawn cannon, which can leave the player without e"
   }
 ]
