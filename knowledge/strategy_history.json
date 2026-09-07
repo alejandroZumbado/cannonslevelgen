@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-05T05:50:28+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-05T05:52:18+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.7308,
     "summary": "**Change summary**  \nThe current `deficit` assumes every pirate in a column can be damaged each remaining round, which ignores the blocking rule. Consequently the policy sometimes selects actions that leave a pirate on p"
+  },
+  {
+    "timestamp": "2026-09-07T04:54:34+00:00",
+    "promoted": false,
+    "win_rate": 0.8173,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change summary:**  \nThe current champion always prefers a *move* over a *spawn* when all other evaluation criteria tie (`tie_pref = 0` for moves, `1` for spawns). In tight situations this discards the pending spawn can"
   }
 ]
