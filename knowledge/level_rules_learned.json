@@ -411,5 +411,12 @@
     "evidence": "level 'A0001' (2 pirates, 3 filas, max_hp=1, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-07",
+    "statement": "A high‑HP pirate that is directly behind a 1‑HP blocker in the same column can only be killed if the cannon’s damage after merges is at least ⌈HP_back / 2⌉, because the blocker consumes one of the three possible shots on that pirate. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 3 filas, max_hp=5, columns=[2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
