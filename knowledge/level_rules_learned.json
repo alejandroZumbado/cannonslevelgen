@@ -418,5 +418,12 @@
     "evidence": "level 'A0001' (2 pirates, 3 filas, max_hp=5, columns=[2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-07",
+    "statement": "Hypothesis:  \nA single pirate with HP ≤ 6 can be killed without any pre‑existing cannon damage by merging a fresh cannon onto its column in each of the three rounds it is alive (damage grows 1 → 2 → 3, delivering a total of 6 damage before the pirate would reach position 3). Consequently, an HP 6 pirate is winnable, while an HP 7 pirate would be unwinnable under the same conditions. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (1 pirates, 1 filas, max_hp=6, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
