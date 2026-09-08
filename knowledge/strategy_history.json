@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-05T16:51:49+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change summary**  \nThe current champion prefers a *move* over a *spawn* when every other evaluation component ties (`tie_pref = 0` for moves, `1` for spawns). When the tie occurs this discards the pending spawn cannon,"
-  },
-  {
     "timestamp": "2026-09-06T01:03:17+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.875,
     "summary": "**Change explanation**  \nThe original `deficit` assumes every pirate in a column can be hit each remaining round, ignoring the blocking rule that only the most‑advanced pirate receives damage. This can make the policy th"
+  },
+  {
+    "timestamp": "2026-09-08T05:03:02+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe current policy prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this discards the pend"
   }
 ]
