@@ -481,5 +481,12 @@
     "evidence": "level 'A0001' (1 pirates, 3 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-08",
+    "statement": "**Hypothesis:**  \nA cannon’s damage can be increased indefinitely by repeatedly merging new cannons onto the same empty column in successive rounds, and the total summed damage is correctly applied to any later‑spawning pirate in that column. => confirmed winnable by test level.",
+    "evidence": "level 'K0427' (1 pirates, 5 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
