@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-05T13:54:03+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe current policy prefers a *move* over a *spawn* when every other evaluation key ties (`tie_pref = 0` for moves, `1` for spawns).  When two actions are otherwise identical this discards the pending"
-  },
-  {
     "timestamp": "2026-09-05T16:51:49+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Explanation**  \nThe current `deficit` assumes every pirate in a column can be damaged each remaining round, ignoring the rule that only the *most‑advanced* pirate in a column is ever hit. This makes the policy think it"
+  },
+  {
+    "timestamp": "2026-09-08T04:59:12+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change explanation**  \nThe original `deficit` assumes every pirate in a column can be hit each remaining round, ignoring the blocking rule that only the most‑advanced pirate receives damage. This can make the policy th"
   }
 ]
