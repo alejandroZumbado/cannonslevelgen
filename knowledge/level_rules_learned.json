@@ -488,5 +488,12 @@
     "evidence": "level 'K0427' (1 pirates, 5 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-08",
+    "statement": "Hypothesis: A cannon that is already placed in a column will fire at a pirate that spawns in that same column during the same round (i.e., the shoot phase applies to newly spawned pirates immediately). => confirmed winnable by test level.",
+    "evidence": "level 'Z0001' (1 pirates, 2 filas, max_hp=3, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
