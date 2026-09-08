@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-06T01:03:17+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe original policy always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the move is to an empty column it merely relocates the"
-  },
-  {
     "timestamp": "2026-09-06T06:01:57+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change summary**  \nThe current policy prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this discards the pend"
+  },
+  {
+    "timestamp": "2026-09-08T05:05:12+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nWhen all other evaluation criteria are equal the policy currently prefers a *move* (discarding the pending spawn cannon) because `tie_pref` is 0 for moves and 1 for spawns. This can waste a fresh can"
   }
 ]
