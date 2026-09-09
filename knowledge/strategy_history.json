@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-06T11:08:23+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe champion always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns). When the move only relocates a cannon to an empty column it discards"
-  },
-  {
     "timestamp": "2026-09-07T00:00:48+00:00",
     "promoted": false,
     "win_rate": 0.8077,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.6346,
     "summary": "**Idea:**  \nThe current policy’s “deficit” estimate ignores the blocking rule and uses a two‑step look‑ahead that still favours discarding the pending spawn cannon.  \nI replace it with a *exact* forward simulation that, "
+  },
+  {
+    "timestamp": "2026-09-09T00:31:30+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary (2 sentences)**  \nThe new policy evaluates actions by looking two rounds ahead and *minimising the total remaining pirate HP* after those rounds, rather than using the previous “deficit” estimate. It als"
   }
 ]
