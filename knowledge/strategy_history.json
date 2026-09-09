@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-06T06:06:29+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.9038,
-    "summary": "**Change explanation**  \nThe champion always prefers a *move* over a *spawn* when all other evaluation criteria tie (`tie_pref = 0` for moves, `1` for spawns). When the move is just a relocation to an empty column it dis"
-  },
-  {
     "timestamp": "2026-09-06T11:05:53+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe original `deficit` treats every pirate in a column as if it could be hit every remaining round, ignoring the blocking rule. This under‑estimates the true damage that can be delivered and can let "
+  },
+  {
+    "timestamp": "2026-09-09T00:22:20+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
