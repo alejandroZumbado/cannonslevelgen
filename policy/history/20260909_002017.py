@@ -52,25 +52,13 @@ class Policy:
             return pir, loss
 
         def deficit(cann_map, pir_list):
-            """
-            Total HP that cannot be dealt before pirates reach position 3,
-            correctly accounting for the blocking rule (only the front pirate
-            can be hit each round). For each column we consider the sum of HP
-            of all pirates and the number of rounds left before the current
-            front pirate would reach the loss position.
-            """
+            """Total HP that cannot be dealt before pirates reach position 3."""
             total = 0
-            for col in range(NUM_COLUMNS):
-                col_pirates = [p for p in pir_list if p["column"] == col]
-                if not col_pirates:
-                    continue
-                # front pirate is the one with highest position
-                front = max(col_pirates, key=lambda p: p["position"])
-                steps = MAX_POSITION - front["position"]          # rounds before loss
-                dmg = cann_map.get(col, 0)
+            for p in pir_list:
+                steps = MAX_POSITION - p["position"]
+                dmg = cann_map.get(p["column"], 0)
                 possible = dmg * steps
-                hp_sum = sum(p["hp"] for p in col_pirates)
-                need = max(0, hp_sum - possible)
+                need = max(0, p["hp"] - possible)
                 total += need
             return total
 
