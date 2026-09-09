@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-06T11:05:53+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe original `deficit` treats every pirate in a column as if it could be hit every remaining round, ignoring the blocking rule that only the most‑advanced pirate can be damaged. This can make the pla"
-  },
-  {
     "timestamp": "2026-09-06T11:08:23+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-09T00:28:42+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.6346,
+    "summary": "**Idea:**  \nThe current policy’s “deficit” estimate ignores the blocking rule and uses a two‑step look‑ahead that still favours discarding the pending spawn cannon.  \nI replace it with a *exact* forward simulation that, "
   }
 ]
