@@ -537,5 +537,12 @@
     "evidence": "level 'A0001' (1 pirates, 4 filas, max_hp=1, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-09",
+    "statement": "**Hypothesis:**  \nIf a cannon is placed onto a column in the same round a pirate spawns in that column (i.e., after the pirate appears but before the shoot phase), the cannon fires at that pirate immediately, delivering the first of the pirate’s three possible shots. Consequently, a pirate with HP = 3 can be killed in that round + two subsequent rounds, making the level winnable only if this immediate‑fire behavior exists. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 1 filas, max_hp=3, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
