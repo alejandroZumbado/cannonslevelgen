@@ -1,1 +1,6 @@
-{}
+{
+  "groq": {
+    "resume_at": "2026-09-09T00:45:52+00:00",
+    "detail": "{\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kw551zdreqx97b2kfe94txjm` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 193387, Requested 7489. Please try again in 6m18.432s. Need more tokens? Upgrade to Dev Tier today at https://"
+  }
+}
