@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-07T00:00:48+00:00",
-    "promoted": false,
-    "win_rate": 0.8077,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary**  \nThe original `deficit` assumes every pirate in a column can be damaged each round, which ignores the blocking rule (only the most‑advanced pirate can be hit). This under‑estimates the remaining HP th"
-  },
-  {
     "timestamp": "2026-09-07T00:02:29+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary (2 sentences)**  \nThe new policy evaluates actions by looking two rounds ahead and *minimising the total remaining pirate HP* after those rounds, rather than using the previous “deficit” estimate. It als"
+  },
+  {
+    "timestamp": "2026-09-09T00:38:23+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary** – The policy always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns).  \nWhen the two actions are otherwise identical this discards the pendi"
   }
 ]
