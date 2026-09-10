@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-07T00:03:29+00:00",
-    "promoted": false,
-    "win_rate": 0.8173,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change** – When every other evaluation component ties, the policy now prefers a **spawn** action rather than a move. The previous “move‑wins‑ties” discards the pending spawn cannon, which can leave the player without e"
-  },
-  {
     "timestamp": "2026-09-07T00:05:35+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-10T00:20:44+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nThe champion policy prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns). This discards the pending fresh cannon even though keeping it is usu"
   }
 ]
