@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-07T00:06:31+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary** – The original `deficit` assumes *every* pirate in a column can be hit each remaining round, ignoring the blocking rule that only the most‑advanced pirate receives damage. This can make the policy thin"
-  },
-  {
     "timestamp": "2026-09-07T00:09:03+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-10T00:29:36+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.5673,
+    "summary": "**Change explanation**  \nThe current champion policy evaluates actions first by the projected *deficit* (remaining HP after two rounds) and only afterwards checks whether the action kills a pirate that is already on the "
   }
 ]
