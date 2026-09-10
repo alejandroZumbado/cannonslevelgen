@@ -154,16 +154,12 @@ def run_cycle() -> dict:
 
     streak = strategy_history.consecutive_rejections()
     refine_mode = streak >= _REFINE_MODE_STREAK_THRESHOLD
-    # n=4 -> 10 on 2026-09-01: knowledge/strategy_history.json (20-entry rolling
-    # window) shows the same 2-3 ideas ("prefer move over spawn on ties",
-    # "extend second-round lookahead to include moves") getting rejected over
-    # and over across the full window (7/20 and 9/20 hits respectively) - the
-    # old n=4 view was too narrow to stop them resurfacing a few cycles later,
-    # wasting real Groq budget re-testing already-dead ideas. Measured locally:
-    # n=10 adds ~850 chars (~210 tokens) to the prompt, landing total request
-    # tokens at ~6680 - still inside the zone this caller already runs safely
-    # in today (~6470 at n=4), well under the known 413 threshold (~8450).
-    recent_attempts = strategy_history.recent_attempts_block(10)
+    # n=4 -> 10 on 2026-09-01, then 10 -> 6 on 2026-09-10 (see max_tokens
+    # comment below for why): n=6 still comfortably beats the old n=4's
+    # "too narrow" problem from 09-01 (it was missing repeated ideas that
+    # only resurfaced every 5-9 cycles) while giving back ~270 tokens of
+    # prompt the 413 regression needed.
+    recent_attempts = strategy_history.recent_attempts_block(6)
 
     system, user = _build_prompt(current_source, current_score, rng_seed=datetime.now().microsecond,
                                   refine_mode=refine_mode, recent_attempts=recent_attempts)
@@ -185,9 +181,25 @@ def run_cycle() -> dict:
     # level_designer's old truncated-JSON bug, just manifesting here now).
     # 3400 puts the worst-case total at ~8220, still ~230 tokens under the
     # measured 413 ceiling (~8450) — a real but deliberately thin margin since
-    # the prompt keeps growing over time. If 413s reappear for this caller,
-    # the fix is trimming the prompt (e.g. the recent-attempts window), not
-    # pushing max_tokens further — this margin has no more room to give.
+    # the prompt keeps growing over time.
+    #
+    # Regression 2026-09-06 to 2026-09-10: exactly what the note above warned
+    # about happened, but from an angle not tracked here — not knowledge/
+    # recent-attempts growth, but current_source itself (the champion policy
+    # strategy_learner keeps rewriting) growing from ~6.9KB (09-04) to ~8.6KB
+    # via ordinary promotions, adding ~400 tokens on its own. Combined with
+    # the already-thin margin, this caused 61 straight 413 Payload Too Large
+    # crashes (confirmed in state/error_events.jsonl, 2026-09-06T01:05 through
+    # 2026-09-10T00:35) — every single cycle in that window, invisible in
+    # `gh run list` since the workflow itself still exits 0 around the
+    # exception. Per the note above, fixed by trimming the prompt rather than
+    # max_tokens (still 3400, still >= the documented empty-response floor):
+    # recent_attempts window 10 -> 6 (see above) and knowledge._MAX_RULES_IN_PROMPT
+    # 8 -> 5 (see knowledge.py) together bring worst-case total to ~8078,
+    # ~372 tokens under the ceiling — more headroom than the original 230,
+    # since current_source has no upper bound and will keep growing as the
+    # policy keeps improving. If 413s reappear, re-measure current_source's
+    # size first before touching these caps again.
     completion = client.complete(system, user, max_tokens=3400)
     response = completion.text
 

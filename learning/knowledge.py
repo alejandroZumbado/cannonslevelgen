@@ -38,7 +38,7 @@ def all_rules() -> list[dict]:
     return _load_rules()
 
 
-_MAX_RULES_IN_PROMPT = 8  # trailing window for PROMPT INJECTION ONLY. The JSON
+_MAX_RULES_IN_PROMPT = 5  # trailing window for PROMPT INJECTION ONLY. The JSON
 # file keeps every rule ever confirmed forever (add_rule/all_rules are untouched) —
 # this cap just bounds what gets sent to the LLM each cycle. Added 2026-08-25 after
 # rules_as_prompt_block() growing unbounded (26 rules, ~8.9k chars, plus ~6k chars of
@@ -52,6 +52,14 @@ _MAX_RULES_IN_PROMPT = 8  # trailing window for PROMPT INJECTION ONLY. The JSON
 # strategy_learner entries in audit/2026-08-27.jsonl / 2026-08-28.jsonl), so the
 # 15-rule cap alone wasn't enough margin once a second component grew. Paired with
 # the max_tokens cut in strategy_learner.py — see that file for the token budget.
+#
+# Lowered 8 -> 5 on 2026-09-10: this cap alone was never the problem this time
+# (rules shown is fixed at 8 regardless of the 84 rules now on disk) — the
+# champion policy strategy_learner.py injects grew ~400 tokens via normal
+# promotions since 09-05, blowing the margin the 3400 max_tokens fix relied
+# on and causing 61 straight 413s (see strategy_learner.py for the incident).
+# Cut here too, alongside the recent-attempts window there, since neither
+# alone gave back enough room.
 
 
 def rules_as_prompt_block() -> str:
