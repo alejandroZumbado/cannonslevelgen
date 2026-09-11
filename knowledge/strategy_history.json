@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-08T04:52:09+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary:**  \nThe champion always prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns). A move discards the pending spawn cannon for that round, which can "
-  },
-  {
     "timestamp": "2026-09-08T04:54:50+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-11T00:16:49+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.5577,
+    "summary": "**Change summary**  \nThe current champion tries to minimise the *second‑round deficit* before rewarding actions that kill a pirate already on the loss border (position 2). In levels where an immediate lethal shot is esse"
   }
 ]
