@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-08T04:54:50+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.9038,
-    "summary": "**Change summary** – The original `deficit` summed the unmet‑damage need of *every* pirate, assuming each cannon could hit each pirate for the remaining steps. Because only the **front** pirate in a column can be damaged"
-  },
-  {
     "timestamp": "2026-09-08T04:56:40+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.5577,
     "summary": "**Change summary**  \nThe current champion tries to minimise the *second‑round deficit* before rewarding actions that kill a pirate already on the loss border (position 2). In levels where an immediate lethal shot is esse"
+  },
+  {
+    "timestamp": "2026-09-11T00:18:55+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change summary**  \nThe current champion still prefers actions that give the smallest *second‑round deficit* even when an action would instantly kill a pirate that is already on the loss‑border (position 2). In levels w"
   }
 ]
