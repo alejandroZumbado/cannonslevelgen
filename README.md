@@ -97,18 +97,42 @@ about the budget state in its own worktree until the next push/pull.
 ## Layout
 
 ```
-.github/workflows/learning.yml   cron (every 15 min) + manual trigger, runs on GitHub's own VMs
+.github/workflows/learning.yml            cron (every 15 min) + manual trigger, runs on GitHub's own VMs
+.github/workflows/weekly_level_audit.yml  cron (weekly) — plays the real 500 Cannons levels, no LLM calls
 git_sync.py     commits+pushes runtime state back to this repo at the end of every cycle
 sim/            headless game engine — level schema, round simulation, benchmark suites, scoring
 policy/         current.py = active strategy (AI-rewritten), baseline.py = fixed v0 reference, history/ = every past version
 llm/            Groq/Anthropic REST client + persisted daily token budget
 learning/       the two month-1 loops + the knowledge base they write to
 production/     month-2+ daily level generator
+verification/   weekly audit of the real 500-level campaign — see below
 knowledge/      level_rules_learned.json — accumulated, AI-discovered design rules
 learning_log/   one markdown file per day — human-readable progress log
 audit/          one JSONL file per day — full per-call audit trail (exact tokens, full prompt/response, outcome) + report.py to read it
+reports/        level_audit/ — one dated JSON per weekly run + latest.json, see below
 state/          budget.json (daily token counter) — not meant to be read directly
 ```
+
+## Weekly level audit (`verification/`)
+
+Separate from everything above — no LLM calls, pure simulation, so it costs
+nothing against the daily token budget. Once a week
+(`.github/workflows/weekly_level_audit.yml`), plays all 500 REAL shipped
+Cannons levels (not the synthetic benchmark suites used to score policy
+candidates during learning) with two independent signals:
+
+- the current champion policy (`policy/current.py`) exactly as trained, and
+- an independent wide beam search over the real rules (`verification/solver.py`),
+  run only on levels the champion loses, to tell apart "the AI isn't good
+  enough here yet" from "this level might actually be broken".
+
+Writes `reports/level_audit/<date>.json` + `latest.json`, comparing against
+the previous run so you can see whether real-campaign coverage is
+improving, plateaued, or regressing over time — independent of whatever the
+benchmark win_rate in `knowledge/strategy_history.json` says. Run manually
+with `python -m verification.level_audit` (needs `CANNONS_REPO_PATH` set to
+a checkout of `alejandroZumbado/cannons`, same convention as the rest of
+this project).
 
 ## A note on trust
 

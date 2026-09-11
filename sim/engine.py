@@ -59,6 +59,14 @@ class GameEngine:
         self.game_ended = False
         self.won = False
         self.rounds_played = 0
+        # Observational only — never read by any decision in this class, so
+        # it can't change game behavior. Added 2026-09-10 for the level-audit
+        # report (verification/level_audit.py) to score how CLOSE a run came
+        # to losing even when it ultimately won, which a win's empty
+        # `self.pirates` at the end can't tell you on its own (a loss already
+        # shows it directly: the pirate that broke through is still in
+        # `self.pirates` at position >= LOSS_POSITION when game_ended flips).
+        self.max_position_reached = 0
         self._next_round()  # mirrors GameManager.Start(): nextRound() then GameFlow1()
 
     # ---- pirate side ---------------------------------------------------
@@ -67,6 +75,7 @@ class GameEngine:
         for pirate in self.pirates:
             if self.game_ended:
                 return
+            self.max_position_reached = max(self.max_position_reached, pirate.position + 1)
             pirate.position += 1
             if pirate.position >= LOSS_POSITION:
                 self.game_ended = True

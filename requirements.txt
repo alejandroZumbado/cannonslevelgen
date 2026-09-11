@@ -1,1 +1,2 @@
 requests>=2.31
+pyyaml>=6.0  # verification/official_levels.py: parses the real Unity Level .asset YAML files

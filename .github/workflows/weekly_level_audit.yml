@@ -1,0 +1,73 @@
+name: CannonsLevelGen Weekly Level Audit
+
+# Plays all 500 REAL shipped Cannons levels (Assets/Levels/*.asset in the
+# `cannons` repo) with the current champion policy + an independent wide
+# beam search (verification/level_audit.py), and commits a dated report to
+# reports/level_audit/ so week over week we can see whether the AI's actual
+# coverage of the real campaign is improving, plateaued, or regressing —
+# separate from win_rate against the synthetic benchmark suites used during
+# learning (sim/benchmark.py), which this audit never touches.
+#
+# Read-only against `cannons` (only clones it to read Assets/Levels/*.asset)
+# — never pushes there, unlike daily_production.yml. Public repo, so the
+# default GITHUB_TOKEN is enough for checkout, no CANNONS_PUSH_TOKEN needed.
+#
+# Runs weekly on purpose, not daily: the champion policy only changes when
+# strategy_learner promotes a new one (irregular, sometimes days apart — see
+# knowledge/strategy_history.json), so a daily run would mostly just repeat
+# last time's numbers at real compute cost for no new signal.
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # every Monday 08:00 UTC
+  workflow_dispatch:
+    # manual "Run workflow" button in the Actions tab, for testing / on-demand runs
+
+permissions:
+  contents: write   # needed for git_sync.py to push the new report back
+
+concurrency:
+  group: cannonslevelgen-learning-cycle
+  # Same group as learning.yml/daily_production.yml ON PURPOSE — all three
+  # read/write files in this repo (this one writes reports/, the others
+  # write policy/knowledge/state); queuing avoids the same push-race
+  # daily_production.yml's comment already documents for budget.json.
+  cancel-in-progress: false
+
+jobs:
+  weekly-level-audit:
+    runs-on: ubuntu-latest
+    # Public repos get unlimited GitHub-hosted runner minutes, and the whole
+    # point of this job is "prefer thorough/slow over fast" (explicit ask) —
+    # generous ceiling, not because a normal run needs anywhere near it (see
+    # verification/level_audit.py's run notes for real measured timing).
+    timeout-minutes: 330
+
+    steps:
+      - name: Checkout CannonsLevelGen (this repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons (read-only, just for Assets/Levels/*.asset)
+        uses: actions/checkout@v4
+        with:
+          repository: alejandroZumbado/cannons
+          fetch-depth: 1
+          path: cannons_checkout
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the 500-level audit and push the report
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          CI: true
+          PYTHONUNBUFFERED: "1"
+        run: python -m verification.level_audit
