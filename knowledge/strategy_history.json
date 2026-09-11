@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-10T00:18:50+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-10T00:20:44+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.9135,
     "candidate_win_rate": 0.8846,
     "summary": "**Idea** – The current champion tries to minimise the *second‑round* deficit before it ever cares about killing a pirate that is already on the loss‑border (position 2). In many tight levels the game is lost the moment a"
+  },
+  {
+    "timestamp": "2026-09-11T00:32:59+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.0,
+    "summary": "**Idea** – Instead of only looking two rounds ahead and ranking actions by a static deficit, this policy *simulates the whole rest of the game* for each possible first move using a deterministic “greedy‑merge” planner. T"
   }
 ]
