@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-08T05:05:12+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nWhen all other evaluation criteria are equal the policy currently prefers a *move* (discarding the pending spawn cannon) because `tie_pref` is 0 for moves and 1 for spawns. This can waste a fresh can"
-  },
-  {
     "timestamp": "2026-09-09T00:20:17+00:00",
     "promoted": true,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8173,
     "candidate_win_rate": 0.6538,
     "summary": "**Change summary** – The current champion minimizes *second‑round deficit* before it ever rewards an instant lethal shot on a pirate that is already on the loss‑border (position 2). In tight situations this makes the pol"
+  },
+  {
+    "timestamp": "2026-09-11T00:24:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.5962,
+    "summary": "**Change summary** – The current champion tries to minimise the *second‑round deficit* before it ever rewards an instant lethal shot on a pirate that is already on the loss‑border (position 2). In tight situations this c"
   }
 ]
