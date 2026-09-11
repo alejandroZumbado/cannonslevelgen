@@ -139,13 +139,24 @@ def audit_level(level: Level, champion, widths: tuple[int, ...], max_rounds: int
     return report
 
 
-def run_audit(widths: tuple[int, ...] = ESCALATION_BEAM_WIDTHS, max_rounds: int = DEFAULT_MAX_ROUNDS) -> dict:
+def run_audit(
+    widths: tuple[int, ...] = ESCALATION_BEAM_WIDTHS,
+    max_rounds: int = DEFAULT_MAX_ROUNDS,
+    policy=None,
+    policy_source_chars: int | None = None,
+) -> dict:
+    """policy/policy_source_chars let a caller substitute a different policy
+    (e.g. policy/baseline.py's pre-learning v0, see verification/baseline_vs_champion.py)
+    instead of the trained champion — everything else about the audit (level
+    set, solver, classification, scoring) stays identical, so the two runs
+    are a fair before/after comparison."""
     levels = load_all(CANNONS_LEVELS_DIR)
-    champion = load_policy_from_file(config.ROOT / "policy" / "current.py")
-    champion_source = (config.ROOT / "policy" / "current.py").read_text(encoding="utf-8")
+    if policy is None:
+        policy = load_policy_from_file(config.ROOT / "policy" / "current.py")
+        policy_source_chars = len((config.ROOT / "policy" / "current.py").read_text(encoding="utf-8"))
 
     t0 = time.time()
-    reports = [audit_level(level, champion, widths, max_rounds) for level in levels]
+    reports = [audit_level(level, policy, widths, max_rounds) for level in levels]
     elapsed = time.time() - t0
 
     counts = {"champion_win": 0, "solved_by_search_only": 0, "no_win_found": 0}
@@ -154,8 +165,8 @@ def run_audit(widths: tuple[int, ...] = ESCALATION_BEAM_WIDTHS, max_rounds: int 
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "policy_name": getattr(champion, "name", "unknown"),
-        "policy_source_chars": len(champion_source),
+        "policy_name": getattr(policy, "name", "unknown"),
+        "policy_source_chars": policy_source_chars,
         "escalation_beam_widths": list(widths),
         "max_rounds": max_rounds,
         "total_levels": len(levels),
