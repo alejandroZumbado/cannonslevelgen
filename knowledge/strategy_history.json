@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-09T00:31:30+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary (2 sentences)**  \nThe new policy evaluates actions by looking two rounds ahead and *minimising the total remaining pirate HP* after those rounds, rather than using the previous “deficit” estimate. It als"
-  },
-  {
     "timestamp": "2026-09-09T00:38:23+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary** – The current champion first tries to minimise the *first‑round* deficit before rewarding an action that guarantees a kill on the next round (`kill_next`).  \nIn tight situations a pirate on position 2 "
+  },
+  {
+    "timestamp": "2026-09-11T00:30:11+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
