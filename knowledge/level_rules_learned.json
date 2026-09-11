@@ -621,5 +621,12 @@
     "evidence": "level 'A0001' (1 pirates, 5 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-11",
+    "statement": "Hypothesis: A single cannon can be moved to a different column each round and still fire in that same round, so it can sequentially eliminate multiple pirates that appear in different columns without any merges, provided each pirate’s HP is ≤ 2 (since each pirate receives exactly three shots before reaching position 3). => confirmed winnable by test level.",
+    "evidence": "level 'B1234' (2 pirates, 2 filas, max_hp=2, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

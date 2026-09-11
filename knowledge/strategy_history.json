@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-09T00:28:42+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.6346,
-    "summary": "**Idea:**  \nThe current policy’s “deficit” estimate ignores the blocking rule and uses a two‑step look‑ahead that still favours discarding the pending spawn cannon.  \nI replace it with a *exact* forward simulation that, "
-  },
-  {
     "timestamp": "2026-09-09T00:31:30+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.625,
     "summary": "**Change summary** – The current champion always tries to minimise the *second‑round deficit* before it ever rewards an instant lethal shot on a pirate that is already on the loss‑border (position 2).  In tight situation"
+  },
+  {
+    "timestamp": "2026-09-11T00:28:00+00:00",
+    "promoted": true,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary** – The current champion first tries to minimise the *first‑round* deficit before rewarding an action that guarantees a kill on the next round (`kill_next`).  \nIn tight situations a pirate on position 2 "
   }
 ]

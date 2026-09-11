@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill_better"
+    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -166,13 +166,14 @@ class Policy:
             # Prefer moves over spawns when everything else ties
             tie_pref = 0 if act[0] == "move" else 1
 
-            # NEW ordering: reward guaranteed next‑round kills earlier than first‑round deficit
+            # New ordering: prioritize lethal/any kills before raw damage,
+            # and now also reward guaranteed kills next round.
             key = (
                 second_deficit,          # lower is better
-                -kill_next,              # higher kill‑next is better (moved up)
                 first_def,               # lower is better
                 -kill_lethal,            # higher kill‑lethal is better
                 -kill_any,               # higher kill‑any is better
+                -kill_next,              # higher kill‑next is better
                 -total_damage,           # higher total damage is better
                 tie_pref,                # prefer move
                 act,                     # deterministic tie‑breaker
