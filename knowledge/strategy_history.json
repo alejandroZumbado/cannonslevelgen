@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-08T04:48:35+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-08T04:52:09+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.7788,
     "summary": "**Change summary** – The champion policy tries to minimise the *second‑round deficit* before it rewards killing a pirate that is already on the loss‑border (position 2).  In levels where a pirate is at position 2 with lo"
+  },
+  {
+    "timestamp": "2026-09-11T00:15:45+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
