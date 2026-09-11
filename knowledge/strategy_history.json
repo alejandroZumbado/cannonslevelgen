@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-10T00:20:44+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe champion policy prefers a *move* over a *spawn* when all other evaluation keys tie (`tie_pref = 0` for moves, `1` for spawns). This discards the pending fresh cannon even though keeping it is usu"
-  },
-  {
     "timestamp": "2026-09-10T00:24:42+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.0,
     "summary": "**Idea** – Instead of only looking two rounds ahead and ranking actions by a static deficit, this policy *simulates the whole rest of the game* for each possible first move using a deterministic “greedy‑merge” planner. T"
+  },
+  {
+    "timestamp": "2026-09-11T00:33:58+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe current champion always minimises the *second‑round deficit* before it ever rewards killing a pirate that is already on the loss‑border (position 2). In tight levels this can let a pirate that wi"
   }
 ]
