@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-09T00:20:17+00:00",
-    "promoted": true,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary**  \nThe original `deficit` treats every pirate in a column as if it could be hit every remaining round, ignoring the blocking rule. This under‑estimates the true damage that can be delivered and can let "
-  },
-  {
     "timestamp": "2026-09-09T00:22:20+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.5962,
     "summary": "**Change summary** – The current champion tries to minimise the *second‑round deficit* before it ever rewards an instant lethal shot on a pirate that is already on the loss‑border (position 2). In tight situations this c"
+  },
+  {
+    "timestamp": "2026-09-11T00:25:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8173,
+    "candidate_win_rate": 0.7596,
+    "summary": "**Change summary**  \nThe current champion first tries to minimise the *second‑round deficit* before it ever rewards an instant lethal shot on a pirate that is already on the loss‑border (position 2). In tight situations "
   }
 ]
