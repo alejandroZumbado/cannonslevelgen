@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-07T10:27:42+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary** – The current `deficit` assumes *every* pirate in a column can be damaged each remaining round, ignoring the rule that only the most‑advanced pirate can be hit. This under‑estimates the true damage sho"
-  },
-  {
     "timestamp": "2026-09-08T04:48:35+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.6538,
     "summary": "**Change summary**  \nThe current champion first tries to minimise the *second‑round deficit* and only afterwards rewards actions that kill a pirate that is already on the loss‑border (position 2). In levels where a pirat"
+  },
+  {
+    "timestamp": "2026-09-11T00:14:23+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.7788,
+    "summary": "**Change summary** – The champion policy tries to minimise the *second‑round deficit* before it rewards killing a pirate that is already on the loss‑border (position 2).  In levels where a pirate is at position 2 with lo"
   }
 ]
