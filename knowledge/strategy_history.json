@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-10T00:31:39+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.5865,
-    "summary": "**Change summary**  \nThe current champion ranks actions first by the *second‑round deficit* and only later rewards killing a pirate that is already on the loss‑border (position 2). This can make the policy skip an obviou"
-  },
-  {
     "timestamp": "2026-09-10T00:32:47+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.75,
     "summary": "**Change summary**  \nThe current champion sometimes ignores an imminent loss: when a pirate is already on the loss‑border (position 2) it may pick an action that does **not** kill that pirate because the key is dominated"
+  },
+  {
+    "timestamp": "2026-09-12T00:25:17+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change explanation**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) and could be killed instantly, but the policy prefers an action that gives a slightly lower *second‑round def"
   }
 ]
