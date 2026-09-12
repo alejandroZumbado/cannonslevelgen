@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:19:47+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary**  \nThe current champion minimizes *second‑round deficit* before rewarding an instant lethal shot on a pirate that is already on the loss‑border (position 2). When a move or spawn can kill that pirate im"
-  },
-  {
     "timestamp": "2026-09-11T00:21:36+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary**  \nThe champion sometimes lets a pirate on the loss‑border (position 2) survive because it ranks actions by *second‑round deficit* before it ever rewards an instant lethal shot on that pirate. I moved t"
+  },
+  {
+    "timestamp": "2026-09-12T00:35:00+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Change summary**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because it ranks actions by *second‑round deficit* before it ever rewards an instant lethal hit on that pi"
   }
 ]
