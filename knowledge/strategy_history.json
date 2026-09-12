@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-10T00:32:47+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-10T00:36:48+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8173,
     "summary": "**Change explanation**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) and could be killed instantly, but the policy prefers an action that gives a slightly lower *second‑round def"
+  },
+  {
+    "timestamp": "2026-09-12T00:26:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change summary**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) because it prefers a slightly lower *second‑round deficit* over an instant lethal shot.  \nI moved the *kill‑letha"
   }
 ]
