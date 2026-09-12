@@ -677,5 +677,12 @@
     "evidence": "level 'B1234' (2 pirates, 4 filas, max_hp=6, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-12",
+    "statement": "**Hypothesis:**  \nA cannon retains all damage it has accumulated from previous merges after it kills a pirate; its damage does **not** reset to the base‑damage 1 between waves. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 5 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

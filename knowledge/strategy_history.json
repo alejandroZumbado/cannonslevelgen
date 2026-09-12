@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:21:36+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.625,
-    "summary": "**Change summary**  \nThe champion policy always tries to minimise the *second‑round deficit* before it rewards an instant lethal shot on a pirate that is already on the loss border (position 2). In tight situations this "
-  },
-  {
     "timestamp": "2026-09-11T00:22:31+00:00",
     "promoted": false,
     "win_rate": 0.8173,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because it ranks actions by *second‑round deficit* before it ever rewards an instant lethal hit on that pi"
+  },
+  {
+    "timestamp": "2026-09-12T00:37:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
