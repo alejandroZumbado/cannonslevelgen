@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:14:23+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.7788,
-    "summary": "**Change summary** – The champion policy tries to minimise the *second‑round deficit* before it rewards killing a pirate that is already on the loss‑border (position 2).  In levels where a pirate is at position 2 with lo"
-  },
-  {
     "timestamp": "2026-09-11T00:15:45+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8173,
     "summary": "**Change explanation**  \nThe current champion orders actions by *second‑round deficit* before it ever rewards an **instant lethal shot on a pirate that is already on the loss‑border (position 2)**. In tight levels this l"
+  },
+  {
+    "timestamp": "2026-09-12T00:28:41+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.7788,
+    "summary": "**Change summary** – The current champion always minimises *second‑round deficit* before it ever rewards an instant lethal shot on a pirate that is already on the loss‑border (position 2). This can let the policy pick a "
   }
 ]
