@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:18:55+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary**  \nThe current champion still prefers actions that give the smallest *second‑round deficit* even when an action would instantly kill a pirate that is already on the loss‑border (position 2). In levels w"
-  },
-  {
     "timestamp": "2026-09-11T00:19:47+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8173,
     "summary": "**Change explanation**  \nThe current champion ranks actions by *second‑round deficit* before it ever rewards an instant lethal hit on a pirate that is already on the loss‑border (position 2). This lets it pick a “safer‑l"
+  },
+  {
+    "timestamp": "2026-09-12T00:34:07+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe champion sometimes lets a pirate on the loss‑border (position 2) survive because it ranks actions by *second‑round deficit* before it ever rewards an instant lethal shot on that pirate. I moved t"
   }
 ]
