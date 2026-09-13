@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:30:11+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-11T00:30:45+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary**  \nThe champion ranks *second‑round deficit* before the *kill‑lethal* flag, so when a pirate is already on the loss border (position 2) it may choose an action that leaves it alive if that action looks "
+  },
+  {
+    "timestamp": "2026-09-13T00:06:47+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change explanation**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because the *kill‑lethal* flag is evaluated **after** the *second‑round deficit* in the ordering key. "
   }
 ]
