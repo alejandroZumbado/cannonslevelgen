@@ -719,5 +719,12 @@
     "evidence": "level 'A0001' (1 pirates, 8 filas, max_hp=14, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 8 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-13",
+    "statement": "**Hypothesis:** Moving a cannon onto a column that currently contains a pirate (and no other cannon) causes that cannon to fire at the pirate in the same round’s shoot phase. If this is true, a pirate that would otherwise survive because it only receives two hits can be killed by moving a cannon onto its column in the second round. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 1 filas, max_hp=3, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
