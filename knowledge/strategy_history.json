@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-12T00:26:03+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) because it prefers a slightly lower *second‑round deficit* over an instant lethal shot.  \nI moved the *kill‑letha"
-  },
-  {
     "timestamp": "2026-09-12T00:27:54+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) and could be killed immediately, because the decision logic gives higher priority to the *second‑round deficit* t"
+  },
+  {
+    "timestamp": "2026-09-13T00:18:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary** – The current champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because *kill‑lethal* is evaluated **after** the two‑round deficit. By moving the `kill_lethal` fl"
   }
 ]
