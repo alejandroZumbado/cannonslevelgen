@@ -71,6 +71,21 @@ class Level:
         values = [c.hp for fila in self.filas for c in fila.cuadros if c.tipo >= 1]
         return max(values) if values else 0
 
+    def shape_signature(self) -> str:
+        """Stable hash of the level's actual challenge — fila-by-fila
+        (index, hp) layout — ignoring levelNumber/password/isHard and tipo
+        (tipo is cosmetic skin variety only, see Cuadro's docstring), so a
+        level that's just a reskin of an existing one is still recognized as
+        a duplicate. Used by production/level_registry.py to reject
+        freshly-generated levels that already exist, without spending an
+        extra LLM call to check."""
+        import hashlib
+        rows = tuple(
+            tuple(sorted((c.index, c.hp) for c in fila.cuadros if c.tipo >= 1))
+            for fila in self.filas
+        )
+        return hashlib.sha256(repr(rows).encode("utf-8")).hexdigest()
+
 
 def pad_leading(level: Level, n: int) -> Level:
     """Copy of `level` with `n` empty filas inserted before the first one —

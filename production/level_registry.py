@@ -57,6 +57,36 @@ def next_level_number(cannons_repo_path: Path) -> int:
     return max_number + 1
 
 
+def scan_existing_signatures(cannons_repo_path: Path) -> set[str]:
+    """Shape signatures (Level.shape_signature) of every level already in the
+    game — the 500 real shipped Assets/Levels/*.asset plus anything already
+    generated in GeneratedLevels/incoming|processed — so daily_generator can
+    reject a freshly-generated level that's just a reskin of one that
+    already exists. Pure local hashing, no simulation and no extra LLM call."""
+    from sim.level import Level
+    from verification.official_levels import load_all
+
+    signatures: set[str] = set()
+
+    assets_dir = cannons_repo_path / "Assets" / "Levels"
+    if assets_dir.exists():
+        for level in load_all(assets_dir):
+            signatures.add(level.shape_signature())
+
+    for sub in ("incoming", "processed"):
+        gen_dir = cannons_repo_path / "GeneratedLevels" / sub
+        if not gen_dir.exists():
+            continue
+        for json_file in gen_dir.glob("*.json"):
+            try:
+                level = Level.load(json_file)
+            except (ValueError, KeyError):
+                continue
+            signatures.add(level.shape_signature())
+
+    return signatures
+
+
 def ensure_unique_password(password: str, used: set[str], rng=None) -> str:
     """Returns `password` unchanged if it's not already used, otherwise a
     freshly generated one in the same format (1 uppercase letter + 4 digits)

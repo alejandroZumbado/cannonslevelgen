@@ -4,17 +4,22 @@ name: CannonsLevelGen Daily Production
 # straight into alejandroZumbado/cannons (GeneratedLevels/incoming/), fully cloud-side
 # — checks out BOTH repos on a disposable runner, no local machine involved.
 #
-# The `schedule` trigger is commented out ON PURPOSE. This pushes content
-# into your actual game repo, which is a more consequential action than the
-# learning workflow (which only ever touches its own repo) — so it stays
-# manual (workflow_dispatch) until you've decided month 1's learned policy is
-# good enough to trust unattended. To go live: uncomment the schedule block
-# below and push.
-#
-# on:
-#   schedule:
-#     - cron: '0 6 * * *'   # once daily, 6am UTC — pick any time you like
+# Went live 2026-09-13 (explicit user request). Guardrails already in place
+# before this went on a schedule: the CHAMPION_WIN_RATE_THRESHOLD gate in
+# daily_generator.py still refuses to generate anything if the champion
+# policy ever drops below 85% on the training benchmark; every candidate is
+# rejected/retried (no extra LLM cost) if it duplicates the shape of a level
+# that already exists (production/level_registry.scan_existing_signatures,
+# see Level.shape_signature — tipo/skin doesn't count, only the actual
+# layout); and every level that does get generated is difficulty-checked
+# against BOTH the champion and the untrained baseline policy
+# (verification/level_audit.audit_level) before being pushed, so this one
+# run is "generate + push + validate difficulty", no separate workflow
+# needed. Import into Unity (GeneratedLevels/incoming/ -> Assets/Levels/)
+# stays a manual human step regardless — see Cannons/CLAUDE.md.
 on:
+  schedule:
+    - cron: '0 6 * * *'   # once daily, 6am UTC
   workflow_dispatch:
 
 permissions:

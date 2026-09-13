@@ -1,14 +1,14 @@
 """Month-2+ entry point: one level per day, cheap. Uses the policy and rules
 learned during month 1 instead of spending a full day's tokens per level.
-Not wired into a scheduler yet on purpose — run manually (or schedule)
-once you've decided the learning phase has produced a policy you trust.
+Scheduled daily since 2026-09-13 (see daily_production.yml) now that the
+learning phase has produced a policy trusted to run unattended.
 """
 from __future__ import annotations
 
 import json
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -21,11 +21,14 @@ from learning import knowledge
 from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from production.cannons_sync import push_generated_level
-from production.level_registry import scan_existing_levels, ensure_unique_password
+from production.level_registry import scan_existing_levels, scan_existing_signatures, ensure_unique_password
 from sim.benchmark import fixed_suite, random_suite
 from sim.engine import run_level
 from sim.evaluate import evaluate
 from sim.level import Level
+from policy.baseline import BaselinePolicy
+from verification.level_audit import audit_level
+from verification.solver import ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
 MAX_ATTEMPTS = 5
@@ -83,7 +86,7 @@ def _extract_json(text: str) -> dict | None:
         return None
 
 
-def generate_one_level(level_number: int, used_passwords: set[str]) -> Level | None:
+def generate_one_level(level_number: int, used_passwords: set[str], existing_signatures: set[str]) -> Level | None:
     """Returns None if every attempt was tried and none beat the learned
     policy — a real, expected outcome (see main()), NOT the same thing as
     PolicyLoadError below, which callers should treat as an actual failure
@@ -95,7 +98,9 @@ def generate_one_level(level_number: int, used_passwords: set[str]) -> Level | N
     the REAL Assets/Levels/ contents — don't trust the LLM's own levelNumber
     field (it has no reliable way to know what's already there, and got this
     badly wrong for real on the first cloud run: see level_registry.py's
-    docstring)."""
+    docstring). `existing_signatures` (also from level_registry.py) is the
+    set of shape hashes for every level that already exists — rejecting a
+    match is a pure local check (no LLM call), same cost as any other retry."""
     policy = load_policy_from_file(CURRENT_POLICY_PATH)  # raises PolicyLoadError - let it propagate
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
@@ -114,6 +119,13 @@ def generate_one_level(level_number: int, used_passwords: set[str]) -> Level | N
             print(f"  attempt {attempt}: schema error {e}, retrying")
             audit.record_call(caller="daily_generator", completion=completion, system=system, user=user,
                                outcome={"accepted": False, "reason": f"schema_error: {e}", "attempt": attempt})
+            continue
+
+        signature = level.shape_signature()
+        if signature in existing_signatures:
+            print(f"  attempt {attempt}: duplicate of an existing level (same shape, different skin), retrying")
+            audit.record_call(caller="daily_generator", completion=completion, system=system, user=user,
+                               outcome={"accepted": False, "reason": "duplicate_level", "attempt": attempt})
             continue
 
         # enforce, don't just ask nicely: the level number is ours to assign
@@ -142,11 +154,14 @@ def main() -> int:
     if len(sys.argv) > 1:
         level_number = int(sys.argv[1])
         used_passwords: set[str] = set()
+        existing_signatures: set[str] = set()
     elif config.CANNONS_REPO.exists():
         level_number, used_passwords = scan_existing_levels(config.CANNONS_REPO)
         level_number += 1
+        existing_signatures = scan_existing_signatures(config.CANNONS_REPO)
         print(f"scanned {config.CANNONS_REPO}: next level number = {level_number}, "
-              f"{len(used_passwords)} passwords already in use")
+              f"{len(used_passwords)} passwords already in use, "
+              f"{len(existing_signatures)} existing level shapes to avoid repeating")
     else:
         # no Cannons checkout available (e.g. running this file standalone
         # without the daily_production.yml workflow's second checkout) —
@@ -168,7 +183,7 @@ def main() -> int:
                   f"policy), not an incident.")
             level = None
         else:
-            level = generate_one_level(level_number, used_passwords)
+            level = generate_one_level(level_number, used_passwords, existing_signatures)
     except PolicyLoadError as e:
         # unlike "no candidate won" below, this means production is broken,
         # not just unlucky today — worth a real red X.
@@ -208,6 +223,37 @@ def main() -> int:
         level.save(out_path)
         print(f"wrote {out_path}")
 
+        # Difficulty validation — reuses the same solver/scoring the weekly
+        # 500-level audit uses (verification/level_audit.py), plus the naive
+        # pre-learning baseline policy, so "tested with the AI and the bots"
+        # happens as part of THIS run rather than a separate one. Both are
+        # pure local simulation (no LLM call) — champion_win is guaranteed
+        # here (generation already required policy_check to win), so the
+        # solver never actually has to escalate; the real signal is whether
+        # the untrained baseline also wins (level doesn't need what was
+        # learned) or loses (level exercises the learned strategy for real).
+        difficulty = audit_level(level, policy_check, ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS)
+        baseline_engine = run_level(level, BaselinePolicy())
+        difficulty_tag = "trivial_for_baseline" if baseline_engine.won else "requires_learned_strategy"
+        print(f"difficulty check: champion={difficulty.classification} score={difficulty.difficulty_score} "
+              f"baseline_won={baseline_engine.won} ({difficulty_tag})")
+
+        audit_dir = config.ROOT / "reports" / "production_audit"
+        audit_dir.mkdir(parents=True, exist_ok=True)
+        audit_path = audit_dir / f"Level_{level.levelNumber}_{datetime.now():%Y%m%d_%H%M%S}.json"
+        audit_path.write_text(json.dumps({
+            "levelNumber": level.levelNumber,
+            "password": level.password,
+            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "champion_classification": difficulty.classification,
+            "champion_difficulty_score": difficulty.difficulty_score,
+            "champion_rounds_played": difficulty.champion_rounds_played,
+            "baseline_won": baseline_engine.won,
+            "baseline_rounds_played": baseline_engine.rounds_played,
+            "difficulty_tag": difficulty_tag,
+        }, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"wrote {audit_path}")
+
         if not config.CANNONS_REPO.exists():
             print(f"Cannons repo not found at {config.CANNONS_REPO} — file written locally only, "
                   f"not pushed. Set CANNONS_REPO_PATH if this should point somewhere else.")
@@ -221,7 +267,6 @@ def main() -> int:
     # same reasoning as run_learning_cycle.py's unconditional git_sync call.
     try:
         import git_sync
-        from datetime import timezone
         now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
         git_sync.commit_and_push(f"[bot] daily production run - {now}")
     except Exception:  # noqa: BLE001
