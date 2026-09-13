@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:30:45+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Idea** – The current champion tries to minimise the *second‑round* deficit before it ever cares about killing a pirate that is already on the loss‑border (position 2). In many tight levels the game is lost the moment a"
-  },
-  {
     "timestamp": "2026-09-11T00:32:59+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.8558,
     "summary": "**Change explanation**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because the *kill‑lethal* flag is evaluated **after** the *second‑round deficit* in the ordering key. "
+  },
+  {
+    "timestamp": "2026-09-13T00:09:07+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change summary**  \nThe current champion evaluates *second‑round deficit* before it checks whether the action instantly kills a pirate that is already on the loss‑border (position 2). In levels where a position‑2 pirate"
   }
 ]
