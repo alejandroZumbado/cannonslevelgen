@@ -712,5 +712,12 @@
     "evidence": "level 'A1234' (2 pirates, 5 filas, max_hp=7, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 6 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-13",
+    "statement": "**Hypothesis:**  \nA cannon’s damage can be increased without any upper limit by repeatedly merging additional cannons onto it in successive rounds; the accumulated damage never caps or resets, so enough merges can produce arbitrarily high damage. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 8 filas, max_hp=14, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 8 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-12T00:25:17+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change explanation**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) and could be killed instantly, but the policy prefers an action that gives a slightly lower *second‑round def"
-  },
-  {
     "timestamp": "2026-09-12T00:26:03+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.7404,
     "summary": "**Change summary** – The current champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because the *second‑round deficit* is evaluated before the *kill‑lethal* flag.  \n**Fix** – Promote"
+  },
+  {
+    "timestamp": "2026-09-13T00:16:01+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary**  \nThe champion sometimes loses when a pirate is already on the loss‑border (position 2) and could be killed immediately, because the decision logic gives higher priority to the *second‑round deficit* t"
   }
 ]
