@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-11T00:32:59+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.0,
-    "summary": "**Idea** – Instead of only looking two rounds ahead and ranking actions by a static deficit, this policy *simulates the whole rest of the game* for each possible first move using a deterministic “greedy‑merge” planner. T"
-  },
-  {
     "timestamp": "2026-09-11T00:33:58+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8269,
     "summary": "**Change summary**  \nThe current champion evaluates *second‑round deficit* before it checks whether the action instantly kills a pirate that is already on the loss‑border (position 2). In levels where a position‑2 pirate"
+  },
+  {
+    "timestamp": "2026-09-13T00:10:02+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary**  \nThe current champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because *kill‑lethal* is evaluated only after the deficit‑based scores. I added a pre‑check that, "
   }
 ]
