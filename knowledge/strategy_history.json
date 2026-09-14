@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-12T00:40:41+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because *kill‑lethal* (an instant kill of a position‑2 pirate) is evaluated **after** the first‑round defi"
-  },
-  {
     "timestamp": "2026-09-13T00:03:59+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8558,
     "candidate_win_rate": 0.8269,
     "summary": "**Change explanation**\n\nThe current champion prefers the *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). Consequently it can choose a “safer‑looking” ac"
+  },
+  {
+    "timestamp": "2026-09-14T01:21:28+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary** – The current champion prefers a lower *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). This can make it skip a move that would instan"
   }
 ]
