@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:05:46+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary**  \nThe champion ranks *second‑round deficit* before the *kill‑lethal* flag, so when a pirate is already on the loss border (position 2) it may choose an action that leaves it alive if that action looks "
-  },
-  {
     "timestamp": "2026-09-13T00:06:47+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.5865,
     "summary": "**Change explanation**  \nThe current champion still prefers a low *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). This can make the agent miss a safe ac"
+  },
+  {
+    "timestamp": "2026-09-14T01:24:48+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.7404,
+    "summary": "**Change summary** – The current champion always ranks *second‑round deficit* ahead of an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). This can let the agent miss a safe action tha"
   }
 ]
