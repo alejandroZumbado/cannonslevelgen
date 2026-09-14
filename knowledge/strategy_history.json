@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:06:47+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change explanation**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because the *kill‑lethal* flag is evaluated **after** the *second‑round deficit* in the ordering key. "
-  },
-  {
     "timestamp": "2026-09-13T00:09:07+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.7404,
     "summary": "**Change summary** – The current champion always ranks *second‑round deficit* ahead of an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). This can let the agent miss a safe action tha"
+  },
+  {
+    "timestamp": "2026-09-14T01:27:00+00:00",
+    "promoted": false,
+    "win_rate": 0.9423,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe current champion always minimizes the *second‑round deficit* before rewarding an action that guarantees a kill in the next round (`kill_next`). In situations where a pirate is on the loss‑border "
   }
 ]
