@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-12T00:35:00+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary**  \nThe champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because it ranks actions by *second‑round deficit* before it ever rewards an instant lethal hit on that pi"
-  },
-  {
     "timestamp": "2026-09-12T00:37:03+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary**  \nThe current policy ranks the *second‑round deficit* before the *immediate lethal* flag, so when a pirate is already on the loss‑border (position 2) and can be killed this round, the agent may still p"
+  },
+  {
+    "timestamp": "2026-09-14T01:15:17+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe current champion prefers the *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss border (position 2). This can let a safe action that would kill the pir"
   }
 ]
