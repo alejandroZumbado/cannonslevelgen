@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:09:07+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary**  \nThe current champion evaluates *second‑round deficit* before it checks whether the action instantly kills a pirate that is already on the loss‑border (position 2). In levels where a position‑2 pirate"
-  },
-  {
     "timestamp": "2026-09-13T00:10:02+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.9423,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe current champion always minimizes the *second‑round deficit* before rewarding an action that guarantees a kill in the next round (`kill_next`). In situations where a pirate is on the loss‑border "
+  },
+  {
+    "timestamp": "2026-09-14T01:27:52+00:00",
+    "promoted": false,
+    "win_rate": 0.9327,
+    "candidate_win_rate": 0.9038,
+    "summary": "**Change explanation**  \nThe current champion always tries to minimise the *second‑round deficit* before it rewards an immediate lethal kill on a pirate that is already on the loss‑border (position 2).  When a pirate is "
   }
 ]
