@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-12T00:39:46+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.7404,
-    "summary": "**Change summary**  \nThe current champion orders actions by *second‑round deficit* before it ever rewards an instant lethal hit on a pirate that is already on the loss‑border (position 2). In levels where a single shot c"
-  },
-  {
     "timestamp": "2026-09-12T00:40:41+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8173,
     "summary": "**Change summary** – The current champion values *second‑round deficit* before the flag `kill_lethal`.  \nWhen a pirate is already on the loss‑border (position 2) and can be killed this round, the agent may still pick a “"
+  },
+  {
+    "timestamp": "2026-09-14T01:20:33+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change explanation**\n\nThe current champion prefers the *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). Consequently it can choose a “safer‑looking” ac"
   }
 ]
