@@ -1861,6 +1861,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "340": {
+    "levelNumber": 340,
+    "password": "T3335",
+    "isHard": true,
+    "original_difficulty_score": 1004.0,
+    "fixed": true,
+    "fila_index": 4,
+    "cuadro_index": 0,
+    "old_hp": 4,
+    "new_hp": 3,
+    "candidates_tried": 14,
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 113.0
+  },
   "341": {
     "levelNumber": 341,
     "password": "M3309",
