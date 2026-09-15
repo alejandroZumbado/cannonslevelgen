@@ -1,0 +1,3040 @@
+{
+  "1": {
+    "levelNumber": 1,
+    "password": "D3834",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "2": {
+    "levelNumber": 2,
+    "password": "C8592",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.7
+  },
+  "3": {
+    "levelNumber": 3,
+    "password": "W4155",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.0
+  },
+  "4": {
+    "levelNumber": 4,
+    "password": "O3938",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 3,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.7
+  },
+  "5": {
+    "levelNumber": 5,
+    "password": "B4048",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 8.7
+  },
+  "6": {
+    "levelNumber": 6,
+    "password": "S8153",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "7": {
+    "levelNumber": 7,
+    "password": "A8641",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.27,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "8": {
+    "levelNumber": 8,
+    "password": "H3327",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "9": {
+    "levelNumber": 9,
+    "password": "U5871",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 8.8
+  },
+  "10": {
+    "levelNumber": 10,
+    "password": "X4009",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.3,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 5
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.2
+  },
+  "11": {
+    "levelNumber": 11,
+    "password": "I4056",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.3
+  },
+  "12": {
+    "levelNumber": 12,
+    "password": "N1408",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "13": {
+    "levelNumber": 13,
+    "password": "I6234",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.51,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "14": {
+    "levelNumber": 14,
+    "password": "F4613",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "15": {
+    "levelNumber": 15,
+    "password": "Y3184",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.47
+  },
+  "16": {
+    "levelNumber": 16,
+    "password": "R4055",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.9,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "17": {
+    "levelNumber": 17,
+    "password": "I1858",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.55,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "18": {
+    "levelNumber": 18,
+    "password": "L7100",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "19": {
+    "levelNumber": 19,
+    "password": "C2382",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.67,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 6
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.87
+  },
+  "20": {
+    "levelNumber": 20,
+    "password": "T2663",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "21": {
+    "levelNumber": 21,
+    "password": "U7066",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "22": {
+    "levelNumber": 22,
+    "password": "U7431",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 4,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.5
+  },
+  "23": {
+    "levelNumber": 23,
+    "password": "H7754",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 5
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.6
+  },
+  "24": {
+    "levelNumber": 24,
+    "password": "M8419",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "25": {
+    "levelNumber": 25,
+    "password": "L7434",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.4,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "26": {
+    "levelNumber": 26,
+    "password": "V7469",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "27": {
+    "levelNumber": 27,
+    "password": "I9481",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "28": {
+    "levelNumber": 28,
+    "password": "H2925",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.87,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.17
+  },
+  "29": {
+    "levelNumber": 29,
+    "password": "A8218",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.0
+  },
+  "30": {
+    "levelNumber": 30,
+    "password": "R8333",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.31,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "31": {
+    "levelNumber": 31,
+    "password": "G7104",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.7,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.3
+  },
+  "32": {
+    "levelNumber": 32,
+    "password": "I4128",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "33": {
+    "levelNumber": 33,
+    "password": "X6838",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.3,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "34": {
+    "levelNumber": 34,
+    "password": "G2029",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.57,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.57
+  },
+  "35": {
+    "levelNumber": 35,
+    "password": "A7606",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.45,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "37": {
+    "levelNumber": 37,
+    "password": "I4052",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.97
+  },
+  "38": {
+    "levelNumber": 38,
+    "password": "T7590",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.13,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 4,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 6
+      }
+    ],
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 110.0
+  },
+  "39": {
+    "levelNumber": 39,
+    "password": "P6710",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.3
+  },
+  "40": {
+    "levelNumber": 40,
+    "password": "Z6542",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "41": {
+    "levelNumber": 41,
+    "password": "R2527",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "42": {
+    "levelNumber": 42,
+    "password": "R8378",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.9
+  },
+  "43": {
+    "levelNumber": 43,
+    "password": "B7174",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.3
+  },
+  "44": {
+    "levelNumber": 44,
+    "password": "N9512",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.31,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "45": {
+    "levelNumber": 45,
+    "password": "J4854",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "46": {
+    "levelNumber": 46,
+    "password": "C1115",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.37,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "47": {
+    "levelNumber": 47,
+    "password": "W8941",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.9,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "48": {
+    "levelNumber": 48,
+    "password": "H2747",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.5,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 5
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 13.15
+  },
+  "49": {
+    "levelNumber": 49,
+    "password": "M5577",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.85,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "50": {
+    "levelNumber": 50,
+    "password": "O9928",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.6,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.9
+  },
+  "52": {
+    "levelNumber": 52,
+    "password": "Q3109",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.3,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "53": {
+    "levelNumber": 53,
+    "password": "I6596",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.45,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 6
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 14.4
+  },
+  "54": {
+    "levelNumber": 54,
+    "password": "B1808",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.3,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "55": {
+    "levelNumber": 55,
+    "password": "V8460",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "57": {
+    "levelNumber": 57,
+    "password": "I4738",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "59": {
+    "levelNumber": 59,
+    "password": "G6535",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.5,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 2,
+        "old_hp": 2,
+        "new_hp": 4
+      },
+      {
+        "fila_index": 5,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.85
+  },
+  "60": {
+    "levelNumber": 60,
+    "password": "U1300",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.15,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "61": {
+    "levelNumber": 61,
+    "password": "I9755",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.8
+  },
+  "62": {
+    "levelNumber": 62,
+    "password": "O6063",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "63": {
+    "levelNumber": 63,
+    "password": "S2888",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.21,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "64": {
+    "levelNumber": 64,
+    "password": "M8269",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "65": {
+    "levelNumber": 65,
+    "password": "N5916",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.1,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 5
+      }
+    ],
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 108.0
+  },
+  "66": {
+    "levelNumber": 66,
+    "password": "T5290",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 109.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "67": {
+    "levelNumber": 67,
+    "password": "Y1408",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.9,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "68": {
+    "levelNumber": 68,
+    "password": "O2768",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "69": {
+    "levelNumber": 69,
+    "password": "E2185",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.45,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "70": {
+    "levelNumber": 70,
+    "password": "A2550",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.27,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "71": {
+    "levelNumber": 71,
+    "password": "R5685",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.3
+  },
+  "72": {
+    "levelNumber": 72,
+    "password": "B2855",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.66,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "73": {
+    "levelNumber": 73,
+    "password": "C9586",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.95,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "74": {
+    "levelNumber": 74,
+    "password": "T7377",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "76": {
+    "levelNumber": 76,
+    "password": "H6510",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.97,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.97
+  },
+  "78": {
+    "levelNumber": 78,
+    "password": "P1697",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.9,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "79": {
+    "levelNumber": 79,
+    "password": "V3967",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 109.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "81": {
+    "levelNumber": 81,
+    "password": "J6745",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.9,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 2,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.17
+  },
+  "82": {
+    "levelNumber": 82,
+    "password": "N5553",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.2,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      },
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.4
+  },
+  "83": {
+    "levelNumber": 83,
+    "password": "R8110",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.07
+  },
+  "84": {
+    "levelNumber": 84,
+    "password": "I6959",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "85": {
+    "levelNumber": 85,
+    "password": "L9583",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.4,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "86": {
+    "levelNumber": 86,
+    "password": "V6428",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.8,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 7,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 13.8
+  },
+  "88": {
+    "levelNumber": 88,
+    "password": "N2643",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "90": {
+    "levelNumber": 90,
+    "password": "O1709",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.9,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "91": {
+    "levelNumber": 91,
+    "password": "L9317",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.61,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      },
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.21
+  },
+  "93": {
+    "levelNumber": 93,
+    "password": "Q8829",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.23,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "94": {
+    "levelNumber": 94,
+    "password": "I3710",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.48,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 5,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 13.48
+  },
+  "96": {
+    "levelNumber": 96,
+    "password": "H8830",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 2,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.8
+  },
+  "97": {
+    "levelNumber": 97,
+    "password": "D4282",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "98": {
+    "levelNumber": 98,
+    "password": "V8567",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.6,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 15.6
+  },
+  "99": {
+    "levelNumber": 99,
+    "password": "F4387",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "102": {
+    "levelNumber": 102,
+    "password": "N3296",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.0,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.0
+  },
+  "103": {
+    "levelNumber": 103,
+    "password": "I5047",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "106": {
+    "levelNumber": 106,
+    "password": "Y8881",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.11,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 5
+      },
+      {
+        "fila_index": 6,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 5
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.73
+  },
+  "107": {
+    "levelNumber": 107,
+    "password": "A2570",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "108": {
+    "levelNumber": 108,
+    "password": "K5857",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.4,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "109": {
+    "levelNumber": 109,
+    "password": "G2620",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.08,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "112": {
+    "levelNumber": 112,
+    "password": "C1798",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.55,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 7,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 5
+      },
+      {
+        "fila_index": 7,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.9
+  },
+  "113": {
+    "levelNumber": 113,
+    "password": "I8753",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.3
+  },
+  "116": {
+    "levelNumber": 116,
+    "password": "H3972",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "117": {
+    "levelNumber": 117,
+    "password": "I9449",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.97,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 4
+      },
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 2,
+        "new_hp": 6
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.83
+  },
+  "118": {
+    "levelNumber": 118,
+    "password": "X1473",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "119": {
+    "levelNumber": 119,
+    "password": "V7022",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "123": {
+    "levelNumber": 123,
+    "password": "R6902",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.4,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 7,
+        "cuadro_index": 1,
+        "old_hp": 3,
+        "new_hp": 6
+      },
+      {
+        "fila_index": 7,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 108.0
+  },
+  "124": {
+    "levelNumber": 124,
+    "password": "Q3737",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.4,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "125": {
+    "levelNumber": 125,
+    "password": "I2898",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.53,
+    "trivial_candidates_found": 3,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 4
+      },
+      {
+        "fila_index": 5,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.83
+  },
+  "127": {
+    "levelNumber": 127,
+    "password": "Q9184",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "129": {
+    "levelNumber": 129,
+    "password": "X8034",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "130": {
+    "levelNumber": 130,
+    "password": "M8283",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 111.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "131": {
+    "levelNumber": 131,
+    "password": "F3495",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.25,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 7,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.55
+  },
+  "134": {
+    "levelNumber": 134,
+    "password": "D5573",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.3,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 6,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.61
+  },
+  "136": {
+    "levelNumber": 136,
+    "password": "H8307",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 109.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "140": {
+    "levelNumber": 140,
+    "password": "A4629",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "141": {
+    "levelNumber": 141,
+    "password": "E4818",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "143": {
+    "levelNumber": 143,
+    "password": "Z2609",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.45,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 13.45
+  },
+  "145": {
+    "levelNumber": 145,
+    "password": "J5249",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.33,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.33
+  },
+  "148": {
+    "levelNumber": 148,
+    "password": "C6405",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.66,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.66
+  },
+  "155": {
+    "levelNumber": 155,
+    "password": "L6356",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "156": {
+    "levelNumber": 156,
+    "password": "T8367",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.08,
+    "trivial_candidates_found": 3,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 4,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 4
+      },
+      {
+        "fila_index": 4,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 14.38
+  },
+  "157": {
+    "levelNumber": 157,
+    "password": "L3028",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.08,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "158": {
+    "levelNumber": 158,
+    "password": "R9861",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.87,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.87
+  },
+  "159": {
+    "levelNumber": 159,
+    "password": "G6538",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.17,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "167": {
+    "levelNumber": 167,
+    "password": "Y4097",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 112.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "169": {
+    "levelNumber": 169,
+    "password": "W1593",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "173": {
+    "levelNumber": 173,
+    "password": "H2858",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.95,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "180": {
+    "levelNumber": 180,
+    "password": "E6141",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 111.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "181": {
+    "levelNumber": 181,
+    "password": "U9357",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "182": {
+    "levelNumber": 182,
+    "password": "Q6915",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.91,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 5
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 12.23
+  },
+  "183": {
+    "levelNumber": 183,
+    "password": "C4452",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "186": {
+    "levelNumber": 186,
+    "password": "B2537",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 110.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "187": {
+    "levelNumber": 187,
+    "password": "E2367",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.6,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 15.6
+  },
+  "194": {
+    "levelNumber": 194,
+    "password": "E3401",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.45,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "196": {
+    "levelNumber": 196,
+    "password": "Q7813",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.86,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "197": {
+    "levelNumber": 197,
+    "password": "U9084",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "199": {
+    "levelNumber": 199,
+    "password": "C6919",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 11.35,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.65
+  },
+  "202": {
+    "levelNumber": 202,
+    "password": "J7771",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.47,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "203": {
+    "levelNumber": 203,
+    "password": "W8983",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.51,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "204": {
+    "levelNumber": 204,
+    "password": "Y1257",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.71,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "207": {
+    "levelNumber": 207,
+    "password": "A4327",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 113.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "210": {
+    "levelNumber": 210,
+    "password": "C5201",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.4,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "211": {
+    "levelNumber": 211,
+    "password": "A4730",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "213": {
+    "levelNumber": 213,
+    "password": "P4891",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 112.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "215": {
+    "levelNumber": 215,
+    "password": "J4477",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "216": {
+    "levelNumber": 216,
+    "password": "Y5096",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.78,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "217": {
+    "levelNumber": 217,
+    "password": "Z9137",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 106.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "220": {
+    "levelNumber": 220,
+    "password": "V4580",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.08,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "222": {
+    "levelNumber": 222,
+    "password": "A4319",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.2,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "225": {
+    "levelNumber": 225,
+    "password": "R8629",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.4
+  },
+  "234": {
+    "levelNumber": 234,
+    "password": "R8051",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.43,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 3,
+        "new_hp": 8
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 11.93
+  },
+  "238": {
+    "levelNumber": 238,
+    "password": "A7479",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.68,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 7,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 14.46
+  },
+  "239": {
+    "levelNumber": 239,
+    "password": "N1637",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 6
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.37
+  },
+  "240": {
+    "levelNumber": 240,
+    "password": "H4077",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.46,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "249": {
+    "levelNumber": 249,
+    "password": "Q6782",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.46,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "250": {
+    "levelNumber": 250,
+    "password": "I4377",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.25,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "253": {
+    "levelNumber": 253,
+    "password": "I5699",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "261": {
+    "levelNumber": 261,
+    "password": "K2382",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.78,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 8,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 14.08
+  },
+  "265": {
+    "levelNumber": 265,
+    "password": "H3055",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 111.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "267": {
+    "levelNumber": 267,
+    "password": "O7172",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "273": {
+    "levelNumber": 273,
+    "password": "F7476",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "275": {
+    "levelNumber": 275,
+    "password": "A6499",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.88,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "279": {
+    "levelNumber": 279,
+    "password": "O4880",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.06,
+    "trivial_candidates_found": 5,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 15.06
+  },
+  "281": {
+    "levelNumber": 281,
+    "password": "H4648",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.17
+  },
+  "295": {
+    "levelNumber": 295,
+    "password": "U1112",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.0
+  },
+  "297": {
+    "levelNumber": 297,
+    "password": "Z8222",
+    "isHard": false,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 110.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "302": {
+    "levelNumber": 302,
+    "password": "P9090",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.78,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 13.78
+  },
+  "304": {
+    "levelNumber": 304,
+    "password": "F3272",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.16,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "309": {
+    "levelNumber": 309,
+    "password": "E5862",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.2,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.4
+  },
+  "314": {
+    "levelNumber": 314,
+    "password": "V7841",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 112.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "320": {
+    "levelNumber": 320,
+    "password": "B1117",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.7,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "323": {
+    "levelNumber": 323,
+    "password": "S5774",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "329": {
+    "levelNumber": 329,
+    "password": "Q2121",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 108.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "330": {
+    "levelNumber": 330,
+    "password": "E1687",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 113.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "335": {
+    "levelNumber": 335,
+    "password": "T8877",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.98,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "336": {
+    "levelNumber": 336,
+    "password": "T6110",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.7,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "337": {
+    "levelNumber": 337,
+    "password": "U6233",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.7,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "343": {
+    "levelNumber": 343,
+    "password": "I4401",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 16.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "350": {
+    "levelNumber": 350,
+    "password": "M9725",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.3,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 15.3
+  },
+  "351": {
+    "levelNumber": 351,
+    "password": "J5089",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.1
+  },
+  "353": {
+    "levelNumber": 353,
+    "password": "R3329",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 13.78,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 6,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 13.78
+  },
+  "365": {
+    "levelNumber": 365,
+    "password": "P2800",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.7
+  },
+  "367": {
+    "levelNumber": 367,
+    "password": "M7368",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "378": {
+    "levelNumber": 378,
+    "password": "Z7314",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.6,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "379": {
+    "levelNumber": 379,
+    "password": "V4075",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.6
+  },
+  "381": {
+    "levelNumber": 381,
+    "password": "Z6246",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "393": {
+    "levelNumber": 393,
+    "password": "K1993",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 4,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.0
+  },
+  "394": {
+    "levelNumber": 394,
+    "password": "M2045",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 114.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "407": {
+    "levelNumber": 407,
+    "password": "P2636",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "413": {
+    "levelNumber": 413,
+    "password": "J9293",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 114.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "421": {
+    "levelNumber": 421,
+    "password": "E8530",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "423": {
+    "levelNumber": 423,
+    "password": "I9557",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 112.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "435": {
+    "levelNumber": 435,
+    "password": "G5513",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.6,
+    "trivial_candidates_found": 2,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      },
+      {
+        "fila_index": 3,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 10.0
+  },
+  "445": {
+    "levelNumber": 445,
+    "password": "Q6337",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.65,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 6,
+        "cuadro_index": 2,
+        "old_hp": 2,
+        "new_hp": 4
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 14.7
+  },
+  "447": {
+    "levelNumber": 447,
+    "password": "Q9608",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "449": {
+    "levelNumber": 449,
+    "password": "P1221",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.5,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "463": {
+    "levelNumber": 463,
+    "password": "X5445",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 8.9,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 3,
+        "cuadro_index": 0,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 8.7
+  },
+  "469": {
+    "levelNumber": 469,
+    "password": "E4799",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 14.1,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "473": {
+    "levelNumber": 473,
+    "password": "C5479",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 15.6,
+    "trivial_candidates_found": 3,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 5,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      },
+      {
+        "fila_index": 7,
+        "cuadro_index": 2,
+        "old_hp": 1,
+        "new_hp": 3
+      },
+      {
+        "fila_index": 7,
+        "cuadro_index": 3,
+        "old_hp": 1,
+        "new_hp": 3
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 15.6
+  },
+  "477": {
+    "levelNumber": 477,
+    "password": "C4088",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 9.8,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "480": {
+    "levelNumber": 480,
+    "password": "X7358",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 16.94,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "491": {
+    "levelNumber": 491,
+    "password": "Z6934",
+    "isHard": false,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 10.1,
+    "trivial_candidates_found": 1,
+    "reworked": true,
+    "edits": [
+      {
+        "fila_index": 2,
+        "cuadro_index": 1,
+        "old_hp": 1,
+        "new_hp": 2
+      }
+    ],
+    "new_classification": "champion_win",
+    "new_difficulty_score": 9.9
+  },
+  "492": {
+    "levelNumber": 492,
+    "password": "W6500",
+    "isHard": true,
+    "original_classification": "solved_by_search_only",
+    "original_difficulty_score": 112.0,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "498": {
+    "levelNumber": 498,
+    "password": "N7667",
+    "isHard": true,
+    "original_classification": "champion_win",
+    "original_difficulty_score": 12.3,
+    "trivial_candidates_found": 0,
+    "reworked": false,
+    "edits": [],
+    "new_classification": null,
+    "new_difficulty_score": null
+  }
+}
