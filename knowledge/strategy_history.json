@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:15:17+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary**  \nThe current champion prefers the *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss border (position 2). This can let a safe action that would kill the pir"
-  },
-  {
     "timestamp": "2026-09-14T01:17:17+00:00",
     "promoted": false,
     "win_rate": 0.7981,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary**  \nThe current champion ranks actions first by *second‑round deficit*; therefore it can ignore a perfectly safe action that instantly kills a pirate already on the loss‑border (position 2) if another ac"
+  },
+  {
+    "timestamp": "2026-09-15T01:47:10+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary**  \nThe current champion minimizes *second‑round deficit* before rewarding a guaranteed kill on the next round (`kill_next`). In many levels a safe action can already kill a pirate that is on the loss‑bo"
   }
 ]
