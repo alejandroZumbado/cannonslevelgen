@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:17:54+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary** – The current champion values *second‑round deficit* before the flag `kill_lethal`.  \nWhen a pirate is already on the loss‑border (position 2) and can be killed this round, the agent may still pick a “"
-  },
-  {
     "timestamp": "2026-09-14T01:20:33+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary**  \nThe current champion minimizes *second‑round deficit* before rewarding a guaranteed kill on a pirate that is already on the loss‑border (`kill_next`). In levels where a safe action can kill a positio"
+  },
+  {
+    "timestamp": "2026-09-15T01:50:10+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.7596,
+    "summary": "**Change summary** – The current champion always minimizes *second‑round deficit* before rewarding a guaranteed kill on the next round (`kill_next`). In levels where a pirate is already on the loss‑border (position 2) an"
   }
 ]
