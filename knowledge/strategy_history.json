@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:14:33+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary**  \nThe current policy ranks the *second‑round deficit* before the *immediate lethal* flag, so when a pirate is already on the loss‑border (position 2) and can be killed this round, the agent may still p"
-  },
-  {
     "timestamp": "2026-09-14T01:15:17+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary**  \nThe current champion can skip a *safe* action that instantly kills a pirate already on the loss‑border (position 2) because it first tries to minimise the second‑round deficit. I add a tiny early‑exi"
+  },
+  {
+    "timestamp": "2026-09-15T01:45:11+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe current champion ranks actions first by *second‑round deficit*; therefore it can ignore a perfectly safe action that instantly kills a pirate already on the loss‑border (position 2) if another ac"
   }
 ]
