@@ -1,0 +1,66 @@
+name: CannonsLevelGen Level Rebalance
+
+# Fixes the "filler tail" pattern (see verification/rebalance_filler.py's
+# module docstring): raises HP on trivial back-half pirates of levels that
+# are ALREADY winnable (champion_win / solved_by_search_only in the latest
+# weekly audit), so the second half of a level isn't a formality once the
+# player has survived its one hard spike. Mirror image of level_repair.yml,
+# which shaves HP off broken levels instead. Zero LLM cost — pure simulation
+# against sim/engine.py + policy/current.py + verification/solver.py, no
+# Groq/Anthropic call anywhere in this path.
+#
+# Read-only against `cannons` (only clones it to read Assets/Levels/*.asset,
+# same as weekly_level_audit.yml/level_repair.yml) — never pushes there.
+# Writes/pushes only to this repo's own reports/rebalance/results.json,
+# reviewed by a human before any reworked level goes anywhere near the real
+# game — this workflow does not touch GeneratedLevels/ in `cannons` at all.
+on:
+  workflow_dispatch:
+    # manual "Run workflow" button — same as level_repair.yml while this is new.
+
+permissions:
+  contents: write   # needed for git_sync.py to push reports/rebalance/
+
+concurrency:
+  group: cannonslevelgen-learning-cycle
+  # Same group as learning.yml/daily_production.yml/weekly_level_audit.yml/
+  # level_repair.yml ON PURPOSE — all push to this repo; queuing avoids a
+  # push race even though this workflow's own file never collides with what
+  # the others touch.
+  cancel-in-progress: false
+
+jobs:
+  level-rebalance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330  # same ceiling as level_repair.yml/weekly_level_audit.yml
+
+    steps:
+      - name: Checkout CannonsLevelGen (this repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons (read-only, just for Assets/Levels/*.asset)
+        uses: actions/checkout@v4
+        with:
+          repository: alejandroZumbado/cannons
+          fetch-depth: 1
+          path: cannons_checkout
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the rebalance pass and push progress
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          REBALANCE_TIME_BUDGET_SECONDS: "18000"  # 300 min, leaves 30 min margin under timeout-minutes for the final push
+          CI: true
+          PYTHONUNBUFFERED: "1"
+        run: python -m verification.rebalance_filler
