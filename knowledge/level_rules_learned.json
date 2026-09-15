@@ -754,5 +754,12 @@
     "evidence": "level 'Z0001' (1 pirates, 6 filas, max_hp=5, columns=[1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 6 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-15",
+    "statement": "**Hypothesis:**  \nWhen a cannon is placed onto a column that already contains a cannon **and** a pirate, the merge (damage addition) happens before the shoot phase, and the resulting higher‑damage cannon fires at the pirate in that same round. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (1 pirates, 2 filas, max_hp=2, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

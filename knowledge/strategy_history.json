@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:18:49+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change summary:**  \nThe current champion evaluates `first_def` (the deficit after the first round) before rewarding an *immediate lethal* kill (`kill_lethal`). When a pirate is already on the loss‑border (position 2) a"
-  },
-  {
     "timestamp": "2026-09-13T00:20:57+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.9135,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary**  \nThe current champion prefers a lower *second‑round deficit* before rewarding an *immediate lethal* hit on a pirate that is already on the loss‑border (position 2). In situations where a safe action c"
+  },
+  {
+    "timestamp": "2026-09-15T01:38:33+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
