@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:15:14+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.7404,
-    "summary": "**Change summary** – The current champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because the *second‑round deficit* is evaluated before the *kill‑lethal* flag.  \n**Fix** – Promote"
-  },
-  {
     "timestamp": "2026-09-13T00:16:01+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8462,
     "summary": "**Change summary**  \nThe champion sometimes skips a *safe* action that will instantly kill a pirate already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. I add a tiny pre‑"
+  },
+  {
+    "timestamp": "2026-09-15T01:34:56+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.7115,
+    "summary": "**Change summary** – The champion ranks *second‑round deficit* before the *immediate lethal‑on‑border* check, so it can ignore a safe action that would instantly kill a pirate already on position 2 (the loss‑border) if a"
   }
 ]
