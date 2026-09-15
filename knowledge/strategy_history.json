@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:21:39+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.8365,
-    "summary": "**Change summary** – The current champion gives the *second‑round deficit* higher priority than an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). In a situation where a cannon could "
-  },
-  {
     "timestamp": "2026-09-14T01:12:37+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.8173,
     "summary": "**Change summary**  \nThe champion policy can ignore a safe action that instantly kills a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. I add a tiny "
+  },
+  {
+    "timestamp": "2026-09-15T01:41:56+00:00",
+    "promoted": false,
+    "win_rate": 0.7981,
+    "candidate_win_rate": 0.7692,
+    "summary": "**Change summary** – The current champion orders actions by *second‑round deficit* before rewarding an action that **guarantees a kill on a pirate already on the loss‑border (position 2)**. In levels where killing that b"
   }
 ]
