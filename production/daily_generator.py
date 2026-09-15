@@ -25,7 +25,7 @@ from production.level_registry import scan_existing_levels, scan_existing_signat
 from sim.benchmark import fixed_suite, random_suite
 from sim.engine import run_level
 from sim.evaluate import evaluate
-from sim.level import Level
+from sim.level import Level, fill_empty_filas
 from policy.baseline import BaselinePolicy
 from verification.level_audit import audit_level
 from verification.solver import ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS
@@ -120,6 +120,15 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
             audit.record_call(caller="daily_generator", completion=completion, system=system, user=user,
                                outcome={"accepted": False, "reason": f"schema_error: {e}", "attempt": attempt})
             continue
+
+        # No shipped level should have a fila that spawns zero pirates — a
+        # dead round the player just waits through (found 2026-09-15 in
+        # 310/500 real levels). Filled here, before shape_signature() and
+        # the winnability check below, so a duplicate-shape reject and the
+        # accept/reject decision both see the level the game will actually
+        # ship — a level rejected because the fill made it unwinnable is
+        # just another retry, same as any other invalid candidate.
+        level = fill_empty_filas(level)
 
         signature = level.shape_signature()
         if signature in existing_signatures:

@@ -6,6 +6,7 @@ Cuadro.hp: 1-10
 """
 from __future__ import annotations
 
+import copy
 from dataclasses import dataclass, field, asdict
 import json
 from pathlib import Path
@@ -114,3 +115,42 @@ def pad_trailing(level: Level, n: int) -> Level:
         isHard=level.isHard,
         filas=list(level.filas) + empty,
     )
+
+
+def empty_fila_indices(level: Level) -> list[int]:
+    """Indices of filas that spawn zero pirates — a round where nothing
+    happens for the player. Noticed 2026-09-15 looking at the real 500
+    levels' grids: 310/500 have at least one (469 total) — dead time, not a
+    deliberate design choice. See `fill_empty_filas` (used by the level
+    generator at creation time) and `with_filled_fila` (used by
+    verification/fill_empty_rounds.py to fix the existing 500, one fila at
+    a time, each verified not to make the level worse)."""
+    return [i for i, fila in enumerate(level.filas) if not any(c.tipo >= 1 for c in fila.cuadros)]
+
+
+def with_filled_fila(level: Level, fila_index: int, column: int, tipo: int = 1, hp: int = 1) -> Level:
+    """Copy of `level` with a single weak "distraction" pirate (hp=1 by
+    default — enough to end the dead round without being a difficulty edit)
+    placed into fila `fila_index`. Only ever call this on a fila that
+    `empty_fila_indices` actually flagged — it overwrites whatever cuadros
+    that fila already has."""
+    variant = copy.deepcopy(level)
+    variant.filas[fila_index] = Fila(cuadros=[Cuadro(index=column, tipo=tipo, hp=hp)])
+    return variant
+
+
+def fill_empty_filas(level: Level) -> Level:
+    """Copy of `level` with EVERY empty fila filled via `with_filled_fila`,
+    column chosen deterministically (`fila_index % NUM_COLUMNS`) so fills
+    don't all land in the same column. For freshly AI-generated levels
+    (production/daily_generator.py, learning/level_designer.py) — those
+    already get re-simulated right after this to decide accept/reject, so
+    no separate safety check is needed here; for the EXISTING 500 real
+    levels, use `with_filled_fila` one fila at a time instead and verify
+    each placement (see verification/fill_empty_rounds.py) before keeping
+    it, since those are already-shipped/known-good levels a blind fill
+    could silently break."""
+    variant = copy.deepcopy(level)
+    for fi in empty_fila_indices(variant):
+        variant.filas[fi] = Fila(cuadros=[Cuadro(index=fi % 5, tipo=1, hp=1)])
+    return variant

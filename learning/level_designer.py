@@ -21,7 +21,7 @@ from learning import knowledge
 from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from sim.engine import run_level
-from sim.level import Level, pad_leading, pad_trailing
+from sim.level import Level, fill_empty_filas, pad_leading, pad_trailing
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
 
@@ -146,6 +146,13 @@ def run_cycle() -> dict:
         outcome = {"recorded": False, "reason": f"schema_error: {e}"}
         audit.record_call(caller="level_designer", completion=completion, system=system, user=user, outcome=outcome)
         return outcome
+
+    # No shipped level should have a fila that spawns zero pirates — a dead
+    # round the player just waits through (found 2026-09-15 in 310/500 real
+    # levels). Filled here, before the simulation below, so the predicted-
+    # outcome check and the robustness sweep both judge the level as it
+    # would actually ship, not the pre-fill draft.
+    level = fill_empty_filas(level)
 
     try:
         policy = load_policy_from_file(CURRENT_POLICY_PATH)
