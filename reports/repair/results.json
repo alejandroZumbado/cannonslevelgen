@@ -1301,6 +1301,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "303": {
+    "levelNumber": 303,
+    "password": "T9075",
+    "isHard": true,
+    "original_difficulty_score": 1004.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 15,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "305": {
     "levelNumber": 305,
     "password": "J9351",
@@ -1326,6 +1340,20 @@
     "old_hp": null,
     "new_hp": null,
     "candidates_tried": 15,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "307": {
+    "levelNumber": 307,
+    "password": "O9463",
+    "isHard": true,
+    "original_difficulty_score": 1004.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 12,
     "new_classification": null,
     "new_difficulty_score": null
   },
