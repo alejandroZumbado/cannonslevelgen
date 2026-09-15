@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:20:33+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change explanation**\n\nThe current champion prefers the *second‑round deficit* over an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). Consequently it can choose a “safer‑looking” ac"
-  },
-  {
     "timestamp": "2026-09-14T01:21:28+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.7596,
     "summary": "**Change summary** – The current champion always minimizes *second‑round deficit* before rewarding a guaranteed kill on the next round (`kill_next`). In levels where a pirate is already on the loss‑border (position 2) an"
+  },
+  {
+    "timestamp": "2026-09-15T01:51:01+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.7212,
+    "summary": "**Change summary**  \nThe champion policy can skip an action that instantly kills a pirate already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. This lets a losing pirate s"
   }
 ]
