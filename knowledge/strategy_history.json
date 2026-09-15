@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:18:18+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary** – The current champion sometimes lets a pirate that is already on the loss‑border (position 2) survive because *kill‑lethal* is evaluated **after** the two‑round deficit. By moving the `kill_lethal` fl"
-  },
-  {
     "timestamp": "2026-09-13T00:18:49+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.9135,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary** – The champion policy sometimes skips a safe action that would instantly kill a pirate already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. By moving t"
+  },
+  {
+    "timestamp": "2026-09-15T01:37:41+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary**  \nThe current champion prefers a lower *second‑round deficit* before rewarding an *immediate lethal* hit on a pirate that is already on the loss‑border (position 2). In situations where a safe action c"
   }
 ]
