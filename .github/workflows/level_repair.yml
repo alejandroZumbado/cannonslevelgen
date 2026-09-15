@@ -1,0 +1,73 @@
+name: CannonsLevelGen Level Repair
+
+# Tries to fix every level the weekly audit (weekly_level_audit.yml) marked
+# `no_win_found` — see verification/repair_impossible.py's module docstring
+# for the method: exhaustively try shaving 1 HP off each eligible pirate in
+# turn, keep only the edit that fixes the level while staying hardest.
+# Zero LLM cost (pure simulation against sim/engine.py + policy/current.py +
+# verification/solver.py, no Groq/Anthropic call anywhere in this path).
+#
+# Read-only against `cannons` (only clones it to read Assets/Levels/*.asset,
+# same as weekly_level_audit.yml) — never pushes there. Writes/pushes only to
+# this repo's own reports/repair/results.json, which is reviewed by a human
+# before any repaired level goes anywhere near the real game (see project
+# docs) — this workflow does not touch GeneratedLevels/ in `cannons` at all.
+#
+# Local timing (2026-09-14, real 500-level campaign): one no_win_found level
+# averages ~15-16 hp>=2 candidates, each candidate a full champion+solver
+# audit (~3s typical, more for wide-solver cases) — full 301-level backlog
+# estimated ~4h worst case. REPAIR_TIME_BUDGET_SECONDS below stops the
+# script well before timeout-minutes so it always gets a final push in;
+# results.json tracks already-attempted levels, so a run that hits its time
+# budget resumes the rest next time instead of redoing finished levels.
+on:
+  workflow_dispatch:
+    # manual "Run workflow" button — kept for the first real run(s) while
+    # this is new; add a schedule trigger here once that's gone well.
+
+permissions:
+  contents: write   # needed for git_sync.py to push reports/repair/
+
+concurrency:
+  group: cannonslevelgen-learning-cycle
+  # Same group as learning.yml/daily_production.yml/weekly_level_audit.yml
+  # ON PURPOSE — all four push to this repo; queuing avoids a push race even
+  # though this workflow's own file (reports/repair/results.json) never
+  # collides with what the others touch.
+  cancel-in-progress: false
+
+jobs:
+  level-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330  # same ceiling as weekly_level_audit.yml, same reasoning: public repo, unlimited minutes, prefer thorough over fast
+
+    steps:
+      - name: Checkout CannonsLevelGen (this repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons (read-only, just for Assets/Levels/*.asset)
+        uses: actions/checkout@v4
+        with:
+          repository: alejandroZumbado/cannons
+          fetch-depth: 1
+          path: cannons_checkout
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the repair pass and push progress
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          REPAIR_TIME_BUDGET_SECONDS: "18000"  # 300 min, leaves 30 min margin under timeout-minutes for the final push
+          CI: true
+          PYTHONUNBUFFERED: "1"
+        run: python -m verification.repair_impossible
