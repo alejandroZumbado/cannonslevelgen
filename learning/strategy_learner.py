@@ -200,7 +200,8 @@ def run_cycle() -> dict:
     # since current_source has no upper bound and will keep growing as the
     # policy keeps improving. If 413s reappear, re-measure current_source's
     # size first before touching these caps again.
-    completion = client.complete(system, user, max_tokens=3400)
+    completion = client.complete(system, user, max_tokens=3400,
+                                  reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS)
     response = completion.text
 
     code = _extract_code(response)

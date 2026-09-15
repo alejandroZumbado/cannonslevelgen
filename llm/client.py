@@ -69,10 +69,18 @@ def _estimate_tokens(*texts: str) -> int:
     return sum(len(t) for t in texts) // 4
 
 
-def complete(system: str, user: str, max_tokens: int = 2000, provider: str | None = None) -> Completion:
+def complete(
+    system: str, user: str, max_tokens: int = 2000, provider: str | None = None,
+    reserve_tokens: int = 0,
+) -> Completion:
     """Returns a Completion (text + exact tokens_used for this call). Raises
     budget.BudgetExceeded if the call would blow the daily cap — callers
     should catch that and stop the cycle gracefully, not retry.
+
+    `reserve_tokens` (see config.DAILY_PRODUCTION_RESERVE_TOKENS) lets a
+    caller treat part of today's remaining budget as off-limits to itself,
+    without affecting what other callers see as available. Learning callers
+    pass this; production doesn't (default 0).
 
     Callers are expected to pass every field of the returned Completion,
     together with the outcome they derived from it, to llm.audit.record_call
@@ -101,7 +109,7 @@ def complete(system: str, user: str, max_tokens: int = 2000, provider: str | Non
         )
 
     estimated_in = _estimate_tokens(system, user)
-    budget.check_can_spend(estimated_in + max_tokens)
+    budget.check_can_spend(estimated_in + max_tokens, reserve=reserve_tokens)
 
     if provider == "groq":
         text, used = _call_groq(system, user, max_tokens)

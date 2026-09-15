@@ -117,7 +117,8 @@ def run_cycle() -> dict:
     # proven-safe zone on this tier. level_designer's own prompt is only
     # ~1.7-2k tokens, so max_tokens=5000 lands it in that same proven-safe
     # zone (~6700-7000 total) while giving ~67% more room to finish the JSON.
-    completion = client.complete(system, user, max_tokens=5000)
+    completion = client.complete(system, user, max_tokens=5000,
+                                  reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS)
     response = completion.text
 
     hypothesis = response.split("```")[0].strip()

@@ -42,6 +42,22 @@ GROQ_TPD_LIMIT = 200_000
 # causes a hard 429 mid-cycle.
 DAILY_TOKEN_BUDGET = int(os.environ.get("DAILY_TOKEN_BUDGET", 180_000))
 
+# Slice of DAILY_TOKEN_BUDGET that learning.yml's hourly cycles must never
+# touch, reserved for daily_production.yml. Found 2026-09-14/15: the two
+# workflows share this same daily counter, and once GitHub actually grants a
+# learning run it loops pairs until the budget runs out BY DESIGN (see
+# run_learning_cycle.py) — measured burning ~176k/180k tokens in a single
+# 20min run right after the UTC day rolled over, hours before
+# daily_production's own 6am UTC cron. Without a reservation, production is
+# starved most days regardless of what time it's scheduled at. Sized at
+# ~5x a single daily_generator attempt (measured 2026-09-15: ~4,730 tokens
+# per attempt incl. GAME_RULES + up to 8 learned rules; MAX_ATTEMPTS=5 there)
+# so a full worst-case day of retries still fits. Only learning callers pass
+# this as `reserve_tokens` to llm.client.complete() — daily_generator itself
+# calls with the default (0), so it can freely spend into its own reserved
+# slice (and anything extra learning left unspent).
+DAILY_PRODUCTION_RESERVE_TOKENS = int(os.environ.get("DAILY_PRODUCTION_RESERVE_TOKENS", 25_000))
+
 # If a 429's own retry-after exceeds this, llm/client.py treats it as a hard
 # provider-side quota (daily/hourly cap), not the known TPM burst, and gives
 # up immediately instead of sleeping through it. Learned the hard way on

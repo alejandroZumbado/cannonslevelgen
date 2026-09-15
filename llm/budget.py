@@ -65,10 +65,17 @@ def record_usage(tokens: int) -> None:
     _save(state)
 
 
-def check_can_spend(estimated_tokens: int) -> None:
-    if remaining_tokens() < estimated_tokens:
+def check_can_spend(estimated_tokens: int, reserve: int = 0) -> None:
+    """`reserve` lets a caller (learning.yml's cycles, via llm.client.complete's
+    reserve_tokens) treat part of today's remaining budget as untouchable —
+    see config.DAILY_PRODUCTION_RESERVE_TOKENS for why this exists. A caller
+    that passes reserve=0 (the default, used by daily_generator) can still
+    spend into whatever another caller reserved."""
+    usable = remaining_tokens() - reserve
+    if usable < estimated_tokens:
         raise BudgetExceeded(
-            f"daily token budget exhausted: {remaining_tokens()} left, "
+            f"daily token budget exhausted: {usable} usable left "
+            f"({remaining_tokens()} remaining, {reserve} of that reserved), "
             f"need ~{estimated_tokens}. Resumes automatically tomorrow."
         )
     if calls_made_today() >= config.GROQ_RPD_LIMIT:
