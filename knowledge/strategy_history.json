@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-13T00:20:57+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8462,
-    "summary": "**Change summary**  \nThe current policy evaluates the *second‑round deficit* before rewarding an *immediate lethal* kill (`kill_lethal`). This lets the agent sometimes ignore a cannon placement that would instantly kill "
-  },
-  {
     "timestamp": "2026-09-13T00:21:39+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-15T01:41:01+00:00",
+    "promoted": false,
+    "win_rate": 0.8365,
+    "candidate_win_rate": 0.8173,
+    "summary": "**Change summary**  \nThe champion policy can ignore a safe action that instantly kills a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. I add a tiny "
   }
 ]
