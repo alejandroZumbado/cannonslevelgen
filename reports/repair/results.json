@@ -1,4 +1,46 @@
 {
+  "104": {
+    "levelNumber": 104,
+    "password": "J3961",
+    "isHard": false,
+    "original_difficulty_score": 1006.5,
+    "fixed": true,
+    "fila_index": 1,
+    "cuadro_index": 2,
+    "old_hp": 2,
+    "new_hp": 1,
+    "candidates_tried": 8,
+    "new_classification": "champion_win",
+    "new_difficulty_score": 14.33
+  },
+  "128": {
+    "levelNumber": 128,
+    "password": "Z5657",
+    "isHard": false,
+    "original_difficulty_score": 1006.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 12,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "146": {
+    "levelNumber": 146,
+    "password": "D5790",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": true,
+    "fila_index": 1,
+    "cuadro_index": 3,
+    "old_hp": 2,
+    "new_hp": 1,
+    "candidates_tried": 7,
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 112.5
+  },
   "152": {
     "levelNumber": 152,
     "password": "Y5277",
@@ -97,6 +139,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "193": {
+    "levelNumber": 193,
+    "password": "T1626",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 15,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "201": {
     "levelNumber": 201,
     "password": "A6575",
@@ -138,6 +194,20 @@
     "candidates_tried": 10,
     "new_classification": null,
     "new_difficulty_score": null
+  },
+  "209": {
+    "levelNumber": 209,
+    "password": "D2207",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": true,
+    "fila_index": 2,
+    "cuadro_index": 1,
+    "old_hp": 4,
+    "new_hp": 3,
+    "candidates_tried": 11,
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 111.5
   },
   "214": {
     "levelNumber": 214,
@@ -181,6 +251,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "226": {
+    "levelNumber": 226,
+    "password": "I9254",
+    "isHard": false,
+    "original_difficulty_score": 1006.5,
+    "fixed": true,
+    "fila_index": 1,
+    "cuadro_index": 1,
+    "old_hp": 3,
+    "new_hp": 2,
+    "candidates_tried": 7,
+    "new_classification": "solved_by_search_only",
+    "new_difficulty_score": 107.5
+  },
   "227": {
     "levelNumber": 227,
     "password": "I9845",
@@ -209,6 +293,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "229": {
+    "levelNumber": 229,
+    "password": "T7980",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 15,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "230": {
     "levelNumber": 230,
     "password": "L9812",
@@ -234,6 +332,20 @@
     "old_hp": null,
     "new_hp": null,
     "candidates_tried": 15,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "233": {
+    "levelNumber": 233,
+    "password": "S7411",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 14,
     "new_classification": null,
     "new_difficulty_score": null
   },
@@ -432,6 +544,20 @@
     "candidates_tried": 17,
     "new_classification": null,
     "new_difficulty_score": null
+  },
+  "272": {
+    "levelNumber": 272,
+    "password": "T3131",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": true,
+    "fila_index": 0,
+    "cuadro_index": 0,
+    "old_hp": 3,
+    "new_hp": 2,
+    "candidates_tried": 14,
+    "new_classification": "champion_win",
+    "new_difficulty_score": 15.0
   },
   "276": {
     "levelNumber": 276,
@@ -783,6 +909,34 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "345": {
+    "levelNumber": 345,
+    "password": "T9948",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 17,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "349": {
+    "levelNumber": 349,
+    "password": "A8126",
+    "isHard": true,
+    "original_difficulty_score": 1006.5,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 17,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "355": {
     "levelNumber": 355,
     "password": "T3323",
@@ -867,6 +1021,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "370": {
+    "levelNumber": 370,
+    "password": "K6913",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 16,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "371": {
     "levelNumber": 371,
     "password": "A4368",
@@ -937,6 +1105,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "382": {
+    "levelNumber": 382,
+    "password": "C4952",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 16,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "383": {
     "levelNumber": 383,
     "password": "W4270",
@@ -993,6 +1175,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "391": {
+    "levelNumber": 391,
+    "password": "M3499",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 7,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "392": {
     "levelNumber": 392,
     "password": "F2505",
@@ -1018,6 +1214,20 @@
     "old_hp": null,
     "new_hp": null,
     "candidates_tried": 30,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "396": {
+    "levelNumber": 396,
+    "password": "R5560",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 18,
     "new_classification": null,
     "new_difficulty_score": null
   },
@@ -1441,6 +1651,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "451": {
+    "levelNumber": 451,
+    "password": "O6478",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 21,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "452": {
     "levelNumber": 452,
     "password": "B5530",
@@ -1553,6 +1777,20 @@
     "new_classification": null,
     "new_difficulty_score": null
   },
+  "465": {
+    "levelNumber": 465,
+    "password": "Z7177",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 23,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
   "466": {
     "levelNumber": 466,
     "password": "A1956",
@@ -1606,6 +1844,20 @@
     "old_hp": null,
     "new_hp": null,
     "candidates_tried": 20,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "471": {
+    "levelNumber": 471,
+    "password": "Y2513",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 17,
     "new_classification": null,
     "new_difficulty_score": null
   },
@@ -1690,6 +1942,20 @@
     "old_hp": null,
     "new_hp": null,
     "candidates_tried": 28,
+    "new_classification": null,
+    "new_difficulty_score": null
+  },
+  "487": {
+    "levelNumber": 487,
+    "password": "Q2357",
+    "isHard": true,
+    "original_difficulty_score": 1007.0,
+    "fixed": false,
+    "fila_index": null,
+    "cuadro_index": null,
+    "old_hp": null,
+    "new_hp": null,
+    "candidates_tried": 16,
     "new_classification": null,
     "new_difficulty_score": null
   },
