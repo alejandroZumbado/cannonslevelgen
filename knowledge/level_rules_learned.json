@@ -782,5 +782,12 @@
     "evidence": "level 'A0001' (1 pirates, 3 filas, max_hp=2, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-15",
+    "statement": "**Hypothesis:**  \nMerging a cannon onto a column after a pirate has already spawned still raises the cannon’s damage for all subsequent shots on that same pirate. => confirmed winnable by test level.",
+    "evidence": "level 'B0001' (1 pirates, 1 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
