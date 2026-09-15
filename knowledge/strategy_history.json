@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:12:37+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary** – The current champion sometimes skips a move that would *instantly* kill a pirate that is already on the loss‑border (position 2) because the decision key gives higher priority to the two‑round defici"
-  },
-  {
     "timestamp": "2026-09-14T01:14:33+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.7981,
     "candidate_win_rate": 0.7692,
     "summary": "**Change summary** – The current champion orders actions by *second‑round deficit* before rewarding an action that **guarantees a kill on a pirate already on the loss‑border (position 2)**. In levels where killing that b"
+  },
+  {
+    "timestamp": "2026-09-15T01:44:16+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.875,
+    "summary": "**Change summary**  \nThe current champion can skip a *safe* action that instantly kills a pirate already on the loss‑border (position 2) because it first tries to minimise the second‑round deficit. I add a tiny early‑exi"
   }
 ]
