@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:30:58+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.7596,
-    "summary": "**Change summary** – The champion policy prefers a lower *second‑round deficit* before rewarding an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2).  This can cause the agent to miss a"
-  },
-  {
     "timestamp": "2026-09-15T01:33:07+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8269,
     "summary": "**Change explanation**\n\nThe current champion always tries to minimise *second‑round deficit* before rewarding an immediate lethal kill on a pirate that is already on the loss‑border (position 2). In tight levels this can"
+  },
+  {
+    "timestamp": "2026-09-16T00:35:46+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe current champion always minimizes the *second‑round deficit* before it rewards an immediate lethal kill on a pirate that is already on the loss‑border (position 2). In tight levels this can cause"
   }
 ]
