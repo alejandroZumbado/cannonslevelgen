@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-16T02:05:49+00:00",
-  "based_on_audit": "2026-09-16T01:00:51+00:00",
-  "total_levels": 500,
+  "generated_at": "2026-09-16T02:21:12+00:00",
+  "based_on_audit": "2026-09-16T02:20:30+00:00",
+  "total_levels": 502,
   "counts": {
-    "ready": 232,
+    "ready": 234,
     "roto": 266,
     "problema_vacio": 2
   },
@@ -5005,6 +5005,26 @@
       "classification": "no_win_found",
       "difficulty_score": 1010.5,
       "pool": "roto",
+      "assigned_order": null,
+      "source": "original"
+    },
+    {
+      "levelNumber": 501,
+      "password": "G5273",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original"
+    },
+    {
+      "levelNumber": 502,
+      "password": "A1234",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.31,
+      "pool": "ready",
       "assigned_order": null,
       "source": "original"
     }
