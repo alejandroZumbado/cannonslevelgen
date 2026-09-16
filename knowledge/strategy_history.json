@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-15T01:41:01+00:00",
-    "promoted": false,
-    "win_rate": 0.8365,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary**  \nThe champion policy can ignore a safe action that instantly kills a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. I add a tiny "
-  },
-  {
     "timestamp": "2026-09-15T01:41:56+00:00",
     "promoted": false,
     "win_rate": 0.7981,
@@ -138,5 +131,12 @@
     "win_rate": 0.9038,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary**  \nThe current champion always minimizes the *second‑round deficit* before it rewards an immediate lethal hit on a pirate that is already on the loss‑border (position 2). In tight levels this can let a "
+  },
+  {
+    "timestamp": "2026-09-16T00:43:37+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.7788,
+    "summary": "**Change summary**  \nThe current champion always minimizes *second‑round deficit* before rewarding an action that kills a pirate already on the loss‑border (position 2). In tight situations this lets a pirate reach posit"
   }
 ]
