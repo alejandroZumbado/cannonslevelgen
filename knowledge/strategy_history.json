@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-15T01:35:56+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary** – The champion policy sometimes skips a safe action that would instantly kill a pirate already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. By moving t"
-  },
-  {
     "timestamp": "2026-09-15T01:37:41+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary** – The champion policy always tries to minimise the *second‑round deficit* before it rewards a guaranteed kill on the next round (`kill_next`).  \nWhen a pirate is already on the loss‑border (position 2)"
+  },
+  {
+    "timestamp": "2026-09-16T00:40:25+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nThe current champion prefers a lower *second‑round deficit* even when it can instantly kill a pirate that is already on the loss‑border (position 2). In tight levels this lets the agent miss a guaran"
   }
 ]
