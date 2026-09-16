@@ -831,5 +831,12 @@
     "evidence": "level 'A1234' (2 pirates, 2 filas, max_hp=2, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-16",
+    "statement": "Merging a cannon onto a column that already contains a cannon adds the resident cannon’s damage immediately, so the merged cannon fires with the summed damage in the same round. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 2 filas, max_hp=6, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
