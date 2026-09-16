@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-14T01:30:06+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe current champion always minimises *second‑round deficit* before rewarding an *immediate lethal* kill on a pirate that is already on the loss‑border (position 2). This can make it skip a safe move"
-  },
-  {
     "timestamp": "2026-09-14T01:30:58+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.9135,
     "candidate_win_rate": 0.8173,
     "summary": "**Change explanation**  \nThe current champion tries to minimise the *second‑round deficit* before it values an immediate lethal kill on a pirate that is already on the loss‑border (position 2). When such a pirate can be "
+  },
+  {
+    "timestamp": "2026-09-16T00:35:17+00:00",
+    "promoted": false,
+    "win_rate": 0.875,
+    "candidate_win_rate": 0.8269,
+    "summary": "**Change explanation**\n\nThe current champion always tries to minimise *second‑round deficit* before rewarding an immediate lethal kill on a pirate that is already on the loss‑border (position 2). In tight levels this can"
   }
 ]
