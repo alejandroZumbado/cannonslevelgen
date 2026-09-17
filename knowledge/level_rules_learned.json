@@ -894,5 +894,12 @@
     "evidence": "level 'K8391' (5 pirates, 5 filas, max_hp=5, columns=[0, 1, 2, 3]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 6 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-17",
+    "statement": "Hypothesis: When a cannon is merged onto a column that already contains a pirate, the added damage stays on that cannon for all future rounds (it does not reset to base‑1 after the merge). This persistent increase is necessary to kill a high‑HP pirate that would otherwise survive long enough to reach position 3. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 2 filas, max_hp=5, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
