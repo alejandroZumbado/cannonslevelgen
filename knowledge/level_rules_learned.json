@@ -887,5 +887,12 @@
     "evidence": "level 'A0001' (3 pirates, 3 filas, max_hp=4, columns=[0, 1, 2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-17",
+    "statement": "Hypothesis: Cannon damage can be increased without bound by repeatedly merging cannons on the same column across multiple rounds, and the accumulated damage is applied immediately when a pirate appears, allowing you to kill arbitrarily high‑HP pirates in a single shot. => confirmed winnable by test level.",
+    "evidence": "level 'K8391' (5 pirates, 5 filas, max_hp=5, columns=[0, 1, 2, 3]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 6 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
