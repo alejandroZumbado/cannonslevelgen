@@ -908,5 +908,12 @@
     "evidence": "level 'K8392' (4 pirates, 4 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-17",
+    "statement": "**Hypothesis:**  \nThe game does **not** end when the last fila (wave) has been spawned; after the final fila the engine continues to run rounds (shoot → advance) until either all pirates are dead (win) or a pirate reaches position 3 (loss). Therefore a level where the last pirate is still alive after the final spawn can still be won in the subsequent rounds. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (2 pirates, 2 filas, max_hp=2, columns=[0, 2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
