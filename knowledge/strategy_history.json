@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-15T01:48:05+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary**  \nThe current champion minimizes *second‑round deficit* before rewarding a guaranteed kill on a pirate that is already on the loss‑border (`kill_next`). In levels where a safe action can kill a positio"
-  },
-  {
     "timestamp": "2026-09-15T01:50:10+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary** – The champion policy still prefers actions that give a lower *second‑round deficit* even when an alternative action would instantly kill a pirate that is already on the loss‑border (position 2). In ti"
+  },
+  {
+    "timestamp": "2026-09-17T01:36:46+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe current champion always minimises *second‑round deficit* before rewarding an action that instantly kills a pirate already on the loss‑border (position 2). In tight levels this can let a borderlin"
   }
 ]
