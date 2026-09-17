@@ -901,5 +901,12 @@
     "evidence": "level 'A1234' (2 pirates, 2 filas, max_hp=5, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-17",
+    "statement": "**Hypothesis:**  \nPlacing a series of low‑HP (HP = 1) pirates in the same column ahead of a high‑HP pirate lets the player merge cannons on that column during each round the low‑HP pirates block the shot, thereby increasing cannon damage before the high‑HP pirate becomes the most‑advanced target; this makes the level winnable even when the high‑HP pirate’s HP exceeds the damage of a single base cannon. => confirmed winnable by test level.",
+    "evidence": "level 'K8392' (4 pirates, 4 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
