@@ -1,0 +1,11 @@
+{
+  "levelNumber": 505,
+  "password": "T9816",
+  "generated_at": "2026-09-18T10:11:52+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 13.78,
+  "champion_rounds_played": 10,
+  "baseline_won": true,
+  "baseline_rounds_played": 10,
+  "difficulty_tag": "trivial_for_baseline"
+}
