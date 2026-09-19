@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T01:43:19+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary**  \nThe champion policy still favours a lower *second‑round deficit* over an instant lethal shot on a pirate that is already on the loss‑border (position 2). I promote any action that kills such a border"
-  },
-  {
     "timestamp": "2026-09-17T01:45:27+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.7788,
     "summary": "**Change summary**  \nThe champion policy can skip an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the second‑round deficit. I added a pre‑check that"
+  },
+  {
+    "timestamp": "2026-09-19T01:24:32+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8558,
+    "summary": "**Change summary**  \nThe champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. By moving the `kill_le"
   }
 ]
