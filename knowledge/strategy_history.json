@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T01:45:27+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary** – The current champion always minimises *second‑round deficit* before rewarding an instant lethal shot on a pirate that is already on the loss‑border (position 2). In tight levels this can let a border"
-  },
-  {
     "timestamp": "2026-09-17T01:46:26+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8558,
     "summary": "**Change summary**  \nThe champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. By moving the `kill_le"
+  },
+  {
+    "timestamp": "2026-09-19T01:25:30+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8365,
+    "summary": "**Change summary** – The current champion favours minimizing the *second‑round deficit* before it ever checks whether the first action can **instantly kill a pirate that is already on the loss border (position 2)**. In t"
   }
 ]
