@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-18T00:28:41+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary**  \nThe current champion always tries to minimise *second‑round deficit* before rewarding an instant lethal shot on a pirate that is already on the loss‑border (position 2). In tight levels this can let "
-  },
-  {
     "timestamp": "2026-09-18T00:29:36+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.7885,
     "summary": "**Change summary** – The champion policy can ignore a shot that would *instantly* kill a pirate already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. I reorder the evaluat"
+  },
+  {
+    "timestamp": "2026-09-19T01:30:38+00:00",
+    "promoted": false,
+    "win_rate": 0.9038,
+    "candidate_win_rate": 0.8462,
+    "summary": "**Change summary**  \nThe current champion sometimes ignores a *guaranteed* kill of a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit. I add a tiny pre‑check"
   }
 ]

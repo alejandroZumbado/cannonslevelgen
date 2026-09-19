@@ -971,5 +971,12 @@
     "evidence": "level 'A0001' (2 pirates, 2 filas, max_hp=3, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-19",
+    "statement": "**Hypothesis:**  \nWhen a high‑HP pirate blocks a second pirate of equal HP in the same column, the back pirate can only be killed if the cannon’s damage is increased (by merging additional cannons) **before** the front pirate dies; otherwise the back pirate will run out of its fixed 3‑shot budget and reach position 3, making the level unwinnable. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (4 pirates, 4 filas, max_hp=3, columns=[0, 2, 4]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
