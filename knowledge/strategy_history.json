@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T01:39:51+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.8269,
-    "summary": "**Change summary**  \nThe current champion favours a lower *second‑round deficit* even when another legal action would instantly kill a pirate that is already on the loss‑border (position 2). When such a lethal shot is mi"
-  },
-  {
     "timestamp": "2026-09-17T01:40:47+00:00",
     "promoted": false,
     "win_rate": 0.8269,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.875,
     "summary": "**Change summary**  \nThe current champion minimizes the *second‑round deficit* before it ever looks at whether the action instantly kills a pirate that is already on the loss‑border (position 2). In tight situations this"
+  },
+  {
+    "timestamp": "2026-09-19T01:19:18+00:00",
+    "promoted": false,
+    "win_rate": 0.8462,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary** – The current champion values the *second‑round deficit* before it ever looks at whether the first action **instantly kills a pirate that is already on the loss border (position 2)**. In tight situatio"
   }
 ]
