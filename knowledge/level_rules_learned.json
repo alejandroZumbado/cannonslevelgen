@@ -957,5 +957,12 @@
     "evidence": "level 'A0001' (4 pirates, 4 filas, max_hp=2, columns=[0, 1]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 4 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-19",
+    "statement": "Moving a cannon onto a column that already contains a pirate lets the cannon fire at that pirate in the same round (the shoot phase happens after the move, before the pirate advances). => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (2 pirates, 2 filas, max_hp=1, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

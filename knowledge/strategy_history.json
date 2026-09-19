@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-17T01:40:47+00:00",
-    "promoted": false,
-    "win_rate": 0.8269,
-    "candidate_win_rate": 0.7212,
-    "summary": "**Change summary**  \nThe current champion always tries to minimise *second‑round deficit* before it values an instant lethal shot on a pirate that is already on the loss‑border (position 2). This lets a borderline pirate"
-  },
-  {
     "timestamp": "2026-09-17T01:42:30+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary** – The current champion values the *second‑round deficit* before it ever looks at whether the first action **instantly kills a pirate that is already on the loss border (position 2)**. In tight situatio"
+  },
+  {
+    "timestamp": "2026-09-19T01:21:21+00:00",
+    "promoted": false,
+    "win_rate": 0.9423,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Change summary**  \nThe champion policy can ignore an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because it first tries to minimise the *second‑round deficit*. In tight situations "
   }
 ]
