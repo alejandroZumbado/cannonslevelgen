@@ -992,5 +992,12 @@
     "evidence": "level 'A0001' (1 pirates, 1 filas, max_hp=3, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-20",
+    "statement": "**Hypothesis:**  \nA cannon retains all damage it has accumulated from previous merges after it is moved to an empty column; thus you can build up high damage in one column, relocate the cannon, and still kill a later high‑HP pirate in a different column with that stored damage. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (6 pirates, 6 filas, max_hp=4, columns=[0, 1, 2, 3, 4]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 7 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
