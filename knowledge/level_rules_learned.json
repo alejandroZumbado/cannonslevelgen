@@ -1006,5 +1006,12 @@
     "evidence": "level 'B0001' (7 pirates, 7 filas, max_hp=5, columns=[0, 1, 2, 3, 4]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 8 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-20",
+    "statement": "Hypothesis: When a cannon is placed onto a column that already contains a pirate (and no other cannon), the cannon fires during that same round’s shoot phase, giving the pirate one of its three possible damage opportunities immediately. => confirmed winnable by test level.",
+    "evidence": "level 'Z0001' (1 pirates, 1 filas, max_hp=3, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 2 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

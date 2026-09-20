@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-19T01:16:40+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.8077,
-    "summary": "**Change summary** – The champion policy can skip an *instant lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. By moving the `-kill_l"
-  },
-  {
     "timestamp": "2026-09-19T01:18:24+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8077,
     "summary": "**Change summary** – The champion sometimes ignores an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because it first tries to minimise the two‑round deficit.  \nI add a pre‑check: if a"
+  },
+  {
+    "timestamp": "2026-09-20T01:31:15+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.75,
+    "summary": "**Change summary** – The champion sometimes ignores a *guaranteed* lethal hit on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit.  \nI add a pre‑check: if "
   }
 ]
