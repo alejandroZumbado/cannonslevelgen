@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-19T01:18:24+00:00",
-    "promoted": false,
-    "win_rate": 0.8846,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change summary**  \nThe current champion minimizes the *second‑round deficit* before it ever looks at whether the action instantly kills a pirate that is already on the loss‑border (position 2). In tight situations this"
-  },
-  {
     "timestamp": "2026-09-19T01:19:18+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.75,
     "summary": "**Change summary** – The champion sometimes ignores a *guaranteed* lethal hit on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit.  \nI add a pre‑check: if "
+  },
+  {
+    "timestamp": "2026-09-20T01:32:14+00:00",
+    "promoted": false,
+    "win_rate": 0.8558,
+    "candidate_win_rate": 0.8077,
+    "summary": "**Change summary** – The champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit. By moving the *kill‑lethal*"
   }
 ]
