@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-18T00:41:56+00:00",
-    "promoted": false,
-    "win_rate": 0.9327,
-    "candidate_win_rate": 0.8846,
-    "summary": "**Change summary**  \nThe current champion always minimises *second‑round deficit* before rewarding an action that instantly kills a pirate that is already on the loss‑border (position 2). In tight situations this makes t"
-  },
-  {
     "timestamp": "2026-09-18T00:42:49+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary**  \nThe champion sometimes ignores an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because it first tries to minimise the *second‑round deficit*. In those cases the a"
+  },
+  {
+    "timestamp": "2026-09-20T01:25:41+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.9135,
+    "summary": "**Change summary**  \nThe current policy breaks ties by preferring a *move* over a *spawn* (`tie_pref = 0` for moves, `1` for spawns). When the two actions are otherwise identical – e.g., both kill a pirate on the loss bo"
   }
 ]
