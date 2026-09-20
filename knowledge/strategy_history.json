@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-18T00:38:50+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe current champion undervalues an *instant lethal* shot on a pirate that is already on the loss‑border (position 2). It only considers such kills after the first‑round deficit, so in tight situatio"
-  },
-  {
     "timestamp": "2026-09-18T00:39:43+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8365,
     "candidate_win_rate": 0.7981,
     "summary": "**Change summary** – The champion sometimes skips a *guaranteed* lethal shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit.  \nI added a tiny pre‑chec"
+  },
+  {
+    "timestamp": "2026-09-20T01:22:16+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.7981,
+    "summary": "**Change summary**  \nThe current champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit. I add a tiny pre‑ch"
   }
 ]
