@@ -1,0 +1,11 @@
+{
+  "levelNumber": 507,
+  "password": "H6461",
+  "generated_at": "2026-09-21T11:21:12+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 10.2,
+  "champion_rounds_played": 7,
+  "baseline_won": false,
+  "baseline_rounds_played": 6,
+  "difficulty_tag": "requires_learned_strategy"
+}
