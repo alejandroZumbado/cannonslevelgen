@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-19T01:28:07+00:00",
-    "promoted": false,
-    "win_rate": 0.8462,
-    "candidate_win_rate": 0.7885,
-    "summary": "**Change summary**  \nThe champion sometimes skips a shot that would *instantly* kill a pirate already on the loss‑border (position 2) because it first tries to minimise the second‑round deficit. I add a cheap early‑exit:"
-  },
-  {
     "timestamp": "2026-09-19T01:28:59+00:00",
     "promoted": false,
     "win_rate": 0.8365,
@@ -138,5 +131,12 @@
     "win_rate": 0.8462,
     "candidate_win_rate": 0.8173,
     "summary": "**Change summary** – The champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because the evaluation order puts the two‑round deficit first. I add a pre‑check that"
+  },
+  {
+    "timestamp": "2026-09-21T01:20:22+00:00",
+    "promoted": false,
+    "win_rate": 0.9327,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
