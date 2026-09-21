@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T01:17:54+00:00",
-    "promoted": false,
-    "win_rate": 0.8558,
-    "candidate_win_rate": 0.8173,
-    "summary": "**Change summary** – The champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the *second‑round deficit*. I add a tiny pre‑check"
-  },
-  {
     "timestamp": "2026-09-20T01:19:01+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.9135,
     "candidate_win_rate": 0.9135,
     "summary": "**Change summary**  \nThe current champion evaluates *first‑round deficit* before the *kill‑lethal* flag, so when two actions have the same second‑round outlook it can prefer an action that leaves a pirate on the loss‑bor"
+  },
+  {
+    "timestamp": "2026-09-21T01:28:38+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary** – The champion sometimes ignores an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because `kill_lethal` is evaluated **after** the first‑round deficit. By moving the"
   }
 ]

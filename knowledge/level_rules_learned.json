@@ -1041,5 +1041,12 @@
     "evidence": "level 'B0001' (1 pirates, 1 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-21",
+    "statement": "Hypothesis: By repeatedly placing cannons onto the same empty column before any pirate appears, the cannon’s damage can be increased above the base 1; when a high‑HP pirate later spawns in that column, the already‑powered cannon will fire immediately and can kill pirates whose HP is greater than 3 without needing any merges after the pirate is present. => confirmed winnable by test level.",
+    "evidence": "level 'A0001' (4 pirates, 4 filas, max_hp=3, columns=[0, 1, 2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
