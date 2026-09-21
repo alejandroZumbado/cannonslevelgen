@@ -1034,5 +1034,12 @@
     "evidence": "level 'A0001' (2 pirates, 2 filas, max_hp=4, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-21",
+    "statement": "**Hypothesis:**  \nIf a column already has a pirate, placing a cannon onto that column each round both merges (increasing the cannon’s damage by +1 per merge) **and** fires immediately with the new damage. This lets the player raise damage step‑by‑step while still dealing damage, so a pirate whose HP exceeds 3 can be eliminated before it reaches position 3. => confirmed winnable by test level.",
+    "evidence": "level 'B0001' (1 pirates, 1 filas, max_hp=5, columns=[0]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 3 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]

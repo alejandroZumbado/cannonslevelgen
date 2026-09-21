@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T01:16:28+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.7692,
-    "summary": "**Change explanation**  \nThe champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because it first tries to minimise the two‑round deficit. I add a tiny pre‑check:"
-  },
-  {
     "timestamp": "2026-09-20T01:17:54+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary** – The current champion prefers actions that guarantee a kill on the next round (`kill_next`) before it considers actions that can kill a pirate that is already on the loss‑border this round (`kill_leth"
+  },
+  {
+    "timestamp": "2026-09-21T01:26:44+00:00",
+    "promoted": false,
+    "win_rate": 0.9135,
+    "candidate_win_rate": 0.9135,
+    "summary": "**Change summary**  \nThe current champion evaluates *first‑round deficit* before the *kill‑lethal* flag, so when two actions have the same second‑round outlook it can prefer an action that leaves a pirate on the loss‑bor"
   }
 ]
