@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T01:25:41+00:00",
-    "promoted": false,
-    "win_rate": 0.9135,
-    "candidate_win_rate": 0.9135,
-    "summary": "**Change summary**  \nThe current policy breaks ties by preferring a *move* over a *spawn* (`tie_pref = 0` for moves, `1` for spawns). When the two actions are otherwise identical – e.g., both kill a pirate on the loss bo"
-  },
-  {
     "timestamp": "2026-09-20T01:28:25+00:00",
     "promoted": false,
     "win_rate": 0.9231,
@@ -138,5 +131,12 @@
     "win_rate": 0.8846,
     "candidate_win_rate": 0.8846,
     "summary": "**Change summary** – The current champion evaluates *first‑round deficit* before the *kill‑lethal* flag, so when two actions have the same second‑round outlook it can pick an action that leaves a pirate on the loss‑borde"
+  },
+  {
+    "timestamp": "2026-09-22T01:43:28+00:00",
+    "promoted": false,
+    "win_rate": 0.9327,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
