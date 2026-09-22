@@ -202,7 +202,11 @@ def _compare(previous: dict | None, current: dict) -> dict:
     }
 
 
-def main() -> None:
+def run_and_save() -> dict:
+    """Runs the audit and writes the dated report + latest.json, WITHOUT
+    committing. Split out of main() so local tools (extend_release.py) can
+    refresh the audit without git_sync's `git add -A` sweeping unrelated
+    work-in-progress into a bot commit."""
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     previous = json.loads(LATEST_PATH.read_text(encoding="utf-8")) if LATEST_PATH.exists() else None
 
@@ -222,7 +226,11 @@ def main() -> None:
               f"regressed={comparison['regressed_from_champion_win']}")
     else:
         print("No previous report to compare against (first run).")
+    return report
 
+
+def main() -> None:
+    report = run_and_save()
     stamp_msg = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     git_sync.commit_and_push(
         f"[bot] weekly level audit - {stamp_msg} - "

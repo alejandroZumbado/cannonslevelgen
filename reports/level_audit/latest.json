@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:53:49+00:00",
+  "generated_at": "2026-09-22T18:54:09+00:00",
   "policy_name": "kill_priority_two_step_lookahead_fixed_plus_next_kill_better",
   "policy_source_chars": 8350,
   "escalation_beam_widths": [
@@ -9,7 +9,7 @@
   ],
   "max_rounds": 60,
   "total_levels": 507,
-  "elapsed_seconds": 491.4,
+  "elapsed_seconds": 505.3,
   "counts": {
     "champion_win": 209,
     "solved_by_search_only": 32,
@@ -8131,9 +8131,9 @@
   ],
   "comparison_to_previous_run": {
     "has_previous": true,
-    "previous_generated_at": "2026-09-21T15:01:50+00:00",
+    "previous_generated_at": "2026-09-22T17:53:49+00:00",
     "previous_counts": {
-      "champion_win": 204,
+      "champion_win": 209,
       "solved_by_search_only": 32,
       "no_win_found": 266
     },

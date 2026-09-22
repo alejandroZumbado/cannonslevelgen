@@ -73,6 +73,22 @@ def _load_previous_assignments() -> dict[int, int]:
     }
 
 
+def _levels_with_empty_rounds() -> set[int] | None:
+    """levelNumbers whose CURRENT asset has a fila with zero pirates, read
+    straight from Cannons' Assets/Levels. The fill-results report only knows
+    the original 500 levels, so a newly added level with a dead round would
+    otherwise be classified "ready". None if the Cannons checkout isn't
+    available (e.g. CI without it) — caller falls back to the report."""
+    levels_dir = config.CANNONS_REPO / "Assets" / "Levels"
+    if not levels_dir.is_dir():
+        return None
+    from verification.official_levels import load_all
+    return {
+        lvl.levelNumber for lvl in load_all(levels_dir)
+        if any(not any(c.tipo >= 1 for c in fila.cuadros) for fila in lvl.filas)
+    }
+
+
 def build_manifest(extra_levels: list[dict] | None = None) -> dict:
     """extra_levels: optional list of {levelNumber, password, isHard,
     classification, difficulty_score} dicts for levels not yet in the
@@ -81,6 +97,7 @@ def build_manifest(extra_levels: list[dict] | None = None) -> dict:
     audit = json.loads(AUDIT_PATH.read_text(encoding="utf-8"))
     fill = json.loads(FILL_PATH.read_text(encoding="utf-8")) if FILL_PATH.exists() else {}
     previous_assignments = _load_previous_assignments()
+    empty_from_assets = _levels_with_empty_rounds()
 
     rows = [dict(lvl, source="original") for lvl in audit["levels"]]
     if extra_levels:
@@ -90,7 +107,10 @@ def build_manifest(extra_levels: list[dict] | None = None) -> dict:
     for lvl in rows:
         n = lvl["levelNumber"]
         classification = lvl["classification"]
-        has_unfixed_empty = bool(fill.get(str(n), {}).get("filas_left_empty"))
+        if empty_from_assets is not None:
+            has_unfixed_empty = n in empty_from_assets
+        else:
+            has_unfixed_empty = bool(fill.get(str(n), {}).get("filas_left_empty"))
 
         if n in previous_assignments:
             pool = "assigned"

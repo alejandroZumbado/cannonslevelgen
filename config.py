@@ -83,6 +83,10 @@ JOB_TIME_BUDGET_SECONDS = int(os.environ.get("JOB_TIME_BUDGET_SECONDS", 480))
 CANNONS_REPO = Path(os.environ.get("CANNONS_REPO_PATH", ROOT.parent / "Cannons"))
 INCOMING_LEVELS_DIR = CANNONS_REPO / "GeneratedLevels" / "incoming"
 
+# Local Unity Editor, used only by verification/extend_release.py to run the
+# ReleaseValidator headless. Override with UNITY_EXE; missing = step skipped.
+UNITY_EXE = os.environ.get("UNITY_EXE", r"E:\versionesUnity\6000.3.13f1\Editor\Unity.exe")
+
 STATE_DIR = ROOT / "state"
 KNOWLEDGE_DIR = ROOT / "knowledge"
 LEARNING_LOG_DIR = ROOT / "learning_log"
