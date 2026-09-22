@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T01:28:25+00:00",
-    "promoted": false,
-    "win_rate": 0.9231,
-    "candidate_win_rate": 0.9231,
-    "summary": "**Change summary**  \nThe current policy sometimes forgoes an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because the first‑round deficit (`first_def`) is evaluated before the “kill‑l"
-  },
-  {
     "timestamp": "2026-09-20T01:28:54+00:00",
     "promoted": false,
     "win_rate": 0.8462,
@@ -138,5 +131,12 @@
     "win_rate": 0.9327,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-22T01:45:51+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary** – The current policy treats *first‑round deficit* as more important than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In situations where two actions have the s"
   }
 ]

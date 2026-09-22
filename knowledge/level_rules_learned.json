@@ -1055,5 +1055,12 @@
     "evidence": "level 'A0001' (6 pirates, 5 filas, max_hp=2, columns=[0, 1, 2]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 5 rounds (robustness: consistent when padded with 5 empty filas on either side)",
     "confidence": 0.7,
     "source": "level_designer"
+  },
+  {
+    "date": "2026-09-22",
+    "statement": "**Hypothesis:**  \nWhen a cannon is moved from one column to another, its accumulated damage is preserved, and if the destination column currently contains a pirate (and no other cannon), the move triggers an immediate shot using the moved cannon’s current damage. => confirmed winnable by test level.",
+    "evidence": "level 'A1234' (5 pirates, 5 filas, max_hp=4, columns=[0, 1, 2, 3]) played with current policy (kill_priority_two_step_lookahead_fixed_plus_next_kill_better): WON in 6 rounds (robustness: consistent when padded with 5 empty filas on either side)",
+    "confidence": 0.7,
+    "source": "level_designer"
   }
 ]
