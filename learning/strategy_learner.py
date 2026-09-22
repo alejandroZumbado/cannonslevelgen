@@ -19,7 +19,9 @@ from llm import client, budget, audit
 from learning import knowledge, strategy_history
 from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, load_policy_from_source, PolicyLoadError
+from sim import real_suite
 from sim.benchmark import fixed_suite, random_suite
+from sim.engine import run_level
 from sim.evaluate import evaluate
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
@@ -39,6 +41,34 @@ _REFINE_MODE_STREAK_THRESHOLD = 3
 # 100 random + 4 fixed; simulation is pure Python with no LLM cost, so this
 # is free (measured <20ms for the whole suite even at 150).
 _RANDOM_SUITE_SIZE = 100
+
+# Real-level failures shown to the LLM per cycle (see sim/real_suite.py).
+# They REPLACE the learned-rules block (~470 tokens, mostly restating the
+# authoritative rules by 09-22), so the prompt doesn't grow — mind the 413
+# history in run_cycle's max_tokens comment before raising this.
+_FAILURES_IN_PROMPT = 2
+
+
+def _failures_block(policy, targets: list, seed: int) -> str:
+    """Up to _FAILURES_IN_PROMPT real, winnable levels the current policy
+    loses, with how it lost. Rotates by `seed` so cycles see different ones."""
+    lost = []
+    for level in targets:
+        engine = run_level(level, policy)
+        if not engine.won:
+            lost.append((level, engine))
+    if not lost:
+        return ""
+    start = seed % len(lost)
+    picked = [lost[(start + i) % len(lost)] for i in range(min(_FAILURES_IN_PROMPT, len(lost)))]
+    parts = []
+    for level, engine in picked:
+        survivors = ", ".join(f"c{p.column} pos{p.position} hp{p.hp}" for p in engine.pirates) or "-"
+        parts.append(f"Level {level.levelNumber} (lost at round {engine.round}; pirates left: {survivors}):\n"
+                     f"{real_suite.describe_level(level)}")
+    return (f"\nReal game levels the current policy LOSES although they are winnable "
+            f"({len(lost)} of {len(targets)} such levels; rounds top to bottom, c0=right..c4=left):\n"
+            + "\n\n".join(parts) + "\n")
 
 _ENGINE_SPEC = """\
 Interface you can rely on (do not invent other attributes/methods):
@@ -77,7 +107,7 @@ def _extract_code(text: str) -> str | None:
 
 
 def _build_prompt(current_source: str, current_score, rng_seed: int, *,
-                   refine_mode: bool, recent_attempts: str) -> tuple[str, str]:
+                   refine_mode: bool, recent_attempts: str, failures: str = "") -> tuple[str, str]:
     recent_block = (
         f"\nRecently rejected attempts — do NOT propose something that amounts to the "
         f"same idea again, they already lost to the current champion:\n{recent_attempts}\n"
@@ -126,9 +156,7 @@ Current policy source (win rate {current_score.win_rate:.2%} over {current_score
 {current_source}
 ```
 
-Learned rules so far (from independent play-testing, may be useful context):
-{knowledge.rules_as_prompt_block()}
-{recent_block}
+{failures}{recent_block}
 {task} Requirements:
 - Must define `class Policy` with method `choose_action(self, engine)`.
 - No imports, no file/network access, no infinite loops.
@@ -149,8 +177,15 @@ def run_cycle() -> dict:
     current_source = CURRENT_POLICY_PATH.read_text(encoding="utf-8")
     current_policy = load_policy_from_file(CURRENT_POLICY_PATH)
 
-    suite = fixed_suite() + random_suite(n=_RANDOM_SUITE_SIZE, seed=datetime.now().microsecond)
+    # Synthetic suite alone is saturated (see sim/real_suite.py): real
+    # winnable levels are where improvement can actually show. Guards (real
+    # levels the champion wins) make regressions cost a candidate too.
+    targets, guards = real_suite.load_suite()
+    suite = (fixed_suite() + random_suite(n=_RANDOM_SUITE_SIZE, seed=datetime.now().microsecond)
+             + targets + guards)
     current_score = evaluate(current_policy, suite)
+    seed = datetime.now().microsecond
+    failures = _failures_block(current_policy, targets, seed)
 
     streak = strategy_history.consecutive_rejections()
     refine_mode = streak >= _REFINE_MODE_STREAK_THRESHOLD
@@ -161,8 +196,9 @@ def run_cycle() -> dict:
     # prompt the 413 regression needed.
     recent_attempts = strategy_history.recent_attempts_block(6)
 
-    system, user = _build_prompt(current_source, current_score, rng_seed=datetime.now().microsecond,
-                                  refine_mode=refine_mode, recent_attempts=recent_attempts)
+    system, user = _build_prompt(current_source, current_score, rng_seed=seed,
+                                  refine_mode=refine_mode, recent_attempts=recent_attempts,
+                                  failures=failures)
     # 4000 -> 3000 on 2026-08-28: prompt (policy source + GAME_RULES + learned
     # rules + recent attempts) measured ~4450 tokens; with max_tokens=4000 the
     # combined request+completion budget (~8450) tripped Groq's 413 on every

@@ -44,6 +44,7 @@ from pathlib import Path
 import config
 import git_sync
 from policy.loader import load_policy_from_file
+from sim import real_suite
 from sim.engine import run_level
 from sim.level import Level
 from verification.official_levels import load_all
@@ -226,6 +227,11 @@ def run_and_save() -> dict:
               f"regressed={comparison['regressed_from_champion_win']}")
     else:
         print("No previous report to compare against (first run).")
+
+    # Real-level snapshot for strategy_learner (its workflow has no Cannons
+    # checkout) — see sim/real_suite.py for why it needs real levels.
+    written = real_suite.write_suite(load_all(CANNONS_LEVELS_DIR), report)
+    print(f"real_suite: {written} winnable real levels written to {real_suite.SUITE_PATH.name}")
     return report
 
 

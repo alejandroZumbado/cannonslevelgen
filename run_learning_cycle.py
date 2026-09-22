@@ -56,6 +56,9 @@ _RUNNERS = {
 # like a normal day does.
 _MAX_CYCLE_PAIRS_PER_RUN = 300
 
+# level_designer runs on 1 of every N pairs — see _next_order.
+_DESIGNER_EVERY = 3
+
 
 def _next_order() -> list[str]:
     """Alternates which learner goes first each cycle. Whichever runs first
@@ -65,14 +68,22 @@ def _next_order() -> list[str]:
     strategy_learner always going first meant level_designer got starved
     almost completely on scarce days (0/20 successful calls one day, 0 new
     knowledge/level_rules_learned.json entries for 2 days straight) — not a
-    real prioritization decision, just an accident of hardcoded order."""
+    real prioritization decision, just an accident of hardcoded order.
+
+    2026-09-22: level_designer now runs only every _DESIGNER_EVERY-th pair
+    (goes first on its turn so it still can't be starved). By then its new
+    "rules" mostly restated the authoritative GAME_RULES (152 stored, 5 used
+    in prompts) while eating ~40% of the daily tokens; strategy_learner got
+    a real signal (sim/real_suite.py) and gets the freed budget."""
     try:
-        last_first = json.loads(_ORDER_STATE_PATH.read_text(encoding="utf-8"))["last_first"]
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        last_first = "strategy_learner"
-    order = ["level_designer", "strategy_learner"] if last_first == "strategy_learner" \
-        else ["strategy_learner", "level_designer"]
-    _ORDER_STATE_PATH.write_text(json.dumps({"last_first": order[0]}), encoding="utf-8")
+        state = json.loads(_ORDER_STATE_PATH.read_text(encoding="utf-8"))
+        pair = int(state.get("pair", 0))
+    except (FileNotFoundError, json.JSONDecodeError, ValueError):
+        pair = 0
+    pair += 1
+    order = ["level_designer", "strategy_learner"] if pair % _DESIGNER_EVERY == 0 \
+        else ["strategy_learner"]
+    _ORDER_STATE_PATH.write_text(json.dumps({"pair": pair, "last_first": order[0]}), encoding="utf-8")
     return order
 
 
@@ -107,13 +118,16 @@ def main() -> int:
     pairs_run = 0
     while pairs_run < _MAX_CYCLE_PAIRS_PER_RUN:
         pairs_run += 1
-        first, second = _next_order()
-        print(f"  pair {pairs_run}: order {first} -> {second} "
+        order = _next_order()
+        print(f"  pair {pairs_run}: order {' -> '.join(order)} "
               f"({time.monotonic() - start:.0f}s elapsed)", flush=True)
 
-        exhausted = _run_one(first)
-        if not exhausted:
-            exhausted = _run_one(second)
+        # stop at the first learner that hits the budget/provider cap
+        exhausted = False
+        for name in order:
+            exhausted = _run_one(name)
+            if exhausted:
+                break
 
         try:
             git_sync.sync_cycle_results()
