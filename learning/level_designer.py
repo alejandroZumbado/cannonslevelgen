@@ -117,8 +117,14 @@ def run_cycle() -> dict:
     # proven-safe zone on this tier. level_designer's own prompt is only
     # ~1.7-2k tokens, so max_tokens=5000 lands it in that same proven-safe
     # zone (~6700-7000 total) while giving ~67% more room to finish the JSON.
+    # reasoning_effort="low" (2026-09-22): audit 09-16..22 showed 29/30
+    # no_json failures were EMPTY responses pinned at the prompt+max_tokens
+    # ceiling — hidden reasoning ate all 5000 tokens before any output.
+    # Raising max_tokens again would re-risk the 413s above; capping the
+    # reasoning instead keeps the request size identical.
     completion = client.complete(system, user, max_tokens=5000,
-                                  reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS)
+                                  reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS,
+                                  reasoning_effort="low")
     response = completion.text
 
     hypothesis = response.split("```")[0].strip()

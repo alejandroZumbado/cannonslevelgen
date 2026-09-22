@@ -71,7 +71,7 @@ def _estimate_tokens(*texts: str) -> int:
 
 def complete(
     system: str, user: str, max_tokens: int = 2000, provider: str | None = None,
-    reserve_tokens: int = 0,
+    reserve_tokens: int = 0, reasoning_effort: str | None = None,
 ) -> Completion:
     """Returns a Completion (text + exact tokens_used for this call). Raises
     budget.BudgetExceeded if the call would blow the daily cap — callers
@@ -93,7 +93,11 @@ def complete(
     (see llm/cooldown.py) — once a provider tells us its quota is exhausted
     for N minutes, every call attempt in that window (including from a brand
     new disposable CI runner with no memory of its own) skips straight to
-    this instead of spending another guaranteed-429 request."""
+    this instead of spending another guaranteed-429 request.
+
+    `reasoning_effort` ("low"/"medium"/"high", Groq gpt-oss only; None = the
+    provider default, medium) caps how much of max_tokens hidden reasoning
+    may eat. Ignored for Anthropic."""
     provider = provider or config.AI_PROVIDER
 
     cooling_until = cooldown.resume_at(provider)
@@ -112,7 +116,7 @@ def complete(
     budget.check_can_spend(estimated_in + max_tokens, reserve=reserve_tokens)
 
     if provider == "groq":
-        text, used = _call_groq(system, user, max_tokens)
+        text, used = _call_groq(system, user, max_tokens, reasoning_effort)
         model = config.GROQ_MODEL
     elif provider == "anthropic":
         text, used = _call_anthropic(system, user, max_tokens)
@@ -160,24 +164,31 @@ def _parse_tpd(resp) -> dict | None:
     return {"limit": limit, "used": used, "requested": requested}
 
 
-def _call_groq(system: str, user: str, max_tokens: int) -> tuple[str, int]:
+def _call_groq(system: str, user: str, max_tokens: int,
+               reasoning_effort: str | None = None) -> tuple[str, int]:
     if not config.GROQ_API_KEY:
         raise LLMError("GROQ_API_KEY not set in .env")
+
+    payload = {
+        "model": config.GROQ_MODEL,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        "max_tokens": max_tokens,
+        "temperature": 0.7,
+    }
+    # Only sent when a caller asks for it, so every other caller keeps the
+    # exact request it had before.
+    if reasoning_effort is not None:
+        payload["reasoning_effort"] = reasoning_effort
 
     for attempt in range(_MAX_429_RETRIES + 1):
         _throttle()
         resp = requests.post(
             GROQ_URL,
             headers={"Authorization": f"Bearer {config.GROQ_API_KEY}"},
-            json={
-                "model": config.GROQ_MODEL,
-                "messages": [
-                    {"role": "system", "content": system},
-                    {"role": "user", "content": user},
-                ],
-                "max_tokens": max_tokens,
-                "temperature": 0.7,
-            },
+            json=payload,
             timeout=120,
         )
         if resp.status_code == 429:

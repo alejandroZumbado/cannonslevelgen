@@ -105,7 +105,10 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
 
     for attempt in range(1, MAX_ATTEMPTS + 1):
         system, user = _build_prompt(level_number)
-        completion = client.complete(system, user, max_tokens=3000)
+        # reasoning_effort="low" (2026-09-22): 9/10 no_json attempts since
+        # 09-16 were EMPTY responses at the max_tokens ceiling (hidden
+        # reasoning used all 3000), which left 09-19 and 09-22 with no level.
+        completion = client.complete(system, user, max_tokens=3000, reasoning_effort="low")
         response = completion.text
         level_dict = _extract_json(response)
         if level_dict is None:
