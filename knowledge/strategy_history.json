@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T01:13:44+00:00",
-    "promoted": false,
-    "win_rate": 0.8077,
-    "candidate_win_rate": 0.7404,
-    "summary": "**Change summary**  \nThe current champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because the first‑round deficit is evaluated before the `kill_lethal` flag. I"
-  },
-  {
     "timestamp": "2026-09-21T01:16:10+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8942,
     "candidate_win_rate": 0.8942,
     "summary": "**Change explanation**  \nThe current champion values the *first‑round deficit* more than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations this can let a pirate rea"
+  },
+  {
+    "timestamp": "2026-09-22T01:53:19+00:00",
+    "promoted": false,
+    "win_rate": 0.8942,
+    "candidate_win_rate": 0.8942,
+    "summary": "**Change summary**  \nThe current champion prefers a lower *first‑round deficit* over an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations this can let a pirate survive"
   }
 ]
