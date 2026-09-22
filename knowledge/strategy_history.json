@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T01:22:16+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.7981,
-    "summary": "**Change summary**  \nThe current champion sometimes skips an *instant‑lethal* shot on a pirate that is already on the loss‑border (position 2) because it first tries to minimise the two‑round deficit. I add a tiny pre‑ch"
-  },
-  {
     "timestamp": "2026-09-20T01:24:34+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.875,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-22T01:40:03+00:00",
+    "promoted": false,
+    "win_rate": 0.8654,
+    "candidate_win_rate": 0.8654,
+    "summary": "**Change summary** – The current policy prefers a lower *first‑round deficit* over an *instant lethal* shot on a pirate that is already on the loss border (position 2). In situations where two actions have the same secon"
   }
 ]
