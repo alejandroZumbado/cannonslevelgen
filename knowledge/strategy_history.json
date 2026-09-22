@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-20T01:24:34+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary**  \nThe champion sometimes ignores an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) because it first tries to minimise the *second‑round deficit*. In those cases the a"
-  },
-  {
     "timestamp": "2026-09-20T01:25:41+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8654,
     "candidate_win_rate": 0.8654,
     "summary": "**Change summary** – The current policy prefers a lower *first‑round deficit* over an *instant lethal* shot on a pirate that is already on the loss border (position 2). In situations where two actions have the same secon"
+  },
+  {
+    "timestamp": "2026-09-22T01:42:35+00:00",
+    "promoted": false,
+    "win_rate": 0.8846,
+    "candidate_win_rate": 0.8846,
+    "summary": "**Change summary** – The current champion evaluates *first‑round deficit* before the *kill‑lethal* flag, so when two actions have the same second‑round outlook it can pick an action that leaves a pirate on the loss‑borde"
   }
 ]
