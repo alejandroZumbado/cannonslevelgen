@@ -26,6 +26,7 @@ import argparse
 import json
 import subprocess
 import sys
+import tempfile
 from datetime import datetime
 from pathlib import Path
 
@@ -82,8 +83,8 @@ def _run_unity_validator() -> None:
     if not unity.exists():
         print(f"\nUnity not found at {unity} (set UNITY_EXE) — run Levels > Validate Release in the Editor.")
         return
-    log = config.ROOT / "state" / "unity_validate.log"
-    log.parent.mkdir(parents=True, exist_ok=True)
+    # temp dir, not the repo: the bots' `git add -A` would commit it
+    log = Path(tempfile.gettempdir()) / "cannons_unity_validate.log"
     print("\nRunning Unity ReleaseValidator headless (1-2 min)...")
     code = subprocess.call([str(unity), "-batchmode", "-projectPath", str(config.CANNONS_REPO),
                             "-executeMethod", "ReleaseValidator.RunHeadless", "-logFile", str(log)])
