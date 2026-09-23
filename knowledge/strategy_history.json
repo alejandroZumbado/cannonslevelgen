@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T01:43:28+00:00",
-    "promoted": false,
-    "win_rate": 0.9327,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-22T01:45:51+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8609,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-23T00:52:16+00:00",
+    "promoted": false,
+    "win_rate": 0.8609,
+    "candidate_win_rate": 0.7188,
+    "summary": "**Change summary** – The current champion always tries to minimise the *second‑round deficit* before it values an instant lethal shot on a pirate that is already on the loss border (position 2). In tight levels (e.g., le"
   }
 ]
