@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T01:25:53+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary** – The current champion prefers actions that guarantee a kill on the next round (`kill_next`) before it considers actions that can kill a pirate that is already on the loss‑border this round (`kill_leth"
-  },
-  {
     "timestamp": "2026-09-21T01:26:44+00:00",
     "promoted": false,
     "win_rate": 0.9135,
@@ -138,5 +131,12 @@
     "win_rate": 0.8609,
     "candidate_win_rate": 0.6232,
     "summary": "**Change summary** – The current policy tries to minimise the *second‑round deficit* before it values an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight levels (e.g., level 334"
+  },
+  {
+    "timestamp": "2026-09-23T00:45:37+00:00",
+    "promoted": false,
+    "win_rate": 0.8725,
+    "candidate_win_rate": 0.8667,
+    "summary": "**Change summary** – The champion policy treats an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) as less important than reducing the first‑round deficit, because `kill_lethal` is ranke"
   }
 ]
