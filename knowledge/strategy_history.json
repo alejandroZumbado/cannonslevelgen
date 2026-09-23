@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T01:29:29+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.875,
-    "summary": "**Change explanation**  \nThe current champion evaluates *first‑round deficit* before the *kill‑lethal* flag, so when two actions have the same second‑round outlook it can pick an action that leaves a pirate on the loss‑b"
-  },
-  {
     "timestamp": "2026-09-22T01:39:20+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.8783,
     "candidate_win_rate": 0.4928,
     "summary": "**Change summary**  \nThe current champion always minimises the *second‑round deficit* before it values an instant lethal shot on a pirate that is already on the loss border (position 2). In tight levels this lets a pirat"
+  },
+  {
+    "timestamp": "2026-09-23T00:48:34+00:00",
+    "promoted": false,
+    "win_rate": 0.8609,
+    "candidate_win_rate": 0.6551,
+    "summary": "**Change summary**  \nThe current policy always minimises *second‑round deficit* before it values a guaranteed kill on a pirate that is already on the loss border (position 2). In tight situations (e.g., level 137) this l"
   }
 ]
