@@ -56,13 +56,30 @@ pick the real next `levelNumber` and avoid password collisions (scanned from
 the actual `Assets/Levels/*.asset` files — don't reintroduce a guessed number
 like `datetime.now().toordinal()`, that shipped a `levelNumber: 739851` into
 the real game repo once already), and `production/cannons_sync.py` pushes it
-straight to `GeneratedLevels/incoming/` there. You `git pull` it locally and
-run `Levels > Import Generated Levels (JSON)`
-(`Cannons/Assets/Editor/LevelImporter.cs`) in the Unity Editor — untested
-inside the actual Unity Editor as of this writing, verify it there before
-trusting it blindly. The `schedule` trigger in `daily_production.yml` is
-still commented out on purpose (see the file) until month 1's learned policy
-is trusted enough to publish into the game repo unattended.
+straight to `GeneratedLevels/incoming/` there (scheduled daily since
+2026-09-13). You `git pull` it locally and run `Levels > Import Generated
+Levels (JSON)` (`Cannons/Assets/Editor/LevelImporter.cs`, verified in real
+Unity runs, also headless) — imported levels land in the **reserve**, not in
+the playable release, until linked (next section).
+
+## Release curation & adding batches (`verification/`, `production/`)
+
+The game's `LevelDatabase` holds only the shipped release (200 levels since
+2026-09-22), ordered in difficulty arcs — see Cannons' `CLAUDE.md`
+("Release curation", "Adding a batch of levels") for the game side.
+
+- `python -m production.batch_generator --count 100` — LLM-free batch of
+  verified levels (champion + solver), written to Cannons' `incoming/`.
+- `python -m verification.extend_release --count 100 [--dry-run]` — after
+  the Unity import: refreshes the audit if needed, appends the levels after
+  the last position (never moves existing ones), rewrites
+  `LevelDatabase.asset`, runs Unity's `ReleaseValidator` headless.
+- `python -m verification.curate_release` — first release only (refuses once
+  anything is assigned). Output: `reports/campaign_manifest.json` (pools:
+  assigned/ready/roto/problema_vacio) and `reports/release_order.json`.
+- `sim/real_suite.py` / `reports/real_suite.json` — the real game's
+  winnable levels, written by the weekly audit; strategy_learner scores
+  candidates on them because the synthetic suite is saturated.
 
 ## Setup
 
@@ -97,8 +114,10 @@ about the budget state in its own worktree until the next push/pull.
 ## Layout
 
 ```
-.github/workflows/learning.yml            cron (every 15 min) + manual trigger, runs on GitHub's own VMs
-.github/workflows/weekly_level_audit.yml  cron (weekly) — plays the real 500 Cannons levels, no LLM calls
+.github/workflows/learning.yml            cron + manual trigger, loops cycles until the daily token budget is spent
+.github/workflows/daily_production.yml    cron (daily 06:00 UTC) — 1 LLM-designed level into Cannons' incoming/
+.github/workflows/weekly_level_audit.yml  cron (Mon 08:00 UTC) — plays every real Cannons level, no LLM calls
+.github/workflows/level_repair.yml / level_rebalance.yml  manual only — level fix tools (already applied 09-15)
 git_sync.py     commits+pushes runtime state back to this repo at the end of every cycle
 sim/            headless game engine — level schema, round simulation, benchmark suites, scoring
 policy/         current.py = active strategy (AI-rewritten), baseline.py = fixed v0 reference, history/ = every past version
@@ -109,7 +128,7 @@ verification/   weekly audit of the real 500-level campaign — see below
 knowledge/      level_rules_learned.json — accumulated, AI-discovered design rules
 learning_log/   one markdown file per day — human-readable progress log
 audit/          one JSONL file per day — full per-call audit trail (exact tokens, full prompt/response, outcome) + report.py to read it
-reports/        level_audit/ — one dated JSON per weekly run + latest.json, see below
+reports/        level_audit/ (weekly runs + latest.json), campaign_manifest.json, release_order.json, real_suite.json
 state/          budget.json (daily token counter) — not meant to be read directly
 ```
 

@@ -42,13 +42,13 @@ jobs:
 
     steps:
       - name: Checkout CannonsLevelGen (this repo)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout Cannons (the game repo — separate push target)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: alejandroZumbado/cannons
           fetch-depth: 0
@@ -56,7 +56,7 @@ jobs:
           path: cannons_checkout
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
           cache: 'pip'
