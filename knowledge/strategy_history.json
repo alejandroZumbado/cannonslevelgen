@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T01:52:21+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change explanation**  \nThe current champion values the *first‑round deficit* more than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations this can let a pirate rea"
-  },
-  {
     "timestamp": "2026-09-22T01:53:19+00:00",
     "promoted": false,
     "win_rate": 0.8942,
@@ -138,5 +131,12 @@
     "win_rate": 0.8696,
     "candidate_win_rate": 0.6232,
     "summary": "**Change summary**  \nThe current policy treats the *second‑round deficit* as the most important factor, so it can ignore an *instant lethal* shot on a pirate that is already on the loss‑border (position 2). In tight situ"
+  },
+  {
+    "timestamp": "2026-09-23T00:57:29+00:00",
+    "promoted": false,
+    "win_rate": 0.858,
+    "candidate_win_rate": 0.7217,
+    "summary": "**Change summary** – The current policy treats *second‑round deficit* as the most important factor, so it can ignore an *instant lethal* shot on a pirate that is already on the loss border (position 2).  \nI move the *kil"
   }
 ]
