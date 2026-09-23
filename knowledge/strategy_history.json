@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T01:40:03+00:00",
-    "promoted": false,
-    "win_rate": 0.8654,
-    "candidate_win_rate": 0.8654,
-    "summary": "**Change summary** – The current policy prefers a lower *first‑round deficit* over an *instant lethal* shot on a pirate that is already on the loss border (position 2). In situations where two actions have the same secon"
-  },
-  {
     "timestamp": "2026-09-22T01:42:35+00:00",
     "promoted": false,
     "win_rate": 0.8846,
@@ -138,5 +131,12 @@
     "win_rate": 0.8812,
     "candidate_win_rate": 0.7362,
     "summary": "**Change summary** – The current champion only values a *lethal* shot on a pirate at position 2 after it has tried to minimise the second‑round deficit, so it sometimes lets a border‑line pirate survive and reach positio"
+  },
+  {
+    "timestamp": "2026-09-23T00:50:35+00:00",
+    "promoted": false,
+    "win_rate": 0.8435,
+    "candidate_win_rate": 0.8377,
+    "summary": "**Change summary**  \nThe current champion values *second‑round deficit* higher than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations (e.g., level 334) this lets a "
   }
 ]
