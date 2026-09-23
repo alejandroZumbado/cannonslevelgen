@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T01:20:22+00:00",
-    "promoted": false,
-    "win_rate": 0.9327,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-21T01:22:30+00:00",
     "promoted": false,
     "win_rate": 0.9038,
@@ -138,5 +131,12 @@
     "win_rate": 0.8551,
     "candidate_win_rate": 0.8493,
     "summary": "**Change summary**  \nThe current champion values a lower *first‑round deficit* more than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight levels (e.g., level 137) this lets a"
+  },
+  {
+    "timestamp": "2026-09-23T00:42:27+00:00",
+    "promoted": false,
+    "win_rate": 0.8638,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
