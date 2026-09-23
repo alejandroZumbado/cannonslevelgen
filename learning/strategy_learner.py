@@ -48,6 +48,25 @@ _RANDOM_SUITE_SIZE = 100
 # history in run_cycle's max_tokens comment before raising this.
 _FAILURES_IN_PROMPT = 2
 
+# Refine mode rotates one of these per cycle (2026-09-23): with only "make one
+# small change", the LLM proposed the SAME idea (reorder lethal-kill vs deficit
+# in the key) in 15/15 cycles of 09-23 and ~all of 09-11..22, even with the
+# rejected-attempts list and real failures in the prompt. Each direction
+# targets a weakness visible in the real losses (pirates stacked in one
+# column, HP above what one cannon can clear in 3 shots).
+_EXPLORATION_DIRECTIONS = [
+    "merge planning — build up damage in a column BEFORE a high-HP pirate arrives there, "
+    "instead of spreading 1-damage cannons.",
+    "move actions — when relocating an existing cannon beats placing the new one "
+    "(e.g. a column that is empty now vs one about to be overrun).",
+    "stacked columns — several pirates queued in one column (blocking): total HP of the "
+    "queue vs shots available before the front one reaches the end.",
+    "tie-breaking among SAFE actions — which safe action leaves the board most robust "
+    "to pirates that may spawn next round in any column.",
+    "the deficit estimate itself — make it more accurate (e.g. account for merges/moves "
+    "still possible, or for pirates behind the front one getting fewer shots).",
+]
+
 
 def _failures_block(policy, targets: list, seed: int) -> str:
     """Up to _FAILURES_IN_PROMPT real, winnable levels the current policy
@@ -127,10 +146,13 @@ def _build_prompt(current_source: str, current_score, rng_seed: int, *,
         task = (
             "The current policy is a proven champion — full rewrites keep losing to it. "
             "Propose ONE small, targeted change to THIS EXACT policy (not a redesign): "
-            "adjust one threshold, add one new condition/branch, reorder one priority, or "
+            "adjust one threshold, add one new condition/branch, or "
             "fix one specific case you can point to. Keep everything else identical. "
             "State in 1-2 sentences exactly which weakness of the current policy (ideally "
-            "referencing a concrete column/HP/round scenario) your change addresses."
+            "referencing a concrete column/HP/round scenario) your change addresses.\n"
+            f"FOCUS THIS TIME: {_EXPLORATION_DIRECTIONS[rng_seed % len(_EXPLORATION_DIRECTIONS)]}\n"
+            "FORBIDDEN (tried 100+ times, never won): changing the priority/order between "
+            "lethal-kill flags and the deficit terms in the comparison key."
         )
     else:
         system = (
@@ -194,7 +216,9 @@ def run_cycle() -> dict:
     # "too narrow" problem from 09-01 (it was missing repeated ideas that
     # only resurfaced every 5-9 cycles) while giving back ~270 tokens of
     # prompt the 413 regression needed.
-    recent_attempts = strategy_history.recent_attempts_block(6)
+    # 6 -> 4 on 2026-09-23: the explicit FORBIDDEN line now carries the
+    # "don't repeat" signal; the saved ~180 tokens fund max_tokens below.
+    recent_attempts = strategy_history.recent_attempts_block(4)
 
     system, user = _build_prompt(current_source, current_score, rng_seed=seed,
                                   refine_mode=refine_mode, recent_attempts=recent_attempts,
@@ -236,7 +260,11 @@ def run_cycle() -> dict:
     # since current_source has no upper bound and will keep growing as the
     # policy keeps improving. If 413s reappear, re-measure current_source's
     # size first before touching these caps again.
-    completion = client.complete(system, user, max_tokens=3400,
+    # 3400 -> 3600 on 2026-09-23: 3/18 cycles that day were no_code_block
+    # (code cut off). Prompt shrank ~450 est. tokens since 09-22 (rules block
+    # -> failures, attempts 6 -> 4), so worst total stays under the ~8450
+    # 413 ceiling measured in the history above.
+    completion = client.complete(system, user, max_tokens=3600,
                                   reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS)
     response = completion.text
 
@@ -260,6 +288,9 @@ def run_cycle() -> dict:
         return outcome
 
     candidate_score = evaluate(candidate_policy, suite)
+    # progress on the real headroom, logged so reviews can see partial gains
+    target_wins = ((evaluate(current_policy, targets).wins, evaluate(candidate_policy, targets).wins)
+                   if targets else (0, 0))
 
     reasoning = response.split("```")[0].strip()
 
@@ -278,6 +309,7 @@ def run_cycle() -> dict:
             "promoted": True,
             "old_win_rate": current_score.win_rate,
             "new_win_rate": candidate_score.win_rate,
+            "target_wins": f"{target_wins[0]}->{target_wins[1]}/{len(targets)}",
             "refine_mode": refine_mode,
         }
         audit.record_call(caller="strategy_learner", completion=completion, system=system, user=user, outcome=outcome)
@@ -295,6 +327,7 @@ def run_cycle() -> dict:
         "reason": "not_better",
         "old_win_rate": current_score.win_rate,
         "candidate_win_rate": candidate_score.win_rate,
+        "target_wins": f"{target_wins[0]}->{target_wins[1]}/{len(targets)}",
         "refine_mode": refine_mode,
     }
     audit.record_call(caller="strategy_learner", completion=completion, system=system, user=user, outcome=outcome)
