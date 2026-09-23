@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-21T01:22:30+00:00",
-    "promoted": false,
-    "win_rate": 0.9038,
-    "candidate_win_rate": 0.9038,
-    "summary": "**Change summary** – The current champion evaluates *first‑round deficit* before the *kill‑lethal* flag. When two actions have the same second‑round outlook but different immediate lethal potential, the policy can pick t"
-  },
-  {
     "timestamp": "2026-09-21T01:23:20+00:00",
     "promoted": false,
     "win_rate": 0.8558,
@@ -138,5 +131,12 @@
     "win_rate": 0.8638,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-23T00:43:12+00:00",
+    "promoted": false,
+    "win_rate": 0.8696,
+    "candidate_win_rate": 0.8638,
+    "summary": "**Change summary**  \nThe current champion values *first‑round deficit* higher than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations (e.g., levels 314 and 329) this"
   }
 ]
