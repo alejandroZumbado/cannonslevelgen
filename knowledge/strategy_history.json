@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T01:39:20+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-22T01:40:03+00:00",
     "promoted": false,
     "win_rate": 0.8654,
@@ -138,5 +131,12 @@
     "win_rate": 0.8609,
     "candidate_win_rate": 0.6551,
     "summary": "**Change summary**  \nThe current policy always minimises *second‑round deficit* before it values a guaranteed kill on a pirate that is already on the loss border (position 2). In tight situations (e.g., level 137) this l"
+  },
+  {
+    "timestamp": "2026-09-23T00:49:26+00:00",
+    "promoted": false,
+    "win_rate": 0.8812,
+    "candidate_win_rate": 0.7362,
+    "summary": "**Change summary** – The current champion only values a *lethal* shot on a pirate at position 2 after it has tried to minimise the second‑round deficit, so it sometimes lets a border‑line pirate survive and reach positio"
   }
 ]
