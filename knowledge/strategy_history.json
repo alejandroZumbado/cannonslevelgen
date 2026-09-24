@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:42:27+00:00",
-    "promoted": false,
-    "win_rate": 0.8638,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-23T00:43:12+00:00",
     "promoted": false,
     "win_rate": 0.8696,
@@ -138,5 +131,12 @@
     "win_rate": 0.8667,
     "candidate_win_rate": 0.6783,
     "summary": "**Change summary (2 sentences)**  \nThe current policy never gives priority to moving an existing high‑damage cannon into a column that *has a pirate already on the loss border (position 2) but no cannon yet*. I add a tin"
+  },
+  {
+    "timestamp": "2026-09-24T05:05:43+00:00",
+    "promoted": false,
+    "win_rate": 0.8696,
+    "candidate_win_rate": 0.7217,
+    "summary": "**Change summary**  \nThe original `deficit` assumes the cannon can only fire for the number of rounds the current front pirate has before reaching position 3, which over‑estimates the damage shortfall when the front pira"
   }
 ]
