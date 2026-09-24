@@ -1,0 +1,3612 @@
+{
+ "assigned": 64,
+ "done": 43,
+ "levels": [
+  {
+   "levelNumber": 2,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.97,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.33,
+     "single_pirate_share": 0.67,
+     "late_demand": 0.73,
+     "archetypes": [
+      "swarm"
+     ],
+     "primary": "swarm",
+     "problems": [
+      "67% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 10,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.2,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 1.4,
+     "single_pirate_share": 0.6,
+     "late_demand": 1.2,
+     "archetypes": [
+      "wall",
+      "tank",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": [
+      "60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 18,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 12.2,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 1.5,
+     "single_pirate_share": 0.5,
+     "late_demand": 0.67,
+     "archetypes": [
+      "swarm",
+      "wall"
+     ],
+     "primary": "swarm",
+     "problems": [
+      "gets easier as it goes: last-third pressure 0.67 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 26,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 9.8,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 1.0,
+     "single_pirate_share": 1.0,
+     "late_demand": 0.6,
+     "archetypes": [
+      "wall"
+     ],
+     "primary": "wall",
+     "problems": [
+      "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+      "gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 34,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 12.17,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 2.17,
+     "single_pirate_share": 0.33,
+     "late_demand": 1.37,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 42,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.8,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 1.6,
+     "single_pirate_share": 0.4,
+     "late_demand": 1.2,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 50,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.9,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 1.43,
+     "single_pirate_share": 0.71,
+     "late_demand": 0.86,
+     "archetypes": [
+      "burst",
+      "wall",
+      "switch",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": [
+      "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 58,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.83,
+     "single_pirate_share": 0.33,
+     "late_demand": 0.83,
+     "archetypes": [
+      "switch",
+      "swarm"
+     ],
+     "primary": "switch",
+     "problems": []
+    },
+    "pirates_left": 4,
+    "primary": "switch"
+   },
+   "status": "repaired",
+   "target_archetype": "tank",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 12.17,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.83,
+     "single_pirate_share": 0.17,
+     "late_demand": 1.28,
+     "archetypes": [
+      "wall"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "evaluations": 116,
+   "level": {
+    "levelNumber": 58,
+    "password": "I5026",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 4
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 4,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 14.5
+  },
+  {
+   "levelNumber": 66,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 13.75,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.12,
+     "single_pirate_share": 0.5,
+     "late_demand": 1.35,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm",
+      "crescendo"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 74,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.4,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.0,
+     "single_pirate_share": 1.0,
+     "late_demand": 0.55,
+     "archetypes": [],
+     "primary": null,
+     "problems": [
+      "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+      "gets easier as it goes: last-third pressure 0.55 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": null
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 82,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.4,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.2,
+     "late_demand": 1.6,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 90,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 12.5,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 1.86,
+     "single_pirate_share": 0.43,
+     "late_demand": 0.76,
+     "archetypes": [
+      "swarm",
+      "switch",
+      "wall"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 98,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 15.6,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 3.0,
+     "single_pirate_share": 0.12,
+     "late_demand": 1.47,
+     "archetypes": [
+      "wall",
+      "swarm",
+      "switch"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 106,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.63,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 1.29,
+     "single_pirate_share": 0.71,
+     "late_demand": 0.92,
+     "archetypes": [
+      "crescendo",
+      "tank",
+      "wall"
+     ],
+     "primary": "crescendo",
+     "problems": [
+      "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 114,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.57,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.67,
+     "single_pirate_share": 0.33,
+     "late_demand": 0.73,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 122,
+   "before": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 2.11,
+     "single_pirate_share": 0.33,
+     "late_demand": 0.89,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 4.0
+  },
+  {
+   "levelNumber": 130,
+   "before": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.38,
+     "single_pirate_share": 0.0,
+     "late_demand": 0.94,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 2.9
+  },
+  {
+   "levelNumber": 138,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.43,
+     "single_pirate_share": 0.14,
+     "late_demand": 1.0,
+     "archetypes": [
+      "burst",
+      "switch",
+      "swarm",
+      "wall",
+      "crescendo"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 4,
+    "primary": "burst"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.83,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 3.43,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.85,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 92,
+   "level": {
+    "levelNumber": 138,
+    "password": "R6220",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 4
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 4,
+        "hp": 3
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 34.7
+  },
+  {
+   "levelNumber": 146,
+   "before": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 10,
+     "pirates_per_fila": 2.3,
+     "single_pirate_share": 0.4,
+     "late_demand": 0.71,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 6.6
+  },
+  {
+   "levelNumber": 154,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.67,
+     "single_pirate_share": 0.5,
+     "late_demand": 0.73,
+     "archetypes": [
+      "wall",
+      "burst",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 4,
+    "primary": "wall"
+   },
+   "status": "repaired",
+   "target_archetype": "switch",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 13.1,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 2.33,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.47,
+     "archetypes": [
+      "swarm",
+      "wall"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 213,
+   "level": {
+    "levelNumber": 154,
+    "password": "N1268",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 3
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 4,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 3.5
+  },
+  {
+   "levelNumber": 162,
+   "before": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 10,
+     "pirates_per_fila": 2.3,
+     "single_pirate_share": 0.5,
+     "late_demand": 1.0,
+     "archetypes": [
+      "burst",
+      "crescendo",
+      "wall",
+      "switch",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 6.9
+  },
+  {
+   "levelNumber": 170,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.5,
+     "single_pirate_share": 0.38,
+     "late_demand": 0.75,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 8,
+    "primary": "burst"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.9,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.75,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.28,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 86,
+   "level": {
+    "levelNumber": 170,
+    "password": "C7964",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 4,
+        "hp": 6
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 66.3
+  },
+  {
+   "levelNumber": 178,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.14,
+     "single_pirate_share": 0.43,
+     "late_demand": 1.0,
+     "archetypes": [
+      "burst",
+      "swarm",
+      "wall"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 6,
+    "primary": "burst"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 12.6,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 2.6,
+     "single_pirate_share": 0.0,
+     "late_demand": 2.0,
+     "archetypes": [
+      "swarm",
+      "burst",
+      "wall",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 87,
+   "level": {
+    "levelNumber": 178,
+    "password": "T3433",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 4,
+        "hp": 5
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 13.9
+  },
+  {
+   "levelNumber": 186,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 14.68,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 2.22,
+     "single_pirate_share": 0.44,
+     "late_demand": 0.85,
+     "archetypes": [
+      "burst",
+      "switch",
+      "swarm",
+      "wall"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 194,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.9,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 1.25,
+     "single_pirate_share": 0.75,
+     "late_demand": 0.54,
+     "archetypes": [
+      "switch"
+     ],
+     "primary": "switch",
+     "problems": [
+      "75% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+      "gets easier as it goes: last-third pressure 0.54 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "switch"
+   },
+   "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 202,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 12.47,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 2.17,
+     "single_pirate_share": 0.33,
+     "late_demand": 1.12,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 210,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 13.78,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 1.89,
+     "single_pirate_share": 0.44,
+     "late_demand": 0.84,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 218,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.12,
+     "single_pirate_share": 0.38,
+     "late_demand": 0.66,
+     "archetypes": [
+      "burst",
+      "swarm",
+      "switch",
+      "wall"
+     ],
+     "primary": "burst",
+     "problems": [
+      "gets easier as it goes: last-third pressure 0.66 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+     ]
+    },
+    "pirates_left": 7,
+    "primary": "burst"
+   },
+   "status": "repaired",
+   "target_archetype": "burst",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.62,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.33,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm",
+      "switch"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "evaluations": 50,
+   "level": {
+    "levelNumber": 218,
+    "password": "C2993",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 3
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 4
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 4,
+        "hp": 3
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 3
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 28.2
+  },
+  {
+   "levelNumber": 226,
+   "before": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.43,
+     "late_demand": 1.07,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 0.7
+  },
+  {
+   "levelNumber": 234,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 12.83,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 1.43,
+     "single_pirate_share": 0.71,
+     "late_demand": 0.75,
+     "archetypes": [
+      "crescendo",
+      "burst",
+      "switch",
+      "tank"
+     ],
+     "primary": "crescendo",
+     "problems": [
+      "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "status": "regulated",
+   "target_archetype": "crescendo",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 12.73,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.83,
+     "single_pirate_share": 0.33,
+     "late_demand": 1.17,
+     "archetypes": [
+      "crescendo",
+      "wall",
+      "swarm"
+     ],
+     "primary": "crescendo",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "evaluations": 44,
+   "level": {
+    "levelNumber": 234,
+    "password": "R8051",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 0,
+        "tipo": 4,
+        "hp": 7
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 14.4
+  },
+  {
+   "levelNumber": 242,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 2.33,
+     "single_pirate_share": 0.44,
+     "late_demand": 0.62,
+     "archetypes": [
+      "burst",
+      "switch",
+      "swarm",
+      "wall"
+     ],
+     "primary": "burst",
+     "problems": [
+      "gets easier as it goes: last-third pressure 0.62 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+     ]
+    },
+    "pirates_left": 9,
+    "primary": "burst"
+   },
+   "status": "repaired",
+   "target_archetype": "crescendo",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.9,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.5,
+     "single_pirate_share": 0.38,
+     "late_demand": 1.66,
+     "archetypes": [
+      "crescendo",
+      "swarm",
+      "wall",
+      "burst"
+     ],
+     "primary": "crescendo",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "evaluations": 134,
+   "level": {
+    "levelNumber": 242,
+    "password": "Z5920",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 8
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 4,
+        "hp": 3
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 21.3
+  },
+  {
+   "levelNumber": 250,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 13.15,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 1.75,
+     "single_pirate_share": 0.62,
+     "late_demand": 0.79,
+     "archetypes": [
+      "burst",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": [
+      "62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+     ]
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "regulated",
+   "target_archetype": "switch",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 13.2,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 1.88,
+     "single_pirate_share": 0.5,
+     "late_demand": 0.79,
+     "archetypes": [
+      "switch",
+      "burst",
+      "swarm",
+      "wall"
+     ],
+     "primary": "switch",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "switch"
+   },
+   "evaluations": 27,
+   "level": {
+    "levelNumber": 250,
+    "password": "I4377",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 4
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 3
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 3
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 3
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 4,
+        "hp": 3
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 4.1
+  },
+  {
+   "levelNumber": 258,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 14.46,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 2.11,
+     "single_pirate_share": 0.44,
+     "late_demand": 1.05,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 266,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.43,
+     "single_pirate_share": 0.14,
+     "late_demand": 0.93,
+     "archetypes": [
+      "switch",
+      "wall",
+      "swarm"
+     ],
+     "primary": "switch",
+     "problems": []
+    },
+    "pirates_left": 6,
+    "primary": "switch"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 14.93,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.71,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.54,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 49,
+   "level": {
+    "levelNumber": 266,
+    "password": "U4447",
+    "isHard": false,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 6
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 4,
+        "hp": 3
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 31.1
+  },
+  {
+   "levelNumber": 274,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 3.11,
+     "single_pirate_share": 0.11,
+     "late_demand": 1.63,
+     "archetypes": [
+      "switch",
+      "wall",
+      "burst",
+      "swarm"
+     ],
+     "primary": "switch",
+     "problems": []
+    },
+    "pirates_left": 10,
+    "primary": "switch"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 13.93,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 3.17,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.9,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 112,
+   "level": {
+    "levelNumber": 274,
+    "password": "Z1926",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 3
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 4,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 103.4
+  },
+  {
+   "levelNumber": 282,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 3.0,
+     "single_pirate_share": 0.38,
+     "late_demand": 1.81,
+     "archetypes": [
+      "switch",
+      "wall",
+      "swarm",
+      "burst"
+     ],
+     "primary": "switch",
+     "problems": []
+    },
+    "pirates_left": 5,
+    "primary": "switch"
+   },
+   "status": "repaired",
+   "target_archetype": "burst",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 14.63,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.71,
+     "single_pirate_share": 0.29,
+     "late_demand": 1.95,
+     "archetypes": [
+      "burst",
+      "switch",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "evaluations": 87,
+   "level": {
+    "levelNumber": 282,
+    "password": "R5278",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 5
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 3
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 4,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 26.4
+  },
+  {
+   "levelNumber": 290,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 10,
+     "pirates_per_fila": 2.5,
+     "single_pirate_share": 0.2,
+     "late_demand": 0.91,
+     "archetypes": [
+      "switch",
+      "wall",
+      "swarm",
+      "burst"
+     ],
+     "primary": "switch",
+     "problems": []
+    },
+    "pirates_left": 7,
+    "primary": "switch"
+   },
+   "status": "repaired",
+   "target_archetype": "tank",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.9,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 3.12,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.47,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "switch",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 98,
+   "level": {
+    "levelNumber": 290,
+    "password": "T4628",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 3
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 4,
+        "hp": 3
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 14.5
+  },
+  {
+   "levelNumber": 298,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.75,
+     "single_pirate_share": 0.25,
+     "late_demand": 0.79,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 9,
+    "primary": "wall"
+   },
+   "status": "repaired",
+   "target_archetype": "tank",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.9,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.38,
+     "single_pirate_share": 0.25,
+     "late_demand": 1.05,
+     "archetypes": [
+      "swarm",
+      "burst",
+      "wall",
+      "crescendo"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 72,
+   "level": {
+    "levelNumber": 298,
+    "password": "X2982",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 4,
+        "hp": 9
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 28.7
+  },
+  {
+   "levelNumber": 306,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 10,
+     "pirates_per_fila": 2.1,
+     "single_pirate_share": 0.4,
+     "late_demand": 1.12,
+     "archetypes": [
+      "wall",
+      "burst",
+      "switch",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 5,
+    "primary": "wall"
+   },
+   "status": "repaired",
+   "target_archetype": "burst",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 16.0,
+    "pacing": {
+     "filas": 10,
+     "pirates_per_fila": 2.3,
+     "single_pirate_share": 0.3,
+     "late_demand": 0.97,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm",
+      "switch"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "burst"
+   },
+   "evaluations": 105,
+   "level": {
+    "levelNumber": 306,
+    "password": "D9872",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 3
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 4
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 4,
+        "hp": 5
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 57.3
+  },
+  {
+   "levelNumber": 314,
+   "before": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 2.62,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.14,
+     "archetypes": [
+      "wall",
+      "swarm",
+      "burst"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 4.0
+  },
+  {
+   "levelNumber": 322,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 3.0,
+     "single_pirate_share": 0.22,
+     "late_demand": 0.98,
+     "archetypes": [
+      "wall",
+      "swarm"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 10,
+    "primary": "wall"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "solved_by_search_only",
+    "difficulty": 22.0,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 3.0,
+     "single_pirate_share": 0.0,
+     "late_demand": 1.31,
+     "archetypes": [
+      "swarm",
+      "wall"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 114,
+   "level": {
+    "levelNumber": 322,
+    "password": "N1436",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 3
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 2
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 4
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 4,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 44.1
+  },
+  {
+   "levelNumber": 330,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 15.96,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 2.78,
+     "single_pirate_share": 0.22,
+     "late_demand": 1.34,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "switch"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 338,
+   "before": {
+    "classification": "no_win_found",
+    "difficulty": 0.0,
+    "pacing": {
+     "filas": 9,
+     "pirates_per_fila": 2.44,
+     "single_pirate_share": 0.33,
+     "late_demand": 0.72,
+     "archetypes": [
+      "burst",
+      "wall",
+      "swarm"
+     ],
+     "primary": "burst",
+     "problems": []
+    },
+    "pirates_left": 10,
+    "primary": "burst"
+   },
+   "status": "repaired",
+   "target_archetype": "swarm",
+   "after": {
+    "classification": "champion_win",
+    "difficulty": 15.53,
+    "pacing": {
+     "filas": 7,
+     "pirates_per_fila": 2.86,
+     "single_pirate_share": 0.14,
+     "late_demand": 1.77,
+     "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "crescendo",
+      "switch"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "evaluations": 101,
+   "level": {
+    "levelNumber": 338,
+    "password": "O7417",
+    "isHard": true,
+    "filas": [
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 3
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 1,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 2,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 1,
+        "tipo": 1,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 3,
+        "tipo": 2,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 1
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 0,
+        "tipo": 1,
+        "hp": 7
+       },
+       {
+        "index": 1,
+        "tipo": 3,
+        "hp": 2
+       },
+       {
+        "index": 3,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 2,
+        "tipo": 2,
+        "hp": 2
+       }
+      ]
+     },
+     {
+      "cuadros": [
+       {
+        "index": 4,
+        "tipo": 1,
+        "hp": 1
+       },
+       {
+        "index": 0,
+        "tipo": 3,
+        "hp": 1
+       },
+       {
+        "index": 3,
+        "tipo": 4,
+        "hp": 2
+       }
+      ]
+     }
+    ]
+   },
+   "seconds": 68.0
+  }
+ ]
+}
