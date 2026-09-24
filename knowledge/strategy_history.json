@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T01:56:02+00:00",
-    "promoted": false,
-    "win_rate": 0.875,
-    "candidate_win_rate": 0.8558,
-    "summary": "**Change summary** – The original policy ranks *first‑round deficit* before the *instant‑lethal* check, so in a tight situation it may ignore a move that would immediately kill a pirate that is already on the loss border"
-  },
-  {
     "timestamp": "2026-09-23T00:40:38+00:00",
     "promoted": false,
     "win_rate": 0.8725,
@@ -138,5 +131,12 @@
     "win_rate": 0.8667,
     "candidate_win_rate": 0.8667,
     "summary": "**Change summary**  \nThe original `deficit` only compares total HP in a column with the total damage that can be dealt before the front pirate reaches the loss position. When several pirates are stacked, the front pirate"
+  },
+  {
+    "timestamp": "2026-09-24T05:02:33+00:00",
+    "promoted": false,
+    "win_rate": 0.8638,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
