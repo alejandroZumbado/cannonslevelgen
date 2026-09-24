@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:47:40+00:00",
-    "promoted": false,
-    "win_rate": 0.8783,
-    "candidate_win_rate": 0.4928,
-    "summary": "**Change summary**  \nThe current champion always minimises the *second‑round deficit* before it values an instant lethal shot on a pirate that is already on the loss border (position 2). In tight levels this lets a pirat"
-  },
-  {
     "timestamp": "2026-09-23T00:48:34+00:00",
     "promoted": false,
     "win_rate": 0.8609,
@@ -138,5 +131,12 @@
     "win_rate": 0.8522,
     "candidate_win_rate": 0.8522,
     "summary": "**Change summary**  \nThe original `deficit` only counts the number of rounds left for the current front pirate (`MAX_POSITION‑front.position`). In a stacked column this ignores the extra rounds you gain after killing a b"
+  },
+  {
+    "timestamp": "2026-09-24T05:10:44+00:00",
+    "promoted": false,
+    "win_rate": 0.8783,
+    "candidate_win_rate": 0.8638,
+    "summary": "**Change summary**  \nThe current policy can miss a crucial *move* that kills a front pirate already on the loss border (position 2). Even though such a move eliminates an imminent loss, the `deficit` metric treats it the"
   }
 ]
