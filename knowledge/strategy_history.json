@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:49:26+00:00",
-    "promoted": false,
-    "win_rate": 0.8812,
-    "candidate_win_rate": 0.7362,
-    "summary": "**Change summary** – The current champion only values a *lethal* shot on a pirate at position 2 after it has tried to minimise the second‑round deficit, so it sometimes lets a border‑line pirate survive and reach positio"
-  },
-  {
     "timestamp": "2026-09-23T00:50:35+00:00",
     "promoted": false,
     "win_rate": 0.8435,
@@ -138,5 +131,12 @@
     "win_rate": 0.8609,
     "candidate_win_rate": 0.8522,
     "summary": "**Change summary**  \nThe current policy undervalues a *move* that eliminates an imminent loss because the move discards the pending spawn cannon, lowering the `total_damage` term that is later used for tie‑breaking. I ad"
+  },
+  {
+    "timestamp": "2026-09-24T05:13:00+00:00",
+    "promoted": false,
+    "win_rate": 0.8841,
+    "candidate_win_rate": 0.8841,
+    "summary": "**Change summary**  \nWhen several actions are equally safe the current policy breaks ties only by preferring moves and then by the raw tuple order of the action. This can leave the board with all cannons stacked in a sin"
   }
 ]
