@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:45:37+00:00",
-    "promoted": false,
-    "win_rate": 0.8725,
-    "candidate_win_rate": 0.8667,
-    "summary": "**Change summary** – The champion policy treats an *instant‑lethal* shot on a pirate that is already on the loss border (position 2) as less important than reducing the first‑round deficit, because `kill_lethal` is ranke"
-  },
-  {
     "timestamp": "2026-09-23T00:46:23+00:00",
     "promoted": false,
     "win_rate": 0.8667,
@@ -138,5 +131,12 @@
     "win_rate": 0.8609,
     "candidate_win_rate": 0.8522,
     "summary": "**Change explanation**  \nThe current policy can overlook a *critical move* that places an existing high‑damage cannon into a column whose front pirate is already on the loss border (position 2). Even though such a move m"
+  },
+  {
+    "timestamp": "2026-09-24T05:09:00+00:00",
+    "promoted": false,
+    "win_rate": 0.8696,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
