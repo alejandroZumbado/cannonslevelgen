@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:44:45+00:00",
-    "promoted": false,
-    "win_rate": 0.8609,
-    "candidate_win_rate": 0.6232,
-    "summary": "**Change summary** – The current policy tries to minimise the *second‑round deficit* before it values an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight levels (e.g., level 334"
-  },
-  {
     "timestamp": "2026-09-23T00:45:37+00:00",
     "promoted": false,
     "win_rate": 0.8725,
@@ -138,5 +131,12 @@
     "win_rate": 0.8696,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-24T05:07:37+00:00",
+    "promoted": false,
+    "win_rate": 0.8609,
+    "candidate_win_rate": 0.8522,
+    "summary": "**Change explanation**  \nThe current policy can overlook a *critical move* that places an existing high‑damage cannon into a column whose front pirate is already on the loss border (position 2). Even though such a move m"
   }
 ]
