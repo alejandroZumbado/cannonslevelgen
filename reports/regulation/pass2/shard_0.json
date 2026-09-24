@@ -1,6 +1,6 @@
 {
  "assigned": 509,
- "done": 508,
+ "done": 509,
  "levels": [
   {
    "levelNumber": 1,
@@ -12977,6 +12977,31 @@
     ]
    },
    "seconds": 579.5
+  },
+  {
+   "levelNumber": 509,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 13.2,
+    "pacing": {
+     "filas": 8,
+     "pirates_per_fila": 1.75,
+     "single_pirate_share": 0.5,
+     "late_demand": 0.94,
+     "archetypes": [
+      "wall",
+      "swarm",
+      "burst",
+      "tank"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
   }
  ]
 }
