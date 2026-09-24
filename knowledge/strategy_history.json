@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:50:35+00:00",
-    "promoted": false,
-    "win_rate": 0.8435,
-    "candidate_win_rate": 0.8377,
-    "summary": "**Change summary**  \nThe current champion values *second‑round deficit* higher than an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations (e.g., level 334) this lets a "
-  },
-  {
     "timestamp": "2026-09-23T00:51:17+00:00",
     "promoted": false,
     "win_rate": 0.8609,
@@ -138,5 +131,12 @@
     "win_rate": 0.8841,
     "candidate_win_rate": 0.8841,
     "summary": "**Change summary**  \nWhen several actions are equally safe the current policy breaks ties only by preferring moves and then by the raw tuple order of the action. This can leave the board with all cannons stacked in a sin"
+  },
+  {
+    "timestamp": "2026-09-24T05:13:56+00:00",
+    "promoted": false,
+    "win_rate": 0.8638,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
