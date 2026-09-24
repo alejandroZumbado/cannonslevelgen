@@ -1,0 +1,11 @@
+{
+ "counts": {
+  "kept_ok": 431,
+  "breather": 76,
+  "unresolved": 1,
+  "improved_partial": 1
+ },
+ "files": [
+  "Level_508_generated.asset"
+ ]
+}
