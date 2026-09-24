@@ -8,6 +8,13 @@ simulated without Unity.
 
 ## Two phases
 
+> **PAUSED since 2026-09-24:** `learning.yml` has no schedule (manual button
+> only). strategy_learner went 13 days without a promotion (target_wins
+> 0->0/32 on the real hard suite) while using ~75% of the daily budget. The
+> champion `policy/current.py` (09-11) keeps serving production/verification;
+> daily_production and weekly_level_audit are unaffected. To resume, restore
+> the `schedule:` block in `learning.yml`.
+
 **Month 1 — learning (all tokens go here, no levels produced yet):**
 Two loops run continuously, one LLM call each, alternating:
 - `learning/strategy_learner.py` — the AI rewrites `policy/current.py` (the
@@ -62,7 +69,54 @@ Levels (JSON)` (`Cannons/Assets/Editor/LevelImporter.cs`, verified in real
 Unity runs, also headless) — imported levels land in the **reserve**, not in
 the playable release, until linked (next section).
 
-## Release curation & adding batches (`verification/`, `production/`)
+## Fun gate: pacing + variety (`verification/pacing.py`, since 2026-09-24)
+
+Winnable is not enough (Level 508: 27 rounds, one pirate each — winnable,
+trivial, boring). Both generators now reject levels that break:
+- **pressure keeps up with firepower**: the player gains a cannon every round,
+  so `late_demand` (danger of the last third ÷ cannons owned, see module
+  docstring) must be >= 0.7 — otherwise the level gets easier as it goes;
+- **width over height**: <= 50% single-pirate rounds (2 x HP7 > 1 x HP14);
+- **<= 12 rounds**.
+
+Variety: 6 archetypes (swarm, tank, wall, crescendo, burst, switch) detected
+from structure. `daily_generator` asks the LLM for the one least used in the
+newest 20 levels and, when an attempt is rejected, feeds the exact reasons
+into the next attempt (8 attempts). `batch_generator` ramps pirates per round
+toward the end and caps any one archetype at 35% of a batch.
+`verification/variety_report.py` (weekly, before the audit) writes
+`reports/variety/latest.json`: pacing failures in the release by position,
+archetype mix, repetitive arcs. First run: 104/200 release levels pass.
+
+## Whole-campaign regulation (since 2026-09-24)
+
+User decision: drop the curated 200, rework ALL levels (509) and ship every
+winnable one. `.github/workflows/level_regulation.yml` (manual trigger):
+1. **regulate** — 8 parallel shards of `verification/regulator.py`. Per
+   level: kept if winnable + pacing ok; the easiest short simple ones kept as
+   breathers (max 15% of the campaign); everything else goes through a local
+   search of small edits (`verification/level_mutations.py`), each SIMULATED
+   (champion, then solver) — broken levels become winnable (target: hard but
+   champion-winnable), boring ones get tension back, and each reworked level
+   aims at the archetype the campaign lacks most. Resumable, results in
+   `reports/regulation/pass1/shard_*.json`.
+2. **apply** — `verification/apply_regulation.py` rewrites only the `filas:`
+   block of each asset (verified by parsing back), pushes to `cannons`.
+3. **finalize** — `verification/regulation_finalize.py`: re-audits every level,
+   regulator pass 2 repairs anything still broken/empty, re-curates the WHOLE
+   campaign (`curate_release --rebuild-all`), rewrites `LevelDatabase` +
+   isHard, variety report, pushes.
+
+Learning loops now serve the regulation: `learning/regulation_designer.py`
+(replaces level_designer in `run_learning_cycle.py`, 1 of 2 cycles) asks the
+LLM to redesign levels the regulator left unresolved/partial/off-archetype,
+verified with the same fitness; accepted ones go to
+`reports/regulation/llm_proposals.json` and are applied on the next
+`apply_regulation` run. Its verified wins/rejections are kept in
+`knowledge/regulation_lessons.json` and shown to the next cycle.
+strategy_learner trains on the re-audited levels (`reports/real_suite.json`).
+
+ (`verification/`, `production/`)
 
 The game's `LevelDatabase` holds only the shipped release (200 levels since
 2026-09-22), ordered in difficulty arcs — see Cannons' `CLAUDE.md`

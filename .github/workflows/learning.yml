@@ -1,6 +1,11 @@
 name: CannonsLevelGen Learning Cycle
 
 on:
+  # Paused 2026-09-24 morning (strategy_learner: 13 days without a
+  # promotion), RESUMED the same evening at the user's request with a new job:
+  # both loops now work on the level regulation (regulation_designer redesigns
+  # levels the regulator couldn't fix; strategy_learner trains on the
+  # regulated levels via the re-audit's reports/real_suite.json).
   schedule:
     # Was every 15 min ('7,22,37,52 * * * *') until 2026-08-29. Dropped to
     # hourly after confirming (via gh run list timestamps + github.com/orgs/

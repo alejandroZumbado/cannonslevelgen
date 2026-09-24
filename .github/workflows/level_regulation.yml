@@ -1,0 +1,136 @@
+name: CannonsLevelGen Level Regulation
+
+# Reworks the WHOLE campaign (2026-09-24, see verification/regulator.py):
+#   1. regulate — 8 parallel shards, every level: kept / breather / regulated / repaired
+#   2. apply    — pass-1 results written into the Cannons level assets (pushed)
+#   3. finalize — re-audit everything (a bot tries to win every level again),
+#                 regulator pass 2 repairs whatever is still broken or has empty
+#                 rounds, then the whole campaign is re-curated and pushed.
+# Manual trigger only: it rewrites the game's levels, so it runs when asked.
+# Re-running is safe: shards resume from their results files and skip done levels.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write   # git_sync pushes reports/regulation/ to this repo
+
+concurrency:
+  group: cannonslevelgen-regulation
+  cancel-in-progress: false
+
+jobs:
+  regulate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330  # public repo: unlimited minutes; same ceiling as level_repair.yml
+    strategy:
+      fail-fast: false    # one shard failing must not cancel the other seven
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - name: Checkout CannonsLevelGen (this repo)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons (read-only here, just the level assets)
+        uses: actions/checkout@v5
+        with:
+          repository: alejandroZumbado/cannons
+          fetch-depth: 1
+          path: cannons_checkout
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Regulate this shard
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          REGULATION_SHARD: ${{ matrix.shard }}
+          REGULATION_SHARDS: "8"
+          REGULATION_PASS: pass1
+          REGULATION_TIME_BUDGET_SECONDS: "18000"  # 300 min, 30 min margin for the final push
+          CI: true
+          PYTHONUNBUFFERED: "1"
+        run: python -m verification.regulator
+
+  apply:
+    needs: regulate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout CannonsLevelGen at the latest main (with every shard's results)
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons with push access
+        uses: actions/checkout@v5
+        with:
+          repository: alejandroZumbado/cannons
+          fetch-depth: 0
+          path: cannons_checkout
+          token: ${{ secrets.CANNONS_PUSH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Apply pass 1 to the game and push
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          CI: true
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python -m verification.apply_regulation --pass pass1 --push
+          python -c "import git_sync; git_sync.commit_and_push('[bot] regulation pass1 applied')"
+
+  finalize:
+    needs: apply
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Checkout CannonsLevelGen at the latest main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout Cannons with push access (includes pass 1)
+        uses: actions/checkout@v5
+        with:
+          repository: alejandroZumbado/cannons
+          fetch-depth: 0
+          path: cannons_checkout
+          token: ${{ secrets.CANNONS_PUSH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Re-audit, repair, re-curate, push
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          REGULATION_TIME_BUDGET_SECONDS: "15000"
+          CI: true
+          PYTHONUNBUFFERED: "1"
+        run: python -m verification.regulation_finalize --push

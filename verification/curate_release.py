@@ -26,6 +26,7 @@ reports/release_order.json.
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime, timezone
 
 import config
@@ -351,8 +352,55 @@ def save(manifest: dict, full_order: list[dict], stats: dict, batch_size: int) -
     return counts
 
 
+def rebuild_all(manifest: dict) -> tuple[list[dict], dict]:
+    """EVERY winnable, non-duplicate level, re-ordered from scratch in arcs
+    (2026-09-24, user: "dejemos atrás los 200 escogidos, júntalos de nuevo"
+    after verification/regulator.py reworked the whole campaign). Same arc
+    rules as curate(); search-only levels are the peaks of the LAST arcs, one
+    per arc (any extra search-only levels stay in reserve — a campaign of
+    back-to-back solver-only levels isn't playable).
+
+    Only valid BEFORE the game is published: it moves levels between
+    positions, which would point saved progress at different levels."""
+    pool = [e for e in manifest["levels"] if e["pool"] in ("ready", "assigned")]
+    pool, dup_dropped = _dedupe_by_shape(pool)
+    champions, searches = _split_pool(pool)
+    arc_count = max(1, round((len(champions) + len(searches)) / ARC_SIZE))
+    first_search_arc = max(arc_count // 4, arc_count - len(searches))
+    search_peaks = _sample_evenly(searches, arc_count - first_search_arc)
+    total = len(champions) + len(search_peaks)
+
+    order = _build_arcs(champions, search_peaks, _arc_sizes(total, arc_count),
+                        first_search_arc, INTRO_LEVEL, arc_offset=0)
+    for i, o in enumerate(order):
+        o["order"] = i + 1
+    _check_unique(order, total)
+
+    chosen = {o["levelNumber"] for o in order}
+    stats = {
+        "duplicate_shapes_excluded": dup_dropped,
+        "search_only_used": [p["levelNumber"] for p in search_peaks],
+        "reserve": sorted(e["levelNumber"] for e in pool if e["levelNumber"] not in chosen),
+    }
+    return order, stats
+
+
 def main() -> None:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    if "--rebuild-all" in sys.argv:
+        # explicit flag: forget every previous assignment and re-order everything
+        for e in manifest["levels"]:
+            if e["pool"] == "assigned":
+                e["pool"], e["assigned_order"] = "ready", None
+        order, stats = rebuild_all(manifest)
+        if OUT_PATH.exists():
+            OUT_PATH.unlink()
+        counts = save(manifest, order, stats, batch_size=len(order))
+        print(f"Campaign rebuilt: {len(order)} levels in {order[-1]['arc']} arcs. Pools: {counts}")
+        print(f"  duplicate shapes excluded: {len(stats['duplicate_shapes_excluded'])}, "
+              f"reserve: {len(stats['reserve'])}")
+        return
+
     already = [e for e in manifest["levels"] if e["pool"] == "assigned"]
     if already:
         # Never silently reshuffle a release that was already decided.

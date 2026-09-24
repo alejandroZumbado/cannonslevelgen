@@ -38,7 +38,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import config
 from llm.budget import BudgetExceeded, remaining_tokens, calls_made_today
 from llm.client import ProviderQuotaExhausted
-from learning import strategy_learner, level_designer
+from learning import strategy_learner, regulation_designer
 import git_sync
 import incident_log
 
@@ -46,7 +46,11 @@ _ORDER_STATE_PATH = config.STATE_DIR / "cycle_order.json"
 
 _RUNNERS = {
     "strategy_learner": strategy_learner.run_cycle,
-    "level_designer": level_designer.run_cycle,
+    # 2026-09-24: regulation_designer replaces level_designer's free-form rule
+    # hypotheses (mostly restating GAME_RULES by then) - it redesigns levels
+    # the regulator couldn't fix, verified by simulation. level_designer.py
+    # stays in the repo, unscheduled.
+    "regulation_designer": regulation_designer.run_cycle,
 }
 
 # Pure safety net, not the real stopping condition (config.JOB_TIME_BUDGET_SECONDS
@@ -56,8 +60,10 @@ _RUNNERS = {
 # like a normal day does.
 _MAX_CYCLE_PAIRS_PER_RUN = 300
 
-# level_designer runs on 1 of every N pairs — see _next_order.
-_DESIGNER_EVERY = 3
+# the designer runs on 1 of every N pairs — see _next_order. 3 -> 2 on
+# 2026-09-24: regulation_designer produces verified level fixes, worth more
+# budget than the old rule hypotheses.
+_DESIGNER_EVERY = 2
 
 
 def _next_order() -> list[str]:
@@ -81,7 +87,7 @@ def _next_order() -> list[str]:
     except (FileNotFoundError, json.JSONDecodeError, ValueError):
         pair = 0
     pair += 1
-    order = ["level_designer", "strategy_learner"] if pair % _DESIGNER_EVERY == 0 \
+    order = ["regulation_designer", "strategy_learner"] if pair % _DESIGNER_EVERY == 0 \
         else ["strategy_learner"]
     _ORDER_STATE_PATH.write_text(json.dumps({"pair": pair, "last_first": order[0]}), encoding="utf-8")
     return order

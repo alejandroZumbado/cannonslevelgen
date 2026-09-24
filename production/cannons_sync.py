@@ -25,22 +25,32 @@ def push_generated_level(cannons_repo_path: Path, level_file: Path) -> bool:
     """Stages just the one new level JSON under GeneratedLevels/incoming/ in
     the Cannons checkout and pushes it to main. Returns False (not an error)
     if nothing was actually new to commit."""
+    rel_path = level_file.relative_to(cannons_repo_path)
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return push_paths(cannons_repo_path, [level_file], f"[bot] Add AI-generated level {rel_path.name} - {now}")
+
+
+def push_paths(cannons_repo_path: Path, paths: list[Path], message: str) -> bool:
+    """Stages exactly `paths` (files or folders) in the Cannons checkout,
+    commits and pushes to master. Used for single level drops and for the
+    regulator's bulk edits of Assets/Levels (2026-09-24). Returns False (not
+    an error) if nothing changed; prints the reason on any git failure."""
     run_git(["config", "user.email", "aazv.ale@gmail.com"], cwd=cannons_repo_path)
     run_git(["config", "user.name", "CannonsLevelGen Bot"], cwd=cannons_repo_path)
 
-    rel_path = level_file.relative_to(cannons_repo_path)
-    code, out = run_git(["add", str(rel_path)], cwd=cannons_repo_path)
-    if code != 0:
-        print(f"cannons_sync: git add failed: {out}")
-        return False
+    for path in paths:
+        rel_path = path.relative_to(cannons_repo_path)
+        code, out = run_git(["add", "--", str(rel_path)], cwd=cannons_repo_path)
+        if code != 0:
+            print(f"cannons_sync: git add {rel_path} failed: {out}")
+            return False
 
     code, status = run_git(["diff", "--cached", "--name-only"], cwd=cannons_repo_path)
     if not status.strip():
         print("cannons_sync: nothing to commit")
         return False
 
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    code, out = run_git(["commit", "-m", f"[bot] Add AI-generated level {rel_path.name} - {now}"], cwd=cannons_repo_path)
+    code, out = run_git(["commit", "-m", message], cwd=cannons_repo_path)
     if code != 0:
         print(f"cannons_sync: git commit failed: {out}")
         return False
@@ -56,5 +66,5 @@ def push_generated_level(cannons_repo_path: Path, level_file: Path) -> bool:
         print(f"cannons_sync: git push failed: {out}")
         return False
 
-    print(f"cannons_sync: pushed {rel_path} to alejandroZumbado/cannons")
+    print(f"cannons_sync: pushed \"{message}\" to alejandroZumbado/cannons")
     return True
