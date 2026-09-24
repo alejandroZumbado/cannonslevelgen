@@ -65,6 +65,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # 2026-09-24: variety/pacing review of the release. Runs first so the
+      # audit step's git_sync (`git add -A`) commits its report too. Pure
+      # structure checks, a few seconds, no LLM.
+      - name: Variety and pacing report
+        env:
+          CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout
+          PYTHONUNBUFFERED: "1"
+        run: python -m verification.variety_report
+
       - name: Run the 500-level audit and push the report
         env:
           CANNONS_REPO_PATH: ${{ github.workspace }}/cannons_checkout

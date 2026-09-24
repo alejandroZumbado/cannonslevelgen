@@ -6,6 +6,7 @@ learning phase has produced a policy trusted to run unattended.
 from __future__ import annotations
 
 import json
+from dataclasses import asdict
 import re
 import sys
 from datetime import datetime, timezone
@@ -17,7 +18,6 @@ import incident_log
 from llm import client, audit
 from llm.budget import BudgetExceeded
 from llm.client import ProviderQuotaExhausted
-from learning import knowledge
 from learning.game_rules import GAME_RULES
 from policy.loader import load_policy_from_file, PolicyLoadError
 from production.cannons_sync import push_generated_level
@@ -27,11 +27,16 @@ from sim.engine import run_level
 from sim.evaluate import evaluate
 from sim.level import Level, fill_empty_filas
 from policy.baseline import BaselinePolicy
+from verification import pacing
 from verification.level_audit import audit_level
+from verification.official_levels import load_all
 from verification.solver import ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
-MAX_ATTEMPTS = 5
+# 5 -> 8 (2026-09-24): the pacing gate rejects more candidates, and each retry now
+# carries the rejection reason; budget freed by pausing strategy_learner covers it.
+MAX_ATTEMPTS = 8
+RECENT_LEVELS_FOR_VARIETY = 20  # archetype mix is judged on the newest N levels
 
 # Gate added 2026-09-05: this script only ever validated the ONE level it
 # just generated against the current policy (engine.won) — it never checked
@@ -55,23 +60,48 @@ tipo 1-3 = normal pirate (skin variety only), tipo 4 = last pirate of the level
 """
 
 
-def _build_prompt(level_number: int) -> tuple[str, str]:
+# Pacing guidance (2026-09-24, see verification/pacing.py for the why and the
+# numbers). Replaces the old "include at least one empty breathing-room fila":
+# fill_empty_filas turns every empty fila into a lone HP-1 pirate, so that
+# instruction was literally manufacturing boring single-pirate rounds.
+_PACING_RULES = f"""\
+PACING — the level is rejected automatically if it breaks these:
+- The player gains ONE new cannon every round, so their firepower grows
+  every round. A level whose later rounds are no heavier than its early ones
+  gets EASIER as it goes. Later rounds must bring more total danger than
+  earlier ones: more pirates per round, spread over more columns.
+- Prefer width over height: spread a big threat over several pirates in
+  different columns (2 pirates of HP 7 in two columns beat 1 pirate of HP 14,
+  which is also illegal: HP max is 10).
+- At most {pacing.MAX_SINGLE_PIRATE_SHARE:.0%} of the filas may have a single pirate.
+- At most {pacing.MAX_FILAS} filas. Short and dense beats long and sparse.
+- Every fila must have at least one pirate (no empty filas).
+"""
+
+
+def _build_prompt(level_number: int, archetype: str, feedback: str | None) -> tuple[str, str]:
     system = (
         "You design one winnable, well-paced level for the tower-defense game "
         "Cannons. Ground everything in the real rules below — never invent a "
         "mechanic that isn't stated there, no matter how plausible it sounds."
     )
+    # the retry note is how one run "learns": the next attempt sees exactly why
+    # the previous one was rejected instead of rolling the dice again blind
+    retry_note = f"\nYOUR PREVIOUS ATTEMPT WAS REJECTED: {feedback}\nFix exactly that.\n" if feedback else ""
+    # The learned-rules block (knowledge.rules_as_prompt_block) was dropped
+    # 2026-09-24, same as strategy_learner did on 09-22: by then it mostly
+    # restated GAME_RULES, and one "confirmed" rule shown every day claimed a
+    # blocker grants extra shooting rounds, contradicting GAME_RULES' 3-shot cap.
     user = f"""{GAME_RULES}
 
 {_LEVEL_SCHEMA}
 
-Rules confirmed by a month of self-play (trust these over generic guesses,
-but never over the authoritative rules above if the two ever disagree):
-{knowledge.rules_as_prompt_block()}
-
-Design level number {level_number}. Vary the pattern from typical alternating
-left-right layouts; include at least one empty breathing-room fila. Respond
-with a one-sentence design note, then the JSON in a single ```json code block.
+{_PACING_RULES}
+Design level number {level_number} around this archetype (the least used in
+the game's recent levels, so the campaign stays varied):
+  {archetype}: {pacing.ARCHETYPES[archetype]}
+{retry_note}
+Respond with a one-sentence design note, then the JSON in a single ```json code block.
 """
     return system, user
 
@@ -86,7 +116,8 @@ def _extract_json(text: str) -> dict | None:
         return None
 
 
-def generate_one_level(level_number: int, used_passwords: set[str], existing_signatures: set[str]) -> Level | None:
+def generate_one_level(level_number: int, used_passwords: set[str], existing_signatures: set[str],
+                       archetype: str) -> Level | None:
     """Returns None if every attempt was tried and none beat the learned
     policy — a real, expected outcome (see main()), NOT the same thing as
     PolicyLoadError below, which callers should treat as an actual failure
@@ -103,8 +134,10 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
     match is a pure local check (no LLM call), same cost as any other retry."""
     policy = load_policy_from_file(CURRENT_POLICY_PATH)  # raises PolicyLoadError - let it propagate
 
+    feedback: str | None = None  # why the previous attempt was rejected, shown to the next one
     for attempt in range(1, MAX_ATTEMPTS + 1):
-        system, user = _build_prompt(level_number)
+        system, user = _build_prompt(level_number, archetype, feedback)
+        feedback = None
         # reasoning_effort="low" (2026-09-22): 9/10 no_json attempts since
         # 09-16 were EMPTY responses at the max_tokens ceiling (hidden
         # reasoning used all 3000), which left 09-19 and 09-22 with no level.
@@ -124,6 +157,18 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
                                outcome={"accepted": False, "reason": f"schema_error: {e}", "attempt": attempt})
             continue
 
+        # The prompt asks for hp 1-10 but nothing enforced it — Level 508
+        # (2026-09-23) came back with hp=12 and was accepted, since the sim
+        # doesn't care. Reject out-of-range fields like any other bad candidate.
+        range_errors = level.structure_errors()
+        if range_errors:
+            feedback = f"out-of-range fields: {'; '.join(range_errors[:3])}"
+            print(f"  attempt {attempt}: out-of-range fields {range_errors[:3]}, retrying")
+            audit.record_call(caller="daily_generator", completion=completion, system=system, user=user,
+                               outcome={"accepted": False, "reason": f"out_of_range: {range_errors[:3]}",
+                                        "attempt": attempt})
+            continue
+
         # No shipped level should have a fila that spawns zero pirates — a
         # dead round the player just waits through (found 2026-09-15 in
         # 310/500 real levels). Filled here, before shape_signature() and
@@ -132,6 +177,18 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
         # ship — a level rejected because the fill made it unwinnable is
         # just another retry, same as any other invalid candidate.
         level = fill_empty_filas(level)
+
+        # Fun gate (2026-09-24): winnable isn't enough — reject levels that
+        # get easier as they go, are mostly single-pirate rounds, or drag on.
+        # Checked after the fill, on the level the game would actually ship.
+        pacing_check = pacing.pacing_report(level)
+        if not pacing_check.ok:
+            feedback = " | ".join(pacing_check.problems)
+            print(f"  attempt {attempt}: pacing rejected ({len(pacing_check.problems)} problem(s)), retrying")
+            audit.record_call(caller="daily_generator", completion=completion, system=system, user=user,
+                               outcome={"accepted": False, "reason": "pacing", "attempt": attempt,
+                                        "problems": pacing_check.problems})
+            continue
 
         signature = level.shape_signature()
         if signature in existing_signatures:
@@ -155,9 +212,28 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
         if engine.won:
             print(f"  attempt {attempt}: winnable in {engine.rounds_played} rounds, accepted")
             return level
+        feedback = ("the trained AI could not win it — too hard. Keep the same idea but lower the "
+                    "single hardest spike (one HP, or one pirate in the densest round)")
         print(f"  attempt {attempt}: not winnable by learned policy, retrying")
 
     return None
+
+
+def _pick_archetype() -> str:
+    """Least-represented archetype among the newest levels (Assets/Levels +
+    pending incoming drops), so consecutive days don't keep producing the same
+    kind of level. Falls back to the first archetype if nothing can be read."""
+    levels = []
+    assets_dir = config.CANNONS_REPO / "Assets" / "Levels"
+    if assets_dir.exists():
+        levels.extend(load_all(assets_dir))
+    for json_file in sorted(config.INCOMING_LEVELS_DIR.glob("*.json")) if config.INCOMING_LEVELS_DIR.exists() else []:
+        try:
+            levels.append(Level.load(json_file))
+        except (ValueError, KeyError) as e:
+            print(f"  variety: skipping unreadable {json_file.name} ({e})")
+    recent = sorted(levels, key=lambda lv: lv.levelNumber)[-RECENT_LEVELS_FOR_VARIETY:]
+    return pacing.least_represented(recent)
 
 
 def main() -> int:
@@ -195,7 +271,9 @@ def main() -> int:
                   f"policy), not an incident.")
             level = None
         else:
-            level = generate_one_level(level_number, used_passwords, existing_signatures)
+            archetype = _pick_archetype()
+            print(f"target archetype today: {archetype} ({pacing.ARCHETYPES[archetype]})")
+            level = generate_one_level(level_number, used_passwords, existing_signatures, archetype)
     except PolicyLoadError as e:
         # unlike "no candidate won" below, this means production is broken,
         # not just unlucky today — worth a real red X.
@@ -263,6 +341,8 @@ def main() -> int:
             "baseline_won": baseline_engine.won,
             "baseline_rounds_played": baseline_engine.rounds_played,
             "difficulty_tag": difficulty_tag,
+            # pacing/variety (2026-09-24): lets reviews see WHY a level is (not) fun
+            "pacing": asdict(pacing.pacing_report(level)),
         }, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"wrote {audit_path}")
 

@@ -22,7 +22,7 @@ _PASSWORD_RE = re.compile(r"^\s*password:\s*(\S+)", re.MULTILINE)
 def scan_existing_levels(cannons_repo_path: Path) -> tuple[int, set[str]]:
     """Returns (highest levelNumber found, set of every password in use).
     Scans BOTH Assets/Levels/*.asset (already-imported levels) and any
-    leftover GeneratedLevels/incoming|processed/*.json (generated but maybe
+    leftover GeneratedLevels/incoming|processed|rejected/*.json (generated but maybe
     not yet imported) so a same-day rerun or an import lag doesn't reuse a
     number/password that's already spoken for."""
     max_number = 0
@@ -36,7 +36,7 @@ def scan_existing_levels(cannons_repo_path: Path) -> tuple[int, set[str]]:
         for m in _PASSWORD_RE.finditer(text):
             passwords.add(m.group(1).strip())
 
-    for sub in ("incoming", "processed"):
+    for sub in ("incoming", "processed", "rejected"):  # rejected: never reuse its number/password/shape
         gen_dir = cannons_repo_path / "GeneratedLevels" / sub
         if not gen_dir.exists():
             continue
@@ -73,7 +73,7 @@ def scan_existing_signatures(cannons_repo_path: Path) -> set[str]:
         for level in load_all(assets_dir):
             signatures.add(level.shape_signature())
 
-    for sub in ("incoming", "processed"):
+    for sub in ("incoming", "processed", "rejected"):  # rejected: never reuse its number/password/shape
         gen_dir = cannons_repo_path / "GeneratedLevels" / sub
         if not gen_dir.exists():
             continue

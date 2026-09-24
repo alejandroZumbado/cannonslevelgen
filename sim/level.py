@@ -72,6 +72,24 @@ class Level:
         values = [c.hp for fila in self.filas for c in fila.cuadros if c.tipo >= 1]
         return max(values) if values else 0
 
+    def structure_errors(self) -> list[str]:
+        """Field ranges the real game assumes (see module docstring). Empty
+        list = OK. Added 2026-09-24: the daily LLM generator shipped Level 508
+        with hp=12 — the sim happily plays it, but the game only supports
+        hp 1-10 (ReleaseValidator rejects anything else)."""
+        errors = []
+        if not self.filas:
+            errors.append("level has no filas")
+        for f, fila in enumerate(self.filas, start=1):
+            for c in fila.cuadros:
+                if not 0 <= c.index <= 4:
+                    errors.append(f"fila {f}: index {c.index} (valid 0-4)")
+                if not 0 <= c.tipo <= 5:
+                    errors.append(f"fila {f}: tipo {c.tipo} (valid 0-5)")
+                if c.tipo >= 1 and not 1 <= c.hp <= 10:
+                    errors.append(f"fila {f}: hp {c.hp} (valid 1-10)")
+        return errors
+
     def shape_signature(self) -> str:
         """Stable hash of the level's actual challenge — fila-by-fila
         (index, hp) layout — ignoring levelNumber/password/isHard and tipo

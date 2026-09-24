@@ -7,10 +7,13 @@ Why: the daily LLM generator makes ~1 level/day, and the ready reserve
 only covers ~20 more release slots. This fills the gap with procedurally
 drawn levels that are each VERIFIED by simulation before being kept:
 
-  1. Draw a candidate shaped like the shipped levels (5-10 rounds, 1-4
-     pirates per round, mostly low HP, every round has pirates, exactly one
-     tipo-4 "last pirate" on the final round).
-  2. Reject reskins of any existing level or of another batch level.
+  1. Draw a candidate shaped like the shipped levels (5-10 rounds, 1-5
+     pirates per round ramping up toward the end, mostly low HP, every round
+     has pirates, exactly one tipo-4 "last pirate" on the final round).
+  2. Reject reskins of any existing level or of another batch level, levels
+     that fail the pacing gate (verification/pacing.py: gets easier as it
+     goes, mostly single-pirate rounds, too long) and levels that would push
+     one archetype over VARIETY_CAP of the batch.
   3. Play it with the trained champion policy (sim/engine.py). A win is
      scored with the same audit code as the weekly audit
      (verification/level_audit.audit_level). A loss is only kept if the
@@ -32,6 +35,7 @@ import math
 import random
 import sys
 import time
+from collections import Counter
 from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -42,6 +46,7 @@ from production.level_registry import ensure_unique_password, scan_existing_leve
 from sim.engine import run_level
 from sim.level import Cuadro, Fila, Level
 from verification.level_audit import audit_level
+from verification.pacing import pacing_report
 from verification.solver import DEFAULT_MAX_ROUNDS, ESCALATION_BEAM_WIDTHS
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
@@ -61,14 +66,25 @@ MAX_ATTEMPTS_PER_LEVEL = 400  # guard so an impossible quota fails instead of lo
 HARD_SCORE = 16.0  # champion levels at/above this are flagged isHard (hard-level music)
 
 
+# Variety (2026-09-24): no archetype (verification/pacing.ARCHETYPES) may take
+# more than this share of a batch once VARIETY_MIN_SAMPLE levels are in.
+VARIETY_CAP = 0.35
+VARIETY_MIN_SAMPLE = 10
+
+
 def _draw_candidate(rng: random.Random) -> Level:
-    """One random level shaped like the shipped ones. `t` in [0,1] pushes
-    rounds, pirates per round and HP up together."""
+    """One random level. `t` in [0,1] pushes rounds, pirates per round and HP
+    up together; `p` (0 at the first fila, 1 at the last) ramps pirates per
+    round so later rounds stay dangerous while the player's cannons pile up
+    (2026-09-24 — before, every fila drew from the same distribution, so
+    levels got easier as they went; see verification/pacing.py)."""
     t = rng.random()
     n_filas = rng.randint(5 + round(2 * t), 8 + round(2 * t))
     filas = []
-    for _ in range(n_filas):
-        n_pirates = rng.choices([1, 2, 3, 4], weights=[5 - 2 * t, 3, 1 + 2 * t, 3 * t])[0]
+    for i in range(n_filas):
+        p = i / max(n_filas - 1, 1)
+        n_pirates = rng.choices([1, 2, 3, 4, 5],
+                                weights=[4 - 3 * p, 3, 1 + 2 * p + t, 3 * p * (0.5 + t), p * t])[0]
         cols = rng.sample(range(5), k=n_pirates)  # distinct columns within a round
         cuadros = [Cuadro(index=c, tipo=rng.choice([1, 2, 3]),
                           hp=1 + rng.choices([0, 1, 2, 3, 4],
@@ -104,6 +120,16 @@ def _quotas(count: int) -> tuple[list[int], int]:
     return per_bin, n_search
 
 
+def _over_variety_cap(primary: str | None, counts: Counter, n_accepted: int) -> bool:
+    """True if the candidate has no clear identity, or its primary archetype
+    already fills more than VARIETY_CAP of the batch."""
+    if primary is None:
+        return True  # "plain" levels: no clear design idea
+    if n_accepted < VARIETY_MIN_SAMPLE:
+        return False
+    return counts[primary] / n_accepted > VARIETY_CAP
+
+
 def generate_batch(count: int, seed: int, first_number: int, used_passwords: set[str],
                    existing_signatures: set[str]) -> tuple[list[tuple[Level, dict]], dict]:
     rng = random.Random(seed)
@@ -113,7 +139,9 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
     search_filled = 0
     accepted: list[tuple[Level, dict]] = []
     seen = set(existing_signatures)
-    stats = {"attempts": 0, "reskin": 0, "bin_full": 0, "champion_lost": 0, "unwinnable": 0}
+    stats = {"attempts": 0, "reskin": 0, "pacing": 0, "variety": 0, "bin_full": 0,
+             "champion_lost": 0, "unwinnable": 0}
+    archetype_counts: Counter[str] = Counter()
     max_attempts = count * MAX_ATTEMPTS_PER_LEVEL
 
     while len(accepted) < count and stats["attempts"] < max_attempts:
@@ -122,6 +150,18 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
         sig = level.shape_signature()
         if sig in seen:
             stats["reskin"] += 1
+            continue
+
+        # fun gate before the (slower) simulation: same rules as the daily generator
+        pace = pacing_report(level)
+        if not pace.ok:
+            stats["pacing"] += 1
+            continue
+        # one archetype per level (pacing.primary_archetype): counting every
+        # tag made the cap useless, dense levels match 3-4 tags at once
+        primary = pace.primary
+        if _over_variety_cap(primary, archetype_counts, len(accepted)):
+            stats["variety"] += 1
             continue
 
         won = run_level(level, champion).won
@@ -148,12 +188,14 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
         used_passwords.add(level.password)
         level.isHard = (report.classification == "solved_by_search_only"
                         or report.difficulty_score >= HARD_SCORE)
+        archetype_counts[primary] += 1
         accepted.append((level, {"classification": report.classification,
-                                 "difficulty_score": report.difficulty_score}))
+                                 "difficulty_score": report.difficulty_score,
+                                 "archetype": primary, "archetypes": pace.archetypes}))
         if len(accepted) % 10 == 0:
             print(f"  {len(accepted)}/{count} accepted after {stats['attempts']} candidates")
 
-    stats.update({"bin_quota": bin_quota, "bin_filled": bin_filled,
+    stats.update({"archetypes": dict(archetype_counts), "bin_quota": bin_quota, "bin_filled": bin_filled,
                   "search_quota": search_quota, "search_filled": search_filled})
     return accepted, stats
 
