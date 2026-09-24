@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:52:16+00:00",
-    "promoted": false,
-    "win_rate": 0.8609,
-    "candidate_win_rate": 0.7188,
-    "summary": "**Change summary** – The current champion always tries to minimise the *second‑round deficit* before it values an instant lethal shot on a pirate that is already on the loss border (position 2). In tight levels (e.g., le"
-  },
-  {
     "timestamp": "2026-09-23T00:53:32+00:00",
     "promoted": false,
     "win_rate": 0.8638,
@@ -138,5 +131,12 @@
     "win_rate": 0.858,
     "candidate_win_rate": 0.858,
     "summary": "**Change summary**  \nThe current tie‑breaker only prefers moves over spawns and then falls back to the raw action tuple, which can leave all cannons stacked in a single column. I add a very small extra term to the compar"
+  },
+  {
+    "timestamp": "2026-09-24T05:15:52+00:00",
+    "promoted": false,
+    "win_rate": 0.8435,
+    "candidate_win_rate": 0.8435,
+    "summary": "**Change summary** – When two actions are otherwise equal the policy now prefers the one that puts (or moves) damage into a column that already has pirates.  We add a “pirate‑damage” score (sum of cannon damage in column"
   }
 ]
