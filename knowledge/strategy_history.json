@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:53:32+00:00",
-    "promoted": false,
-    "win_rate": 0.8638,
-    "candidate_win_rate": 0.6406,
-    "summary": "**Change summary** – The current champion always tries to minimise the *second‑round deficit* before it values an instant lethal or a guaranteed next‑round kill on a pirate that is already on the loss border (position 2)"
-  },
-  {
     "timestamp": "2026-09-23T00:54:28+00:00",
     "promoted": false,
     "win_rate": 0.8609,
@@ -138,5 +131,12 @@
     "win_rate": 0.8435,
     "candidate_win_rate": 0.8435,
     "summary": "**Change summary** – When two actions are otherwise equal the policy now prefers the one that puts (or moves) damage into a column that already has pirates.  We add a “pirate‑damage” score (sum of cannon damage in column"
+  },
+  {
+    "timestamp": "2026-09-24T05:16:47+00:00",
+    "promoted": false,
+    "win_rate": 0.8696,
+    "candidate_win_rate": 0.8435,
+    "summary": "**Change summary (2 sentences)**  \nThe current policy only prefers moves over spawns when *all* other comparison terms tie, so it often ignores a clearly urgent move that protects a pirate that is already at position 2 ("
   }
 ]
