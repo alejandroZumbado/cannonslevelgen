@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:48:34+00:00",
-    "promoted": false,
-    "win_rate": 0.8609,
-    "candidate_win_rate": 0.6551,
-    "summary": "**Change summary**  \nThe current policy always minimises *second‑round deficit* before it values a guaranteed kill on a pirate that is already on the loss border (position 2). In tight situations (e.g., level 137) this l"
-  },
-  {
     "timestamp": "2026-09-23T00:49:26+00:00",
     "promoted": false,
     "win_rate": 0.8812,
@@ -138,5 +131,12 @@
     "win_rate": 0.8783,
     "candidate_win_rate": 0.8638,
     "summary": "**Change summary**  \nThe current policy can miss a crucial *move* that kills a front pirate already on the loss border (position 2). Even though such a move eliminates an imminent loss, the `deficit` metric treats it the"
+  },
+  {
+    "timestamp": "2026-09-24T05:12:07+00:00",
+    "promoted": false,
+    "win_rate": 0.8609,
+    "candidate_win_rate": 0.8522,
+    "summary": "**Change summary**  \nThe current policy undervalues a *move* that eliminates an imminent loss because the move discards the pending spawn cannon, lowering the `total_damage` term that is later used for tie‑breaking. I ad"
   }
 ]
