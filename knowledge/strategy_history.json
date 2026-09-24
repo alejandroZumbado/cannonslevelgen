@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-22T01:53:19+00:00",
-    "promoted": false,
-    "win_rate": 0.8942,
-    "candidate_win_rate": 0.8942,
-    "summary": "**Change summary**  \nThe current champion prefers a lower *first‑round deficit* over an *instant lethal* shot on a pirate that is already on the loss border (position 2). In tight situations this can let a pirate survive"
-  },
-  {
     "timestamp": "2026-09-22T01:56:02+00:00",
     "promoted": false,
     "win_rate": 0.875,
@@ -138,5 +131,12 @@
     "win_rate": 0.858,
     "candidate_win_rate": 0.7217,
     "summary": "**Change summary** – The current policy treats *second‑round deficit* as the most important factor, so it can ignore an *instant lethal* shot on a pirate that is already on the loss border (position 2).  \nI move the *kil"
+  },
+  {
+    "timestamp": "2026-09-24T05:01:27+00:00",
+    "promoted": false,
+    "win_rate": 0.8667,
+    "candidate_win_rate": 0.8667,
+    "summary": "**Change summary**  \nThe original `deficit` only compares total HP in a column with the total damage that can be dealt before the front pirate reaches the loss position. When several pirates are stacked, the front pirate"
   }
 ]
