@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:46:23+00:00",
-    "promoted": false,
-    "win_rate": 0.8667,
-    "candidate_win_rate": 0.6464,
-    "summary": "**Change summary**  \nThe current policy always tries to minimise the *second‑round deficit* before it values an instant‑lethal shot on a pirate that is already on the loss border (position 2). In tight levels (e.g., leve"
-  },
-  {
     "timestamp": "2026-09-23T00:47:40+00:00",
     "promoted": false,
     "win_rate": 0.8783,
@@ -138,5 +131,12 @@
     "win_rate": 0.8696,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-24T05:09:38+00:00",
+    "promoted": false,
+    "win_rate": 0.8522,
+    "candidate_win_rate": 0.8522,
+    "summary": "**Change summary**  \nThe original `deficit` only counts the number of rounds left for the current front pirate (`MAX_POSITION‑front.position`). In a stacked column this ignores the extra rounds you gain after killing a b"
   }
 ]
