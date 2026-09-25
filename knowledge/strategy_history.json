@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:12:07+00:00",
-    "promoted": false,
-    "win_rate": 0.8609,
-    "candidate_win_rate": 0.8522,
-    "summary": "**Change summary**  \nThe current policy undervalues a *move* that eliminates an imminent loss because the move discards the pending spawn cannon, lowering the `total_damage` term that is later used for tie‑breaking. I ad"
-  },
-  {
     "timestamp": "2026-09-24T05:13:00+00:00",
     "promoted": false,
     "win_rate": 0.8841,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-25T01:51:46+00:00",
     "promoted": false,
     "win_rate": 0.9003,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-25T01:53:19+00:00",
+    "promoted": false,
+    "win_rate": 0.9232,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }

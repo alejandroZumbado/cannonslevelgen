@@ -40,5 +40,12 @@
   "note": "Design note: Early forced merges in a single column build enough damage to dispatch a high‑HP “tank” that appears later, while the surrounding 1‑HP pirates keep pressure and require the player to spre",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-25T01:52:24+00:00",
+  "target": "tank",
+  "note": "Design note: Early forced merges in column 2 build a 5‑damage cannon that can instantly kill a later HP‑5 “tank” while a spread of low‑HP pirates across the other columns keeps pressure and tension.",
+  "success": true,
+  "reason": "fitness 993 -> 998, archetype wall"
  }
 ]
