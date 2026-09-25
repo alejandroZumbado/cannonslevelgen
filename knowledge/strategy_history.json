@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:01:27+00:00",
-    "promoted": false,
-    "win_rate": 0.8667,
-    "candidate_win_rate": 0.8667,
-    "summary": "**Change summary**  \nThe original `deficit` only compares total HP in a column with the total damage that can be dealt before the front pirate reaches the loss position. When several pirates are stacked, the front pirate"
-  },
-  {
     "timestamp": "2026-09-24T05:02:33+00:00",
     "promoted": false,
     "win_rate": 0.8638,
@@ -138,5 +131,12 @@
     "win_rate": 0.9183,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-25T01:40:02+00:00",
+    "promoted": false,
+    "win_rate": 0.9248,
+    "candidate_win_rate": 0.9199,
+    "summary": "**Change summary**  \nThe current policy treats a “spawn‑onto‑occupied” merge the same as a plain spawn into an empty column, so it often spreads 1‑damage cannons instead of stacking damage where a strong pirate will late"
   }
 ]

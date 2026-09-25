@@ -5,5 +5,12 @@
   "note": "Design note: Spread your cannons across the columns each round to thin out the swarm before any pirate can advance to the loss position.",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-25T01:39:15+00:00",
+  "target": "swarm",
+  "note": "Design note: Concentrate the swarm into a single column so the single cannon each round can reliably chip away at each pirate’s HP, using merges to boost damage for the occasional higher‑HP foe while ",
+  "success": true,
+  "reason": "fitness -45 -> 906, archetype wall"
  }
 ]

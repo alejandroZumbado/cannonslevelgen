@@ -1,0 +1,105 @@
+{
+ "257": {
+  "level": {
+   "levelNumber": 257,
+   "password": "T4947",
+   "isHard": true,
+   "filas": [
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 3
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 4,
+       "hp": 1
+      }
+     ]
+    }
+   ]
+  },
+  "after": {
+   "classification": "champion_win",
+   "difficulty": 11.3,
+   "pacing": {
+    "filas": 8,
+    "pirates_per_fila": 1.0,
+    "single_pirate_share": 1.0,
+    "late_demand": 0.4,
+    "archetypes": [
+     "wall"
+    ],
+    "primary": "wall",
+    "problems": [
+     "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+     "gets easier as it goes: last-third pressure 0.4 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+    ]
+   },
+   "pirates_left": 0,
+   "primary": "wall"
+  },
+  "fitness": 905.9,
+  "improves_on_fitness": -45.0
+ }
+}
