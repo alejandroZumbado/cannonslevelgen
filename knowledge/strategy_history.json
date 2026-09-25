@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:13:56+00:00",
-    "promoted": false,
-    "win_rate": 0.8638,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-24T05:15:17+00:00",
     "promoted": false,
     "win_rate": 0.858,
@@ -138,5 +131,12 @@
     "win_rate": 0.9167,
     "candidate_win_rate": 0.9167,
     "summary": "**Change summary** – The champion policy favours keeping many columns covered, so moving a cannon away from a safe column (reducing coverage) is often penalised even when the move saves a column whose front pirate is alr"
+  },
+  {
+    "timestamp": "2026-09-25T01:55:32+00:00",
+    "promoted": false,
+    "win_rate": 0.9232,
+    "candidate_win_rate": 0.9199,
+    "summary": "**Change summary** – The champion policy breaks ties among equally‑safe actions by favouring *coverage* (more columns with a cannon).  In situations like Level 492 the best move is to merge damage into a column whose fro"
   }
 ]
