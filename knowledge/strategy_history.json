@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:57:29+00:00",
-    "promoted": false,
-    "win_rate": 0.858,
-    "candidate_win_rate": 0.7217,
-    "summary": "**Change summary** – The current policy treats *second‑round deficit* as the most important factor, so it can ignore an *instant lethal* shot on a pirate that is already on the loss border (position 2).  \nI move the *kil"
-  },
-  {
     "timestamp": "2026-09-24T05:01:27+00:00",
     "promoted": false,
     "win_rate": 0.8667,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.9199,
     "summary": "**Change summary** – The original `deficit` assumes the cannon can hit *all* pirates in a column for the same number of rounds as the front pirate, which over‑estimates damage when several pirates are queued (blocking). "
+  },
+  {
+    "timestamp": "2026-09-25T01:38:41+00:00",
+    "promoted": false,
+    "win_rate": 0.9183,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
