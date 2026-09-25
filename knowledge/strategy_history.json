@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:03:16+00:00",
-    "promoted": false,
-    "win_rate": 0.8609,
-    "candidate_win_rate": 0.8609,
-    "summary": "**Change summary**  \nThe original `deficit` counts only the rounds remaining for the current front pirate (`steps = MAX_POSITION‑front.position`). In a stacked column the front pirate may die early, giving the next pirat"
-  },
-  {
     "timestamp": "2026-09-24T05:04:20+00:00",
     "promoted": false,
     "win_rate": 0.8667,
@@ -138,5 +131,12 @@
     "win_rate": 0.9265,
     "candidate_win_rate": 0.9265,
     "summary": "**Change summary**  \nThe current tie‑breaker only prefers moves over spawns, but it does not consider how well the resulting cannon layout can handle an unknown pirate that may appear in any column next round. I add a sm"
+  },
+  {
+    "timestamp": "2026-09-25T01:43:28+00:00",
+    "promoted": false,
+    "win_rate": 0.9183,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]

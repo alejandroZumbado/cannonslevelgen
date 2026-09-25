@@ -12,5 +12,12 @@
   "note": "Design note: Concentrate the swarm into a single column so the single cannon each round can reliably chip away at each pirate’s HP, using merges to boost damage for the occasional higher‑HP foe while ",
   "success": true,
   "reason": "fitness -45 -> 906, archetype wall"
+ },
+ {
+  "at": "2026-09-25T01:43:15+00:00",
+  "target": "swarm",
+  "note": "Design note: A steady swarm of three 1‑HP pirates per wave forces the player to spread cannons early while repeatedly merging into a single column to ramp up damage, keeping tension high and staying w",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
