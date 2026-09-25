@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-23T00:55:26+00:00",
-    "promoted": false,
-    "win_rate": 0.8493,
-    "candidate_win_rate": 0.6058,
-    "summary": "**Change summary** – The current champion always tries to minimise the *second‑round deficit* before it values an *instant lethal* shot on a pirate that is already on the loss‑border (position 2). In tight situations (e."
-  },
-  {
     "timestamp": "2026-09-23T00:56:38+00:00",
     "promoted": false,
     "win_rate": 0.8696,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-24T05:18:00+00:00",
     "promoted": false,
     "win_rate": 0.887,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-25T01:36:36+00:00",
+    "promoted": false,
+    "win_rate": 0.9199,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
