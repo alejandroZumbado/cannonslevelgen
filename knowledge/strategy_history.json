@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:02:33+00:00",
-    "promoted": false,
-    "win_rate": 0.8638,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-24T05:03:16+00:00",
     "promoted": false,
     "win_rate": 0.8609,
@@ -138,5 +131,12 @@
     "win_rate": 0.9248,
     "candidate_win_rate": 0.9199,
     "summary": "**Change summary**  \nThe current policy treats a “spawn‑onto‑occupied” merge the same as a plain spawn into an empty column, so it often spreads 1‑damage cannons instead of stacking damage where a strong pirate will late"
+  },
+  {
+    "timestamp": "2026-09-25T01:40:52+00:00",
+    "promoted": true,
+    "win_rate": 0.9265,
+    "candidate_win_rate": 0.9265,
+    "summary": "**Change summary**  \nThe current tie‑breaker only prefers moves over spawns, but it does not consider how well the resulting cannon layout can handle an unknown pirate that may appear in any column next round. I add a sm"
   }
 ]

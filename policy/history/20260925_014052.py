@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage"
+    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill_better"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -163,21 +163,17 @@ class Policy:
             kill_any = 1 if kills_any(act, cann_after_first, pirates) else 0
             kill_next = 1 if kills_next(act, cann_after_first, pirates_after_first) else 0
 
-            # coverage: number of distinct columns that have a cannon after this action
-            coverage = len(cann_after_first)
-
             # Prefer moves over spawns when everything else ties
             tie_pref = 0 if act[0] == "move" else 1
 
-            # NEW ordering: add coverage (more columns with cannons is better)
+            # NEW ordering: reward guaranteed next‑round kills earlier than first‑round deficit
             key = (
                 second_deficit,          # lower is better
-                -kill_next,              # higher kill‑next is better
+                -kill_next,              # higher kill‑next is better (moved up)
                 first_def,               # lower is better
                 -kill_lethal,            # higher kill‑lethal is better
                 -kill_any,               # higher kill‑any is better
                 -total_damage,           # higher total damage is better
-                -coverage,               # more covered columns is better
                 tie_pref,                # prefer move
                 act,                     # deterministic tie‑breaker
             )
