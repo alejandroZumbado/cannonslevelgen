@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:15:17+00:00",
-    "promoted": false,
-    "win_rate": 0.858,
-    "candidate_win_rate": 0.858,
-    "summary": "**Change summary**  \nThe current tie‑breaker only prefers moves over spawns and then falls back to the raw action tuple, which can leave all cannons stacked in a single column. I add a very small extra term to the compar"
-  },
-  {
     "timestamp": "2026-09-24T05:15:52+00:00",
     "promoted": false,
     "win_rate": 0.8435,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.9199,
     "summary": "**Change summary** – The champion policy breaks ties among equally‑safe actions by favouring *coverage* (more columns with a cannon).  In situations like Level 492 the best move is to merge damage into a column whose fro"
+  },
+  {
+    "timestamp": "2026-09-25T01:56:26+00:00",
+    "promoted": false,
+    "win_rate": 0.9199,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
