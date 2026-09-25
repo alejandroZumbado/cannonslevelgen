@@ -19,5 +19,12 @@
   "note": "Design note: A steady swarm of three 1‑HP pirates per wave forces the player to spread cannons early while repeatedly merging into a single column to ramp up damage, keeping tension high and staying w",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-25T01:46:49+00:00",
+  "target": "swarm",
+  "note": "Design note: A tight “one‑hit‑kill” swarm where every pirate is 1 HP forces the player to spread cannons early while the single‑cannon per round budget keeps tension high and the level resolves quickl",
+  "success": true,
+  "reason": "fitness 781 -> 891, archetype None"
  }
 ]

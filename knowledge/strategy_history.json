@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:05:43+00:00",
-    "promoted": false,
-    "win_rate": 0.8696,
-    "candidate_win_rate": 0.7217,
-    "summary": "**Change summary**  \nThe original `deficit` assumes the cannon can only fire for the number of rounds the current front pirate has before reaching position 3, which over‑estimates the damage shortfall when the front pira"
-  },
-  {
     "timestamp": "2026-09-24T05:06:36+00:00",
     "promoted": false,
     "win_rate": 0.8696,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.9183,
     "summary": "**Idea** – Instead of only looking two rounds ahead, the new policy evaluates how much an action *actually reduces* the overall damage deficit (the HP that cannot be dealt before pirates reach the loss position). It give"
+  },
+  {
+    "timestamp": "2026-09-25T01:46:59+00:00",
+    "promoted": false,
+    "win_rate": 0.9199,
+    "candidate_win_rate": 0.2876,
+    "summary": "**Idea** – Instead of looking only two rounds ahead or only at raw HP deficit, this policy treats each column as a *deadline‑scheduling* problem. For every column we compute how much total damage is still required before"
   }
 ]
