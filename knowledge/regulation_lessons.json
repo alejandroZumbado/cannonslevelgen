@@ -26,5 +26,12 @@
   "note": "Design note: A tight “one‑hit‑kill” swarm where every pirate is 1 HP forces the player to spread cannons early while the single‑cannon per round budget keeps tension high and the level resolves quickl",
   "success": true,
   "reason": "fitness 781 -> 891, archetype None"
+ },
+ {
+  "at": "2026-09-25T01:47:50+00:00",
+  "target": "tank",
+  "note": "Design note: Force the player to merge cannons in one column during the first few rounds to create a high‑damage shot that can instantly kill a later high‑HP “tank” while a spread of 1‑HP pirates in o",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]

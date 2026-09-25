@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:07:37+00:00",
-    "promoted": false,
-    "win_rate": 0.8609,
-    "candidate_win_rate": 0.8522,
-    "summary": "**Change explanation**  \nThe current policy can overlook a *critical move* that places an existing high‑damage cannon into a column whose front pirate is already on the loss border (position 2). Even though such a move m"
-  },
-  {
     "timestamp": "2026-09-24T05:09:00+00:00",
     "promoted": false,
     "win_rate": 0.8696,
@@ -138,5 +131,12 @@
     "win_rate": 0.9297,
     "candidate_win_rate": 0.9297,
     "summary": "**Change summary**  \nThe current champion prefers spawning new cannons over merging because the tie‑breaker (`tie_pref`) is evaluated *after* the coverage term, so a spawn that adds a new column can win even when all oth"
+  },
+  {
+    "timestamp": "2026-09-25T01:48:59+00:00",
+    "promoted": false,
+    "win_rate": 0.9199,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
