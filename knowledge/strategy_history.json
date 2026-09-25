@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:10:44+00:00",
-    "promoted": false,
-    "win_rate": 0.8783,
-    "candidate_win_rate": 0.8638,
-    "summary": "**Change summary**  \nThe current policy can miss a crucial *move* that kills a front pirate already on the loss border (position 2). Even though such a move eliminates an imminent loss, the `deficit` metric treats it the"
-  },
-  {
     "timestamp": "2026-09-24T05:12:07+00:00",
     "promoted": false,
     "win_rate": 0.8609,
@@ -136,6 +129,13 @@
     "timestamp": "2026-09-25T01:50:43+00:00",
     "promoted": false,
     "win_rate": 0.915,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-25T01:51:46+00:00",
+    "promoted": false,
+    "win_rate": 0.9003,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
   }
