@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:13:00+00:00",
-    "promoted": false,
-    "win_rate": 0.8841,
-    "candidate_win_rate": 0.8841,
-    "summary": "**Change summary**  \nWhen several actions are equally safe the current policy breaks ties only by preferring moves and then by the raw tuple order of the action. This can leave the board with all cannons stacked in a sin"
-  },
-  {
     "timestamp": "2026-09-24T05:13:56+00:00",
     "promoted": false,
     "win_rate": 0.8638,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-25T01:54:21+00:00",
+    "promoted": false,
+    "win_rate": 0.9167,
+    "candidate_win_rate": 0.9167,
+    "summary": "**Change summary** – The champion policy favours keeping many columns covered, so moving a cannon away from a safe column (reducing coverage) is often penalised even when the move saves a column whose front pirate is alr"
   }
 ]
