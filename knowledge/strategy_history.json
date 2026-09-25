@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:09:38+00:00",
-    "promoted": false,
-    "win_rate": 0.8522,
-    "candidate_win_rate": 0.8522,
-    "summary": "**Change summary**  \nThe original `deficit` only counts the number of rounds left for the current front pirate (`MAX_POSITION‑front.position`). In a stacked column this ignores the extra rounds you gain after killing a b"
-  },
-  {
     "timestamp": "2026-09-24T05:10:44+00:00",
     "promoted": false,
     "win_rate": 0.8783,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.9232,
     "summary": "**Change summary** – After simulating the first round we now count how many columns already have *both* a cannon and at least one pirate (`immediate_coverage`). This number is added (as a negative value) to the compariso"
+  },
+  {
+    "timestamp": "2026-09-25T01:50:43+00:00",
+    "promoted": false,
+    "win_rate": 0.915,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]

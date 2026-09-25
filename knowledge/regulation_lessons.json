@@ -33,5 +33,12 @@
   "note": "Design note: Force the player to merge cannons in one column during the first few rounds to create a high‑damage shot that can instantly kill a later high‑HP “tank” while a spread of 1‑HP pirates in o",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-09-25T01:50:18+00:00",
+  "target": "tank",
+  "note": "Design note: Early forced merges in a single column build enough damage to dispatch a high‑HP “tank” that appears later, while the surrounding 1‑HP pirates keep pressure and require the player to spre",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
