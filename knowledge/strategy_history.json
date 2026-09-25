@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:09:00+00:00",
-    "promoted": false,
-    "win_rate": 0.8696,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-24T05:09:38+00:00",
     "promoted": false,
     "win_rate": 0.8522,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-25T01:49:38+00:00",
+    "promoted": false,
+    "win_rate": 0.9232,
+    "candidate_win_rate": 0.9232,
+    "summary": "**Change summary** – After simulating the first round we now count how many columns already have *both* a cannon and at least one pirate (`immediate_coverage`). This number is added (as a negative value) to the compariso"
   }
 ]
