@@ -1,0 +1,9 @@
+[
+ {
+  "at": "2026-09-25T01:37:10+00:00",
+  "target": "swarm",
+  "note": "Design note: Spread your cannons across the columns each round to thin out the swarm before any pirate can advance to the loss position.",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
+ }
+]
