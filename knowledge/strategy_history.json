@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:06:36+00:00",
-    "promoted": false,
-    "win_rate": 0.8696,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-24T05:07:37+00:00",
     "promoted": false,
     "win_rate": 0.8609,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.2876,
     "summary": "**Idea** – Instead of looking only two rounds ahead or only at raw HP deficit, this policy treats each column as a *deadline‑scheduling* problem. For every column we compute how much total damage is still required before"
+  },
+  {
+    "timestamp": "2026-09-25T01:47:31+00:00",
+    "promoted": false,
+    "win_rate": 0.9297,
+    "candidate_win_rate": 0.9297,
+    "summary": "**Change summary**  \nThe current champion prefers spawning new cannons over merging because the tie‑breaker (`tie_pref`) is evaluated *after* the coverage term, so a spawn that adds a new column can win even when all oth"
   }
 ]
