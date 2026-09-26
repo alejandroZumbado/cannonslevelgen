@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:48:59+00:00",
-    "promoted": false,
-    "win_rate": 0.9199,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-25T01:49:38+00:00",
     "promoted": false,
     "win_rate": 0.9232,
@@ -138,5 +131,12 @@
     "win_rate": 0.9069,
     "candidate_win_rate": 0.9069,
     "summary": "**Change summary** – The current policy favours *coverage* (number of columns with a cannon) over *early merging*. When a column is about to face a high‑HP pirate that cannot be killed with the damage it will have after "
+  },
+  {
+    "timestamp": "2026-09-26T01:51:44+00:00",
+    "promoted": false,
+    "win_rate": 0.9199,
+    "candidate_win_rate": 0.9199,
+    "summary": "**Change summary** – The original key penalises a *move* because it can lower the number of covered columns (`coverage = len(cann_after_first)`). When the donor column currently has no pirates (or only harmless ones), lo"
   }
 ]
