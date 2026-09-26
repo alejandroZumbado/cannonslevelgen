@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:46:59+00:00",
-    "promoted": false,
-    "win_rate": 0.9199,
-    "candidate_win_rate": 0.2876,
-    "summary": "**Idea** – Instead of looking only two rounds ahead or only at raw HP deficit, this policy treats each column as a *deadline‑scheduling* problem. For every column we compute how much total damage is still required before"
-  },
-  {
     "timestamp": "2026-09-25T01:47:31+00:00",
     "promoted": false,
     "win_rate": 0.9297,
@@ -138,5 +131,12 @@
     "win_rate": 0.9248,
     "candidate_win_rate": 0.9216,
     "summary": "**Change summary** – The original `deficit` assumes a cannon can deal `damage * steps` total damage in a column, ignoring that each round can only hit the current front pirate and any excess damage is wasted. This over‑e"
+  },
+  {
+    "timestamp": "2026-09-26T01:49:52+00:00",
+    "promoted": false,
+    "win_rate": 0.9216,
+    "candidate_win_rate": 0.9216,
+    "summary": "**Change summary** – The original tie‑breaker prefers a *move* over a *spawn* when every other metric is equal (`tie_pref = 0` for moves, `1` for spawns). This can leave columns without a cannon even though a safe *spawn"
   }
 ]
