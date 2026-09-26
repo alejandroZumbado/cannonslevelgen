@@ -61,5 +61,12 @@
   "note": "Design note: Early rounds force the player to merge repeatedly in column 2, building a 5‑damage cannon that can one‑shot a later HP‑5 “tank” while a spread of 1‑HP pirates across the other columns kee",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-09-26T01:41:58+00:00",
+  "target": "tank",
+  "note": "Design note: Early rounds force the player to merge twice in column 2 to create a 5‑damage cannon that one‑shots a later HP‑8 “tank” while a steady spread of 1‑HP pirates across the other columns crea",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
