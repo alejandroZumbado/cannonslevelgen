@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:18:00+00:00",
-    "promoted": false,
-    "win_rate": 0.887,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-25T01:36:36+00:00",
     "promoted": false,
     "win_rate": 0.9199,
@@ -138,5 +131,12 @@
     "win_rate": 0.9216,
     "candidate_win_rate": 0.9134,
     "summary": "**Change summary** – The original `deficit` assumes the cannon’s damage stays fixed for the whole remaining lifetime of the front pirate, ignoring that the pending spawn cannon (and later merges) can increase that damage"
+  },
+  {
+    "timestamp": "2026-09-26T01:41:19+00:00",
+    "promoted": false,
+    "win_rate": 0.9248,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
