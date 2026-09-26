@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:47:31+00:00",
-    "promoted": false,
-    "win_rate": 0.9297,
-    "candidate_win_rate": 0.9297,
-    "summary": "**Change summary**  \nThe current champion prefers spawning new cannons over merging because the tie‑breaker (`tie_pref`) is evaluated *after* the coverage term, so a spawn that adds a new column can win even when all oth"
-  },
-  {
     "timestamp": "2026-09-25T01:48:59+00:00",
     "promoted": false,
     "win_rate": 0.9199,
@@ -138,5 +131,12 @@
     "win_rate": 0.9216,
     "candidate_win_rate": 0.9216,
     "summary": "**Change summary** – The original tie‑breaker prefers a *move* over a *spawn* when every other metric is equal (`tie_pref = 0` for moves, `1` for spawns). This can leave columns without a cannon even though a safe *spawn"
+  },
+  {
+    "timestamp": "2026-09-26T01:51:04+00:00",
+    "promoted": false,
+    "win_rate": 0.9069,
+    "candidate_win_rate": 0.9069,
+    "summary": "**Change summary** – The current policy favours *coverage* (number of columns with a cannon) over *early merging*. When a column is about to face a high‑HP pirate that cannot be killed with the damage it will have after "
   }
 ]
