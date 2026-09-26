@@ -58,7 +58,10 @@ def _print_day(day: str, verbose: bool = False) -> dict:
         elif outcome.get("accepted"):
             print(f"    [{e['timestamp']}] {tag}: level accepted ({outcome.get('level_password')})")
         else:
-            reason = outcome.get("reason", "no improvement")
+            # daily_generator's final check records no "reason" — it lost the
+            # game sim; saying "no improvement" there misled the 09-26 health check
+            default = "not winnable" if "rounds_played" in outcome else "no improvement"
+            reason = outcome.get("reason", default)
             print(f"    [{e['timestamp']}] {tag}: no result ({reason})")
 
         if verbose:

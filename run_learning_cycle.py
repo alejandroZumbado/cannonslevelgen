@@ -38,6 +38,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import config
 from llm.budget import BudgetExceeded, remaining_tokens, calls_made_today
 from llm.client import ProviderQuotaExhausted
+from llm import audit
 from learning import strategy_learner, regulation_designer
 import git_sync
 import incident_log
@@ -62,8 +63,15 @@ _MAX_CYCLE_PAIRS_PER_RUN = 300
 
 # the designer runs on 1 of every N pairs — see _next_order. 3 -> 2 on
 # 2026-09-24: regulation_designer produces verified level fixes, worth more
-# budget than the old rule hypotheses.
-_DESIGNER_EVERY = 2
+# budget than the old rule hypotheses. 2 -> 1 on 2026-09-26 (every pair).
+_DESIGNER_EVERY = 1
+
+# strategy_learner calls per day (2026-09-26). It took ~126k of the 180k daily
+# tokens (17 calls/day) for 10 days with zero real gains: both promotions were
+# win-rate ties and it wins 0/35 real target levels. regulation_designer got 4
+# verified level fixes out of 18 calls in the same window. Past this cap the
+# learner is skipped for the day and the budget goes to the designer.
+_STRATEGY_MAX_CALLS_PER_DAY = 6
 
 
 def _next_order() -> list[str]:
@@ -93,25 +101,32 @@ def _next_order() -> list[str]:
     return order
 
 
-def _run_one(name: str) -> bool:
-    """Runs one learner, logging its outcome. Returns True if the budget/
-    provider quota is exhausted (caller should not attempt the other one)."""
+def _strategy_calls_today() -> int:
+    """strategy_learner calls already recorded in today's audit log (same
+    day boundary as llm/budget.py), so the cap holds across separate runs."""
+    return sum(1 for e in audit.read_day() if e.get("caller") == "strategy_learner")
+
+
+def _run_one(name: str) -> tuple[bool, bool]:
+    """Runs one learner, logging its outcome. Returns (exhausted, idle):
+    exhausted = budget/provider quota is gone (don't attempt the other one);
+    idle = the learner had nothing to do (e.g. no designer candidates left)."""
     try:
         result = _RUNNERS[name]()
         print(f"  {name}: {result}", flush=True)
-        return False
+        return False, bool(isinstance(result, dict) and result.get("skipped"))
     except BudgetExceeded as e:
         print(f"  {name}: budget exhausted for today ({e}) — stopping cleanly.", flush=True)
-        return True
+        return True, False
     except ProviderQuotaExhausted as e:
         print(f"  {name}: provider rate-limited hard ({e}) — stopping cleanly, "
               f"this is Groq/Anthropic's cap, not our bug. See state/rate_limit_events.jsonl.", flush=True)
-        return True
+        return True, False
     except Exception:  # noqa: BLE001
         print(f"  {name}: unexpected error, see traceback below", flush=True)
         traceback.print_exc()
         incident_log.record_exception(name)
-        return False
+        return False, False
 
 
 def main() -> int:
@@ -130,8 +145,14 @@ def main() -> int:
 
         # stop at the first learner that hits the budget/provider cap
         exhausted = False
+        worked = False  # any learner actually ran this pair
         for name in order:
-            exhausted = _run_one(name)
+            if name == "strategy_learner" and _strategy_calls_today() >= _STRATEGY_MAX_CALLS_PER_DAY:
+                print(f"  strategy_learner: daily cap of {_STRATEGY_MAX_CALLS_PER_DAY} calls reached — skipped",
+                      flush=True)
+                continue
+            exhausted, idle = _run_one(name)
+            worked = worked or not idle
             if exhausted:
                 break
 
@@ -144,6 +165,11 @@ def main() -> int:
 
         if exhausted:
             print("  stopping loop: today's budget/provider quota is exhausted.", flush=True)
+            break
+        if not worked:
+            # learner capped + designer out of candidates: every further pair
+            # would be the same no-op (and a commit), so end the run here
+            print("  stopping loop: nothing left to do today (learner capped, designer idle).", flush=True)
             break
         if time.monotonic() >= deadline:
             print(f"  stopping loop: hit this run's {config.JOB_TIME_BUDGET_SECONDS}s time budget "

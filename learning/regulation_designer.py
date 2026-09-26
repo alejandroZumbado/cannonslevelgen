@@ -63,6 +63,11 @@ def _candidates() -> list[dict]:
             continue
         missed_archetype = r.get("target_archetype") and r["after"].get("primary") != r["target_archetype"]
         rank = order.get(r["status"], 3 if missed_archetype else None)
+        # tank targets last (2026-09-26): 0 real tanks from any LLM attempt so
+        # far (policy can't plan merges; see daily_generator's archetype bench),
+        # and they were 71 of the 159 open candidates — do the others first.
+        if rank == 3 and r.get("target_archetype") == "tank":
+            rank = 4
         if rank is not None:
             out.append((rank, r["levelNumber"], r))
     return [r for _, _, r in sorted(out, key=lambda x: (x[0], x[1]))]
