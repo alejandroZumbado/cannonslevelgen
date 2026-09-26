@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:37:36+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.9199,
-    "summary": "**Change summary** – The original `deficit` assumes the cannon can hit *all* pirates in a column for the same number of rounds as the front pirate, which over‑estimates damage when several pirates are queued (blocking). "
-  },
-  {
     "timestamp": "2026-09-25T01:38:41+00:00",
     "promoted": false,
     "win_rate": 0.9183,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-26T01:43:12+00:00",
+    "promoted": false,
+    "win_rate": 0.9232,
+    "candidate_win_rate": 0.9216,
+    "summary": "**Change summary** – The original tie‑breaker only prefers actions with more total damage and more covered columns, but it ignores how that damage is distributed. When two safe actions have the same total damage (e.g., m"
   }
 ]
