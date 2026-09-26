@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:16:47+00:00",
-    "promoted": false,
-    "win_rate": 0.8696,
-    "candidate_win_rate": 0.8435,
-    "summary": "**Change summary (2 sentences)**  \nThe current policy only prefers moves over spawns when *all* other comparison terms tie, so it often ignores a clearly urgent move that protects a pirate that is already at position 2 ("
-  },
-  {
     "timestamp": "2026-09-24T05:18:00+00:00",
     "promoted": false,
     "win_rate": 0.887,
@@ -138,5 +131,12 @@
     "win_rate": 0.9265,
     "candidate_win_rate": 0.9265,
     "summary": "**Change summary** – The champion policy only looks at the *future* deficit after two rounds, so it often spreads 1‑damage cannons even when a column is already “deficit‑heavy”. I add a tiny “deficit‑reduction” tie‑break"
+  },
+  {
+    "timestamp": "2026-09-26T01:40:47+00:00",
+    "promoted": false,
+    "win_rate": 0.9216,
+    "candidate_win_rate": 0.9134,
+    "summary": "**Change summary** – The original `deficit` assumes the cannon’s damage stays fixed for the whole remaining lifetime of the front pirate, ignoring that the pending spawn cannon (and later merges) can increase that damage"
   }
 ]
