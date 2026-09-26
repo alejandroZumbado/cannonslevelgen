@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:38:41+00:00",
-    "promoted": false,
-    "win_rate": 0.9183,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-25T01:40:02+00:00",
     "promoted": false,
     "win_rate": 0.9248,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.9216,
     "summary": "**Change summary** – The original tie‑breaker only prefers actions with more total damage and more covered columns, but it ignores how that damage is distributed. When two safe actions have the same total damage (e.g., m"
+  },
+  {
+    "timestamp": "2026-09-26T01:44:37+00:00",
+    "promoted": false,
+    "win_rate": 0.9183,
+    "candidate_win_rate": 0.9167,
+    "summary": "**Change summary** – The original policy never rewards an action that *immediately* lowers the overall HP‑deficit, so it can miss a crucial early merge on a column that has several blocked pirates (e.g., a queue whose to"
   }
 ]
