@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:53:19+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-25T01:54:21+00:00",
     "promoted": false,
     "win_rate": 0.9167,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.7222,
     "summary": "**Idea** – Instead of only looking one‑step ahead and rewarding “coverage”, the new policy first checks whether a column has a *critical* pirate (position 2 that would survive the current shot). If so it forces the round"
+  },
+  {
+    "timestamp": "2026-09-26T01:56:05+00:00",
+    "promoted": false,
+    "win_rate": 0.9248,
+    "candidate_win_rate": 0.7958,
+    "summary": "**Idea:**  \nThe new policy first looks for *imminent‑loss* pirates – those that will reach position 3 on the next advance unless they are killed this round. If any exist, the policy forces an action that eliminates all o"
   }
 ]
