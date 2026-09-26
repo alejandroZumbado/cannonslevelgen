@@ -82,5 +82,12 @@
   "note": "Design note: Early flood of 1‑HP pirates in column 2 forces the player to merge twice, creating a 5‑damage cannon that one‑shots the HP‑5 tank that appears later, while the remaining columns keep a st",
   "success": true,
   "reason": "fitness 989 -> 996, archetype burst"
+ },
+ {
+  "at": "2026-09-26T01:47:27+00:00",
+  "target": "tank",
+  "note": "Design note: Seed five consecutive 1‑HP pirates in column 2 to force early merges that build a 5‑damage cannon, then unleash a column‑2 HP‑5 tank while the other columns pepper the player with scatter",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]

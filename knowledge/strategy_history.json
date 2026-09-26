@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:43:28+00:00",
-    "promoted": false,
-    "win_rate": 0.9183,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-25T01:44:24+00:00",
     "promoted": false,
     "win_rate": 0.9199,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-26T01:47:47+00:00",
+    "promoted": false,
+    "win_rate": 0.9297,
+    "candidate_win_rate": 0.9265,
+    "summary": "**Change summary** – The original `deficit` assumes a cannon can deal `damage * steps` total damage in a column, ignoring that a high‑HP front pirate can soak many rounds and prevent any damage from reaching pirates behi"
   }
 ]
