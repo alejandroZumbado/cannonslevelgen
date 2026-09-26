@@ -9,8 +9,10 @@ per cycle, not once per in-game move.
 """
 from __future__ import annotations
 
+import io
 import re
 import shutil
+import tokenize
 from datetime import datetime
 from pathlib import Path
 
@@ -120,6 +122,33 @@ fixed game rule, not something you control.
 """
 
 
+# Groq free tier for openai/gpt-oss-120b counts prompt + max_tokens against an
+# 8000 tokens-per-minute cap; a single request above it is a 413, not a 429
+# (2026-09-26: 2 more 413s at ~4400 prompt + 3600 completion). Checked with
+# client._estimate_tokens (chars/4), which over-counts this prompt slightly,
+# so staying under it with the estimate is a safe margin, not a tight one.
+_REQUEST_TOKEN_CEILING = 8000
+_MAX_COMPLETION_TOKENS = 3600
+
+
+def _compact_source(source: str) -> str:
+    """Policy source without comments/blank lines, for the prompt only.
+    Comments were ~22% of policy/current.py (09-26) and grow with every
+    promotion — they cost prompt tokens without changing behavior. Falls back
+    to the raw source if it can't be tokenized (the loader will report that)."""
+    try:
+        tokens = [t for t in tokenize.generate_tokens(io.StringIO(source).readline)
+                  if t.type != tokenize.COMMENT]
+        stripped = tokenize.untokenize(tokens)
+    except (tokenize.TokenError, IndentationError, SyntaxError):
+        return source
+    return "\n".join(line.rstrip() for line in stripped.splitlines() if line.strip())
+
+
+def _fits(system: str, user: str) -> bool:
+    return client._estimate_tokens(system, user) + _MAX_COMPLETION_TOKENS <= _REQUEST_TOKEN_CEILING
+
+
 def _extract_code(text: str) -> str | None:
     match = re.search(r"```(?:python)?\s*\n(.*?)```", text, re.DOTALL)
     return match.group(1).strip() if match else None
@@ -220,9 +249,21 @@ def run_cycle() -> dict:
     # "don't repeat" signal; the saved ~180 tokens fund max_tokens below.
     recent_attempts = strategy_history.recent_attempts_block(4)
 
-    system, user = _build_prompt(current_source, current_score, rng_seed=seed,
+    prompt_source = _compact_source(current_source)
+    system, user = _build_prompt(prompt_source, current_score, rng_seed=seed,
                                   refine_mode=refine_mode, recent_attempts=recent_attempts,
                                   failures=failures)
+    # Last-resort trims so an oversized prompt degrades instead of 413-ing:
+    # first the real-level failures (they vary in size per cycle), then the
+    # rejected-attempts list. Logged so a shrinking prompt is visible.
+    if not _fits(system, user):
+        system, user = _build_prompt(prompt_source, current_score, rng_seed=seed,
+                                      refine_mode=refine_mode, recent_attempts=recent_attempts)
+        knowledge.append_log("strategy_learner: prompt trimmed", "dropped real-level failures (413 guard)")
+    if not _fits(system, user):
+        system, user = _build_prompt(prompt_source, current_score, rng_seed=seed,
+                                      refine_mode=refine_mode, recent_attempts="")
+        knowledge.append_log("strategy_learner: prompt trimmed", "dropped recent attempts too (413 guard)")
     # 4000 -> 3000 on 2026-08-28: prompt (policy source + GAME_RULES + learned
     # rules + recent attempts) measured ~4450 tokens; with max_tokens=4000 the
     # combined request+completion budget (~8450) tripped Groq's 413 on every
@@ -264,7 +305,7 @@ def run_cycle() -> dict:
     # (code cut off). Prompt shrank ~450 est. tokens since 09-22 (rules block
     # -> failures, attempts 6 -> 4), so worst total stays under the ~8450
     # 413 ceiling measured in the history above.
-    completion = client.complete(system, user, max_tokens=3600,
+    completion = client.complete(system, user, max_tokens=_MAX_COMPLETION_TOKENS,
                                   reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS)
     response = completion.text
 
@@ -294,7 +335,11 @@ def run_cycle() -> dict:
 
     reasoning = response.split("```")[0].strip()
 
-    if candidate_score.better_than(current_score):
+    # Strictly more wins on the same suite. Score.better_than's tie-break
+    # (fewer avg rounds) let equal-win candidates through — e.g. 09-26 01:54
+    # "PROMOTED 91% -> 91%" — and each such swap grew policy/current.py
+    # (8557 -> 9165 bytes, 09-25..26), which is what pushed prompts into 413s.
+    if candidate_score.wins > current_score.wins:
         _archive_current(current_source)
         CURRENT_POLICY_PATH.write_text(code, encoding="utf-8")
         knowledge.append_log(

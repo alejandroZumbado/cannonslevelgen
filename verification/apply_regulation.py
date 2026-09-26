@@ -63,14 +63,15 @@ def load_results(pass_name: str) -> dict[int, dict]:
 
 def merge_llm_proposals(results: dict[int, dict]) -> list[str]:
     """LLM redesigns (verified strictly better than the regulator's version
-    when proposed) override that level's record. Returns the levelNumbers
-    used, so the caller can mark them applied."""
+    when proposed) override that level's record — in EVERY pass, even once
+    already applied: finalize re-applies pass 2 after pass 1, and skipping
+    applied proposals there let pass 2's older record overwrite them (would
+    have reverted 508 to its 18-round version, found 2026-09-26). Re-writing
+    the same proposal is idempotent. Returns the levelNumbers used."""
     if not PROPOSALS_PATH.exists():
         return []
     used = []
     for number, proposal in json.loads(PROPOSALS_PATH.read_text(encoding="utf-8")).items():
-        if proposal.get("applied_in"):
-            continue
         results[int(number)] = {"levelNumber": int(number), "status": "llm_proposal",
                                 "level": proposal["level"], "after": proposal["after"]}
         used.append(number)
@@ -80,7 +81,8 @@ def merge_llm_proposals(results: dict[int, dict]) -> list[str]:
 def _mark_proposals_applied(numbers: list[str], pass_name: str) -> None:
     proposals = json.loads(PROPOSALS_PATH.read_text(encoding="utf-8"))
     for number in numbers:
-        proposals[number]["applied_in"] = pass_name
+        # keeps the FIRST pass that applied it (the later re-applies are no-ops)
+        proposals[number].setdefault("applied_in", pass_name)
     PROPOSALS_PATH.write_text(json.dumps(proposals, indent=1, ensure_ascii=False), encoding="utf-8")
 
 

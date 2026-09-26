@@ -30,7 +30,7 @@ from policy.baseline import BaselinePolicy
 from verification import pacing
 from verification.level_audit import audit_level
 from verification.official_levels import load_all
-from verification.solver import ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS
+from verification.solver import ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS, solve_thoroughly
 
 CURRENT_POLICY_PATH = config.ROOT / "policy" / "current.py"
 # 5 -> 8 (2026-09-24): the pacing gate rejects more candidates, and each retry now
@@ -118,8 +118,8 @@ def _extract_json(text: str) -> dict | None:
 
 def generate_one_level(level_number: int, used_passwords: set[str], existing_signatures: set[str],
                        archetype: str) -> Level | None:
-    """Returns None if every attempt was tried and none beat the learned
-    policy — a real, expected outcome (see main()), NOT the same thing as
+    """Returns None if every attempt was tried and none was winnable (by the
+    learned policy or, failing that, the solver) — a real, expected outcome (see main()), NOT the same thing as
     PolicyLoadError below, which callers should treat as an actual failure
     (there's no point retrying level generation if the policy itself is
     broken) and is deliberately left to propagate rather than being caught
@@ -204,25 +204,84 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
         level.password = ensure_unique_password(level.password, used_passwords)
 
         engine = run_level(level, policy)
+        # Policy loss -> ask the solver (2026-09-26). The policy wins 0/35 of the
+        # real winnable levels it's trained on, all merge-heavy, so "tank" (the
+        # archetype _pick_archetype keeps choosing, 0 in the campaign) was
+        # rejected 16/16 times on 09-25..26 and nothing shipped. What players
+        # need is a winnable level; the campaign already ships 35
+        # solved_by_search_only levels by the same standard (level_audit.py).
+        solver_won = False if engine.won else solve_thoroughly(level, ESCALATION_BEAM_WIDTHS,
+                                                               DEFAULT_MAX_ROUNDS).won
+        accepted = engine.won or solver_won
         outcome = {
-            "accepted": engine.won, "attempt": attempt, "rounds_played": engine.rounds_played,
-            "level_password": level.password,
+            "accepted": accepted, "attempt": attempt, "rounds_played": engine.rounds_played,
+            "level_password": level.password, "policy_won": engine.won, "solver_won": solver_won,
         }
         audit.record_call(caller="daily_generator", completion=completion, system=system, user=user, outcome=outcome)
-        if engine.won:
-            print(f"  attempt {attempt}: winnable in {engine.rounds_played} rounds, accepted")
+        if accepted:
+            winner = "learned policy" if engine.won else "solver only (policy lost)"
+            print(f"  attempt {attempt}: winnable by {winner}, accepted")
             return level
-        feedback = ("the trained AI could not win it — too hard. Keep the same idea but lower the "
-                    "single hardest spike (one HP, or one pirate in the densest round)")
-        print(f"  attempt {attempt}: not winnable by learned policy, retrying")
+        feedback = ("neither the trained AI nor an exhaustive search could win it — too hard. Keep the "
+                    "same idea but lower the single hardest spike (one HP, or one pirate in the densest round)")
+        print(f"  attempt {attempt}: not winnable (policy and solver both lost), retrying")
 
     return None
+
+
+# Archetype bench (2026-09-26): "tank" is the least-represented archetype, so
+# _pick_archetype chose it every day and all 16 candidates of 09-25..26 were
+# unwinnable even for the solver — production stalled with nothing to rotate
+# to. An archetype whose last BENCH_AFTER_FAILED_RUNS runs produced nothing is
+# skipped for BENCH_DAYS, then gets another chance.
+ARCHETYPE_STATE_PATH = config.ROOT / "state" / "archetype_failures.json"
+BENCH_AFTER_FAILED_RUNS = 2
+BENCH_DAYS = 7
+
+
+def _load_archetype_failures() -> dict:
+    """{archetype: {"failed_runs": int, "last_failed": "YYYY-MM-DD"}}; {} if
+    missing or unreadable (logged — a bad file must not stop production)."""
+    if not ARCHETYPE_STATE_PATH.exists():
+        return {}
+    try:
+        return json.loads(ARCHETYPE_STATE_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"  archetype state unreadable ({e}) — starting without a bench")
+        return {}
+
+
+def _record_archetype_result(archetype: str, produced: bool) -> None:
+    """Success resets the archetype's streak; a run with no level extends it."""
+    state = _load_archetype_failures()
+    if produced:
+        state.pop(archetype, None)
+    else:
+        entry = state.get(archetype, {"failed_runs": 0})
+        entry["failed_runs"] += 1
+        entry["last_failed"] = datetime.now(timezone.utc).date().isoformat()
+        state[archetype] = entry
+    ARCHETYPE_STATE_PATH.write_text(json.dumps(state, indent=1), encoding="utf-8")
+
+
+def _benched_archetypes() -> set[str]:
+    today = datetime.now(timezone.utc).date()
+    benched = set()
+    for name, entry in _load_archetype_failures().items():
+        try:
+            age = (today - datetime.fromisoformat(entry["last_failed"]).date()).days
+        except (KeyError, ValueError):
+            continue
+        if entry.get("failed_runs", 0) >= BENCH_AFTER_FAILED_RUNS and age < BENCH_DAYS:
+            benched.add(name)
+    return benched
 
 
 def _pick_archetype() -> str:
     """Least-represented archetype among the newest levels (Assets/Levels +
     pending incoming drops), so consecutive days don't keep producing the same
-    kind of level. Falls back to the first archetype if nothing can be read."""
+    kind of level. Benched archetypes (see above) are skipped unless every one
+    is benched. Falls back to the first archetype if nothing can be read."""
     levels = []
     assets_dir = config.CANNONS_REPO / "Assets" / "Levels"
     if assets_dir.exists():
@@ -233,7 +292,11 @@ def _pick_archetype() -> str:
         except (ValueError, KeyError) as e:
             print(f"  variety: skipping unreadable {json_file.name} ({e})")
     recent = sorted(levels, key=lambda lv: lv.levelNumber)[-RECENT_LEVELS_FOR_VARIETY:]
-    return pacing.least_represented(recent)
+    benched = _benched_archetypes()
+    candidates = [a for a in pacing.ARCHETYPES if a not in benched] or None  # None = all
+    if benched:
+        print(f"  variety: skipping benched archetype(s) {sorted(benched)}")
+    return pacing.least_represented(recent, candidates)
 
 
 def main() -> int:
@@ -274,6 +337,7 @@ def main() -> int:
             archetype = _pick_archetype()
             print(f"target archetype today: {archetype} ({pacing.ARCHETYPES[archetype]})")
             level = generate_one_level(level_number, used_passwords, existing_signatures, archetype)
+            _record_archetype_result(archetype, produced=level is not None)
     except PolicyLoadError as e:
         # unlike "no candidate won" below, this means production is broken,
         # not just unlucky today — worth a real red X.
@@ -307,7 +371,7 @@ def main() -> int:
             # learned policy is still weak, which is expected early on, not
             # an incident. (exit_code == 1 here instead means PolicyLoadError
             # above — that message already printed, this stays quiet.)
-            print("no candidate level beat the learned policy today — nothing to publish, will try again next run")
+            print("no winnable candidate level today — nothing to publish, will try again next run")
     else:
         out_path = config.INCOMING_LEVELS_DIR / f"Level_{level.levelNumber}_{datetime.now():%Y%m%d}.json"
         level.save(out_path)
@@ -317,9 +381,9 @@ def main() -> int:
         # 500-level audit uses (verification/level_audit.py), plus the naive
         # pre-learning baseline policy, so "tested with the AI and the bots"
         # happens as part of THIS run rather than a separate one. Both are
-        # pure local simulation (no LLM call) — champion_win is guaranteed
-        # here (generation already required policy_check to win), so the
-        # solver never actually has to escalate; the real signal is whether
+        # pure local simulation (no LLM call) — the result is champion_win or
+        # solved_by_search_only (generation required one of them to win,
+        # see generate_one_level); the other signal is whether
         # the untrained baseline also wins (level doesn't need what was
         # learned) or loses (level exercises the learned strategy for real).
         difficulty = audit_level(level, policy_check, ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS)
