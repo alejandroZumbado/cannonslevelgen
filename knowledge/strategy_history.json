@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-24T05:15:52+00:00",
-    "promoted": false,
-    "win_rate": 0.8435,
-    "candidate_win_rate": 0.8435,
-    "summary": "**Change summary** – When two actions are otherwise equal the policy now prefers the one that puts (or moves) damage into a column that already has pirates.  We add a “pirate‑damage” score (sum of cannon damage in column"
-  },
-  {
     "timestamp": "2026-09-24T05:16:47+00:00",
     "promoted": false,
     "win_rate": 0.8696,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-26T01:39:36+00:00",
+    "promoted": false,
+    "win_rate": 0.9265,
+    "candidate_win_rate": 0.9265,
+    "summary": "**Change summary** – The champion policy only looks at the *future* deficit after two rounds, so it often spreads 1‑damage cannons even when a column is already “deficit‑heavy”. I add a tiny “deficit‑reduction” tie‑break"
   }
 ]
