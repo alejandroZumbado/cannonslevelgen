@@ -103,5 +103,12 @@
   "note": "Design note: A rapid succession of 1‑HP pirates in column 2 forces the player to merge five times early, creating a 5‑damage cannon that instantly kills the HP‑5 tank that arrives next, while later a ",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-09-26T01:52:19+00:00",
+  "target": "tank",
+  "note": "Design note: Seed five consecutive 1‑HP pirates in column 2 to force early merges that build a 5‑damage cannon, then unleash a HP‑5 tank in that column while other columns introduce moderate‑HP pirate",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
