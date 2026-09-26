@@ -89,5 +89,12 @@
   "note": "Design note: Seed five consecutive 1‑HP pirates in column 2 to force early merges that build a 5‑damage cannon, then unleash a column‑2 HP‑5 tank while the other columns pepper the player with scatter",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-09-26T01:48:01+00:00",
+  "target": "tank",
+  "note": "Design note: Seed four consecutive 1‑HP pirates in column 2 so the player is forced to merge cannons there and build a 5‑damage cannon, then unleash an 8‑HP tank in column 3 that the prepared cannon c",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]

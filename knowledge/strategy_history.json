@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:44:24+00:00",
-    "promoted": false,
-    "win_rate": 0.9199,
-    "candidate_win_rate": 0.9183,
-    "summary": "**Idea** – Instead of only looking two rounds ahead, the new policy evaluates how much an action *actually reduces* the overall damage deficit (the HP that cannot be dealt before pirates reach the loss position). It give"
-  },
-  {
     "timestamp": "2026-09-25T01:46:59+00:00",
     "promoted": false,
     "win_rate": 0.9199,
@@ -138,5 +131,12 @@
     "win_rate": 0.9297,
     "candidate_win_rate": 0.9265,
     "summary": "**Change summary** – The original `deficit` assumes a cannon can deal `damage * steps` total damage in a column, ignoring that a high‑HP front pirate can soak many rounds and prevent any damage from reaching pirates behi"
+  },
+  {
+    "timestamp": "2026-09-26T01:49:03+00:00",
+    "promoted": false,
+    "win_rate": 0.9248,
+    "candidate_win_rate": 0.9216,
+    "summary": "**Change summary** – The original `deficit` assumes a cannon can deal `damage * steps` total damage in a column, ignoring that each round can only hit the current front pirate and any excess damage is wasted. This over‑e"
   }
 ]
