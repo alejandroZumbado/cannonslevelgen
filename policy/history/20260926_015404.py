@@ -3,7 +3,7 @@ MAX_POSITION = 3          # reaching this loses the game
 
 
 class Policy:
-    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage_reserve"
+    name = "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage"
 
     # ------------------------------------------------------------------ #
     def choose_action(self, engine):
@@ -135,13 +135,6 @@ class Policy:
             if loss1:
                 continue          # unsafe first action
 
-            # ----- compute reserved‑coverage after first round -----
-            # columns that have a cannon but currently host NO pirate
-            reserved = sum(
-                1 for col in cann_after_first
-                if not any(p["column"] == col for p in pirates_after_first)
-            )
-
             # ----- second round: try every possible spawn **or move** -----
             second_deficit = None
             second_candidates = [("spawn", col) for col in range(NUM_COLUMNS)]
@@ -176,7 +169,7 @@ class Policy:
             # Prefer moves over spawns when everything else ties
             tie_pref = 0 if act[0] == "move" else 1
 
-            # NEW term: more reserved columns (cannons in empty columns) is better
+            # NEW ordering: add coverage (more columns with cannons is better)
             key = (
                 second_deficit,          # lower is better
                 -kill_next,              # higher kill‑next is better
@@ -185,7 +178,6 @@ class Policy:
                 -kill_any,               # higher kill‑any is better
                 -total_damage,           # higher total damage is better
                 -coverage,               # more covered columns is better
-                -reserved,               # more reserved (empty‑column) cannons is better
                 tie_pref,                # prefer move
                 act,                     # deterministic tie‑breaker
             )
