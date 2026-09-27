@@ -355,5 +355,12 @@
   "note": "Design note: A steady build‑up from solitary 1‑HP foes to full‑column waves of 2‑HP and finally a climax of 3‑HP pirates creates a clear crescendo while staying within the 45‑damage budget for a winna",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:48:32+00:00",
+  "target": "crescendo",
+  "note": "Design note: A clear crescendo starts with single 1‑HP pirates, then adds more columns and higher‑HP foes each round, culminating in dense waves of 3‑ and 4‑HP pirates that force the player to merge a",
+  "success": true,
+  "reason": "fitness 1000 -> 1006, archetype crescendo"
  }
 ]
