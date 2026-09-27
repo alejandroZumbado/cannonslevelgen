@@ -194,5 +194,12 @@
   "note": "Design note: The level creates a constant swarm of low‑HP pirates spread over 3‑5 columns each round, forcing the player to keep cannons balanced across the board rather than stacking damage in a sing",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:40:55+00:00",
+  "target": "swarm",
+  "note": "Design note: A constant swarm of low‑HP pirates is spread across 3‑5 columns each round, never placing pirates in the same column on consecutive rounds, so the player must keep cannons balanced and ca",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
