@@ -327,5 +327,12 @@
   "note": "Design note: The level starts by concentrating low‑HP pirates on the left‑most columns (3‑4), then after a few rounds shifts the threat to the right‑most columns (0‑1), forcing the player to relocate ",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:46:37+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the right side (columns 4‑3) for the first half, then abruptly switches to the left side (columns 0‑1) requiring the player to relocate and merge cannons to survive th",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
