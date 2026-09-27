@@ -383,5 +383,12 @@
   "note": "Design note: The level starts with low‑HP pirates on the right‑most columns (0‑1) forcing the player to stack and merge cannons there, then abruptly shifts pressure to the left‑most columns (3‑4) with",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:49:32+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level begins with a lone 1‑HP pirate, gradually adds more columns and higher‑HP foes each round, peaking in the final three waves with full‑column, 4‑HP pirates that force the player ",
+  "success": false,
+  "reason": "not winnable (11 pirates survive the solver)"
  }
 ]
