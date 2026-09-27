@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T02:41:57+00:00",
+  "generated_at": "2026-09-27T02:45:51+00:00",
   "policy_name": "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage_reserve",
   "policy_source_chars": 8946,
   "escalation_beam_widths": [
@@ -9,7 +9,7 @@
   ],
   "max_rounds": 60,
   "total_levels": 509,
-  "elapsed_seconds": 338.3,
+  "elapsed_seconds": 220.5,
   "counts": {
     "champion_win": 474,
     "solved_by_search_only": 34,
@@ -38,15 +38,15 @@
       "isHard": true,
       "classification": "solved_by_search_only",
       "champion_won": false,
-      "champion_rounds_played": 19,
+      "champion_rounds_played": 16,
       "champion_max_position_reached": 3,
       "solver_ran": true,
       "solver_won": true,
-      "solver_rounds_played": 21,
-      "solver_beam_width_used": 800,
-      "solver_total_nodes": 277474,
+      "solver_rounds_played": 19,
+      "solver_beam_width_used": 200,
+      "solver_total_nodes": 60838,
       "solver_pirates_remaining": 0,
-      "difficulty_score": 123.0
+      "difficulty_score": 122.5
     },
     {
       "levelNumber": 292,
@@ -8163,10 +8163,10 @@
   ],
   "comparison_to_previous_run": {
     "has_previous": true,
-    "previous_generated_at": "2026-09-24T21:12:37+00:00",
+    "previous_generated_at": "2026-09-27T02:41:57+00:00",
     "previous_counts": {
-      "champion_win": 473,
-      "solved_by_search_only": 35,
+      "champion_win": 474,
+      "solved_by_search_only": 34,
       "no_win_found": 1
     },
     "current_counts": {
@@ -8174,9 +8174,7 @@
       "solved_by_search_only": 34,
       "no_win_found": 1
     },
-    "newly_champion_win": [
-      217
-    ],
+    "newly_champion_win": [],
     "regressed_from_champion_win": []
   }
 }

@@ -1,11 +1,19 @@
 {
  "counts": {
-  "kept_ok": 431,
+  "kept_ok": 424,
   "breather": 76,
+  "llm_proposal": 7,
   "unresolved": 1,
   "improved_partial": 1
  },
  "files": [
+  "Level_051.asset",
+  "Level_058.asset",
+  "Level_111.asset",
+  "Level_119.asset",
+  "Level_154.asset",
+  "Level_217.asset",
+  "Level_222.asset",
   "Level_508_generated.asset"
  ]
 }
