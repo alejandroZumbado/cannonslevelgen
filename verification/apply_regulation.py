@@ -72,6 +72,8 @@ def merge_llm_proposals(results: dict[int, dict]) -> list[str]:
         return []
     used = []
     for number, proposal in json.loads(PROPOSALS_PATH.read_text(encoding="utf-8")).items():
+        if proposal.get("rejected"):  # turned down on review; kept so the designer won't redo it
+            continue
         results[int(number)] = {"levelNumber": int(number), "status": "llm_proposal",
                                 "level": proposal["level"], "after": proposal["after"]}
         used.append(number)

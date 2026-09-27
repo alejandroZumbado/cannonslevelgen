@@ -187,6 +187,17 @@ def _evaluate(record: dict, candidate: Level | None, target: str) -> dict:
     new_fit = regulator.fitness(after, target_difficulty, archetype)
     if not after.winnable:
         return {"accepted": False, "reason": f"not winnable ({after.pirates_left} pirates survive the solver)"}
+    # Pacing guard (2026-09-26): fitness ranks "winnable" above everything and
+    # penalizes length hard, so gutted levels scored as improvements — 257
+    # (broken) became 8 lone pirates in one column, 508 (18 tense rounds)
+    # became 10 HP-1 pirates. A broken level must come back fully paced; a
+    # winnable one may not gain pacing problems.
+    old_problems, new_problems = before.pacing["problems"], after.pacing["problems"]
+    if not before.winnable and new_problems:
+        return {"accepted": False, "reason": f"repaired but fails pacing ({'; '.join(new_problems)})"}
+    if before.winnable and len(new_problems) > len(old_problems):
+        return {"accepted": False, "reason": f"more pacing problems than the current version "
+                                             f"({len(old_problems)} -> {len(new_problems)}: {'; '.join(new_problems)})"}
     if new_fit <= old_fit:
         problems = "; ".join(after.pacing["problems"]) or f"archetype {after.primary} != {target}"
         return {"accepted": False, "reason": f"not better than the regulator's version ({problems})"}

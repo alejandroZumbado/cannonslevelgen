@@ -100,7 +100,8 @@
    "primary": "wall"
   },
   "fitness": 905.9,
-  "improves_on_fitness": -45.0
+  "improves_on_fitness": -45.0,
+  "rejected": "2026-09-26 review: gutted into single-pirate rounds, fails the pacing guard added to regulation_designer the same day"
  },
  "508": {
   "level": {
@@ -219,7 +220,8 @@
    "primary": null
   },
   "fitness": 890.81,
-  "improves_on_fitness": 781.09
+  "improves_on_fitness": 781.09,
+  "rejected": "2026-09-26 review: gutted into single-pirate rounds, fails the pacing guard added to regulation_designer the same day"
  },
  "51": {
   "level": {
