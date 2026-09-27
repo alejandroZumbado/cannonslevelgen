@@ -271,5 +271,12 @@
   "note": "Design note: The level starts with low‑HP pirates packed in the right‑most columns (0‑1) and modestly ramps up danger, then abruptly flips to the left‑most columns (3‑4) with higher‑HP waves, forcing ",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-27T01:44:06+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts by stacking low‑HP pirates in the left‑most columns (0‑1), then after a brief lull flips the pressure to the right‑most columns (3‑4) and finally mixes both sides with hi",
+  "success": false,
+  "reason": "not winnable (7 pirates survive the solver)"
  }
 ]
