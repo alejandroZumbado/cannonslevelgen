@@ -285,5 +285,12 @@
   "note": "",
   "success": false,
   "reason": "no valid JSON level"
+ },
+ {
+  "at": "2026-09-27T01:45:04+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with a few isolated low‑HP pirates, then suddenly unleashes dense waves of five pirates per round, forcing the player to build up cannon damage through early merges to su",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != burst)"
  }
 ]
