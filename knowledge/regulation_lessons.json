@@ -138,5 +138,12 @@
   "note": "Design note: The level pressures the left side (columns 0‑1) with a stream of 1‑HP pirates to force early cannon merges, then abruptly switches to the right side (columns 3‑4) where the built‑up canno",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-27T01:34:54+00:00",
+  "target": "switch",
+  "note": "Design note: The level forces the player to build up damage on the left side with a few 1‑HP pirates, then “switch” the cannon to the right side where a higher‑HP pirate awaits, testing moving and mer",
+  "success": false,
+  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.47 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]

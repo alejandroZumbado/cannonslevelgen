@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:56:26+00:00",
-    "promoted": false,
-    "win_rate": 0.9199,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-26T01:39:36+00:00",
     "promoted": false,
     "win_rate": 0.9265,
@@ -138,5 +131,12 @@
     "win_rate": 0.9232,
     "candidate_win_rate": 0.9232,
     "summary": "**Change summary**  \nThe current tie‑breaker prefers total damage and raw coverage before looking at how many *reserved* columns (cannons sitting in empty columns) we keep. When several safe actions have identical defici"
+  },
+  {
+    "timestamp": "2026-09-27T01:35:36+00:00",
+    "promoted": false,
+    "win_rate": 0.9216,
+    "candidate_win_rate": 0.9134,
+    "summary": "**Change summary**  \nThe current `deficit` assumes that only the front pirate can be hit for the remaining `steps` until it would reach position 3, so it under‑estimates the damage that can be dealt after the front pirat"
   }
 ]
