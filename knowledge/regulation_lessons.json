@@ -243,5 +243,12 @@
   "note": "Design note: The level forces the player to place a cannon in every column during the first five waves, building a wide defense that is then tested by a three‑round surge of HP‑3 pirates across all co",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:43:07+00:00",
+  "target": "switch",
+  "note": "Design note: The level concentrates early pressure on the right‑side columns (0‑1) with a mix of low‑ and medium‑HP pirates, then abruptly flips to the left‑side columns (3‑4) forcing the player to re",
+  "success": true,
+  "reason": "fitness 991 -> 992, archetype wall"
  }
 ]
