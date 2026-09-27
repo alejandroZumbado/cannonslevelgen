@@ -222,5 +222,12 @@
   "note": "Design note: The level forces the player to focus fire on the right‑side columns (0‑1) for the first half, then abruptly shifts the threat to the left‑side columns (3‑4) with higher‑HP pirates, demand",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:42:08+00:00",
+  "target": "switch",
+  "note": "Design note: The level forces the player to stack fire on the right‑side columns (0‑1) for the first half, then abruptly flips the threat to the left‑side columns (3‑4) with higher‑HP pirates, demandi",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
