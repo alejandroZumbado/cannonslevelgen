@@ -362,5 +362,12 @@
   "note": "Design note: A clear crescendo starts with single 1‑HP pirates, then adds more columns and higher‑HP foes each round, culminating in dense waves of 3‑ and 4‑HP pirates that force the player to merge a",
   "success": true,
   "reason": "fitness 1000 -> 1006, archetype crescendo"
+ },
+ {
+  "at": "2026-09-27T01:48:38+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle start with isolated 1‑HP foes builds to a mid‑game spread of 2‑HP pirates, then culminates in a tight final wave of 4‑HP threats that forces the player to merge cannons for the d",
+  "success": true,
+  "reason": "fitness 1000 -> 1030, archetype crescendo"
  }
 ]
