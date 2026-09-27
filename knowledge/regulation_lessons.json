@@ -299,5 +299,12 @@
   "note": "Design note: The level starts with pressure on the right‑hand side (columns 0‑1), then abruptly switches to the left‑hand side (columns 3‑4), forcing the player to relocate their cannon to stay effect",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != switch)"
+ },
+ {
+  "at": "2026-09-27T01:45:34+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the player first on the left side (columns 0‑1) for several rounds, then abruptly shifts the threat to the right side (columns 3‑4), forcing a timely cannon relocation",
+  "success": false,
+  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.57 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
