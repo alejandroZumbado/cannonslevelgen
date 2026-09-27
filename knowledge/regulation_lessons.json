@@ -313,5 +313,12 @@
   "note": "Design note: The level opens with a few isolated low‑HP pirates, then erupts into dense multi‑column waves that force the player to have built up cannon damage through early merges before the sudden o",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:46:14+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with a few isolated 1‑HP pirates, builds a modest 2‑HP wall, then bursts into a dense 5‑pirate wave of 2‑HP enemies, forcing the player to have accumulated enough cannons",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
