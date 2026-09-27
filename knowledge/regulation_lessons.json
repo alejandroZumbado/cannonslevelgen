@@ -369,5 +369,12 @@
   "note": "Design note: A gentle start with isolated 1‑HP foes builds to a mid‑game spread of 2‑HP pirates, then culminates in a tight final wave of 4‑HP threats that forces the player to merge cannons for the d",
   "success": true,
   "reason": "fitness 1000 -> 1030, archetype crescendo"
+ },
+ {
+  "at": "2026-09-27T01:48:47+00:00",
+  "target": "switch",
+  "note": "Design note: The level forces the player to concentrate fire on the left side (columns 0‑1) for the first half, then abruptly shift to the right side (columns 3‑4), requiring cannon moves and a merge ",
+  "success": false,
+  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.61 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
