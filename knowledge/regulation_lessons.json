@@ -180,5 +180,12 @@
   "note": "Design note: The level starts by concentrating low‑HP pirates in the right‑most columns (0‑1) forcing the player to build damage there, then abruptly shifts to higher‑HP pirates on the left‑most colum",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-27T01:40:26+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts with a cluster of low‑HP pirates in the right‑most columns (0‑1) forcing the player to build up damage there, then abruptly shifts the pressure to the left‑most columns (",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
