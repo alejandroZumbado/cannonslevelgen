@@ -257,5 +257,12 @@
   "note": "Design note: The level starts by piling pressure on the left‑side columns (0‑1) with a burst of low‑HP pirates, then after a safe pause flips the threat to the right‑side columns (3‑4), forcing the pl",
   "success": false,
   "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.63 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-09-27T01:43:36+00:00",
+  "target": "switch",
+  "note": "Design note: Early waves concentrate low‑HP pirates in columns 0‑1, then the pressure flips to columns 3‑4, forcing the player to relocate and merge cannons while occasional single‑pirate rounds keep ",
+  "success": false,
+  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.63 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
