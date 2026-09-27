@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-25T01:55:32+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.9199,
-    "summary": "**Change summary** – The champion policy breaks ties among equally‑safe actions by favouring *coverage* (more columns with a cannon).  In situations like Level 492 the best move is to merge damage into a column whose fro"
-  },
-  {
     "timestamp": "2026-09-25T01:56:26+00:00",
     "promoted": false,
     "win_rate": 0.9199,
@@ -138,5 +131,12 @@
     "win_rate": 0.9248,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-09-27T01:34:18+00:00",
+    "promoted": false,
+    "win_rate": 0.9232,
+    "candidate_win_rate": 0.9232,
+    "summary": "**Change summary**  \nThe current tie‑breaker prefers total damage and raw coverage before looking at how many *reserved* columns (cannons sitting in empty columns) we keep. When several safe actions have identical defici"
   }
 ]
