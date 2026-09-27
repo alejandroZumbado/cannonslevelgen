@@ -229,5 +229,12 @@
   "note": "Design note: The level forces the player to stack fire on the right‑side columns (0‑1) for the first half, then abruptly flips the threat to the left‑side columns (3‑4) with higher‑HP pirates, demandi",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-27T01:42:26+00:00",
+  "target": "swarm",
+  "note": "Design note: The level presents a steadily growing swarm across all columns, forcing the player to spread cannons early and later rely on merges to handle the increasing total HP while keeping tension",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
