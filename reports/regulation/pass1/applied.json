@@ -2,8 +2,9 @@
  "counts": {
   "kept_ok": 127,
   "breather": 76,
-  "regulated": 37,
-  "repaired": 267,
+  "regulated": 34,
+  "llm_proposal": 7,
+  "repaired": 263,
   "unresolved": 1,
   "improved_partial": 1
  },
@@ -311,7 +312,6 @@
   "Level_499.asset",
   "Level_500.asset",
   "Level_505_generated.asset",
-  "Level_508_generated.asset.meta",
   "Level_508_generated.asset",
   "Level_509_generated.asset"
  ]

@@ -414,7 +414,8 @@
    "primary": "wall"
   },
   "fitness": 997.6,
-  "improves_on_fitness": 993.19
+  "improves_on_fitness": 993.19,
+  "applied_in": "pass1"
  },
  "58": {
   "level": {
@@ -572,7 +573,8 @@
    "primary": "burst"
   },
   "fitness": 996.1,
-  "improves_on_fitness": 988.51
+  "improves_on_fitness": 988.51,
+  "applied_in": "pass1"
  },
  "111": {
   "level": {
@@ -731,7 +733,8 @@
    "primary": "burst"
   },
   "fitness": 994.3,
-  "improves_on_fitness": 992.11
+  "improves_on_fitness": 992.11,
+  "applied_in": "pass1"
  },
  "119": {
   "level": {
@@ -883,7 +886,8 @@
    "primary": "switch"
   },
   "fitness": 1025.02,
-  "improves_on_fitness": 999.97
+  "improves_on_fitness": 999.97,
+  "applied_in": "pass1"
  },
  "154": {
   "level": {
@@ -1024,7 +1028,8 @@
    "primary": "wall"
   },
   "fitness": 991.6,
-  "improves_on_fitness": 991.3
+  "improves_on_fitness": 991.3,
+  "applied_in": "pass1"
  },
  "217": {
   "level": {
@@ -1175,7 +1180,8 @@
    "primary": "crescendo"
   },
   "fitness": 1006.3,
-  "improves_on_fitness": 1000.0
+  "improves_on_fitness": 1000.0,
+  "applied_in": "pass1"
  },
  "222": {
   "level": {
@@ -1300,6 +1306,7 @@
    "primary": "crescendo"
   },
   "fitness": 1029.79,
-  "improves_on_fitness": 999.97
+  "improves_on_fitness": 999.97,
+  "applied_in": "pass1"
  }
 }
