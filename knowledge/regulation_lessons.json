@@ -341,5 +341,12 @@
   "note": "Design note: The level begins with isolated 1‑HP pirates, gradually adds more columns and higher‑HP foes, culminating in dense waves of 4‑HP enemies to force the player into heavy merging and position",
   "success": false,
   "reason": "not winnable (2 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:47:59+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level ramps up both the number of simultaneous pirates and their HP each round, creating a slow‑burn crescendo that forces the player to merge cannons increasingly later in the game.",
+  "success": false,
+  "reason": "not winnable (11 pirates survive the solver)"
  }
 ]
