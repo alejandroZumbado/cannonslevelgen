@@ -236,5 +236,12 @@
   "note": "Design note: The level presents a steadily growing swarm across all columns, forcing the player to spread cannons early and later rely on merges to handle the increasing total HP while keeping tension",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:42:42+00:00",
+  "target": "swarm",
+  "note": "Design note: The level forces the player to place a cannon in every column during the first five waves, building a wide defense that is then tested by a three‑round surge of HP‑3 pirates across all co",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
