@@ -201,5 +201,12 @@
   "note": "Design note: A constant swarm of low‑HP pirates is spread across 3‑5 columns each round, never placing pirates in the same column on consecutive rounds, so the player must keep cannons balanced and ca",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-27T01:40:59+00:00",
+  "target": "switch",
+  "note": "Design note: The level forces the player to concentrate fire on the right‑side columns (0‑1) for the first half, then abruptly shifts the pressure to the left‑side columns (3‑4), requiring a cannon mo",
+  "success": false,
+  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.67 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
