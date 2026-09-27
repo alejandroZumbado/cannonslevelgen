@@ -306,5 +306,12 @@
   "note": "Design note: The level pressures the player first on the left side (columns 0‑1) for several rounds, then abruptly shifts the threat to the right side (columns 3‑4), forcing a timely cannon relocation",
   "success": false,
   "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.57 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-09-27T01:46:00+00:00",
+  "target": "burst",
+  "note": "Design note: The level opens with a few isolated low‑HP pirates, then erupts into dense multi‑column waves that force the player to have built up cannon damage through early merges before the sudden o",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
