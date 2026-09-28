@@ -530,5 +530,12 @@
   "note": "Design note: A gentle opening of single‑HP pirates spreads across the board, then mid‑game columns start pairing 2‑HP foes that force timely merges, culminating in a final burst of three high‑HP pirat",
   "success": true,
   "reason": "fitness 1000 -> 1021, archetype crescendo"
+ },
+ {
+  "at": "2026-09-28T01:04:15+00:00",
+  "target": "burst",
+  "note": "Design note: A quiet start with one‑ and two‑pirate waves lets the player build a small cannon base, then rows 3‑6 explode into four‑to‑five‑pirate bursts that require quick merges and column juggling",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
