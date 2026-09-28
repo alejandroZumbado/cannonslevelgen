@@ -600,5 +600,12 @@
   "note": "Design note: A gentle start with single‑pirate rows builds a small cannon bank, then a crescendo of increasingly many 2‑HP pirates forces the player to merge and time merges for the final multi‑column",
   "success": true,
   "reason": "fitness 1000 -> 1017, archetype crescendo"
+ },
+ {
+  "at": "2026-09-28T01:08:05+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle opening with isolated 1‑HP pirates expands into progressively larger and tougher waves, culminating in full‑grid 3‑HP and then 4‑HP rows in the final third for a tense crescendo.",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
