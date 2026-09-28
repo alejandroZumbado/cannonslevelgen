@@ -1,0 +1,23 @@
+{
+  "levelNumber": 510,
+  "password": "V3164",
+  "generated_at": "2026-09-28T12:15:17+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 13.15,
+  "champion_rounds_played": 9,
+  "baseline_won": false,
+  "baseline_rounds_played": 5,
+  "difficulty_tag": "requires_learned_strategy",
+  "pacing": {
+    "filas": 8,
+    "pirates_per_fila": 2.0,
+    "single_pirate_share": 0.12,
+    "late_demand": 0.73,
+    "archetypes": [
+      "wall",
+      "swarm"
+    ],
+    "primary": "wall",
+    "problems": []
+  }
+}
