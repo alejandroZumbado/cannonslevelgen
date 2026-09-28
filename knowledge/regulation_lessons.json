@@ -579,5 +579,12 @@
   "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, peaking in the last three waves with a full‑column wave of moderate‑HP pirates, creating",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:06:42+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with isolated 1‑HP pirates, then builds to a sudden wave of five 1‑HP foes, followed by a couple of tighter bursts that introduce a few 2‑HP enemies, creating a tense “bu",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
