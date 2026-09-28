@@ -586,5 +586,12 @@
   "note": "Design note: The level starts with isolated 1‑HP pirates, then builds to a sudden wave of five 1‑HP foes, followed by a couple of tighter bursts that introduce a few 2‑HP enemies, creating a tense “bu",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-28T01:06:47+00:00",
+  "target": "burst",
+  "note": "Design note: The level opens with a few isolated 1‑HP pirates, then erupts in a full‑column burst, followed by progressively tougher grouped waves that force the player to bank early merges for high d",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
