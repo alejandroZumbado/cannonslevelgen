@@ -649,5 +649,12 @@
   "note": "Design note: A “burst” level that opens with a few isolated 1‑HP pirates to let the player build up cannon damage, then suddenly releases a dense multi‑column wave of tougher foes that forces the play",
   "success": false,
   "reason": "not winnable (8 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:09:56+00:00",
+  "target": "burst",
+  "note": "Design note: A calm start with a few isolated 1‑HP pirates lets the player build and merge damage, then a sudden burst of five 2‑HP pirates across all columns forces the player to use those reserves e",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
