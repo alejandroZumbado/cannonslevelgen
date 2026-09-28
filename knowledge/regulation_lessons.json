@@ -460,5 +460,12 @@
   "note": "Design note: A tight nine‑round swarm that forces the player to spread cannons across all columns and merge occasionally, while ensuring no column ever blocks itself so every shot counts.",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:00:44+00:00",
+  "target": "swarm",
+  "note": "Design note: A pure swarm of 1‑HP pirates appears across three columns each round, forcing the player to spread cannons wide and merge occasionally to keep up with the constant pressure.",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
