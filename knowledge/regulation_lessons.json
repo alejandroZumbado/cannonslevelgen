@@ -502,5 +502,12 @@
   "note": "Design note: The level constantly pressures the player to spread cannons across the board with many 1‑2 HP pirates, while occasional 3‑HP foes require timely merges, creating tense decision‑making thr",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:02:38+00:00",
+  "target": "swarm",
+  "note": "Design note: A rotating three‑column swarm forces the player to constantly shift and occasionally merge to handle the occasional 2‑ and 3‑HP pirates.",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
