@@ -558,5 +558,12 @@
   "note": "Design note: The level starts with a slow build on the left side (columns 0‑1), then abruptly switches pressure to the right side (columns 3‑4), forcing the player to relocate or merge cannons while a",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != switch)"
+ },
+ {
+  "at": "2026-09-28T01:04:58+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the left side (columns 0‑1) for the first four waves, then abruptly shifts the threat to the right side (columns 3‑4) while keeping a filler pirate in the middle, forc",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
