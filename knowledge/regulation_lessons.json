@@ -628,5 +628,12 @@
   "note": "Design note: A tight swarm of mostly 1‑HP pirates forces early spreading of cannons, then a single 3‑HP pirate appears that requires the player to have merged enough damage to survive the final tensio",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:08:44+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑style level that starts with a few 1‑HP pirates spread across columns, adds more columns and modest HP in the middle, and ends with a dense wave of higher‑HP pirates that forc",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
