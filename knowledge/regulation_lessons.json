@@ -418,5 +418,12 @@
   "note": "Design note: The level pressures the player on the left side (columns 0‑1) for the first half, then abruptly shifts the threat to the right side (columns 3‑4) forcing the player to relocate or merge c",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-28T00:57:01+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the left side (columns 0‑1) with a steady buildup of low‑ to medium‑HP pirates, then abruptly switches to the right side (columns 3‑4) forcing the player to relocate o",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
