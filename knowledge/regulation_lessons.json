@@ -572,5 +572,12 @@
   "note": "Design note: The level opens with a lone 1‑HP pirate, then gradually adds more columns and higher‑HP foes, culminating in a dense final third where every column fields increasingly tough pirates, crea",
   "success": false,
   "reason": "not winnable (11 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:06:38+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, peaking in the last three waves with a full‑column wave of moderate‑HP pirates, creating",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
