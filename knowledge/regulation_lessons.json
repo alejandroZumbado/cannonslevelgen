@@ -516,5 +516,12 @@
   "note": "Design note: Crescendo from a light spread of 1‑HP pirates to a focused late‑game duel on columns 0‑1 with 2‑ and 3‑HP foes, forcing early cannon placement then timely merges.",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != crescendo)"
+ },
+ {
+  "at": "2026-09-28T01:03:14+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle opening of isolated 1‑HP pirates forces the player to spread cannons, then mid‑game columns start pairing 2‑HP foes that require timely merges, culminating in a final wave of thr",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.64 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
