@@ -404,5 +404,12 @@
   "note": "Design note: The level begins with a few isolated 1‑HP pirates that let the player build up single‑column cannons, then a sudden “burst” of five medium‑HP pirates across all columns forces the player ",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-28T00:54:24+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with calm single‑pirate rows, then ramps up to a sudden “burst” of five medium‑HP pirates across all columns, forcing the player to rely on accumulated cannon merges to s",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
