@@ -439,5 +439,12 @@
   "note": "Design note: A tight six‑round swarm where the player must spread cannons across the board and merge early to accumulate exactly the 9 damage needed to eliminate all nine HP‑1 pirates.",
   "success": true,
   "reason": "fitness 1000 -> 1015, archetype swarm"
+ },
+ {
+  "at": "2026-09-28T00:59:39+00:00",
+  "target": "switch",
+  "note": "Design note: The level builds pressure on the left columns (0‑1) for the first three waves, then abruptly switches to the right columns (3‑4) for the next three waves, before forcing a final high‑HP p",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
