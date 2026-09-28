@@ -467,5 +467,12 @@
   "note": "Design note: A pure swarm of 1‑HP pirates appears across three columns each round, forcing the player to spread cannons wide and merge occasionally to keep up with the constant pressure.",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:01:05+00:00",
+  "target": "burst",
+  "note": "Design note: A calm opening with 1‑2 isolated pirates lets the player build up cannon damage, then a sudden surge of 4‑5 low‑HP pirates forces the player to spread cannons and use merges to survive th",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != burst)"
  }
 ]
