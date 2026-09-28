@@ -642,5 +642,12 @@
   "note": "Design note: A gentle crescendo that starts with isolated 1‑HP pirates, adds modest‑HP foes across more columns, and ends with a single tougher pirate that forces the player to have merged enough dama",
   "success": true,
   "reason": "fitness 1000 -> 1019, archetype crescendo"
+ },
+ {
+  "at": "2026-09-28T01:09:50+00:00",
+  "target": "burst",
+  "note": "Design note: A “burst” level that opens with a few isolated 1‑HP pirates to let the player build up cannon damage, then suddenly releases a dense multi‑column wave of tougher foes that forces the play",
+  "success": false,
+  "reason": "not winnable (8 pirates survive the solver)"
  }
 ]
