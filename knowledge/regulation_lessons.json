@@ -614,5 +614,12 @@
   "note": "Design note: The level opens with sparse 1‑HP pirates to let the player build a small cannon bank, then gradually adds more columns and higher‑HP pirates each round, culminating in a dense, high‑HP wa",
   "success": true,
   "reason": "fitness 1000 -> 1025, archetype crescendo"
+ },
+ {
+  "at": "2026-09-28T01:08:13+00:00",
+  "target": "swarm",
+  "note": "Design note: A gradual swarm that starts with isolated 1‑HP pirates to let the player build a cannon bank, then expands to three‑column 1‑2‑HP waves, and finishes with a single high‑HP pirate that for",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != swarm)"
  }
 ]
