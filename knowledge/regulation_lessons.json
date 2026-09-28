@@ -425,5 +425,12 @@
   "note": "Design note: The level pressures the left side (columns 0‑1) with a steady buildup of low‑ to medium‑HP pirates, then abruptly switches to the right side (columns 3‑4) forcing the player to relocate o",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-28T00:57:56+00:00",
+  "target": "swarm",
+  "note": "Design note: A sustained “swarm” wave where every round spawns low‑HP pirates in three‑to‑five columns, forcing the player to spread cannons wide and rely on early merges for consistent damage through",
+  "success": false,
+  "reason": "not winnable (7 pirates survive the solver)"
  }
 ]
