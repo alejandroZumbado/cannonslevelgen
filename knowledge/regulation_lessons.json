@@ -635,5 +635,12 @@
   "note": "Design note: A crescendo‑style level that starts with a few 1‑HP pirates spread across columns, adds more columns and modest HP in the middle, and ends with a dense wave of higher‑HP pirates that forc",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:08:51+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle crescendo that starts with isolated 1‑HP pirates, adds modest‑HP foes across more columns, and ends with a single tougher pirate that forces the player to have merged enough dama",
+  "success": true,
+  "reason": "fitness 1000 -> 1019, archetype crescendo"
  }
 ]
