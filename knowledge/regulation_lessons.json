@@ -474,5 +474,12 @@
   "note": "Design note: A calm opening with 1‑2 isolated pirates lets the player build up cannon damage, then a sudden surge of 4‑5 low‑HP pirates forces the player to spread cannons and use merges to survive th",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != burst)"
+ },
+ {
+  "at": "2026-09-28T01:01:25+00:00",
+  "target": "burst",
+  "note": "Design note: A calm start with a few isolated pirates lets the player build up cannon damage, then two sudden waves of five 1‑HP pirates force the player to spread cannons across all columns and use m",
+  "success": true,
+  "reason": "fitness 1000 -> 1025, archetype burst"
  }
 ]
