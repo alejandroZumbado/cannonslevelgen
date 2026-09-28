@@ -390,5 +390,12 @@
   "note": "Design note: The level begins with a lone 1‑HP pirate, gradually adds more columns and higher‑HP foes each round, peaking in the final three waves with full‑column, 4‑HP pirates that force the player ",
   "success": false,
   "reason": "not winnable (11 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T00:52:34+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, culminating in a dense final third that forces the player to merge and reposition cannon",
+  "success": false,
+  "reason": "not winnable (12 pirates survive the solver)"
  }
 ]

@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-26T01:42:24+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-26T01:43:12+00:00",
     "promoted": false,
     "win_rate": 0.9232,
@@ -138,5 +131,12 @@
     "win_rate": 0.9281,
     "candidate_win_rate": 0.9281,
     "summary": "**Change summary**  \nThe current policy sometimes *moves* a cannon to an empty column, discarding the pending spawn cannon that could have been placed there. This wastes damage and can let a pirate that is about to reach"
+  },
+  {
+    "timestamp": "2026-09-28T00:52:51+00:00",
+    "promoted": false,
+    "win_rate": 0.9216,
+    "candidate_win_rate": 0.9216,
+    "summary": "**Change summary**  \nThe champion policy rewards “reserved” cannons – cannons that sit in empty columns – with a `‑reserved` term in the decision key.  When a column contains a queue of pirates, this incentive can cause "
   }
 ]
