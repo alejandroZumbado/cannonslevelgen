@@ -488,5 +488,12 @@
   "note": "Design note: The level starts with a tight cluster of low‑HP pirates in columns 0‑1, forcing the player to move and merge cannons on the left side, then abruptly switches the pressure to columns 3‑4 f",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-28T01:01:53+00:00",
+  "target": "switch",
+  "note": "Design note: The level opens with tight pressure on columns 0‑1, forcing the player to build and merge cannons on the left, then abruptly switches the threat to columns 3‑4 while sprinkling occasional",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
