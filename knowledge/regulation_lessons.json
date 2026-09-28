@@ -453,5 +453,12 @@
   "note": "Design note: The level forces the player to concentrate cannons on the left side (columns 0‑1) for the first half, then abruptly shifts pressure to the right side (columns 3‑4) while a lone pirate app",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-28T01:00:06+00:00",
+  "target": "swarm",
+  "note": "Design note: A tight nine‑round swarm that forces the player to spread cannons across all columns and merge occasionally, while ensuring no column ever blocks itself so every shot counts.",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
