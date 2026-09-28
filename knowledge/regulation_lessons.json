@@ -509,5 +509,12 @@
   "note": "Design note: A rotating three‑column swarm forces the player to constantly shift and occasionally merge to handle the occasional 2‑ and 3‑HP pirates.",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:02:54+00:00",
+  "target": "crescendo",
+  "note": "Design note: Crescendo from a light spread of 1‑HP pirates to a focused late‑game duel on columns 0‑1 with 2‑ and 3‑HP foes, forcing early cannon placement then timely merges.",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != crescendo)"
  }
 ]
