@@ -544,5 +544,12 @@
   "note": "Design note: A quiet opening with 1‑2 pirate waves lets the player build a modest cannon base, then rows 3‑6 explode into progressively larger 3‑5‑pirate bursts that force rapid merges and column jugg",
   "success": false,
   "reason": "not winnable (1 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T01:04:26+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle opening of isolated 1‑HP pirates lets the player build up damage, then mid‑game columns introduce paired 2‑HP foes that require timely merges, climaxing in a final wave of three ",
+  "success": true,
+  "reason": "fitness 1000 -> 1025, archetype crescendo"
  }
 ]
