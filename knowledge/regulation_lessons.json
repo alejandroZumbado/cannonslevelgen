@@ -411,5 +411,12 @@
   "note": "Design note: The level starts with calm single‑pirate rows, then ramps up to a sudden “burst” of five medium‑HP pirates across all columns, forcing the player to rely on accumulated cannon merges to s",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-28T00:55:36+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the player on the left side (columns 0‑1) for the first half, then abruptly shifts the threat to the right side (columns 3‑4) forcing the player to relocate or merge c",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
