@@ -397,5 +397,12 @@
   "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, culminating in a dense final third that forces the player to merge and reposition cannon",
   "success": false,
   "reason": "not winnable (12 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T00:53:11+00:00",
+  "target": "burst",
+  "note": "Design note: The level begins with a few isolated 1‑HP pirates that let the player build up single‑column cannons, then a sudden “burst” of five medium‑HP pirates across all columns forces the player ",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
