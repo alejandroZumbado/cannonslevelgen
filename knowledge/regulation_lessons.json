@@ -481,5 +481,12 @@
   "note": "Design note: A calm start with a few isolated pirates lets the player build up cannon damage, then two sudden waves of five 1‑HP pirates force the player to spread cannons across all columns and use m",
   "success": true,
   "reason": "fitness 1000 -> 1025, archetype burst"
+ },
+ {
+  "at": "2026-09-28T01:01:44+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts with a tight cluster of low‑HP pirates in columns 0‑1, forcing the player to move and merge cannons on the left side, then abruptly switches the pressure to columns 3‑4 f",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
