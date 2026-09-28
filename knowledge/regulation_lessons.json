@@ -432,5 +432,12 @@
   "note": "Design note: A sustained “swarm” wave where every round spawns low‑HP pirates in three‑to‑five columns, forcing the player to spread cannons wide and rely on early merges for consistent damage through",
   "success": false,
   "reason": "not winnable (7 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-28T00:59:18+00:00",
+  "target": "swarm",
+  "note": "Design note: A tight six‑round swarm where the player must spread cannons across the board and merge early to accumulate exactly the 9 damage needed to eliminate all nine HP‑1 pirates.",
+  "success": true,
+  "reason": "fitness 1000 -> 1015, archetype swarm"
  }
 ]
