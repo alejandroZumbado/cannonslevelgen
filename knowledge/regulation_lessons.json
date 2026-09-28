@@ -593,5 +593,12 @@
   "note": "Design note: The level opens with a few isolated 1‑HP pirates, then erupts in a full‑column burst, followed by progressively tougher grouped waves that force the player to bank early merges for high d",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-28T01:06:53+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle start with single‑pirate rows builds a small cannon bank, then a crescendo of increasingly many 2‑HP pirates forces the player to merge and time merges for the final multi‑column",
+  "success": true,
+  "reason": "fitness 1000 -> 1017, archetype crescendo"
  }
 ]
