@@ -908,5 +908,12 @@
   "note": "Design note: The level begins with isolated 1‑HP pirates letting the player safely stack and merge cannons, then gradually widens to three‑column attacks of 2‑HP foes, and finishes with a dense final ",
   "success": true,
   "reason": "fitness 999 -> 1020, archetype crescendo"
+ },
+ {
+  "at": "2026-09-29T02:18:39+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level begins with isolated 1‑HP pirates letting the player safely accumulate and merge cannons, then gradually adds more columns and higher‑HP foes, culminating in a dense, high‑HP wa",
+  "success": true,
+  "reason": "fitness 1000 -> 1027, archetype crescendo"
  }
 ]
