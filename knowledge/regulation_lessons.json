@@ -831,5 +831,12 @@
   "note": "Design note: A calm opening with single low‑HP pirates lets the player build a small cannon base, then a single sudden wave of four 1‑HP pirates forces the player to spread their limited cannons acros",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: 80% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
+ },
+ {
+  "at": "2026-09-29T02:15:44+00:00",
+  "target": "burst",
+  "note": "Design note: A calm opening with one‑pirate waves lets the player seed each column, then four consecutive burst waves flood four columns with 1‑HP pirates, creating a tense sprint to use the built‑up ",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
