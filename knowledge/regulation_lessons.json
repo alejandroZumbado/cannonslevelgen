@@ -775,5 +775,12 @@
   "note": "Design note: The level starts with two calm single‑pirate rounds, then gradually adds columns and a few 2‑HP foes, culminating in a sudden burst of five pirates and a final double‑boss wave, forcing t",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-29T02:12:46+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts with pressure on the left‑most columns (0‑1) and then abruptly switches to the right‑most columns (3‑4), forcing the player to relocate and merge cannons while the threat",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != switch)"
  }
 ]
