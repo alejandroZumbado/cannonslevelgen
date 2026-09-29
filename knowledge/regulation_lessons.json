@@ -873,5 +873,12 @@
   "note": "Design note: The level begins with one‑to‑two low‑HP pirates, then erupts into rows of four‑to‑five enemies, forcing the player to build and merge cannons early and keep reserves for the sudden burst.",
   "success": false,
   "reason": "not winnable (2 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:17:19+00:00",
+  "target": "burst",
+  "note": "Design note: A calm start with a few 1‑HP pirates lets the player build and merge cannons, then a sudden burst of 5‑pirate and 4‑pirate waves forces careful reserve management while remaining winnable",
+  "success": false,
+  "reason": "not winnable (7 pirates survive the solver)"
  }
 ]
