@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-26T01:49:52+00:00",
-    "promoted": false,
-    "win_rate": 0.9216,
-    "candidate_win_rate": 0.9216,
-    "summary": "**Change summary** – The original tie‑breaker prefers a *move* over a *spawn* when every other metric is equal (`tie_pref = 0` for moves, `1` for spawns). This can leave columns without a cannon even though a safe *spawn"
-  },
-  {
     "timestamp": "2026-09-26T01:51:04+00:00",
     "promoted": false,
     "win_rate": 0.9069,
@@ -138,5 +131,12 @@
     "win_rate": 0.915,
     "candidate_win_rate": 0.915,
     "summary": "**Change summary** – The original tie‑breaker prefers *coverage* (total number of cannons) before *reserved* (cannons that sit in empty columns). When two safe actions have identical deficits and kill‑flags, the policy c"
+  },
+  {
+    "timestamp": "2026-09-29T02:04:19+00:00",
+    "promoted": false,
+    "win_rate": 0.9281,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
