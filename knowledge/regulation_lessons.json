@@ -670,5 +670,12 @@
   "note": "Design note: A “switch” level that concentrates early waves on the left side (columns 0‑1) letting the player build and merge damage, then abruptly flips the pressure to the right side (columns 3‑4) f",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-29T02:04:56+00:00",
+  "target": "swarm",
+  "note": "Design note: The level starts with a few isolated 1‑HP pirates, then widens to a full‑column swarm before narrowing again, forcing the player to spread cannons early and later merge them for the tight",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
