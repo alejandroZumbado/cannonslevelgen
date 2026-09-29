@@ -754,5 +754,12 @@
   "note": "Design note: A crescendo‑style level that begins with sparse 1‑HP pirates, builds to mixed 1‑2‑HP waves, and finishes with dense columns of 3‑4‑HP foes, ensuring later rounds are strictly tougher whil",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:12:29+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑style level that starts with isolated 1‑HP pirates, adds a second column in round 4, then ramps up both the number of columns and HP in the final three rounds so the danger st",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
