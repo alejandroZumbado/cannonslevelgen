@@ -656,5 +656,12 @@
   "note": "Design note: A calm start with a few isolated 1‑HP pirates lets the player build and merge damage, then a sudden burst of five 2‑HP pirates across all columns forces the player to use those reserves e",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-29T02:03:10+00:00",
+  "target": "switch",
+  "note": "Design note: A “switch” level that piles early pressure on the left columns (0‑1) then flips to the right side (3‑4), forcing the player to move and merge cannons to survive.",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
