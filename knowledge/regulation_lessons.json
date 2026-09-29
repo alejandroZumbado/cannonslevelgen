@@ -698,5 +698,12 @@
   "note": "Design note: A crescendo‑style level that begins with a few isolated 1‑HP pirates, gradually adds more columns while keeping HP low, and then spikes HP to 2 and 3 in the final three rounds, forcing ea",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:09:24+00:00",
+  "target": "switch",
+  "note": "Design note: The level shifts pressure from the left side (columns 0‑1) in the early waves to the right side (columns 3‑4) in the middle, then forces a central showdown that requires the player to mov",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != switch)"
  }
 ]
