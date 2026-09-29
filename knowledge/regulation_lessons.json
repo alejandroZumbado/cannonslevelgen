@@ -691,5 +691,12 @@
   "note": "Design note: A crescendo‑style level that starts with sparse 1‑HP pirates, builds to a full‑grid of 1‑HP foes, then ramps HP up to 2 and finally 3 in the last third, letting the player accumulate and ",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:08:37+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑style level that begins with a few isolated 1‑HP pirates, gradually adds more columns while keeping HP low, and then spikes HP to 2 and 3 in the final three rounds, forcing ea",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
