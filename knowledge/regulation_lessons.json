@@ -922,5 +922,12 @@
   "note": "Design note: The level starts with low‑HP pirates on the left side (columns 0‑1) letting the player build and merge cannons, then abruptly switches the pressure to the right side (columns 3‑4) while s",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != switch)"
+ },
+ {
+  "at": "2026-09-29T02:18:46+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the left side (columns 0‑1) with low‑HP pirates for the first three rounds, then abruptly switches to the right side (columns 3‑4) for the next three rounds, forcing t",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
