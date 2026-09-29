@@ -684,5 +684,12 @@
   "note": "Design note: A pure “swarm” level that floods three‑to‑five columns each round with only 1‑HP and 2‑HP pirates, letting the player spread cannons early and then merge them for the occasional 3‑HP thre",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:07:12+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑style level that starts with sparse 1‑HP pirates, builds to a full‑grid of 1‑HP foes, then ramps HP up to 2 and finally 3 in the last third, letting the player accumulate and ",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]

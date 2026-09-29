@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-26T01:53:10+00:00",
-    "promoted": false,
-    "win_rate": 0.9216,
-    "candidate_win_rate": 0.9216,
-    "summary": "**Change summary** – The champion sometimes “moves” a cannon away from a column that already has an advancing pirate, leaving that column undefended for the next spawn. I add a tiny robustness term `defended` (the number"
-  },
-  {
     "timestamp": "2026-09-26T01:54:04+00:00",
     "promoted": true,
     "win_rate": 0.9085,
@@ -138,5 +131,12 @@
     "win_rate": 0.9199,
     "candidate_win_rate": 0.6601,
     "summary": "**Change summary** – The original `deficit` assumes the damage a column can deal in the remaining rounds is just `cannon_damage * steps`. It forgets that when a pirate is already on the loss‑border (position 2) we can st"
+  },
+  {
+    "timestamp": "2026-09-29T02:07:53+00:00",
+    "promoted": false,
+    "win_rate": 0.9281,
+    "candidate_win_rate": 0.9232,
+    "summary": "**Change summary** – The original `deficit` assumes a column can deal damage for only `MAX_POSITION‑front.position` rounds, ignoring that killing the front pirate gives you an extra round to hit the next pirate in the sa"
   }
 ]
