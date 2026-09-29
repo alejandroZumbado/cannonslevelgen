@@ -817,5 +817,12 @@
   "note": "Design note: The level starts with isolated weak pirates, gradually adds more columns and higher‑HP foes, and peaks in the final three rounds with every column filled by tougher pirates, creating a cl",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:15:32+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level opens with sparse, 1‑HP pirates that let the player build a small cannon base, then gradually adds more columns and higher‑HP foes, culminating in the final three waves where ev",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
