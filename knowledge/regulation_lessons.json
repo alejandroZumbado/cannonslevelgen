@@ -880,5 +880,12 @@
   "note": "Design note: A calm start with a few 1‑HP pirates lets the player build and merge cannons, then a sudden burst of 5‑pirate and 4‑pirate waves forces careful reserve management while remaining winnable",
   "success": false,
   "reason": "not winnable (7 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:17:23+00:00",
+  "target": "swarm",
+  "note": "Design note: A balanced swarm level that gradually widens the attack front while keeping all pirates low‑HP so the player can spread cannons and use early merges to stay ahead of the advancing threats",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype burst != swarm)"
  }
 ]
