@@ -789,5 +789,12 @@
   "note": "Design note: The level starts with pressure on the left side (columns 4‑3), shifts to the right side (columns 0‑1) for several rounds, then swings back, forcing the player to relocate and merge cannon",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:13:07+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level builds tension by starting with a single weak pirate and steadily adding more columns and higher‑HP foes, peaking in the final third with five pirates—including a 3‑HP “last pir",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != crescendo)"
  }
 ]
