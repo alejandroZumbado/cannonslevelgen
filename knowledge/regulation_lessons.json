@@ -887,5 +887,12 @@
   "note": "Design note: A balanced swarm level that gradually widens the attack front while keeping all pirates low‑HP so the player can spread cannons and use early merges to stay ahead of the advancing threats",
   "success": false,
   "reason": "not better than the regulator's version (archetype burst != swarm)"
+ },
+ {
+  "at": "2026-09-29T02:17:38+00:00",
+  "target": "swarm",
+  "note": "Design note: A steadily widening swarm of 1‑HP pirates early gives the player cheap merges, then a mix of 2‑ and 3‑HP foes spreads across 3‑5 columns to force wide placement and careful reserve manage",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
