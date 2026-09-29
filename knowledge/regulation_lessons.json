@@ -726,5 +726,12 @@
   "note": "Design note: The level begins with light pressure (1‑2 low‑HP pirates) for the first two rounds, then bursts into dense waves of 4‑5 pirates—including a mid‑game mix of 2‑HP foes and a final wave with",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != burst)"
+ },
+ {
+  "at": "2026-09-29T02:10:34+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with a couple of isolated 1‑HP pirates, then builds to moderate multi‑column pressure, and finally bursts into a full‑column wave of 2‑HP foes that can be handled by accu",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != burst)"
  }
 ]
