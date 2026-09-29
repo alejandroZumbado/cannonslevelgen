@@ -810,5 +810,12 @@
   "note": "Design note: The level creates a “wave‑spread” tension by flooding three to five columns each round with low‑HP pirates, forcing the player to place cannons broadly early and then merge them later to ",
   "success": true,
   "reason": "fitness 1000 -> 1029, archetype swarm"
+ },
+ {
+  "at": "2026-09-29T02:14:55+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with isolated weak pirates, gradually adds more columns and higher‑HP foes, and peaks in the final three rounds with every column filled by tougher pirates, creating a cl",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
