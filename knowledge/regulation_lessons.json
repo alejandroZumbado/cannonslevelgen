@@ -712,5 +712,12 @@
   "note": "Design note: The level starts with a light pressure on columns 0‑1, then shifts the wave entirely to columns 3‑4, forcing the player to relocate cannons and use a single merge to handle a brief 2‑HP p",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != switch)"
+ },
+ {
+  "at": "2026-09-29T02:09:41+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑style level that starts with lone 1‑HP pirates, gradually adds columns and HP, and spikes to many high‑HP pirates in the final third, while remaining winnable by letting the p",
+  "success": true,
+  "reason": "fitness 999 -> 1030, archetype crescendo"
  }
 ]
