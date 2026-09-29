@@ -866,5 +866,12 @@
   "note": "Design note: A classic crescendo – the level opens with a single 1‑HP pirate, then steadily adds columns and boosts HP each round, culminating in a final wave of three heavy 6‑HP foes that force the p",
   "success": false,
   "reason": "not winnable (11 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:17:02+00:00",
+  "target": "burst",
+  "note": "Design note: The level begins with one‑to‑two low‑HP pirates, then erupts into rows of four‑to‑five enemies, forcing the player to build and merge cannons early and keep reserves for the sudden burst.",
+  "success": false,
+  "reason": "not winnable (2 pirates survive the solver)"
  }
 ]
