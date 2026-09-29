@@ -859,5 +859,12 @@
   "note": "Design note: A crescendo‑styled level that starts with a few isolated 1‑HP pirates, gradually adds columns and HP so the final third overwhelms the player with many high‑HP foes, keeping tension risin",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:16:51+00:00",
+  "target": "crescendo",
+  "note": "Design note: A classic crescendo – the level opens with a single 1‑HP pirate, then steadily adds columns and boosts HP each round, culminating in a final wave of three heavy 6‑HP foes that force the p",
+  "success": false,
+  "reason": "not winnable (11 pirates survive the solver)"
  }
 ]
