@@ -705,5 +705,12 @@
   "note": "Design note: The level shifts pressure from the left side (columns 0‑1) in the early waves to the right side (columns 3‑4) in the middle, then forces a central showdown that requires the player to mov",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != switch)"
+ },
+ {
+  "at": "2026-09-29T02:09:27+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts with a light pressure on columns 0‑1, then shifts the wave entirely to columns 3‑4, forcing the player to relocate cannons and use a single merge to handle a brief 2‑HP p",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != switch)"
  }
 ]
