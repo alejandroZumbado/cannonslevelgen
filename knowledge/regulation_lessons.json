@@ -852,5 +852,12 @@
   "note": "Design note: The level opens with a few low‑HP pirates clustered on the left (columns 0‑1) letting the player build and merge cannons, then abruptly shifts pressure to the right side (columns 3‑4) wit",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-09-29T02:16:36+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑styled level that starts with a few isolated 1‑HP pirates, gradually adds columns and HP so the final third overwhelms the player with many high‑HP foes, keeping tension risin",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
