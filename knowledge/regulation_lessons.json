@@ -733,5 +733,12 @@
   "note": "Design note: The level starts with a couple of isolated 1‑HP pirates, then builds to moderate multi‑column pressure, and finally bursts into a full‑column wave of 2‑HP foes that can be handled by accu",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != burst)"
+ },
+ {
+  "at": "2026-09-29T02:10:52+00:00",
+  "target": "switch",
+  "note": "Design note: A “switch” level that pressures the left side (columns 0‑1) for the first half, then flips to the right side (columns 3‑4) while the player must relocate and merge cannons to survive the ",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.67 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
