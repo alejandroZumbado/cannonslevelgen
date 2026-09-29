@@ -761,5 +761,12 @@
   "note": "Design note: A crescendo‑style level that starts with isolated 1‑HP pirates, adds a second column in round 4, then ramps up both the number of columns and HP in the final three rounds so the danger st",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:12:31+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with calm single‑pirate rows, then bursts into a sudden wave of four pirates in round 5, followed by a final high‑HP “boss” column that forces the player to have saved me",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 2: 88% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns; gets easier as it goes: last-third pressure 0.62 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
