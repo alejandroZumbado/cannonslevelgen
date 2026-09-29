@@ -747,5 +747,12 @@
   "note": "Design note: A “switch” level that starts with escalating pressure on the left side (columns 0‑1) for the first half, then flips to the right side (columns 3‑4) forcing the player to relocate and merg",
   "success": true,
   "reason": "fitness 992 -> 992, archetype wall"
+ },
+ {
+  "at": "2026-09-29T02:11:41+00:00",
+  "target": "crescendo",
+  "note": "Design note: A crescendo‑style level that begins with sparse 1‑HP pirates, builds to mixed 1‑2‑HP waves, and finishes with dense columns of 3‑4‑HP foes, ensuring later rounds are strictly tougher whil",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
