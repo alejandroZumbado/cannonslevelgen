@@ -929,5 +929,12 @@
   "note": "Design note: The level pressures the left side (columns 0‑1) with low‑HP pirates for the first three rounds, then abruptly switches to the right side (columns 3‑4) for the next three rounds, forcing t",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-29T02:19:57+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with a few isolated 1‑HP pirates letting the player safely stockpile and merge cannons, then gradually adds more columns and higher‑HP foes, culminating in four densely‑f",
+  "success": false,
+  "reason": "not winnable (14 pirates survive the solver)"
  }
 ]
