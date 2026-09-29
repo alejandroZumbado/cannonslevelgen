@@ -677,5 +677,12 @@
   "note": "Design note: The level starts with a few isolated 1‑HP pirates, then widens to a full‑column swarm before narrowing again, forcing the player to spread cannons early and later merge them for the tight",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-29T02:06:02+00:00",
+  "target": "swarm",
+  "note": "Design note: A pure “swarm” level that floods three‑to‑five columns each round with only 1‑HP and 2‑HP pirates, letting the player spread cannons early and then merge them for the occasional 3‑HP thre",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
