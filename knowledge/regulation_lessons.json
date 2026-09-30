@@ -964,5 +964,12 @@
   "note": "Design note: The level starts with a focused wave of low‑HP pirates on the left (columns 0‑1), letting the player build and merge cannons there, then abruptly switches pressure to the right side (colu",
   "success": false,
   "reason": "not winnable (7 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:37:56+00:00",
+  "target": "switch",
+  "note": "Design note: The level builds early pressure on the left columns (0‑1) with multiple low‑HP pirates, then abruptly switches to a heavier rush on the right columns (3‑4) while still keeping some filler",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]

@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T01:35:36+00:00",
-    "promoted": false,
-    "win_rate": 0.9216,
-    "candidate_win_rate": 0.9134,
-    "summary": "**Change summary**  \nThe current `deficit` assumes that only the front pirate can be hit for the remaining `steps` until it would reach position 3, so it under‑estimates the damage that can be dealt after the front pirat"
-  },
-  {
     "timestamp": "2026-09-27T01:36:53+00:00",
     "promoted": false,
     "win_rate": 0.9232,
@@ -138,5 +131,12 @@
     "win_rate": 0.9248,
     "candidate_win_rate": 0.9248,
     "summary": "**Change summary**  \nThe champion policy treats a *move‑merge* that only adds the donor’s damage = 1 as no better than a spawn because it loses one column of coverage (the `-coverage` term). When all other metrics are eq"
+  },
+  {
+    "timestamp": "2026-09-30T00:38:38+00:00",
+    "promoted": false,
+    "win_rate": 0.9297,
+    "candidate_win_rate": 0.9297,
+    "summary": "**Change summary**  \nThe current champion values “coverage” (having a cannon in as many columns as possible) more than the benefit of merging damage early, so it often spawns a new cannon instead of moving an existing on"
   }
 ]
