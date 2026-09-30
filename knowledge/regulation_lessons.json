@@ -943,5 +943,12 @@
   "note": "Design note: The level builds a single “hero” column that grows in HP each wave while the other columns stay low‑HP, letting the player safely seed cannons early and then merge them into a high‑damage",
   "success": false,
   "reason": "not winnable (15 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:34:18+00:00",
+  "target": "switch",
+  "note": "Design note: The level pressures the left side (columns 0‑1) for the first half with multiple low‑HP pirates, then abruptly switches to the right side (columns 3‑4) while still keeping a few filler pi",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.63 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]

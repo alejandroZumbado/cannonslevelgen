@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-26T01:56:05+00:00",
-    "promoted": false,
-    "win_rate": 0.9248,
-    "candidate_win_rate": 0.7958,
-    "summary": "**Idea:**  \nThe new policy first looks for *imminent‑loss* pirates – those that will reach position 3 on the next advance unless they are killed this round. If any exist, the policy forces an action that eliminates all o"
-  },
-  {
     "timestamp": "2026-09-27T01:33:12+00:00",
     "promoted": false,
     "win_rate": 0.9248,
@@ -138,5 +131,12 @@
     "win_rate": 0.9216,
     "candidate_win_rate": 0.9216,
     "summary": "**Change:** Give a slight preference to *move* actions (which can merge cannons) over *spawn* actions when all other key components are equal.  \nIn the original policy `tie_pref` is `1` for spawns and `0` for moves, so t"
+  },
+  {
+    "timestamp": "2026-09-30T00:34:56+00:00",
+    "promoted": false,
+    "win_rate": 0.9167,
+    "candidate_win_rate": 0.9085,
+    "summary": "**Change summary** – The original `deficit` assumes a column can deal damage for only `MAX_POSITION‑front.position` rounds.  \nIf the cannon can kill the current front pirate **this round**, the column actually gets **one"
   }
 ]
