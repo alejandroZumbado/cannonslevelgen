@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T01:36:53+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.9167,
-    "summary": "**Change summary**  \nThe champion policy spreads cannons across empty columns even when a column contains a queue of pirates whose total HP cannot be dealt with the current damage. I add a *critical‑column* flag: after t"
-  },
-  {
     "timestamp": "2026-09-27T01:38:05+00:00",
     "promoted": false,
     "win_rate": 0.9232,
@@ -138,5 +131,12 @@
     "win_rate": 0.9297,
     "candidate_win_rate": 0.9297,
     "summary": "**Change summary**  \nThe current champion values “coverage” (having a cannon in as many columns as possible) more than the benefit of merging damage early, so it often spawns a new cannon instead of moving an existing on"
+  },
+  {
+    "timestamp": "2026-09-30T00:39:54+00:00",
+    "promoted": false,
+    "win_rate": 0.9314,
+    "candidate_win_rate": 0.9314,
+    "summary": "**Change summary** – The current tie‑breaking prefers actions that maximise *coverage* and *reserved* columns, but it never values leaving *empty* columns for the next spawn. When two safe actions are otherwise equal, th"
   }
 ]

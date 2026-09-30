@@ -971,5 +971,12 @@
   "note": "Design note: The level builds early pressure on the left columns (0‑1) with multiple low‑HP pirates, then abruptly switches to a heavier rush on the right columns (3‑4) while still keeping some filler",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-30T00:39:07+00:00",
+  "target": "swarm",
+  "note": "**Design note:** The level opens with a balanced spread of 1‑HP pirates across all five columns, letting the player place and merge cannons early, then gradually introduces slightly tougher 2‑HP pirat",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
