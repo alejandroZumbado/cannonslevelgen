@@ -978,5 +978,12 @@
   "note": "**Design note:** The level opens with a balanced spread of 1‑HP pirates across all five columns, letting the player place and merge cannons early, then gradually introduces slightly tougher 2‑HP pirat",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:40:20+00:00",
+  "target": "swarm",
+  "note": "Design note: A steady “swarm” of 1‑HP pirates spreads across three columns each round, with occasional 2‑HP fillers, letting the player build and merge cannons while staying under the 3‑shot kill wind",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
