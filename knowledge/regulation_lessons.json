@@ -950,5 +950,12 @@
   "note": "Design note: The level pressures the left side (columns 0‑1) for the first half with multiple low‑HP pirates, then abruptly switches to the right side (columns 3‑4) while still keeping a few filler pi",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.63 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-09-30T00:35:31+00:00",
+  "target": "switch",
+  "note": "**Design note:** The level starts with light pressure on the left columns (0‑1) letting the player build up and merge cannons, then flips to a heavier, multi‑column rush on the right side (3‑4) that f",
+  "success": true,
+  "reason": "fitness 994 -> 996, archetype wall"
  }
 ]

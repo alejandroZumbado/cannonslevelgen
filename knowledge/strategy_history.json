@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T01:33:12+00:00",
-    "promoted": false,
-    "win_rate": 0.9248,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-27T01:34:18+00:00",
     "promoted": false,
     "win_rate": 0.9232,
@@ -138,5 +131,12 @@
     "win_rate": 0.9167,
     "candidate_win_rate": 0.9085,
     "summary": "**Change summary** – The original `deficit` assumes a column can deal damage for only `MAX_POSITION‑front.position` rounds.  \nIf the cannon can kill the current front pirate **this round**, the column actually gets **one"
+  },
+  {
+    "timestamp": "2026-09-30T00:36:13+00:00",
+    "promoted": false,
+    "win_rate": 0.9216,
+    "candidate_win_rate": 0.0,
+    "summary": "candidate failed to load: policy source failed to exec: name 'MAX_POSITION' is not defined"
   }
 ]
