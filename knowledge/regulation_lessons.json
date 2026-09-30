@@ -1083,5 +1083,12 @@
   "note": "Design note: The level starts with sparse 1‑HP pirates to let the player safely build damage, then gradually adds more pirates and higher HP, culminating in dense waves of 5‑ and 6‑HP enemies for a te",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:46:36+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level begins with lone 1‑HP pirates so the player can safely stack cannon damage, then introduces paired columns with 2‑HP foes that force early merges, and finishes with a dense fina",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: 60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
  }
 ]
