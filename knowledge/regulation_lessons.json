@@ -1181,5 +1181,12 @@
   "note": "Design note: The level opens with four isolated low‑HP pirates letting the player safely stack cannon damage, then progressively adds more columns and higher‑HP pirates so the threat ramps up toward a",
   "success": false,
   "reason": "not winnable (9 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:51:15+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with sparse, low‑HP pirates letting the player safely build cannon damage, then steadily adds more columns and higher‑HP foes, culminating in dense, tough waves in the fi",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
