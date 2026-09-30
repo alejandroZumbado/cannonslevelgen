@@ -1174,5 +1174,12 @@
   "note": "Design note: The level opens with a few low‑HP pirates on the left (columns 0‑1) letting the player safely stack cannon damage, then abruptly switches pressure to the right side (columns 3‑4) with mix",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.58 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-09-30T00:51:06+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level opens with four isolated low‑HP pirates letting the player safely stack cannon damage, then progressively adds more columns and higher‑HP pirates so the threat ramps up toward a",
+  "success": false,
+  "reason": "not winnable (9 pirates survive the solver)"
  }
 ]
