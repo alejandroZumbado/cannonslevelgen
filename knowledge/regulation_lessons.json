@@ -1188,5 +1188,12 @@
   "note": "Design note: The level starts with sparse, low‑HP pirates letting the player safely build cannon damage, then steadily adds more columns and higher‑HP foes, culminating in dense, tough waves in the fi",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:51:27+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts with a few low‑HP pirates on the left (columns 0‑1) letting the player safely stack cannon damage, then abruptly shifts pressure to the right side (columns 3‑4) with high",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != switch)"
  }
 ]
