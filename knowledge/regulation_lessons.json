@@ -1146,5 +1146,12 @@
   "note": "Design note: A gentle start with single low‑HP pirates lets the player build cannon damage, then the final third ramps up both the number of columns used and the HP of pirates for a tense, crescendo c",
   "success": true,
   "reason": "fitness 1000 -> 1024, archetype crescendo"
+ },
+ {
+  "at": "2026-09-30T00:49:06+00:00",
+  "target": "burst",
+  "note": "Design note: A calm opening with one‑pirate rows lets the player safely accumulate cannon damage, then a sudden burst of five pirates across all columns (including a high‑HP blocker) forces the player",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
