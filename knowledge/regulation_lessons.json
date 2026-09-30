@@ -1090,5 +1090,12 @@
   "note": "Design note: The level begins with lone 1‑HP pirates so the player can safely stack cannon damage, then introduces paired columns with 2‑HP foes that force early merges, and finishes with a dense fina",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: 60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
+ },
+ {
+  "at": "2026-09-30T00:47:03+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level opens with isolated 1‑HP pirates to let the player safely accumulate cannon damage, then introduces paired 2‑HP threats that require early merges, and culminates in a dense fina",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
