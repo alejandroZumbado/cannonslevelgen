@@ -985,5 +985,12 @@
   "note": "Design note: A steady “swarm” of 1‑HP pirates spreads across three columns each round, with occasional 2‑HP fillers, letting the player build and merge cannons while staying under the 3‑shot kill wind",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:40:38+00:00",
+  "target": "burst",
+  "note": "**Design note:** The level starts with a few isolated low‑HP pirates to let the player build up damage, then erupts in a multi‑column burst that forces careful reserve management and timely merges.",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
