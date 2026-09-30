@@ -1013,5 +1013,12 @@
   "note": "**Design note:** The level begins with three calm rounds of one‑or‑two low‑HP pirates to let the player safely accumulate damage, then erupts in three consecutive burst rounds packed with pirates in e",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-30T00:41:43+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with three light, low‑pirate rounds to let the player safely build and merge cannons, then erupts in five‑column bursts of 1‑HP pirates followed by tougher 2‑HP bursts, c",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != burst)"
  }
 ]
