@@ -1125,5 +1125,12 @@
   "note": "Design note: Burst – the first three rounds are calm single‑pirate threats that let the player build cannon damage, then the level erupts with 4‑5 pirates in the final rounds to test the reserve canno",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-30T00:48:39+00:00",
+  "target": "swarm",
+  "note": "Design note: A steady swarm of low‑HP pirates fills 3‑5 columns each round, letting the player safely build up cannon damage early and then testing that damage across a dense, multi‑column finale.",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
