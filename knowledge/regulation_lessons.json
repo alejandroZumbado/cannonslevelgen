@@ -1209,5 +1209,12 @@
   "note": "Design note: A constant swarm of low‑HP pirates appears across multiple columns each round, forcing the player to spread cannons early and keep merging damage to handle the steady multi‑column pressur",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:51:56+00:00",
+  "target": "swarm",
+  "note": "Design note: A constant swarm of low‑HP pirates appears across multiple columns each round, forcing the player to spread cannons early and later merge to sustain enough damage.",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
