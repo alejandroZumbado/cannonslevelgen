@@ -2,9 +2,5 @@
  "tank": {
   "failed_runs": 2,
   "last_failed": "2026-09-26"
- },
- "switch": {
-  "failed_runs": 1,
-  "last_failed": "2026-09-29"
  }
 }
