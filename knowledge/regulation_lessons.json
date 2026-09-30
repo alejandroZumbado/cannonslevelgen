@@ -1139,5 +1139,12 @@
   "note": "Design note: A steady swarm of low‑HP pirates fills three to five columns each round, letting the player seed a cannon in every column early and then testing that spread with mixed 1‑ and 2‑HP threats",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:48:50+00:00",
+  "target": "crescendo",
+  "note": "Design note: A gentle start with single low‑HP pirates lets the player build cannon damage, then the final third ramps up both the number of columns used and the HP of pirates for a tense, crescendo c",
+  "success": true,
+  "reason": "fitness 1000 -> 1024, archetype crescendo"
  }
 ]
