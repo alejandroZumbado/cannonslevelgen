@@ -992,5 +992,12 @@
   "note": "**Design note:** The level starts with a few isolated low‑HP pirates to let the player build up damage, then erupts in a multi‑column burst that forces careful reserve management and timely merges.",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-30T00:40:58+00:00",
+  "target": "burst",
+  "note": "**Design note:** The level starts with three calm, single‑pirate waves that let the player build up and merge cannons, then erupts in three consecutive full‑column bursts of 1‑HP pirates that test the",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != burst)"
  }
 ]
