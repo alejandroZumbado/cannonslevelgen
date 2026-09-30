@@ -1006,5 +1006,12 @@
   "note": "Design note: The level builds a gentle start with isolated 1‑HP pirates, then adds modest multi‑column waves to let the player accumulate and merge cannons, before culminating in a dense, high‑HP fina",
   "success": true,
   "reason": "fitness 1000 -> 1025, archetype crescendo"
+ },
+ {
+  "at": "2026-09-30T00:41:38+00:00",
+  "target": "burst",
+  "note": "**Design note:** The level begins with three calm rounds of one‑or‑two low‑HP pirates to let the player safely accumulate damage, then erupts in three consecutive burst rounds packed with pirates in e",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != burst)"
  }
 ]
