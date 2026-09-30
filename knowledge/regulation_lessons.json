@@ -1195,5 +1195,12 @@
   "note": "Design note: The level starts with a few low‑HP pirates on the left (columns 0‑1) letting the player safely stack cannon damage, then abruptly shifts pressure to the right side (columns 3‑4) with high",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != switch)"
+ },
+ {
+  "at": "2026-09-30T00:51:31+00:00",
+  "target": "switch",
+  "note": "Design note: The level forces the player to stack and then move fire from the left‑side columns (0‑1) in the early waves to the right‑side columns (3‑4) later, creating a clear “switch” of pressure wh",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != switch)"
  }
 ]
