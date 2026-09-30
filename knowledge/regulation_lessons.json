@@ -1034,5 +1034,12 @@
   "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack damage, then gradually adds more columns and higher HP so that by the final third the player must have merged ca",
   "success": true,
   "reason": "fitness 1000 -> 1012, archetype crescendo"
+ },
+ {
+  "at": "2026-09-30T00:43:56+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack damage, then introduces modest 2‑HP groups, and finally crescendos into dense waves of 3‑4‑HP pirates that requi",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
