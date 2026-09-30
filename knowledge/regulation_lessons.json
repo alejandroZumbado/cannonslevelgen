@@ -1153,5 +1153,12 @@
   "note": "Design note: A calm opening with one‑pirate rows lets the player safely accumulate cannon damage, then a sudden burst of five pirates across all columns (including a high‑HP blocker) forces the player",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-09-30T00:49:15+00:00",
+  "target": "burst",
+  "note": "Design note: A quiet opening of three single‑pirate rows lets the player safely stack cannon damage, then a sudden three‑round surge of five pirates (including a high‑HP blocker) forces the player to ",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: 67% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
  }
 ]
