@@ -1160,5 +1160,12 @@
   "note": "Design note: A quiet opening of three single‑pirate rows lets the player safely stack cannon damage, then a sudden three‑round surge of five pirates (including a high‑HP blocker) forces the player to ",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: 67% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
+ },
+ {
+  "at": "2026-09-30T00:49:29+00:00",
+  "target": "switch",
+  "note": "Design note: The level begins with low‑HP pirates on the left side, lets the player build damage, then abruptly shifts the pressure to the right side with a mix of single‑ and multi‑column waves—inclu",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
