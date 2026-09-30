@@ -1027,5 +1027,12 @@
   "note": "Design note: The level starts with sparse, low‑HP pirates to let the player build and merge cannons, then ramps up both the number of simultaneous pirates and their HP in the final third for a tense c",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:42:59+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack damage, then gradually adds more columns and higher HP so that by the final third the player must have merged ca",
+  "success": true,
+  "reason": "fitness 1000 -> 1012, archetype crescendo"
  }
 ]
