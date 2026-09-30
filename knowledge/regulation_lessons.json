@@ -1020,5 +1020,12 @@
   "note": "Design note: The level starts with three light, low‑pirate rounds to let the player safely build and merge cannons, then erupts in five‑column bursts of 1‑HP pirates followed by tougher 2‑HP bursts, c",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != burst)"
+ },
+ {
+  "at": "2026-09-30T00:42:46+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with sparse, low‑HP pirates to let the player build and merge cannons, then ramps up both the number of simultaneous pirates and their HP in the final third for a tense c",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
