@@ -1132,5 +1132,12 @@
   "note": "Design note: A steady swarm of low‑HP pirates fills 3‑5 columns each round, letting the player safely build up cannon damage early and then testing that damage across a dense, multi‑column finale.",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:48:47+00:00",
+  "target": "swarm",
+  "note": "Design note: A steady swarm of low‑HP pirates fills three to five columns each round, letting the player seed a cannon in every column early and then testing that spread with mixed 1‑ and 2‑HP threats",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
