@@ -1048,5 +1048,12 @@
   "note": "Design note: The level opens with solitary 1‑HP pirates to let the player safely build up cannon damage, then gradually adds more columns and higher‑HP foes, culminating in a dense, high‑HP wave in th",
   "success": false,
   "reason": "not winnable (8 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:45:49+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with isolated 1‑HP pirates to let the player safely build cannon damage, then introduces paired 2‑HP foes, followed by three‑pirate waves of 3‑HP, and culminates in a den",
+  "success": false,
+  "reason": "not winnable (2 pirates survive the solver)"
  }
 ]
