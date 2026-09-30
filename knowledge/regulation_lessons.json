@@ -999,5 +999,12 @@
   "note": "**Design note:** The level starts with three calm, single‑pirate waves that let the player build up and merge cannons, then erupts in three consecutive full‑column bursts of 1‑HP pirates that test the",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != burst)"
+ },
+ {
+  "at": "2026-09-30T00:41:02+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level builds a gentle start with isolated 1‑HP pirates, then adds modest multi‑column waves to let the player accumulate and merge cannons, before culminating in a dense, high‑HP fina",
+  "success": true,
+  "reason": "fitness 1000 -> 1025, archetype crescendo"
  }
 ]
