@@ -957,5 +957,12 @@
   "note": "**Design note:** The level starts with light pressure on the left columns (0‑1) letting the player build up and merge cannons, then flips to a heavier, multi‑column rush on the right side (3‑4) that f",
   "success": true,
   "reason": "fitness 994 -> 996, archetype wall"
+ },
+ {
+  "at": "2026-09-30T00:36:23+00:00",
+  "target": "switch",
+  "note": "Design note: The level starts with a focused wave of low‑HP pirates on the left (columns 0‑1), letting the player build and merge cannons there, then abruptly switches pressure to the right side (colu",
+  "success": false,
+  "reason": "not winnable (7 pirates survive the solver)"
  }
 ]
