@@ -1097,5 +1097,12 @@
   "note": "Design note: The level opens with isolated 1‑HP pirates to let the player safely accumulate cannon damage, then introduces paired 2‑HP threats that require early merges, and culminates in a dense fina",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-09-30T00:47:17+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with a lone low‑HP pirate to let the player safely build cannon damage, then gradually adds more columns and higher‑HP pirates, culminating in the last third with multipl",
+  "success": true,
+  "reason": "fitness 1000 -> 1012, archetype crescendo"
  }
 ]
