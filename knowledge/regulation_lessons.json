@@ -1076,5 +1076,12 @@
   "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack cannon damage, then introduces paired 2‑HP foes that force early merges, followed by three‑pirate waves of 3‑HP ",
   "success": false,
   "reason": "not better than the regulator's version (archetype burst != crescendo)"
+ },
+ {
+  "at": "2026-09-30T00:46:33+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level starts with sparse 1‑HP pirates to let the player safely build damage, then gradually adds more pirates and higher HP, culminating in dense waves of 5‑ and 6‑HP enemies for a te",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
