@@ -1202,5 +1202,12 @@
   "note": "Design note: The level forces the player to stack and then move fire from the left‑side columns (0‑1) in the early waves to the right‑side columns (3‑4) later, creating a clear “switch” of pressure wh",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != switch)"
+ },
+ {
+  "at": "2026-09-30T00:51:44+00:00",
+  "target": "swarm",
+  "note": "Design note: A constant swarm of low‑HP pirates appears across multiple columns each round, forcing the player to spread cannons early and keep merging damage to handle the steady multi‑column pressur",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
