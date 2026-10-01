@@ -1370,5 +1370,12 @@
   "note": "Design note: Early three rows flood column 2 with 1‑HP pirates so the player can merge twice and build a 4‑damage cannon, then a HP‑8 “tank” appears in that column while other modest pirates keep pres",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:19:04+00:00",
+  "target": "tank",
+  "note": "Design note: Flood the early waves with 1‑HP pirates only in column 0 so the player can merge a cannon there each round, building damage 8 by the time a single HP‑8 “tank” appears in that column, crea",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 2: 100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns; gets easier as it goes: last-third pressure 0.53 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
