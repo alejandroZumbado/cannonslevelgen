@@ -1384,5 +1384,12 @@
   "note": "Design note: Flood column 0 with three 1‑HP pirates in the first three waves so the player can merge a cannon there each round, then unleash a HP‑6 “tank” in column 0 while the other columns continue ",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:19:51+00:00",
+  "target": "tank",
+  "note": "Design note: Flood column 2 with five 1‑HP pirates in the first five rows so the player can merge a cannon there each round, building damage 5 by the time a HP‑5 “tank” appears in that column, while t",
+  "success": false,
+  "reason": "not winnable (8 pirates survive the solver)"
  }
 ]
