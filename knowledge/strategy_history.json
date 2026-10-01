@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T01:39:22+00:00",
-    "promoted": false,
-    "win_rate": 0.9281,
-    "candidate_win_rate": 0.9281,
-    "summary": "**Change summary**  \nThe current policy sometimes *moves* a cannon to an empty column, discarding the pending spawn cannon that could have been placed there. This wastes damage and can let a pirate that is about to reach"
-  },
-  {
     "timestamp": "2026-09-28T00:52:51+00:00",
     "promoted": false,
     "win_rate": 0.9216,
@@ -138,5 +131,12 @@
     "win_rate": 0.9308,
     "candidate_win_rate": 0.9308,
     "summary": "**Change summary** – The original tie‑breaker only rewards *coverage* (having a cannon in many columns) and *reserved* columns (cannons on empty columns), but it never values leaving **empty** columns for the next round’"
+  },
+  {
+    "timestamp": "2026-10-01T06:08:23+00:00",
+    "promoted": false,
+    "win_rate": 0.9352,
+    "candidate_win_rate": 0.9337,
+    "summary": "**Change summary** – The current `deficit` treats a whole column as if the cannon can hit *all* pirates there each round (it uses `hp_sum – dmg*steps`). When several pirates are stacked, only the front pirate can be hit "
   }
 ]
