@@ -1356,5 +1356,12 @@
   "note": "Design note: Flood the early waves with 1‑HP pirates in every column so the player can quickly build up merged cannons (damage 2) in columns 1, 3 and 4 before the high‑HP “tank” pirates (HP 6, 6, 4) a",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:18:12+00:00",
+  "target": "tank",
+  "note": "Design note: Flood column 0 with a series of 1‑HP pirates so the player can repeatedly place cannons there, each merge increasing damage by 1, then unleash a 4‑HP “tank” in that column that can be sla",
+  "success": true,
+  "reason": "fitness 989 -> 990, archetype crescendo"
  }
 ]
