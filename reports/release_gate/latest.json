@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-10-01T00:09:48+00:00",
+ "generated_at": "2026-10-01T02:02:51+00:00",
  "levels": {
   "count": 500,
   "classifications": {
-   "champion_win": 467,
-   "solved_by_search_only": 33
+   "champion_win": 466,
+   "solved_by_search_only": 34
   },
   "pacing_failures": 44
  },
@@ -12,13 +12,13 @@
   "deployed": 200,
   "current": 500,
   "new": 300,
-  "moved_positions": 197,
+  "moved_positions": 196,
   "deployed_at": "2026-09-23T09:19:49-06:00",
   "snapshot_derived": true
  },
  "build": {
   "built_at": "2026-09-23T09:19:49-06:00",
-  "levels_changed_at": "2026-09-27T02:46:05+00:00",
+  "levels_changed_at": "2026-10-01T01:45:18+00:00",
   "stale": true
  },
  "live": null,
@@ -41,12 +41,12 @@
   {
    "severity": "warning",
    "section": "batches",
-   "message": "197 of 200 already-deployed positions changed level (first: position 2) — players' saved progress would point elsewhere (allowed only because the game isn't published)"
+   "message": "196 of 200 already-deployed positions changed level (first: position 2) — players' saved progress would point elsewhere (allowed only because the game isn't published)"
   },
   {
    "severity": "warning",
    "section": "live",
-   "message": "live WebGL built 2026-09-23 09:19 but levels changed 2026-09-27 02:46 — site serves the old campaign"
+   "message": "live WebGL built 2026-09-23 09:19 but levels changed 2026-10-01 01:45 — site serves the old campaign"
   },
   {
    "severity": "warning",
