@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-25T01:52:24+00:00",
-  "target": "tank",
-  "note": "Design note: Early forced merges in column 2 build a 5‑damage cannon that can instantly kill a later HP‑5 “tank” while a spread of low‑HP pirates across the other columns keeps pressure and tension.",
-  "success": true,
-  "reason": "fitness 993 -> 998, archetype wall"
- },
- {
   "at": "2026-09-25T01:54:41+00:00",
   "target": "tank",
   "note": "Design note: Early rounds force merges in column 2 to build a high‑damage cannon that can one‑shot a later HP‑7 tank, while a staggered mix of 1‑HP pirates across the other columns maintains constant ",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood early rounds with 1‑HP pirates in every column so the player can merge repeatedly in column 0, building cannon damage to 5 by round 5, then unleash a high‑HP “tank” (HP 5) in column",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:22:20+00:00",
+  "target": "tank",
+  "note": "Design note: Flood column 0 with five 1‑HP pirates in the first five waves so the player can merge a cannon up to damage 5, then unleash an HP‑5 “tank” in column 0 on wave 6 while keeping other column",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
