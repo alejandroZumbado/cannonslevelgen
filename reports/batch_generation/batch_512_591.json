@@ -1,0 +1,1040 @@
+{
+  "generated_at": "2026-10-01T00:00:51+00:00",
+  "seed": 512,
+  "elapsed_seconds": 2.7,
+  "stats": {
+    "attempts": 422,
+    "reskin": 0,
+    "pacing": 57,
+    "variety": 113,
+    "bin_full": 114,
+    "champion_lost": 43,
+    "unwinnable": 0,
+    "no_tension": 0,
+    "too_hard": 15,
+    "profile": "early",
+    "archetypes": {
+      "swarm": 28,
+      "crescendo": 26,
+      "wall": 24,
+      "switch": 2
+    },
+    "bin_quota": [
+      28,
+      28,
+      24
+    ],
+    "bin_filled": [
+      28,
+      28,
+      24
+    ],
+    "search_quota": 0,
+    "search_filled": 0
+  },
+  "levels": [
+    {
+      "levelNumber": 512,
+      "password": "R0365",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 513,
+      "password": "B9467",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 514,
+      "password": "D3001",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.23,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "burst",
+        "wall",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 515,
+      "password": "X4987",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 516,
+      "password": "Q4327",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 517,
+      "password": "O2801",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.83,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 518,
+      "password": "H8145",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.87,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall",
+        "burst",
+        "switch"
+      ]
+    },
+    {
+      "levelNumber": 519,
+      "password": "R0745",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 520,
+      "password": "W3929",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "burst",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 521,
+      "password": "C6000",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.17,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 522,
+      "password": "U7012",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.4,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 523,
+      "password": "J8761",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "switch",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 524,
+      "password": "D8217",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.57,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 525,
+      "password": "R2311",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.8,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 526,
+      "password": "K5792",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 527,
+      "password": "V6980",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 528,
+      "password": "A2812",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.5,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 529,
+      "password": "T2584",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.17,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 530,
+      "password": "Y5431",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.87,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "burst",
+        "switch"
+      ]
+    },
+    {
+      "levelNumber": 531,
+      "password": "G4005",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.2,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "switch",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 532,
+      "password": "D7660",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.81,
+      "archetype": "switch",
+      "archetypes": [
+        "switch",
+        "swarm",
+        "wall",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 533,
+      "password": "K1397",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 534,
+      "password": "C5095",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 535,
+      "password": "T5052",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.21,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 536,
+      "password": "K3096",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.47,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 537,
+      "password": "U8144",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.53,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 538,
+      "password": "F7799",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 539,
+      "password": "K2309",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 540,
+      "password": "P4353",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 541,
+      "password": "Q6721",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.47,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall",
+        "switch",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 542,
+      "password": "X0245",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.51,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 543,
+      "password": "R3465",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.6,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 544,
+      "password": "Z5539",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.27,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 545,
+      "password": "O6945",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.77,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 546,
+      "password": "A8447",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.51,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 547,
+      "password": "U2863",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.13,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 548,
+      "password": "Z2731",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.51,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "switch",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 549,
+      "password": "F7431",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.87,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 550,
+      "password": "G3590",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.4,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 551,
+      "password": "G3193",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.21,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 552,
+      "password": "A3575",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 553,
+      "password": "M2454",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.2,
+      "archetype": "switch",
+      "archetypes": [
+        "switch",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 554,
+      "password": "G7427",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 555,
+      "password": "M2119",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.77,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 556,
+      "password": "W1767",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.1,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 557,
+      "password": "Q5954",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.4,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 558,
+      "password": "M7052",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.21,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 559,
+      "password": "V0701",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "crescendo"
+      ]
+    },
+    {
+      "levelNumber": 560,
+      "password": "P7631",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "switch",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 561,
+      "password": "B3950",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 562,
+      "password": "N6210",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.4,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 563,
+      "password": "L1373",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.8,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 564,
+      "password": "P8024",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.8,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "switch"
+      ]
+    },
+    {
+      "levelNumber": 565,
+      "password": "R7010",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 566,
+      "password": "B1336",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 567,
+      "password": "E0883",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 568,
+      "password": "E3588",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.27,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 569,
+      "password": "W6303",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 570,
+      "password": "D4649",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.93,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 571,
+      "password": "B3599",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 572,
+      "password": "D6065",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 573,
+      "password": "N8211",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 574,
+      "password": "O3377",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.1,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 575,
+      "password": "J9896",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 576,
+      "password": "D5846",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 577,
+      "password": "X0174",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "wall",
+      "archetypes": [
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 578,
+      "password": "T2327",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 579,
+      "password": "Z7952",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 580,
+      "password": "S8419",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 581,
+      "password": "I2913",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 582,
+      "password": "R3067",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 583,
+      "password": "W9688",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 584,
+      "password": "Y7442",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 585,
+      "password": "Q1016",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    },
+    {
+      "levelNumber": 586,
+      "password": "R4237",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 587,
+      "password": "L7717",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "wall",
+      "archetypes": [
+        "wall",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 588,
+      "password": "H1998",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 589,
+      "password": "F3169",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm"
+      ]
+    },
+    {
+      "levelNumber": 590,
+      "password": "R4836",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "archetype": "swarm",
+      "archetypes": [
+        "swarm",
+        "crescendo",
+        "burst"
+      ]
+    },
+    {
+      "levelNumber": 591,
+      "password": "O8301",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "archetype": "crescendo",
+      "archetypes": [
+        "crescendo",
+        "swarm",
+        "wall"
+      ]
+    }
+  ]
+}

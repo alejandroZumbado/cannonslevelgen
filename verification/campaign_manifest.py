@@ -56,6 +56,10 @@ class ManifestEntry:
     pool: str
     assigned_order: int | None = None  # position in the release, once curated
     source: str = "original"  # "original" | "ai_generated"
+    # furthest row a pirate reached while the champion won (0..2; 0 = never
+    # threatened). None = unknown (level not in the audit yet). Used by
+    # curate_release to keep "nothing ever happens" levels out of arc bodies.
+    tension: int | None = None
 
 
 def _load_previous_assignments() -> dict[int, int]:
@@ -132,6 +136,7 @@ def build_manifest(extra_levels: list[dict] | None = None) -> dict:
             pool=pool,
             assigned_order=previous_assignments.get(n),
             source=lvl.get("source", "original"),
+            tension=lvl.get("champion_max_position_reached") if classification == "champion_win" else None,
         ))
 
     entries.sort(key=lambda e: e.levelNumber)

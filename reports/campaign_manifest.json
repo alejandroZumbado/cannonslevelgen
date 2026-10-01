@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-27T02:45:56+00:00",
-  "based_on_audit": "2026-09-27T02:45:51+00:00",
-  "total_levels": 509,
+  "generated_at": "2026-10-01T00:09:20+00:00",
+  "based_on_audit": "2026-10-01T00:08:20+00:00",
+  "total_levels": 591,
   "counts": {
-    "assigned": 506,
-    "ready": 2,
+    "assigned": 500,
+    "ready": 90,
     "roto": 1
   },
   "levels": [
@@ -16,7 +16,8 @@
       "difficulty_score": 9.8,
       "pool": "assigned",
       "assigned_order": 1,
-      "source": "original"
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 2,
@@ -24,9 +25,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.97,
-      "pool": "assigned",
-      "assigned_order": 29,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 3,
@@ -34,9 +36,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.6,
-      "pool": "assigned",
-      "assigned_order": 17,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 4,
@@ -44,9 +47,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.3,
-      "pool": "assigned",
-      "assigned_order": 490,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 5,
@@ -56,7 +60,8 @@
       "difficulty_score": 9.3,
       "pool": "assigned",
       "assigned_order": 12,
-      "source": "original"
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 6,
@@ -65,8 +70,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 89,
-      "source": "original"
+      "assigned_order": 221,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 7,
@@ -75,8 +81,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.23,
       "pool": "assigned",
-      "assigned_order": 10,
-      "source": "original"
+      "assigned_order": 39,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 8,
@@ -86,7 +93,8 @@
       "difficulty_score": 9.5,
       "pool": "assigned",
       "assigned_order": 23,
-      "source": "original"
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 9,
@@ -94,9 +102,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.1,
-      "pool": "assigned",
-      "assigned_order": 486,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 10,
@@ -105,8 +114,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 80,
-      "source": "original"
+      "assigned_order": 489,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 11,
@@ -114,9 +124,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.6,
-      "pool": "assigned",
-      "assigned_order": 37,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 12,
@@ -125,8 +136,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.7,
       "pool": "assigned",
-      "assigned_order": 122,
-      "source": "original"
+      "assigned_order": 386,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 13,
@@ -135,8 +147,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.81,
       "pool": "assigned",
-      "assigned_order": 125,
-      "source": "original"
+      "assigned_order": 146,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 14,
@@ -145,8 +158,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 3,
-      "source": "original"
+      "assigned_order": 111,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 15,
@@ -154,9 +168,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.7,
-      "pool": "assigned",
-      "assigned_order": 28,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 16,
@@ -164,9 +179,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.9,
-      "pool": "assigned",
-      "assigned_order": 82,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 17,
@@ -175,8 +191,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.85,
       "pool": "assigned",
-      "assigned_order": 107,
-      "source": "original"
+      "assigned_order": 87,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 18,
@@ -184,9 +201,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 12.2,
-      "pool": "assigned",
-      "assigned_order": 94,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 19,
@@ -195,8 +213,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 103,
-      "source": "original"
+      "assigned_order": 82,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 20,
@@ -204,9 +223,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.65,
-      "pool": "assigned",
-      "assigned_order": 32,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 21,
@@ -215,8 +235,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 5,
-      "source": "original"
+      "assigned_order": 13,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 22,
@@ -225,8 +246,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.0,
       "pool": "assigned",
-      "assigned_order": 502,
-      "source": "original"
+      "assigned_order": 188,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 23,
@@ -235,8 +257,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.2,
       "pool": "assigned",
-      "assigned_order": 36,
-      "source": "original"
+      "assigned_order": 298,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 24,
@@ -244,9 +267,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.3,
-      "pool": "assigned",
-      "assigned_order": 50,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 25,
@@ -254,9 +278,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.6,
-      "pool": "assigned",
-      "assigned_order": 51,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 26,
@@ -265,8 +290,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 497,
-      "source": "original"
+      "assigned_order": 122,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 27,
@@ -275,8 +301,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.7,
       "pool": "assigned",
-      "assigned_order": 8,
-      "source": "original"
+      "assigned_order": 397,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 28,
@@ -285,8 +312,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 73,
-      "source": "original"
+      "assigned_order": 72,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 29,
@@ -296,7 +324,8 @@
       "difficulty_score": 9.6,
       "pool": "assigned",
       "assigned_order": 56,
-      "source": "original"
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 30,
@@ -304,9 +333,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.61,
-      "pool": "assigned",
-      "assigned_order": 81,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 31,
@@ -315,8 +345,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.6,
       "pool": "assigned",
-      "assigned_order": 47,
-      "source": "original"
+      "assigned_order": 353,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 32,
@@ -325,8 +356,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 15,
-      "source": "original"
+      "assigned_order": 232,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 33,
@@ -334,9 +366,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 12.2,
-      "pool": "assigned",
-      "assigned_order": 104,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 34,
@@ -345,8 +378,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 188,
-      "source": "original"
+      "assigned_order": 92,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 35,
@@ -355,8 +389,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.45,
       "pool": "assigned",
-      "assigned_order": 146,
-      "source": "original"
+      "assigned_order": 179,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 36,
@@ -365,8 +400,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.43,
       "pool": "assigned",
-      "assigned_order": 65,
-      "source": "original"
+      "assigned_order": 74,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 37,
@@ -374,9 +410,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.27,
-      "pool": "assigned",
-      "assigned_order": 40,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 38,
@@ -386,7 +423,8 @@
       "difficulty_score": 110.0,
       "pool": "assigned",
       "assigned_order": 198,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 39,
@@ -395,8 +433,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.57,
       "pool": "assigned",
-      "assigned_order": 41,
-      "source": "original"
+      "assigned_order": 50,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 40,
@@ -405,8 +444,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.7,
       "pool": "assigned",
-      "assigned_order": 42,
-      "source": "original"
+      "assigned_order": 21,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 41,
@@ -415,8 +455,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.0,
       "pool": "assigned",
-      "assigned_order": 39,
-      "source": "original"
+      "assigned_order": 465,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 42,
@@ -425,8 +466,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.8,
       "pool": "assigned",
-      "assigned_order": 68,
-      "source": "original"
+      "assigned_order": 47,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 43,
@@ -435,8 +477,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.6,
       "pool": "assigned",
-      "assigned_order": 2,
-      "source": "original"
+      "assigned_order": 67,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 44,
@@ -445,8 +488,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.91,
       "pool": "assigned",
-      "assigned_order": 43,
-      "source": "original"
+      "assigned_order": 112,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 45,
@@ -455,8 +499,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.98,
       "pool": "assigned",
-      "assigned_order": 206,
-      "source": "original"
+      "assigned_order": 244,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 46,
@@ -465,8 +510,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.67,
       "pool": "assigned",
-      "assigned_order": 58,
-      "source": "original"
+      "assigned_order": 375,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 47,
@@ -475,18 +521,20 @@
       "classification": "champion_win",
       "difficulty_score": 12.21,
       "pool": "assigned",
-      "assigned_order": 112,
-      "source": "original"
+      "assigned_order": 93,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 48,
       "password": "H2747",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 135,
-      "source": "original"
+      "assigned_order": 157,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 49,
@@ -495,8 +543,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 136,
-      "source": "original"
+      "assigned_order": 11,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 50,
@@ -504,9 +553,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.9,
-      "pool": "assigned",
-      "assigned_order": 92,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 51,
@@ -514,9 +564,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.8,
-      "pool": "assigned",
-      "assigned_order": 479,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 52,
@@ -524,9 +575,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.9,
-      "pool": "assigned",
-      "assigned_order": 101,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 53,
@@ -535,8 +587,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.4,
       "pool": "assigned",
-      "assigned_order": 179,
-      "source": "original"
+      "assigned_order": 194,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 54,
@@ -544,9 +597,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.9,
-      "pool": "assigned",
-      "assigned_order": 177,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 55,
@@ -555,8 +609,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.5,
       "pool": "assigned",
-      "assigned_order": 115,
-      "source": "original"
+      "assigned_order": 85,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 56,
@@ -565,8 +620,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 349,
-      "source": "original"
+      "assigned_order": 372,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 57,
@@ -575,8 +631,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 498,
-      "source": "original"
+      "assigned_order": 133,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 58,
@@ -585,28 +642,31 @@
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 320,
-      "source": "original"
+      "assigned_order": 99,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 59,
       "password": "G6535",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 11,
-      "source": "original"
+      "assigned_order": 108,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 60,
       "password": "U1300",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.45,
       "pool": "assigned",
-      "assigned_order": 147,
-      "source": "original"
+      "assigned_order": 33,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 61,
@@ -615,8 +675,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.4,
       "pool": "assigned",
-      "assigned_order": 109,
-      "source": "original"
+      "assigned_order": 139,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 62,
@@ -624,9 +685,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.0,
-      "pool": "assigned",
-      "assigned_order": 49,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 63,
@@ -635,8 +697,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.21,
       "pool": "assigned",
-      "assigned_order": 113,
-      "source": "original"
+      "assigned_order": 103,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 64,
@@ -645,8 +708,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.7,
       "pool": "assigned",
-      "assigned_order": 13,
-      "source": "original"
+      "assigned_order": 100,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 65,
@@ -656,7 +720,8 @@
       "difficulty_score": 108.0,
       "pool": "assigned",
       "assigned_order": 143,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 66,
@@ -665,8 +730,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 131,
-      "source": "original"
+      "assigned_order": 161,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 67,
@@ -675,8 +741,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 83,
-      "source": "original"
+      "assigned_order": 32,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 68,
@@ -684,9 +751,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.0,
-      "pool": "assigned",
-      "assigned_order": 503,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 69,
@@ -695,8 +763,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.7,
       "pool": "assigned",
-      "assigned_order": 150,
-      "source": "original"
+      "assigned_order": 189,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 70,
@@ -705,8 +774,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.57,
       "pool": "assigned",
-      "assigned_order": 21,
-      "source": "original"
+      "assigned_order": 60,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 71,
@@ -715,8 +785,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.6,
       "pool": "assigned",
-      "assigned_order": 67,
-      "source": "original"
+      "assigned_order": 78,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 72,
@@ -725,8 +796,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.66,
       "pool": "assigned",
-      "assigned_order": 241,
-      "source": "original"
+      "assigned_order": 271,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 73,
@@ -735,8 +807,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.43,
       "pool": "assigned",
-      "assigned_order": 75,
-      "source": "original"
+      "assigned_order": 84,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 74,
@@ -745,8 +818,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.4,
       "pool": "assigned",
-      "assigned_order": 57,
-      "source": "original"
+      "assigned_order": 320,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 75,
@@ -755,8 +829,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 141,
-      "source": "original"
+      "assigned_order": 171,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 76,
@@ -765,8 +840,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.97,
       "pool": "assigned",
-      "assigned_order": 9,
-      "source": "original"
+      "assigned_order": 58,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 77,
@@ -775,8 +851,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 60,
-      "source": "original"
+      "assigned_order": 69,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 78,
@@ -785,8 +862,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.5,
       "pool": "assigned",
-      "assigned_order": 123,
-      "source": "original"
+      "assigned_order": 65,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 79,
@@ -795,8 +873,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.41,
       "pool": "assigned",
-      "assigned_order": 139,
-      "source": "original"
+      "assigned_order": 178,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 80,
@@ -805,8 +884,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 260,
-      "source": "original"
+      "assigned_order": 283,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 81,
@@ -815,8 +895,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 74,
-      "source": "original"
+      "assigned_order": 102,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 82,
@@ -825,8 +906,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.4,
       "pool": "assigned",
-      "assigned_order": 61,
-      "source": "original"
+      "assigned_order": 70,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 83,
@@ -834,9 +916,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.63,
-      "pool": "assigned",
-      "assigned_order": 493,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 84,
@@ -845,8 +928,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.9,
       "pool": "assigned",
-      "assigned_order": 79,
-      "source": "original"
+      "assigned_order": 419,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 85,
@@ -854,19 +938,21 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.4,
-      "pool": "assigned",
-      "assigned_order": 111,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 86,
       "password": "V6428",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.1,
       "pool": "assigned",
-      "assigned_order": 168,
-      "source": "original"
+      "assigned_order": 201,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 87,
@@ -875,8 +961,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 261,
-      "source": "original"
+      "assigned_order": 293,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 88,
@@ -885,8 +972,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.4,
       "pool": "assigned",
-      "assigned_order": 27,
-      "source": "original"
+      "assigned_order": 331,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 89,
@@ -895,8 +983,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 262,
-      "source": "original"
+      "assigned_order": 302,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 90,
@@ -905,8 +994,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.5,
       "pool": "assigned",
-      "assigned_order": 210,
-      "source": "original"
+      "assigned_order": 75,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 91,
@@ -915,8 +1005,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.53,
       "pool": "assigned",
-      "assigned_order": 96,
-      "source": "original"
+      "assigned_order": 135,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 92,
@@ -925,8 +1016,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 234,
-      "source": "original"
+      "assigned_order": 269,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 93,
@@ -935,8 +1027,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.23,
       "pool": "assigned",
-      "assigned_order": 20,
-      "source": "original"
+      "assigned_order": 49,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 94,
@@ -945,8 +1038,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.9,
       "pool": "assigned",
-      "assigned_order": 200,
-      "source": "original"
+      "assigned_order": 234,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 95,
@@ -955,8 +1049,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 437,
-      "source": "original"
+      "assigned_order": 492,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 96,
@@ -965,8 +1060,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.7,
       "pool": "assigned",
-      "assigned_order": 52,
-      "source": "original"
+      "assigned_order": 31,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 97,
@@ -975,8 +1071,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 25,
-      "source": "original"
+      "assigned_order": 243,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 98,
@@ -985,8 +1082,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 375,
-      "source": "original"
+      "assigned_order": 270,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 99,
@@ -994,9 +1092,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.1,
-      "pool": "assigned",
-      "assigned_order": 35,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 100,
@@ -1005,8 +1104,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 144,
-      "source": "original"
+      "assigned_order": 29,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 101,
@@ -1015,8 +1115,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 408,
-      "source": "original"
+      "assigned_order": 303,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 102,
@@ -1025,8 +1126,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.9,
       "pool": "assigned",
-      "assigned_order": 59,
-      "source": "original"
+      "assigned_order": 430,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 103,
@@ -1035,8 +1137,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.81,
       "pool": "assigned",
-      "assigned_order": 126,
-      "source": "original"
+      "assigned_order": 156,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 104,
@@ -1045,8 +1148,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.33,
       "pool": "assigned",
-      "assigned_order": 172,
-      "source": "original"
+      "assigned_order": 203,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 105,
@@ -1055,8 +1159,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 247,
-      "source": "original"
+      "assigned_order": 290,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 106,
@@ -1064,9 +1169,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.63,
-      "pool": "assigned",
-      "assigned_order": 72,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 107,
@@ -1075,8 +1181,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.87,
       "pool": "assigned",
-      "assigned_order": 62,
-      "source": "original"
+      "assigned_order": 61,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 108,
@@ -1085,18 +1192,20 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 93,
-      "source": "original"
+      "assigned_order": 42,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 109,
       "password": "G2620",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 298,
-      "source": "original"
+      "assigned_order": 212,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 110,
@@ -1105,8 +1214,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.3,
       "pool": "assigned",
-      "assigned_order": 85,
-      "source": "original"
+      "assigned_order": 64,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 111,
@@ -1115,8 +1225,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.1,
       "pool": "assigned",
-      "assigned_order": 169,
-      "source": "original"
+      "assigned_order": 66,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 112,
@@ -1125,8 +1236,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 98,
-      "source": "original"
+      "assigned_order": 118,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 113,
@@ -1136,7 +1248,8 @@
       "difficulty_score": 9.6,
       "pool": "ready",
       "assigned_order": null,
-      "source": "original"
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 114,
@@ -1145,8 +1258,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.57,
       "pool": "assigned",
-      "assigned_order": 31,
-      "source": "original"
+      "assigned_order": 80,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 115,
@@ -1155,8 +1269,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 263,
-      "source": "original"
+      "assigned_order": 310,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 116,
@@ -1165,8 +1280,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.61,
       "pool": "assigned",
-      "assigned_order": 91,
-      "source": "original"
+      "assigned_order": 41,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 117,
@@ -1175,8 +1291,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 102,
-      "source": "original"
+      "assigned_order": 52,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 118,
@@ -1185,8 +1302,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 30,
-      "source": "original"
+      "assigned_order": 9,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 119,
@@ -1195,8 +1313,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.86,
       "pool": "assigned",
-      "assigned_order": 276,
-      "source": "original"
+      "assigned_order": 182,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 120,
@@ -1205,8 +1324,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 438,
-      "source": "original"
+      "assigned_order": 451,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 121,
@@ -1216,7 +1336,8 @@
       "difficulty_score": 109.0,
       "pool": "assigned",
       "assigned_order": 165,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 122,
@@ -1226,17 +1347,19 @@
       "difficulty_score": 111.0,
       "pool": "assigned",
       "assigned_order": 242,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 123,
       "password": "R6902",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.63,
       "pool": "assigned",
-      "assigned_order": 33,
-      "source": "original"
+      "assigned_order": 130,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 124,
@@ -1245,8 +1368,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.05,
       "pool": "assigned",
-      "assigned_order": 162,
-      "source": "original"
+      "assigned_order": 192,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 125,
@@ -1255,18 +1379,20 @@
       "classification": "champion_win",
       "difficulty_score": 13.13,
       "pool": "assigned",
-      "assigned_order": 127,
-      "source": "original"
+      "assigned_order": 137,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 126,
       "password": "D1252",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 66,
-      "source": "original"
+      "assigned_order": 163,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 127,
@@ -1276,7 +1402,8 @@
       "difficulty_score": 9.5,
       "pool": "assigned",
       "assigned_order": 34,
-      "source": "original"
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 128,
@@ -1285,8 +1412,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 266,
-      "source": "original"
+      "assigned_order": 311,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 129,
@@ -1294,9 +1422,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.6,
-      "pool": "assigned",
-      "assigned_order": 71,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 130,
@@ -1306,7 +1435,8 @@
       "difficulty_score": 111.0,
       "pool": "assigned",
       "assigned_order": 253,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 131,
@@ -1315,18 +1445,20 @@
       "classification": "champion_win",
       "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 232,
-      "source": "original"
+      "assigned_order": 138,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 132,
       "password": "G3162",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.33,
       "pool": "assigned",
-      "assigned_order": 145,
-      "source": "original"
+      "assigned_order": 109,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 133,
@@ -1336,7 +1468,8 @@
       "difficulty_score": 109.0,
       "pool": "assigned",
       "assigned_order": 176,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 134,
@@ -1344,9 +1477,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.61,
-      "pool": "assigned",
-      "assigned_order": 166,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 135,
@@ -1355,8 +1489,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 350,
-      "source": "original"
+      "assigned_order": 382,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 136,
@@ -1365,8 +1500,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 267,
-      "source": "original"
+      "assigned_order": 312,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 137,
@@ -1376,7 +1512,8 @@
       "difficulty_score": 110.0,
       "pool": "assigned",
       "assigned_order": 209,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 138,
@@ -1385,8 +1522,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 248,
-      "source": "original"
+      "assigned_order": 252,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 139,
@@ -1395,8 +1533,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 268,
-      "source": "original"
+      "assigned_order": 294,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 140,
@@ -1406,7 +1545,8 @@
       "difficulty_score": 12.9,
       "pool": "assigned",
       "assigned_order": 117,
-      "source": "original"
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 141,
@@ -1415,8 +1555,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 499,
-      "source": "original"
+      "assigned_order": 144,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 142,
@@ -1425,8 +1566,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 331,
-      "source": "original"
+      "assigned_order": 110,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 143,
@@ -1435,8 +1577,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 151,
-      "source": "original"
+      "assigned_order": 181,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 144,
@@ -1445,8 +1588,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.67,
       "pool": "assigned",
-      "assigned_order": 140,
-      "source": "original"
+      "assigned_order": 170,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 145,
@@ -1454,9 +1598,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.93,
-      "pool": "assigned",
-      "assigned_order": 53,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 146,
@@ -1466,7 +1611,8 @@
       "difficulty_score": 113.0,
       "pool": "assigned",
       "assigned_order": 374,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 147,
@@ -1475,8 +1621,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 439,
-      "source": "original"
+      "assigned_order": 462,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 148,
@@ -1485,8 +1632,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.26,
       "pool": "assigned",
-      "assigned_order": 138,
-      "source": "original"
+      "assigned_order": 169,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 149,
@@ -1495,8 +1643,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.71,
       "pool": "assigned",
-      "assigned_order": 157,
-      "source": "original"
+      "assigned_order": 131,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 150,
@@ -1505,8 +1654,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 153,
-      "source": "original"
+      "assigned_order": 173,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 151,
@@ -1515,8 +1665,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 218,
-      "source": "original"
+      "assigned_order": 219,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 152,
@@ -1524,9 +1675,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.18,
-      "pool": "assigned",
-      "assigned_order": 458,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 153,
@@ -1535,8 +1687,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 351,
-      "source": "original"
+      "assigned_order": 392,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 154,
@@ -1545,8 +1698,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 108,
-      "source": "original"
+      "assigned_order": 128,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 155,
@@ -1556,7 +1710,8 @@
       "difficulty_score": 9.5,
       "pool": "ready",
       "assigned_order": null,
-      "source": "original"
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 156,
@@ -1565,8 +1720,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 189,
-      "source": "original"
+      "assigned_order": 215,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 157,
@@ -1575,8 +1731,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 174,
-      "source": "original"
+      "assigned_order": 184,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 158,
@@ -1585,8 +1742,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 54,
-      "source": "original"
+      "assigned_order": 123,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 159,
@@ -1595,8 +1753,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.47,
       "pool": "assigned",
-      "assigned_order": 105,
-      "source": "original"
+      "assigned_order": 114,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 160,
@@ -1605,8 +1764,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 256,
-      "source": "original"
+      "assigned_order": 300,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 161,
@@ -1615,8 +1775,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 249,
-      "source": "original"
+      "assigned_order": 262,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 162,
@@ -1626,7 +1787,8 @@
       "difficulty_score": 113.5,
       "pool": "assigned",
       "assigned_order": 407,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 163,
@@ -1635,8 +1797,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 269,
-      "source": "original"
+      "assigned_order": 274,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 164,
@@ -1645,8 +1808,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 257,
-      "source": "original"
+      "assigned_order": 301,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 165,
@@ -1655,8 +1819,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 354,
-      "source": "original"
+      "assigned_order": 402,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 166,
@@ -1665,8 +1830,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.7,
       "pool": "assigned",
-      "assigned_order": 156,
-      "source": "original"
+      "assigned_order": 44,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 167,
@@ -1676,7 +1842,8 @@
       "difficulty_score": 112.5,
       "pool": "assigned",
       "assigned_order": 330,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 168,
@@ -1686,7 +1853,8 @@
       "difficulty_score": 112.0,
       "pool": "assigned",
       "assigned_order": 286,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 169,
@@ -1696,7 +1864,8 @@
       "difficulty_score": 9.5,
       "pool": "assigned",
       "assigned_order": 45,
-      "source": "original"
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 170,
@@ -1705,8 +1874,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 270,
-      "source": "original"
+      "assigned_order": 284,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 171,
@@ -1715,8 +1885,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 271,
-      "source": "original"
+      "assigned_order": 304,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 172,
@@ -1725,8 +1896,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 272,
-      "source": "original"
+      "assigned_order": 313,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 173,
@@ -1735,18 +1907,20 @@
       "classification": "champion_win",
       "difficulty_score": 12.23,
       "pool": "assigned",
-      "assigned_order": 199,
-      "source": "original"
+      "assigned_order": 54,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 174,
       "password": "K3712",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.67,
       "pool": "assigned",
-      "assigned_order": 149,
-      "source": "original"
+      "assigned_order": 180,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 175,
@@ -1755,8 +1929,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 355,
-      "source": "original"
+      "assigned_order": 410,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 176,
@@ -1765,8 +1940,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 405,
-      "source": "original"
+      "assigned_order": 427,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 177,
@@ -1775,8 +1951,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.63,
       "pool": "assigned",
-      "assigned_order": 120,
-      "source": "original"
+      "assigned_order": 150,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 178,
@@ -1785,8 +1962,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.6,
       "pool": "assigned",
-      "assigned_order": 106,
-      "source": "original"
+      "assigned_order": 96,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 179,
@@ -1796,7 +1974,8 @@
       "difficulty_score": 110.5,
       "pool": "assigned",
       "assigned_order": 220,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 180,
@@ -1806,7 +1985,8 @@
       "difficulty_score": 112.5,
       "pool": "assigned",
       "assigned_order": 341,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 181,
@@ -1815,8 +1995,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 158,
-      "source": "original"
+      "assigned_order": 190,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 182,
@@ -1825,8 +2006,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.53,
       "pool": "assigned",
-      "assigned_order": 76,
-      "source": "original"
+      "assigned_order": 145,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 183,
@@ -1835,8 +2017,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 500,
-      "source": "original"
+      "assigned_order": 155,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 184,
@@ -1845,8 +2028,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.13,
       "pool": "assigned",
-      "assigned_order": 215,
-      "source": "original"
+      "assigned_order": 248,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 185,
@@ -1855,8 +2039,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 170,
-      "source": "original"
+      "assigned_order": 183,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 186,
@@ -1865,8 +2050,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 190,
-      "source": "original"
+      "assigned_order": 223,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 187,
@@ -1875,8 +2061,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 235,
-      "source": "original"
+      "assigned_order": 277,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 188,
@@ -1885,8 +2072,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 442,
-      "source": "original"
+      "assigned_order": 493,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 189,
@@ -1895,8 +2083,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.81,
       "pool": "assigned",
-      "assigned_order": 221,
-      "source": "original"
+      "assigned_order": 167,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 190,
@@ -1905,8 +2094,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 121,
-      "source": "original"
+      "assigned_order": 246,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 191,
@@ -1915,8 +2105,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 419,
-      "source": "original"
+      "assigned_order": 314,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 192,
@@ -1925,8 +2116,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 250,
-      "source": "original"
+      "assigned_order": 272,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 193,
@@ -1935,8 +2127,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 273,
-      "source": "original"
+      "assigned_order": 321,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 194,
@@ -1944,9 +2137,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.9,
-      "pool": "assigned",
-      "assigned_order": 63,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 195,
@@ -1955,8 +2149,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 274,
-      "source": "original"
+      "assigned_order": 322,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 196,
@@ -1965,8 +2160,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.86,
       "pool": "assigned",
-      "assigned_order": 152,
-      "source": "original"
+      "assigned_order": 142,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 197,
@@ -1974,9 +2170,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.1,
-      "pool": "assigned",
-      "assigned_order": 487,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 198,
@@ -1986,7 +2183,8 @@
       "difficulty_score": 112.0,
       "pool": "assigned",
       "assigned_order": 297,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 199,
@@ -1995,8 +2193,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 64,
-      "source": "original"
+      "assigned_order": 83,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 200,
@@ -2005,8 +2204,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.33,
       "pool": "assigned",
-      "assigned_order": 243,
-      "source": "original"
+      "assigned_order": 119,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 201,
@@ -2015,8 +2215,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.5,
       "pool": "assigned",
-      "assigned_order": 148,
-      "source": "original"
+      "assigned_order": 140,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 202,
@@ -2025,8 +2226,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.47,
       "pool": "assigned",
-      "assigned_order": 114,
-      "source": "original"
+      "assigned_order": 124,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 203,
@@ -2035,18 +2237,20 @@
       "classification": "champion_win",
       "difficulty_score": 12.53,
       "pool": "assigned",
-      "assigned_order": 86,
-      "source": "original"
+      "assigned_order": 136,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 204,
       "password": "Y1257",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.71,
       "pool": "assigned",
-      "assigned_order": 44,
-      "source": "original"
+      "assigned_order": 141,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 205,
@@ -2055,8 +2259,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.36,
       "pool": "assigned",
-      "assigned_order": 364,
-      "source": "original"
+      "assigned_order": 259,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 206,
@@ -2065,8 +2270,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 277,
-      "source": "original"
+      "assigned_order": 323,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 207,
@@ -2076,7 +2282,8 @@
       "difficulty_score": 113.0,
       "pool": "assigned",
       "assigned_order": 385,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 208,
@@ -2085,8 +2292,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 278,
-      "source": "original"
+      "assigned_order": 305,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 209,
@@ -2096,17 +2304,19 @@
       "difficulty_score": 112.0,
       "pool": "assigned",
       "assigned_order": 308,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 210,
       "password": "C5201",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.0,
       "pool": "assigned",
-      "assigned_order": 142,
-      "source": "original"
+      "assigned_order": 162,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 211,
@@ -2115,8 +2325,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 488,
-      "source": "original"
+      "assigned_order": 254,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 212,
@@ -2126,7 +2337,8 @@
       "difficulty_score": 111.0,
       "pool": "assigned",
       "assigned_order": 264,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 213,
@@ -2135,8 +2347,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.28,
       "pool": "assigned",
-      "assigned_order": 217,
-      "source": "original"
+      "assigned_order": 239,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 214,
@@ -2145,8 +2358,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 443,
-      "source": "original"
+      "assigned_order": 473,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 215,
@@ -2155,28 +2369,31 @@
       "classification": "champion_win",
       "difficulty_score": 12.85,
       "pool": "assigned",
-      "assigned_order": 87,
-      "source": "original"
+      "assigned_order": 97,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 216,
       "password": "Y5096",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 191,
-      "source": "original"
+      "assigned_order": 224,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 217,
       "password": "Z9137",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.1,
       "pool": "assigned",
-      "assigned_order": 287,
-      "source": "original"
+      "assigned_order": 193,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 218,
@@ -2186,7 +2403,8 @@
       "difficulty_score": 15.0,
       "pool": "assigned",
       "assigned_order": 208,
-      "source": "original"
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 219,
@@ -2196,7 +2414,8 @@
       "difficulty_score": 112.5,
       "pool": "assigned",
       "assigned_order": 352,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 220,
@@ -2205,8 +2424,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.95,
       "pool": "assigned",
-      "assigned_order": 204,
-      "source": "original"
+      "assigned_order": 227,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 221,
@@ -2215,8 +2435,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 279,
-      "source": "original"
+      "assigned_order": 285,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 222,
@@ -2225,8 +2446,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.73,
       "pool": "assigned",
-      "assigned_order": 116,
-      "source": "original"
+      "assigned_order": 76,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 223,
@@ -2235,8 +2457,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 356,
-      "source": "original"
+      "assigned_order": 411,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 224,
@@ -2245,8 +2468,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.61,
       "pool": "assigned",
-      "assigned_order": 309,
-      "source": "original"
+      "assigned_order": 88,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 225,
@@ -2255,8 +2479,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.4,
       "pool": "assigned",
-      "assigned_order": 7,
-      "source": "original"
+      "assigned_order": 342,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 226,
@@ -2266,7 +2491,8 @@
       "difficulty_score": 108.5,
       "pool": "assigned",
       "assigned_order": 154,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 227,
@@ -2275,8 +2501,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.2,
       "pool": "assigned",
-      "assigned_order": 465,
-      "source": "original"
+      "assigned_order": 497,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 228,
@@ -2285,8 +2512,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 280,
-      "source": "original"
+      "assigned_order": 295,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 229,
@@ -2295,8 +2523,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.53,
       "pool": "assigned",
-      "assigned_order": 229,
-      "source": "original"
+      "assigned_order": 240,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 230,
@@ -2305,8 +2534,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 281,
-      "source": "original"
+      "assigned_order": 315,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 231,
@@ -2315,8 +2545,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 282,
-      "source": "original"
+      "assigned_order": 324,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 232,
@@ -2325,8 +2556,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 357,
-      "source": "original"
+      "assigned_order": 412,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 233,
@@ -2335,8 +2567,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 444,
-      "source": "original"
+      "assigned_order": 484,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 234,
@@ -2345,8 +2578,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.73,
       "pool": "assigned",
-      "assigned_order": 124,
-      "source": "original"
+      "assigned_order": 86,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 235,
@@ -2355,8 +2589,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.16,
       "pool": "assigned",
-      "assigned_order": 163,
-      "source": "original"
+      "assigned_order": 153,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 236,
@@ -2365,8 +2600,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 236,
-      "source": "original"
+      "assigned_order": 278,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 237,
@@ -2375,8 +2611,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.53,
       "pool": "assigned",
-      "assigned_order": 230,
-      "source": "original"
+      "assigned_order": 260,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 238,
@@ -2385,8 +2622,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.76,
       "pool": "assigned",
-      "assigned_order": 194,
-      "source": "original"
+      "assigned_order": 206,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 239,
@@ -2395,8 +2633,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.93,
       "pool": "assigned",
-      "assigned_order": 133,
-      "source": "original"
+      "assigned_order": 441,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 240,
@@ -2405,8 +2644,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.98,
       "pool": "assigned",
-      "assigned_order": 207,
-      "source": "original"
+      "assigned_order": 245,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 241,
@@ -2415,8 +2655,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 445,
-      "source": "original"
+      "assigned_order": 494,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 242,
@@ -2425,8 +2666,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 430,
-      "source": "original"
+      "assigned_order": 325,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 243,
@@ -2435,8 +2677,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 283,
-      "source": "original"
+      "assigned_order": 332,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 244,
@@ -2445,8 +2688,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 284,
-      "source": "original"
+      "assigned_order": 333,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 245,
@@ -2455,8 +2699,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.66,
       "pool": "assigned",
-      "assigned_order": 244,
-      "source": "original"
+      "assigned_order": 280,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 246,
@@ -2465,8 +2710,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 285,
-      "source": "original"
+      "assigned_order": 334,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 247,
@@ -2475,8 +2721,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 422,
-      "source": "original"
+      "assigned_order": 460,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 248,
@@ -2485,8 +2732,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 358,
-      "source": "original"
+      "assigned_order": 420,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 249,
@@ -2495,8 +2743,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.76,
       "pool": "assigned",
-      "assigned_order": 195,
-      "source": "original"
+      "assigned_order": 216,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 250,
@@ -2505,8 +2754,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 118,
-      "source": "original"
+      "assigned_order": 148,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 251,
@@ -2515,8 +2765,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 219,
-      "source": "original"
+      "assigned_order": 229,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 252,
@@ -2525,8 +2776,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 359,
-      "source": "original"
+      "assigned_order": 393,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 253,
@@ -2535,8 +2787,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 489,
-      "source": "original"
+      "assigned_order": 265,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 254,
@@ -2545,18 +2798,20 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 288,
-      "source": "original"
+      "assigned_order": 335,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 255,
       "password": "O2380",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.37,
       "pool": "assigned",
-      "assigned_order": 22,
-      "source": "original"
+      "assigned_order": 129,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 256,
@@ -2565,8 +2820,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 289,
-      "source": "original"
+      "assigned_order": 296,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 257,
@@ -2576,7 +2832,8 @@
       "difficulty_score": 1003.5,
       "pool": "roto",
       "assigned_order": null,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 258,
@@ -2585,8 +2842,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.46,
       "pool": "assigned",
-      "assigned_order": 182,
-      "source": "original"
+      "assigned_order": 214,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 259,
@@ -2595,8 +2853,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 290,
-      "source": "original"
+      "assigned_order": 306,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 260,
@@ -2605,18 +2864,20 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 291,
-      "source": "original"
+      "assigned_order": 316,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 261,
       "password": "K2382",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 77,
-      "source": "original"
+      "assigned_order": 164,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 262,
@@ -2626,7 +2887,8 @@
       "difficulty_score": 114.0,
       "pool": "assigned",
       "assigned_order": 440,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 263,
@@ -2635,8 +2897,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.65,
       "pool": "assigned",
-      "assigned_order": 185,
-      "source": "original"
+      "assigned_order": 205,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 264,
@@ -2645,8 +2908,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.03,
       "pool": "assigned",
-      "assigned_order": 420,
-      "source": "original"
+      "assigned_order": 449,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 265,
@@ -2656,17 +2920,19 @@
       "difficulty_score": 111.5,
       "pool": "assigned",
       "assigned_order": 275,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 266,
       "password": "U4447",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 110,
-      "source": "original"
+      "assigned_order": 236,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 267,
@@ -2674,9 +2940,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.1,
-      "pool": "assigned",
-      "assigned_order": 100,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 268,
@@ -2685,8 +2952,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 292,
-      "source": "original"
+      "assigned_order": 326,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 269,
@@ -2695,8 +2963,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 441,
-      "source": "original"
+      "assigned_order": 336,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 270,
@@ -2705,8 +2974,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 293,
-      "source": "original"
+      "assigned_order": 343,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 271,
@@ -2715,8 +2985,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 423,
-      "source": "original"
+      "assigned_order": 471,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 272,
@@ -2725,8 +2996,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 222,
-      "source": "original"
+      "assigned_order": 249,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 273,
@@ -2735,18 +3007,20 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 211,
-      "source": "original"
+      "assigned_order": 218,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 274,
       "password": "Z1926",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.93,
       "pool": "assigned",
-      "assigned_order": 55,
-      "source": "original"
+      "assigned_order": 152,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 275,
@@ -2755,8 +3029,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.78,
       "pool": "assigned",
-      "assigned_order": 159,
-      "source": "original"
+      "assigned_order": 191,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 276,
@@ -2765,8 +3040,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.98,
       "pool": "assigned",
-      "assigned_order": 342,
-      "source": "original"
+      "assigned_order": 121,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 277,
@@ -2775,8 +3051,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.2,
       "pool": "assigned",
-      "assigned_order": 216,
-      "source": "original"
+      "assigned_order": 255,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 278,
@@ -2784,9 +3061,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 17.4,
-      "pool": "assigned",
-      "assigned_order": 481,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 279,
@@ -2795,8 +3073,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.36,
       "pool": "assigned",
-      "assigned_order": 225,
-      "source": "original"
+      "assigned_order": 266,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 280,
@@ -2805,8 +3084,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 446,
-      "source": "original"
+      "assigned_order": 495,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 281,
@@ -2815,18 +3095,20 @@
       "classification": "champion_win",
       "difficulty_score": 10.7,
       "pool": "assigned",
-      "assigned_order": 18,
-      "source": "original"
+      "assigned_order": 408,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 282,
       "password": "R5278",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.63,
       "pool": "assigned",
-      "assigned_order": 88,
-      "source": "original"
+      "assigned_order": 175,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 283,
@@ -2835,8 +3117,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 294,
-      "source": "original"
+      "assigned_order": 344,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 284,
@@ -2845,8 +3128,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 295,
-      "source": "original"
+      "assigned_order": 345,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 285,
@@ -2855,8 +3139,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 296,
-      "source": "original"
+      "assigned_order": 346,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 286,
@@ -2865,8 +3150,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 360,
-      "source": "original"
+      "assigned_order": 373,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 287,
@@ -2875,8 +3161,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 251,
-      "source": "original"
+      "assigned_order": 282,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 288,
@@ -2885,8 +3172,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 84,
-      "source": "original"
+      "assigned_order": 43,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 289,
@@ -2895,8 +3183,9 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 114.0,
       "pool": "assigned",
-      "assigned_order": 451,
-      "source": "original"
+      "assigned_order": 452,
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 290,
@@ -2905,8 +3194,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 299,
-      "source": "original"
+      "assigned_order": 307,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 291,
@@ -2915,8 +3205,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 300,
-      "source": "original"
+      "assigned_order": 317,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 292,
@@ -2925,8 +3216,9 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 114.5,
       "pool": "assigned",
-      "assigned_order": 473,
-      "source": "original"
+      "assigned_order": 476,
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 293,
@@ -2935,8 +3227,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.85,
       "pool": "assigned",
-      "assigned_order": 97,
-      "source": "original"
+      "assigned_order": 107,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 294,
@@ -2945,8 +3238,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 252,
-      "source": "original"
+      "assigned_order": 291,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 295,
@@ -2955,8 +3249,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.6,
       "pool": "assigned",
-      "assigned_order": 496,
-      "source": "original"
+      "assigned_order": 89,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 296,
@@ -2965,8 +3260,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 301,
-      "source": "original"
+      "assigned_order": 327,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 297,
@@ -2975,8 +3271,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.03,
       "pool": "assigned",
-      "assigned_order": 161,
-      "source": "original"
+      "assigned_order": 172,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 298,
@@ -2985,8 +3282,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 302,
-      "source": "original"
+      "assigned_order": 337,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 299,
@@ -2994,9 +3292,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 447,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 300,
@@ -3004,9 +3303,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 448,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 301,
@@ -3015,18 +3315,20 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 212,
-      "source": "original"
+      "assigned_order": 228,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 302,
       "password": "P9090",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 99,
-      "source": "original"
+      "assigned_order": 226,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 303,
@@ -3035,8 +3337,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 452,
-      "source": "original"
+      "assigned_order": 347,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 304,
@@ -3045,8 +3348,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 192,
-      "source": "original"
+      "assigned_order": 225,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 305,
@@ -3055,8 +3359,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 449,
-      "source": "original"
+      "assigned_order": 463,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 306,
@@ -3065,8 +3370,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 406,
-      "source": "original"
+      "assigned_order": 437,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 307,
@@ -3075,8 +3381,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 303,
-      "source": "original"
+      "assigned_order": 354,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 308,
@@ -3085,8 +3392,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 409,
-      "source": "original"
+      "assigned_order": 466,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 309,
@@ -3095,8 +3403,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.0,
       "pool": "assigned",
-      "assigned_order": 504,
-      "source": "original"
+      "assigned_order": 199,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 310,
@@ -3105,8 +3414,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 237,
-      "source": "original"
+      "assigned_order": 279,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 311,
@@ -3114,9 +3424,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.26,
-      "pool": "assigned",
-      "assigned_order": 468,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 312,
@@ -3125,8 +3436,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.5,
       "pool": "assigned",
-      "assigned_order": 254,
-      "source": "original"
+      "assigned_order": 120,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 313,
@@ -3134,9 +3446,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 450,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 314,
@@ -3146,7 +3459,8 @@
       "difficulty_score": 112.0,
       "pool": "assigned",
       "assigned_order": 319,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 315,
@@ -3155,8 +3469,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.4,
       "pool": "assigned",
-      "assigned_order": 119,
-      "source": "original"
+      "assigned_order": 149,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 316,
@@ -3165,8 +3480,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 410,
-      "source": "original"
+      "assigned_order": 448,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 317,
@@ -3175,8 +3491,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.92,
       "pool": "assigned",
-      "assigned_order": 345,
-      "source": "original"
+      "assigned_order": 400,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 318,
@@ -3185,8 +3502,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 424,
-      "source": "original"
+      "assigned_order": 479,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 319,
@@ -3195,8 +3513,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 425,
-      "source": "original"
+      "assigned_order": 480,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 320,
@@ -3206,7 +3525,8 @@
       "difficulty_score": 14.7,
       "pool": "assigned",
       "assigned_order": 186,
-      "source": "original"
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 321,
@@ -3215,8 +3535,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 304,
-      "source": "original"
+      "assigned_order": 355,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 322,
@@ -3226,7 +3547,8 @@
       "difficulty_score": 112.5,
       "pool": "assigned",
       "assigned_order": 363,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 323,
@@ -3235,8 +3557,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 78,
-      "source": "original"
+      "assigned_order": 166,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 324,
@@ -3245,8 +3568,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 305,
-      "source": "original"
+      "assigned_order": 356,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 325,
@@ -3255,8 +3579,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 426,
-      "source": "original"
+      "assigned_order": 481,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 326,
@@ -3266,7 +3591,8 @@
       "difficulty_score": 14.93,
       "pool": "assigned",
       "assigned_order": 197,
-      "source": "original"
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 327,
@@ -3275,8 +3601,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.4,
       "pool": "assigned",
-      "assigned_order": 180,
-      "source": "original"
+      "assigned_order": 204,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 328,
@@ -3285,8 +3612,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 361,
-      "source": "original"
+      "assigned_order": 383,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 329,
@@ -3296,7 +3624,8 @@
       "difficulty_score": 109.0,
       "pool": "assigned",
       "assigned_order": 187,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 330,
@@ -3305,8 +3634,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 362,
-      "source": "original"
+      "assigned_order": 403,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 331,
@@ -3315,8 +3645,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 365,
-      "source": "original"
+      "assigned_order": 413,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 332,
@@ -3325,8 +3656,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.95,
       "pool": "assigned",
-      "assigned_order": 205,
-      "source": "original"
+      "assigned_order": 237,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 333,
@@ -3335,8 +3667,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.63,
       "pool": "assigned",
-      "assigned_order": 175,
-      "source": "original"
+      "assigned_order": 185,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 334,
@@ -3346,7 +3679,8 @@
       "difficulty_score": 113.5,
       "pool": "assigned",
       "assigned_order": 418,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 335,
@@ -3355,8 +3689,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.5,
       "pool": "assigned",
-      "assigned_order": 228,
-      "source": "original"
+      "assigned_order": 230,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 336,
@@ -3365,8 +3700,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 193,
-      "source": "original"
+      "assigned_order": 196,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 337,
@@ -3375,8 +3711,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.7,
       "pool": "assigned",
-      "assigned_order": 38,
-      "source": "original"
+      "assigned_order": 37,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 338,
@@ -3385,8 +3722,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.53,
       "pool": "assigned",
-      "assigned_order": 233,
-      "source": "original"
+      "assigned_order": 268,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 339,
@@ -3395,8 +3733,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 306,
-      "source": "original"
+      "assigned_order": 357,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 340,
@@ -3405,8 +3744,9 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 114.0,
       "pool": "assigned",
-      "assigned_order": 462,
-      "source": "original"
+      "assigned_order": 464,
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 341,
@@ -3415,8 +3755,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 366,
-      "source": "original"
+      "assigned_order": 421,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 342,
@@ -3425,8 +3766,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 427,
-      "source": "original"
+      "assigned_order": 439,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 343,
@@ -3434,9 +3776,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.9,
-      "pool": "assigned",
-      "assigned_order": 480,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 344,
@@ -3445,8 +3788,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 367,
-      "source": "original"
+      "assigned_order": 422,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 345,
@@ -3455,8 +3799,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 238,
-      "source": "original"
+      "assigned_order": 241,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 346,
@@ -3465,8 +3810,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 307,
-      "source": "original"
+      "assigned_order": 338,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 347,
@@ -3475,8 +3821,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 453,
-      "source": "original"
+      "assigned_order": 474,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 348,
@@ -3485,8 +3832,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 310,
-      "source": "original"
+      "assigned_order": 318,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 349,
@@ -3495,8 +3843,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.8,
       "pool": "assigned",
-      "assigned_order": 196,
-      "source": "original"
+      "assigned_order": 233,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 350,
@@ -3505,8 +3854,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 223,
-      "source": "original"
+      "assigned_order": 257,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 351,
@@ -3515,8 +3865,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.0,
       "pool": "assigned",
-      "assigned_order": 485,
-      "source": "original"
+      "assigned_order": 210,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 352,
@@ -3525,8 +3876,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.23,
       "pool": "assigned",
-      "assigned_order": 353,
-      "source": "original"
+      "assigned_order": 132,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 353,
@@ -3535,8 +3887,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 164,
-      "source": "original"
+      "assigned_order": 174,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 354,
@@ -3545,8 +3898,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 311,
-      "source": "original"
+      "assigned_order": 328,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 355,
@@ -3554,9 +3908,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.18,
-      "pool": "assigned",
-      "assigned_order": 459,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 356,
@@ -3565,8 +3920,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.7,
       "pool": "assigned",
-      "assigned_order": 265,
-      "source": "original"
+      "assigned_order": 151,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 357,
@@ -3575,8 +3931,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 411,
-      "source": "original"
+      "assigned_order": 467,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 358,
@@ -3585,8 +3942,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 312,
-      "source": "original"
+      "assigned_order": 348,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 359,
@@ -3595,8 +3953,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 368,
-      "source": "original"
+      "assigned_order": 423,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 360,
@@ -3605,8 +3964,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 369,
-      "source": "original"
+      "assigned_order": 431,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 361,
@@ -3615,18 +3975,20 @@
       "classification": "champion_win",
       "difficulty_score": 13.13,
       "pool": "assigned",
-      "assigned_order": 134,
-      "source": "original"
+      "assigned_order": 147,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 362,
       "password": "R5885",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 15.23,
       "pool": "assigned",
-      "assigned_order": 132,
-      "source": "original"
+      "assigned_order": 256,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 363,
@@ -3635,8 +3997,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 463,
-      "source": "original"
+      "assigned_order": 358,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 364,
@@ -3645,8 +4008,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.43,
       "pool": "assigned",
-      "assigned_order": 227,
-      "source": "original"
+      "assigned_order": 250,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 365,
@@ -3654,9 +4018,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.3,
-      "pool": "assigned",
-      "assigned_order": 70,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 366,
@@ -3665,8 +4030,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 313,
-      "source": "original"
+      "assigned_order": 365,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 367,
@@ -3675,8 +4041,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.35,
       "pool": "assigned",
-      "assigned_order": 173,
-      "source": "original"
+      "assigned_order": 211,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 368,
@@ -3685,8 +4052,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.4,
       "pool": "assigned",
-      "assigned_order": 181,
-      "source": "original"
+      "assigned_order": 213,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 369,
@@ -3695,8 +4063,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.05,
       "pool": "assigned",
-      "assigned_order": 167,
-      "source": "original"
+      "assigned_order": 200,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 370,
@@ -3704,9 +4073,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.18,
-      "pool": "assigned",
-      "assigned_order": 460,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 371,
@@ -3715,8 +4085,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.04,
       "pool": "assigned",
-      "assigned_order": 421,
-      "source": "original"
+      "assigned_order": 478,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 372,
@@ -3725,8 +4096,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.4,
       "pool": "assigned",
-      "assigned_order": 129,
-      "source": "original"
+      "assigned_order": 159,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 373,
@@ -3735,8 +4107,9 @@
       "classification": "champion_win",
       "difficulty_score": 17.84,
       "pool": "assigned",
-      "assigned_order": 483,
-      "source": "original"
+      "assigned_order": 499,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 374,
@@ -3745,8 +4118,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 314,
-      "source": "original"
+      "assigned_order": 366,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 375,
@@ -3755,8 +4129,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 412,
-      "source": "original"
+      "assigned_order": 459,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 376,
@@ -3765,8 +4140,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 315,
-      "source": "original"
+      "assigned_order": 367,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 377,
@@ -3775,18 +4151,20 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 370,
-      "source": "original"
+      "assigned_order": 404,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 378,
       "password": "Z7314",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.9,
       "pool": "assigned",
-      "assigned_order": 201,
-      "source": "original"
+      "assigned_order": 235,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 379,
@@ -3795,8 +4173,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.9,
       "pool": "assigned",
-      "assigned_order": 4,
-      "source": "original"
+      "assigned_order": 2,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 380,
@@ -3805,8 +4184,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 397,
-      "source": "original"
+      "assigned_order": 292,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 381,
@@ -3815,8 +4195,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.4,
       "pool": "assigned",
-      "assigned_order": 226,
-      "source": "original"
+      "assigned_order": 267,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 382,
@@ -3825,8 +4206,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 316,
-      "source": "original"
+      "assigned_order": 368,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 383,
@@ -3835,8 +4217,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 371,
-      "source": "original"
+      "assigned_order": 384,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 384,
@@ -3845,8 +4228,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 454,
-      "source": "original"
+      "assigned_order": 485,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 385,
@@ -3855,8 +4239,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.48,
       "pool": "assigned",
-      "assigned_order": 472,
-      "source": "original"
+      "assigned_order": 487,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 386,
@@ -3865,8 +4250,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 455,
-      "source": "original"
+      "assigned_order": 496,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 387,
@@ -3875,8 +4261,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 372,
-      "source": "original"
+      "assigned_order": 394,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 388,
@@ -3885,8 +4272,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 317,
-      "source": "original"
+      "assigned_order": 349,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 389,
@@ -3895,8 +4283,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 318,
-      "source": "original"
+      "assigned_order": 329,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 390,
@@ -3905,8 +4294,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 428,
-      "source": "original"
+      "assigned_order": 450,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 391,
@@ -3914,9 +4304,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.15,
-      "pool": "assigned",
-      "assigned_order": 456,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 392,
@@ -3924,9 +4315,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.2,
-      "pool": "assigned",
-      "assigned_order": 466,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 393,
@@ -3934,9 +4326,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.7,
-      "pool": "assigned",
-      "assigned_order": 48,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 394,
@@ -3945,8 +4338,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.48,
       "pool": "assigned",
-      "assigned_order": 475,
-      "source": "original"
+      "assigned_order": 498,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 395,
@@ -3954,9 +4348,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.34,
-      "pool": "assigned",
-      "assigned_order": 470,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 396,
@@ -3965,8 +4360,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 321,
-      "source": "original"
+      "assigned_order": 339,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 397,
@@ -3975,8 +4371,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 373,
-      "source": "original"
+      "assigned_order": 414,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 398,
@@ -3985,8 +4382,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 431,
-      "source": "original"
+      "assigned_order": 461,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 399,
@@ -3995,8 +4393,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.93,
       "pool": "assigned",
-      "assigned_order": 348,
-      "source": "original"
+      "assigned_order": 362,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 400,
@@ -4005,8 +4404,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 171,
-      "source": "original"
+      "assigned_order": 202,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 401,
@@ -4015,8 +4415,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.63,
       "pool": "assigned",
-      "assigned_order": 130,
-      "source": "original"
+      "assigned_order": 160,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 402,
@@ -4025,8 +4426,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 474,
-      "source": "original"
+      "assigned_order": 359,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 403,
@@ -4036,7 +4438,8 @@
       "difficulty_score": 113.0,
       "pool": "assigned",
       "assigned_order": 396,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 404,
@@ -4045,8 +4448,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 322,
-      "source": "original"
+      "assigned_order": 369,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 405,
@@ -4056,7 +4460,8 @@
       "difficulty_score": 110.5,
       "pool": "assigned",
       "assigned_order": 231,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 406,
@@ -4065,8 +4470,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 376,
-      "source": "original"
+      "assigned_order": 424,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 407,
@@ -4074,9 +4480,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 9.8,
-      "pool": "assigned",
-      "assigned_order": 501,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 408,
@@ -4085,8 +4492,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.66,
       "pool": "assigned",
-      "assigned_order": 386,
-      "source": "original"
+      "assigned_order": 281,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 409,
@@ -4095,8 +4503,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 377,
-      "source": "original"
+      "assigned_order": 432,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 410,
@@ -4105,8 +4514,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 323,
-      "source": "original"
+      "assigned_order": 376,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 411,
@@ -4115,8 +4525,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 378,
-      "source": "original"
+      "assigned_order": 433,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 412,
@@ -4125,8 +4536,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 413,
-      "source": "original"
+      "assigned_order": 468,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 413,
@@ -4135,8 +4547,9 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 114.5,
       "pool": "assigned",
-      "assigned_order": 484,
-      "source": "original"
+      "assigned_order": 488,
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 414,
@@ -4145,8 +4558,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 379,
-      "source": "original"
+      "assigned_order": 434,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 415,
@@ -4155,8 +4569,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.8,
       "pool": "assigned",
-      "assigned_order": 246,
-      "source": "original"
+      "assigned_order": 289,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 416,
@@ -4165,8 +4580,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 324,
-      "source": "original"
+      "assigned_order": 377,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 417,
@@ -4175,8 +4591,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 239,
-      "source": "original"
+      "assigned_order": 251,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 418,
@@ -4184,9 +4601,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.26,
-      "pool": "assigned",
-      "assigned_order": 469,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 419,
@@ -4195,8 +4613,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 325,
-      "source": "original"
+      "assigned_order": 378,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 420,
@@ -4205,8 +4624,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 432,
-      "source": "original"
+      "assigned_order": 482,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 421,
@@ -4215,8 +4635,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 26,
-      "source": "original"
+      "assigned_order": 276,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 422,
@@ -4225,8 +4646,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.18,
       "pool": "assigned",
-      "assigned_order": 461,
-      "source": "original"
+      "assigned_order": 475,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 423,
@@ -4235,8 +4657,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.06,
       "pool": "assigned",
-      "assigned_order": 214,
-      "source": "original"
+      "assigned_order": 247,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 424,
@@ -4245,8 +4668,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 380,
-      "source": "original"
+      "assigned_order": 442,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 425,
@@ -4255,8 +4679,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 381,
-      "source": "original"
+      "assigned_order": 435,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 426,
@@ -4264,9 +4689,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 17.54,
-      "pool": "assigned",
-      "assigned_order": 482,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 427,
@@ -4275,8 +4701,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.18,
       "pool": "assigned",
-      "assigned_order": 464,
-      "source": "original"
+      "assigned_order": 486,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 428,
@@ -4285,8 +4712,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 382,
-      "source": "original"
+      "assigned_order": 395,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 429,
@@ -4295,8 +4723,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 383,
-      "source": "original"
+      "assigned_order": 405,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 430,
@@ -4305,8 +4734,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 433,
-      "source": "original"
+      "assigned_order": 472,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 431,
@@ -4315,8 +4745,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 414,
-      "source": "original"
+      "assigned_order": 469,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 432,
@@ -4325,8 +4756,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 434,
-      "source": "original"
+      "assigned_order": 483,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 433,
@@ -4335,8 +4767,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 384,
-      "source": "original"
+      "assigned_order": 415,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 434,
@@ -4345,8 +4778,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 387,
-      "source": "original"
+      "assigned_order": 425,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 435,
@@ -4354,9 +4788,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.3,
-      "pool": "assigned",
-      "assigned_order": 491,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 436,
@@ -4365,8 +4800,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 388,
-      "source": "original"
+      "assigned_order": 443,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 437,
@@ -4375,8 +4811,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 435,
-      "source": "original"
+      "assigned_order": 490,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 438,
@@ -4385,8 +4822,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 415,
-      "source": "original"
+      "assigned_order": 470,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 439,
@@ -4394,9 +4832,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.5,
-      "pool": "assigned",
-      "assigned_order": 477,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 440,
@@ -4405,8 +4844,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 326,
-      "source": "original"
+      "assigned_order": 379,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 441,
@@ -4415,8 +4855,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 416,
-      "source": "original"
+      "assigned_order": 428,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 442,
@@ -4425,8 +4866,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 389,
-      "source": "original"
+      "assigned_order": 444,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 443,
@@ -4434,9 +4876,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.4,
-      "pool": "assigned",
-      "assigned_order": 471,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 444,
@@ -4445,8 +4888,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 327,
-      "source": "original"
+      "assigned_order": 380,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 445,
@@ -4455,8 +4899,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 213,
-      "source": "original"
+      "assigned_order": 238,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 446,
@@ -4465,8 +4910,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 328,
-      "source": "original"
+      "assigned_order": 340,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 447,
@@ -4475,8 +4921,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 128,
-      "source": "original"
+      "assigned_order": 158,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 448,
@@ -4485,8 +4932,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.85,
       "pool": "assigned",
-      "assigned_order": 255,
-      "source": "original"
+      "assigned_order": 299,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 449,
@@ -4495,8 +4943,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.1,
       "pool": "assigned",
-      "assigned_order": 6,
-      "source": "original"
+      "assigned_order": 287,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 450,
@@ -4505,8 +4954,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 329,
-      "source": "original"
+      "assigned_order": 350,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 451,
@@ -4515,8 +4965,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 390,
-      "source": "original"
+      "assigned_order": 445,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 452,
@@ -4525,8 +4976,9 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 114.5,
       "pool": "assigned",
-      "assigned_order": 495,
-      "source": "original"
+      "assigned_order": 500,
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 453,
@@ -4535,8 +4987,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 494,
-      "source": "original"
+      "assigned_order": 360,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 454,
@@ -4545,8 +4998,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 332,
-      "source": "original"
+      "assigned_order": 370,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 455,
@@ -4555,8 +5009,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 333,
-      "source": "original"
+      "assigned_order": 387,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 456,
@@ -4565,8 +5020,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 391,
-      "source": "original"
+      "assigned_order": 446,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 457,
@@ -4575,8 +5031,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 202,
-      "source": "original"
+      "assigned_order": 207,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 458,
@@ -4585,8 +5042,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 392,
-      "source": "original"
+      "assigned_order": 454,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 459,
@@ -4594,9 +5052,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.53,
-      "pool": "assigned",
-      "assigned_order": 478,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 460,
@@ -4605,8 +5064,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 417,
-      "source": "original"
+      "assigned_order": 438,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 461,
@@ -4615,8 +5075,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 203,
-      "source": "original"
+      "assigned_order": 217,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 462,
@@ -4625,8 +5086,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 334,
-      "source": "original"
+      "assigned_order": 388,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 463,
@@ -4635,8 +5097,9 @@
       "classification": "champion_win",
       "difficulty_score": 9.8,
       "pool": "assigned",
-      "assigned_order": 24,
-      "source": "original"
+      "assigned_order": 177,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 464,
@@ -4645,8 +5108,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 258,
-      "source": "original"
+      "assigned_order": 263,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 465,
@@ -4655,8 +5119,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 335,
-      "source": "original"
+      "assigned_order": 389,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 466,
@@ -4665,8 +5130,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 393,
-      "source": "original"
+      "assigned_order": 406,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 467,
@@ -4675,8 +5141,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 336,
-      "source": "original"
+      "assigned_order": 390,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 468,
@@ -4685,18 +5152,20 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 394,
-      "source": "original"
+      "assigned_order": 416,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 469,
       "password": "E4799",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.5,
       "pool": "assigned",
-      "assigned_order": 183,
-      "source": "original"
+      "assigned_order": 222,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 470,
@@ -4705,8 +5174,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 395,
-      "source": "original"
+      "assigned_order": 426,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 471,
@@ -4715,8 +5185,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 337,
-      "source": "original"
+      "assigned_order": 391,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 472,
@@ -4725,8 +5196,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 398,
-      "source": "original"
+      "assigned_order": 436,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 473,
@@ -4735,8 +5207,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.7,
       "pool": "assigned",
-      "assigned_order": 245,
-      "source": "original"
+      "assigned_order": 288,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 474,
@@ -4745,8 +5218,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 399,
-      "source": "original"
+      "assigned_order": 455,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 475,
@@ -4755,8 +5229,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 338,
-      "source": "original"
+      "assigned_order": 351,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 476,
@@ -4765,8 +5240,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 339,
-      "source": "original"
+      "assigned_order": 361,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 477,
@@ -4774,9 +5250,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 10.1,
-      "pool": "assigned",
-      "assigned_order": 16,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 478,
@@ -4785,8 +5262,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 505,
-      "source": "original"
+      "assigned_order": 371,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 479,
@@ -4795,8 +5273,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 340,
-      "source": "original"
+      "assigned_order": 381,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 480,
@@ -4805,8 +5284,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 400,
-      "source": "original"
+      "assigned_order": 447,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 481,
@@ -4815,8 +5295,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 224,
-      "source": "original"
+      "assigned_order": 258,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 482,
@@ -4825,8 +5306,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.92,
       "pool": "assigned",
-      "assigned_order": 346,
-      "source": "original"
+      "assigned_order": 401,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 483,
@@ -4835,8 +5317,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.92,
       "pool": "assigned",
-      "assigned_order": 347,
-      "source": "original"
+      "assigned_order": 409,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 484,
@@ -4845,8 +5328,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 240,
-      "source": "original"
+      "assigned_order": 261,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 485,
@@ -4855,8 +5339,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 401,
-      "source": "original"
+      "assigned_order": 456,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 486,
@@ -4865,8 +5350,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.35,
       "pool": "assigned",
-      "assigned_order": 178,
-      "source": "original"
+      "assigned_order": 77,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 487,
@@ -4874,9 +5360,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.15,
-      "pool": "assigned",
-      "assigned_order": 457,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 488,
@@ -4885,8 +5372,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 343,
-      "source": "original"
+      "assigned_order": 398,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 489,
@@ -4895,8 +5383,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 402,
-      "source": "original"
+      "assigned_order": 457,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 490,
@@ -4905,8 +5394,9 @@
       "classification": "champion_win",
       "difficulty_score": 14.61,
       "pool": "assigned",
-      "assigned_order": 184,
-      "source": "original"
+      "assigned_order": 195,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 491,
@@ -4914,9 +5404,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 9.9,
-      "pool": "assigned",
-      "assigned_order": 14,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 492,
@@ -4926,7 +5417,8 @@
       "difficulty_score": 113.5,
       "pool": "assigned",
       "assigned_order": 429,
-      "source": "original"
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 493,
@@ -4935,8 +5427,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 403,
-      "source": "original"
+      "assigned_order": 458,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 494,
@@ -4945,8 +5438,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 344,
-      "source": "original"
+      "assigned_order": 399,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 495,
@@ -4955,8 +5449,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 259,
-      "source": "original"
+      "assigned_order": 273,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 496,
@@ -4965,8 +5460,9 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 436,
-      "source": "original"
+      "assigned_order": 491,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 497,
@@ -4975,8 +5471,9 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 404,
-      "source": "original"
+      "assigned_order": 417,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 498,
@@ -4985,8 +5482,9 @@
       "classification": "champion_win",
       "difficulty_score": 12.43,
       "pool": "assigned",
-      "assigned_order": 95,
-      "source": "original"
+      "assigned_order": 104,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 499,
@@ -4994,9 +5492,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.2,
-      "pool": "assigned",
-      "assigned_order": 467,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 500,
@@ -5004,9 +5503,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.48,
-      "pool": "assigned",
-      "assigned_order": 476,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 501,
@@ -5015,8 +5515,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.6,
       "pool": "assigned",
-      "assigned_order": 492,
-      "source": "original"
+      "assigned_order": 364,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 502,
@@ -5024,9 +5525,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.31,
-      "pool": "assigned",
-      "assigned_order": 155,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 503,
@@ -5035,8 +5537,9 @@
       "classification": "champion_win",
       "difficulty_score": 11.01,
       "pool": "assigned",
-      "assigned_order": 69,
-      "source": "original"
+      "assigned_order": 477,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 504,
@@ -5044,9 +5547,10 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.3,
-      "pool": "assigned",
-      "assigned_order": 90,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 0
     },
     {
       "levelNumber": 505,
@@ -5055,8 +5559,9 @@
       "classification": "champion_win",
       "difficulty_score": 13.8,
       "pool": "assigned",
-      "assigned_order": 160,
-      "source": "original"
+      "assigned_order": 55,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 506,
@@ -5065,8 +5570,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.97,
       "pool": "assigned",
-      "assigned_order": 19,
-      "source": "original"
+      "assigned_order": 453,
+      "source": "original",
+      "tension": 1
     },
     {
       "levelNumber": 507,
@@ -5075,8 +5581,9 @@
       "classification": "champion_win",
       "difficulty_score": 10.2,
       "pool": "assigned",
-      "assigned_order": 46,
-      "source": "original"
+      "assigned_order": 309,
+      "source": "original",
+      "tension": 2
     },
     {
       "levelNumber": 508,
@@ -5084,9 +5591,10 @@
       "isHard": true,
       "classification": "solved_by_search_only",
       "difficulty_score": 122.5,
-      "pool": "assigned",
-      "assigned_order": 506,
-      "source": "original"
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": null
     },
     {
       "levelNumber": 509,
@@ -5095,8 +5603,911 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 137,
-      "source": "original"
+      "assigned_order": 168,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 510,
+      "password": "V3164",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 13.15,
+      "pool": "assigned",
+      "assigned_order": 98,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 511,
+      "password": "Z2313",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 13.2,
+      "pool": "assigned",
+      "assigned_order": 22,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 512,
+      "password": "R0365",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 513,
+      "password": "B9467",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "assigned",
+      "assigned_order": 26,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 514,
+      "password": "D3001",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.23,
+      "pool": "assigned",
+      "assigned_order": 59,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 515,
+      "password": "X4987",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 516,
+      "password": "Q4327",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "assigned",
+      "assigned_order": 6,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 517,
+      "password": "O2801",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.83,
+      "pool": "assigned",
+      "assigned_order": 51,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 518,
+      "password": "H8145",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.87,
+      "pool": "assigned",
+      "assigned_order": 71,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 519,
+      "password": "R0745",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 520,
+      "password": "W3929",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 521,
+      "password": "C6000",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.17,
+      "pool": "assigned",
+      "assigned_order": 53,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 522,
+      "password": "U7012",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.4,
+      "pool": "assigned",
+      "assigned_order": 30,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 523,
+      "password": "J8761",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 524,
+      "password": "D8217",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.57,
+      "pool": "assigned",
+      "assigned_order": 90,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 525,
+      "password": "R2311",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.8,
+      "pool": "assigned",
+      "assigned_order": 126,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 526,
+      "password": "K5792",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "assigned",
+      "assigned_order": 16,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 527,
+      "password": "V6980",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 528,
+      "password": "A2812",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.5,
+      "pool": "assigned",
+      "assigned_order": 20,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 529,
+      "password": "T2584",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.17,
+      "pool": "assigned",
+      "assigned_order": 63,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 530,
+      "password": "Y5431",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.87,
+      "pool": "assigned",
+      "assigned_order": 91,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 531,
+      "password": "G4005",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.2,
+      "pool": "assigned",
+      "assigned_order": 19,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 532,
+      "password": "D7660",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.81,
+      "pool": "assigned",
+      "assigned_order": 127,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 533,
+      "password": "K1397",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "pool": "assigned",
+      "assigned_order": 68,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 534,
+      "password": "C5095",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 535,
+      "password": "T5052",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.21,
+      "pool": "assigned",
+      "assigned_order": 113,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 536,
+      "password": "K3096",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.47,
+      "pool": "assigned",
+      "assigned_order": 134,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 537,
+      "password": "U8144",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.53,
+      "pool": "assigned",
+      "assigned_order": 40,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 538,
+      "password": "F7799",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 539,
+      "password": "K2309",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "assigned",
+      "assigned_order": 36,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 540,
+      "password": "P4353",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 541,
+      "password": "Q6721",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.47,
+      "pool": "assigned",
+      "assigned_order": 125,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 542,
+      "password": "X0245",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.51,
+      "pool": "assigned",
+      "assigned_order": 95,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 543,
+      "password": "R3465",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.6,
+      "pool": "assigned",
+      "assigned_order": 81,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 544,
+      "password": "Z5539",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.27,
+      "pool": "assigned",
+      "assigned_order": 79,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 545,
+      "password": "O6945",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.77,
+      "pool": "assigned",
+      "assigned_order": 106,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 546,
+      "password": "A8447",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.51,
+      "pool": "assigned",
+      "assigned_order": 105,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 547,
+      "password": "U2863",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.13,
+      "pool": "assigned",
+      "assigned_order": 62,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 548,
+      "password": "Z2731",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.51,
+      "pool": "assigned",
+      "assigned_order": 115,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 549,
+      "password": "F7431",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.87,
+      "pool": "assigned",
+      "assigned_order": 101,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 550,
+      "password": "G3590",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.4,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 551,
+      "password": "G3193",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.21,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 552,
+      "password": "A3575",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "assigned",
+      "assigned_order": 46,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 553,
+      "password": "M2454",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.2,
+      "pool": "assigned",
+      "assigned_order": 73,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 554,
+      "password": "G7427",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 555,
+      "password": "M2119",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.77,
+      "pool": "assigned",
+      "assigned_order": 116,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 556,
+      "password": "W1767",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.1,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 557,
+      "password": "Q5954",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.4,
+      "pool": "assigned",
+      "assigned_order": 10,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 558,
+      "password": "M7052",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 12.21,
+      "pool": "assigned",
+      "assigned_order": 94,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 559,
+      "password": "V0701",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "pool": "assigned",
+      "assigned_order": 28,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 560,
+      "password": "P7631",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "pool": "assigned",
+      "assigned_order": 8,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 561,
+      "password": "B3950",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "pool": "assigned",
+      "assigned_order": 18,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 562,
+      "password": "N6210",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.4,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 563,
+      "password": "L1373",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.8,
+      "pool": "assigned",
+      "assigned_order": 57,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 564,
+      "password": "P8024",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.8,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 565,
+      "password": "R7010",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 566,
+      "password": "B1336",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 567,
+      "password": "E0883",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "pool": "assigned",
+      "assigned_order": 27,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 568,
+      "password": "E3588",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.27,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 569,
+      "password": "W6303",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "assigned",
+      "assigned_order": 25,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 570,
+      "password": "D4649",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.93,
+      "pool": "assigned",
+      "assigned_order": 48,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 571,
+      "password": "B3599",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.9,
+      "pool": "assigned",
+      "assigned_order": 38,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 572,
+      "password": "D6065",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "pool": "assigned",
+      "assigned_order": 7,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 573,
+      "password": "N8211",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.5,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 574,
+      "password": "O3377",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 11.1,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 575,
+      "password": "J9896",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.6,
+      "pool": "assigned",
+      "assigned_order": 17,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 576,
+      "password": "D5846",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 577,
+      "password": "X0174",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 578,
+      "password": "T2327",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 579,
+      "password": "Z7952",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "assigned",
+      "assigned_order": 24,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 580,
+      "password": "S8419",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "assigned",
+      "assigned_order": 5,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 581,
+      "password": "I2913",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "assigned",
+      "assigned_order": 4,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 582,
+      "password": "R3067",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 583,
+      "password": "W9688",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 584,
+      "password": "Y7442",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "assigned",
+      "assigned_order": 15,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 585,
+      "password": "Q1016",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.0,
+      "pool": "assigned",
+      "assigned_order": 3,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 586,
+      "password": "R4237",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "assigned",
+      "assigned_order": 14,
+      "source": "original",
+      "tension": 1
+    },
+    {
+      "levelNumber": 587,
+      "password": "L7717",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "assigned",
+      "assigned_order": 35,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 588,
+      "password": "H1998",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 589,
+      "password": "F3169",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 590,
+      "password": "R4836",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.2,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
+    },
+    {
+      "levelNumber": 591,
+      "password": "O8301",
+      "isHard": false,
+      "classification": "champion_win",
+      "difficulty_score": 10.3,
+      "pool": "ready",
+      "assigned_order": null,
+      "source": "original",
+      "tension": 2
     }
   ]
 }

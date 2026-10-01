@@ -9,6 +9,11 @@ in Candy-Crush-style difficulty arcs (see project memory
   - Later peaks are `solved_by_search_only` levels (the trained AI can't
     win them — real spikes); only a spread sample is used, not all.
   - Ranking uses the audit's difficulty_score as-is. No new tier system.
+  - Quality (2026-09-30): arc bodies and peaks must pass the pacing gate
+    and, for champion wins, have tension (a pirate got past the first row).
+    Levels that don't are only used as breathers — never as bodies — and
+    the rest wait in reserve. Before, 45 of positions 1-104 were such
+    "nothing happens" levels: exactly the first minutes a new player sees.
 
 Two modes, both deterministic (same manifest in -> same order out):
   - curate(): the FIRST release (200). `python -m verification.curate_release`
@@ -30,7 +35,9 @@ import sys
 from datetime import datetime, timezone
 
 import config
+from sim.level import Level
 from verification.official_levels import load_all
+from verification.pacing import pacing_report
 
 MANIFEST_PATH = config.ROOT / "reports" / "campaign_manifest.json"
 OUT_PATH = config.ROOT / "reports" / "release_order.json"
@@ -50,6 +57,13 @@ BODY_SPAN = 0.15
 BREATHER_DROP = 0.10
 PEAK_JUMP = 0.30
 
+# A whole-campaign rebuild ships a multiple of this many levels, the same
+# batch size verification/release_gate.py enforces for deploys.
+RELEASE_STEP = 100
+# Minimum tension for an arc body: the furthest row a pirate reached while
+# the champion won (manifest "tension", 0..2). 0 = never threatened.
+MIN_TENSION = 1
+
 
 def _arc_sizes(total: int, arc_count: int) -> list[int]:
     # e.g. 200/18 = 16 arcs of 11 + 2 of 12; the longer arcs go last.
@@ -57,9 +71,47 @@ def _arc_sizes(total: int, arc_count: int) -> list[int]:
     return [base + (1 if i >= arc_count - extra else 0) for i in range(arc_count)]
 
 
+_LEVELS: dict[int, Level] | None = None
+
+
+def _levels_by_number() -> dict[int, Level]:
+    # parsed once per run: shapes and pacing both need every asset
+    global _LEVELS
+    if _LEVELS is None:
+        _LEVELS = {lvl.levelNumber: lvl
+                   for lvl in load_all(config.CANNONS_REPO / "Assets" / "Levels")}
+    return _LEVELS
+
+
 def _shapes_by_level_number() -> dict[int, str]:
-    return {lvl.levelNumber: lvl.shape_signature()
-            for lvl in load_all(config.CANNONS_REPO / "Assets" / "Levels")}
+    return {n: lvl.shape_signature() for n, lvl in _levels_by_number().items()}
+
+
+def _passes_pacing(e: dict) -> bool:
+    lvl = _levels_by_number().get(e["levelNumber"])
+    if lvl is None:
+        # manifest and assets disagree — fail loudly instead of guessing
+        raise RuntimeError(f"level {e['levelNumber']} is in the manifest but has no .asset")
+    return pacing_report(lvl).ok
+
+
+def _is_body_quality(e: dict) -> bool:
+    """True if the level may be an arc body/peak: pacing gate passes and,
+    when the champion won it, a pirate actually threatened the player.
+    Unknown tension (level not audited yet) counts on pacing alone."""
+    if not _passes_pacing(e):
+        return False
+    tension = e.get("tension")
+    return tension is None or tension >= MIN_TENSION
+
+
+def _split_quality(champions: list[dict], keep: set[int] = frozenset()) -> tuple[list[dict], list[dict]]:
+    """(strong, weak) champion levels. `keep` levelNumbers (the intro) are
+    always strong so they stay pickable."""
+    strong, weak = [], []
+    for e in champions:
+        (strong if e["levelNumber"] in keep or _is_body_quality(e) else weak).append(e)
+    return strong, weak
 
 
 def _dedupe_by_shape(entries: list[dict], taken_shapes: set[str] | None = None
@@ -91,6 +143,9 @@ class _Picker:
     def __init__(self, entries: list[dict]):
         self.sorted = sorted(entries, key=lambda e: (e["difficulty_score"], e["levelNumber"]))
         self.used: set[int] = set()
+
+    def remaining(self) -> int:
+        return sum(1 for e in self.sorted if e["levelNumber"] not in self.used)
 
     def take(self, pct: float) -> dict:
         n = len(self.sorted)
@@ -143,12 +198,17 @@ def _entry(e: dict, role: str, arc: int) -> dict:
 
 
 def _build_arcs(champions: list[dict], search_peaks: list[dict], sizes: list[int],
-                first_search_peak_arc: int, intro_level: int | None, arc_offset: int) -> list[dict]:
+                first_search_peak_arc: int, intro_level: int | None, arc_offset: int,
+                breathers: list[dict] | None = None) -> list[dict]:
     """Core arc builder shared by curate() and extend(). Arcs k >=
     first_search_peak_arc take search_peaks in order as their peak; the rest
-    get a champion peak. Returns order entries (without the `order` number)."""
+    get a champion peak. `breathers`: optional separate pool (weak levels)
+    that openers are drawn from first; `champions` then fills bodies/peaks
+    and any opener the breather pool runs out for. Returns order entries
+    (without the `order` number)."""
     arc_count = len(sizes)
     picker = _Picker(champions)
+    breather_picker = _Picker(breathers) if breathers else None
     if intro_level is not None:
         picker.take_specific(intro_level)  # reserve it before anything else grabs it
 
@@ -170,6 +230,10 @@ def _build_arcs(champions: list[dict], search_peaks: list[dict], sizes: list[int
         if arc["k"] == 0 and intro_level is not None:
             arc["opener"] = next(e for e in champions if e["levelNumber"] == intro_level)
             arc["opener_role"] = "intro"
+        elif breather_picker is not None and breather_picker.remaining():
+            arc["opener"] = breather_picker.take(arc["breather_t"])
+            arc["opener_role"] = "breather"
+            arc["weak_opener"] = True  # must never be swapped into the body
         else:
             arc["opener"] = picker.take(arc["breather_t"])
             arc["opener_role"] = "breather"
@@ -182,7 +246,8 @@ def _build_arcs(champions: list[dict], search_peaks: list[dict], sizes: list[int
         picks.sort(key=lambda e: (e["difficulty_score"], e["levelNumber"]))
         # A breather must never be harder than the level after it; if the
         # picker's fallback made it so, swap it with the easiest body level.
-        if picks and arc["opener_role"] == "breather" and \
+        # (Not for weak openers: swapping would put a weak level in the body.)
+        if picks and arc["opener_role"] == "breather" and not arc.get("weak_opener") and \
                 arc["opener"]["difficulty_score"] > picks[0]["difficulty_score"]:
             arc["opener"], picks[0] = picks[0], arc["opener"]
             picks.sort(key=lambda e: (e["difficulty_score"], e["levelNumber"]))
@@ -265,6 +330,9 @@ def extend(manifest: dict, existing_order: list[dict], count: int, allow_fewer: 
     ready = [e for e in manifest["levels"] if e["pool"] == "ready" and e["levelNumber"] not in assigned]
     ready, dup_dropped = _dedupe_by_shape(ready, taken_shapes)
     champions, searches = _split_pool(ready)
+    # weak levels never go into a new batch (they'd be bodies); they stay in reserve
+    champions, weak = _split_quality(champions)
+    searches = [e for e in searches if _passes_pacing(e)]
 
     last_order = max((o["order"] for o in existing_order), default=0)
     last_arc = max((o["arc"] for o in existing_order), default=0)
@@ -277,7 +345,8 @@ def extend(manifest: dict, existing_order: list[dict], count: int, allow_fewer: 
             raise NotEnoughLevels(
                 f"asked for {count} new levels but the ready pool can only fill {capacity} "
                 f"({len(champions)} champion_win + {len(searches)} solved_by_search_only usable "
-                f"only as arc peaks, {len(dup_dropped)} excluded as reskins). Add more levels "
+                f"only as arc peaks, {len(dup_dropped)} excluded as reskins, {len(weak)} weak "
+                f"— failing pacing or never threatening the player — left out). Add more levels "
                 f"first, or pass --allow-fewer to add {capacity}.")
         count = capacity
 
@@ -352,7 +421,7 @@ def save(manifest: dict, full_order: list[dict], stats: dict, batch_size: int) -
     return counts
 
 
-def rebuild_all(manifest: dict) -> tuple[list[dict], dict]:
+def rebuild_all(manifest: dict, size: int | None = None) -> tuple[list[dict], dict]:
     """EVERY winnable, non-duplicate level, re-ordered from scratch in arcs
     (2026-09-24, user: "dejemos atrás los 200 escogidos, júntalos de nuevo"
     after verification/regulator.py reworked the whole campaign). Same arc
@@ -361,28 +430,83 @@ def rebuild_all(manifest: dict) -> tuple[list[dict], dict]:
     back-to-back solver-only levels isn't playable).
 
     Only valid BEFORE the game is published: it moves levels between
-    positions, which would point saved progress at different levels."""
+    positions, which would point saved progress at different levels.
+
+    Since 2026-09-30: weak levels (see _is_body_quality) are only breathers,
+    and the campaign size is `size`, or by default the largest multiple of
+    RELEASE_STEP the pool can fill — leftovers stay in reserve for later
+    batches."""
     pool = [e for e in manifest["levels"] if e["pool"] in ("ready", "assigned")]
     pool, dup_dropped = _dedupe_by_shape(pool)
     champions, searches = _split_pool(pool)
-    arc_count = max(1, round((len(champions) + len(searches)) / ARC_SIZE))
-    first_search_arc = max(arc_count // 4, arc_count - len(searches))
-    search_peaks = _sample_evenly(searches, arc_count - first_search_arc)
-    total = len(champions) + len(search_peaks)
+    strong, weak = _split_quality(champions, keep={INTRO_LEVEL})
+    # search-only levels are peaks: same pacing gate (Level 508, 18 rounds, was the campaign finale)
+    searches = [e for e in searches if _passes_pacing(e)]
 
-    order = _build_arcs(champions, search_peaks, _arc_sizes(total, arc_count),
-                        first_search_arc, INTRO_LEVEL, arc_offset=0)
+    if size is None:
+        size = _largest_release(len(strong), len(weak), len(searches))
+    arc_count, first_search_arc = _arc_plan(size, len(searches))
+    capacity = _rebuild_capacity(size, len(strong), len(weak), len(searches))
+    if capacity < size:
+        raise NotEnoughLevels(
+            f"campaign of {size} needs more levels: {len(strong)} strong champion_win, "
+            f"{len(weak)} weak (breathers only), {len(searches)} search-only (peaks only) "
+            f"fill {capacity}. Generate more (production.batch_generator) or pass a smaller --size.")
+
+    search_peaks = _sample_evenly(searches, arc_count - first_search_arc)
+    order = _build_arcs(strong, search_peaks, _arc_sizes(size, arc_count),
+                        first_search_arc, INTRO_LEVEL, arc_offset=0, breathers=weak)
     for i, o in enumerate(order):
         o["order"] = i + 1
-    _check_unique(order, total)
+    _check_unique(order, size)
 
     chosen = {o["levelNumber"] for o in order}
     stats = {
         "duplicate_shapes_excluded": dup_dropped,
         "search_only_used": [p["levelNumber"] for p in search_peaks],
+        "weak_left_out": sorted(e["levelNumber"] for e in weak if e["levelNumber"] not in chosen),
         "reserve": sorted(e["levelNumber"] for e in pool if e["levelNumber"] not in chosen),
     }
     return order, stats
+
+
+def _arc_plan(size: int, n_searches: int) -> tuple[int, int]:
+    """(arc_count, first arc whose peak is a search-only level)."""
+    arc_count = max(1, round(size / ARC_SIZE))
+    return arc_count, max(arc_count // 4, arc_count - n_searches)
+
+
+def _rebuild_capacity(size: int, n_strong: int, n_weak: int, n_searches: int) -> int:
+    """How many of `size` positions the pool can fill: search-only only as
+    peaks, weak only as breathers (arc 1 opens with the intro, a strong one),
+    strong anywhere."""
+    arc_count, first_search_arc = _arc_plan(size, n_searches)
+    n_search_peaks = arc_count - first_search_arc
+    n_weak_breathers = min(n_weak, arc_count - 1)
+    return min(size, n_strong + n_weak_breathers + n_search_peaks)
+
+
+def _largest_release(n_strong: int, n_weak: int, n_searches: int) -> int:
+    top = (n_strong + n_weak + n_searches) // RELEASE_STEP * RELEASE_STEP
+    for size in range(top, 0, -RELEASE_STEP):
+        if _rebuild_capacity(size, n_strong, n_weak, n_searches) >= size:
+            return size
+    raise NotEnoughLevels(f"pool can't fill even {RELEASE_STEP} levels "
+                          f"({n_strong} strong, {n_weak} weak, {n_searches} search-only)")
+
+
+def _size_arg() -> int | None:
+    """--size N for --rebuild-all (default: largest multiple of RELEASE_STEP)."""
+    if "--size" not in sys.argv:
+        return None
+    i = sys.argv.index("--size")
+    try:
+        size = int(sys.argv[i + 1])
+    except (IndexError, ValueError):
+        raise SystemExit("--size needs a whole number, e.g. --size 500")
+    if size < 1:
+        raise SystemExit("--size must be >= 1")
+    return size
 
 
 def main() -> None:
@@ -392,13 +516,13 @@ def main() -> None:
         for e in manifest["levels"]:
             if e["pool"] == "assigned":
                 e["pool"], e["assigned_order"] = "ready", None
-        order, stats = rebuild_all(manifest)
+        order, stats = rebuild_all(manifest, _size_arg())
         if OUT_PATH.exists():
             OUT_PATH.unlink()
         counts = save(manifest, order, stats, batch_size=len(order))
         print(f"Campaign rebuilt: {len(order)} levels in {order[-1]['arc']} arcs. Pools: {counts}")
         print(f"  duplicate shapes excluded: {len(stats['duplicate_shapes_excluded'])}, "
-              f"reserve: {len(stats['reserve'])}")
+              f"weak left out: {len(stats['weak_left_out'])}, reserve: {len(stats['reserve'])}")
         return
 
     already = [e for e in manifest["levels"] if e["pool"] == "assigned"]

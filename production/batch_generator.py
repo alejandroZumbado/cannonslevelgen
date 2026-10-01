@@ -1,7 +1,11 @@
 """Generates a BATCH of new levels locally — no LLM, no tokens, no cost —
 for the next release extension (e.g. 100 levels at once).
 
-    python -m production.batch_generator --count 100 [--seed 7] [--dry-run]
+    python -m production.batch_generator --count 100 [--seed 7] [--dry-run] [--profile early]
+
+`--profile early` (2026-09-30): short, EASY but tense levels for the start of
+the campaign (arc openers/bodies of the first ~100 positions), where the old
+easy levels were "nothing happens" ones — see verification/curate_release.
 
 Why: the daily LLM generator makes ~1 level/day, and the ready reserve
 only covers ~20 more release slots. This fills the gap with procedurally
@@ -71,6 +75,17 @@ HARD_SCORE = 16.0  # champion levels at/above this are flagged isHard (hard-leve
 VARIETY_CAP = 0.35
 VARIETY_MIN_SAMPLE = 10
 
+# Early profile: champion-win difficulty bins for the first ~100 positions
+# (the curated start sits around 9.5-13), no search-only spikes, and every
+# level must actually threaten the player (MIN_TENSION, same as curation).
+EARLY_SCORE_BINS: list[tuple[float, float, float]] = [
+    (0.0, 10.5, 0.35),
+    (10.5, 11.5, 0.35),
+    (11.5, 13.0, 0.30),
+]
+MIN_TENSION = 1           # a pirate must get past the first row (audit champion_max_position_reached)
+MERGE_LESSON_SHARE = 0.25  # early levels with one HP-4 pirate late: needs one merge (base damage 1, 3 shots)
+
 
 def _draw_candidate(rng: random.Random) -> Level:
     """One random level. `t` in [0,1] pushes rounds, pirates per round and HP
@@ -96,23 +111,46 @@ def _draw_candidate(rng: random.Random) -> Level:
     return Level(levelNumber=0, password="", isHard=False, filas=filas)
 
 
+def _draw_early_candidate(rng: random.Random) -> Level:
+    """One short, easy level: 4-7 rounds, 1-3 pirates per round ramping up,
+    HP mostly 1-2. A MERGE_LESSON_SHARE of them put one HP-4 pirate in the
+    last third, so the merge mechanic is taught early instead of at ~11."""
+    n_filas = rng.randint(4, 7)
+    filas = []
+    for i in range(n_filas):
+        p = i / max(n_filas - 1, 1)
+        n_pirates = rng.choices([1, 2, 3], weights=[3 - 2 * p, 3, 0.5 + 2 * p])[0]
+        cols = rng.sample(range(5), k=n_pirates)
+        cuadros = [Cuadro(index=c, tipo=rng.choice([1, 2, 3]),
+                          hp=1 + rng.choices([0, 1, 2], weights=[6, 3, 0.6])[0])
+                   for c in cols]
+        filas.append(Fila(cuadros=cuadros))
+    if rng.random() < MERGE_LESSON_SHARE:
+        late = filas[rng.randint(max(0, n_filas - 1 - n_filas // 3), n_filas - 1)]
+        rng.choice(late.cuadros).hp = 4
+    rng.choice(filas[-1].cuadros).tipo = 4
+    return Level(levelNumber=0, password="", isHard=False, filas=filas)
+
+
 def _random_password(rng: random.Random) -> str:
     return f"{chr(rng.randint(65, 90))}{rng.randint(0, 9999):04d}"
 
 
-def _bin_of(score: float) -> int:
-    for i, (lo, hi, _) in enumerate(SCORE_BINS):
+def _bin_of(score: float, bins: list[tuple[float, float, float]]) -> int | None:
+    """Index of the bin `score` falls in; None if outside every bin (early
+    profile: harder than its top bin = not an early level)."""
+    for i, (lo, hi, _) in enumerate(bins):
         if lo <= score < hi:
             return i
-    return len(SCORE_BINS) - 1
+    return None
 
 
-def _quotas(count: int) -> tuple[list[int], int]:
+def _quotas(count: int, bins: list[tuple[float, float, float]], spikes: bool) -> tuple[list[int], int]:
     """(champion quota per bin, search-only quota). Rounding leftovers go to
     the hardest bins."""
-    n_search = max(1, round(count / ARC_SIZE)) if count >= 3 else 0
+    n_search = max(1, round(count / ARC_SIZE)) if spikes and count >= 3 else 0
     n_champ = count - n_search
-    per_bin = [int(n_champ * share) for _, _, share in SCORE_BINS]
+    per_bin = [int(n_champ * share) for _, _, share in bins]
     i = len(per_bin) - 1
     while sum(per_bin) < n_champ:
         per_bin[i] += 1
@@ -131,22 +169,26 @@ def _over_variety_cap(primary: str | None, counts: Counter, n_accepted: int) -> 
 
 
 def generate_batch(count: int, seed: int, first_number: int, used_passwords: set[str],
-                   existing_signatures: set[str]) -> tuple[list[tuple[Level, dict]], dict]:
+                   existing_signatures: set[str], profile: str = "standard"
+                   ) -> tuple[list[tuple[Level, dict]], dict]:
+    early = profile == "early"
+    bins = EARLY_SCORE_BINS if early else SCORE_BINS
+    draw = _draw_early_candidate if early else _draw_candidate
     rng = random.Random(seed)
     champion = load_policy_from_file(CURRENT_POLICY_PATH)
-    bin_quota, search_quota = _quotas(count)
-    bin_filled = [0] * len(SCORE_BINS)
+    bin_quota, search_quota = _quotas(count, bins, spikes=not early)
+    bin_filled = [0] * len(bins)
     search_filled = 0
     accepted: list[tuple[Level, dict]] = []
     seen = set(existing_signatures)
     stats = {"attempts": 0, "reskin": 0, "pacing": 0, "variety": 0, "bin_full": 0,
-             "champion_lost": 0, "unwinnable": 0}
+             "champion_lost": 0, "unwinnable": 0, "no_tension": 0, "too_hard": 0}
     archetype_counts: Counter[str] = Counter()
     max_attempts = count * MAX_ATTEMPTS_PER_LEVEL
 
     while len(accepted) < count and stats["attempts"] < max_attempts:
         stats["attempts"] += 1
-        level = _draw_candidate(rng)
+        level = draw(rng)
         sig = level.shape_signature()
         if sig in seen:
             stats["reskin"] += 1
@@ -171,7 +213,13 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
 
         report = audit_level(level, champion, ESCALATION_BEAM_WIDTHS, DEFAULT_MAX_ROUNDS)
         if report.classification == "champion_win":
-            b = _bin_of(report.difficulty_score)
+            if early and report.champion_max_position_reached < MIN_TENSION:
+                stats["no_tension"] += 1  # the player is never threatened: boring, not easy
+                continue
+            b = _bin_of(report.difficulty_score, bins)
+            if b is None:
+                stats["too_hard"] += 1
+                continue
             if bin_filled[b] >= bin_quota[b]:
                 stats["bin_full"] += 1
                 continue
@@ -195,7 +243,7 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
         if len(accepted) % 10 == 0:
             print(f"  {len(accepted)}/{count} accepted after {stats['attempts']} candidates")
 
-    stats.update({"archetypes": dict(archetype_counts), "bin_quota": bin_quota, "bin_filled": bin_filled,
+    stats.update({"profile": profile, "archetypes": dict(archetype_counts), "bin_quota": bin_quota, "bin_filled": bin_filled,
                   "search_quota": search_quota, "search_filled": search_filled})
     return accepted, stats
 
@@ -206,6 +254,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--seed", type=int, default=None,
                         help="random seed (default: next level number, so re-runs differ per batch)")
     parser.add_argument("--dry-run", action="store_true", help="generate and report, write nothing")
+    parser.add_argument("--profile", choices=["standard", "early"], default="standard",
+                        help="early = short easy-but-tense levels for the campaign start")
     args = parser.parse_args(argv)
     if args.count < 1:
         parser.error("--count must be >= 1")
@@ -222,7 +272,8 @@ def main(argv: list[str] | None = None) -> int:
           f"{len(signatures)} existing shapes to avoid.")
 
     started = time.time()
-    accepted, stats = generate_batch(args.count, seed, first_number, used_passwords, signatures)
+    accepted, stats = generate_batch(args.count, seed, first_number, used_passwords, signatures,
+                                     profile=args.profile)
     elapsed = round(time.time() - started, 1)
     print(f"Accepted {len(accepted)}/{args.count} in {elapsed}s — {stats}")
 
