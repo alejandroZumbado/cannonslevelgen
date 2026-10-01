@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01T02:02:51+00:00",
+ "generated_at": "2026-10-01T02:25:19+00:00",
  "levels": {
   "count": 500,
   "classifications": {
@@ -9,17 +9,17 @@
   "pacing_failures": 44
  },
  "batches": {
-  "deployed": 200,
+  "deployed": 500,
   "current": 500,
-  "new": 300,
-  "moved_positions": 196,
-  "deployed_at": "2026-09-23T09:19:49-06:00",
-  "snapshot_derived": true
+  "new": 0,
+  "moved_positions": 0,
+  "deployed_at": "2026-10-01T02:05:53+00:00",
+  "snapshot_derived": false
  },
  "build": {
-  "built_at": "2026-09-23T09:19:49-06:00",
+  "built_at": "2026-09-30T20:05:41-06:00",
   "levels_changed_at": "2026-10-01T01:45:18+00:00",
-  "stale": true
+  "stale": false
  },
  "live": null,
  "pipeline": null,
@@ -31,7 +31,7 @@
   "reserve_pacing_ok": 58,
   "weeks_to_next_batch_from_daily_bot": 12.0
  },
- "verdict": "GO",
+ "verdict": "HOLD",
  "findings": [
   {
    "severity": "warning",
@@ -39,14 +39,9 @@
    "message": "44 release levels fail the pacing gate (breathers are expected to), e.g. [5, 8, 127, 169, 29, 43, 71, 295]"
   },
   {
-   "severity": "warning",
+   "severity": "hold",
    "section": "batches",
-   "message": "196 of 200 already-deployed positions changed level (first: position 2) — players' saved progress would point elsewhere (allowed only because the game isn't published)"
-  },
-  {
-   "severity": "warning",
-   "section": "live",
-   "message": "live WebGL built 2026-09-23 09:19 but levels changed 2026-10-01 01:45 — site serves the old campaign"
+   "message": "nothing new to ship since the last deploy"
   },
   {
    "severity": "warning",
