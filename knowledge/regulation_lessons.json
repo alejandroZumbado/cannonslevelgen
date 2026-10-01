@@ -1265,5 +1265,12 @@
   "note": "Design note: The level introduces a few high‑HP “tank” pirates that force the player to pre‑merge cannons in their columns early, while keeping the overall pressure balanced and escalating toward the ",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:13:51+00:00",
+  "target": "tank",
+  "note": "Design note: Introduces three high‑HP “tank” pirates (HP 6‑8) that require the player to pre‑merge cannons in their columns early, while keeping overall pressure balanced and escalating toward the end",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
