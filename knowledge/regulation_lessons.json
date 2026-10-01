@@ -1363,5 +1363,12 @@
   "note": "Design note: Flood column 0 with a series of 1‑HP pirates so the player can repeatedly place cannons there, each merge increasing damage by 1, then unleash a 4‑HP “tank” in that column that can be sla",
   "success": true,
   "reason": "fitness 989 -> 990, archetype crescendo"
+ },
+ {
+  "at": "2026-10-01T06:18:38+00:00",
+  "target": "tank",
+  "note": "Design note: Early three rows flood column 2 with 1‑HP pirates so the player can merge twice and build a 4‑damage cannon, then a HP‑8 “tank” appears in that column while other modest pirates keep pres",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
