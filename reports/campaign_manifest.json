@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-01T00:09:20+00:00",
-  "based_on_audit": "2026-10-01T00:08:20+00:00",
+  "generated_at": "2026-10-01T01:45:08+00:00",
+  "based_on_audit": "2026-10-01T01:45:03+00:00",
   "total_levels": 591,
   "counts": {
     "assigned": 500,
@@ -81,7 +81,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.23,
       "pool": "assigned",
-      "assigned_order": 39,
+      "assigned_order": 59,
       "source": "original",
       "tension": 2
     },
@@ -147,7 +147,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.81,
       "pool": "assigned",
-      "assigned_order": 146,
+      "assigned_order": 97,
       "source": "original",
       "tension": 2
     },
@@ -191,7 +191,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.85,
       "pool": "assigned",
-      "assigned_order": 87,
+      "assigned_order": 137,
       "source": "original",
       "tension": 2
     },
@@ -213,7 +213,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 82,
+      "assigned_order": 112,
       "source": "original",
       "tension": 2
     },
@@ -312,7 +312,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 72,
+      "assigned_order": 42,
       "source": "original",
       "tension": 2
     },
@@ -378,7 +378,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 92,
+      "assigned_order": 103,
       "source": "original",
       "tension": 2
     },
@@ -389,7 +389,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.45,
       "pool": "assigned",
-      "assigned_order": 179,
+      "assigned_order": 140,
       "source": "original",
       "tension": 2
     },
@@ -400,7 +400,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.43,
       "pool": "assigned",
-      "assigned_order": 74,
+      "assigned_order": 114,
       "source": "original",
       "tension": 2
     },
@@ -422,7 +422,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 110.0,
       "pool": "assigned",
-      "assigned_order": 198,
+      "assigned_order": 187,
       "source": "original",
       "tension": null
     },
@@ -433,7 +433,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.57,
       "pool": "assigned",
-      "assigned_order": 50,
+      "assigned_order": 70,
       "source": "original",
       "tension": 1
     },
@@ -444,7 +444,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.7,
       "pool": "assigned",
-      "assigned_order": 21,
+      "assigned_order": 41,
       "source": "original",
       "tension": 2
     },
@@ -488,7 +488,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.91,
       "pool": "assigned",
-      "assigned_order": 112,
+      "assigned_order": 32,
       "source": "original",
       "tension": 2
     },
@@ -499,7 +499,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.98,
       "pool": "assigned",
-      "assigned_order": 244,
+      "assigned_order": 239,
       "source": "original",
       "tension": 2
     },
@@ -521,7 +521,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.21,
       "pool": "assigned",
-      "assigned_order": 93,
+      "assigned_order": 134,
       "source": "original",
       "tension": 1
     },
@@ -532,18 +532,18 @@
       "classification": "champion_win",
       "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 157,
+      "assigned_order": 108,
       "source": "original",
       "tension": 1
     },
     {
       "levelNumber": 49,
       "password": "M5577",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 11,
+      "assigned_order": 128,
       "source": "original",
       "tension": 1
     },
@@ -587,7 +587,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.4,
       "pool": "assigned",
-      "assigned_order": 194,
+      "assigned_order": 205,
       "source": "original",
       "tension": 2
     },
@@ -609,7 +609,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.5,
       "pool": "assigned",
-      "assigned_order": 85,
+      "assigned_order": 95,
       "source": "original",
       "tension": 2
     },
@@ -620,7 +620,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 372,
+      "assigned_order": 373,
       "source": "original",
       "tension": 2
     },
@@ -638,33 +638,33 @@
     {
       "levelNumber": 58,
       "password": "I5026",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 99,
+      "assigned_order": 207,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 59,
       "password": "G6535",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 108,
+      "assigned_order": 178,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 60,
       "password": "U1300",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.45,
       "pool": "assigned",
-      "assigned_order": 33,
+      "assigned_order": 150,
       "source": "original",
       "tension": 2
     },
@@ -675,7 +675,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.4,
       "pool": "assigned",
-      "assigned_order": 139,
+      "assigned_order": 160,
       "source": "original",
       "tension": 2
     },
@@ -697,7 +697,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.21,
       "pool": "assigned",
-      "assigned_order": 103,
+      "assigned_order": 74,
       "source": "original",
       "tension": 1
     },
@@ -719,7 +719,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 108.0,
       "pool": "assigned",
-      "assigned_order": 143,
+      "assigned_order": 132,
       "source": "original",
       "tension": null
     },
@@ -730,7 +730,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 161,
+      "assigned_order": 182,
       "source": "original",
       "tension": 2
     },
@@ -741,7 +741,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 32,
+      "assigned_order": 62,
       "source": "original",
       "tension": 2
     },
@@ -763,7 +763,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.7,
       "pool": "assigned",
-      "assigned_order": 189,
+      "assigned_order": 161,
       "source": "original",
       "tension": 1
     },
@@ -774,7 +774,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.57,
       "pool": "assigned",
-      "assigned_order": 60,
+      "assigned_order": 80,
       "source": "original",
       "tension": 1
     },
@@ -796,7 +796,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.66,
       "pool": "assigned",
-      "assigned_order": 271,
+      "assigned_order": 302,
       "source": "original",
       "tension": 2
     },
@@ -807,7 +807,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.43,
       "pool": "assigned",
-      "assigned_order": 84,
+      "assigned_order": 124,
       "source": "original",
       "tension": 2
     },
@@ -829,7 +829,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 171,
+      "assigned_order": 142,
       "source": "original",
       "tension": 2
     },
@@ -851,7 +851,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 69,
+      "assigned_order": 9,
       "source": "original",
       "tension": 2
     },
@@ -862,7 +862,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.5,
       "pool": "assigned",
-      "assigned_order": 65,
+      "assigned_order": 115,
       "source": "original",
       "tension": 2
     },
@@ -873,7 +873,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.41,
       "pool": "assigned",
-      "assigned_order": 178,
+      "assigned_order": 130,
       "source": "original",
       "tension": 2
     },
@@ -884,7 +884,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 283,
+      "assigned_order": 323,
       "source": "original",
       "tension": 2
     },
@@ -895,7 +895,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 102,
+      "assigned_order": 63,
       "source": "original",
       "tension": 1
     },
@@ -906,7 +906,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.4,
       "pool": "assigned",
-      "assigned_order": 70,
+      "assigned_order": 10,
       "source": "original",
       "tension": 2
     },
@@ -950,7 +950,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.1,
       "pool": "assigned",
-      "assigned_order": 201,
+      "assigned_order": 193,
       "source": "original",
       "tension": 2
     },
@@ -961,7 +961,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 293,
+      "assigned_order": 324,
       "source": "original",
       "tension": 2
     },
@@ -983,7 +983,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 302,
+      "assigned_order": 305,
       "source": "original",
       "tension": 2
     },
@@ -994,7 +994,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.5,
       "pool": "assigned",
-      "assigned_order": 75,
+      "assigned_order": 125,
       "source": "original",
       "tension": 2
     },
@@ -1005,7 +1005,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.53,
       "pool": "assigned",
-      "assigned_order": 135,
+      "assigned_order": 76,
       "source": "original",
       "tension": 2
     },
@@ -1016,7 +1016,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 269,
+      "assigned_order": 252,
       "source": "original",
       "tension": 2
     },
@@ -1027,7 +1027,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.23,
       "pool": "assigned",
-      "assigned_order": 49,
+      "assigned_order": 69,
       "source": "original",
       "tension": 2
     },
@@ -1038,7 +1038,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.9,
       "pool": "assigned",
-      "assigned_order": 234,
+      "assigned_order": 208,
       "source": "original",
       "tension": 2
     },
@@ -1049,7 +1049,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 492,
+      "assigned_order": 462,
       "source": "original",
       "tension": 2
     },
@@ -1060,7 +1060,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.7,
       "pool": "assigned",
-      "assigned_order": 31,
+      "assigned_order": 51,
       "source": "original",
       "tension": 2
     },
@@ -1082,7 +1082,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 270,
+      "assigned_order": 262,
       "source": "original",
       "tension": 2
     },
@@ -1104,7 +1104,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 29,
+      "assigned_order": 19,
       "source": "original",
       "tension": 2
     },
@@ -1115,7 +1115,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 303,
+      "assigned_order": 285,
       "source": "original",
       "tension": 2
     },
@@ -1137,7 +1137,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.81,
       "pool": "assigned",
-      "assigned_order": 156,
+      "assigned_order": 107,
       "source": "original",
       "tension": 2
     },
@@ -1148,7 +1148,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.33,
       "pool": "assigned",
-      "assigned_order": 203,
+      "assigned_order": 204,
       "source": "original",
       "tension": 2
     },
@@ -1159,7 +1159,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 290,
+      "assigned_order": 303,
       "source": "original",
       "tension": 2
     },
@@ -1181,7 +1181,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.87,
       "pool": "assigned",
-      "assigned_order": 61,
+      "assigned_order": 91,
       "source": "original",
       "tension": 2
     },
@@ -1192,7 +1192,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 42,
+      "assigned_order": 72,
       "source": "original",
       "tension": 2
     },
@@ -1203,7 +1203,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 212,
+      "assigned_order": 88,
       "source": "original",
       "tension": 2
     },
@@ -1214,18 +1214,18 @@
       "classification": "champion_win",
       "difficulty_score": 12.3,
       "pool": "assigned",
-      "assigned_order": 64,
+      "assigned_order": 104,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 111,
       "password": "W3678",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.1,
       "pool": "assigned",
-      "assigned_order": 66,
+      "assigned_order": 203,
       "source": "original",
       "tension": 2
     },
@@ -1236,7 +1236,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 118,
+      "assigned_order": 22,
       "source": "original",
       "tension": 2
     },
@@ -1257,8 +1257,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.57,
-      "pool": "assigned",
-      "assigned_order": 80,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -1269,7 +1269,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 310,
+      "assigned_order": 295,
       "source": "original",
       "tension": 2
     },
@@ -1280,7 +1280,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.61,
       "pool": "assigned",
-      "assigned_order": 41,
+      "assigned_order": 31,
       "source": "original",
       "tension": 2
     },
@@ -1291,7 +1291,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 52,
+      "assigned_order": 82,
       "source": "original",
       "tension": 2
     },
@@ -1302,7 +1302,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 9,
+      "assigned_order": 29,
       "source": "original",
       "tension": 2
     },
@@ -1313,7 +1313,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.86,
       "pool": "assigned",
-      "assigned_order": 182,
+      "assigned_order": 201,
       "source": "original",
       "tension": 2
     },
@@ -1324,7 +1324,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 451,
+      "assigned_order": 473,
       "source": "original",
       "tension": 2
     },
@@ -1335,7 +1335,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 109.0,
       "pool": "assigned",
-      "assigned_order": 165,
+      "assigned_order": 154,
       "source": "original",
       "tension": null
     },
@@ -1346,18 +1346,18 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 111.0,
       "pool": "assigned",
-      "assigned_order": 242,
+      "assigned_order": 231,
       "source": "original",
       "tension": null
     },
     {
       "levelNumber": 123,
       "password": "R6902",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.63,
       "pool": "assigned",
-      "assigned_order": 130,
+      "assigned_order": 44,
       "source": "original",
       "tension": 2
     },
@@ -1368,7 +1368,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.05,
       "pool": "assigned",
-      "assigned_order": 192,
+      "assigned_order": 163,
       "source": "original",
       "tension": 2
     },
@@ -1379,18 +1379,18 @@
       "classification": "champion_win",
       "difficulty_score": 13.13,
       "pool": "assigned",
-      "assigned_order": 137,
+      "assigned_order": 118,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 126,
       "password": "D1252",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 163,
+      "assigned_order": 184,
       "source": "original",
       "tension": 2
     },
@@ -1412,7 +1412,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 311,
+      "assigned_order": 315,
       "source": "original",
       "tension": 2
     },
@@ -1434,7 +1434,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 111.0,
       "pool": "assigned",
-      "assigned_order": 253,
+      "assigned_order": 242,
       "source": "original",
       "tension": null
     },
@@ -1456,7 +1456,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.33,
       "pool": "assigned",
-      "assigned_order": 109,
+      "assigned_order": 169,
       "source": "original",
       "tension": 2
     },
@@ -1467,7 +1467,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 109.0,
       "pool": "assigned",
-      "assigned_order": 176,
+      "assigned_order": 165,
       "source": "original",
       "tension": null
     },
@@ -1489,7 +1489,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 382,
+      "assigned_order": 383,
       "source": "original",
       "tension": 2
     },
@@ -1500,7 +1500,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 312,
+      "assigned_order": 325,
       "source": "original",
       "tension": 2
     },
@@ -1511,7 +1511,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 110.0,
       "pool": "assigned",
-      "assigned_order": 209,
+      "assigned_order": 198,
       "source": "original",
       "tension": null
     },
@@ -1522,7 +1522,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 252,
+      "assigned_order": 310,
       "source": "original",
       "tension": 2
     },
@@ -1533,7 +1533,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 294,
+      "assigned_order": 332,
       "source": "original",
       "tension": 2
     },
@@ -1544,7 +1544,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.9,
       "pool": "assigned",
-      "assigned_order": 117,
+      "assigned_order": 158,
       "source": "original",
       "tension": 2
     },
@@ -1562,11 +1562,11 @@
     {
       "levelNumber": 142,
       "password": "E5294",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 110,
+      "assigned_order": 228,
       "source": "original",
       "tension": 2
     },
@@ -1577,7 +1577,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 181,
+      "assigned_order": 152,
       "source": "original",
       "tension": 2
     },
@@ -1588,7 +1588,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.67,
       "pool": "assigned",
-      "assigned_order": 170,
+      "assigned_order": 141,
       "source": "original",
       "tension": 2
     },
@@ -1610,7 +1610,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 113.0,
       "pool": "assigned",
-      "assigned_order": 374,
+      "assigned_order": 352,
       "source": "original",
       "tension": null
     },
@@ -1621,7 +1621,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 462,
+      "assigned_order": 484,
       "source": "original",
       "tension": 2
     },
@@ -1632,7 +1632,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.26,
       "pool": "assigned",
-      "assigned_order": 169,
+      "assigned_order": 159,
       "source": "original",
       "tension": 2
     },
@@ -1643,7 +1643,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.71,
       "pool": "assigned",
-      "assigned_order": 131,
+      "assigned_order": 191,
       "source": "original",
       "tension": 2
     },
@@ -1654,7 +1654,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 173,
+      "assigned_order": 164,
       "source": "original",
       "tension": 2
     },
@@ -1665,7 +1665,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 219,
+      "assigned_order": 277,
       "source": "original",
       "tension": 2
     },
@@ -1687,7 +1687,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 392,
+      "assigned_order": 393,
       "source": "original",
       "tension": 2
     },
@@ -1698,7 +1698,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 128,
+      "assigned_order": 129,
       "source": "original",
       "tension": 2
     },
@@ -1720,7 +1720,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 215,
+      "assigned_order": 235,
       "source": "original",
       "tension": 2
     },
@@ -1731,7 +1731,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 184,
+      "assigned_order": 195,
       "source": "original",
       "tension": 2
     },
@@ -1742,7 +1742,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 123,
+      "assigned_order": 43,
       "source": "original",
       "tension": 2
     },
@@ -1753,7 +1753,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.47,
       "pool": "assigned",
-      "assigned_order": 114,
+      "assigned_order": 105,
       "source": "original",
       "tension": 2
     },
@@ -1764,7 +1764,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 300,
+      "assigned_order": 304,
       "source": "original",
       "tension": 2
     },
@@ -1775,7 +1775,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 262,
+      "assigned_order": 311,
       "source": "original",
       "tension": 2
     },
@@ -1786,7 +1786,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 113.5,
       "pool": "assigned",
-      "assigned_order": 407,
+      "assigned_order": 396,
       "source": "original",
       "tension": null
     },
@@ -1797,7 +1797,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 274,
+      "assigned_order": 333,
       "source": "original",
       "tension": 2
     },
@@ -1808,7 +1808,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 301,
+      "assigned_order": 314,
       "source": "original",
       "tension": 2
     },
@@ -1819,18 +1819,18 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 402,
+      "assigned_order": 403,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 166,
       "password": "Y6909",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.7,
       "pool": "assigned",
-      "assigned_order": 44,
+      "assigned_order": 181,
       "source": "original",
       "tension": 2
     },
@@ -1840,8 +1840,8 @@
       "isHard": true,
       "classification": "solved_by_search_only",
       "difficulty_score": 112.5,
-      "pool": "assigned",
-      "assigned_order": 330,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": null
     },
@@ -1852,7 +1852,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.0,
       "pool": "assigned",
-      "assigned_order": 286,
+      "assigned_order": 275,
       "source": "original",
       "tension": null
     },
@@ -1874,7 +1874,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 284,
+      "assigned_order": 334,
       "source": "original",
       "tension": 2
     },
@@ -1885,7 +1885,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 304,
+      "assigned_order": 335,
       "source": "original",
       "tension": 2
     },
@@ -1896,7 +1896,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 313,
+      "assigned_order": 316,
       "source": "original",
       "tension": 2
     },
@@ -1907,7 +1907,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.23,
       "pool": "assigned",
-      "assigned_order": 54,
+      "assigned_order": 94,
       "source": "original",
       "tension": 2
     },
@@ -1918,7 +1918,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.67,
       "pool": "assigned",
-      "assigned_order": 180,
+      "assigned_order": 151,
       "source": "original",
       "tension": 2
     },
@@ -1929,7 +1929,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 410,
+      "assigned_order": 421,
       "source": "original",
       "tension": 2
     },
@@ -1940,7 +1940,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 427,
+      "assigned_order": 448,
       "source": "original",
       "tension": 2
     },
@@ -1951,7 +1951,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.63,
       "pool": "assigned",
-      "assigned_order": 150,
+      "assigned_order": 171,
       "source": "original",
       "tension": 2
     },
@@ -1962,7 +1962,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.6,
       "pool": "assigned",
-      "assigned_order": 96,
+      "assigned_order": 106,
       "source": "original",
       "tension": 2
     },
@@ -1973,7 +1973,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 110.5,
       "pool": "assigned",
-      "assigned_order": 220,
+      "assigned_order": 209,
       "source": "original",
       "tension": null
     },
@@ -1984,7 +1984,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.5,
       "pool": "assigned",
-      "assigned_order": 341,
+      "assigned_order": 319,
       "source": "original",
       "tension": null
     },
@@ -1995,7 +1995,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.75,
       "pool": "assigned",
-      "assigned_order": 190,
+      "assigned_order": 162,
       "source": "original",
       "tension": 2
     },
@@ -2006,7 +2006,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.53,
       "pool": "assigned",
-      "assigned_order": 145,
+      "assigned_order": 86,
       "source": "original",
       "tension": 2
     },
@@ -2028,7 +2028,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.13,
       "pool": "assigned",
-      "assigned_order": 248,
+      "assigned_order": 230,
       "source": "original",
       "tension": 2
     },
@@ -2039,7 +2039,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 183,
+      "assigned_order": 174,
       "source": "original",
       "tension": 2
     },
@@ -2050,7 +2050,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 223,
+      "assigned_order": 110,
       "source": "original",
       "tension": 2
     },
@@ -2061,7 +2061,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 277,
+      "assigned_order": 272,
       "source": "original",
       "tension": 2
     },
@@ -2072,7 +2072,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 493,
+      "assigned_order": 494,
       "source": "original",
       "tension": 2
     },
@@ -2083,18 +2083,18 @@
       "classification": "champion_win",
       "difficulty_score": 12.81,
       "pool": "assigned",
-      "assigned_order": 167,
+      "assigned_order": 117,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 190,
       "password": "L1287",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 246,
+      "assigned_order": 249,
       "source": "original",
       "tension": 2
     },
@@ -2105,7 +2105,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 314,
+      "assigned_order": 296,
       "source": "original",
       "tension": 2
     },
@@ -2116,7 +2116,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 272,
+      "assigned_order": 312,
       "source": "original",
       "tension": 2
     },
@@ -2127,7 +2127,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 321,
+      "assigned_order": 306,
       "source": "original",
       "tension": 2
     },
@@ -2149,7 +2149,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 322,
+      "assigned_order": 326,
       "source": "original",
       "tension": 2
     },
@@ -2160,7 +2160,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.86,
       "pool": "assigned",
-      "assigned_order": 142,
+      "assigned_order": 66,
       "source": "original",
       "tension": 2
     },
@@ -2182,7 +2182,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.0,
       "pool": "assigned",
-      "assigned_order": 297,
+      "assigned_order": 286,
       "source": "original",
       "tension": null
     },
@@ -2193,7 +2193,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 83,
+      "assigned_order": 53,
       "source": "original",
       "tension": 2
     },
@@ -2204,7 +2204,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.33,
       "pool": "assigned",
-      "assigned_order": 119,
+      "assigned_order": 179,
       "source": "original",
       "tension": 2
     },
@@ -2215,7 +2215,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.5,
       "pool": "assigned",
-      "assigned_order": 140,
+      "assigned_order": 180,
       "source": "original",
       "tension": 2
     },
@@ -2226,7 +2226,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.47,
       "pool": "assigned",
-      "assigned_order": 124,
+      "assigned_order": 65,
       "source": "original",
       "tension": 2
     },
@@ -2237,18 +2237,18 @@
       "classification": "champion_win",
       "difficulty_score": 12.53,
       "pool": "assigned",
-      "assigned_order": 136,
+      "assigned_order": 96,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 204,
       "password": "Y1257",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.71,
       "pool": "assigned",
-      "assigned_order": 141,
+      "assigned_order": 55,
       "source": "original",
       "tension": 2
     },
@@ -2259,7 +2259,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.36,
       "pool": "assigned",
-      "assigned_order": 259,
+      "assigned_order": 251,
       "source": "original",
       "tension": 2
     },
@@ -2270,7 +2270,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 323,
+      "assigned_order": 336,
       "source": "original",
       "tension": 2
     },
@@ -2281,7 +2281,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 113.0,
       "pool": "assigned",
-      "assigned_order": 385,
+      "assigned_order": 363,
       "source": "original",
       "tension": null
     },
@@ -2292,7 +2292,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 305,
+      "assigned_order": 343,
       "source": "original",
       "tension": 2
     },
@@ -2303,7 +2303,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.0,
       "pool": "assigned",
-      "assigned_order": 308,
+      "assigned_order": 297,
       "source": "original",
       "tension": null
     },
@@ -2314,7 +2314,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.0,
       "pool": "assigned",
-      "assigned_order": 162,
+      "assigned_order": 173,
       "source": "original",
       "tension": 2
     },
@@ -2336,7 +2336,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 111.0,
       "pool": "assigned",
-      "assigned_order": 264,
+      "assigned_order": 253,
       "source": "original",
       "tension": null
     },
@@ -2347,7 +2347,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.28,
       "pool": "assigned",
-      "assigned_order": 239,
+      "assigned_order": 270,
       "source": "original",
       "tension": 2
     },
@@ -2358,7 +2358,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 473,
+      "assigned_order": 495,
       "source": "original",
       "tension": 2
     },
@@ -2369,7 +2369,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.85,
       "pool": "assigned",
-      "assigned_order": 97,
+      "assigned_order": 157,
       "source": "original",
       "tension": 2
     },
@@ -2380,7 +2380,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 224,
+      "assigned_order": 236,
       "source": "original",
       "tension": 2
     },
@@ -2391,7 +2391,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.1,
       "pool": "assigned",
-      "assigned_order": 193,
+      "assigned_order": 211,
       "source": "original",
       "tension": 2
     },
@@ -2402,7 +2402,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 208,
+      "assigned_order": 258,
       "source": "original",
       "tension": 2
     },
@@ -2413,7 +2413,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.5,
       "pool": "assigned",
-      "assigned_order": 352,
+      "assigned_order": 330,
       "source": "original",
       "tension": null
     },
@@ -2424,7 +2424,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.95,
       "pool": "assigned",
-      "assigned_order": 227,
+      "assigned_order": 256,
       "source": "original",
       "tension": 2
     },
@@ -2435,7 +2435,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 285,
+      "assigned_order": 344,
       "source": "original",
       "tension": 2
     },
@@ -2446,7 +2446,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.73,
       "pool": "assigned",
-      "assigned_order": 76,
+      "assigned_order": 126,
       "source": "original",
       "tension": 2
     },
@@ -2457,18 +2457,18 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 411,
+      "assigned_order": 422,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 224,
       "password": "B2654",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.61,
       "pool": "assigned",
-      "assigned_order": 88,
+      "assigned_order": 196,
       "source": "original",
       "tension": 2
     },
@@ -2490,7 +2490,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 108.5,
       "pool": "assigned",
-      "assigned_order": 154,
+      "assigned_order": 143,
       "source": "original",
       "tension": null
     },
@@ -2512,7 +2512,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 295,
+      "assigned_order": 345,
       "source": "original",
       "tension": 2
     },
@@ -2523,7 +2523,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.53,
       "pool": "assigned",
-      "assigned_order": 240,
+      "assigned_order": 289,
       "source": "original",
       "tension": 2
     },
@@ -2534,7 +2534,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 315,
+      "assigned_order": 346,
       "source": "original",
       "tension": 2
     },
@@ -2545,7 +2545,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 324,
+      "assigned_order": 347,
       "source": "original",
       "tension": 2
     },
@@ -2554,9 +2554,9 @@
       "password": "Z8197",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.96,
-      "pool": "assigned",
-      "assigned_order": 412,
+      "difficulty_score": 11.0,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -2566,8 +2566,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 484,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -2578,7 +2578,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.73,
       "pool": "assigned",
-      "assigned_order": 86,
+      "assigned_order": 136,
       "source": "original",
       "tension": 2
     },
@@ -2589,7 +2589,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.16,
       "pool": "assigned",
-      "assigned_order": 153,
+      "assigned_order": 212,
       "source": "original",
       "tension": 2
     },
@@ -2600,7 +2600,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 278,
+      "assigned_order": 282,
       "source": "original",
       "tension": 2
     },
@@ -2611,7 +2611,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.53,
       "pool": "assigned",
-      "assigned_order": 260,
+      "assigned_order": 290,
       "source": "original",
       "tension": 2
     },
@@ -2622,7 +2622,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.76,
       "pool": "assigned",
-      "assigned_order": 206,
+      "assigned_order": 244,
       "source": "original",
       "tension": 2
     },
@@ -2644,7 +2644,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.98,
       "pool": "assigned",
-      "assigned_order": 245,
+      "assigned_order": 219,
       "source": "original",
       "tension": 2
     },
@@ -2654,8 +2654,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 494,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -2666,7 +2666,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 325,
+      "assigned_order": 307,
       "source": "original",
       "tension": 2
     },
@@ -2675,9 +2675,9 @@
       "password": "B2859",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.9,
+      "difficulty_score": 14.35,
       "pool": "assigned",
-      "assigned_order": 332,
+      "assigned_order": 213,
       "source": "original",
       "tension": 2
     },
@@ -2688,7 +2688,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 333,
+      "assigned_order": 317,
       "source": "original",
       "tension": 2
     },
@@ -2699,7 +2699,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.66,
       "pool": "assigned",
-      "assigned_order": 280,
+      "assigned_order": 263,
       "source": "original",
       "tension": 2
     },
@@ -2710,7 +2710,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 334,
+      "assigned_order": 327,
       "source": "original",
       "tension": 2
     },
@@ -2721,7 +2721,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 460,
+      "assigned_order": 481,
       "source": "original",
       "tension": 2
     },
@@ -2732,7 +2732,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 420,
+      "assigned_order": 423,
       "source": "original",
       "tension": 2
     },
@@ -2743,7 +2743,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.76,
       "pool": "assigned",
-      "assigned_order": 216,
+      "assigned_order": 245,
       "source": "original",
       "tension": 2
     },
@@ -2754,7 +2754,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 148,
+      "assigned_order": 109,
       "source": "original",
       "tension": 2
     },
@@ -2765,7 +2765,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 229,
+      "assigned_order": 278,
       "source": "original",
       "tension": 2
     },
@@ -2776,7 +2776,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 393,
+      "assigned_order": 431,
       "source": "original",
       "tension": 2
     },
@@ -2796,20 +2796,20 @@
       "password": "K6221",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.9,
+      "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 335,
+      "assigned_order": 148,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 255,
       "password": "O2380",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.37,
       "pool": "assigned",
-      "assigned_order": 129,
+      "assigned_order": 33,
       "source": "original",
       "tension": 2
     },
@@ -2820,7 +2820,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 296,
+      "assigned_order": 337,
       "source": "original",
       "tension": 2
     },
@@ -2842,7 +2842,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.46,
       "pool": "assigned",
-      "assigned_order": 214,
+      "assigned_order": 224,
       "source": "original",
       "tension": 2
     },
@@ -2853,7 +2853,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 306,
+      "assigned_order": 354,
       "source": "original",
       "tension": 2
     },
@@ -2862,20 +2862,20 @@
       "password": "A8171",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.9,
+      "difficulty_score": 14.46,
       "pool": "assigned",
-      "assigned_order": 316,
+      "assigned_order": 225,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 261,
       "password": "K2382",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 164,
+      "assigned_order": 175,
       "source": "original",
       "tension": 2
     },
@@ -2897,7 +2897,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.65,
       "pool": "assigned",
-      "assigned_order": 205,
+      "assigned_order": 234,
       "source": "original",
       "tension": 2
     },
@@ -2908,7 +2908,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.03,
       "pool": "assigned",
-      "assigned_order": 449,
+      "assigned_order": 479,
       "source": "original",
       "tension": 2
     },
@@ -2919,18 +2919,18 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 111.5,
       "pool": "assigned",
-      "assigned_order": 275,
+      "assigned_order": 264,
       "source": "original",
       "tension": null
     },
     {
       "levelNumber": 266,
       "password": "U4447",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 236,
+      "assigned_order": 238,
       "source": "original",
       "tension": 2
     },
@@ -2952,7 +2952,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 326,
+      "assigned_order": 355,
       "source": "original",
       "tension": 2
     },
@@ -2963,7 +2963,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 336,
+      "assigned_order": 356,
       "source": "original",
       "tension": 2
     },
@@ -2974,7 +2974,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 343,
+      "assigned_order": 357,
       "source": "original",
       "tension": 2
     },
@@ -2985,7 +2985,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 471,
+      "assigned_order": 439,
       "source": "original",
       "tension": 2
     },
@@ -2996,7 +2996,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 249,
+      "assigned_order": 279,
       "source": "original",
       "tension": 2
     },
@@ -3007,18 +3007,18 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 218,
+      "assigned_order": 259,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 274,
       "password": "Z1926",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 13.93,
       "pool": "assigned",
-      "assigned_order": 152,
+      "assigned_order": 202,
       "source": "original",
       "tension": 2
     },
@@ -3029,18 +3029,18 @@
       "classification": "champion_win",
       "difficulty_score": 13.78,
       "pool": "assigned",
-      "assigned_order": 191,
+      "assigned_order": 172,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 276,
       "password": "K8826",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.98,
       "pool": "assigned",
-      "assigned_order": 121,
+      "assigned_order": 229,
       "source": "original",
       "tension": 2
     },
@@ -3051,7 +3051,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.2,
       "pool": "assigned",
-      "assigned_order": 255,
+      "assigned_order": 240,
       "source": "original",
       "tension": 2
     },
@@ -3073,7 +3073,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.36,
       "pool": "assigned",
-      "assigned_order": 266,
+      "assigned_order": 271,
       "source": "original",
       "tension": 2
     },
@@ -3082,11 +3082,11 @@
       "password": "V5745",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 16.13,
+      "difficulty_score": 11.8,
       "pool": "assigned",
-      "assigned_order": 495,
+      "assigned_order": 61,
       "source": "original",
-      "tension": 2
+      "tension": 1
     },
     {
       "levelNumber": 281,
@@ -3102,11 +3102,11 @@
     {
       "levelNumber": 282,
       "password": "R5278",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.63,
       "pool": "assigned",
-      "assigned_order": 175,
+      "assigned_order": 216,
       "source": "original",
       "tension": 2
     },
@@ -3117,7 +3117,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 344,
+      "assigned_order": 358,
       "source": "original",
       "tension": 2
     },
@@ -3128,7 +3128,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 345,
+      "assigned_order": 318,
       "source": "original",
       "tension": 2
     },
@@ -3139,7 +3139,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 346,
+      "assigned_order": 328,
       "source": "original",
       "tension": 2
     },
@@ -3148,9 +3148,9 @@
       "password": "X1086",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.96,
+      "difficulty_score": 14.46,
       "pool": "assigned",
-      "assigned_order": 373,
+      "assigned_order": 99,
       "source": "original",
       "tension": 2
     },
@@ -3161,7 +3161,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 282,
+      "assigned_order": 313,
       "source": "original",
       "tension": 2
     },
@@ -3172,7 +3172,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 43,
+      "assigned_order": 73,
       "source": "original",
       "tension": 2
     },
@@ -3194,7 +3194,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 307,
+      "assigned_order": 338,
       "source": "original",
       "tension": 2
     },
@@ -3205,7 +3205,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 317,
+      "assigned_order": 348,
       "source": "original",
       "tension": 2
     },
@@ -3227,7 +3227,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.85,
       "pool": "assigned",
-      "assigned_order": 107,
+      "assigned_order": 11,
       "source": "original",
       "tension": 2
     },
@@ -3238,7 +3238,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 291,
+      "assigned_order": 274,
       "source": "original",
       "tension": 2
     },
@@ -3260,7 +3260,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 327,
+      "assigned_order": 365,
       "source": "original",
       "tension": 2
     },
@@ -3271,7 +3271,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.03,
       "pool": "assigned",
-      "assigned_order": 172,
+      "assigned_order": 153,
       "source": "original",
       "tension": 2
     },
@@ -3282,7 +3282,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 337,
+      "assigned_order": 366,
       "source": "original",
       "tension": 2
     },
@@ -3291,9 +3291,9 @@
       "password": "W9154",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 16.13,
-      "pool": "ready",
-      "assigned_order": null,
+      "difficulty_score": 12.17,
+      "pool": "assigned",
+      "assigned_order": 83,
       "source": "original",
       "tension": 2
     },
@@ -3303,8 +3303,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "ready",
-      "assigned_order": null,
+      "pool": "assigned",
+      "assigned_order": 463,
       "source": "original",
       "tension": 2
     },
@@ -3315,18 +3315,18 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 228,
+      "assigned_order": 266,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 302,
       "password": "P9090",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 226,
+      "assigned_order": 217,
       "source": "original",
       "tension": 2
     },
@@ -3337,7 +3337,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 347,
+      "assigned_order": 367,
       "source": "original",
       "tension": 2
     },
@@ -3348,7 +3348,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.68,
       "pool": "assigned",
-      "assigned_order": 225,
+      "assigned_order": 197,
       "source": "original",
       "tension": 2
     },
@@ -3358,8 +3358,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 463,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -3370,7 +3370,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 437,
+      "assigned_order": 459,
       "source": "original",
       "tension": 2
     },
@@ -3381,7 +3381,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 354,
+      "assigned_order": 368,
       "source": "original",
       "tension": 2
     },
@@ -3392,7 +3392,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 466,
+      "assigned_order": 468,
       "source": "original",
       "tension": 2
     },
@@ -3414,7 +3414,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 279,
+      "assigned_order": 292,
       "source": "original",
       "tension": 2
     },
@@ -3423,9 +3423,9 @@
       "password": "X8608",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 16.26,
-      "pool": "ready",
-      "assigned_order": null,
+      "difficulty_score": 15.96,
+      "pool": "assigned",
+      "assigned_order": 424,
       "source": "original",
       "tension": 2
     },
@@ -3436,7 +3436,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.5,
       "pool": "assigned",
-      "assigned_order": 120,
+      "assigned_order": 189,
       "source": "original",
       "tension": 2
     },
@@ -3446,8 +3446,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "ready",
-      "assigned_order": null,
+      "pool": "assigned",
+      "assigned_order": 474,
       "source": "original",
       "tension": 2
     },
@@ -3458,7 +3458,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.0,
       "pool": "assigned",
-      "assigned_order": 319,
+      "assigned_order": 308,
       "source": "original",
       "tension": null
     },
@@ -3467,9 +3467,9 @@
       "password": "J1801",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 13.4,
+      "difficulty_score": 13.45,
       "pool": "assigned",
-      "assigned_order": 149,
+      "assigned_order": 170,
       "source": "original",
       "tension": 2
     },
@@ -3480,7 +3480,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 448,
+      "assigned_order": 469,
       "source": "original",
       "tension": 2
     },
@@ -3491,7 +3491,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.92,
       "pool": "assigned",
-      "assigned_order": 400,
+      "assigned_order": 411,
       "source": "original",
       "tension": 2
     },
@@ -3502,7 +3502,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 479,
+      "assigned_order": 450,
       "source": "original",
       "tension": 2
     },
@@ -3513,7 +3513,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 480,
+      "assigned_order": 482,
       "source": "original",
       "tension": 2
     },
@@ -3524,7 +3524,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 186,
+      "assigned_order": 227,
       "source": "original",
       "tension": 2
     },
@@ -3535,7 +3535,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 355,
+      "assigned_order": 369,
       "source": "original",
       "tension": 2
     },
@@ -3546,7 +3546,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 112.5,
       "pool": "assigned",
-      "assigned_order": 363,
+      "assigned_order": 341,
       "source": "original",
       "tension": null
     },
@@ -3568,7 +3568,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 356,
+      "assigned_order": 329,
       "source": "original",
       "tension": 2
     },
@@ -3579,7 +3579,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 481,
+      "assigned_order": 461,
       "source": "original",
       "tension": 2
     },
@@ -3590,7 +3590,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 197,
+      "assigned_order": 247,
       "source": "original",
       "tension": 2
     },
@@ -3601,7 +3601,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.4,
       "pool": "assigned",
-      "assigned_order": 204,
+      "assigned_order": 215,
       "source": "original",
       "tension": 2
     },
@@ -3610,9 +3610,9 @@
       "password": "B8138",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.96,
-      "pool": "assigned",
-      "assigned_order": 383,
+      "difficulty_score": 16.26,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -3623,7 +3623,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 109.0,
       "pool": "assigned",
-      "assigned_order": 187,
+      "assigned_order": 176,
       "source": "original",
       "tension": null
     },
@@ -3634,7 +3634,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 403,
+      "assigned_order": 384,
       "source": "original",
       "tension": 2
     },
@@ -3645,7 +3645,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 413,
+      "assigned_order": 394,
       "source": "original",
       "tension": 2
     },
@@ -3656,7 +3656,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.95,
       "pool": "assigned",
-      "assigned_order": 237,
+      "assigned_order": 257,
       "source": "original",
       "tension": 2
     },
@@ -3667,7 +3667,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.63,
       "pool": "assigned",
-      "assigned_order": 185,
+      "assigned_order": 233,
       "source": "original",
       "tension": 2
     },
@@ -3678,7 +3678,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 113.5,
       "pool": "assigned",
-      "assigned_order": 418,
+      "assigned_order": 407,
       "source": "original",
       "tension": null
     },
@@ -3689,7 +3689,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.5,
       "pool": "assigned",
-      "assigned_order": 230,
+      "assigned_order": 288,
       "source": "original",
       "tension": 2
     },
@@ -3700,7 +3700,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.7,
       "pool": "assigned",
-      "assigned_order": 196,
+      "assigned_order": 237,
       "source": "original",
       "tension": 2
     },
@@ -3722,7 +3722,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.53,
       "pool": "assigned",
-      "assigned_order": 268,
+      "assigned_order": 291,
       "source": "original",
       "tension": 2
     },
@@ -3733,7 +3733,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 357,
+      "assigned_order": 339,
       "source": "original",
       "tension": 2
     },
@@ -3755,7 +3755,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 421,
+      "assigned_order": 404,
       "source": "original",
       "tension": 2
     },
@@ -3766,7 +3766,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 439,
+      "assigned_order": 472,
       "source": "original",
       "tension": 2
     },
@@ -3788,7 +3788,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 422,
+      "assigned_order": 414,
       "source": "original",
       "tension": 2
     },
@@ -3799,7 +3799,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 241,
+      "assigned_order": 299,
       "source": "original",
       "tension": 2
     },
@@ -3810,7 +3810,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 338,
+      "assigned_order": 349,
       "source": "original",
       "tension": 2
     },
@@ -3821,7 +3821,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 474,
+      "assigned_order": 485,
       "source": "original",
       "tension": 2
     },
@@ -3832,7 +3832,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 318,
+      "assigned_order": 359,
       "source": "original",
       "tension": 2
     },
@@ -3843,7 +3843,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.8,
       "pool": "assigned",
-      "assigned_order": 233,
+      "assigned_order": 121,
       "source": "original",
       "tension": 2
     },
@@ -3854,7 +3854,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 257,
+      "assigned_order": 261,
       "source": "original",
       "tension": 2
     },
@@ -3872,11 +3872,11 @@
     {
       "levelNumber": 352,
       "password": "T1539",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 15.23,
       "pool": "assigned",
-      "assigned_order": 132,
+      "assigned_order": 260,
       "source": "original",
       "tension": 2
     },
@@ -3887,7 +3887,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.38,
       "pool": "assigned",
-      "assigned_order": 174,
+      "assigned_order": 185,
       "source": "original",
       "tension": 2
     },
@@ -3898,7 +3898,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 328,
+      "assigned_order": 376,
       "source": "original",
       "tension": 2
     },
@@ -3907,9 +3907,9 @@
       "password": "T3323",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 16.18,
-      "pool": "ready",
-      "assigned_order": null,
+      "difficulty_score": 12.73,
+      "pool": "assigned",
+      "assigned_order": 146,
       "source": "original",
       "tension": 2
     },
@@ -3920,7 +3920,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.7,
       "pool": "assigned",
-      "assigned_order": 151,
+      "assigned_order": 190,
       "source": "original",
       "tension": 2
     },
@@ -3931,7 +3931,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 467,
+      "assigned_order": 470,
       "source": "original",
       "tension": 2
     },
@@ -3942,7 +3942,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 348,
+      "assigned_order": 377,
       "source": "original",
       "tension": 2
     },
@@ -3953,7 +3953,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 423,
+      "assigned_order": 432,
       "source": "original",
       "tension": 2
     },
@@ -3962,9 +3962,9 @@
       "password": "K9320",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.96,
+      "difficulty_score": 15.06,
       "pool": "assigned",
-      "assigned_order": 431,
+      "assigned_order": 268,
       "source": "original",
       "tension": 2
     },
@@ -3975,18 +3975,18 @@
       "classification": "champion_win",
       "difficulty_score": 13.13,
       "pool": "assigned",
-      "assigned_order": 147,
+      "assigned_order": 98,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 362,
       "password": "R5885",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 15.23,
       "pool": "assigned",
-      "assigned_order": 256,
+      "assigned_order": 269,
       "source": "original",
       "tension": 2
     },
@@ -3997,7 +3997,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 358,
+      "assigned_order": 378,
       "source": "original",
       "tension": 2
     },
@@ -4008,7 +4008,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.43,
       "pool": "assigned",
-      "assigned_order": 250,
+      "assigned_order": 281,
       "source": "original",
       "tension": 2
     },
@@ -4030,7 +4030,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 365,
+      "assigned_order": 379,
       "source": "original",
       "tension": 2
     },
@@ -4041,7 +4041,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.35,
       "pool": "assigned",
-      "assigned_order": 211,
+      "assigned_order": 214,
       "source": "original",
       "tension": 2
     },
@@ -4052,7 +4052,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.4,
       "pool": "assigned",
-      "assigned_order": 213,
+      "assigned_order": 223,
       "source": "original",
       "tension": 2
     },
@@ -4063,7 +4063,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.05,
       "pool": "assigned",
-      "assigned_order": 200,
+      "assigned_order": 183,
       "source": "original",
       "tension": 2
     },
@@ -4085,7 +4085,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.04,
       "pool": "assigned",
-      "assigned_order": 478,
+      "assigned_order": 480,
       "source": "original",
       "tension": 2
     },
@@ -4096,7 +4096,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.4,
       "pool": "assigned",
-      "assigned_order": 159,
+      "assigned_order": 120,
       "source": "original",
       "tension": 2
     },
@@ -4105,9 +4105,9 @@
       "password": "M6961",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 17.84,
+      "difficulty_score": 14.8,
       "pool": "assigned",
-      "assigned_order": 499,
+      "assigned_order": 246,
       "source": "original",
       "tension": 2
     },
@@ -4118,7 +4118,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 366,
+      "assigned_order": 387,
       "source": "original",
       "tension": 2
     },
@@ -4129,7 +4129,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 459,
+      "assigned_order": 428,
       "source": "original",
       "tension": 2
     },
@@ -4140,7 +4140,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 367,
+      "assigned_order": 360,
       "source": "original",
       "tension": 2
     },
@@ -4151,7 +4151,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 404,
+      "assigned_order": 433,
       "source": "original",
       "tension": 2
     },
@@ -4162,7 +4162,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.9,
       "pool": "assigned",
-      "assigned_order": 235,
+      "assigned_order": 218,
       "source": "original",
       "tension": 2
     },
@@ -4184,7 +4184,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.83,
       "pool": "assigned",
-      "assigned_order": 292,
+      "assigned_order": 284,
       "source": "original",
       "tension": 2
     },
@@ -4195,7 +4195,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.4,
       "pool": "assigned",
-      "assigned_order": 267,
+      "assigned_order": 280,
       "source": "original",
       "tension": 2
     },
@@ -4206,7 +4206,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 368,
+      "assigned_order": 340,
       "source": "original",
       "tension": 2
     },
@@ -4217,7 +4217,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 384,
+      "assigned_order": 434,
       "source": "original",
       "tension": 2
     },
@@ -4228,7 +4228,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.13,
       "pool": "assigned",
-      "assigned_order": 485,
+      "assigned_order": 496,
       "source": "original",
       "tension": 2
     },
@@ -4249,8 +4249,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 16.13,
-      "pool": "assigned",
-      "assigned_order": 496,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -4261,7 +4261,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 394,
+      "assigned_order": 442,
       "source": "original",
       "tension": 2
     },
@@ -4270,9 +4270,9 @@
       "password": "N4221",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.9,
+      "difficulty_score": 14.46,
       "pool": "assigned",
-      "assigned_order": 349,
+      "assigned_order": 226,
       "source": "original",
       "tension": 2
     },
@@ -4283,7 +4283,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 329,
+      "assigned_order": 350,
       "source": "original",
       "tension": 2
     },
@@ -4294,7 +4294,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 450,
+      "assigned_order": 483,
       "source": "original",
       "tension": 2
     },
@@ -4360,7 +4360,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 339,
+      "assigned_order": 370,
       "source": "original",
       "tension": 2
     },
@@ -4371,7 +4371,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 414,
+      "assigned_order": 435,
       "source": "original",
       "tension": 2
     },
@@ -4382,7 +4382,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 461,
+      "assigned_order": 490,
       "source": "original",
       "tension": 2
     },
@@ -4393,7 +4393,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.93,
       "pool": "assigned",
-      "assigned_order": 362,
+      "assigned_order": 413,
       "source": "original",
       "tension": 2
     },
@@ -4404,7 +4404,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.23,
       "pool": "assigned",
-      "assigned_order": 202,
+      "assigned_order": 194,
       "source": "original",
       "tension": 2
     },
@@ -4415,7 +4415,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.63,
       "pool": "assigned",
-      "assigned_order": 160,
+      "assigned_order": 131,
       "source": "original",
       "tension": 2
     },
@@ -4426,7 +4426,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 359,
+      "assigned_order": 380,
       "source": "original",
       "tension": 2
     },
@@ -4437,7 +4437,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 113.0,
       "pool": "assigned",
-      "assigned_order": 396,
+      "assigned_order": 374,
       "source": "original",
       "tension": null
     },
@@ -4448,7 +4448,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 369,
+      "assigned_order": 388,
       "source": "original",
       "tension": 2
     },
@@ -4459,7 +4459,7 @@
       "classification": "solved_by_search_only",
       "difficulty_score": 110.5,
       "pool": "assigned",
-      "assigned_order": 231,
+      "assigned_order": 220,
       "source": "original",
       "tension": null
     },
@@ -4467,12 +4467,12 @@
       "levelNumber": 406,
       "password": "J1222",
       "isHard": false,
-      "classification": "champion_win",
-      "difficulty_score": 15.96,
+      "classification": "solved_by_search_only",
+      "difficulty_score": 113.5,
       "pool": "assigned",
-      "assigned_order": 424,
+      "assigned_order": 418,
       "source": "original",
-      "tension": 2
+      "tension": null
     },
     {
       "levelNumber": 407,
@@ -4492,7 +4492,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.66,
       "pool": "assigned",
-      "assigned_order": 281,
+      "assigned_order": 273,
       "source": "original",
       "tension": 2
     },
@@ -4503,7 +4503,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 432,
+      "assigned_order": 395,
       "source": "original",
       "tension": 2
     },
@@ -4514,7 +4514,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 376,
+      "assigned_order": 389,
       "source": "original",
       "tension": 2
     },
@@ -4525,7 +4525,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 433,
+      "assigned_order": 405,
       "source": "original",
       "tension": 2
     },
@@ -4536,7 +4536,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 468,
+      "assigned_order": 438,
       "source": "original",
       "tension": 2
     },
@@ -4558,7 +4558,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 434,
+      "assigned_order": 415,
       "source": "original",
       "tension": 2
     },
@@ -4569,7 +4569,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.8,
       "pool": "assigned",
-      "assigned_order": 289,
+      "assigned_order": 293,
       "source": "original",
       "tension": 2
     },
@@ -4580,7 +4580,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 377,
+      "assigned_order": 390,
       "source": "original",
       "tension": 2
     },
@@ -4591,7 +4591,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 251,
+      "assigned_order": 300,
       "source": "original",
       "tension": 2
     },
@@ -4613,7 +4613,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 378,
+      "assigned_order": 398,
       "source": "original",
       "tension": 2
     },
@@ -4624,7 +4624,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 482,
+      "assigned_order": 491,
       "source": "original",
       "tension": 2
     },
@@ -4657,7 +4657,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.06,
       "pool": "assigned",
-      "assigned_order": 247,
+      "assigned_order": 250,
       "source": "original",
       "tension": 2
     },
@@ -4668,7 +4668,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 442,
+      "assigned_order": 425,
       "source": "original",
       "tension": 2
     },
@@ -4679,7 +4679,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 435,
+      "assigned_order": 443,
       "source": "original",
       "tension": 2
     },
@@ -4689,8 +4689,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 17.54,
-      "pool": "ready",
-      "assigned_order": null,
+      "pool": "assigned",
+      "assigned_order": 499,
       "source": "original",
       "tension": 2
     },
@@ -4712,7 +4712,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 395,
+      "assigned_order": 444,
       "source": "original",
       "tension": 2
     },
@@ -4723,7 +4723,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 405,
+      "assigned_order": 445,
       "source": "original",
       "tension": 2
     },
@@ -4732,11 +4732,11 @@
       "password": "J6308",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 16.1,
+      "difficulty_score": 13.78,
       "pool": "assigned",
-      "assigned_order": 472,
+      "assigned_order": 192,
       "source": "original",
-      "tension": 2
+      "tension": 1
     },
     {
       "levelNumber": 431,
@@ -4745,7 +4745,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 469,
+      "assigned_order": 449,
       "source": "original",
       "tension": 2
     },
@@ -4756,7 +4756,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 483,
+      "assigned_order": 492,
       "source": "original",
       "tension": 2
     },
@@ -4767,7 +4767,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 415,
+      "assigned_order": 446,
       "source": "original",
       "tension": 2
     },
@@ -4778,7 +4778,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 425,
+      "assigned_order": 454,
       "source": "original",
       "tension": 2
     },
@@ -4800,7 +4800,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 443,
+      "assigned_order": 426,
       "source": "original",
       "tension": 2
     },
@@ -4811,7 +4811,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 490,
+      "assigned_order": 451,
       "source": "original",
       "tension": 2
     },
@@ -4822,7 +4822,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 470,
+      "assigned_order": 478,
       "source": "original",
       "tension": 2
     },
@@ -4844,7 +4844,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 379,
+      "assigned_order": 371,
       "source": "original",
       "tension": 2
     },
@@ -4855,7 +4855,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 428,
+      "assigned_order": 460,
       "source": "original",
       "tension": 2
     },
@@ -4866,7 +4866,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 444,
+      "assigned_order": 406,
       "source": "original",
       "tension": 2
     },
@@ -4888,7 +4888,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 380,
+      "assigned_order": 351,
       "source": "original",
       "tension": 2
     },
@@ -4899,7 +4899,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.0,
       "pool": "assigned",
-      "assigned_order": 238,
+      "assigned_order": 267,
       "source": "original",
       "tension": 2
     },
@@ -4910,7 +4910,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 340,
+      "assigned_order": 361,
       "source": "original",
       "tension": 2
     },
@@ -4921,7 +4921,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 158,
+      "assigned_order": 119,
       "source": "original",
       "tension": 2
     },
@@ -4932,7 +4932,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.85,
       "pool": "assigned",
-      "assigned_order": 299,
+      "assigned_order": 294,
       "source": "original",
       "tension": 2
     },
@@ -4954,7 +4954,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 350,
+      "assigned_order": 381,
       "source": "original",
       "tension": 2
     },
@@ -4965,7 +4965,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 445,
+      "assigned_order": 416,
       "source": "original",
       "tension": 2
     },
@@ -4987,7 +4987,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 360,
+      "assigned_order": 391,
       "source": "original",
       "tension": 2
     },
@@ -4995,12 +4995,12 @@
       "levelNumber": 454,
       "password": "G9819",
       "isHard": false,
-      "classification": "champion_win",
-      "difficulty_score": 15.9,
+      "classification": "solved_by_search_only",
+      "difficulty_score": 113.0,
       "pool": "assigned",
-      "assigned_order": 370,
+      "assigned_order": 385,
       "source": "original",
-      "tension": 2
+      "tension": null
     },
     {
       "levelNumber": 455,
@@ -5009,7 +5009,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 387,
+      "assigned_order": 399,
       "source": "original",
       "tension": 2
     },
@@ -5020,7 +5020,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 446,
+      "assigned_order": 436,
       "source": "original",
       "tension": 2
     },
@@ -5031,7 +5031,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 207,
+      "assigned_order": 248,
       "source": "original",
       "tension": 2
     },
@@ -5042,7 +5042,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 454,
+      "assigned_order": 455,
       "source": "original",
       "tension": 2
     },
@@ -5064,7 +5064,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.0,
       "pool": "assigned",
-      "assigned_order": 438,
+      "assigned_order": 471,
       "source": "original",
       "tension": 2
     },
@@ -5075,7 +5075,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.93,
       "pool": "assigned",
-      "assigned_order": 217,
+      "assigned_order": 255,
       "source": "original",
       "tension": 2
     },
@@ -5086,7 +5086,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 388,
+      "assigned_order": 400,
       "source": "original",
       "tension": 2
     },
@@ -5108,7 +5108,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 263,
+      "assigned_order": 321,
       "source": "original",
       "tension": 2
     },
@@ -5119,7 +5119,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 389,
+      "assigned_order": 401,
       "source": "original",
       "tension": 2
     },
@@ -5128,9 +5128,9 @@
       "password": "A1956",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.96,
-      "pool": "assigned",
-      "assigned_order": 406,
+      "difficulty_score": 16.5,
+      "pool": "ready",
+      "assigned_order": null,
       "source": "original",
       "tension": 2
     },
@@ -5141,7 +5141,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 390,
+      "assigned_order": 409,
       "source": "original",
       "tension": 2
     },
@@ -5152,7 +5152,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 416,
+      "assigned_order": 456,
       "source": "original",
       "tension": 2
     },
@@ -5163,7 +5163,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.5,
       "pool": "assigned",
-      "assigned_order": 222,
+      "assigned_order": 186,
       "source": "original",
       "tension": 2
     },
@@ -5174,7 +5174,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 426,
+      "assigned_order": 447,
       "source": "original",
       "tension": 2
     },
@@ -5183,9 +5183,9 @@
       "password": "Y2513",
       "isHard": false,
       "classification": "champion_win",
-      "difficulty_score": 15.9,
+      "difficulty_score": 14.16,
       "pool": "assigned",
-      "assigned_order": 391,
+      "assigned_order": 77,
       "source": "original",
       "tension": 2
     },
@@ -5196,7 +5196,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 436,
+      "assigned_order": 457,
       "source": "original",
       "tension": 2
     },
@@ -5207,7 +5207,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.7,
       "pool": "assigned",
-      "assigned_order": 288,
+      "assigned_order": 283,
       "source": "original",
       "tension": 2
     },
@@ -5218,7 +5218,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 455,
+      "assigned_order": 458,
       "source": "original",
       "tension": 2
     },
@@ -5229,7 +5229,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 351,
+      "assigned_order": 382,
       "source": "original",
       "tension": 2
     },
@@ -5240,7 +5240,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 361,
+      "assigned_order": 362,
       "source": "original",
       "tension": 2
     },
@@ -5262,7 +5262,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 371,
+      "assigned_order": 372,
       "source": "original",
       "tension": 2
     },
@@ -5273,7 +5273,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 381,
+      "assigned_order": 392,
       "source": "original",
       "tension": 2
     },
@@ -5284,7 +5284,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 447,
+      "assigned_order": 437,
       "source": "original",
       "tension": 2
     },
@@ -5295,7 +5295,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.3,
       "pool": "assigned",
-      "assigned_order": 258,
+      "assigned_order": 241,
       "source": "original",
       "tension": 2
     },
@@ -5306,7 +5306,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.92,
       "pool": "assigned",
-      "assigned_order": 401,
+      "assigned_order": 412,
       "source": "original",
       "tension": 2
     },
@@ -5317,7 +5317,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.92,
       "pool": "assigned",
-      "assigned_order": 409,
+      "assigned_order": 420,
       "source": "original",
       "tension": 2
     },
@@ -5328,7 +5328,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.6,
       "pool": "assigned",
-      "assigned_order": 261,
+      "assigned_order": 301,
       "source": "original",
       "tension": 2
     },
@@ -5339,18 +5339,18 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 456,
+      "assigned_order": 417,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 486,
       "password": "F2252",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 14.35,
       "pool": "assigned",
-      "assigned_order": 77,
+      "assigned_order": 222,
       "source": "original",
       "tension": 2
     },
@@ -5372,7 +5372,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 398,
+      "assigned_order": 402,
       "source": "original",
       "tension": 2
     },
@@ -5383,7 +5383,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 457,
+      "assigned_order": 427,
       "source": "original",
       "tension": 2
     },
@@ -5394,7 +5394,7 @@
       "classification": "champion_win",
       "difficulty_score": 14.61,
       "pool": "assigned",
-      "assigned_order": 195,
+      "assigned_order": 206,
       "source": "original",
       "tension": 2
     },
@@ -5427,7 +5427,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 458,
+      "assigned_order": 466,
       "source": "original",
       "tension": 2
     },
@@ -5438,7 +5438,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.9,
       "pool": "assigned",
-      "assigned_order": 399,
+      "assigned_order": 410,
       "source": "original",
       "tension": 2
     },
@@ -5449,7 +5449,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.88,
       "pool": "assigned",
-      "assigned_order": 273,
+      "assigned_order": 322,
       "source": "original",
       "tension": 2
     },
@@ -5460,7 +5460,7 @@
       "classification": "champion_win",
       "difficulty_score": 16.1,
       "pool": "assigned",
-      "assigned_order": 491,
+      "assigned_order": 493,
       "source": "original",
       "tension": 2
     },
@@ -5471,7 +5471,7 @@
       "classification": "champion_win",
       "difficulty_score": 15.96,
       "pool": "assigned",
-      "assigned_order": 417,
+      "assigned_order": 467,
       "source": "original",
       "tension": 2
     },
@@ -5482,7 +5482,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.43,
       "pool": "assigned",
-      "assigned_order": 104,
+      "assigned_order": 145,
       "source": "original",
       "tension": 2
     },
@@ -5555,11 +5555,11 @@
     {
       "levelNumber": 505,
       "password": "T9816",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.8,
       "pool": "assigned",
-      "assigned_order": 55,
+      "assigned_order": 200,
       "source": "original",
       "tension": 2
     },
@@ -5603,7 +5603,7 @@
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 168,
+      "assigned_order": 139,
       "source": "original",
       "tension": 2
     },
@@ -5614,18 +5614,18 @@
       "classification": "champion_win",
       "difficulty_score": 13.15,
       "pool": "assigned",
-      "assigned_order": 98,
+      "assigned_order": 168,
       "source": "original",
       "tension": 2
     },
     {
       "levelNumber": 511,
       "password": "Z2313",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "difficulty_score": 13.2,
       "pool": "assigned",
-      "assigned_order": 22,
+      "assigned_order": 149,
       "source": "original",
       "tension": 2
     },
@@ -5658,7 +5658,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.23,
       "pool": "assigned",
-      "assigned_order": 59,
+      "assigned_order": 79,
       "source": "original",
       "tension": 2
     },
@@ -5691,7 +5691,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.83,
       "pool": "assigned",
-      "assigned_order": 51,
+      "assigned_order": 71,
       "source": "original",
       "tension": 2
     },
@@ -5702,7 +5702,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.87,
       "pool": "assigned",
-      "assigned_order": 71,
+      "assigned_order": 101,
       "source": "original",
       "tension": 2
     },
@@ -5735,7 +5735,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 53,
+      "assigned_order": 93,
       "source": "original",
       "tension": 1
     },
@@ -5746,7 +5746,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.4,
       "pool": "assigned",
-      "assigned_order": 30,
+      "assigned_order": 20,
       "source": "original",
       "tension": 2
     },
@@ -5768,7 +5768,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.57,
       "pool": "assigned",
-      "assigned_order": 90,
+      "assigned_order": 81,
       "source": "original",
       "tension": 2
     },
@@ -5779,7 +5779,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.8,
       "pool": "assigned",
-      "assigned_order": 126,
+      "assigned_order": 87,
       "source": "original",
       "tension": 2
     },
@@ -5812,7 +5812,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.5,
       "pool": "assigned",
-      "assigned_order": 20,
+      "assigned_order": 40,
       "source": "original",
       "tension": 1
     },
@@ -5823,7 +5823,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.17,
       "pool": "assigned",
-      "assigned_order": 63,
+      "assigned_order": 113,
       "source": "original",
       "tension": 2
     },
@@ -5834,7 +5834,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.87,
       "pool": "assigned",
-      "assigned_order": 91,
+      "assigned_order": 92,
       "source": "original",
       "tension": 2
     },
@@ -5845,7 +5845,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.2,
       "pool": "assigned",
-      "assigned_order": 19,
+      "assigned_order": 39,
       "source": "original",
       "tension": 2
     },
@@ -5889,7 +5889,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.21,
       "pool": "assigned",
-      "assigned_order": 113,
+      "assigned_order": 54,
       "source": "original",
       "tension": 2
     },
@@ -5900,7 +5900,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.47,
       "pool": "assigned",
-      "assigned_order": 134,
+      "assigned_order": 75,
       "source": "original",
       "tension": 1
     },
@@ -5911,7 +5911,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.53,
       "pool": "assigned",
-      "assigned_order": 40,
+      "assigned_order": 60,
       "source": "original",
       "tension": 2
     },
@@ -5955,7 +5955,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.47,
       "pool": "assigned",
-      "assigned_order": 125,
+      "assigned_order": 85,
       "source": "original",
       "tension": 2
     },
@@ -5966,7 +5966,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.51,
       "pool": "assigned",
-      "assigned_order": 95,
+      "assigned_order": 135,
       "source": "original",
       "tension": 1
     },
@@ -5977,7 +5977,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.6,
       "pool": "assigned",
-      "assigned_order": 81,
+      "assigned_order": 21,
       "source": "original",
       "tension": 1
     },
@@ -5988,7 +5988,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.27,
       "pool": "assigned",
-      "assigned_order": 79,
+      "assigned_order": 90,
       "source": "original",
       "tension": 1
     },
@@ -5999,7 +5999,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.77,
       "pool": "assigned",
-      "assigned_order": 106,
+      "assigned_order": 167,
       "source": "original",
       "tension": 2
     },
@@ -6010,7 +6010,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.51,
       "pool": "assigned",
-      "assigned_order": 105,
+      "assigned_order": 156,
       "source": "original",
       "tension": 2
     },
@@ -6021,7 +6021,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.13,
       "pool": "assigned",
-      "assigned_order": 62,
+      "assigned_order": 102,
       "source": "original",
       "tension": 2
     },
@@ -6032,7 +6032,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.51,
       "pool": "assigned",
-      "assigned_order": 115,
+      "assigned_order": 116,
       "source": "original",
       "tension": 2
     },
@@ -6043,7 +6043,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.87,
       "pool": "assigned",
-      "assigned_order": 101,
+      "assigned_order": 52,
       "source": "original",
       "tension": 1
     },
@@ -6064,8 +6064,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 12.21,
-      "pool": "ready",
-      "assigned_order": null,
+      "pool": "assigned",
+      "assigned_order": 64,
       "source": "original",
       "tension": 1
     },
@@ -6087,7 +6087,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.2,
       "pool": "assigned",
-      "assigned_order": 73,
+      "assigned_order": 123,
       "source": "original",
       "tension": 2
     },
@@ -6109,7 +6109,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.77,
       "pool": "assigned",
-      "assigned_order": 116,
+      "assigned_order": 147,
       "source": "original",
       "tension": 2
     },
@@ -6131,7 +6131,7 @@
       "classification": "champion_win",
       "difficulty_score": 11.4,
       "pool": "assigned",
-      "assigned_order": 10,
+      "assigned_order": 30,
       "source": "original",
       "tension": 2
     },
@@ -6142,7 +6142,7 @@
       "classification": "champion_win",
       "difficulty_score": 12.21,
       "pool": "assigned",
-      "assigned_order": 94,
+      "assigned_order": 84,
       "source": "original",
       "tension": 2
     },
@@ -6153,7 +6153,7 @@
       "classification": "champion_win",
       "difficulty_score": 10.9,
       "pool": "assigned",
-      "assigned_order": 28,
+      "assigned_order": 8,
       "source": "original",
       "tension": 2
     },
@@ -6164,7 +6164,7 @@
       "classification": "champion_win",
       "difficulty_score": 10.9,
       "pool": "assigned",
-      "assigned_order": 8,
+      "assigned_order": 18,
       "source": "original",
       "tension": 1
     },
@@ -6175,7 +6175,7 @@
       "classification": "champion_win",
       "difficulty_score": 10.9,
       "pool": "assigned",
-      "assigned_order": 18,
+      "assigned_order": 28,
       "source": "original",
       "tension": 2
     },
@@ -6251,8 +6251,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.27,
-      "pool": "ready",
-      "assigned_order": null,
+      "pool": "assigned",
+      "assigned_order": 50,
       "source": "original",
       "tension": 1
     },
@@ -6317,8 +6317,8 @@
       "isHard": false,
       "classification": "champion_win",
       "difficulty_score": 11.1,
-      "pool": "ready",
-      "assigned_order": null,
+      "pool": "assigned",
+      "assigned_order": 49,
       "source": "original",
       "tension": 2
     },

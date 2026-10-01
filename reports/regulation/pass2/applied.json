@@ -1,8 +1,8 @@
 {
  "counts": {
-  "kept_ok": 424,
+  "kept_ok": 487,
   "breather": 76,
-  "llm_proposal": 7,
+  "llm_proposal": 26,
   "unresolved": 1,
   "improved_partial": 1
  },
@@ -14,6 +14,25 @@
   "Level_154.asset",
   "Level_217.asset",
   "Level_222.asset",
+  "Level_232.asset",
+  "Level_243.asset",
+  "Level_254.asset",
+  "Level_260.asset",
+  "Level_280.asset",
+  "Level_286.asset",
+  "Level_299.asset",
+  "Level_311.asset",
+  "Level_315.asset",
+  "Level_328.asset",
+  "Level_355.asset",
+  "Level_360.asset",
+  "Level_373.asset",
+  "Level_388.asset",
+  "Level_406.asset",
+  "Level_430.asset",
+  "Level_454.asset",
+  "Level_466.asset",
+  "Level_471.asset",
   "Level_508_generated.asset"
  ]
 }
