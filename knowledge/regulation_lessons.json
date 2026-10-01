@@ -1328,5 +1328,12 @@
   "note": "Design note: Early low‑HP pirates in columns 1 and 4 let the player pre‑merge cannons to raise damage, creating a tight race to kill the later HP‑6 “tank” pirates before they reach position 3 while ot",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:16:59+00:00",
+  "target": "tank",
+  "note": "Design note: Early low‑HP pirates force the player to stack merges in columns 0 and 1 before the HP‑7 and HP‑6 tanks arrive, leaving just enough damage to race against the final HP‑4 tank in column 4.",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
