@@ -1307,5 +1307,12 @@
   "note": "Design note: Early low‑HP pirates in columns 1 and 2 let the player pre‑merge cannons to damage 2, forcing a tense race to kill the mid‑level tank pirates (HP 5) before they reach position 3 while oth",
   "success": false,
   "reason": "not winnable (2 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:16:00+00:00",
+  "target": "tank",
+  "note": "Design note: Early low‑HP pirates force the player to merge cannons in columns 1 and 2 before the mid‑level tank pirates (HP 5) appear, creating a tight three‑round race to kill the tanks while other ",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
