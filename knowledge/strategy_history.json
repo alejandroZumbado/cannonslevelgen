@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T00:56:19+00:00",
-    "promoted": false,
-    "win_rate": 0.933,
-    "candidate_win_rate": 0.1144,
-    "summary": "**Change summary** – When any column’s total remaining HP exceeds the damage it can still deal before the front pirate reaches the loss position, the policy now **forces a merge into that column** (by spawning on it if i"
-  },
-  {
     "timestamp": "2026-09-28T00:57:44+00:00",
     "promoted": false,
     "win_rate": 0.9232,
@@ -138,5 +131,12 @@
     "win_rate": 0.9352,
     "candidate_win_rate": 0.9352,
     "summary": "**Change summary** – The current tie‑breaker rewards *reserved* empty columns but does **not** reward keeping a cannon on a column that already contains a pirate.  Moving a cannon away from a defended column can leave th"
+  },
+  {
+    "timestamp": "2026-10-01T06:13:12+00:00",
+    "promoted": false,
+    "win_rate": 0.9236,
+    "candidate_win_rate": 0.9193,
+    "summary": "**Change summary** – The current policy spreads cannons because a *move* does not increase the `total_damage` sum, so the tie‑breaker later penalises the loss of coverage. This makes it reluctant to concentrate damage in"
   }
 ]
