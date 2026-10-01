@@ -1237,5 +1237,12 @@
   "note": "Design note: The level starts with a few isolated low‑HP pirates, then each subsequent third adds more columns and higher HP, culminating in a dense, high‑HP wave that forces the player to merge canno",
   "success": false,
   "reason": "not winnable (8 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:10:52+00:00",
+  "target": "crescendo",
+  "note": "Design note: The level slowly builds pressure, beginning with lone weak pirates, then adding more columns and higher‑HP foes each third, culminating in a dense, high‑HP wave that forces early spreadin",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]

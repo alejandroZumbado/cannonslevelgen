@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T00:53:59+00:00",
-    "promoted": false,
-    "win_rate": 0.9216,
-    "candidate_win_rate": 0.9216,
-    "summary": "**Change summary**  \nThe current policy *rewards* “reserved” cannons (cannons sitting in columns that currently have no pirate) with the `‑reserved` term in its decision key. This makes the AI prefer spawning new 1‑damag"
-  },
-  {
     "timestamp": "2026-09-28T00:55:01+00:00",
     "promoted": false,
     "win_rate": 0.9265,
@@ -138,5 +131,12 @@
     "win_rate": 0.9294,
     "candidate_win_rate": 0.9251,
     "summary": "**Change summary** – The original `deficit` only counted the rounds until the *front* pirate would reach position 3 (`steps = MAX_POSITION‑front.position`). In a stacked column each extra pirate behind the front actually"
+  },
+  {
+    "timestamp": "2026-10-01T06:11:10+00:00",
+    "promoted": false,
+    "win_rate": 0.9265,
+    "candidate_win_rate": 0.9265,
+    "summary": "**Change explanation**  \nThe current policy does not give enough priority to a *move* that places a cannon directly on a column where the front pirate is already at position 2 and can be killed this round. In such a situ"
   }
 ]
