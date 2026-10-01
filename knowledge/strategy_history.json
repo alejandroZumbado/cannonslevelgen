@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T00:55:01+00:00",
-    "promoted": false,
-    "win_rate": 0.9265,
-    "candidate_win_rate": 0.9216,
-    "summary": "**Change summary** – The `deficit` function assumes the column can deal damage for only the number of rounds the current front pirate has before reaching position 3 (`steps = MAX_POSITION - front.position`). This is too "
-  },
-  {
     "timestamp": "2026-09-28T00:56:19+00:00",
     "promoted": false,
     "win_rate": 0.933,
@@ -138,5 +131,12 @@
     "win_rate": 0.9265,
     "candidate_win_rate": 0.9265,
     "summary": "**Change explanation**  \nThe current policy does not give enough priority to a *move* that places a cannon directly on a column where the front pirate is already at position 2 and can be killed this round. In such a situ"
+  },
+  {
+    "timestamp": "2026-10-01T06:12:19+00:00",
+    "promoted": false,
+    "win_rate": 0.9352,
+    "candidate_win_rate": 0.9352,
+    "summary": "**Change summary** – The current tie‑breaker rewards *reserved* empty columns but does **not** reward keeping a cannon on a column that already contains a pirate.  Moving a cannon away from a defended column can leave th"
   }
 ]

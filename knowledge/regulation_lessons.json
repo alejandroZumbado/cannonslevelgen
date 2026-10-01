@@ -1244,5 +1244,12 @@
   "note": "Design note: The level slowly builds pressure, beginning with lone weak pirates, then adding more columns and higher‑HP foes each third, culminating in a dense, high‑HP wave that forces early spreadin",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:11:37+00:00",
+  "target": "switch",
+  "note": "Design note: The level forces the player to concentrate fire on the left side (columns 0‑1) for the first half, then swing to the right side (columns 3‑4) in the second half, requiring strategic canno",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
