@@ -1,6 +1,6 @@
 {
- "assigned": 63,
- "done": 63,
+ "assigned": 73,
+ "done": 73,
  "levels": [
   {
    "levelNumber": 8,
@@ -8742,6 +8742,241 @@
     "primary": "crescendo"
    },
    "status": "breather",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 512,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.3,
+    "pacing": {
+     "filas": 4,
+     "pirates_per_fila": 2.25,
+     "single_pirate_share": 0.25,
+     "late_demand": 1.75,
+     "archetypes": [
+      "swarm",
+      "wall"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 520,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.0,
+    "pacing": {
+     "filas": 4,
+     "pirates_per_fila": 1.75,
+     "single_pirate_share": 0.5,
+     "late_demand": 1.5,
+     "archetypes": [
+      "crescendo",
+      "burst",
+      "swarm"
+     ],
+     "primary": "crescendo",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 528,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.5,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.4,
+     "late_demand": 1.4,
+     "archetypes": [
+      "crescendo",
+      "swarm",
+      "wall"
+     ],
+     "primary": "crescendo",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 536,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 12.47,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.33,
+     "late_demand": 1.45,
+     "archetypes": [
+      "crescendo",
+      "wall",
+      "swarm"
+     ],
+     "primary": "crescendo",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 544,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.27,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.67,
+     "single_pirate_share": 0.33,
+     "late_demand": 0.92,
+     "archetypes": [
+      "wall",
+      "swarm",
+      "crescendo"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 552,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.5,
+    "pacing": {
+     "filas": 4,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.25,
+     "late_demand": 1.75,
+     "archetypes": [
+      "wall",
+      "swarm",
+      "crescendo"
+     ],
+     "primary": "wall",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "wall"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 560,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.9,
+    "pacing": {
+     "filas": 5,
+     "pirates_per_fila": 1.6,
+     "single_pirate_share": 0.4,
+     "late_demand": 1.2,
+     "archetypes": [
+      "crescendo",
+      "switch",
+      "swarm",
+      "wall"
+     ],
+     "primary": "crescendo",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "crescendo"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 568,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 11.27,
+    "pacing": {
+     "filas": 6,
+     "pirates_per_fila": 1.5,
+     "single_pirate_share": 0.5,
+     "late_demand": 0.92,
+     "archetypes": [
+      "swarm"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 576,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.2,
+    "pacing": {
+     "filas": 4,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.25,
+     "late_demand": 1.5,
+     "archetypes": [
+      "swarm"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "kept_ok",
+   "seconds": 0.0
+  },
+  {
+   "levelNumber": 584,
+   "before": {
+    "classification": "champion_win",
+    "difficulty": 10.3,
+    "pacing": {
+     "filas": 4,
+     "pirates_per_fila": 2.0,
+     "single_pirate_share": 0.25,
+     "late_demand": 1.5,
+     "archetypes": [
+      "swarm",
+      "wall"
+     ],
+     "primary": "swarm",
+     "problems": []
+    },
+    "pirates_left": 0,
+    "primary": "swarm"
+   },
+   "status": "kept_ok",
    "seconds": 0.0
   }
  ]
