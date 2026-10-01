@@ -1286,5 +1286,12 @@
   "note": "Design note: Introduces two “tank” pirates (HP 5 in column 1 and HP 4 in column 2) that force the player to pre‑merge cannons in those columns early, while the surrounding low‑HP pirates keep pressure",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:15:12+00:00",
+  "target": "tank",
+  "note": "Design note: Introduces two high‑HP “tank” pirates (HP 5 in column 1 and HP 5 in column 2) that appear mid‑level, forcing the player to pre‑merge cannons in those columns during the early low‑HP waves",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
