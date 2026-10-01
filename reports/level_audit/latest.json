@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T00:08:20+00:00",
+  "generated_at": "2026-10-01T01:40:57+00:00",
   "policy_name": "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage_reserve",
   "policy_source_chars": 8946,
   "escalation_beam_widths": [
@@ -9,10 +9,10 @@
   ],
   "max_rounds": 60,
   "total_levels": 591,
-  "elapsed_seconds": 229.7,
+  "elapsed_seconds": 344.2,
   "counts": {
-    "champion_win": 556,
-    "solved_by_search_only": 34,
+    "champion_win": 554,
+    "solved_by_search_only": 36,
     "no_win_found": 1
   },
   "levels": [
@@ -38,15 +38,15 @@
       "isHard": true,
       "classification": "solved_by_search_only",
       "champion_won": false,
-      "champion_rounds_played": 16,
+      "champion_rounds_played": 19,
       "champion_max_position_reached": 3,
       "solver_ran": true,
       "solver_won": true,
-      "solver_rounds_played": 19,
-      "solver_beam_width_used": 200,
-      "solver_total_nodes": 60838,
+      "solver_rounds_played": 21,
+      "solver_beam_width_used": 800,
+      "solver_total_nodes": 277474,
       "solver_pirates_remaining": 0,
-      "difficulty_score": 122.5
+      "difficulty_score": 123.0
     },
     {
       "levelNumber": 292,
@@ -177,6 +177,22 @@
       "difficulty_score": 113.5
     },
     {
+      "levelNumber": 406,
+      "password": "J1222",
+      "isHard": false,
+      "classification": "solved_by_search_only",
+      "champion_won": false,
+      "champion_rounds_played": 10,
+      "champion_max_position_reached": 3,
+      "solver_ran": true,
+      "solver_won": true,
+      "solver_rounds_played": 11,
+      "solver_beam_width_used": 200,
+      "solver_total_nodes": 30703,
+      "solver_pirates_remaining": 0,
+      "difficulty_score": 113.5
+    },
+    {
       "levelNumber": 492,
       "password": "W6500",
       "isHard": true,
@@ -237,6 +253,22 @@
       "solver_rounds_played": 10,
       "solver_beam_width_used": 200,
       "solver_total_nodes": 17484,
+      "solver_pirates_remaining": 0,
+      "difficulty_score": 113.0
+    },
+    {
+      "levelNumber": 454,
+      "password": "G9819",
+      "isHard": false,
+      "classification": "solved_by_search_only",
+      "champion_won": false,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 3,
+      "solver_ran": true,
+      "solver_won": true,
+      "solver_rounds_played": 11,
+      "solver_beam_width_used": 200,
+      "solver_total_nodes": 32952,
       "solver_pirates_remaining": 0,
       "difficulty_score": 113.0
     },
@@ -577,22 +609,6 @@
       "difficulty_score": 108.0
     },
     {
-      "levelNumber": 373,
-      "password": "M6961",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 13,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 17.84
-    },
-    {
       "levelNumber": 426,
       "password": "M8646",
       "isHard": false,
@@ -689,6 +705,22 @@
       "difficulty_score": 16.5
     },
     {
+      "levelNumber": 466,
+      "password": "A1956",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 16.5
+    },
+    {
       "levelNumber": 385,
       "password": "T4727",
       "isHard": false,
@@ -769,8 +801,8 @@
       "difficulty_score": 16.34
     },
     {
-      "levelNumber": 311,
-      "password": "X8608",
+      "levelNumber": 328,
+      "password": "B8138",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -851,22 +883,6 @@
     {
       "levelNumber": 152,
       "password": "Y5277",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 16.18
-    },
-    {
-      "levelNumber": 355,
-      "password": "T3323",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -1059,38 +1075,6 @@
     {
       "levelNumber": 241,
       "password": "Q6105",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 9,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 16.13
-    },
-    {
-      "levelNumber": 280,
-      "password": "V5745",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 9,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 16.13
-    },
-    {
-      "levelNumber": 299,
-      "password": "W9154",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -1331,22 +1315,6 @@
     {
       "levelNumber": 420,
       "password": "A9340",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 9,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 16.1
-    },
-    {
-      "levelNumber": 430,
-      "password": "J6308",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -1713,22 +1681,6 @@
       "difficulty_score": 15.96
     },
     {
-      "levelNumber": 232,
-      "password": "Z8197",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 11,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.96
-    },
-    {
       "levelNumber": 248,
       "password": "Q2233",
       "isHard": false,
@@ -1761,24 +1713,8 @@
       "difficulty_score": 15.96
     },
     {
-      "levelNumber": 286,
-      "password": "X1086",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 11,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.96
-    },
-    {
-      "levelNumber": 328,
-      "password": "B8138",
+      "levelNumber": 311,
+      "password": "X8608",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -1873,22 +1809,6 @@
       "difficulty_score": 15.96
     },
     {
-      "levelNumber": 360,
-      "password": "K9320",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 11,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.96
-    },
-    {
       "levelNumber": 377,
       "password": "B6790",
       "isHard": false,
@@ -1939,22 +1859,6 @@
     {
       "levelNumber": 397,
       "password": "G7235",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 11,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.96
-    },
-    {
-      "levelNumber": 406,
-      "password": "J1222",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -2179,22 +2083,6 @@
     {
       "levelNumber": 458,
       "password": "C7544",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 11,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.96
-    },
-    {
-      "levelNumber": 466,
-      "password": "A1956",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -2769,22 +2657,6 @@
       "difficulty_score": 15.9
     },
     {
-      "levelNumber": 243,
-      "password": "B2859",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.9
-    },
-    {
       "levelNumber": 244,
       "password": "E8873",
       "isHard": false,
@@ -2817,22 +2689,6 @@
       "difficulty_score": 15.9
     },
     {
-      "levelNumber": 254,
-      "password": "K6221",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.9
-    },
-    {
       "levelNumber": 256,
       "password": "U3547",
       "isHard": false,
@@ -2851,22 +2707,6 @@
     {
       "levelNumber": 259,
       "password": "J3427",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.9
-    },
-    {
-      "levelNumber": 260,
-      "password": "A8171",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -3265,22 +3105,6 @@
       "difficulty_score": 15.9
     },
     {
-      "levelNumber": 388,
-      "password": "N4221",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.9
-    },
-    {
       "levelNumber": 389,
       "password": "M7146",
       "isHard": false,
@@ -3473,22 +3297,6 @@
       "difficulty_score": 15.9
     },
     {
-      "levelNumber": 454,
-      "password": "G9819",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.9
-    },
-    {
       "levelNumber": 455,
       "password": "M9804",
       "isHard": false,
@@ -3539,22 +3347,6 @@
     {
       "levelNumber": 467,
       "password": "P5971",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 10,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 15.9
-    },
-    {
-      "levelNumber": 471,
-      "password": "Y2513",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -4291,7 +4083,7 @@
     {
       "levelNumber": 352,
       "password": "T1539",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -4307,7 +4099,7 @@
     {
       "levelNumber": 362,
       "password": "R5885",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -4353,6 +4145,22 @@
       "difficulty_score": 15.13
     },
     {
+      "levelNumber": 360,
+      "password": "K9320",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 15.06
+    },
+    {
       "levelNumber": 423,
       "password": "I9557",
       "isHard": false,
@@ -4371,7 +4179,7 @@
     {
       "levelNumber": 190,
       "password": "L1287",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -4483,7 +4291,7 @@
     {
       "levelNumber": 276,
       "password": "K8826",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -4531,7 +4339,7 @@
     {
       "levelNumber": 142,
       "password": "E5294",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -4547,7 +4355,7 @@
     {
       "levelNumber": 266,
       "password": "U4447",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -4657,6 +4465,22 @@
       "difficulty_score": 14.8
     },
     {
+      "levelNumber": 373,
+      "password": "M6961",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 12,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 14.8
+    },
+    {
       "levelNumber": 238,
       "password": "A7479",
       "isHard": false,
@@ -4691,7 +4515,7 @@
     {
       "levelNumber": 58,
       "password": "I5026",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -4707,7 +4531,7 @@
     {
       "levelNumber": 302,
       "password": "P9090",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -4835,7 +4659,7 @@
     {
       "levelNumber": 282,
       "password": "R5278",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -4867,7 +4691,7 @@
     {
       "levelNumber": 224,
       "password": "B2654",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -4915,6 +4739,54 @@
     {
       "levelNumber": 258,
       "password": "R8648",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 14.46
+    },
+    {
+      "levelNumber": 260,
+      "password": "A8171",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 14.46
+    },
+    {
+      "levelNumber": 286,
+      "password": "X1086",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 14.46
+    },
+    {
+      "levelNumber": 388,
+      "password": "N4221",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -5011,7 +4883,7 @@
     {
       "levelNumber": 261,
       "password": "K2382",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -5041,6 +4913,22 @@
       "difficulty_score": 14.38
     },
     {
+      "levelNumber": 243,
+      "password": "B2859",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 9,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 14.35
+    },
+    {
       "levelNumber": 367,
       "password": "M7368",
       "isHard": false,
@@ -5059,7 +4947,7 @@
     {
       "levelNumber": 486,
       "password": "F2252",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -5091,7 +4979,7 @@
     {
       "levelNumber": 126,
       "password": "D1252",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5169,6 +5057,22 @@
       "difficulty_score": 14.16
     },
     {
+      "levelNumber": 471,
+      "password": "Y2513",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 11,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 14.16
+    },
+    {
       "levelNumber": 86,
       "password": "V6428",
       "isHard": false,
@@ -5187,7 +5091,7 @@
     {
       "levelNumber": 111,
       "password": "W3678",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -5283,7 +5187,7 @@
     {
       "levelNumber": 274,
       "password": "Z1926",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5331,7 +5235,7 @@
     {
       "levelNumber": 505,
       "password": "T9816",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -5352,6 +5256,22 @@
       "champion_won": true,
       "champion_rounds_played": 10,
       "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 13.78
+    },
+    {
+      "levelNumber": 430,
+      "password": "J6308",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 10,
+      "champion_max_position_reached": 1,
       "solver_ran": false,
       "solver_won": null,
       "solver_rounds_played": null,
@@ -5443,7 +5363,7 @@
     {
       "levelNumber": 204,
       "password": "Y1257",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5475,7 +5395,7 @@
     {
       "levelNumber": 166,
       "password": "Y6909",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 6,
@@ -5539,7 +5459,7 @@
     {
       "levelNumber": 123,
       "password": "R6902",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5635,6 +5555,22 @@
     {
       "levelNumber": 60,
       "password": "U1300",
+      "isHard": true,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 9,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 13.45
+    },
+    {
+      "levelNumber": 315,
+      "password": "J1801",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -5681,22 +5617,6 @@
       "difficulty_score": 13.4
     },
     {
-      "levelNumber": 315,
-      "password": "J1801",
-      "isHard": false,
-      "classification": "champion_win",
-      "champion_won": true,
-      "champion_rounds_played": 6,
-      "champion_max_position_reached": 2,
-      "solver_ran": false,
-      "solver_won": null,
-      "solver_rounds_played": null,
-      "solver_beam_width_used": null,
-      "solver_total_nodes": null,
-      "solver_pirates_remaining": null,
-      "difficulty_score": 13.4
-    },
-    {
       "levelNumber": 372,
       "password": "V6995",
       "isHard": false,
@@ -5715,7 +5635,7 @@
     {
       "levelNumber": 255,
       "password": "O2380",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 7,
@@ -5779,7 +5699,7 @@
     {
       "levelNumber": 59,
       "password": "G6535",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -5875,7 +5795,7 @@
     {
       "levelNumber": 511,
       "password": "Z2313",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -5907,7 +5827,7 @@
     {
       "levelNumber": 49,
       "password": "M5577",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -5923,6 +5843,22 @@
     {
       "levelNumber": 131,
       "password": "F3495",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 9,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 13.15
+    },
+    {
+      "levelNumber": 254,
+      "password": "K6221",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -6179,6 +6115,22 @@
     {
       "levelNumber": 234,
       "password": "R8051",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 8,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 12.73
+    },
+    {
+      "levelNumber": 355,
+      "password": "T3323",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -6721,6 +6673,22 @@
       "difficulty_score": 12.17
     },
     {
+      "levelNumber": 299,
+      "password": "W9154",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 7,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 12.17
+    },
+    {
       "levelNumber": 521,
       "password": "C6000",
       "isHard": false,
@@ -7023,6 +6991,22 @@
       "solver_total_nodes": null,
       "solver_pirates_remaining": null,
       "difficulty_score": 11.83
+    },
+    {
+      "levelNumber": 280,
+      "password": "V5745",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 6,
+      "champion_max_position_reached": 1,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 11.8
     },
     {
       "levelNumber": 40,
@@ -7640,6 +7624,22 @@
       "champion_won": true,
       "champion_rounds_played": 7,
       "champion_max_position_reached": 1,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 11.0
+    },
+    {
+      "levelNumber": 232,
+      "password": "Z8197",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 6,
+      "champion_max_position_reached": 2,
       "solver_ran": false,
       "solver_won": null,
       "solver_rounds_played": null,
@@ -9475,18 +9475,21 @@
   ],
   "comparison_to_previous_run": {
     "has_previous": true,
-    "previous_generated_at": "2026-09-28T16:36:01+00:00",
+    "previous_generated_at": "2026-10-01T00:08:20+00:00",
     "previous_counts": {
-      "champion_win": 474,
-      "solved_by_search_only": 34,
-      "no_win_found": 1
-    },
-    "current_counts": {
       "champion_win": 556,
       "solved_by_search_only": 34,
       "no_win_found": 1
     },
+    "current_counts": {
+      "champion_win": 554,
+      "solved_by_search_only": 36,
+      "no_win_found": 1
+    },
     "newly_champion_win": [],
-    "regressed_from_champion_win": []
+    "regressed_from_champion_win": [
+      406,
+      454
+    ]
   }
 }
