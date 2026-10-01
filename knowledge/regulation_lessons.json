@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-25T01:46:49+00:00",
-  "target": "swarm",
-  "note": "Design note: A tight “one‑hit‑kill” swarm where every pirate is 1 HP forces the player to spread cannons early while the single‑cannon per round budget keeps tension high and the level resolves quickl",
-  "success": true,
-  "reason": "fitness 781 -> 891, archetype None"
- },
- {
   "at": "2026-09-25T01:47:50+00:00",
   "target": "tank",
   "note": "Design note: Force the player to merge cannons in one column during the first few rounds to create a high‑damage shot that can instantly kill a later high‑HP “tank” while a spread of 1‑HP pirates in o",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early waves flood multiple columns with 1‑HP pirates so the player can repeatedly merge a cannon in column 0, building damage to 4 by round 3, then a high‑HP tank (HP 8) appears in column",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:21:02+00:00",
+  "target": "tank",
+  "note": "Design note: Build damage early by flooding column 0 with four 1‑HP pirates, then introduce an HP‑5 “tank” in that column that is killed after a fifth merge, while later waves add multiple pirates acr",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
