@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-25T01:54:41+00:00",
-  "target": "tank",
-  "note": "Design note: Early rounds force merges in column 2 to build a high‑damage cannon that can one‑shot a later HP‑7 tank, while a staggered mix of 1‑HP pirates across the other columns maintains constant ",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != tank)"
- },
- {
   "at": "2026-09-26T01:39:41+00:00",
   "target": "tank",
   "note": "Design note: Early rounds force the player to merge repeatedly in column 2, building a 5‑damage cannon that can one‑shot a later HP‑5 “tank” while a spread of 1‑HP pirates across the other columns kee",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood column 0 with five 1‑HP pirates in the first five waves so the player can merge a cannon up to damage 5, then unleash an HP‑5 “tank” in column 0 on wave 6 while keeping other column",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:22:44+00:00",
+  "target": "tank",
+  "note": "Design note: Flood column 2 with a line of 1‑HP pirates for the first five waves so the player can merge a cannon up to damage 5, then unleash an HP‑6 “tank” in column 2 on the sixth wave while sprink",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
