@@ -1,6 +1,6 @@
 # Release gate — HOLD
 
-_2026-10-01T02:25:19+00:00_
+_2026-10-01T02:28:25+00:00_
 
 ## HOLD
 - [batches] nothing new to ship since the last deploy
