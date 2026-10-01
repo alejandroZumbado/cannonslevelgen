@@ -1342,5 +1342,12 @@
   "note": "Design note: Early low‑HP pirates force the player to merge cannons in columns 0‑3 before the high‑HP “tank” pirates arrive, so each tank can be killed within its three‑shot window while the later tan",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:17:44+00:00",
+  "target": "tank",
+  "note": "Design note: Early rows flood columns 0‑4 with 1‑HP pirates so the player can stack merges and boost damage, then a few high‑HP “tank” pirates (HP 7‑9) appear in columns 1 and 3 that must be killed wi",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
