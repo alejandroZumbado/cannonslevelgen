@@ -1,10 +1,10 @@
 {
  "counts": {
-  "kept_ok": 127,
+  "kept_ok": 169,
   "breather": 76,
   "regulated": 34,
-  "llm_proposal": 7,
-  "repaired": 263,
+  "llm_proposal": 26,
+  "repaired": 244,
   "unresolved": 1,
   "improved_partial": 1
  },

@@ -1404,7 +1404,8 @@
    "primary": "swarm"
   },
   "fitness": 1015.0,
-  "improves_on_fitness": 999.88
+  "improves_on_fitness": 999.88,
+  "applied_in": "pass1"
  },
  "243": {
   "level": {
@@ -1562,7 +1563,8 @@
    "primary": "burst"
   },
   "fitness": 1025.05,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  },
  "254": {
   "level": {
@@ -1699,7 +1701,8 @@
    "primary": "crescendo"
   },
   "fitness": 1021.45,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  },
  "260": {
   "level": {
@@ -1864,7 +1867,8 @@
    "primary": "crescendo"
   },
   "fitness": 1025.38,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  },
  "280": {
   "level": {
@@ -1975,7 +1979,8 @@
    "primary": "crescendo"
   },
   "fitness": 1017.4,
-  "improves_on_fitness": 999.61
+  "improves_on_fitness": 999.61,
+  "applied_in": "pass1"
  },
  "286": {
   "level": {
@@ -2135,7 +2140,8 @@
    "primary": "crescendo"
   },
   "fitness": 1025.38,
-  "improves_on_fitness": 999.88
+  "improves_on_fitness": 999.88,
+  "applied_in": "pass1"
  },
  "299": {
   "level": {
@@ -2248,7 +2254,8 @@
    "primary": "crescendo"
   },
   "fitness": 1018.51,
-  "improves_on_fitness": 999.61
+  "improves_on_fitness": 999.61,
+  "applied_in": "pass1"
  },
  "311": {
   "level": {
@@ -2441,7 +2448,8 @@
    "primary": "crescendo"
   },
   "fitness": 1029.88,
-  "improves_on_fitness": 999.22
+  "improves_on_fitness": 999.22,
+  "applied_in": "pass1"
  },
  "315": {
   "level": {
@@ -2583,7 +2591,8 @@
    "primary": "wall"
   },
   "fitness": 992.35,
-  "improves_on_fitness": 992.2
+  "improves_on_fitness": 992.2,
+  "applied_in": "pass1"
  },
  "328": {
   "level": {
@@ -2778,7 +2787,8 @@
    "primary": "swarm"
   },
   "fitness": 1029.22,
-  "improves_on_fitness": 999.88
+  "improves_on_fitness": 999.88,
+  "applied_in": "pass1"
  },
  "355": {
   "level": {
@@ -2907,7 +2917,8 @@
    "primary": "crescendo"
   },
   "fitness": 1020.19,
-  "improves_on_fitness": 999.46
+  "improves_on_fitness": 999.46,
+  "applied_in": "pass1"
  },
  "360": {
   "level": {
@@ -3077,7 +3088,8 @@
    "primary": "crescendo"
   },
   "fitness": 1027.1799999999998,
-  "improves_on_fitness": 999.88
+  "improves_on_fitness": 999.88,
+  "applied_in": "pass1"
  },
  "373": {
   "level": {
@@ -3252,7 +3264,8 @@
    "primary": "wall"
   },
   "fitness": 996.4,
-  "improves_on_fitness": 994.48
+  "improves_on_fitness": 994.48,
+  "applied_in": "pass1"
  },
  "388": {
   "level": {
@@ -3408,7 +3421,8 @@
    "primary": "crescendo"
   },
   "fitness": 1025.38,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  },
  "406": {
   "level": {
@@ -3590,7 +3604,8 @@
    "primary": "crescendo"
   },
   "fitness": 1012.0,
-  "improves_on_fitness": 999.88
+  "improves_on_fitness": 999.88,
+  "applied_in": "pass1"
  },
  "430": {
   "level": {
@@ -3740,7 +3755,8 @@
    "primary": "crescendo"
   },
   "fitness": 1023.34,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  },
  "454": {
   "level": {
@@ -3910,7 +3926,8 @@
    "primary": "crescendo"
   },
   "fitness": 1012.0,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  },
  "466": {
   "level": {
@@ -4111,7 +4128,8 @@
    "primary": "crescendo"
   },
   "fitness": 1028.5,
-  "improves_on_fitness": 999.88
+  "improves_on_fitness": 999.88,
+  "applied_in": "pass1"
  },
  "471": {
   "level": {
@@ -4267,6 +4285,7 @@
    "primary": "crescendo"
   },
   "fitness": 1024.48,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "applied_in": "pass1"
  }
 }
