@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-25T01:39:15+00:00",
-  "target": "swarm",
-  "note": "Design note: Concentrate the swarm into a single column so the single cannon each round can reliably chip away at each pirate’s HP, using merges to boost damage for the occasional higher‑HP foe while ",
-  "success": true,
-  "reason": "fitness -45 -> 906, archetype wall"
- },
- {
   "at": "2026-09-25T01:43:15+00:00",
   "target": "swarm",
   "note": "Design note: A steady swarm of three 1‑HP pirates per wave forces the player to spread cannons early while repeatedly merging into a single column to ramp up damage, keeping tension high and staying w",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood column 0 with three 1‑HP pirates in the first three waves so the player can merge a cannon there each round, building damage 3 before an HP‑8 “tank” appears in that column, while th",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:20:31+00:00",
+  "target": "tank",
+  "note": "Design note: Build damage by merging seven 1‑HP pirates in column 2 over the first seven waves, then a HP‑8 “tank” appears in that column; extra pirates are introduced only after the tank so they can ",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.68 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
