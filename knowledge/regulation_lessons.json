@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-25T01:37:10+00:00",
-  "target": "swarm",
-  "note": "Design note: Spread your cannons across the columns each round to thin out the swarm before any pirate can advance to the loss position.",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-25T01:39:15+00:00",
   "target": "swarm",
   "note": "Design note: Concentrate the swarm into a single column so the single cannon each round can reliably chip away at each pirate’s HP, using merges to boost damage for the occasional higher‑HP foe while ",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood the early waves with multiple 1‑HP pirates across several columns so the player can repeatedly merge a cannon in column 0, building enough damage to kill a later HP‑8 tank there whi",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:20:11+00:00",
+  "target": "tank",
+  "note": "Design note: Flood column 0 with three 1‑HP pirates in the first three waves so the player can merge a cannon there each round, building damage 3 before an HP‑8 “tank” appears in that column, while th",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
