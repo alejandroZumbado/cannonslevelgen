@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-27T01:38:05+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.9232,
-    "summary": "**Change summary**  \nThe champion’s tie‑breaker rewards “reserved” cannons – ones sitting in columns that currently have no pirate – with `‑reserved`.  \nWhen a column already contains a pirate that cannot be killed with "
-  },
-  {
     "timestamp": "2026-09-27T01:39:22+00:00",
     "promoted": false,
     "win_rate": 0.9281,
@@ -138,5 +131,12 @@
     "win_rate": 0.9314,
     "candidate_win_rate": 0.9314,
     "summary": "**Change summary** – The current tie‑breaking prefers actions that maximise *coverage* and *reserved* columns, but it never values leaving *empty* columns for the next spawn. When two safe actions are otherwise equal, th"
+  },
+  {
+    "timestamp": "2026-10-01T06:07:18+00:00",
+    "promoted": false,
+    "win_rate": 0.9308,
+    "candidate_win_rate": 0.9308,
+    "summary": "**Change summary** – The original tie‑breaker only rewards *coverage* (having a cannon in many columns) and *reserved* columns (cannons on empty columns), but it never values leaving **empty** columns for the next round’"
   }
 ]

@@ -1216,5 +1216,12 @@
   "note": "Design note: A constant swarm of low‑HP pirates appears across multiple columns each round, forcing the player to spread cannons early and later merge to sustain enough damage.",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-01T06:07:02+00:00",
+  "target": "burst",
+  "note": "Design note: The level starts with a few isolated low‑HP pirates, then erupts into multi‑column swarms that force the player to spread cannons early and later merge them into high‑damage towers to sur",
+  "success": false,
+  "reason": "not winnable (7 pirates survive the solver)"
  }
 ]
