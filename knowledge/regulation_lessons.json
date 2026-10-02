@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:33:02+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with a tight two‑column wave on the left to force early cannon merges, then abruptly switches pressure to the right side for a “switch” test of moving and merging cannons",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-27T01:33:34+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the left side (columns 0‑1) with a stream of 1‑HP pirates to force early cannon merges, then abruptly switches to the right side (columns 3‑4) where the built‑up canno",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood column 0 with a series of 1‑HP pirates while sprinkling other 1‑HP pirates elsewhere, letting the player merge five times to build a damage‑5 cannon that instantly kills a single HP",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-02T05:57:51+00:00",
+  "target": "tank",
+  "note": "Design note: Flood columns 0‑4 with 1‑HP pirates for the first five waves so the player can repeatedly merge in column 2 to build a damage‑5 cannon, then unleash a single HP‑5 tank in column 2 on wave",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
