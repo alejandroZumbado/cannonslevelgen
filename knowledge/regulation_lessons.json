@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:40:55+00:00",
-  "target": "swarm",
-  "note": "Design note: A constant swarm of low‑HP pirates is spread across 3‑5 columns each round, never placing pirates in the same column on consecutive rounds, so the player must keep cannons balanced and ca",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:40:59+00:00",
   "target": "switch",
   "note": "Design note: The level forces the player to concentrate fire on the right‑side columns (0‑1) for the first half, then abruptly shifts the pressure to the left‑side columns (3‑4), requiring a cannon mo",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon in column 2 by merging three 1‑HP pirates in the first three waves, use it to kill a 6‑HP tank on wave 4 while a separate cannon in column 0 handles early threats,",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: 62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
+ },
+ {
+  "at": "2026-10-02T06:01:25+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 2 during the first three waves, then use it to thin out a series of higher‑HP “tank” pirates that appear later in the same ",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
