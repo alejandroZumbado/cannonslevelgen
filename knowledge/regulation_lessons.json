@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:43:07+00:00",
-  "target": "switch",
-  "note": "Design note: The level concentrates early pressure on the right‑side columns (0‑1) with a mix of low‑ and medium‑HP pirates, then abruptly flips to the left‑side columns (3‑4) forcing the player to re",
-  "success": true,
-  "reason": "fitness 991 -> 992, archetype wall"
- },
- {
   "at": "2026-09-27T01:43:26+00:00",
   "target": "switch",
   "note": "Design note: The level starts by piling pressure on the left‑side columns (0‑1) with a burst of low‑HP pirates, then after a safe pause flips the threat to the right‑side columns (3‑4), forcing the pl",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon early by merging three 1‑HP pirates in column 0 (rows 1‑3), then let that cannon cleanly kill an 8‑HP tank that appears in column 2 on row 7 while the remaining lo",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-02T06:03:21+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 5‑damage cannon by merging five 1‑HP pirates in column 0 over the first five rows, then let that cannon instantly destroy a 5‑HP tank that appears in the same column while other l",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
