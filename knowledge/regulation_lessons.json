@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:40:45+00:00",
-  "target": "swarm",
-  "note": "Design note: The level creates a constant swarm of low‑HP pirates spread over 3‑5 columns each round, forcing the player to keep cannons balanced across the board rather than stacking damage in a sing",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:40:55+00:00",
   "target": "swarm",
   "note": "Design note: A constant swarm of low‑HP pirates is spread across 3‑5 columns each round, never placing pirates in the same column on consecutive rounds, so the player must keep cannons balanced and ca",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 4‑damage cannon by merging four 1‑HP pirates in column 2 during the first four waves, then unleash a high‑HP tank (HP 7) in that column on wave 5 while keeping other columns fille",
   "success": false,
   "reason": "not winnable (1 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:00:56+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon in column 2 by merging three 1‑HP pirates in the first three waves, use it to kill a 6‑HP tank on wave 4 while a separate cannon in column 0 handles early threats,",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 1: 62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
  }
 ]
