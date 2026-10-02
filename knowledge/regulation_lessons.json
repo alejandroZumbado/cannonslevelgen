@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:41:30+00:00",
-  "target": "switch",
-  "note": "Design note: The level forces the player to focus fire on the right‑side columns (0‑1) for the first half, then abruptly shifts the threat to the left‑side columns (3‑4) with higher‑HP pirates, demand",
-  "success": false,
-  "reason": "not winnable (4 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:42:08+00:00",
   "target": "switch",
   "note": "Design note: The level forces the player to stack fire on the right‑side columns (0‑1) for the first half, then abruptly flips the threat to the left‑side columns (3‑4) with higher‑HP pirates, demandi",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 0 over the first three waves, then let that cannon cleanly destroy a 5‑HP and a 9‑HP tank that appear later, while using si",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:02:04+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 0 over the first three waves, then use that cannon to destroy a later HP‑5 “tank” in the same column while handling other l",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
