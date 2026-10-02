@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:45:15+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with pressure on the right‑hand side (columns 0‑1), then abruptly switches to the left‑hand side (columns 3‑4), forcing the player to relocate their cannon to stay effect",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != switch)"
- },
- {
   "at": "2026-09-27T01:45:34+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the player first on the left side (columns 0‑1) for several rounds, then abruptly shifts the threat to the right side (columns 3‑4), forcing a timely cannon relocation",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early three 1‑HP pirates in column 0 let the player merge to a 3‑damage cannon just in time to kill an 8‑HP tank on wave 4 while other columns keep a steady stream of low‑HP pirates.",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:05:10+00:00",
+  "target": "tank",
+  "note": "Design note: The player merges three early 1‑HP pirates in column 2 to create a 3‑damage cannon, then uses it to shred a 9‑HP tank that appears in that column on wave 4, while the other columns contin",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
