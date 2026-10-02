@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:38:30+00:00",
-  "target": "switch",
-  "note": "Design note: The level forces the player to stack damage on the right‑side columns (0‑1) with low‑HP pirates, then abruptly switches the pressure to the left‑side columns (3‑4) where higher‑HP pirates",
-  "success": true,
-  "reason": "fitness 992 -> 994, archetype burst"
- },
- {
   "at": "2026-09-27T01:39:47+00:00",
   "target": "switch",
   "note": "Design note: The level forces the player to build up high‑damage cannons on the left side (columns 0‑1) with a series of low‑HP pirates, then abruptly shifts the pressure to the right side (columns 3‑",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a damage‑6 cannon by merging five successive 1‑HP pirates in column 2, then unleash an HP‑7 “tank” in that column on wave 6 while keeping other columns populated with low‑HP pirates",
   "success": false,
   "reason": "not better than the regulator's version (archetype burst != tank)"
+ },
+ {
+  "at": "2026-10-02T05:59:38+00:00",
+  "target": "tank",
+  "note": "Design note: Build a damage‑4 cannon by merging three early 1‑HP pirates in column 2, then confront an HP‑9 tank in that column while the other columns stay populated with low‑HP pirates, creating a t",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
