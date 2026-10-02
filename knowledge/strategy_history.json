@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T02:06:40+00:00",
-    "promoted": false,
-    "win_rate": 0.9199,
-    "candidate_win_rate": 0.6601,
-    "summary": "**Change summary** – The original `deficit` assumes the damage a column can deal in the remaining rounds is just `cannon_damage * steps`. It forgets that when a pirate is already on the loss‑border (position 2) we can st"
-  },
-  {
     "timestamp": "2026-09-29T02:07:53+00:00",
     "promoted": false,
     "win_rate": 0.9281,
@@ -138,5 +131,12 @@
     "win_rate": 0.9308,
     "candidate_win_rate": 0.9308,
     "summary": "**Change explanation**\n\nThe champion policy never explicitly rewards *stacking* damage in a column that already holds a cannon but no pirate. Consequently it keeps spreading 1‑damage cannons, missing the chance to pre‑me"
+  },
+  {
+    "timestamp": "2026-10-02T05:56:33+00:00",
+    "promoted": false,
+    "win_rate": 0.9308,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
