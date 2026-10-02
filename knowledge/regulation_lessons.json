@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:45:34+00:00",
-  "target": "switch",
-  "note": "Design note: The level pressures the player first on the left side (columns 0‑1) for several rounds, then abruptly shifts the threat to the right side (columns 3‑4), forcing a timely cannon relocation",
-  "success": false,
-  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.57 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
- },
- {
   "at": "2026-09-27T01:46:00+00:00",
   "target": "burst",
   "note": "Design note: The level opens with a few isolated low‑HP pirates, then erupts into dense multi‑column waves that force the player to have built up cannon damage through early merges before the sudden o",
@@ -1398,5 +1391,12 @@
   "note": "Design note: The player merges three early 1‑HP pirates in column 2 to create a 3‑damage cannon, then uses it to shred a 9‑HP tank that appears in that column on wave 4, while the other columns contin",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:05:21+00:00",
+  "target": "tank",
+  "note": "Design note: Early three 1‑HP pirates in column 2 let the player build a 3‑damage cannon by round 3, which then reliably kills a 7‑HP tank that appears in the same column on wave 7, while the other co",
+  "success": true,
+  "reason": "fitness 996 -> 998, archetype swarm"
  }
 ]
