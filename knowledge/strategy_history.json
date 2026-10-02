@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T02:05:25+00:00",
-    "promoted": false,
-    "win_rate": 0.9265,
-    "candidate_win_rate": 0.9265,
-    "summary": "**Change summary** – The current `deficit` treats a column with a front pirate at position 2 the same as any other column, so when that pirate has more HP than the cannon’s damage the policy does not give extra weight to"
-  },
-  {
     "timestamp": "2026-09-29T02:06:40+00:00",
     "promoted": false,
     "win_rate": 0.9199,
@@ -138,5 +131,12 @@
     "win_rate": 0.928,
     "candidate_win_rate": 0.9179,
     "summary": "**Change summary**  \nThe original `deficit` assumes the *total* HP of all pirates in a column can be dealt with the current cannon damage for the remaining steps, which over‑estimates the damage that can actually be appl"
+  },
+  {
+    "timestamp": "2026-10-02T05:55:20+00:00",
+    "promoted": false,
+    "win_rate": 0.9308,
+    "candidate_win_rate": 0.9308,
+    "summary": "**Change explanation**\n\nThe champion policy never explicitly rewards *stacking* damage in a column that already holds a cannon but no pirate. Consequently it keeps spreading 1‑damage cannons, missing the chance to pre‑me"
   }
 ]

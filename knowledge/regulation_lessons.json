@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-26T01:48:01+00:00",
-  "target": "tank",
-  "note": "Design note: Seed four consecutive 1‑HP pirates in column 2 so the player is forced to merge cannons there and build a 5‑damage cannon, then unleash an 8‑HP tank in column 3 that the prepared cannon c",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != tank)"
- },
- {
   "at": "2026-09-26T01:49:57+00:00",
   "target": "tank",
   "note": "Design note: A rapid succession of 1‑HP pirates in column 2 forces the player to merge five times early, creating a 5‑damage cannon that instantly kills the HP‑5 tank that arrives next, while later a ",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a strong cannon by merging low‑HP pirates in column 0 during the first five waves, then unleash an HP‑9 tank in that column on wave 6 while keeping light pressure in the other colum",
   "success": false,
   "reason": "not better than the regulator's version (archetype switch != tank)"
+ },
+ {
+  "at": "2026-10-02T05:54:29+00:00",
+  "target": "tank",
+  "note": "Design note: Stack a series of 1‑HP pirates in column 0 for the first five waves to let the player safely merge into a high‑damage cannon, then unleash an HP‑9 tank in column 0 on wave 6 while keeping",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
