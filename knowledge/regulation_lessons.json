@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:40:26+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with a cluster of low‑HP pirates in the right‑most columns (0‑1) forcing the player to build up damage there, then abruptly shifts the pressure to the left‑most columns (",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-27T01:40:45+00:00",
   "target": "swarm",
   "note": "Design note: The level creates a constant swarm of low‑HP pirates spread over 3‑5 columns each round, forcing the player to keep cannons balanced across the board rather than stacking damage in a sing",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 2, then use it to eliminate an HP‑6 tank that appears later, while the remaining columns provide light, spread‑out pressure",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:00:49+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 4‑damage cannon by merging four 1‑HP pirates in column 2 during the first four waves, then unleash a high‑HP tank (HP 7) in that column on wave 5 while keeping other columns fille",
+  "success": false,
+  "reason": "not winnable (1 pirates survive the solver)"
  }
 ]
