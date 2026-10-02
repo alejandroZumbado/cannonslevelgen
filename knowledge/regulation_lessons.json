@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-26T01:41:58+00:00",
-  "target": "tank",
-  "note": "Design note: Early rounds force the player to merge twice in column 2 to create a 5‑damage cannon that one‑shots a later HP‑8 “tank” while a steady spread of 1‑HP pirates across the other columns crea",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != tank)"
- },
- {
   "at": "2026-09-26T01:43:45+00:00",
   "target": "tank",
   "note": "Design note: Early rounds seed low‑HP pirates in column 2 to force the player to merge twice there, creating a 5‑damage cannon that later one‑shots a HP‑9 tank appearing in column 3, while the remaini",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood early waves with 1‑HP pirates in all columns so the player can repeatedly merge in column 0, building a high‑damage cannon before a single HP‑8 tank arrives in column 0 while the ot",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T05:49:56+00:00",
+  "target": "tank",
+  "note": "Design note: Build a high‑damage cannon by repeatedly merging in column 0 during the first five waves, then unleash an HP‑9 tank in that column on wave 6 while other columns keep the pressure alive.",
+  "success": true,
+  "reason": "fitness 995 -> 1000, archetype swarm"
  }
 ]

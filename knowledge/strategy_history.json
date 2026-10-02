@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T00:57:44+00:00",
-    "promoted": false,
-    "win_rate": 0.9232,
-    "candidate_win_rate": 0.915,
-    "summary": "**Change summary**  \nThe original `deficit` assumes a column can deal damage for only `MAX_POSITION‑front.position` rounds, i.e. until the current front pirate would reach the loss tile. This under‑estimates the total nu"
-  },
-  {
     "timestamp": "2026-09-28T00:58:44+00:00",
     "promoted": false,
     "win_rate": 0.9248,
@@ -138,5 +131,12 @@
     "win_rate": 0.9236,
     "candidate_win_rate": 0.9193,
     "summary": "**Change summary** – The current policy spreads cannons because a *move* does not increase the `total_damage` sum, so the tie‑breaker later penalises the loss of coverage. This makes it reluctant to concentrate damage in"
+  },
+  {
+    "timestamp": "2026-10-02T05:50:25+00:00",
+    "promoted": false,
+    "win_rate": 0.9323,
+    "candidate_win_rate": 0.9323,
+    "summary": "**Change summary** – The original policy penalises *move* actions in the final tie‑breaker (`tie_pref = 0` for moves, `1` for spawns). When all other key components are equal this makes the agent choose to spawn a new ca"
   }
 ]
