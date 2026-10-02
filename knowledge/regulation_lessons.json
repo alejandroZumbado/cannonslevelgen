@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:43:47+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with low‑HP pirates packed in the right‑most columns (0‑1) and modestly ramps up danger, then abruptly flips to the left‑most columns (3‑4) with higher‑HP waves, forcing ",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-27T01:44:06+00:00",
   "target": "switch",
   "note": "Design note: The level starts by stacking low‑HP pirates in the left‑most columns (0‑1), then after a brief lull flips the pressure to the right‑most columns (3‑4) and finally mixes both sides with hi",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon in column 0 by merging three 1‑HP pirates in the first three waves, then let it chip away at the 8‑HP tank that appears in column 2 on wave 7 while a 1‑HP blocker ",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:04:22+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 0 during the first three waves, then use it to shred a 6‑HP tank that arrives in the same column on wave 4 while other colu",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
