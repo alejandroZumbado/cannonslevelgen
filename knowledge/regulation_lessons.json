@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:45:04+00:00",
-  "target": "burst",
-  "note": "Design note: The level starts with a few isolated low‑HP pirates, then suddenly unleashes dense waves of five pirates per round, forcing the player to build up cannon damage through early merges to su",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != burst)"
- },
- {
   "at": "2026-09-27T01:45:15+00:00",
   "target": "switch",
   "note": "Design note: The level starts with pressure on the right‑hand side (columns 0‑1), then abruptly switches to the left‑hand side (columns 3‑4), forcing the player to relocate their cannon to stay effect",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon early in column 0 by merging three 1‑HP pirates, then let it shred the 7‑HP tank that appears later while the other columns keep a steady flow of low‑HP pirates fo",
   "success": false,
   "reason": "not better than the regulator's version (archetype switch != tank)"
+ },
+ {
+  "at": "2026-10-02T06:04:53+00:00",
+  "target": "tank",
+  "note": "Design note: Early three 1‑HP pirates in column 0 let the player merge to a 3‑damage cannon just in time to kill an 8‑HP tank on wave 4 while other columns keep a steady stream of low‑HP pirates.",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
