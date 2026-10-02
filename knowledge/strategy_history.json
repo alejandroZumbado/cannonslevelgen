@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-28T00:58:44+00:00",
-    "promoted": false,
-    "win_rate": 0.9248,
-    "candidate_win_rate": 0.817,
-    "summary": "**Change summary** – When the AI *moves* a cannon into a column whose front pirate is already at position 2 (one step from the loss tile), we give that action an extra priority boost. The original policy penalises moves "
-  },
-  {
     "timestamp": "2026-09-29T02:03:21+00:00",
     "promoted": false,
     "win_rate": 0.915,
@@ -138,5 +131,12 @@
     "win_rate": 0.9323,
     "candidate_win_rate": 0.9323,
     "summary": "**Change summary** – The original policy penalises *move* actions in the final tie‑breaker (`tie_pref = 0` for moves, `1` for spawns). When all other key components are equal this makes the agent choose to spawn a new ca"
+  },
+  {
+    "timestamp": "2026-10-02T05:51:29+00:00",
+    "promoted": false,
+    "win_rate": 0.9294,
+    "candidate_win_rate": 0.6095,
+    "summary": "**Change summary**  \nThe original `deficit` assumes the damage a column can deal in the remaining rounds is `dmg * steps`, ignoring that we can merge the ever‑present pending cannon each round and therefore increase the "
   }
 ]
