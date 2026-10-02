@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:44:28+00:00",
-  "target": "burst",
-  "note": "",
-  "success": false,
-  "reason": "no valid JSON level"
- },
- {
   "at": "2026-09-27T01:45:04+00:00",
   "target": "burst",
   "note": "Design note: The level starts with a few isolated low‑HP pirates, then suddenly unleashes dense waves of five pirates per round, forcing the player to build up cannon damage through early merges to su",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 2 during the first three waves, then use it to kill a 6‑HP tank that appears in that column on wave 4 while keeping multipl",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:04:48+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon early in column 0 by merging three 1‑HP pirates, then let it shred the 7‑HP tank that appears later while the other columns keep a steady flow of low‑HP pirates fo",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype switch != tank)"
  }
 ]
