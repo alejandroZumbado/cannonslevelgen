@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:40:59+00:00",
-  "target": "switch",
-  "note": "Design note: The level forces the player to concentrate fire on the right‑side columns (0‑1) for the first half, then abruptly shifts the pressure to the left‑side columns (3‑4), requiring a cannon mo",
-  "success": false,
-  "reason": "not better than the regulator's version (gets easier as it goes: last-third pressure 0.67 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
- },
- {
   "at": "2026-09-27T01:41:25+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the player to stack fire on the right‑hand columns (0‑1) for the first half, then abruptly flips the threat to the left‑hand columns (3‑4), forcing cannon moves or mer",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 2 during the first three waves, then use it to thin out a series of higher‑HP “tank” pirates that appear later in the same ",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-02T06:01:32+00:00",
+  "target": "tank",
+  "note": "Design note: Early rows flood columns 0, 1, 2 with 1‑HP pirates to build 4‑damage cannons in each, then later introduce high‑HP “tank” pirates that those cannons can eliminate within the three‑shot wi",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
