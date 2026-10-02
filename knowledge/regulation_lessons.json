@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:46:00+00:00",
-  "target": "burst",
-  "note": "Design note: The level opens with a few isolated low‑HP pirates, then erupts into dense multi‑column waves that force the player to have built up cannon damage through early merges before the sudden o",
-  "success": false,
-  "reason": "not winnable (10 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:46:14+00:00",
   "target": "burst",
   "note": "Design note: The level starts with a few isolated 1‑HP pirates, builds a modest 2‑HP wall, then bursts into a dense 5‑pirate wave of 2‑HP enemies, forcing the player to have accumulated enough cannons",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early three 1‑HP pirates in column 2 let the player build a 3‑damage cannon by round 3, which then reliably kills a 7‑HP tank that appears in the same column on wave 7, while the other co",
   "success": true,
   "reason": "fitness 996 -> 998, archetype swarm"
+ },
+ {
+  "at": "2026-10-02T06:05:31+00:00",
+  "target": "tank",
+  "note": "Design note: Early trio of 1‑HP pirates in column 2 let the player build a 3‑damage cannon by round 3, which then shreds an 8‑HP tank on wave 7 while other columns stream low‑HP pirates to keep tensio",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != tank)"
  }
 ]
