@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-26T01:45:38+00:00",
-  "target": "tank",
-  "note": "Design note: Early flood of 1‑HP pirates in column 2 forces the player to merge twice, creating a 5‑damage cannon that one‑shots the HP‑5 tank that appears later, while the remaining columns keep a st",
-  "success": true,
-  "reason": "fitness 989 -> 996, archetype burst"
- },
- {
   "at": "2026-09-26T01:47:27+00:00",
   "target": "tank",
   "note": "Design note: Seed five consecutive 1‑HP pirates in column 2 to force early merges that build a 5‑damage cannon, then unleash a column‑2 HP‑5 tank while the other columns pepper the player with scatter",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Stack early 1‑HP pirates in column 0 so the player can merge a cannon up to high damage, then unleash an HP‑8 tank in that column while maintaining light pressure in the other columns.",
   "success": false,
   "reason": "not better than the regulator's version (archetype switch != tank)"
+ },
+ {
+  "at": "2026-10-02T05:52:01+00:00",
+  "target": "tank",
+  "note": "Design note: Flood the early waves with 1‑HP pirates in every column so the player can repeatedly merge in column 0, building a high‑damage cannon before an HP‑8 tank arrives in that column, while mai",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
