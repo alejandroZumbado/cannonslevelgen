@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:42:42+00:00",
-  "target": "swarm",
-  "note": "Design note: The level forces the player to place a cannon in every column during the first five waves, building a wide defense that is then tested by a three‑round surge of HP‑3 pirates across all co",
-  "success": false,
-  "reason": "not winnable (10 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:43:07+00:00",
   "target": "switch",
   "note": "Design note: The level concentrates early pressure on the right‑side columns (0‑1) with a mix of low‑ and medium‑HP pirates, then abruptly flips to the left‑side columns (3‑4) forcing the player to re",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 0 during the first three waves, then use that cannon to shred a 5‑HP tank in the same column while other low‑HP pirates acr",
   "success": false,
   "reason": "not winnable (2 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-02T06:03:04+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon early by merging three 1‑HP pirates in column 0 (rows 1‑3), then let that cannon cleanly kill an 8‑HP tank that appears in column 2 on row 7 while the remaining lo",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
