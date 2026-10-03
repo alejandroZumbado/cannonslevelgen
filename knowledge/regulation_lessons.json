@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T00:55:36+00:00",
-  "target": "switch",
-  "note": "Design note: The level pressures the player on the left side (columns 0‑1) for the first half, then abruptly shifts the threat to the right side (columns 3‑4) forcing the player to relocate or merge c",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-28T00:57:01+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the left side (columns 0‑1) with a steady buildup of low‑ to medium‑HP pirates, then abruptly switches to the right side (columns 3‑4) forcing the player to relocate o",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A late‑stage tank (HP 5) appears in column 2 after four early single‑pirate waves that let the player safely stack damage there, then the level spreads out to other columns so the player ",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-03T02:13:33+00:00",
+  "target": "tank",
+  "note": "Design note: A mid‑level tank HP 8 appears in column 2 after two early low‑HP column‑2 pirates, giving the player exactly two rounds to merge cannons there while a balanced spread of short‑lived pirat",
+  "success": false,
+  "reason": "not winnable (7 pirates survive the solver)"
  }
 ]
