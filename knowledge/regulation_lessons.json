@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:49:12+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with low‑HP pirates on the right‑most columns (0‑1) forcing the player to stack and merge cannons there, then abruptly shifts pressure to the left‑most columns (3‑4) with",
-  "success": false,
-  "reason": "not winnable (10 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:49:32+00:00",
   "target": "crescendo",
   "note": "Design note: The level begins with a lone 1‑HP pirate, gradually adds more columns and higher‑HP foes each round, peaking in the final three waves with full‑column, 4‑HP pirates that force the player ",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a “tank” column (2) that forces the player to merge early to reach 6‑damage by wave 7, while sprinkling low‑HP side pirates that can be cleared in the few non‑merge rounds, keeping ",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != tank)"
+ },
+ {
+  "at": "2026-10-03T02:12:04+00:00",
+  "target": "tank",
+  "note": "Design note: A “tank” pirate (HP 6) appears late in column 2, giving the player many early rounds to merge cannons in that column without interference, while sparse low‑HP side pirates keep the pressu",
+  "success": false,
+  "reason": "more pacing problems than the current version (0 -> 2: 88% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns; gets easier as it goes: last-third pressure 0.53 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
  }
 ]
