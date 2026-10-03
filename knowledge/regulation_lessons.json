@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T00:52:34+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, culminating in a dense final third that forces the player to merge and reposition cannon",
-  "success": false,
-  "reason": "not winnable (12 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T00:53:11+00:00",
   "target": "burst",
   "note": "Design note: The level begins with a few isolated 1‑HP pirates that let the player build up single‑column cannons, then a sudden “burst” of five medium‑HP pirates across all columns forces the player ",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A late‑stage tank (HP 9) appears in column 2 after four early waves of low‑HP pirates that let the player safely build a high‑damage cannon in that column, while the intervening waves kee",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-03T02:12:46+00:00",
+  "target": "tank",
+  "note": "Design note: A central “tank” pirate (HP 8) appears in column 2 mid‑level, forcing the player to pre‑merge cannons in that column early while a steady stream of low‑HP side pirates keeps pressure acro",
+  "success": false,
+  "reason": "not winnable (2 pirates survive the solver)"
  }
 ]
