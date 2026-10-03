@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T00:34:56+00:00",
-    "promoted": false,
-    "win_rate": 0.9167,
-    "candidate_win_rate": 0.9085,
-    "summary": "**Change summary** – The original `deficit` assumes a column can deal damage for only `MAX_POSITION‑front.position` rounds.  \nIf the cannon can kill the current front pirate **this round**, the column actually gets **one"
-  },
-  {
     "timestamp": "2026-09-30T00:36:13+00:00",
     "promoted": false,
     "win_rate": 0.9216,
@@ -138,5 +131,12 @@
     "win_rate": 0.928,
     "candidate_win_rate": 0.928,
     "summary": "**Change summary**  \nThe current tie‑break favours *coverage* (having cannons in many columns) before *reserved* columns (cannons that sit in empty columns ready for the next pirate). When two safe actions have identical"
+  },
+  {
+    "timestamp": "2026-10-03T02:08:14+00:00",
+    "promoted": false,
+    "win_rate": 0.9236,
+    "candidate_win_rate": 0.9135,
+    "summary": "**Change summary** – The current policy never explicitly rewards actions that *protect* a column where a pirate is already at position 2 (one step from loss). It only looks at killing the pirate next round, so when a can"
   }
 ]
