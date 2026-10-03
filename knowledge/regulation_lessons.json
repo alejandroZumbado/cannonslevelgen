@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:04:15+00:00",
-  "target": "burst",
-  "note": "Design note: A quiet start with one‑ and two‑pirate waves lets the player build a small cannon base, then rows 3‑6 explode into four‑to‑five‑pirate bursts that require quick merges and column juggling",
-  "success": false,
-  "reason": "not winnable (3 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:04:23+00:00",
   "target": "burst",
   "note": "Design note: A quiet opening with 1‑2 pirate waves lets the player build a modest cannon base, then rows 3‑6 explode into progressively larger 3‑5‑pirate bursts that force rapid merges and column jugg",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early rows flood column 2 with 1‑HP pirates to let the player merge repeatedly and build a high‑damage cannon, then a HP‑6 tank appears in column 2 followed by another HP‑6 tank in column",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-03T02:19:44+00:00",
+  "target": "tank",
+  "note": "Design note: Feed columns 0, 2, 4 with a steady stream of 1‑HP pirates for the first five waves so the player can safely merge and build high‑damage cannons, then unleash high‑HP “tank” pirates (HP 5‑",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
