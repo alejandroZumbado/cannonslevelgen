@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:01:44+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with a tight cluster of low‑HP pirates in columns 0‑1, forcing the player to move and merge cannons on the left side, then abruptly switches the pressure to columns 3‑4 f",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-28T01:01:53+00:00",
   "target": "switch",
   "note": "Design note: The level opens with tight pressure on columns 0‑1, forcing the player to build and merge cannons on the left, then abruptly switches the threat to columns 3‑4 while sprinkling occasional",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build massive cannon damage by feeding a single column with a stream of 1‑HP pirates, then unleash the accumulated firepower on a late‑stage HP‑6 tank while other columns supply harmless ",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-03T02:16:45+00:00",
+  "target": "tank",
+  "note": "Design note: Feed a single column with a stream of 1‑HP pirates so the player can merge every round, building a high‑damage cannon that slays a late‑stage HP‑8 tank in that column while other columns ",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype burst != tank)"
  }
 ]
