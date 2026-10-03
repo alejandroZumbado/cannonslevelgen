@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:46:14+00:00",
-  "target": "burst",
-  "note": "Design note: The level starts with a few isolated 1‑HP pirates, builds a modest 2‑HP wall, then bursts into a dense 5‑pirate wave of 2‑HP enemies, forcing the player to have accumulated enough cannons",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-27T01:46:29+00:00",
   "target": "switch",
   "note": "Design note: The level starts by concentrating low‑HP pirates on the left‑most columns (3‑4), then after a few rounds shifts the threat to the right‑most columns (0‑1), forcing the player to relocate ",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early trio of 1‑HP pirates in column 2 let the player build a 3‑damage cannon by round 3, which then shreds an 8‑HP tank on wave 7 while other columns stream low‑HP pirates to keep tensio",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != tank)"
+ },
+ {
+  "at": "2026-10-03T02:04:36+00:00",
+  "target": "tank",
+  "note": "Design note: Early trio of 1‑HP pirates in column 2 lets the player build a 3‑damage cannon by round 3, which then reliably kills an 8‑HP tank appearing in that column on wave 7 while other columns st",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]

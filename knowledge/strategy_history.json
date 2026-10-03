@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T02:07:53+00:00",
-    "promoted": false,
-    "win_rate": 0.9281,
-    "candidate_win_rate": 0.9232,
-    "summary": "**Change summary** – The original `deficit` assumes a column can deal damage for only `MAX_POSITION‑front.position` rounds, ignoring that killing the front pirate gives you an extra round to hit the next pirate in the sa"
-  },
-  {
     "timestamp": "2026-09-29T02:09:07+00:00",
     "promoted": false,
     "win_rate": 0.9265,
@@ -138,5 +131,12 @@
     "win_rate": 0.9308,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-10-03T02:04:48+00:00",
+    "promoted": false,
+    "win_rate": 0.9207,
+    "candidate_win_rate": 0.915,
+    "summary": "**Change summary** – The original `deficit` assumes every pirate in a column can be hit for the full number of rounds remaining before the current front pirate reaches position 3. This over‑estimates the damage that can "
   }
 ]
