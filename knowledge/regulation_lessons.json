@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:47:59+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level ramps up both the number of simultaneous pirates and their HP each round, creating a slow‑burn crescendo that forces the player to merge cannons increasingly later in the game.",
-  "success": false,
-  "reason": "not winnable (11 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:48:27+00:00",
   "target": "crescendo",
   "note": "Design note: A steady build‑up from solitary 1‑HP foes to full‑column waves of 2‑HP and finally a climax of 3‑HP pirates creates a clear crescendo while staying within the 45‑damage budget for a winna",
@@ -1398,5 +1391,12 @@
   "note": "Design note: By stacking three 1‑HP pirates in column 2 during the first three waves the player can merge a 3‑damage cannon, which is then strong enough to defeat a 9‑HP tank that appears in column 2 ",
   "success": true,
   "reason": "fitness 1000 -> 1000, archetype switch"
+ },
+ {
+  "at": "2026-10-03T02:08:51+00:00",
+  "target": "tank",
+  "note": "Design note: Stack three 1‑HP pirates in column 2 during the first three waves so the player can merge a 3‑damage cannon by round 3, then unleash a 6‑HP tank in column 2 on wave 6 while the other colu",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]

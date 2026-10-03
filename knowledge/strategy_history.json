@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T00:36:13+00:00",
-    "promoted": false,
-    "win_rate": 0.9216,
-    "candidate_win_rate": 0.0,
-    "summary": "candidate failed to load: policy source failed to exec: name 'MAX_POSITION' is not defined"
-  },
-  {
     "timestamp": "2026-09-30T00:37:30+00:00",
     "promoted": false,
     "win_rate": 0.9248,
@@ -138,5 +131,12 @@
     "win_rate": 0.9236,
     "candidate_win_rate": 0.9135,
     "summary": "**Change summary** – The current policy never explicitly rewards actions that *protect* a column where a pirate is already at position 2 (one step from loss). It only looks at killing the pirate next round, so when a can"
+  },
+  {
+    "timestamp": "2026-10-03T02:09:33+00:00",
+    "promoted": false,
+    "win_rate": 0.9308,
+    "candidate_win_rate": 0.9308,
+    "summary": "**Change summary** – The champion’s tie‑breaker prefers *coverage* (having cannons in many columns) before *reserved* columns (empty columns that could host a new cannon next round). When the board is already crowded, th"
   }
 ]
