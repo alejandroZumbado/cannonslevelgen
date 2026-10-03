@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:02:38+00:00",
-  "target": "swarm",
-  "note": "Design note: A rotating three‑column swarm forces the player to constantly shift and occasionally merge to handle the occasional 2‑ and 3‑HP pirates.",
-  "success": false,
-  "reason": "not winnable (4 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:02:54+00:00",
   "target": "crescendo",
   "note": "Design note: Crescendo from a light spread of 1‑HP pirates to a focused late‑game duel on columns 0‑1 with 2‑ and 3‑HP foes, forcing early cannon placement then timely merges.",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Feed columns 0 and 2 with a stream of 1‑HP pirates for the first six waves to let the player stack damage, then unleash a HP‑7 tank in column 2 on wave 7 while the other columns present l",
   "success": false,
   "reason": "not better than the regulator's version (archetype wall != tank)"
+ },
+ {
+  "at": "2026-10-03T02:17:50+00:00",
+  "target": "tank",
+  "note": "Design note: Feed column 2 with a stream of 1‑HP pirates for the first five rounds so the player can repeatedly merge a cannon there, building up to 8‑damage in time to kill a later HP‑8 tank while th",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype switch != tank)"
  }
 ]
