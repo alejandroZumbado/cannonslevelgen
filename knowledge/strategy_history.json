@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-29T02:09:07+00:00",
-    "promoted": false,
-    "win_rate": 0.9265,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-09-30T00:34:04+00:00",
     "promoted": false,
     "win_rate": 0.9216,
@@ -138,5 +131,12 @@
     "win_rate": 0.9207,
     "candidate_win_rate": 0.915,
     "summary": "**Change summary** – The original `deficit` assumes every pirate in a column can be hit for the full number of rounds remaining before the current front pirate reaches position 3. This over‑estimates the damage that can "
+  },
+  {
+    "timestamp": "2026-10-03T02:05:59+00:00",
+    "promoted": false,
+    "win_rate": 0.9366,
+    "candidate_win_rate": 0.9323,
+    "summary": "**Change summary**  \nThe original `deficit` uses the distance of the *current front* pirate (`MAX_POSITION - front[\"position\"]`) as the number of rounds left for that column. When the front pirate is killed early, the pi"
   }
 ]

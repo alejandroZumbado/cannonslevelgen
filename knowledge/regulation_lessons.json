@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:46:29+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts by concentrating low‑HP pirates on the left‑most columns (3‑4), then after a few rounds shifts the threat to the right‑most columns (0‑1), forcing the player to relocate ",
-  "success": false,
-  "reason": "not winnable (6 pirates survive the solver)"
- },
- {
   "at": "2026-09-27T01:46:37+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the right side (columns 4‑3) for the first half, then abruptly switches to the left side (columns 0‑1) requiring the player to relocate and merge cannons to survive th",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-03T02:04:36+00:00",
   "target": "tank",
   "note": "Design note: Early trio of 1‑HP pirates in column 2 lets the player build a 3‑damage cannon by round 3, which then reliably kills an 8‑HP tank appearing in that column on wave 7 while other columns st",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-03T02:05:25+00:00",
+  "target": "tank",
+  "note": "Design note: Early three 1‑HP pirates stack in column 2 so the player can merge a 3‑damage cannon by round 3, which then reliably shreds a 5‑HP tank arriving in that column on wave 7 while the other c",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
