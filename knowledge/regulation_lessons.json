@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:04:58+00:00",
-  "target": "switch",
-  "note": "Design note: The level pressures the left side (columns 0‑1) for the first four waves, then abruptly shifts the threat to the right side (columns 3‑4) while keeping a filler pirate in the middle, forc",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-28T01:05:54+00:00",
   "target": "crescendo",
   "note": "Design note: The level opens with a lone 1‑HP pirate, then gradually adds more columns and higher‑HP foes, culminating in a dense final third where every column fields increasingly tough pirates, crea",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Feed column 2 with a stream of 1‑HP pirates for the first six waves so the player can merge a single cannon up to 6 damage, then unleash three high‑HP “tank” pirates (HP 6) in that column",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-03T02:20:42+00:00",
+  "target": "tank",
+  "note": "Design note: Early rows flood columns 0, 2, 4 with 1‑HP pirates to let the player stack cannon damage, then progressively introduce high‑HP “tank” pirates in those same columns so the player must merg",
+  "success": false,
+  "reason": "not winnable (6 pirates survive the solver)"
  }
 ]
