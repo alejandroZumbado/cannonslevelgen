@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:04:26+00:00",
-  "target": "crescendo",
-  "note": "Design note: A gentle opening of isolated 1‑HP pirates lets the player build up damage, then mid‑game columns introduce paired 2‑HP foes that require timely merges, climaxing in a final wave of three ",
-  "success": true,
-  "reason": "fitness 1000 -> 1025, archetype crescendo"
- },
- {
   "at": "2026-09-28T01:04:30+00:00",
   "target": "switch",
   "note": "Design note: The level starts with a slow build on the left side (columns 0‑1), then abruptly switches pressure to the right side (columns 3‑4), forcing the player to relocate or merge cannons while a",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early waves flood columns 0, 2, 4 with a stream of 1‑HP pirates so the player can merge cannons and build high damage, then rows 8‑10 introduce HP‑6 “tank” pirates in those same columns, ",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-03T02:20:15+00:00",
+  "target": "tank",
+  "note": "Design note: Early rows flood columns 0, 2, 4 with 1‑HP pirates so the player can merge and build a high‑damage cannon before three 6‑HP tank pirates arrive in those same columns, creating a tense “ta",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype wall != tank)"
  }
 ]
