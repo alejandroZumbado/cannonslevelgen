@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:00:44+00:00",
-  "target": "swarm",
-  "note": "Design note: A pure swarm of 1‑HP pirates appears across three columns each round, forcing the player to spread cannons wide and merge occasionally to keep up with the constant pressure.",
-  "success": false,
-  "reason": "not winnable (4 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:01:05+00:00",
   "target": "burst",
   "note": "Design note: A calm opening with 1‑2 isolated pirates lets the player build up cannon damage, then a sudden surge of 4‑5 low‑HP pirates forces the player to spread cannons and use merges to survive th",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build up massive cannon damage with a stream of one‑HP pirates in column 2, then unleash it on a late‑stage HP‑10 tank while other columns keep the pressure alive.",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-03T02:15:51+00:00",
+  "target": "tank",
+  "note": "Design note: A steady stream of one‑HP pirates in column 2 lets the player merge damage each round, reaching 9 damage by the final wave where a HP‑9 tank appears in that column while the other columns",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
