@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T00:53:11+00:00",
-  "target": "burst",
-  "note": "Design note: The level begins with a few isolated 1‑HP pirates that let the player build up single‑column cannons, then a sudden “burst” of five medium‑HP pirates across all columns forces the player ",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-28T00:54:24+00:00",
   "target": "burst",
   "note": "Design note: The level starts with calm single‑pirate rows, then ramps up to a sudden “burst” of five medium‑HP pirates across all columns, forcing the player to rely on accumulated cannon merges to s",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A central “tank” pirate (HP 8) appears in column 2 mid‑level, forcing the player to pre‑merge cannons in that column early while a steady stream of low‑HP side pirates keeps pressure acro",
   "success": false,
   "reason": "not winnable (2 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-03T02:12:55+00:00",
+  "target": "tank",
+  "note": "Design note: A late‑stage high‑HP “tank” appears in column 2 after several low‑HP column 2 pirates, giving the player time to merge cannons there while a steady spread of side pirates keeps constant p",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
