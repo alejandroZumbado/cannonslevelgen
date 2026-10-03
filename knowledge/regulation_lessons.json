@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:05:54+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level opens with a lone 1‑HP pirate, then gradually adds more columns and higher‑HP foes, culminating in a dense final third where every column fields increasingly tough pirates, crea",
-  "success": false,
-  "reason": "not winnable (11 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:06:38+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, peaking in the last three waves with a full‑column wave of moderate‑HP pirates, creating",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early rows flood columns 0, 2, 4 with 1‑HP pirates to let the player stack cannon damage, then progressively introduce high‑HP “tank” pirates in those same columns so the player must merg",
   "success": false,
   "reason": "not winnable (6 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-03T02:21:16+00:00",
+  "target": "tank",
+  "note": "Design note: Flood columns 0, 2, 4 with a long stream of 1‑HP pirates so the player can merge a 6‑damage cannon in each of those columns before three high‑HP “tank” pirates (HP 8‑9) arrive simultaneou",
+  "success": false,
+  "reason": "not winnable (8 pirates survive the solver)"
  }
 ]
