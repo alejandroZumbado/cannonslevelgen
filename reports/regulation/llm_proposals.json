@@ -5085,5 +5085,170 @@
   },
   "fitness": 1000.0,
   "improves_on_fitness": 999.7
+ },
+ "370": {
+  "level": {
+   "levelNumber": 370,
+   "password": "K6913",
+   "isHard": true,
+   "filas": [
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 0,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 4,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 1,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 3,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 0,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 4,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 1,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 8
+      },
+      {
+       "index": 3,
+       "tipo": 2,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 3,
+       "tipo": 4,
+       "hp": 1
+      },
+      {
+       "index": 0,
+       "tipo": 2,
+       "hp": 1
+      }
+     ]
+    }
+   ]
+  },
+  "after": {
+   "classification": "champion_win",
+   "difficulty": 15.9,
+   "pacing": {
+    "filas": 10,
+    "pirates_per_fila": 1.9,
+    "single_pirate_share": 0.1,
+    "late_demand": 0.81,
+    "archetypes": [
+     "wall",
+     "swarm",
+     "crescendo"
+    ],
+    "primary": "wall",
+    "problems": []
+   },
+   "pirates_left": 0,
+   "primary": "wall"
+  },
+  "fitness": 999.7,
+  "improves_on_fitness": 999.46
  }
 }

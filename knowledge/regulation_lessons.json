@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:01:53+00:00",
-  "target": "switch",
-  "note": "Design note: The level opens with tight pressure on columns 0‑1, forcing the player to build and merge cannons on the left, then abruptly switches the threat to columns 3‑4 while sprinkling occasional",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-28T01:02:15+00:00",
   "target": "swarm",
   "note": "Design note: The level constantly pressures the player to spread cannons across the board with many 1‑2 HP pirates, while occasional 3‑HP foes require timely merges, creating tense decision‑making thr",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Feed a single column with a stream of 1‑HP pirates so the player can merge every round, building a high‑damage cannon that slays a late‑stage HP‑8 tank in that column while other columns ",
   "success": false,
   "reason": "not better than the regulator's version (archetype burst != tank)"
+ },
+ {
+  "at": "2026-10-03T02:17:16+00:00",
+  "target": "tank",
+  "note": "Design note: Feed column 2 with a steady stream of 1‑HP pirates so the player can merge a cannon each round, building up to 8‑damage by the ninth wave where a high‑HP tank appears, while other columns",
+  "success": true,
+  "reason": "fitness 999 -> 1000, archetype wall"
  }
 ]
