@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:49:32+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level begins with a lone 1‑HP pirate, gradually adds more columns and higher‑HP foes each round, peaking in the final three waves with full‑column, 4‑HP pirates that force the player ",
-  "success": false,
-  "reason": "not winnable (11 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T00:52:34+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with a single weak pirate and progressively adds more columns and higher‑HP foes, culminating in a dense final third that forces the player to merge and reposition cannon",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A “tank” pirate (HP 6) appears late in column 2, giving the player many early rounds to merge cannons in that column without interference, while sparse low‑HP side pirates keep the pressu",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 2: 88% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns; gets easier as it goes: last-third pressure 0.53 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-10-03T02:12:07+00:00",
+  "target": "tank",
+  "note": "Design note: A late‑stage tank (HP 9) appears in column 2 after four early waves of low‑HP pirates that let the player safely build a high‑damage cannon in that column, while the intervening waves kee",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
