@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T00:34:04+00:00",
-    "promoted": false,
-    "win_rate": 0.9216,
-    "candidate_win_rate": 0.9216,
-    "summary": "**Change:** Give a slight preference to *move* actions (which can merge cannons) over *spawn* actions when all other key components are equal.  \nIn the original policy `tie_pref` is `1` for spawns and `0` for moves, so t"
-  },
-  {
     "timestamp": "2026-09-30T00:34:56+00:00",
     "promoted": false,
     "win_rate": 0.9167,
@@ -138,5 +131,12 @@
     "win_rate": 0.9366,
     "candidate_win_rate": 0.9323,
     "summary": "**Change summary**  \nThe original `deficit` uses the distance of the *current front* pirate (`MAX_POSITION - front[\"position\"]`) as the number of rounds left for that column. When the front pirate is killed early, the pi"
+  },
+  {
+    "timestamp": "2026-10-03T02:07:05+00:00",
+    "promoted": false,
+    "win_rate": 0.928,
+    "candidate_win_rate": 0.928,
+    "summary": "**Change summary**  \nThe current tie‑break favours *coverage* (having cannons in many columns) before *reserved* columns (cannons that sit in empty columns ready for the next pirate). When two safe actions have identical"
   }
 ]

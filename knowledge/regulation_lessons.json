@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-27T01:46:37+00:00",
-  "target": "switch",
-  "note": "Design note: The level pressures the right side (columns 4‑3) for the first half, then abruptly switches to the left side (columns 0‑1) requiring the player to relocate and merge cannons to survive th",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-27T01:47:35+00:00",
   "target": "crescendo",
   "note": "Design note: The level begins with isolated 1‑HP pirates, gradually adds more columns and higher‑HP foes, culminating in dense waves of 4‑HP enemies to force the player into heavy merging and position",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early three 1‑HP pirates stack in column 2 so the player can merge a 3‑damage cannon by round 3, which then reliably shreds a 5‑HP tank arriving in that column on wave 7 while the other c",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-03T02:06:21+00:00",
+  "target": "tank",
+  "note": "Design note: Early rows flood column 2 with three 1‑HP pirates so the player can merge a 3‑damage cannon by round 3, then a 7‑HP tank appears in that column on wave 7 while the other columns keep a st",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
