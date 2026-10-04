@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:03:10+00:00",
-  "target": "switch",
-  "note": "Design note: A “switch” level that piles early pressure on the left columns (0‑1) then flips to the right side (3‑4), forcing the player to move and merge cannons to survive.",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-29T02:03:44+00:00",
   "target": "switch",
   "note": "Design note: A “switch” level that concentrates early waves on the left side (columns 0‑1) letting the player build and merge damage, then abruptly flips the pressure to the right side (columns 3‑4) f",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early three 1‑HP pirates stack in column 0 to build a 3‑damage cannon just before an 8‑HP tank arrives, while the remaining waves consist of scattered 1‑HP (and one 2‑HP) pirates that can",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:54:04+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 2 during the first three waves, then let it obliterate an 8‑HP tank that arrives in that column while the other columns sta",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
