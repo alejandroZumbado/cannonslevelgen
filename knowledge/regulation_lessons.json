@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:09:50+00:00",
-  "target": "burst",
-  "note": "Design note: A “burst” level that opens with a few isolated 1‑HP pirates to let the player build up cannon damage, then suddenly releases a dense multi‑column wave of tougher foes that forces the play",
-  "success": false,
-  "reason": "not winnable (8 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:09:56+00:00",
   "target": "burst",
   "note": "Design note: A calm start with a few isolated 1‑HP pirates lets the player build and merge damage, then a sudden burst of five 2‑HP pirates across all columns forces the player to use those reserves e",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon in column 2 during the first three all‑1‑HP waves, then let it shred a 6‑HP tank that arrives in that column while the remaining columns are kept manageable with s",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:53:20+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 5‑damage cannon by merging five 1‑HP pirates that all appear in column 2 over the first five waves, then unleash a 5‑HP “tank” pirate in that column while the remaining columns st",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
