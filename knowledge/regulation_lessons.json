@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:06:53+00:00",
-  "target": "crescendo",
-  "note": "Design note: A gentle start with single‑pirate rows builds a small cannon bank, then a crescendo of increasingly many 2‑HP pirates forces the player to merge and time merges for the final multi‑column",
-  "success": true,
-  "reason": "fitness 1000 -> 1017, archetype crescendo"
- },
- {
   "at": "2026-09-28T01:08:05+00:00",
   "target": "crescendo",
   "note": "Design note: A gentle opening with isolated 1‑HP pirates expands into progressively larger and tougher waves, culminating in full‑grid 3‑HP and then 4‑HP rows in the final third for a tense crescendo.",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a high‑damage cannon in the central column by merging five 1‑HP pirates, then use it to crush a 9‑HP tank while only low‑HP pirates appear elsewhere, keeping tension and demonstrati",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:47:49+00:00",
+  "target": "tank",
+  "note": "Design note: Early flood of 1‑HP pirates lets the player stack damage in three columns before 6‑HP tank pirates arrive, creating a tense race to merge enough firepower.",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]

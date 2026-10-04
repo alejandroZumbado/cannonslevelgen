@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T06:08:23+00:00",
-    "promoted": false,
-    "win_rate": 0.9352,
-    "candidate_win_rate": 0.9337,
-    "summary": "**Change summary** – The current `deficit` treats a whole column as if the cannon can hit *all* pirates there each round (it uses `hp_sum – dmg*steps`). When several pirates are stacked, only the front pirate can be hit "
-  },
-  {
     "timestamp": "2026-10-01T06:09:43+00:00",
     "promoted": false,
     "win_rate": 0.9294,
@@ -138,5 +131,12 @@
     "win_rate": 0.9193,
     "candidate_win_rate": 0.9121,
     "summary": "**Change summary** – The original `deficit` only counted the remaining rounds of the *current* front pirate (`steps = MAX_POSITION‑front.position`). When a column contains several blocked pirates this under‑estimates the"
+  },
+  {
+    "timestamp": "2026-10-04T00:48:38+00:00",
+    "promoted": false,
+    "win_rate": 0.9294,
+    "candidate_win_rate": 0.9222,
+    "summary": "**Change summary** – The original `deficit` only used the number of rounds the current front pirate has before reaching position 3, so it ignored the extra rounds that become available after that pirate is killed and the"
   }
 ]
