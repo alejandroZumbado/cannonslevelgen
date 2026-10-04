@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:07:12+00:00",
-  "target": "crescendo",
-  "note": "Design note: A crescendo‑style level that starts with sparse 1‑HP pirates, builds to a full‑grid of 1‑HP foes, then ramps HP up to 2 and finally 3 in the last third, letting the player accumulate and ",
-  "success": false,
-  "reason": "not winnable (6 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:08:37+00:00",
   "target": "crescendo",
   "note": "Design note: A crescendo‑style level that begins with a few isolated 1‑HP pirates, gradually adds more columns while keeping HP low, and then spikes HP to 2 and 3 in the final three rounds, forcing ea",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Stack early 1‑HP pirates in column 2 so the player can merge five 1‑damage cannons into a 5‑damage gun before a column‑2 tank (HP 5) arrives, while the other columns only host low‑HP pira",
   "success": false,
   "reason": "not better than the regulator's version (archetype switch != tank)"
+ },
+ {
+  "at": "2026-10-04T00:55:44+00:00",
+  "target": "tank",
+  "note": "Design note: Stack three 1‑HP pirates in column 2 in the first three rows so the player can merge three cannons into a 3‑damage gun before a 7‑HP tank arrives in that column, while the other columns o",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
