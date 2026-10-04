@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:12:31+00:00",
-  "target": "burst",
-  "note": "Design note: The level starts with calm single‑pirate rows, then bursts into a sudden wave of four pirates in round 5, followed by a final high‑HP “boss” column that forces the player to have saved me",
-  "success": false,
-  "reason": "more pacing problems than the current version (0 -> 2: 88% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns; gets easier as it goes: last-third pressure 0.62 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
- },
- {
   "at": "2026-09-29T02:12:36+00:00",
   "target": "burst",
   "note": "Design note: The level starts with two calm single‑pirate rounds, then gradually adds columns and a few 2‑HP foes, culminating in a sudden burst of five pirates and a final double‑boss wave, forcing t",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Seed column 2 with six 1‑HP pirates in the first six waves so the player can merge six 1‑damage cannons into a 6‑damage gun, then a column 2 HP‑7 tank arrives on wave 7 while the other co",
   "success": false,
   "reason": "more pacing problems than the current version (0 -> 1: 60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
+ },
+ {
+  "at": "2026-10-04T00:58:50+00:00",
+  "target": "tank",
+  "note": "Design note: Seed column 2 with seven 1‑HP pirates over the first seven waves so the player can merge them into a 7‑damage cannon just before a column 2 HP‑7 “tank” arrives on wave 8, while every wave",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype switch != tank)"
  }
 ]
