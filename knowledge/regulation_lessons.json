@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:10:34+00:00",
-  "target": "burst",
-  "note": "Design note: The level starts with a couple of isolated 1‑HP pirates, then builds to moderate multi‑column pressure, and finally bursts into a full‑column wave of 2‑HP foes that can be handled by accu",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != burst)"
- },
- {
   "at": "2026-09-29T02:10:52+00:00",
   "target": "switch",
   "note": "Design note: A “switch” level that pressures the left side (columns 0‑1) for the first half, then flips to the right side (columns 3‑4) while the player must relocate and merge cannons to survive the ",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-04T00:57:19+00:00",
   "target": "tank",
   "note": "Design note: Seed column 2 with three 1‑HP pirates in the first three rows so the player can merge three 1‑damage cannons into a 3‑damage gun before the HP‑7 “tank” arrives in row 5, while the other c",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:57:25+00:00",
+  "target": "tank",
+  "note": "Design note: Seed the first three waves with a full line of 1‑HP pirates so the player can merge three 1‑damage cannons into a 3‑damage gun in the tank’s column before the HP‑6 “tank” arrives on wave ",
   "success": false,
   "reason": "not winnable (10 pirates survive the solver)"
  }
