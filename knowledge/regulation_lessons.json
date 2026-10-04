@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:08:19+00:00",
-  "target": "swarm",
-  "note": "Design note: A tight swarm of mostly 1‑HP pirates forces early spreading of cannons, then a single 3‑HP pirate appears that requires the player to have merged enough damage to survive the final tensio",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:08:44+00:00",
   "target": "crescendo",
   "note": "Design note: A crescendo‑style level that starts with a few 1‑HP pirates spread across columns, adds more columns and modest HP in the middle, and ends with a dense wave of higher‑HP pirates that forc",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early 1‑HP pirates in column 2 let the player merge a cannon up to 6 damage before a 6‑HP tank arrives, while scattered low‑HP enemies in the other columns keep constant pressure.",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:52:16+00:00",
+  "target": "tank",
+  "note": "Design note: Fill the first three waves with 1‑HP pirates in every column so the player can merge a 3‑damage cannon in each column, then unleash three 6‑HP “tank” pirates (one per column) in successiv",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
