@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:09:56+00:00",
-  "target": "burst",
-  "note": "Design note: A calm start with a few isolated 1‑HP pirates lets the player build and merge damage, then a sudden burst of five 2‑HP pirates across all columns forces the player to use those reserves e",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-29T02:03:10+00:00",
   "target": "switch",
   "note": "Design note: A “switch” level that piles early pressure on the left columns (0‑1) then flips to the right side (3‑4), forcing the player to move and merge cannons to survive.",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 5‑damage cannon by merging five 1‑HP pirates that all appear in column 2 over the first five waves, then unleash a 5‑HP “tank” pirate in that column while the remaining columns st",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-04T00:53:25+00:00",
+  "target": "tank",
+  "note": "Design note: Early three 1‑HP pirates stack in column 0 to build a 3‑damage cannon just before an 8‑HP tank arrives, while the remaining waves consist of scattered 1‑HP (and one 2‑HP) pirates that can",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
