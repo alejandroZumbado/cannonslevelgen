@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:09:24+00:00",
-  "target": "switch",
-  "note": "Design note: The level shifts pressure from the left side (columns 0‑1) in the early waves to the right side (columns 3‑4) in the middle, then forces a central showdown that requires the player to mov",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != switch)"
- },
- {
   "at": "2026-09-29T02:09:27+00:00",
   "target": "switch",
   "note": "Design note: The level starts with a light pressure on columns 0‑1, then shifts the wave entirely to columns 3‑4, forcing the player to relocate cannons and use a single merge to handle a brief 2‑HP p",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-04T00:55:49+00:00",
   "target": "tank",
   "note": "Design note: Early rows flood column 1 with a stream of 1‑HP pirates so the player can merge five 1‑damage cannons into a 5‑damage gun just before a column‑1 HP‑5 “tank” arrives, while the other colum",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-04T00:56:13+00:00",
+  "target": "tank",
+  "note": "Design note: Early rows seed column 2 with two 1‑HP pirates so the player can merge two 1‑damage cannons into a 2‑damage gun before the column 2 HP‑4 “tank” arrives, while the remaining columns only h",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
