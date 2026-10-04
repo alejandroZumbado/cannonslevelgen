@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T06:07:18+00:00",
-    "promoted": false,
-    "win_rate": 0.9308,
-    "candidate_win_rate": 0.9308,
-    "summary": "**Change summary** – The original tie‑breaker only rewards *coverage* (having a cannon in many columns) and *reserved* columns (cannons on empty columns), but it never values leaving **empty** columns for the next round’"
-  },
-  {
     "timestamp": "2026-10-01T06:08:23+00:00",
     "promoted": false,
     "win_rate": 0.9352,
@@ -138,5 +131,12 @@
     "win_rate": 0.9337,
     "candidate_win_rate": 0.9337,
     "summary": "**Change summary** – In the tie‑breaker the policy currently values *coverage* (having cannons in many columns) before *reserved* columns (empty columns that can host the next pending spawn). When two safe actions are ot"
+  },
+  {
+    "timestamp": "2026-10-04T00:47:30+00:00",
+    "promoted": false,
+    "win_rate": 0.9193,
+    "candidate_win_rate": 0.9121,
+    "summary": "**Change summary** – The original `deficit` only counted the remaining rounds of the *current* front pirate (`steps = MAX_POSITION‑front.position`). When a column contains several blocked pirates this under‑estimates the"
   }
 ]

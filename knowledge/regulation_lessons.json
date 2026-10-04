@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:06:47+00:00",
-  "target": "burst",
-  "note": "Design note: The level opens with a few isolated 1‑HP pirates, then erupts in a full‑column burst, followed by progressively tougher grouped waves that force the player to bank early merges for high d",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-28T01:06:53+00:00",
   "target": "crescendo",
   "note": "Design note: A gentle start with single‑pirate rows builds a small cannon bank, then a crescendo of increasingly many 2‑HP pirates forces the player to merge and time merges for the final multi‑column",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Flood columns 0, 2, 4 with five waves of 1‑HP pirates so the player can merge a 5‑damage cannon in each column, then unleash three 6‑HP “tank” pirates simultaneously in those columns, cre",
   "success": false,
   "reason": "not winnable (5 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:46:57+00:00",
+  "target": "tank",
+  "note": "Design note: Build a high‑damage cannon in the central column by merging five 1‑HP pirates, then use it to crush a 9‑HP tank while only low‑HP pirates appear elsewhere, keeping tension and demonstrati",
+  "success": false,
+  "reason": "not winnable (3 pirates survive the solver)"
  }
 ]
