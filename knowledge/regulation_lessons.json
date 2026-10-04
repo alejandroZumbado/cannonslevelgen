@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:14:55+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level starts with isolated weak pirates, gradually adds more columns and higher‑HP foes, and peaks in the final three rounds with every column filled by tougher pirates, creating a cl",
-  "success": false,
-  "reason": "not winnable (3 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:15:32+00:00",
   "target": "crescendo",
   "note": "Design note: The level opens with sparse, 1‑HP pirates that let the player build a small cannon base, then gradually adds more columns and higher‑HP foes, culminating in the final three waves where ev",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Seed column 2 with five 1‑HP pirates in the first five waves so the player can merge a cannon up to 5‑damage before the column 2 HP‑5 “tank” arrives on wave 7, while the other columns con",
   "success": false,
   "reason": "not better than the regulator's version (archetype switch != tank)"
+ },
+ {
+  "at": "2026-10-04T01:00:15+00:00",
+  "target": "tank",
+  "note": "Design note: Seed column 2 with three 1‑HP pirates so the player can merge them into a 3‑damage cannon before the HP‑5 tank arrives on wave 5, while the other columns maintain balanced pressure.",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
