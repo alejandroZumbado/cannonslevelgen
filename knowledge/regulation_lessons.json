@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:04:56+00:00",
-  "target": "swarm",
-  "note": "Design note: The level starts with a few isolated 1‑HP pirates, then widens to a full‑column swarm before narrowing again, forcing the player to spread cannons early and later merge them for the tight",
-  "success": false,
-  "reason": "not winnable (4 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:06:02+00:00",
   "target": "swarm",
   "note": "Design note: A pure “swarm” level that floods three‑to‑five columns each round with only 1‑HP and 2‑HP pirates, letting the player spread cannons early and then merge them for the occasional 3‑HP thre",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 5‑damage cannon by merging five early 1‑HP pirates in column 2, then use its growing damage to shred an 8‑HP tank that arrives in that column while the other columns present scatt",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-04T00:55:06+00:00",
+  "target": "tank",
+  "note": "Design note: Early three rows flood column 0 with 1‑HP pirates so the player can merge cannons into a high‑damage gun before the column 0 HP‑8 “tank” arrives in row 6, while the other columns stay pop",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
