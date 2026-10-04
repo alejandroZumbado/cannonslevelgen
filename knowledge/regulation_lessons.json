@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:08:13+00:00",
-  "target": "swarm",
-  "note": "Design note: A gradual swarm that starts with isolated 1‑HP pirates to let the player build a cannon bank, then expands to three‑column 1‑2‑HP waves, and finishes with a single high‑HP pirate that for",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != swarm)"
- },
- {
   "at": "2026-09-28T01:08:19+00:00",
   "target": "swarm",
   "note": "Design note: A tight swarm of mostly 1‑HP pirates forces early spreading of cannons, then a single 3‑HP pirate appears that requires the player to have merged enough damage to survive the final tensio",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early trio of 1‑HP pirates in the centre lets the player stack merges into a 3‑damage cannon just in time for a 7‑HP tank, while scattered low‑HP foes keep pressure.",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:51:49+00:00",
+  "target": "tank",
+  "note": "Design note: Early 1‑HP pirates in column 2 let the player merge a cannon up to 6 damage before a 6‑HP tank arrives, while scattered low‑HP enemies in the other columns keep constant pressure.",
+  "success": false,
+  "reason": "not winnable (5 pirates survive the solver)"
  }
 ]
