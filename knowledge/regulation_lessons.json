@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:11:41+00:00",
-  "target": "crescendo",
-  "note": "Design note: A crescendo‑style level that begins with sparse 1‑HP pirates, builds to mixed 1‑2‑HP waves, and finishes with dense columns of 3‑4‑HP foes, ensuring later rounds are strictly tougher whil",
-  "success": false,
-  "reason": "not winnable (6 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:12:29+00:00",
   "target": "crescendo",
   "note": "Design note: A crescendo‑style level that starts with isolated 1‑HP pirates, adds a second column in round 4, then ramps up both the number of columns and HP in the final three rounds so the danger st",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Seed column 2 with six 1‑HP pirates in the first six waves so the player can merge six 1‑damage cannons into a 6‑damage gun just before a column 2 HP‑6 “tank” arrives on wave 7, while the",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-04T00:58:21+00:00",
+  "target": "tank",
+  "note": "Design note: Seed column 2 with a line of 1‑HP pirates for the first five waves so the player can merge five 1‑damage cannons into a 5‑damage gun before the column 2 HP‑5 “tank” arrives on wave 8, whi",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
