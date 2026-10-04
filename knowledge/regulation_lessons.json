@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:03:44+00:00",
-  "target": "switch",
-  "note": "Design note: A “switch” level that concentrates early waves on the left side (columns 0‑1) letting the player build and merge damage, then abruptly flips the pressure to the right side (columns 3‑4) f",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-29T02:04:56+00:00",
   "target": "swarm",
   "note": "Design note: The level starts with a few isolated 1‑HP pirates, then widens to a full‑column swarm before narrowing again, forcing the player to spread cannons early and later merge them for the tight",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build a 3‑damage cannon by merging three 1‑HP pirates in column 2 during the first three waves, then let it obliterate an 8‑HP tank that arrives in that column while the other columns sta",
   "success": false,
   "reason": "not winnable (3 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:54:27+00:00",
+  "target": "tank",
+  "note": "Design note: Build a 5‑damage cannon by merging five early 1‑HP pirates in column 2, then use its growing damage to shred an 8‑HP tank that arrives in that column while the other columns present scatt",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
 ]
