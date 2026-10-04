@@ -2,9 +2,5 @@
  "tank": {
   "failed_runs": 3,
   "last_failed": "2026-10-03"
- },
- "burst": {
-  "failed_runs": 1,
-  "last_failed": "2026-10-02"
  }
 }
