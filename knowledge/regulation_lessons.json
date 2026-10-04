@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-28T01:08:05+00:00",
-  "target": "crescendo",
-  "note": "Design note: A gentle opening with isolated 1‑HP pirates expands into progressively larger and tougher waves, culminating in full‑grid 3‑HP and then 4‑HP rows in the final third for a tense crescendo.",
-  "success": false,
-  "reason": "not winnable (4 pirates survive the solver)"
- },
- {
   "at": "2026-09-28T01:08:09+00:00",
   "target": "crescendo",
   "note": "Design note: The level opens with sparse 1‑HP pirates to let the player build a small cannon bank, then gradually adds more columns and higher‑HP pirates each round, culminating in a dense, high‑HP wa",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early flood of 1‑HP pirates lets the player stack damage in three columns before 6‑HP tank pirates arrive, creating a tense race to merge enough firepower.",
   "success": false,
   "reason": "not winnable (4 pirates survive the solver)"
+ },
+ {
+  "at": "2026-10-04T00:49:09+00:00",
+  "target": "tank",
+  "note": "Design note: Flood the board with three rounds of 1‑HP pirates in every column so the player can merge a 3‑damage cannon in columns 0, 2 and 4, then unleash simultaneous 6‑HP “tank” pirates in those s",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]

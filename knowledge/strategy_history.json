@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T06:09:43+00:00",
-    "promoted": false,
-    "win_rate": 0.9294,
-    "candidate_win_rate": 0.9251,
-    "summary": "**Change summary** – The original `deficit` only counted the rounds until the *front* pirate would reach position 3 (`steps = MAX_POSITION‑front.position`). In a stacked column each extra pirate behind the front actually"
-  },
-  {
     "timestamp": "2026-10-01T06:11:10+00:00",
     "promoted": false,
     "win_rate": 0.9265,
@@ -138,5 +131,12 @@
     "win_rate": 0.9294,
     "candidate_win_rate": 0.9222,
     "summary": "**Change summary** – The original `deficit` only used the number of rounds the current front pirate has before reaching position 3, so it ignored the extra rounds that become available after that pirate is killed and the"
+  },
+  {
+    "timestamp": "2026-10-04T00:49:50+00:00",
+    "promoted": false,
+    "win_rate": 0.928,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
