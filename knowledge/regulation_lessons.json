@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:12:46+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with pressure on the left‑most columns (0‑1) and then abruptly switches to the right‑most columns (3‑4), forcing the player to relocate and merge cannons while the threat",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != switch)"
- },
- {
   "at": "2026-09-29T02:12:56+00:00",
   "target": "switch",
   "note": "Design note: The level starts with pressure on the left side (columns 4‑3), shifts to the right side (columns 0‑1) for several rounds, then swings back, forcing the player to relocate and merge cannon",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Seed column 2 with six 1‑HP pirates in the first six waves so the player can merge six 1‑damage cannons into a 6‑damage gun, then a column 2 HP‑6 “tank” arrives on wave 8 while other colu",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-04T00:59:24+00:00",
+  "target": "tank",
+  "note": "Design note: Seed column 2 with four 1‑HP pirates in the first six waves so the player can merge them into a 4‑damage cannon before a column 2 HP‑5 “tank” arrives on wave 8, while the other rows sprea",
+  "success": false,
+  "reason": "not winnable (4 pirates survive the solver)"
  }
 ]
