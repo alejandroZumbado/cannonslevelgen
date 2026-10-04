@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:09:27+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with a light pressure on columns 0‑1, then shifts the wave entirely to columns 3‑4, forcing the player to relocate cannons and use a single merge to handle a brief 2‑HP p",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != switch)"
- },
- {
   "at": "2026-09-29T02:09:41+00:00",
   "target": "crescendo",
   "note": "Design note: A crescendo‑style level that starts with lone 1‑HP pirates, gradually adds columns and HP, and spikes to many high‑HP pirates in the final third, while remaining winnable by letting the p",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early rows seed column 2 with two 1‑HP pirates so the player can merge two 1‑damage cannons into a 2‑damage gun before the column 2 HP‑4 “tank” arrives, while the remaining columns only h",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-04T00:56:35+00:00",
+  "target": "tank",
+  "note": "Design note: Seed the first three rows with a full line of 1‑HP pirates in every column so the player can merge three 1‑damage cannons into a 3‑damage gun in each column, then introduce a single HP‑6 ",
+  "success": false,
+  "reason": "not winnable (10 pirates survive the solver)"
  }
 ]
