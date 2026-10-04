@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:11:11+00:00",
-  "target": "switch",
-  "note": "Design note: A “switch” level that starts with escalating pressure on the left side (columns 0‑1) for the first half, then flips to the right side (columns 3‑4) forcing the player to relocate and merg",
-  "success": true,
-  "reason": "fitness 992 -> 992, archetype wall"
- },
- {
   "at": "2026-09-29T02:11:41+00:00",
   "target": "crescendo",
   "note": "Design note: A crescendo‑style level that begins with sparse 1‑HP pirates, builds to mixed 1‑2‑HP waves, and finishes with dense columns of 3‑4‑HP foes, ensuring later rounds are strictly tougher whil",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-04T00:57:56+00:00",
   "target": "tank",
   "note": "Design note: Seed column 0 with seven 1‑HP pirates in the first seven waves so the player can merge seven 1‑damage cannons into a 7‑damage gun just before a column 0 HP‑7 “tank” arrives, while the oth",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype crescendo != tank)"
+ },
+ {
+  "at": "2026-10-04T00:58:01+00:00",
+  "target": "tank",
+  "note": "Design note: Seed column 2 with six 1‑HP pirates in the first six waves so the player can merge six 1‑damage cannons into a 6‑damage gun just before a column 2 HP‑6 “tank” arrives on wave 7, while the",
   "success": false,
   "reason": "not better than the regulator's version (archetype crescendo != tank)"
  }
