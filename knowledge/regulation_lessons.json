@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:12:36+00:00",
-  "target": "burst",
-  "note": "Design note: The level starts with two calm single‑pirate rounds, then gradually adds columns and a few 2‑HP foes, culminating in a sudden burst of five pirates and a final double‑boss wave, forcing t",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-29T02:12:46+00:00",
   "target": "switch",
   "note": "Design note: The level starts with pressure on the left‑most columns (0‑1) and then abruptly switches to the right‑most columns (3‑4), forcing the player to relocate and merge cannons while the threat",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Seed column 2 with seven 1‑HP pirates over the first seven waves so the player can merge them into a 7‑damage cannon just before a column 2 HP‑7 “tank” arrives on wave 8, while every wave",
   "success": false,
   "reason": "not better than the regulator's version (archetype switch != tank)"
+ },
+ {
+  "at": "2026-10-04T00:59:01+00:00",
+  "target": "tank",
+  "note": "Design note: Seed column 2 with six 1‑HP pirates in the first six waves so the player can merge six 1‑damage cannons into a 6‑damage gun, then a column 2 HP‑6 “tank” arrives on wave 8 while other colu",
+  "success": false,
+  "reason": "not better than the regulator's version (archetype swarm != tank)"
  }
 ]
