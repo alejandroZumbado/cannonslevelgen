@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T06:11:10+00:00",
-    "promoted": false,
-    "win_rate": 0.9265,
-    "candidate_win_rate": 0.9265,
-    "summary": "**Change explanation**  \nThe current policy does not give enough priority to a *move* that places a cannon directly on a column where the front pirate is already at position 2 and can be killed this round. In such a situ"
-  },
-  {
     "timestamp": "2026-10-01T06:12:19+00:00",
     "promoted": false,
     "win_rate": 0.9352,
@@ -138,5 +131,12 @@
     "win_rate": 0.928,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-10-04T00:51:21+00:00",
+    "promoted": false,
+    "win_rate": 0.9294,
+    "candidate_win_rate": 0.6585,
+    "summary": "**Change summary** – The original `deficit` assumes a column can always be cleared as long as the total damage *possible* ( damage × remaining steps ) exceeds the sum of all HP in that column. This is wrong when the fron"
   }
 ]
