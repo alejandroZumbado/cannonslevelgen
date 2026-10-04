@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-09-30T00:38:38+00:00",
-    "promoted": false,
-    "win_rate": 0.9297,
-    "candidate_win_rate": 0.9297,
-    "summary": "**Change summary**  \nThe current champion values “coverage” (having a cannon in as many columns as possible) more than the benefit of merging damage early, so it often spawns a new cannon instead of moving an existing on"
-  },
-  {
     "timestamp": "2026-09-30T00:39:54+00:00",
     "promoted": false,
     "win_rate": 0.9314,
@@ -138,5 +131,12 @@
     "win_rate": 0.9395,
     "candidate_win_rate": 0.9395,
     "summary": "**Change summary**  \nThe current policy does not give any explicit weight to actions that protect a column where a pirate is already on the loss‑dangerous position 2. It only rewards killing a pirate next round (`kill_ne"
+  },
+  {
+    "timestamp": "2026-10-04T00:45:01+00:00",
+    "promoted": false,
+    "win_rate": 0.9222,
+    "candidate_win_rate": 0.9222,
+    "summary": "**Change summary (2 sentences)**  \nThe champion policy prefers “coverage” (placing a cannon in a new column) over merging damage into an already‑occupied column, even when a column contains a stacked queue whose total HP"
   }
 ]
