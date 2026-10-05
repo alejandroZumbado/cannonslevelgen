@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-02T05:54:08+00:00",
-    "promoted": false,
-    "win_rate": 0.928,
-    "candidate_win_rate": 0.9179,
-    "summary": "**Change summary**  \nThe original `deficit` assumes the *total* HP of all pirates in a column can be dealt with the current cannon damage for the remaining steps, which over‑estimates the damage that can actually be appl"
-  },
-  {
     "timestamp": "2026-10-02T05:55:20+00:00",
     "promoted": false,
     "win_rate": 0.9308,
@@ -138,5 +131,12 @@
     "win_rate": 0.9236,
     "candidate_win_rate": 0.9236,
     "summary": "**Change summary**  \nWhen two safe actions are otherwise equal, the original policy prefers a move over a spawn and does not consider how many board columns will remain empty for the next round’s pending cannon. I add a "
+  },
+  {
+    "timestamp": "2026-10-05T01:05:42+00:00",
+    "promoted": false,
+    "win_rate": 0.9323,
+    "candidate_win_rate": 0.9323,
+    "summary": "**Change summary** – The champion policy never values keeping *empty* columns after its first move, so when two safe actions are otherwise equal it may fill the last free column with a cannon (or merge into it). This can"
   }
 ]
