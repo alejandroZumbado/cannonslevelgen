@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-02T05:50:25+00:00",
-    "promoted": false,
-    "win_rate": 0.9323,
-    "candidate_win_rate": 0.9323,
-    "summary": "**Change summary** – The original policy penalises *move* actions in the final tie‑breaker (`tie_pref = 0` for moves, `1` for spawns). When all other key components are equal this makes the agent choose to spawn a new ca"
-  },
-  {
     "timestamp": "2026-10-02T05:51:29+00:00",
     "promoted": false,
     "win_rate": 0.9294,
@@ -138,5 +131,12 @@
     "win_rate": 0.9352,
     "candidate_win_rate": 0.9352,
     "summary": "**Change summary** – The champion policy treats moves and spawns almost equally when their numeric scores tie, so a move that must be made to stop a pirate that is already on *position 2* can be ignored in favor of simpl"
+  },
+  {
+    "timestamp": "2026-10-05T01:03:06+00:00",
+    "promoted": false,
+    "win_rate": 0.9308,
+    "candidate_win_rate": 0.6196,
+    "summary": "**Change summary** – The champion policy never gives a *stand‑alone* priority to a move that can instantly protect a column whose front pirate is already on position 2 (one step from loss). In many losing levels (e.g. 18"
   }
 ]
