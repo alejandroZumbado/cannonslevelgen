@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T06:12:19+00:00",
-    "promoted": false,
-    "win_rate": 0.9352,
-    "candidate_win_rate": 0.9352,
-    "summary": "**Change summary** – The current tie‑breaker rewards *reserved* empty columns but does **not** reward keeping a cannon on a column that already contains a pirate.  Moving a cannon away from a defended column can leave th"
-  },
-  {
     "timestamp": "2026-10-01T06:13:12+00:00",
     "promoted": false,
     "win_rate": 0.9236,
@@ -138,5 +131,12 @@
     "win_rate": 0.9294,
     "candidate_win_rate": 0.6585,
     "summary": "**Change summary** – The original `deficit` assumes a column can always be cleared as long as the total damage *possible* ( damage × remaining steps ) exceeds the sum of all HP in that column. This is wrong when the fron"
+  },
+  {
+    "timestamp": "2026-10-05T01:01:46+00:00",
+    "promoted": false,
+    "win_rate": 0.9337,
+    "candidate_win_rate": 0.9337,
+    "summary": "**Change** – The policy currently breaks ties by preferring a **move** over a **spawn** (`tie_pref = 0 if act[0] == \"move\" else 1`). When several safe actions have identical scores this pushes the algorithm to merge cann"
   }
 ]
