@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-02T05:51:29+00:00",
-    "promoted": false,
-    "win_rate": 0.9294,
-    "candidate_win_rate": 0.6095,
-    "summary": "**Change summary**  \nThe original `deficit` assumes the damage a column can deal in the remaining rounds is `dmg * steps`, ignoring that we can merge the ever‑present pending cannon each round and therefore increase the "
-  },
-  {
     "timestamp": "2026-10-02T05:52:53+00:00",
     "promoted": false,
     "win_rate": 0.928,
@@ -138,5 +131,12 @@
     "win_rate": 0.9308,
     "candidate_win_rate": 0.6196,
     "summary": "**Change summary** – The champion policy never gives a *stand‑alone* priority to a move that can instantly protect a column whose front pirate is already on position 2 (one step from loss). In many losing levels (e.g. 18"
+  },
+  {
+    "timestamp": "2026-10-05T01:03:46+00:00",
+    "promoted": false,
+    "win_rate": 0.938,
+    "candidate_win_rate": 0.0,
+    "summary": "no python code block in response"
   }
 ]
