@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-01T06:13:12+00:00",
-    "promoted": false,
-    "win_rate": 0.9236,
-    "candidate_win_rate": 0.9193,
-    "summary": "**Change summary** – The current policy spreads cannons because a *move* does not increase the `total_damage` sum, so the tie‑breaker later penalises the loss of coverage. This makes it reluctant to concentrate damage in"
-  },
-  {
     "timestamp": "2026-10-02T05:50:25+00:00",
     "promoted": false,
     "win_rate": 0.9323,
@@ -138,5 +131,12 @@
     "win_rate": 0.9337,
     "candidate_win_rate": 0.9337,
     "summary": "**Change** – The policy currently breaks ties by preferring a **move** over a **spawn** (`tie_pref = 0 if act[0] == \"move\" else 1`). When several safe actions have identical scores this pushes the algorithm to merge cann"
+  },
+  {
+    "timestamp": "2026-10-05T01:02:28+00:00",
+    "promoted": false,
+    "win_rate": 0.9352,
+    "candidate_win_rate": 0.9352,
+    "summary": "**Change summary** – The champion policy treats moves and spawns almost equally when their numeric scores tie, so a move that must be made to stop a pirate that is already on *position 2* can be ignored in favor of simpl"
   }
 ]
