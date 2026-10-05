@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-02T05:52:53+00:00",
-    "promoted": false,
-    "win_rate": 0.928,
-    "candidate_win_rate": 0.928,
-    "summary": "**Change summary** – The current policy values *coverage* and *total damage* but it never gives a direct incentive to **stack damage in a column that currently has no pirate**. When a high‑HP pirate arrives later, the po"
-  },
-  {
     "timestamp": "2026-10-02T05:54:08+00:00",
     "promoted": false,
     "win_rate": 0.928,
@@ -138,5 +131,12 @@
     "win_rate": 0.938,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-10-05T01:04:49+00:00",
+    "promoted": false,
+    "win_rate": 0.9236,
+    "candidate_win_rate": 0.9236,
+    "summary": "**Change summary**  \nWhen two safe actions are otherwise equal, the original policy prefers a move over a spawn and does not consider how many board columns will remain empty for the next round’s pending cannon. I add a "
   }
 ]
