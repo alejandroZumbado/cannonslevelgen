@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-03T02:04:48+00:00",
-    "promoted": false,
-    "win_rate": 0.9207,
-    "candidate_win_rate": 0.915,
-    "summary": "**Change summary** – The original `deficit` assumes every pirate in a column can be hit for the full number of rounds remaining before the current front pirate reaches position 3. This over‑estimates the damage that can "
-  },
-  {
     "timestamp": "2026-10-03T02:05:59+00:00",
     "promoted": false,
     "win_rate": 0.9366,
@@ -138,5 +131,12 @@
     "win_rate": 0.9266,
     "candidate_win_rate": 0.9165,
     "summary": "**Change summary**  \nThe current `deficit` assumes the cannon’s damage stays exactly the same for the whole look‑ahead, ignoring that the pending spawn cannon can be placed (or merged) in the same column on the next roun"
+  },
+  {
+    "timestamp": "2026-10-06T03:07:41+00:00",
+    "promoted": false,
+    "win_rate": 0.9309,
+    "candidate_win_rate": 0.9309,
+    "summary": "**Change summary (2 sentences)**  \nThe champion policy prefers a *move* over a *spawn* when all earlier tie‑breakers are equal (`tie_pref = 0` for moves, 1 for spawns). When the board is otherwise safe, sacrificing the p"
   }
 ]
