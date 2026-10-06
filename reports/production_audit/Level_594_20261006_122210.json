@@ -1,0 +1,26 @@
+{
+  "levelNumber": 594,
+  "password": "M2691",
+  "generated_at": "2026-10-06T12:22:10+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 16.1,
+  "champion_rounds_played": 9,
+  "baseline_won": true,
+  "baseline_rounds_played": 9,
+  "difficulty_tag": "trivial_for_baseline",
+  "pacing": {
+    "filas": 9,
+    "pirates_per_fila": 2.89,
+    "single_pirate_share": 0.11,
+    "late_demand": 1.45,
+    "archetypes": [
+      "swarm",
+      "wall",
+      "burst",
+      "crescendo",
+      "switch"
+    ],
+    "primary": "swarm",
+    "problems": []
+  }
+}
