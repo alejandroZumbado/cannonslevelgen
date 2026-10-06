@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-03T02:05:59+00:00",
-    "promoted": false,
-    "win_rate": 0.9366,
-    "candidate_win_rate": 0.9323,
-    "summary": "**Change summary**  \nThe original `deficit` uses the distance of the *current front* pirate (`MAX_POSITION - front[\"position\"]`) as the number of rounds left for that column. When the front pirate is killed early, the pi"
-  },
-  {
     "timestamp": "2026-10-03T02:07:05+00:00",
     "promoted": false,
     "win_rate": 0.928,
@@ -138,5 +131,12 @@
     "win_rate": 0.9309,
     "candidate_win_rate": 0.9309,
     "summary": "**Change summary (2 sentences)**  \nThe champion policy prefers a *move* over a *spawn* when all earlier tie‑breakers are equal (`tie_pref = 0` for moves, 1 for spawns). When the board is otherwise safe, sacrificing the p"
+  },
+  {
+    "timestamp": "2026-10-06T03:08:18+00:00",
+    "promoted": false,
+    "win_rate": 0.9295,
+    "candidate_win_rate": 0.9295,
+    "summary": "**Change:**  \nWhen two actions are otherwise indistinguishable the policy should favour a **spawn** (which keeps the pending cannon for the next round) over a **move** (which discards that cannon).  I simply reverse the "
   }
 ]
