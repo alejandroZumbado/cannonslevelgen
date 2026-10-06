@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-03T02:08:14+00:00",
-    "promoted": false,
-    "win_rate": 0.9236,
-    "candidate_win_rate": 0.9135,
-    "summary": "**Change summary** – The current policy never explicitly rewards actions that *protect* a column where a pirate is already at position 2 (one step from loss). It only looks at killing the pirate next round, so when a can"
-  },
-  {
     "timestamp": "2026-10-03T02:09:33+00:00",
     "promoted": false,
     "win_rate": 0.9308,
@@ -138,5 +131,12 @@
     "win_rate": 0.9324,
     "candidate_win_rate": 0.9324,
     "summary": "**Change summary** – When several safe actions are otherwise tied, the policy now prefers actions that **do not merge two existing cannons**. A move that places a cannon onto an already‑occupied column reduces the number"
+  },
+  {
+    "timestamp": "2026-10-06T03:10:16+00:00",
+    "promoted": false,
+    "win_rate": 0.9295,
+    "candidate_win_rate": 0.9252,
+    "summary": "**Change summary** – The current policy only looks at the *current* front pirate when judging damage short‑falls, so it can spread its 1‑damage cannons instead of building a stronger cannon before a high‑HP pirate that i"
   }
 ]
