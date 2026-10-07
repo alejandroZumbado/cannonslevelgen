@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:16:36+00:00",
-  "target": "crescendo",
-  "note": "Design note: A crescendo‑styled level that starts with a few isolated 1‑HP pirates, gradually adds columns and HP so the final third overwhelms the player with many high‑HP foes, keeping tension risin",
-  "success": false,
-  "reason": "not winnable (6 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:16:51+00:00",
   "target": "crescendo",
   "note": "Design note: A classic crescendo – the level opens with a single 1‑HP pirate, then steadily adds columns and boosts HP each round, culminating in a final wave of three heavy 6‑HP foes that force the p",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-07T08:49:50+00:00",
   "target": "reshape:wall",
   "note": "Design note: A “wall” level that drops a continuous line of pirates in column 2 over eight rounds, each new pirate blocking the one behind it, while sprinkling low‑HP fillers in other columns to keep ",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, archetype crescendo != wall)"
+ },
+ {
+  "at": "2026-10-07T08:50:03+00:00",
+  "target": "reshape:wall",
+  "note": "Design note: A classic “wall” where column 2 receives a consecutive line of increasingly tough pirates, each blocking the next, while occasional low‑HP pirates in other columns add pressure.",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, archetype crescendo != wall)"
  }
