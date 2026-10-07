@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T00:45:01+00:00",
-    "promoted": false,
-    "win_rate": 0.9222,
-    "candidate_win_rate": 0.9222,
-    "summary": "**Change summary (2 sentences)**  \nThe champion policy prefers “coverage” (placing a cannon in a new column) over merging damage into an already‑occupied column, even when a column contains a stacked queue whose total HP"
-  },
-  {
     "timestamp": "2026-10-04T00:46:10+00:00",
     "promoted": false,
     "win_rate": 0.9337,
@@ -138,5 +131,12 @@
     "win_rate": 0.9237,
     "candidate_win_rate": 0.9237,
     "summary": "**Change summary** – The current policy never gives extra weight to a column that already has a pirate on the loss‑critical position 2 but whose HP exceeds the damage that column can currently deal. In such a case the on"
+  },
+  {
+    "timestamp": "2026-10-07T01:39:22+00:00",
+    "promoted": false,
+    "win_rate": 0.9309,
+    "candidate_win_rate": 0.9237,
+    "summary": "**Change summary** – The original `deficit` only counted the remaining steps of the *front* pirate in a column, which under‑estimates the total number of shots that can be delivered when several pirates are stacked (each"
   }
 ]
