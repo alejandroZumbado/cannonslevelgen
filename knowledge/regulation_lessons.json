@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:15:39+00:00",
-  "target": "burst",
-  "note": "Design note: A calm opening with single low‑HP pirates lets the player build a small cannon base, then a single sudden wave of four 1‑HP pirates forces the player to spread their limited cannons acros",
-  "success": false,
-  "reason": "more pacing problems than the current version (0 -> 1: 80% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
- },
- {
   "at": "2026-09-29T02:15:44+00:00",
   "target": "burst",
   "note": "Design note: A calm opening with one‑pirate waves lets the player seed each column, then four consecutive burst waves flood four columns with 1‑HP pirates, creating a tense sprint to use the built‑up ",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-07T08:49:15+00:00",
   "target": "breather:switch",
   "note": "Design note: A short 5‑round “switch” breather that alternates pressure between the left pair (0‑1) and right pair (3‑4) with low‑HP pirates, letting the player merge early shots while staying trivial",
+  "success": false,
+  "reason": "goal not met (archetype swarm != switch)"
+ },
+ {
+  "at": "2026-10-07T08:49:18+00:00",
+  "target": "breather:switch",
+  "note": "Design note: A five‑round “switch” breather that concentrates early pressure on the left columns (0‑1) with a survivable HP‑2 pirate, then flips to the right columns (3‑4), keeping each round populate",
   "success": false,
   "reason": "goal not met (archetype swarm != switch)"
  }
