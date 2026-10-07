@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-03T02:10:28+00:00",
-    "promoted": false,
-    "win_rate": 0.9395,
-    "candidate_win_rate": 0.9395,
-    "summary": "**Change summary**  \nThe current policy does not give any explicit weight to actions that protect a column where a pirate is already on the loss‑dangerous position 2. It only rewards killing a pirate next round (`kill_ne"
-  },
-  {
     "timestamp": "2026-10-04T00:45:01+00:00",
     "promoted": false,
     "win_rate": 0.9222,
@@ -138,5 +131,12 @@
     "win_rate": 0.9295,
     "candidate_win_rate": 0.9295,
     "summary": "**Change summary** – The current policy never gives extra weight to columns that already have *multiple* pirates and whose total HP cannot be dealt with the existing cannon damage before the front pirate reaches the loss"
+  },
+  {
+    "timestamp": "2026-10-07T01:38:42+00:00",
+    "promoted": false,
+    "win_rate": 0.9237,
+    "candidate_win_rate": 0.9237,
+    "summary": "**Change summary** – The current policy never gives extra weight to a column that already has a pirate on the loss‑critical position 2 but whose HP exceeds the damage that column can currently deal. In such a case the on"
   }
 ]
