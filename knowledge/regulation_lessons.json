@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:15:44+00:00",
-  "target": "burst",
-  "note": "Design note: A calm opening with one‑pirate waves lets the player seed each column, then four consecutive burst waves flood four columns with 1‑HP pirates, creating a tense sprint to use the built‑up ",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-29T02:15:55+00:00",
   "target": "switch",
   "note": "Design note: The level starts with low‑HP pirates on the left side (columns 0‑1) letting the player build and merge cannons, then abruptly switches pressure to the right side (columns 3‑4) forcing the",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A five‑round “switch” breather that concentrates early pressure on the left columns (0‑1) with a survivable HP‑2 pirate, then flips to the right columns (3‑4), keeping each round populate",
   "success": false,
   "reason": "goal not met (archetype swarm != switch)"
+ },
+ {
+  "at": "2026-10-07T08:49:23+00:00",
+  "target": "reshape:crescendo",
+  "note": "Design note: A nine‑round crescendo that starts with sparse 1‑HP pirates and builds to dense, high‑HP waves culminating in a heavy final wave.",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, archetype wall != crescendo)"
  }
 ]
