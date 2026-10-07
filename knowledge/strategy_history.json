@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T00:47:30+00:00",
-    "promoted": false,
-    "win_rate": 0.9193,
-    "candidate_win_rate": 0.9121,
-    "summary": "**Change summary** – The original `deficit` only counted the remaining rounds of the *current* front pirate (`steps = MAX_POSITION‑front.position`). When a column contains several blocked pirates this under‑estimates the"
-  },
-  {
     "timestamp": "2026-10-04T00:48:38+00:00",
     "promoted": false,
     "win_rate": 0.9294,
@@ -138,5 +131,12 @@
     "win_rate": 0.9295,
     "candidate_win_rate": 0.9223,
     "summary": "**Change summary** – The original `deficit` assumes the column can fire its cannon `damage` times for every round the current front pirate needs to reach position 3. When several pirates are stacked, the front pirate may"
+  },
+  {
+    "timestamp": "2026-10-07T01:41:04+00:00",
+    "promoted": false,
+    "win_rate": 0.9252,
+    "candidate_win_rate": 0.9252,
+    "summary": "**Change summary** – The current policy never gives a bonus to actions that target a column whose front pirate is already on the loss‑critical position 2 but still alive (its HP exceeds the cannon’s damage). In such case"
   }
 ]
