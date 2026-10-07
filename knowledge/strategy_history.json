@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T00:46:10+00:00",
-    "promoted": false,
-    "win_rate": 0.9337,
-    "candidate_win_rate": 0.9337,
-    "summary": "**Change summary** – In the tie‑breaker the policy currently values *coverage* (having cannons in many columns) before *reserved* columns (empty columns that can host the next pending spawn). When two safe actions are ot"
-  },
-  {
     "timestamp": "2026-10-04T00:47:30+00:00",
     "promoted": false,
     "win_rate": 0.9193,
@@ -138,5 +131,12 @@
     "win_rate": 0.9309,
     "candidate_win_rate": 0.9237,
     "summary": "**Change summary** – The original `deficit` only counted the remaining steps of the *front* pirate in a column, which under‑estimates the total number of shots that can be delivered when several pirates are stacked (each"
+  },
+  {
+    "timestamp": "2026-10-07T01:40:04+00:00",
+    "promoted": false,
+    "win_rate": 0.9295,
+    "candidate_win_rate": 0.9223,
+    "summary": "**Change summary** – The original `deficit` assumes the column can fire its cannon `damage` times for every round the current front pirate needs to reach position 3. When several pirates are stacked, the front pirate may"
   }
 ]
