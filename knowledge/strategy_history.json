@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-03T02:09:33+00:00",
-    "promoted": false,
-    "win_rate": 0.9308,
-    "candidate_win_rate": 0.9308,
-    "summary": "**Change summary** – The champion’s tie‑breaker prefers *coverage* (having cannons in many columns) before *reserved* columns (empty columns that could host a new cannon next round). When the board is already crowded, th"
-  },
-  {
     "timestamp": "2026-10-03T02:10:28+00:00",
     "promoted": false,
     "win_rate": 0.9395,
@@ -138,5 +131,12 @@
     "win_rate": 0.9295,
     "candidate_win_rate": 0.9252,
     "summary": "**Change summary** – The current policy only looks at the *current* front pirate when judging damage short‑falls, so it can spread its 1‑damage cannons instead of building a stronger cannon before a high‑HP pirate that i"
+  },
+  {
+    "timestamp": "2026-10-07T01:38:17+00:00",
+    "promoted": false,
+    "win_rate": 0.9295,
+    "candidate_win_rate": 0.9295,
+    "summary": "**Change summary** – The current policy never gives extra weight to columns that already have *multiple* pirates and whose total HP cannot be dealt with the existing cannon damage before the front pirate reaches the loss"
   }
 ]
