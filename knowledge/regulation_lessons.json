@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:16:15+00:00",
-  "target": "switch",
-  "note": "Design note: The level opens with a few low‑HP pirates clustered on the left (columns 0‑1) letting the player build and merge cannons, then abruptly shifts pressure to the right side (columns 3‑4) wit",
-  "success": false,
-  "reason": "more pacing problems than the current version (0 -> 1: gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
- },
- {
   "at": "2026-09-29T02:16:36+00:00",
   "target": "crescendo",
   "note": "Design note: A crescendo‑styled level that starts with a few isolated 1‑HP pirates, gradually adds columns and HP so the final third overwhelms the player with many high‑HP foes, keeping tension risin",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A nine‑round crescendo that begins with sparse 1‑HP pirates and builds to full‑column, high‑HP waves, ending with a heavy final wave that forces the player to merge and manage damage.",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, archetype wall != crescendo)"
+ },
+ {
+  "at": "2026-10-07T08:49:50+00:00",
+  "target": "reshape:wall",
+  "note": "Design note: A “wall” level that drops a continuous line of pirates in column 2 over eight rounds, each new pirate blocking the one behind it, while sprinkling low‑HP fillers in other columns to keep ",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, archetype crescendo != wall)"
  }
 ]
