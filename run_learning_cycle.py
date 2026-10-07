@@ -71,7 +71,13 @@ _DESIGNER_EVERY = 1
 # win-rate ties and it wins 0/35 real target levels. regulation_designer got 4
 # verified level fixes out of 18 calls in the same window. Past this cap the
 # learner is skipped for the day and the budget goes to the designer.
-_STRATEGY_MAX_CALLS_PER_DAY = 6
+# 6 -> 0 on 2026-10-07 (paused): 83 calls / ~590k tokens from 09-26 to 10-07,
+# 0 promotions (target_wins stayed 0/36). Its own benchmark is noisier than
+# any gain it finds: the SAME champion scored 0.906-0.939 across runs. The
+# champion already wins 555/592 real levels and the solver covers the rest,
+# so the budget now goes to regulation_designer's skill goals
+# (verification/skill_pass.py). Set back to >0 to resume.
+_STRATEGY_MAX_CALLS_PER_DAY = 0
 
 
 def _next_order() -> list[str]:

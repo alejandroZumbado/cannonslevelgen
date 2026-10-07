@@ -45,6 +45,7 @@ from datetime import datetime, timezone
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import config
+from policy.baseline import BaselinePolicy
 from policy.loader import load_policy_from_file
 from production.level_registry import ensure_unique_password, scan_existing_levels, scan_existing_signatures
 from sim.engine import run_level
@@ -73,6 +74,8 @@ HARD_SCORE = 16.0  # champion levels at/above this are flagged isHard (hard-leve
 # Variety (2026-09-24): no archetype (verification/pacing.ARCHETYPES) may take
 # more than this share of a batch once VARIETY_MIN_SAMPLE levels are in.
 VARIETY_CAP = 0.35
+# max share of a standard batch the naive baseline may win (2026-10-07)
+NAIVE_WIN_SHARE = 0.2
 VARIETY_MIN_SAMPLE = 10
 
 # Early profile: champion-win difficulty bins for the first ~100 positions
@@ -182,7 +185,13 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
     accepted: list[tuple[Level, dict]] = []
     seen = set(existing_signatures)
     stats = {"attempts": 0, "reskin": 0, "pacing": 0, "variety": 0, "bin_full": 0,
-             "champion_lost": 0, "unwinnable": 0, "no_tension": 0, "too_hard": 0}
+             "champion_lost": 0, "unwinnable": 0, "no_tension": 0, "too_hard": 0, "naive_trivial": 0}
+    # standard batches go after the current release: at most this many may be
+    # won by the naive baseline (never moves a cannon), like the release's own
+    # late positions (verification/skill_pass.NAIVE_BODY_CAP)
+    naive_quota = count if early else int(NAIVE_WIN_SHARE * count)
+    naive_filled = 0
+    naive = BaselinePolicy()
     archetype_counts: Counter[str] = Counter()
     max_attempts = count * MAX_ATTEMPTS_PER_LEVEL
 
@@ -204,6 +213,11 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
         primary = pace.primary
         if _over_variety_cap(primary, archetype_counts, len(accepted)):
             stats["variety"] += 1
+            continue
+
+        naive_won = run_level(level, naive).won
+        if naive_won and naive_filled >= naive_quota:
+            stats["naive_trivial"] += 1  # needs no decision from the player
             continue
 
         won = run_level(level, champion).won
@@ -231,6 +245,7 @@ def generate_batch(count: int, seed: int, first_number: int, used_passwords: set
             continue
 
         seen.add(sig)
+        naive_filled += naive_won
         level.levelNumber = first_number + len(accepted)
         level.password = ensure_unique_password(_random_password(rng), used_passwords)
         used_passwords.add(level.password)

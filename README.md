@@ -8,12 +8,13 @@ simulated without Unity.
 
 ## Two phases
 
-> **PAUSED since 2026-09-24:** `learning.yml` has no schedule (manual button
-> only). strategy_learner went 13 days without a promotion (target_wins
-> 0->0/32 on the real hard suite) while using ~75% of the daily budget. The
-> champion `policy/current.py` (09-11) keeps serving production/verification;
-> daily_production and weekly_level_audit are unaffected. To resume, restore
-> the `schedule:` block in `learning.yml`.
+> **Status 2026-10-07:** `learning.yml` runs hourly, but **strategy_learner
+> is paused** (`_STRATEGY_MAX_CALLS_PER_DAY = 0` in `run_learning_cycle.py`):
+> 83 calls from 09-26 to 10-07, 0 real promotions, and its benchmark is
+> noisier than any gain (same champion scored 0.906-0.939). The champion
+> `policy/current.py` keeps serving production/verification. The whole LLM
+> budget goes to `regulation_designer`, whose top-priority queue is now the
+> levels `verification/skill_pass.py` couldn't fix (see "Skill pass" below).
 
 **Month 1 — learning (all tokens go here, no levels produced yet):**
 Two loops run continuously, one LLM call each, alternating:
@@ -134,6 +135,33 @@ The game's `LevelDatabase` holds only the shipped release (200 levels since
 - `sim/real_suite.py` / `reports/real_suite.json` — the real game's
   winnable levels, written by the weekly audit; strategy_learner scores
   candidates on them because the synthetic suite is saturated.
+
+## Skill pass — every level does its job (`verification/skill_pass.py`, since 2026-10-07)
+
+`difficulty_score` is mostly content size (~0.3 x (pirates + max HP)), so it
+said the campaign ramped while it didn't. The real signal is a **naive
+player** (`policy/baseline.py`: drops each new cannon on the most threatened
+column, never moves a placed cannon). On 2026-10-07 it won 75% of arc bodies
+at positions 1-100, 27% at 201-300... and back up to 28% at 401-500 (34% at
+451-500); 8 peaks were naive wins; the 44 breathers were near-copies of
+"5-6 lone HP-1 pirates" (3 pairs >= 80% identical); 6 arcs repeated one
+archetype in >= 60% of their levels.
+
+`python -m verification.skill_pass [--dry-run]` gives each flagged release
+level one goal and searches small edits (same operators as the regulator,
+every candidate simulated, no LLM):
+- **harden** — peaks and late bodies over the naive cap (100% / 50% / 30% /
+  20% / 20% per 100 positions): naive player must lose, champion (peaks:
+  champion or solver) must still win, pacing ok, same size band;
+- **reshape** — repetitive arcs / runs of 4+: reach another archetype, no easier;
+- **breather** — 4-6 rounds, naive wins, 2+ pirates in most rounds, a pirate
+  passes the first row, HP <= 3 (<= 4 after arc 10), rotating archetype,
+  unique shape.
+Results: `reports/regulation/skill/shard_0.json`; apply with
+`python -m verification.apply_regulation --pass skill`. Unmet goals
+(`unresolved_skill`) go first in regulation_designer's queue. The weekly
+`variety_report` tracks the same curve (`skill_curve`, `near_duplicates`), and
+daily_generator rejects levels the naive player wins.
 
 ## Setup
 

@@ -56,10 +56,16 @@ def _candidates() -> list[dict]:
     records = []
     for path in sorted(REPORT_ROOT.glob("*/shard_*.json")):
         records += json.loads(path.read_text(encoding="utf-8"))["levels"]
-    order = {"unresolved": 0, "repaired_partial": 1, "improved_partial": 2}
+    # unresolved_skill (verification/skill_pass.py, 2026-10-07) go first: they
+    # are release levels failing their role (peak/late body a naive player
+    # wins, repetitive arc, dull breather) that the local search couldn't fix
+    order = {"unresolved_skill": -1, "unresolved": 0, "repaired_partial": 1, "improved_partial": 2}
     out = []
     for r in records:
         if "level" not in r or "after" not in r:
+            continue
+        if r["status"] == "unresolved_skill":
+            out.append((-1, r["levelNumber"], r))
             continue
         missed_archetype = r.get("target_archetype") and r["after"].get("primary") != r["target_archetype"]
         rank = order.get(r["status"], 3 if missed_archetype else None)
@@ -76,10 +82,37 @@ def _candidates() -> list[dict]:
 def _pick(records: list[dict], state: dict, proposals: dict) -> dict | None:
     for r in records:
         n = str(r["levelNumber"])
+        if _is_skill(r):
+            # separate attempt counter: older regulator attempts on the same
+            # level were about a different goal; an older applied proposal is
+            # already in the asset the skill goal starts from
+            done = proposals.get(n, {}).get("skill_goal") is not None
+            if done or state.get("attempts", {}).get(f"skill:{n}", 0) >= RETRY_AFTER_ATTEMPTS:
+                continue
+            return r
         if n in proposals or state.get("attempts", {}).get(n, 0) >= RETRY_AFTER_ATTEMPTS:
             continue
         return r
     return None
+
+
+def _is_skill(record: dict) -> bool:
+    return record.get("status") == "unresolved_skill"
+
+
+_SKILL_GOAL_TEXT = {
+    "harden": ("it is too easy for its place in the campaign: a NAIVE player (drops each new cannon on the "
+               "most threatened column, merges only onto an undersized cannon, NEVER moves a placed cannon) "
+               "wins it. Make that naive player LOSE while a good player still wins: pressure that switches "
+               "sides so cannons must be moved, a pirate blocked behind another in its column, or a tall "
+               "pirate whose merge must be prepared rounds earlier. Keep about the same number of pirates."),
+    "reshape": ("its arc repeats one design idea too often. Rebuild it around the TARGET ARCHETYPE below, "
+                "no easier than now (if the naive player loses it now, it must still lose)."),
+    "breather": ("it is a BREATHER (relief level after a hard peak) but dull: a line of lone HP-1 pirates "
+                 "identical to other breathers. Make it short (4-6 rounds), easy (a naive player still wins), "
+                 "with 2+ pirates in most rounds, HP at most {max_hp}, one pirate getting past the first row, "
+                 "built around the TARGET ARCHETYPE below."),
+}
 
 
 def _lessons_block(lessons: list[dict]) -> str:
@@ -92,7 +125,36 @@ def _lessons_block(lessons: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def _build_skill_prompt(record: dict, lessons: list[dict]) -> tuple[str, str]:
+    """Prompt for a skill_pass goal; starts from the level as it is in the game."""
+    goal = record["goal"]
+    level = Level.from_dict(record["original"])
+    target = goal.get("target_archetype")
+    system = ("You redesign one level of the tower-defense game Cannons so it does its job in the "
+              "campaign. Use only the real rules below.")
+    user = f"""{GAME_RULES}
+
+PACING RULES (checked automatically):
+- the player gains one cannon per round, so later rounds must carry MORE danger;
+- at most {pacing.MAX_SINGLE_PIRATE_SHARE:.0%} single-pirate rounds; at most {pacing.MAX_FILAS} rounds;
+- prefer several pirates across columns over one very tall pirate.
+
+LEVEL TO REDESIGN — {_SKILL_GOAL_TEXT[goal['kind']].format(max_hp=goal.get('max_hp', 3))}
+(why it was flagged: {goal.get('reason', '')})
+{describe_level(level)}
+
+TARGET ARCHETYPE: {f"{target} — {pacing.ARCHETYPES[target]}" if target else "keep its current idea"}
+
+Your recent attempts (learn from them):
+{_lessons_block(lessons)}
+
+{_SCHEMA}"""
+    return system, user
+
+
 def _build_prompt(record: dict, lessons: list[dict]) -> tuple[str, str]:
+    if _is_skill(record):
+        return _build_skill_prompt(record, lessons)
     level = Level.from_dict(record["level"])
     after = record["after"]
     problems = after["pacing"]["problems"] or ["none"]
@@ -146,16 +208,22 @@ def run_cycle() -> dict:
 
     lessons = _load_json(LESSONS_PATH, [])
     number = str(record["levelNumber"])
-    target = record.get("target_archetype") or "any"
+    skill = _is_skill(record)
+    if skill:
+        target = f"{record['goal']['kind']}:{record['goal'].get('target_archetype') or 'any'}"
+    else:
+        target = record.get("target_archetype") or "any"
     system, user = _build_prompt(record, lessons)
     completion = client.complete(system, user, max_tokens=3000,
                                  reserve_tokens=config.DAILY_PRODUCTION_RESERVE_TOKENS,
                                  reasoning_effort="low")
     note = completion.text.split("```")[0].strip()
-    state["attempts"][number] = state["attempts"].get(number, 0) + 1
+    key = f"skill:{number}" if skill else number
+    state["attempts"][key] = state["attempts"].get(key, 0) + 1
     STATE_PATH.write_text(json.dumps(state), encoding="utf-8")
 
-    outcome = _evaluate(record, _extract_level(completion.text), target)
+    candidate = _extract_level(completion.text)
+    outcome = _evaluate_skill(record, candidate) if skill else _evaluate(record, candidate, target)
     _record_lesson(lessons, target, note, outcome["accepted"], outcome.get("reason", ""))
     if outcome["accepted"]:
         proposals[number] = outcome.pop("proposal")
@@ -165,6 +233,50 @@ def run_cycle() -> dict:
     audit.record_call(caller="regulation_designer", completion=completion, system=system, user=user,
                       outcome={"level": record["levelNumber"], **outcome})
     return {"level": record["levelNumber"], **outcome}
+
+
+def _naive_won(level: Level) -> bool:
+    """Does the naive baseline (never moves a cannon) win this level?"""
+    from policy.baseline import BaselinePolicy
+    from sim.engine import run_level
+    return run_level(level, BaselinePolicy()).won
+
+
+def _evaluate_skill(record: dict, candidate: Level | None) -> dict:
+    """Skill goal: accepted only if it fully meets the goal, judged by the same
+    penalty the local skill pass uses (0 = met)."""
+    from verification import skill_pass  # local import: only needed for skill records
+
+    if candidate is None:
+        return {"accepted": False, "reason": "no valid JSON level"}
+    errors = candidate.structure_errors()
+    if errors:
+        return {"accepted": False, "reason": f"out of range: {errors[:2]}"}
+    candidate = normalize(candidate)
+    original = Level.from_dict(record["original"])
+    candidate.levelNumber, candidate.password, candidate.isHard = original.levelNumber, original.password, original.isHard
+    goal = skill_pass.Goal(**record["goal"])
+    evaluate = skill_pass.Evaluator()
+    before, after = evaluate(normalize(original), goal.is_peak), evaluate(candidate, goal.is_peak)
+    # learning.yml doesn't check out the Cannons repo: shapes come from the
+    # snapshot skill_pass writes next to its results
+    taken = set(_load_json(skill_pass.SIGNATURES_PATH, [])) - {original.shape_signature()}
+    left = skill_pass.penalty(goal, after, before, taken, candidate.shape_signature())
+    if left > 0:
+        why = []
+        if not after.winnable or (not goal.is_peak and not after.champion_won):
+            why.append("not winnable by the trained AI")
+        if goal.kind == "breather" and not after.naive_won:
+            why.append("too hard for a breather (the naive player loses)")
+        if goal.kind != "breather" and after.naive_won and (goal.kind == "harden" or goal.keep_naive_lost):
+            why.append("the naive player still wins")
+        if goal.target_archetype and after.primary != goal.target_archetype:
+            why.append(f"archetype {after.primary} != {goal.target_archetype}")
+        if after.pacing["problems"] and goal.kind != "breather":
+            why.append("pacing: " + "; ".join(after.pacing["problems"]))
+        return {"accepted": False, "reason": f"goal not met ({', '.join(why) or f'penalty {left:.0f}'})"}
+    return {"accepted": True, "reason": f"{goal.kind} goal met, archetype {after.primary}, naive_won {after.naive_won}",
+            "proposal": {"level": candidate.to_dict(), "after": asdict(after), "skill_goal": goal.kind}}
 
 
 def _evaluate(record: dict, candidate: Level | None, target: str) -> dict:
@@ -198,6 +310,12 @@ def _evaluate(record: dict, candidate: Level | None, target: str) -> dict:
     if before.winnable and len(new_problems) > len(old_problems):
         return {"accepted": False, "reason": f"more pacing problems than the current version "
                                              f"({len(old_problems)} -> {len(new_problems)}: {'; '.join(new_problems)})"}
+    # Skill guard (2026-10-07): 5 of the last 6 accepted proposals turned a
+    # level the naive player (policy/baseline.py, never moves cannons) loses
+    # into one it wins — "better" by fitness, but easier and duller.
+    if before.winnable and not _naive_won(original) and _naive_won(candidate):
+        return {"accepted": False, "reason": "easier than the current version: a player who never moves "
+                                             "a cannon now wins it"}
     if new_fit <= old_fit:
         problems = "; ".join(after.pacing["problems"]) or f"archetype {after.primary} != {target}"
         return {"accepted": False, "reason": f"not better than the regulator's version ({problems})"}

@@ -61,6 +61,18 @@ def load_results(pass_name: str) -> dict[int, dict]:
     return merged
 
 
+SKILL_PASS = "skill"  # verification/skill_pass.py
+
+
+def _skill_regulated() -> set[int]:
+    """Levels the skill pass rewrote (empty if it never ran)."""
+    path = REPORT_ROOT / SKILL_PASS / "shard_0.json"
+    if not path.exists():
+        return set()
+    return {r["levelNumber"] for r in json.loads(path.read_text(encoding="utf-8"))["levels"]
+            if r.get("status") in APPLY_STATUSES}
+
+
 def merge_llm_proposals(results: dict[int, dict]) -> list[str]:
     """LLM redesigns (verified strictly better than the regulator's version
     when proposed) override that level's record — in EVERY pass, even once
@@ -73,6 +85,11 @@ def merge_llm_proposals(results: dict[int, dict]) -> list[str]:
     used = []
     for number, proposal in json.loads(PROPOSALS_PATH.read_text(encoding="utf-8")).items():
         if proposal.get("rejected"):  # turned down on review; kept so the designer won't redo it
+            continue
+        record = results.get(int(number), {})
+        if record.get("built_on_assets") and proposal.get("applied_in"):
+            # skill pass (2026-10-07) started from the asset that ALREADY
+            # contains this proposal; re-applying it would revert that work
             continue
         results[int(number)] = {"levelNumber": int(number), "status": "llm_proposal",
                                 "level": proposal["level"], "after": proposal["after"]}
@@ -179,6 +196,13 @@ def main(argv: list[str] | None = None) -> int:
 
     results = load_results(args.pass_name)
     llm_used = merge_llm_proposals(results)
+    if args.pass_name != SKILL_PASS:
+        protected = _skill_regulated()
+        for number in protected & set(results):
+            # the skill pass is the newest layer, built on what these older
+            # passes already wrote — re-applying them would undo it
+            results.pop(number)
+            llm_used = [n for n in llm_used if int(n) != number]
     written, counts = apply(results)
     if llm_used:
         _mark_proposals_applied(llm_used, args.pass_name)

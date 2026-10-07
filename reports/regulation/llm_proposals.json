@@ -4414,7 +4414,8 @@
    "primary": "crescendo"
   },
   "fitness": 990.49,
-  "improves_on_fitness": 988.9
+  "improves_on_fitness": 988.9,
+  "rejected": "2026-10-07 review: makes the level easier - the naive player (never moves cannons) loses the current version but wins this one"
  },
  "150": {
   "level": {
@@ -4566,7 +4567,8 @@
    "primary": "swarm"
   },
   "fitness": 999.7,
-  "improves_on_fitness": 994.69
+  "improves_on_fitness": 994.69,
+  "rejected": "2026-10-07 review: makes the level easier - the naive player (never moves cannons) loses the current version but wins this one"
  },
  "184": {
   "level": {
@@ -4739,7 +4741,8 @@
    "primary": "switch"
   },
   "fitness": 998.8,
-  "improves_on_fitness": 997.39
+  "improves_on_fitness": 997.39,
+  "rejected": "2026-10-07 review: makes the level easier - the naive player (never moves cannons) loses the current version but wins this one"
  },
  "278": {
   "level": {
@@ -4918,7 +4921,8 @@
    "primary": "swarm"
   },
   "fitness": 997.9,
-  "improves_on_fitness": 995.8
+  "improves_on_fitness": 995.8,
+  "rejected": "2026-10-07 review: makes the level easier - the naive player (never moves cannons) loses the current version but wins this one"
  },
  "298": {
   "level": {
@@ -5084,7 +5088,8 @@
    "primary": "switch"
   },
   "fitness": 1000.0,
-  "improves_on_fitness": 999.7
+  "improves_on_fitness": 999.7,
+  "rejected": "2026-10-07 review: no gain in skill (naive player wins both); level is in the skill pass instead"
  },
  "370": {
   "level": {
@@ -5249,6 +5254,7 @@
    "primary": "wall"
   },
   "fitness": 999.7,
-  "improves_on_fitness": 999.46
+  "improves_on_fitness": 999.46,
+  "rejected": "2026-10-07 review: makes the level easier - the naive player (never moves cannons) loses the current version but wins this one"
  }
 }

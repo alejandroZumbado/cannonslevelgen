@@ -76,6 +76,10 @@ PACING — the level is rejected automatically if it breaks these:
 - At most {pacing.MAX_SINGLE_PIRATE_SHARE:.0%} of the filas may have a single pirate.
 - At most {pacing.MAX_FILAS} filas. Short and dense beats long and sparse.
 - Every fila must have at least one pirate (no empty filas).
+- It must ask for skill: a player who only drops each new cannon on the most
+  threatened column and never moves a placed cannon must LOSE (checked by
+  simulation). Moving cannons between sides, blocked pirates and merges
+  prepared in advance are what a good player needs.
 """
 
 
@@ -202,6 +206,20 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
         # if it actually collides with something already in the game.
         level.levelNumber = level_number
         level.password = ensure_unique_password(level.password, used_passwords)
+
+        # Skill gate (2026-10-07): 7 of the first 12 daily levels were won by
+        # the naive baseline (never moves a cannon, merges only reactively) —
+        # e.g. 594 is 26 HP-1 pirates. The release already has plenty of easy
+        # filler (breathers, early arcs); a daily level must ask for a decision.
+        if run_level(level, BaselinePolicy()).won:
+            feedback = ("too easy: a player who just drops each new cannon on the most threatened column "
+                        "and never moves a placed cannon wins it. Keep the idea but make it ask for a real "
+                        "decision: pressure that switches sides (cannons must be MOVED), a pirate blocked by "
+                        "another in its column, or a pirate tall enough that a merge must be prepared rounds earlier")
+            print(f"  attempt {attempt}: trivial for the naive baseline, retrying")
+            audit.record_call(caller="daily_generator", completion=completion, system=system, user=user,
+                               outcome={"accepted": False, "reason": "trivial_for_baseline", "attempt": attempt})
+            continue
 
         engine = run_level(level, policy)
         # Policy loss -> ask the solver (2026-09-26). The policy wins 0/35 of the
