@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:15:32+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level opens with sparse, 1‑HP pirates that let the player build a small cannon base, then gradually adds more columns and higher‑HP foes, culminating in the final three waves where ev",
-  "success": false,
-  "reason": "not winnable (6 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:15:39+00:00",
   "target": "burst",
   "note": "Design note: A calm opening with single low‑HP pirates lets the player build a small cannon base, then a single sudden wave of four 1‑HP pirates forces the player to spread their limited cannons acros",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Seed column 2 with three 1‑HP pirates so the player can merge them into a 3‑damage cannon before the HP‑5 tank arrives on wave 5, while the other columns maintain balanced pressure.",
   "success": false,
   "reason": "not better than the regulator's version (archetype swarm != tank)"
+ },
+ {
+  "at": "2026-10-07T08:49:15+00:00",
+  "target": "breather:switch",
+  "note": "Design note: A short 5‑round “switch” breather that alternates pressure between the left pair (0‑1) and right pair (3‑4) with low‑HP pirates, letting the player merge early shots while staying trivial",
+  "success": false,
+  "reason": "goal not met (archetype swarm != switch)"
  }
 ]
