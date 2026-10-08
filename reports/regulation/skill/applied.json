@@ -1,8 +1,8 @@
 {
  "counts": {
-  "regulated": 81,
-  "unresolved_skill": 3,
-  "llm_proposal": 24
+  "regulated": 83,
+  "llm_proposal": 24,
+  "goal_obsolete": 1
  },
  "files": [
   "Level_005.asset",
@@ -16,6 +16,7 @@
   "Level_026.asset",
   "Level_027.asset",
   "Level_028.asset",
+  "Level_029.asset",
   "Level_031.asset",
   "Level_032.asset",
   "Level_035.asset",
@@ -89,6 +90,7 @@
   "Level_360.asset",
   "Level_373.asset",
   "Level_382.asset",
+  "Level_384.asset",
   "Level_388.asset",
   "Level_394.asset",
   "Level_406.asset",

@@ -144,6 +144,11 @@ class Goal:
     keep_naive_lost: bool = False  # reshape: may not become winnable by the naive player
     max_hp: int = 3                # breather only
     reason: str = ""
+    # the archetype the level must NOT end as (the one repeating in its arc/run).
+    # When set, any other clear archetype meets the goal; target_archetype then
+    # only steers the search (2026-10-08: 29/313/384 reached a fine archetype,
+    # just not the exact target, and were left unresolved)
+    avoid_archetype: str | None = None
 
 
 def penalty(goal: Goal, ev: SkillEval, original: SkillEval, taken: set[str], signature: str) -> float:
@@ -170,7 +175,10 @@ def penalty(goal: Goal, ev: SkillEval, original: SkillEval, taken: set[str], sig
         p += 20 * max(0.0, lo * original.pirates - ev.pirates, ev.pirates - hi * original.pirates)
         p += 30 * max(0, ev.filas - max(original.filas + 1, 4))
         p += 50 * (ev.tension < 1)
-    if goal.target_archetype and ev.primary != goal.target_archetype:
+    if goal.avoid_archetype:
+        # None = no clear identity: doesn't repeat the arc, but isn't variety either
+        p += 80 * (ev.primary in (goal.avoid_archetype, None))
+    elif goal.target_archetype and ev.primary != goal.target_archetype:
         p += 80
     return p
 
@@ -193,7 +201,23 @@ def add_any(level: Level, rng: random.Random) -> Level | None:
     return normalize(lv)
 
 
-_OPS = dict(OPERATORS, add_any=add_any)
+def consolidate(level: Level, rng: random.Random) -> Level | None:
+    """Two pirates of one fila become one with their summed HP (fewer, taller
+    pirates). The only edit that lowers the "swarm" score (share of HP<=2
+    pirates x pirates per fila) without making the level shorter or easier."""
+    import copy
+    options = [i for i, f in enumerate(level.filas) if len([c for c in f.cuadros if c.tipo >= 1]) >= 2]
+    if not options:
+        return None
+    lv = copy.deepcopy(level)
+    fila = lv.filas[rng.choice(options)]
+    a, b = rng.sample([c for c in fila.cuadros if c.tipo >= 1], 2)
+    a.hp += b.hp  # normalize clamps to the game's max HP
+    fila.cuadros.remove(b)
+    return normalize(lv)
+
+
+_OPS = dict(OPERATORS, add_any=add_any, consolidate=consolidate)
 # what each goal leans on (everything else keeps a small weight)
 _GOAL_WEIGHTS = {
     # the naive player never MOVES cannons and merges only reactively: side
@@ -217,6 +241,10 @@ def _weights(goal: Goal) -> dict[str, float]:
         w[name] += x
     for name, x in _ARCHETYPE_WEIGHTS.get(goal.target_archetype or "", {}).items():
         w[name] += x
+    if goal.avoid_archetype == "swarm":
+        # leaving swarm = fewer, taller pirates; adding pirates only deepens it
+        w["consolidate"] += 3
+        w["grow"] += 1
     return w
 
 
@@ -332,7 +360,7 @@ def plan(order: list[dict], levels: dict[int, Level], evaluate: Evaluator) -> di
         target = min((a for a in DESIGN_ARCHETYPES if a != arc_top), key=lambda a: (used[a], DESIGN_ARCHETYPES.index(a)))
         used[target] += 1
         goals[r["n"]] = Goal("breather", target_archetype=target, max_hp=3 if r["arc"] <= 10 else 4,
-                             reason=f"breather at {r['pos']}")
+                             reason=f"breather at {r['pos']}", avoid_archetype=arc_top)
     return goals
 
 
@@ -340,17 +368,43 @@ def _add_reshape(goals: dict[int, Goal], r: dict, target: str, reason: str) -> N
     g = goals.get(r["n"])
     if g is not None:  # already hardened: also steer its archetype
         g.target_archetype, g.reason = target, f"{g.reason}; {reason}"
+        g.avoid_archetype = r["ev"].primary
         return
     goals[r["n"]] = Goal("reshape", target_archetype=target, keep_naive_lost=not r["ev"].naive_won,
-                         reason=reason)
+                         reason=reason, avoid_archetype=r["ev"].primary)
 
 
 # ---- runner ----------------------------------------------------------------------
+
+def _solve(level: Level, goal: Goal, evaluate: Evaluator, taken: set[str], seeds: int):
+    """Searches the goal with up to `seeds` random restarts (a hill climb
+    stuck on one plateau often clears it from another start); for breather/
+    reshape goals, each other steering archetype is tried too. Returns the
+    goal actually met (or the original one) and the best search result."""
+    n = level.levelNumber
+    steer = [goal.target_archetype]
+    if goal.kind in ("breather", "reshape"):
+        # the archetype is the usual blocker (a 4-6 round "swarm" breather
+        # needs ~20 pirates): try the other ones before giving up
+        steer += [a for a in DESIGN_ARCHETYPES if a not in (goal.target_archetype, goal.avoid_archetype)]
+    best_goal, best = goal, None
+    for seed in range(max(1, seeds)):
+        for target in steer:
+            trial = Goal(**{**asdict(goal), "target_archetype": target})
+            result = search(level, trial, evaluate, taken, random.Random(n + 1000 * seed))
+            if best is None or result[3] < best[3]:
+                best_goal, best = trial, result
+            if best[3] == 0:
+                return best_goal, best
+    return best_goal, best
+
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Skill pass over the release levels.")
     parser.add_argument("--dry-run", action="store_true", help="print the plan only")
     parser.add_argument("--limit", type=int, default=0, help="process only the first N planned levels")
+    parser.add_argument("--levels", default="", help="comma-separated levelNumbers: retry only these planned levels")
+    parser.add_argument("--seeds", type=int, default=1, help="random restarts per goal (default 1)")
     args = parser.parse_args(argv)
 
     order = json.loads(RELEASE_ORDER_PATH.read_text(encoding="utf-8"))["order"]
@@ -360,6 +414,13 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit(f"release levels without an asset: {missing[:10]}")
     evaluate = Evaluator()
     goals = plan(order, levels, evaluate)
+    if args.levels:
+        wanted = {int(x) for x in args.levels.split(",") if x.strip()}
+        unplanned = wanted - set(goals)
+        if unplanned:
+            # not an error: the level may already meet every goal now
+            print(f"not in the plan (nothing to do): {sorted(unplanned)}")
+        goals = {n: g for n, g in goals.items() if n in wanted}
     kinds = Counter(g.kind for g in goals.values())
     print(f"plan: {len(goals)} levels {dict(kinds)}")
     if args.dry_run:
@@ -373,19 +434,7 @@ def main(argv: list[str] | None = None) -> int:
     for i, (n, goal) in enumerate(items, 1):
         level = levels[n]
         taken.discard(level.shape_signature())
-        best, before, after, left, evals = search(level, goal, evaluate, taken, random.Random(n))
-        if left > 0 and goal.kind in ("breather", "reshape"):
-            # the archetype is the usual blocker (a 4-6 round "swarm" breather
-            # needs ~20 pirates): try the other ones before giving up
-            for alt in DESIGN_ARCHETYPES:
-                if alt in (goal.target_archetype, before.primary):
-                    continue
-                trial = Goal(**{**asdict(goal), "target_archetype": alt})
-                result = search(level, trial, evaluate, taken, random.Random(n))
-                if result[3] == 0:
-                    goal = trial
-                    best, before, after, left, evals = result
-                    break
+        goal, (best, before, after, left, evals) = _solve(level, goal, evaluate, taken, args.seeds)
         best.levelNumber, best.password, best.isHard = level.levelNumber, level.password, level.isHard
         met = left == 0
         taken.add((best if met else level).shape_signature())

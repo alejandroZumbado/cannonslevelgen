@@ -120,6 +120,20 @@ def _extract_json(text: str) -> dict | None:
         return None
 
 
+def _try_repair(level: Level, archetype: str, existing_signatures: set[str], attempt: int) -> Level | None:
+    """production/level_repair.py on a rejected candidate; None if it can't be
+    saved. Never raises: a repair bug must not cost the day's other attempts."""
+    from production import level_repair  # local import: pulls in the solver-free skill_pass stack
+    try:
+        fixed = level_repair.repair(level, archetype, existing_signatures, seed=attempt)
+    except Exception:  # noqa: BLE001 — logged as an incident, then treated as "not repaired"
+        incident_log.record_exception("daily_generator.level_repair")
+        print(f"  attempt {attempt}: local repair crashed (incident logged), treating as not repaired")
+        return None
+    print(f"  attempt {attempt}: local repair {'succeeded' if fixed else 'failed'}")
+    return fixed
+
+
 def generate_one_level(level_number: int, used_passwords: set[str], existing_signatures: set[str],
                        archetype: str) -> Level | None:
     """Returns None if every attempt was tried and none was winnable (by the
@@ -211,7 +225,13 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
         # the naive baseline (never moves a cannon, merges only reactively) —
         # e.g. 594 is 26 HP-1 pirates. The release already has plenty of easy
         # filler (breathers, early arcs); a daily level must ask for a decision.
+        repaired_from = None  # "trivial" | "unwinnable" when level_repair rewrote the candidate
         if run_level(level, BaselinePolicy()).won:
+            # local repair first (2026-10-08): keeps the idea, adds the decision
+            fixed = _try_repair(level, archetype, existing_signatures, attempt)
+            if fixed is not None:
+                level, repaired_from = fixed, "trivial"
+        if repaired_from is None and run_level(level, BaselinePolicy()).won:
             feedback = ("too easy: a player who just drops each new cannon on the most threatened column "
                         "and never moves a placed cannon wins it. Keep the idea but make it ask for a real "
                         "decision: pressure that switches sides (cannons must be MOVED), a pirate blocked by "
@@ -222,6 +242,13 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
             continue
 
         engine = run_level(level, policy)
+        if not engine.won:
+            # local repair before the slow solver (2026-10-08): 14/16 candidates
+            # of 10-07..08 died here; offline, repair saved 15/16 in ~1 s each
+            fixed = _try_repair(level, archetype, existing_signatures, attempt)
+            if fixed is not None:
+                level, repaired_from = fixed, "unwinnable"
+                engine = run_level(level, policy)
         # Policy loss -> ask the solver (2026-09-26). The policy wins 0/35 of the
         # real winnable levels it's trained on, all merge-heavy, so "tank" (the
         # archetype _pick_archetype keeps choosing, 0 in the campaign) was
@@ -234,10 +261,13 @@ def generate_one_level(level_number: int, used_passwords: set[str], existing_sig
         outcome = {
             "accepted": accepted, "attempt": attempt, "rounds_played": engine.rounds_played,
             "level_password": level.password, "policy_won": engine.won, "solver_won": solver_won,
+            "repaired_from": repaired_from,
         }
         audit.record_call(caller="daily_generator", completion=completion, system=system, user=user, outcome=outcome)
         if accepted:
             winner = "learned policy" if engine.won else "solver only (policy lost)"
+            if repaired_from:
+                winner += f" after local repair ({repaired_from})"
             print(f"  attempt {attempt}: winnable by {winner}, accepted")
             return level
         feedback = ("neither the trained AI nor an exhaustive search could win it — too hard. Keep the "

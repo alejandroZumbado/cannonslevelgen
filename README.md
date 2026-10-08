@@ -53,7 +53,10 @@ relates to `learning_log/` and `state/budget.json`).
 `production/daily_generator.py` uses the policy and rules learned in month 1
 to generate and validate one level, then pushes it as JSON into
 `GeneratedLevels/incoming/` in the Cannons repo itself — see "Getting it into
-the actual game" below for how.
+the actual game" below for how. Since 2026-10-08 a candidate that is unwinnable
+or too easy isn't thrown away: `production/level_repair.py` softens it until the
+champion wins, then hardens it until the naive player loses (local, ~1 s,
+no LLM call); the audit outcome records `repaired_from`.
 
 ## Getting it into the actual game
 
@@ -153,10 +156,13 @@ every candidate simulated, no LLM):
 - **harden** — peaks and late bodies over the naive cap (100% / 50% / 30% /
   20% / 20% per 100 positions): naive player must lose, champion (peaks:
   champion or solver) must still win, pacing ok, same size band;
-- **reshape** — repetitive arcs / runs of 4+: reach another archetype, no easier;
+- **reshape** — repetitive arcs / runs of 4+: reach another archetype, no easier
+  (any clear archetype but the repeated one counts — `avoid_archetype`; a
+  `consolidate` edit merges low-HP pirates to leave "swarm");
 - **breather** — 4-6 rounds, naive wins, 2+ pirates in most rounds, a pirate
   passes the first row, HP <= 3 (<= 4 after arc 10), rotating archetype,
   unique shape.
+Retry only some levels with more restarts: `--levels 29,384 --seeds 3`.
 Results: `reports/regulation/skill/shard_0.json`; apply with
 `python -m verification.apply_regulation --pass skill`. Unmet goals
 (`unresolved_skill`) go first in regulation_designer's queue. The weekly
