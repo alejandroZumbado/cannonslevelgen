@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-12T17:30:45+00:00",
+  "release_size": 500,
+  "pacing_pass": 500,
+  "primary_archetypes": {
+    "wall": 132,
+    "swarm": 126,
+    "crescendo": 88,
+    "burst": 91,
+    "switch": 63
+  },
+  "repetitive_arcs": [],
+  "pacing_failures": [],
+  "skill_curve": {
+    "naive_body_win_share": {
+      "1-100": 0.73,
+      "101-200": 0.49,
+      "201-300": 0.26,
+      "301-400": 0.18,
+      "401-500": 0.18
+    },
+    "peaks_won_by_naive": [
+      {
+        "position": 11,
+        "levelNumber": 293
+      }
+    ]
+  },
+  "near_duplicates": []
+}
