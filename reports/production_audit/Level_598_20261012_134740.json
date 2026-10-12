@@ -1,0 +1,25 @@
+{
+  "levelNumber": 598,
+  "password": "L0000",
+  "generated_at": "2026-10-12T13:47:40+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 11.83,
+  "champion_rounds_played": 8,
+  "baseline_won": false,
+  "baseline_rounds_played": 4,
+  "difficulty_tag": "requires_learned_strategy",
+  "pacing": {
+    "filas": 6,
+    "pirates_per_fila": 2.0,
+    "single_pirate_share": 0.5,
+    "late_demand": 0.9,
+    "archetypes": [
+      "burst",
+      "wall",
+      "switch",
+      "swarm"
+    ],
+    "primary": "burst",
+    "problems": []
+  }
+}
