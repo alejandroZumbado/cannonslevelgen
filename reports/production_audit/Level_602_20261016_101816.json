@@ -1,0 +1,26 @@
+{
+  "levelNumber": 602,
+  "password": "N6586",
+  "generated_at": "2026-10-16T10:18:16+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 15.4,
+  "champion_rounds_played": 12,
+  "baseline_won": false,
+  "baseline_rounds_played": 8,
+  "difficulty_tag": "requires_learned_strategy",
+  "pacing": {
+    "filas": 10,
+    "pirates_per_fila": 1.8,
+    "single_pirate_share": 0.5,
+    "late_demand": 1.37,
+    "archetypes": [
+      "crescendo",
+      "burst",
+      "tank",
+      "wall",
+      "switch"
+    ],
+    "primary": "crescendo",
+    "problems": []
+  }
+}
