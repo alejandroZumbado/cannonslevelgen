@@ -38,7 +38,7 @@ concurrency:
 jobs:
   daily-production:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45  # 15 -> 45 (2026-10-14): 3 levels per run (1 variety + 2 drag)
 
     steps:
       - name: Checkout CannonsLevelGen (this repo)

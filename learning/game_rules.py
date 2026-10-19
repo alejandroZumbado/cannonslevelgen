@@ -49,6 +49,31 @@ mechanically, stop — re-read this block first.
 - Merge: placing a cannon onto an already-occupied column absorbs the
   resident cannon's damage (new damage = own + resident's) and destroys the
   resident.
+- Drag (move): instead of dropping the new cannon, the player may DRAG an
+  already placed cannon to another column (action ["move", from, to]). It
+  keeps its damage, leaves its old column empty, and merges if the target is
+  occupied. The unused new cannon waits for a later round. This is how a
+  player brings damage built up in one column to a threat in another.
+  Worked example (needs drag — the spawn-only solver can't win it):
+    R1: c2 hp1, c3 hp2 | R2: c2 hp2, c3 hp2 | R3: c2 hp2, c3 hp1 | R4: c1 hp8, c3 hp1
+  Win: spawn c3, spawn c2, spawn c1 (waiting BEFORE the hp-8 arrives, so
+  none of its 3 shots is wasted), spawn c1 (merge -> 2, hp 8->6), spawn c2
+  (merge -> 2, hp 6->4), then move c2 -> c1 (merge -> 4, kills it). The
+  dragged damage must arrive on time: an LLM that left column 1 empty and
+  dragged a damage-3 cannon over only on the hp-8's 2nd shot lost (3+3 < 8).
+  Pre-place in the threatened column, then drag for the final blow.
+- LIMITS (measured with the solver, 2026-10-14) — how tall a pirate can be
+  and still be killable. Killing power in a column = the damage present on
+  each of the pirate's 3 shots; cannons stacked there BEFORE it spawns count.
+  A pirate that spawns in round r (r=1 = present before the first move):
+    alone (nothing else to kill): max HP = 3r+3 -> r1: 6, r2: 9, r3+: 10 (the HP cap).
+    with 2 HP-1 pirates per round on other columns: r1: 6, r2: 4, r3: 6, r4: 9, r5+: 10.
+  Every other pirate competes for the same cannons; that competition is what
+  makes a level hard. Dragging lets one cannon serve two columns (kill the
+  small ones, then move over for the tall one) — the worked example above puts
+  an HP-8 in round 4 under pressure and is still winnable only thanks to it.
+  "Extreme but winnable" = sit right at these limits: one HP more and no line
+  of play wins.
 - Loss: any pirate reaching position 3 ends the game immediately.
 - Win: all filas (waves) have been spawned AND no pirates remain alive.
 - Shot budget is FIXED at 3 per pirate, period — NOT "however many filas the

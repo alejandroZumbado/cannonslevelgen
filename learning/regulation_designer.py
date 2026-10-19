@@ -106,6 +106,14 @@ _SKILL_GOAL_TEXT = {
                "wins it. Make that naive player LOSE while a good player still wins: pressure that switches "
                "sides so cannons must be moved, a pirate blocked behind another in its column, or a tall "
                "pirate whose merge must be prepared rounds earlier. Keep about the same number of pirates."),
+    "drag": ("it must REQUIRE the drag mechanic: impossible for a player who only drops new cannons "
+             "(checked by a spawn-only solver), winnable for one who drags a placed cannon. Build damage "
+             "pressure in some columns, then a tall pirate (HP 6-10) late in a column with nothing stacked "
+             "before it, sized against the LIMITS so dropped cannons alone can't kill it in 3 shots. "
+             "A naive player must still lose."),
+    "extreme": ("it is an arc PEAK and must be EXTREME but winnable: sit right at the LIMITS so the trained "
+                "AI loses it while an exhaustive search still finds the winning line. Raise late pressure "
+                "(taller pirates, denser late rounds, blocking stacks) until just one precise line survives."),
     "reshape": ("its arc repeats one design idea too often. Rebuild it around the TARGET ARCHETYPE below, "
                 "no easier than now (if the naive player loses it now, it must still lose)."),
     "breather": ("it is a BREATHER (relief level after a hard peak) but dull: a line of lone HP-1 pirates "
@@ -258,6 +266,8 @@ def _evaluate_skill(record: dict, candidate: Level | None) -> dict:
     goal = skill_pass.Goal(**record["goal"])
     evaluate = skill_pass.Evaluator()
     before, after = evaluate(normalize(original), goal.is_peak), evaluate(candidate, goal.is_peak)
+    if goal.kind == "drag":  # 2026-10-14: the drag goal is judged on the spawn-only solver too
+        before, after = evaluate.with_drag(normalize(original), before), evaluate.with_drag(candidate, after)
     # learning.yml doesn't check out the Cannons repo: shapes come from the
     # snapshot skill_pass writes next to its results
     taken = set(_load_json(skill_pass.SIGNATURES_PATH, [])) - {original.shape_signature()}
@@ -268,8 +278,13 @@ def _evaluate_skill(record: dict, candidate: Level | None) -> dict:
             why.append("not winnable by the trained AI")
         if goal.kind == "breather" and not after.naive_won:
             why.append("too hard for a breather (the naive player loses)")
-        if goal.kind != "breather" and after.naive_won and (goal.kind == "harden" or goal.keep_naive_lost):
+        if goal.kind != "breather" and after.naive_won and (goal.kind in ("harden", "drag", "extreme")
+                                                              or goal.keep_naive_lost):
             why.append("the naive player still wins")
+        if goal.kind == "drag" and not after.needs_drag:
+            why.append("winnable without ever dragging a placed cannon")
+        if goal.kind == "extreme" and after.champion_won:
+            why.append("not extreme: the trained AI still wins it")
         if goal.target_archetype and after.primary != goal.target_archetype:
             why.append(f"archetype {after.primary} != {goal.target_archetype}")
         if after.pacing["problems"] and goal.kind != "breather":

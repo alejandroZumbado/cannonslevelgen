@@ -49,6 +49,7 @@ from policy.loader import load_policy_from_file
 from sim.engine import run_level
 from sim.level import Level
 from verification import pacing
+from verification.drag import winnable_without_drag
 from verification.level_mutations import OPERATORS, _free_columns, _new_pirate, normalize
 from verification.official_levels import load_all
 from verification.solver import solve_thoroughly, DEFAULT_MAX_ROUNDS
@@ -76,6 +77,17 @@ MAX_SECONDS = 150
 STALL_AFTER_GOAL = 30
 SOLVER_WIDTHS = (200,)  # a win at width 200 is a real win; wider only adds minutes
 
+# Drag + extreme (2026-10-14, user request: harder levels that stay winnable,
+# and the drag mechanic as a real skill — but a varied campaign, not all alike).
+# Peaks alternate two kinds of "hard" so arcs don't all end the same way:
+# odd arcs from DRAG_PEAK_FROM_ARC end in a peak that needs a drag; even arcs
+# from EXTREME_PEAK_FROM_ARC in one the champion loses but the solver wins.
+DRAG_PEAK_FROM_ARC = 3
+EXTREME_PEAK_FROM_ARC = 6
+# Minimum share of arc bodies that need a drag, by release position: taught
+# gradually, never the majority (release on 10-14: 9% overall, 40 bodies).
+DRAG_BODY_SHARE = ((100, 0.0), (200, 0.1), (300, 0.2), (400, 0.25), (500, 0.25), (10_000, 0.25))
+
 
 # ---- evaluation ----------------------------------------------------------------
 
@@ -91,6 +103,7 @@ class SkillEval:
     pirates: int
     filas: int
     max_hp: int
+    needs_drag: bool | None = None  # 2026-10-14: filled only where a goal asks (Evaluator.with_drag)
 
 
 class Evaluator:
@@ -104,6 +117,7 @@ class Evaluator:
         self.naive = BaselinePolicy()
         self.cache: dict[str, SkillEval] = {}
         self.solved: dict[str, bool] = {}
+        self.drag_cache: dict[str, bool] = {}
 
     def __call__(self, level: Level, allow_solver: bool = False) -> SkillEval:
         key = level.shape_signature()
@@ -133,12 +147,26 @@ class Evaluator:
         return SkillEval(**{**asdict(ev), "winnable": won,
                             "classification": "solved_by_search_only" if won else "no_win_found"})
 
+    def needs_drag(self, level: Level) -> bool:
+        """Spawn-only solver can't win (verification/drag.py). Cached by shape;
+        one narrow tier is enough here (~0.1-0.5 s per level)."""
+        key = level.shape_signature()
+        if key not in self.drag_cache:
+            self.drag_cache[key] = not winnable_without_drag(level, SOLVER_WIDTHS)
+        return self.drag_cache[key]
+
+    def with_drag(self, level: Level, ev: SkillEval) -> SkillEval:
+        """`ev` with needs_drag filled in (a copy: cached evals stay drag-free)."""
+        return SkillEval(**{**asdict(ev), "needs_drag": self.needs_drag(level)})
+
 
 # ---- goals -----------------------------------------------------------------------
 
 @dataclass
 class Goal:
-    kind: str                      # harden | reshape | breather
+    # harden | reshape | breather | drag (must need a drag, 2026-10-14)
+    # | extreme (peak the champion loses but the solver wins: winnable only with precise play)
+    kind: str
     is_peak: bool = False
     target_archetype: str | None = None
     keep_naive_lost: bool = False  # reshape: may not become winnable by the naive player
@@ -169,8 +197,12 @@ def penalty(goal: Goal, ev: SkillEval, original: SkillEval, taken: set[str], sig
         p += 500 * (signature in taken)
     else:
         p += 50 * len(pace["problems"]) + 100 * max(0.0, pacing.MIN_LATE_DEMAND - pace["late_demand"])
-        if goal.kind == "harden" or goal.keep_naive_lost:
+        if goal.kind in ("harden", "drag", "extreme") or goal.keep_naive_lost:
             p += 300 * ev.naive_won
+        if goal.kind == "drag":
+            p += 300 * (ev.needs_drag is not True)  # None = not measured = not met
+        if goal.kind == "extreme":
+            p += 300 * ev.champion_won  # winnable (first line) but beyond the trained AI
         lo, hi = SIZE_BAND
         p += 20 * max(0.0, lo * original.pirates - ev.pirates, ev.pirates - hi * original.pirates)
         p += 30 * max(0, ev.filas - max(original.filas + 1, 4))
@@ -217,7 +249,25 @@ def consolidate(level: Level, rng: random.Random) -> Level | None:
     return normalize(lv)
 
 
-_OPS = dict(OPERATORS, add_any=add_any, consolidate=consolidate)
+def drag_spike(level: Level, rng: random.Random) -> Level | None:
+    """A tall pirate (HP 6-10) in a second-half fila, in a column with no
+    pirate in the 2 filas before it — the shape that makes the player drag
+    damage built up elsewhere (see verification/drag.py's worked example)."""
+    import copy
+    n = len(level.filas)
+    if n < 3:
+        return None
+    i = rng.randrange(max(2, n // 2), n)
+    recent = {c.index for f in level.filas[i - 2:i] for c in f.cuadros if c.tipo >= 1}
+    free = [c for c in _free_columns(level.filas[i]) if c not in recent]
+    if not free:
+        return None
+    lv = copy.deepcopy(level)
+    lv.filas[i].cuadros.append(_new_pirate(rng, rng.choice(free), rng.randint(6, 10)))
+    return normalize(lv)
+
+
+_OPS = dict(OPERATORS, add_any=add_any, consolidate=consolidate, drag_spike=drag_spike)
 # what each goal leans on (everything else keeps a small weight)
 _GOAL_WEIGHTS = {
     # the naive player never MOVES cannons and merges only reactively: side
@@ -225,6 +275,10 @@ _GOAL_WEIGHTS = {
     "harden": {"move_column": 3, "stack": 3, "bump_late": 2, "grow": 2, "shift_later": 1, "add_late": 1},
     "reshape": {},
     "breather": {"add_any": 4, "widen_single": 3, "move_column": 2, "merge_filas": 1, "shave": 1},
+    # a late tall pirate where nothing was stacked + side pressure to keep cannons busy
+    "drag": {"drag_spike": 4, "bump_late": 2, "add_late": 2, "grow": 1, "shave": 1},
+    # push toward the limits: taller and denser late rounds, blocking stacks
+    "extreme": {"bump_late": 3, "grow": 3, "stack": 2, "add_late": 2, "drag_spike": 1, "move_column": 1},
 }
 _ARCHETYPE_WEIGHTS = {
     "swarm": {"split": 3, "widen_single": 2, "add_any": 2, "shave": 1},
@@ -252,7 +306,12 @@ def search(level: Level, goal: Goal, evaluate: Evaluator, taken: set[str], rng: 
     """Hill climb on penalty (ties broken by fewer changed cells). Sideways
     moves are allowed while the goal is unmet, to walk off plateaus."""
     original = normalize(level)
-    orig_ev = evaluate(original, goal.is_peak)
+
+    def measure(lv: Level, ev: SkillEval) -> SkillEval:
+        # drag goals also need the spawn-only solver's verdict (cheap, cached)
+        return evaluate.with_drag(lv, ev) if goal.kind == "drag" else ev
+
+    orig_ev = measure(original, evaluate(original, goal.is_peak))
     best, best_ev = original, orig_ev
     def tie_break(cand: Level, ev: SkillEval) -> int:
         # fewer edits first; a level that wasn't asked to change archetype
@@ -272,7 +331,7 @@ def search(level: Level, goal: Goal, evaluate: Evaluator, taken: set[str], rng: 
             stall += 1
             continue
         evals += 1
-        ev = evaluate(cand)
+        ev = measure(cand, evaluate(cand))
         sig = cand.shape_signature()
         if goal.is_peak and not ev.champion_won:
             # optimistic first (as if the solver wins); pay for the solver
@@ -282,7 +341,7 @@ def search(level: Level, goal: Goal, evaluate: Evaluator, taken: set[str], rng: 
             if opt_key[0] > best_key[0] or (best_key[0] == 0 and opt_key >= best_key):
                 stall += 1
                 continue
-            ev = evaluate.confirm(cand)
+            ev = measure(cand, evaluate.confirm(cand))
         key = (penalty(goal, ev, orig_ev, taken, sig), tie_break(cand, ev))
         if key < best_key or (best_key[0] > 0 and key[0] == best_key[0]):
             improved = key < best_key
@@ -351,6 +410,9 @@ def plan(order: list[dict], levels: dict[int, Level], evaluate: Evaluator) -> di
                 _add_reshape(goals, pick, target, f"run of {len(run)} {run[0]['ev'].primary} at {run[0]['pos']}")
         run = [r] if r is not None else []
 
+    # 3b. drag / extreme peaks and drag bodies (see DRAG_* constants)
+    _plan_drag_and_extreme(rows, levels, evaluate, goals)
+
     # 4. breathers: rotate archetypes, contrast with the arc they open
     used = Counter()
     for r in rows:
@@ -362,6 +424,53 @@ def plan(order: list[dict], levels: dict[int, Level], evaluate: Evaluator) -> di
         goals[r["n"]] = Goal("breather", target_archetype=target, max_hp=3 if r["arc"] <= 10 else 4,
                              reason=f"breather at {r['pos']}", avoid_archetype=arc_top)
     return goals
+
+
+def _peak_kind(arc: int) -> str | None:
+    """Which hard-peak kind an arc ends with (None = keep the harden rule only)."""
+    if arc >= DRAG_PEAK_FROM_ARC and arc % 2 == 1:
+        return "drag"
+    if arc >= EXTREME_PEAK_FROM_ARC and arc % 2 == 0:
+        return "extreme"
+    return None
+
+
+def _plan_drag_and_extreme(rows: list[dict], levels: dict[int, Level], evaluate: Evaluator,
+                           goals: dict[int, Goal]) -> None:
+    """Adds drag/extreme goals in place. A drag or extreme goal replaces a
+    harden goal (both already demand that the naive player loses); levels
+    being reshaped keep that goal (their job is variety)."""
+    def replaceable(n: int) -> bool:
+        return n not in goals or goals[n].kind == "harden"
+
+    for r in rows:
+        kind = _peak_kind(r["arc"]) if r["role"] == "peak" else None
+        if kind is None or not replaceable(r["n"]):
+            continue
+        ev = r["ev"]
+        met = (not ev.naive_won) and (evaluate.needs_drag(levels[r["n"]]) if kind == "drag"
+                                      else not ev.champion_won)
+        if not met:
+            goals[r["n"]] = Goal(kind, is_peak=True, reason=f"arc {r['arc']} peak at {r['pos']} -> {kind} peak")
+
+    by_arc = defaultdict(list)
+    for r in rows:
+        by_arc[r["arc"]].append(r)
+    lo = 0
+    for hi, share in DRAG_BODY_SHARE:
+        band = [r for r in rows if lo < r["pos"] <= hi and r["role"] == "body"]
+        lo = hi
+        if not band or share <= 0:
+            continue
+        dragged = [r for r in band if evaluate.needs_drag(levels[r["n"]])]
+        deficit = int(share * len(band)) - len(dragged)
+        if deficit <= 0:
+            continue
+        # bodies nearest their arc's peak first, so each arc still ramps toward it
+        pool = [r for r in band if r not in dragged and replaceable(r["n"])]
+        pool.sort(key=lambda r: -by_arc[r["arc"]].index(r) / len(by_arc[r["arc"]]))
+        for r in pool[:deficit]:
+            goals[r["n"]] = Goal("drag", reason=f"body at {r['pos']}: band <= {hi} below {share:.0%} drag levels")
 
 
 def _add_reshape(goals: dict[int, Goal], r: dict, target: str, reason: str) -> None:

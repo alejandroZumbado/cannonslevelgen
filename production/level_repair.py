@@ -59,18 +59,21 @@ def soften(level: Level, policy, rng: random.Random) -> Level | None:
     return best if best_key[0] else None
 
 
-def repair(level: Level, archetype: str | None, taken: set[str], seed: int = 0) -> Level | None:
+def repair(level: Level, archetype: str | None, taken: set[str], seed: int = 0,
+           goal_kind: str = "harden") -> Level | None:
     """Winnable by the champion, lost by the naive player, pacing ok — or None.
     Tries to land on `archetype` (the day's variety target) first, then
     accepts any archetype rather than losing the level. `taken` = shape
-    signatures already in the game (a repaired level may not copy one)."""
+    signatures already in the game (a repaired level may not copy one).
+    `goal_kind` "drag" (2026-10-14) hardens toward a level that NEEDS a drag
+    instead: plain hardening kept winning levels that needed none (4/4 repairs)."""
     evaluate = skill_pass.Evaluator()
     rng = random.Random(seed)
     soft = soften(level, evaluate.champion, rng)
     if soft is None:
         return None
     for target in ([archetype, None] if archetype else [None]):
-        goal = skill_pass.Goal("harden", target_archetype=target)
+        goal = skill_pass.Goal(goal_kind, target_archetype=target)
         best, _, after, left, _ = skill_pass.search(soft, goal, evaluate, taken, rng)
         # search's penalty has no duplicate check for non-breathers: do it here
         if left == 0 and best.shape_signature() not in taken:

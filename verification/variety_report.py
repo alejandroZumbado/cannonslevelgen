@@ -12,6 +12,11 @@ arc bodies a naive player (policy/baseline.py, never moves a cannon) wins per
 100 positions — it must fall as the campaign goes on — plus peaks the naive
 player wins and near-duplicate level pairs.
 
+Since 2026-10-14 also the CHALLENGE mix: share of levels that need a drag
+(verification/drag.py) per 100 positions, and what kind of hard each arc
+peak is (drag / extreme = champion loses, solver wins / other) — the balance
+check for skill_pass's drag and extreme goals, so the campaign stays varied.
+
 Pure local analysis, no LLM (the naive player is a quick simulation). Writes
 reports/variety/<date>.json + latest.json; runs in weekly_level_audit.yml
 right before the audit, whose git_sync commit picks the files up.
@@ -32,7 +37,9 @@ import config
 from verification.official_levels import load_all
 from verification.pacing import pacing_report
 from policy.baseline import BaselinePolicy
+from policy.loader import load_policy_from_file
 from sim.engine import run_level
+from verification.drag import winnable_without_drag
 
 ORDER_PATH = config.ROOT / "reports" / "release_order.json"
 REPORT_DIR = config.ROOT / "reports" / "variety"
@@ -75,6 +82,25 @@ def skill_curve(order: list[dict], by_number: dict) -> dict:
     }
 
 
+def challenge_mix(order: list[dict], by_number: dict) -> dict:
+    """Drag share per 100 positions (all roles) + peak kinds. Narrow solver
+    tier (200): a quick weekly signal, not the strict per-level verdict."""
+    champion = load_policy_from_file(config.ROOT / "policy" / "current.py")
+    bands: dict[int, list[bool]] = defaultdict(list)
+    peaks = Counter()
+    for pos, o in enumerate(order, 1):
+        level = by_number[o["levelNumber"]]
+        drag = not winnable_without_drag(level, (200,))
+        bands[(pos - 1) // 100].append(drag)
+        if o["role"] == "peak":
+            # champion loss on a release level = extreme (the release is all winnable)
+            peaks["drag" if drag else "extreme" if not run_level(level, champion).won else "other"] += 1
+    return {
+        "drag_share": {f"{k * 100 + 1}-{k * 100 + 100}": round(sum(v) / len(v), 2) for k, v in sorted(bands.items())},
+        "peak_kinds": dict(peaks),
+    }
+
+
 def build_report() -> dict:
     order = json.loads(ORDER_PATH.read_text(encoding="utf-8"))["order"]
     by_number = {lv.levelNumber: lv for lv in load_all(config.CANNONS_REPO / "Assets" / "Levels")}
@@ -107,6 +133,7 @@ def build_report() -> dict:
         "repetitive_arcs": repetitive,
         "pacing_failures": failing,
         "skill_curve": skill_curve(order, by_number),
+        "challenge_mix": challenge_mix(order, by_number),
         "near_duplicates": near_duplicates([by_number[o["levelNumber"]] for o in order]),
     }
 
@@ -123,7 +150,8 @@ def main() -> None:
           f"{len(report['repetitive_arcs'])} repetitive arc(s); naive body wins "
           f"{report['skill_curve']['naive_body_win_share']}; "
           f"{len(report['skill_curve']['peaks_won_by_naive'])} peak(s) won by the naive player; "
-          f"{len(report['near_duplicates'])} near-duplicate pair(s).")
+          f"{len(report['near_duplicates'])} near-duplicate pair(s); drag share "
+          f"{report['challenge_mix']['drag_share']}; peaks {report['challenge_mix']['peak_kinds']}.")
 
 
 if __name__ == "__main__":

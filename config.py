@@ -56,7 +56,9 @@ DAILY_TOKEN_BUDGET = int(os.environ.get("DAILY_TOKEN_BUDGET", 180_000))
 # this as `reserve_tokens` to llm.client.complete() — daily_generator itself
 # calls with the default (0), so it can freely spend into its own reserved
 # slice (and anything extra learning left unspent).
-DAILY_PRODUCTION_RESERVE_TOKENS = int(os.environ.get("DAILY_PRODUCTION_RESERVE_TOKENS", 25_000))
+# 25k -> 75k (2026-10-14): production now makes 3 levels per run (variety +
+# drag + extreme, daily_generator.py), worst case ~72k tokens.
+DAILY_PRODUCTION_RESERVE_TOKENS = int(os.environ.get("DAILY_PRODUCTION_RESERVE_TOKENS", 75_000))
 
 # If a 429's own retry-after exceeds this, llm/client.py treats it as a hard
 # provider-side quota (daily/hourly cap), not the known TPM burst, and gives

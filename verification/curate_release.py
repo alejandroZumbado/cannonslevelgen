@@ -64,6 +64,15 @@ RELEASE_STEP = 100
 # the champion won (manifest "tension", 0..2). 0 = never threatened.
 MIN_TENSION = 1
 
+# Rebuild ranking (2026-10-15, user: "organiza y reorganiza todos"):
+# difficulty_score is mostly content size, so a rebuild ranks by
+# rank_score = difficulty percentile + these bonuses (skill_pass's measures).
+# A level the naive player loses, or that needs a drag, moves up the curve.
+NAIVE_LOSS_BONUS = 0.25
+DRAG_BONUS = 0.25
+# Levels that must be in a rebuilt release (601 = the user's own drag level).
+MUST_INCLUDE = frozenset({601})
+
 
 def _arc_sizes(total: int, arc_count: int) -> list[int]:
     # e.g. 200/18 = 16 arcs of 11 + 2 of 12; the longer arcs go last.
@@ -136,12 +145,33 @@ def _dedupe_by_shape(entries: list[dict], taken_shapes: set[str] | None = None
     return kept, dropped
 
 
+def _rank_key(e: dict) -> tuple:
+    # rank_score when a rebuild attached one (_attach_rank_scores), else the audit score
+    return (e.get("rank_score", e["difficulty_score"]), e["levelNumber"])
+
+
+def _attach_rank_scores(entries: list[dict]) -> None:
+    """Sets naive_won / needs_drag / rank_score on each entry in place
+    (~3-5 min for 600 levels: champion + naive + spawn-only solver)."""
+    from verification.skill_pass import Evaluator  # lazy: loads the champion policy
+    evaluate = Evaluator()
+    levels = _levels_by_number()
+    ranked = sorted(entries, key=lambda e: (e["difficulty_score"], e["levelNumber"]))
+    last = max(len(ranked) - 1, 1)
+    for i, e in enumerate(ranked):
+        lv = levels[e["levelNumber"]]
+        e["naive_won"] = evaluate(lv).naive_won
+        e["needs_drag"] = evaluate.needs_drag(lv)
+        e["rank_score"] = round(i / last + NAIVE_LOSS_BONUS * (not e["naive_won"])
+                                + DRAG_BONUS * e["needs_drag"], 4)
+
+
 class _Picker:
     """Picks the unused level whose rank is closest to a target percentile
     (0 = easiest, 1 = hardest) in a difficulty-sorted list."""
 
     def __init__(self, entries: list[dict]):
-        self.sorted = sorted(entries, key=lambda e: (e["difficulty_score"], e["levelNumber"]))
+        self.sorted = sorted(entries, key=_rank_key)
         self.used: set[int] = set()
 
     def remaining(self) -> int:
@@ -194,6 +224,8 @@ def _entry(e: dict, role: str, arc: int) -> dict:
         "classification": e["classification"],
         "difficulty_score": e["difficulty_score"],
         "source": e["source"],
+        # skill measures, present only on a rebuild (_attach_rank_scores)
+        **{k: e[k] for k in ("rank_score", "naive_won", "needs_drag") if k in e},
     }
 
 
@@ -243,14 +275,14 @@ def _build_arcs(champions: list[dict], search_peaks: list[dict], sizes: list[int
         lo, hi = arc["body"]
         picks = [picker.take(lo + (hi - lo) * j / max(body_len - 1, 1)) for j in range(body_len)]
         # Rising within the arc, by the real score, not the target.
-        picks.sort(key=lambda e: (e["difficulty_score"], e["levelNumber"]))
+        picks.sort(key=_rank_key)
         # A breather must never be harder than the level after it; if the
         # picker's fallback made it so, swap it with the easiest body level.
         # (Not for weak openers: swapping would put a weak level in the body.)
         if picks and arc["opener_role"] == "breather" and not arc.get("weak_opener") and \
-                arc["opener"]["difficulty_score"] > picks[0]["difficulty_score"]:
+                _rank_key(arc["opener"]) > _rank_key(picks[0]):
             arc["opener"], picks[0] = picks[0], arc["opener"]
-            picks.sort(key=lambda e: (e["difficulty_score"], e["levelNumber"]))
+            picks.sort(key=_rank_key)
         arc["body_levels"] = picks
 
     order: list[dict] = []
@@ -438,6 +470,7 @@ def rebuild_all(manifest: dict, size: int | None = None) -> tuple[list[dict], di
     batches."""
     pool = [e for e in manifest["levels"] if e["pool"] in ("ready", "assigned")]
     pool, dup_dropped = _dedupe_by_shape(pool)
+    _attach_rank_scores(pool)
     champions, searches = _split_pool(pool)
     strong, weak = _split_quality(champions, keep={INTRO_LEVEL})
     # search-only levels are peaks: same pacing gate (Level 508, 18 rounds, was the campaign finale)
@@ -456,6 +489,7 @@ def rebuild_all(manifest: dict, size: int | None = None) -> tuple[list[dict], di
     search_peaks = _sample_evenly(searches, arc_count - first_search_arc)
     order = _build_arcs(strong, search_peaks, _arc_sizes(size, arc_count),
                         first_search_arc, INTRO_LEVEL, arc_offset=0, breathers=weak)
+    _force_include(order, {e["levelNumber"]: e for e in strong})
     for i, o in enumerate(order):
         o["order"] = i + 1
     _check_unique(order, size)
@@ -468,6 +502,25 @@ def rebuild_all(manifest: dict, size: int | None = None) -> tuple[list[dict], di
         "reserve": sorted(e["levelNumber"] for e in pool if e["levelNumber"] not in chosen),
     }
     return order, stats
+
+
+def _force_include(order: list[dict], strong_by_number: dict[int, dict]) -> None:
+    """Puts each MUST_INCLUDE level the picker skipped in place of the body
+    level with the closest rank, then re-sorts that arc's body so it still
+    rises. Fails loudly if a must-include level isn't a usable strong level."""
+    chosen = {o["levelNumber"] for o in order}
+    for n in sorted(MUST_INCLUDE - chosen):
+        e = strong_by_number.get(n)
+        if e is None:
+            raise RuntimeError(f"MUST_INCLUDE level {n} is not in the strong pool "
+                               f"(missing, reskin, weak or not a champion win) — check its audit")
+        bodies = [i for i, o in enumerate(order) if o["role"] == "body"]
+        i = min(bodies, key=lambda i: abs(order[i]["rank_score"] - e["rank_score"]))
+        arc = order[i]["arc"]
+        order[i] = _entry(e, "body", arc)
+        idx = [j for j, o in enumerate(order) if o["arc"] == arc and o["role"] == "body"]
+        for j, o in zip(idx, sorted((order[j] for j in idx), key=_rank_key)):
+            order[j] = o
 
 
 def _arc_plan(size: int, n_searches: int) -> tuple[int, int]:

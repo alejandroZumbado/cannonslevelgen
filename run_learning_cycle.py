@@ -77,7 +77,11 @@ _DESIGNER_EVERY = 1
 # champion already wins 555/592 real levels and the solver covers the rest,
 # so the budget now goes to regulation_designer's skill goals
 # (verification/skill_pass.py). Set back to >0 to resume.
-_STRATEGY_MAX_CALLS_PER_DAY = 0
+# 0 -> 6 on 2026-10-14 (user: "put every bot to learn"): GAME_RULES now
+# teaches drag + measured limits, and skill_pass's extreme peaks (champion
+# loses, solver wins) feed new real targets into sim/real_suite.py. ~40k
+# tokens/day; daily production (~72k worst case) has its own reserve.
+_STRATEGY_MAX_CALLS_PER_DAY = 6
 
 
 def _next_order() -> list[str]:
