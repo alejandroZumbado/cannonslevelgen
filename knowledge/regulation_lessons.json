@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:18:46+00:00",
-  "target": "switch",
-  "note": "Design note: The level pressures the left side (columns 0‑1) with low‑HP pirates for the first three rounds, then abruptly switches to the right side (columns 3‑4) for the next three rounds, forcing t",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-29T02:19:57+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with a few isolated 1‑HP pirates letting the player safely stockpile and merge cannons, then gradually adds more columns and higher‑HP foes, culminating in four densely‑f",
@@ -1398,5 +1391,12 @@
   "note": "",
   "success": false,
   "reason": "no valid JSON level"
+ },
+ {
+  "at": "2026-10-19T06:29:21+00:00",
+  "target": "drag:any",
+  "note": "Design note: Stack damage early in column 0, then a late HP‑9 pirate appears in column 2 forcing the player to drag the high‑damage cannon over to finish it.",
+  "success": false,
+  "reason": "goal not met (winnable without ever dragging a placed cannon)"
  }
 ]
