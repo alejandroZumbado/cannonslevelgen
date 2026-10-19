@@ -1,0 +1,634 @@
+{
+  "generated_at": "2026-10-19T15:21:40+00:00",
+  "release_size": 500,
+  "pacing_pass": 468,
+  "primary_archetypes": {
+    "wall": 132,
+    "crescendo": 96,
+    "swarm": 123,
+    "burst": 91,
+    "switch": 58
+  },
+  "repetitive_arcs": [
+    {
+      "arc": 8,
+      "archetype": "wall",
+      "share": 0.64
+    }
+  ],
+  "pacing_failures": [
+    {
+      "position": 12,
+      "levelNumber": 155,
+      "role": "breather",
+      "filas": 4,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.75,
+      "archetypes": [
+        "wall"
+      ],
+      "primary": "wall",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 23,
+      "levelNumber": 113,
+      "role": "breather",
+      "filas": 4,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.75,
+      "archetypes": [
+        "wall"
+      ],
+      "primary": "wall",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 34,
+      "levelNumber": 407,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.6,
+      "archetypes": [
+        "wall"
+      ],
+      "primary": "wall",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 45,
+      "levelNumber": 68,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.2,
+      "single_pirate_share": 0.8,
+      "late_demand": 0.8,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "80% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 56,
+      "levelNumber": 9,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.6,
+      "archetypes": [
+        "wall",
+        "crescendo"
+      ],
+      "primary": "wall",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 67,
+      "levelNumber": 99,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.2,
+      "single_pirate_share": 0.8,
+      "late_demand": 0.6,
+      "archetypes": [
+        "swarm"
+      ],
+      "primary": "swarm",
+      "problems": [
+        "80% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 89,
+      "levelNumber": 477,
+      "role": "breather",
+      "filas": 6,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.55,
+      "archetypes": [
+        "wall"
+      ],
+      "primary": "wall",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.55 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 100,
+      "levelNumber": 4,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.4,
+      "single_pirate_share": 0.6,
+      "late_demand": 1.0,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 111,
+      "levelNumber": 3,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.4,
+      "single_pirate_share": 0.6,
+      "late_demand": 0.8,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 122,
+      "levelNumber": 83,
+      "role": "breather",
+      "filas": 6,
+      "pirates_per_fila": 1.17,
+      "single_pirate_share": 0.83,
+      "late_demand": 0.72,
+      "archetypes": [
+        "crescendo",
+        "wall"
+      ],
+      "primary": "crescendo",
+      "problems": [
+        "83% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 133,
+      "levelNumber": 15,
+      "role": "breather",
+      "filas": 6,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.55,
+      "archetypes": [
+        "wall",
+        "crescendo"
+      ],
+      "primary": "wall",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.55 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 144,
+      "levelNumber": 393,
+      "role": "breather",
+      "filas": 5,
+      "pirates_per_fila": 1.4,
+      "single_pirate_share": 0.6,
+      "late_demand": 0.8,
+      "archetypes": [
+        "crescendo",
+        "wall",
+        "swarm"
+      ],
+      "primary": "crescendo",
+      "problems": [
+        "60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 155,
+      "levelNumber": 2,
+      "role": "breather",
+      "filas": 6,
+      "pirates_per_fila": 1.33,
+      "single_pirate_share": 0.67,
+      "late_demand": 0.73,
+      "archetypes": [
+        "swarm"
+      ],
+      "primary": "swarm",
+      "problems": [
+        "67% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 166,
+      "levelNumber": 62,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.14,
+      "single_pirate_share": 0.86,
+      "late_demand": 0.46,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "86% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.46 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 177,
+      "levelNumber": 37,
+      "role": "breather",
+      "filas": 6,
+      "pirates_per_fila": 1.33,
+      "single_pirate_share": 0.67,
+      "late_demand": 1.0,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "67% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 199,
+      "levelNumber": 365,
+      "role": "breather",
+      "filas": 6,
+      "pirates_per_fila": 1.33,
+      "single_pirate_share": 0.67,
+      "late_demand": 0.82,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "67% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 210,
+      "levelNumber": 504,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.0,
+      "single_pirate_share": 1.0,
+      "late_demand": 0.54,
+      "archetypes": [
+        "crescendo"
+      ],
+      "primary": "crescendo",
+      "problems": [
+        "100% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.54 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 221,
+      "levelNumber": 502,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.14,
+      "single_pirate_share": 0.86,
+      "late_demand": 0.7,
+      "archetypes": [
+        "crescendo"
+      ],
+      "primary": "crescendo",
+      "problems": [
+        "86% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 232,
+      "levelNumber": 25,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.43,
+      "single_pirate_share": 0.71,
+      "late_demand": 0.7,
+      "archetypes": [
+        "burst",
+        "crescendo",
+        "swarm",
+        "wall"
+      ],
+      "primary": "burst",
+      "problems": [
+        "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 243,
+      "levelNumber": 129,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.25,
+      "single_pirate_share": 0.75,
+      "late_demand": 0.47,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "75% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.47 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 254,
+      "levelNumber": 30,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.57,
+      "single_pirate_share": 0.57,
+      "late_demand": 0.7,
+      "archetypes": [
+        "burst",
+        "switch",
+        "wall",
+        "swarm"
+      ],
+      "primary": "burst",
+      "problems": [
+        "57% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 265,
+      "levelNumber": 134,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.29,
+      "single_pirate_share": 0.71,
+      "late_demand": 0.61,
+      "archetypes": [
+        "swarm",
+        "crescendo"
+      ],
+      "primary": "swarm",
+      "problems": [
+        "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.61 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 276,
+      "levelNumber": 106,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.29,
+      "single_pirate_share": 0.71,
+      "late_demand": 0.92,
+      "archetypes": [
+        "crescendo",
+        "tank",
+        "wall"
+      ],
+      "primary": "crescendo",
+      "problems": [
+        "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 287,
+      "levelNumber": 20,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.38,
+      "single_pirate_share": 0.62,
+      "late_demand": 0.6,
+      "archetypes": [
+        "switch",
+        "wall",
+        "swarm"
+      ],
+      "primary": "switch",
+      "problems": [
+        "62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.6 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 298,
+      "levelNumber": 16,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.57,
+      "single_pirate_share": 0.57,
+      "late_demand": 0.54,
+      "archetypes": [
+        "burst",
+        "wall",
+        "swarm"
+      ],
+      "primary": "burst",
+      "problems": [
+        "57% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.54 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 309,
+      "levelNumber": 50,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.43,
+      "single_pirate_share": 0.71,
+      "late_demand": 0.86,
+      "archetypes": [
+        "burst",
+        "wall",
+        "switch",
+        "swarm"
+      ],
+      "primary": "burst",
+      "problems": [
+        "71% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 320,
+      "levelNumber": 52,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.38,
+      "single_pirate_share": 0.62,
+      "late_demand": 0.46,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.46 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 331,
+      "levelNumber": 54,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.38,
+      "single_pirate_share": 0.62,
+      "late_demand": 0.4,
+      "archetypes": [
+        "wall",
+        "swarm"
+      ],
+      "primary": "wall",
+      "problems": [
+        "62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.4 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 342,
+      "levelNumber": 194,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.25,
+      "single_pirate_share": 0.75,
+      "late_demand": 0.54,
+      "archetypes": [
+        "switch"
+      ],
+      "primary": "switch",
+      "problems": [
+        "75% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.54 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 353,
+      "levelNumber": 18,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.5,
+      "single_pirate_share": 0.5,
+      "late_demand": 0.67,
+      "archetypes": [
+        "swarm",
+        "wall"
+      ],
+      "primary": "swarm",
+      "problems": [
+        "gets easier as it goes: last-third pressure 0.67 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    },
+    {
+      "position": 364,
+      "levelNumber": 145,
+      "role": "breather",
+      "filas": 7,
+      "pirates_per_fila": 1.71,
+      "single_pirate_share": 0.57,
+      "late_demand": 0.77,
+      "archetypes": [
+        "burst",
+        "wall"
+      ],
+      "primary": "burst",
+      "problems": [
+        "57% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns"
+      ]
+    },
+    {
+      "position": 375,
+      "levelNumber": 33,
+      "role": "breather",
+      "filas": 8,
+      "pirates_per_fila": 1.5,
+      "single_pirate_share": 0.62,
+      "late_demand": 0.46,
+      "archetypes": [
+        "switch",
+        "burst",
+        "swarm"
+      ],
+      "primary": "switch",
+      "problems": [
+        "62% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns",
+        "gets easier as it goes: last-third pressure 0.46 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less"
+      ]
+    }
+  ],
+  "skill_curve": {
+    "naive_body_win_share": {
+      "1-100": 0.95,
+      "101-200": 0.68,
+      "201-300": 0.32,
+      "301-400": 0.16,
+      "401-500": 0.0
+    },
+    "peaks_won_by_naive": [
+      {
+        "position": 11,
+        "levelNumber": 49
+      },
+      {
+        "position": 22,
+        "levelNumber": 372
+      },
+      {
+        "position": 33,
+        "levelNumber": 66
+      },
+      {
+        "position": 44,
+        "levelNumber": 243
+      },
+      {
+        "position": 55,
+        "levelNumber": 58
+      }
+    ]
+  },
+  "challenge_mix": {
+    "drag_share": {
+      "1-100": 0.0,
+      "101-200": 0.02,
+      "201-300": 0.04,
+      "301-400": 0.18,
+      "401-500": 0.35
+    },
+    "peak_kinds": {
+      "other": 11,
+      "extreme": 19,
+      "drag": 15
+    }
+  },
+  "near_duplicates": [
+    {
+      "a": 85,
+      "b": 267,
+      "similarity": 0.86
+    }
+  ]
+}

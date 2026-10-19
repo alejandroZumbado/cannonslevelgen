@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T07:08:04+00:00",
+  "generated_at": "2026-10-19T15:27:52+00:00",
   "policy_name": "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage_reserve",
   "policy_source_chars": 8946,
   "escalation_beam_widths": [
@@ -8,10 +8,10 @@
     3000
   ],
   "max_rounds": 60,
-  "total_levels": 601,
-  "elapsed_seconds": 275.7,
+  "total_levels": 605,
+  "elapsed_seconds": 185.5,
   "counts": {
-    "champion_win": 558,
+    "champion_win": 562,
     "solved_by_search_only": 42,
     "no_win_found": 1
   },
@@ -1055,6 +1055,22 @@
       "solver_total_nodes": null,
       "solver_pirates_remaining": null,
       "difficulty_score": 17.1
+    },
+    {
+      "levelNumber": 605,
+      "password": "N6783",
+      "isHard": true,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 13,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 16.94
     },
     {
       "levelNumber": 343,
@@ -3587,7 +3603,7 @@
     {
       "levelNumber": 597,
       "password": "B8183",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 11,
@@ -4113,6 +4129,22 @@
       "difficulty_score": 15.4
     },
     {
+      "levelNumber": 606,
+      "password": "N6586",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 12,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 15.4
+    },
+    {
       "levelNumber": 205,
       "password": "M4672",
       "isHard": false,
@@ -4147,7 +4179,7 @@
     {
       "levelNumber": 286,
       "password": "X1086",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 11,
@@ -4387,7 +4419,7 @@
     {
       "levelNumber": 471,
       "password": "Y2513",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 11,
@@ -4675,7 +4707,7 @@
     {
       "levelNumber": 349,
       "password": "A8126",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 12,
@@ -4755,7 +4787,7 @@
     {
       "levelNumber": 58,
       "password": "I5026",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 10,
@@ -5123,7 +5155,7 @@
     {
       "levelNumber": 243,
       "password": "B2859",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -5315,7 +5347,7 @@
     {
       "levelNumber": 369,
       "password": "P3300",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -5491,7 +5523,7 @@
     {
       "levelNumber": 66,
       "password": "T5290",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -5539,7 +5571,7 @@
     {
       "levelNumber": 149,
       "password": "K5872",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5635,7 +5667,7 @@
     {
       "levelNumber": 123,
       "password": "R6902",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5779,7 +5811,7 @@
     {
       "levelNumber": 372,
       "password": "V6995",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 6,
@@ -5795,7 +5827,7 @@
     {
       "levelNumber": 132,
       "password": "G3162",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -5955,7 +5987,7 @@
     {
       "levelNumber": 49,
       "password": "M5577",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -6051,7 +6083,7 @@
     {
       "levelNumber": 600,
       "password": "G9148",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -6147,7 +6179,7 @@
     {
       "levelNumber": 293,
       "password": "L9461",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 9,
@@ -6195,7 +6227,7 @@
     {
       "levelNumber": 103,
       "password": "I5047",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -6419,7 +6451,7 @@
     {
       "levelNumber": 546,
       "password": "A8447",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -6931,7 +6963,7 @@
     {
       "levelNumber": 117,
       "password": "I9449",
-      "isHard": false,
+      "isHard": true,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -7043,6 +7075,22 @@
     {
       "levelNumber": 253,
       "password": "I5699",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 7,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 12.0
+    },
+    {
+      "levelNumber": 608,
+      "password": "J8864",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -7315,7 +7363,7 @@
     {
       "levelNumber": 598,
       "password": "L0000",
-      "isHard": true,
+      "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
       "champion_rounds_played": 8,
@@ -8131,6 +8179,22 @@
     {
       "levelNumber": 574,
       "password": "O3377",
+      "isHard": false,
+      "classification": "champion_win",
+      "champion_won": true,
+      "champion_rounds_played": 7,
+      "champion_max_position_reached": 2,
+      "solver_ran": false,
+      "solver_won": null,
+      "solver_rounds_played": null,
+      "solver_beam_width_used": null,
+      "solver_total_nodes": null,
+      "solver_pirates_remaining": null,
+      "difficulty_score": 11.1
+    },
+    {
+      "levelNumber": 607,
+      "password": "R1719",
       "isHard": false,
       "classification": "champion_win",
       "champion_won": true,
@@ -9635,24 +9699,18 @@
   ],
   "comparison_to_previous_run": {
     "has_previous": true,
-    "previous_generated_at": "2026-10-12T17:34:32+00:00",
+    "previous_generated_at": "2026-10-15T07:08:04+00:00",
     "previous_counts": {
-      "champion_win": 552,
-      "solved_by_search_only": 40,
-      "no_win_found": 1
-    },
-    "current_counts": {
       "champion_win": 558,
       "solved_by_search_only": 42,
       "no_win_found": 1
     },
-    "newly_champion_win": [
-      286
-    ],
-    "regressed_from_champion_win": [
-      196,
-      204,
-      255
-    ]
+    "current_counts": {
+      "champion_win": 562,
+      "solved_by_search_only": 42,
+      "no_win_found": 1
+    },
+    "newly_champion_win": [],
+    "regressed_from_champion_win": []
   }
 }
