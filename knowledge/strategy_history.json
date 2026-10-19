@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T00:51:21+00:00",
-    "promoted": false,
-    "win_rate": 0.9294,
-    "candidate_win_rate": 0.6585,
-    "summary": "**Change summary** – The original `deficit` assumes a column can always be cleared as long as the total damage *possible* ( damage × remaining steps ) exceeds the sum of all HP in that column. This is wrong when the fron"
-  },
-  {
     "timestamp": "2026-10-05T01:01:46+00:00",
     "promoted": false,
     "win_rate": 0.9337,
@@ -138,5 +131,12 @@
     "win_rate": 0.9205,
     "candidate_win_rate": 0.9205,
     "summary": "**Change summary**  \nThe champion policy rewards *coverage* (`-coverage` in the comparison key), which makes it prefer spreading 1‑damage cannons over stacking them in one column. When a tall pirate is about to arrive, t"
+  },
+  {
+    "timestamp": "2026-10-19T06:22:25+00:00",
+    "promoted": false,
+    "win_rate": 0.929,
+    "candidate_win_rate": 0.929,
+    "summary": "**Change summary** – The original tie‑breaking never considered whether a column that currently contains pirates is left without a cannon after the first action. Two otherwise equal actions could leave a “vulnerable” col"
   }
 ]

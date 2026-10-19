@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:17:02+00:00",
-  "target": "burst",
-  "note": "Design note: The level begins with one‑to‑two low‑HP pirates, then erupts into rows of four‑to‑five enemies, forcing the player to build and merge cannons early and keep reserves for the sudden burst.",
-  "success": false,
-  "reason": "not winnable (2 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:17:19+00:00",
   "target": "burst",
   "note": "Design note: A calm start with a few 1‑HP pirates lets the player build and merge cannons, then a sudden burst of 5‑pirate and 4‑pirate waves forces careful reserve management while remaining winnable",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A twelve‑round level that builds modest damage pressure in columns 0, 2 and 4 with early 1‑HP pirates, then spikes column 3 with a tall HP‑8 pirate in round 9 that cannot be killed by thr",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI)"
+ },
+ {
+  "at": "2026-10-19T06:21:34+00:00",
+  "target": "drag:any",
+  "note": "Design note: A nine‑round level that piles low‑HP pirates in columns 0‑2‑4 to build damage, then spawns a tall HP‑8 pirate in column 3 at round 9; only by dragging the accumulated damage from column 1",
+  "success": false,
+  "reason": "goal not met (winnable without ever dragging a placed cannon)"
  }
 ]
