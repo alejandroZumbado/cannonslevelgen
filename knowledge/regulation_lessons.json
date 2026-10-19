@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:18:43+00:00",
-  "target": "switch",
-  "note": "Design note: The level starts with low‑HP pirates on the left side (columns 0‑1) letting the player build and merge cannons, then abruptly switches the pressure to the right side (columns 3‑4) while s",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != switch)"
- },
- {
   "at": "2026-09-29T02:18:46+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the left side (columns 0‑1) with low‑HP pirates for the first three rounds, then abruptly switches to the right side (columns 3‑4) for the next three rounds, forcing t",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early waves stack damage in columns 0 and 1 while column 3 stays empty until a late HP‑9 pirate appears there, forcing the player to drag the accumulated high‑damage cannon from column 0 ",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI)"
+ },
+ {
+  "at": "2026-10-19T06:28:43+00:00",
+  "target": "drag:any",
+  "note": "",
+  "success": false,
+  "reason": "no valid JSON level"
  }
 ]
