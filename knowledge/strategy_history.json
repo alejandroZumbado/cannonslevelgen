@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-04T00:49:50+00:00",
-    "promoted": false,
-    "win_rate": 0.928,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-10-04T00:51:21+00:00",
     "promoted": false,
     "win_rate": 0.9294,
@@ -138,5 +131,12 @@
     "win_rate": 0.9295,
     "candidate_win_rate": 0.0,
     "summary": "no python code block in response"
+  },
+  {
+    "timestamp": "2026-10-19T06:21:10+00:00",
+    "promoted": false,
+    "win_rate": 0.9205,
+    "candidate_win_rate": 0.9205,
+    "summary": "**Change summary**  \nThe champion policy rewards *coverage* (`-coverage` in the comparison key), which makes it prefer spreading 1‑damage cannons over stacking them in one column. When a tall pirate is about to arrive, t"
   }
 ]
