@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:17:23+00:00",
-  "target": "swarm",
-  "note": "Design note: A balanced swarm level that gradually widens the attack front while keeping all pirates low‑HP so the player can spread cannons and use early merges to stay ahead of the advancing threats",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype burst != swarm)"
- },
- {
   "at": "2026-09-29T02:17:38+00:00",
   "target": "swarm",
   "note": "Design note: A steadily widening swarm of 1‑HP pirates early gives the player cheap merges, then a mix of 2‑ and 3‑HP foes spreads across 3‑5 columns to force wide placement and careful reserve manage",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-19T06:22:57+00:00",
   "target": "drag:any",
   "note": "Design note: A ten‑round level that forces the player to stack damage in columns 0 and 1, then drag the accumulated cannon into column 2 before the late HP‑9 pirate appears, making drag essential for ",
+  "success": false,
+  "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-19T06:24:22+00:00",
+  "target": "drag:any",
+  "note": "Design note: early rows build damage in columns 0 and 1 while keeping column 2 empty, then a late HP‑10 pirate in column 2 forces the player to drag a merged high‑damage cannon over to finish it.",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
  }

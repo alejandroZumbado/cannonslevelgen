@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T01:02:28+00:00",
-    "promoted": false,
-    "win_rate": 0.9352,
-    "candidate_win_rate": 0.9352,
-    "summary": "**Change summary** – The champion policy treats moves and spawns almost equally when their numeric scores tie, so a move that must be made to stop a pirate that is already on *position 2* can be ignored in favor of simpl"
-  },
-  {
     "timestamp": "2026-10-05T01:03:06+00:00",
     "promoted": false,
     "win_rate": 0.9308,
@@ -138,5 +131,12 @@
     "win_rate": 0.9276,
     "candidate_win_rate": 0.8338,
     "summary": "**Change summary** – The current policy can decide to move a cannon away from a column that still has pirates, even when that column contains a queue of blocked pirates. The `deficit` function only measures total HP – da"
+  },
+  {
+    "timestamp": "2026-10-19T06:24:37+00:00",
+    "promoted": false,
+    "win_rate": 0.9261,
+    "candidate_win_rate": 0.9176,
+    "summary": "**Change summary** – The original `deficit` only compares total HP in a column with the *total* damage that can be dealt before the current front pirate reaches the loss position. When several pirates are queued, each ex"
   }
 ]
