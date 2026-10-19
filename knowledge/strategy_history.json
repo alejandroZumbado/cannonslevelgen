@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T01:03:46+00:00",
-    "promoted": false,
-    "win_rate": 0.938,
-    "candidate_win_rate": 0.0,
-    "summary": "no python code block in response"
-  },
-  {
     "timestamp": "2026-10-05T01:04:49+00:00",
     "promoted": false,
     "win_rate": 0.9236,
@@ -138,5 +131,12 @@
     "win_rate": 0.9261,
     "candidate_win_rate": 0.9261,
     "summary": "**Change summary**  \nThe current tie‑breaker prefers actions that maximise the *number of columns that have a cannon* (`coverage`) before it values columns that have a cannon but no pirate (`reserved`). When two safe act"
+  },
+  {
+    "timestamp": "2026-10-19T06:27:30+00:00",
+    "promoted": false,
+    "win_rate": 0.9219,
+    "candidate_win_rate": 0.9148,
+    "summary": "**Change summary**  \nThe original `deficit` assumes a column can deal `damage * (MAX_POSITION‑front.position)` total damage, which is correct for a single pirate but **under‑estimates the damage that can be applied to a "
   }
 ]
