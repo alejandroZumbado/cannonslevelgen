@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:17:19+00:00",
-  "target": "burst",
-  "note": "Design note: A calm start with a few 1‑HP pirates lets the player build and merge cannons, then a sudden burst of 5‑pirate and 4‑pirate waves forces careful reserve management while remaining winnable",
-  "success": false,
-  "reason": "not winnable (7 pirates survive the solver)"
- },
- {
   "at": "2026-09-29T02:17:23+00:00",
   "target": "swarm",
   "note": "Design note: A balanced swarm level that gradually widens the attack front while keeping all pirates low‑HP so the player can spread cannons and use early merges to stay ahead of the advancing threats",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A nine‑round level that piles low‑HP pirates in columns 0‑2‑4 to build damage, then spawns a tall HP‑8 pirate in column 3 at round 9; only by dragging the accumulated damage from column 1",
   "success": false,
   "reason": "goal not met (winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-19T06:22:57+00:00",
+  "target": "drag:any",
+  "note": "Design note: A ten‑round level that forces the player to stack damage in columns 0 and 1, then drag the accumulated cannon into column 2 before the late HP‑9 pirate appears, making drag essential for ",
+  "success": false,
+  "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
  }
 ]

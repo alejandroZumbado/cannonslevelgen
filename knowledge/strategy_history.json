@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-10-05T01:01:46+00:00",
-    "promoted": false,
-    "win_rate": 0.9337,
-    "candidate_win_rate": 0.9337,
-    "summary": "**Change** – The policy currently breaks ties by preferring a **move** over a **spawn** (`tie_pref = 0 if act[0] == \"move\" else 1`). When several safe actions have identical scores this pushes the algorithm to merge cann"
-  },
-  {
     "timestamp": "2026-10-05T01:02:28+00:00",
     "promoted": false,
     "win_rate": 0.9352,
@@ -138,5 +131,12 @@
     "win_rate": 0.929,
     "candidate_win_rate": 0.929,
     "summary": "**Change summary** – The original tie‑breaking never considered whether a column that currently contains pirates is left without a cannon after the first action. Two otherwise equal actions could leave a “vulnerable” col"
+  },
+  {
+    "timestamp": "2026-10-19T06:23:44+00:00",
+    "promoted": false,
+    "win_rate": 0.9276,
+    "candidate_win_rate": 0.8338,
+    "summary": "**Change summary** – The current policy can decide to move a cannon away from a column that still has pirates, even when that column contains a queue of blocked pirates. The `deficit` function only measures total HP – da"
   }
 ]
