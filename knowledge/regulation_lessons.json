@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:42:59+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack damage, then gradually adds more columns and higher HP so that by the final third the player must have merged ca",
-  "success": true,
-  "reason": "fitness 1000 -> 1012, archetype crescendo"
- },
- {
   "at": "2026-09-30T00:43:56+00:00",
   "target": "crescendo",
   "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack damage, then introduces modest 2‑HP groups, and finally crescendos into dense waves of 3‑4‑HP pirates that requi",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early low‑HP pirates spread across columns let the player amass damage, then a late HP‑8 pirate appears in column 2 with no prior cannon there, forcing a drag of a merged cannon from anot",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-20T05:04:21+00:00",
+  "target": "breather:crescendo",
+  "note": "Design note: A gentle five‑round crescendo that begins with a couple of 1‑HP pirates, builds to three‑pirate waves with 2‑HP foes, then a penultimate wave of three 3‑HP enemies, and finishes with a mo",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
  }
 ]
