@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:48:47+00:00",
-  "target": "swarm",
-  "note": "Design note: A steady swarm of low‑HP pirates fills three to five columns each round, letting the player seed a cannon in every column early and then testing that spread with mixed 1‑ and 2‑HP threats",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:48:50+00:00",
   "target": "crescendo",
   "note": "Design note: A gentle start with single low‑HP pirates lets the player build cannon damage, then the final third ramps up both the number of columns used and the HP of pirates for a tense, crescendo c",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early waves force the player to spread damage across columns 0‑4, then a late HP‑8 pirate appears in column 2 where no pre‑stacked damage exists, making the level only winnable by draggin",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI)"
+ },
+ {
+  "at": "2026-10-20T05:09:14+00:00",
+  "target": "breather:switch",
+  "note": "Design note: A 5‑round breather that piles low‑HP pirates on the left (columns 0‑1) for two waves, then shifts the threat to the right (columns 3‑4) for the remaining waves, with a lone mid‑column pir",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses), archetype swarm != switch)"
  }
 ]
