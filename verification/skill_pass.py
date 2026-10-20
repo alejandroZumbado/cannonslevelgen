@@ -58,6 +58,9 @@ REPORT_DIR = config.ROOT / "reports" / "regulation" / "skill"
 # every level shape in the game after this pass (regulation_designer runs
 # without the Cannons checkout and needs it to keep breathers unique)
 SIGNATURES_PATH = REPORT_DIR / "signatures.json"
+# per-level checkpoint of the current run (2026-10-19): a killed run resumes
+# with --resume instead of losing hours of search
+PROGRESS_PATH = REPORT_DIR / "progress.json"
 RELEASE_ORDER_PATH =config.ROOT / "reports" / "release_order.json"
 LEVELS_DIR = config.CANNONS_REPO / "Assets" / "Levels"
 
@@ -133,6 +136,15 @@ class Evaluator:
                 filas=len(level.filas), max_hp=max((c.hp for c in pirates), default=0))
         ev = self.cache[key]
         return self.confirm(level) if allow_solver and not ev.champion_won else ev
+
+    def reset(self) -> None:
+        """Drops the shape caches. Called before each planned level: the hill
+        climb evaluates hundreds of shapes that never repeat across levels, and
+        keeping them all grew the process until the OS killed it (2026-10-19,
+        39/110 levels into a --seeds 2 run on a 16 GB machine)."""
+        self.cache.clear()
+        self.solved.clear()
+        self.drag_cache.clear()
 
     def confirm(self, level: Level) -> SkillEval:
         """Same evaluation, with the solver deciding winnability when the
@@ -508,12 +520,65 @@ def _solve(level: Level, goal: Goal, evaluate: Evaluator, taken: set[str], seeds
     return best_goal, best
 
 
+def _run_key(order: list[dict], args) -> str:
+    """Identifies a run's inputs, so --resume never mixes records from a
+    different release order or option set."""
+    ids = ",".join(str(e["levelNumber"]) for e in order)
+    return f"{ids}|seeds={args.seeds}|levels={args.levels}|limit={args.limit}"
+
+
+def _load_progress(key: str) -> list[dict]:
+    """Records saved by an interrupted run with the same inputs ([] otherwise)."""
+    if not PROGRESS_PATH.exists():
+        return []
+    data = json.loads(PROGRESS_PATH.read_text(encoding="utf-8"))
+    if data.get("key") != key:
+        print("progress.json belongs to another run (order/options changed): starting over")
+        return []
+    return data["records"]
+
+
+def _save_progress(key: str, records: list[dict]) -> None:
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    PROGRESS_PATH.write_text(json.dumps({"key": key, "records": records}), encoding="utf-8")
+
+
+def _replay_taken(taken: set[str], records: list[dict]) -> None:
+    """Re-applies resumed records to the set of shapes in the game, exactly as
+    the main loop would have (original out, regulated result in)."""
+    for r in records:
+        taken.discard(Level.from_dict(r["original"]).shape_signature())
+        kept = r["level"] if r["status"] == "regulated" else r["original"]
+        taken.add(Level.from_dict(kept).shape_signature())
+
+
+def _write_shard(records: list[dict], full_run: bool) -> None:
+    """Merges this run into shard_0.json. A level fixed in an earlier run but
+    not planned now stays recorded (apply_regulation protects recorded levels
+    from older passes). A full run also drops older unresolved_skill records
+    it didn't plan: their goals came from an older release order, and
+    regulation_designer kept spending LLM calls on them (2026-10-19: 10 calls,
+    5 stale drag goals with positions from the previous order)."""
+    shard = REPORT_DIR / "shard_0.json"
+    merged = {r["levelNumber"]: r for r in json.loads(shard.read_text(encoding="utf-8"))["levels"]} \
+        if shard.exists() else {}
+    if full_run:
+        planned = {r["levelNumber"] for r in records}
+        merged = {n: r for n, r in merged.items() if r["status"] != "unresolved_skill" or n in planned}
+    for r in records:
+        if r["status"] == "regulated" or merged.get(r["levelNumber"], {}).get("status") != "regulated":
+            merged[r["levelNumber"]] = r
+    shard.write_text(json.dumps({"levels": list(merged.values())}, indent=1), encoding="utf-8")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Skill pass over the release levels.")
     parser.add_argument("--dry-run", action="store_true", help="print the plan only")
     parser.add_argument("--limit", type=int, default=0, help="process only the first N planned levels")
     parser.add_argument("--levels", default="", help="comma-separated levelNumbers: retry only these planned levels")
     parser.add_argument("--seeds", type=int, default=1, help="random restarts per goal (default 1)")
+    parser.add_argument("--resume", action="store_true",
+                        help="continue an interrupted run with the same options (reports/regulation/skill/progress.json)")
     args = parser.parse_args(argv)
 
     order = json.loads(RELEASE_ORDER_PATH.read_text(encoding="utf-8"))["order"]
@@ -539,8 +604,17 @@ def main(argv: list[str] | None = None) -> int:
 
     # every shape already in the game: a breather may not copy any of them
     taken = {lv.shape_signature() for lv in levels.values()}
-    records, items = [], list(goals.items())[: args.limit or None]
+    run_key = _run_key(order, args)
+    records = _load_progress(run_key) if args.resume else []
+    _replay_taken(taken, records)
+    resumed = {r["levelNumber"] for r in records}
+    if resumed:
+        print(f"resuming: {len(resumed)} levels already done in this run")
+    items = list(goals.items())[: args.limit or None]
     for i, (n, goal) in enumerate(items, 1):
+        if n in resumed:
+            continue
+        evaluate.reset()
         level = levels[n]
         taken.discard(level.shape_signature())
         goal, (best, before, after, left, evals) = _solve(level, goal, evaluate, taken, args.seeds)
@@ -560,18 +634,12 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  [{i}/{len(items)}] L{n} {goal.kind}: {'OK' if met else f'unmet ({left:.0f})'} "
               f"naive {before.naive_won}->{after.naive_won} {before.primary}->{after.primary} "
               f"pirates {before.pirates}->{after.pirates} ({evals} evals)", flush=True)
+        _save_progress(run_key, records)
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     SIGNATURES_PATH.write_text(json.dumps(sorted(taken)), encoding="utf-8")
-    # merge with earlier runs: a level fixed in run 1 but not planned in run 2
-    # must stay recorded (apply_regulation protects recorded levels from older passes)
-    shard = REPORT_DIR / "shard_0.json"
-    merged = {r["levelNumber"]: r for r in json.loads(shard.read_text(encoding="utf-8"))["levels"]} \
-        if shard.exists() else {}
-    for r in records:
-        if r["status"] == "regulated" or merged.get(r["levelNumber"], {}).get("status") != "regulated":
-            merged[r["levelNumber"]] = r
-    shard.write_text(json.dumps({"levels": list(merged.values())}, indent=1), encoding="utf-8")
+    _write_shard(records, full_run=not (args.levels or args.limit))
+    PROGRESS_PATH.unlink(missing_ok=True)  # run complete: nothing left to resume
     done = Counter((r["goal"]["kind"], r["status"]) for r in records)
     print(f"skill pass: {dict(done)} -> {REPORT_DIR / 'shard_0.json'}")
     return 0

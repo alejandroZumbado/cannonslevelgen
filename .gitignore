@@ -17,3 +17,4 @@ cannons_checkout/
 # runs except what's committed back to the repo, same pattern as NewsPulse's
 # pipeline/publisher.py. If you ever move this back to running only on your
 # own always-on machine, you can re-ignore these; until then, don't.
+reports/regulation/skill/progress.json

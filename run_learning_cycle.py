@@ -81,7 +81,13 @@ _DESIGNER_EVERY = 1
 # teaches drag + measured limits, and skill_pass's extreme peaks (champion
 # loses, solver wins) feed new real targets into sim/real_suite.py. ~40k
 # tokens/day; daily production (~72k worst case) has its own reserve.
-_STRATEGY_MAX_CALLS_PER_DAY = 6
+# 6 -> 0 on 2026-10-19 (paused again, user OK): 10-19 = 6 calls / ~40k tokens,
+# 3 no-op candidates (same wins), 3 worse, target_wins 0/42. No promotion since
+# 09-26. The champion is a per-move rule set with no lookahead; the 42 targets
+# need planning 2-3 rounds ahead (merge prep, timely drag), which one small
+# rule tweak can't add. The solver already covers them, so the budget goes to
+# regulation_designer (fresh skill goals from skill_pass). Set back to >0 to resume.
+_STRATEGY_MAX_CALLS_PER_DAY = 0
 
 
 def _next_order() -> list[str]:

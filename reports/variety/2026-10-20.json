@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-10-20T02:48:43+00:00",
+  "release_size": 500,
+  "pacing_pass": 500,
+  "primary_archetypes": {
+    "wall": 117,
+    "crescendo": 107,
+    "swarm": 137,
+    "burst": 85,
+    "switch": 54
+  },
+  "repetitive_arcs": [],
+  "pacing_failures": [],
+  "skill_curve": {
+    "naive_body_win_share": {
+      "1-100": 0.93,
+      "101-200": 0.5,
+      "201-300": 0.28,
+      "301-400": 0.16,
+      "401-500": 0.0
+    },
+    "peaks_won_by_naive": [
+      {
+        "position": 11,
+        "levelNumber": 49
+      },
+      {
+        "position": 55,
+        "levelNumber": 58
+      }
+    ]
+  },
+  "challenge_mix": {
+    "drag_share": {
+      "1-100": 0.02,
+      "101-200": 0.13,
+      "201-300": 0.19,
+      "301-400": 0.26,
+      "401-500": 0.34
+    },
+    "peak_kinds": {
+      "other": 5,
+      "drag": 25,
+      "extreme": 15
+    }
+  },
+  "near_duplicates": []
+}
