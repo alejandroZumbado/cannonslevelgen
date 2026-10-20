@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-29T02:19:57+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level starts with a few isolated 1‑HP pirates letting the player safely stockpile and merge cannons, then gradually adds more columns and higher‑HP foes, culminating in four densely‑f",
-  "success": false,
-  "reason": "not winnable (14 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:33:49+00:00",
   "target": "crescendo",
   "note": "Design note: The level builds a single “hero” column that grows in HP each wave while the other columns stay low‑HP, letting the player safely seed cannons early and then merge them into a high‑damage",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Stack damage early in column 0, then a late HP‑9 pirate appears in column 2 forcing the player to drag the high‑damage cannon over to finish it.",
   "success": false,
   "reason": "goal not met (winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-20T05:00:09+00:00",
+  "target": "drag:any",
+  "note": "Design note: Build damage early in column 0 by repeatedly spawning 1‑HP pirates, then introduce a lone HP‑9 pirate in column 2 as the final enemy so the player must drag the accumulated high‑damage ca",
+  "success": false,
+  "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
  }
 ]
