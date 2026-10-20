@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:39:07+00:00",
-  "target": "swarm",
-  "note": "**Design note:** The level opens with a balanced spread of 1‑HP pirates across all five columns, letting the player place and merge cannons early, then gradually introduces slightly tougher 2‑HP pirat",
-  "success": false,
-  "reason": "not winnable (6 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:40:20+00:00",
   "target": "swarm",
   "note": "Design note: A steady “swarm” of 1‑HP pirates spreads across three columns each round, with occasional 2‑HP fillers, letting the player build and merge cannons while staying under the 3‑shot kill wind",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build high damage early in columns 0 and 1 by repeatedly merging cannons there, then a late HP‑8 pirate appears in column 2 with no pre‑stacked damage, forcing the player to drag a merged",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-20T05:02:19+00:00",
+  "target": "breather:burst",
+  "note": "Design note: A calm start with two‑pirate waves builds modest damage, then a sudden four‑pirate burst forces the player to allocate cannons across columns, followed by a short mixed‑danger finale that",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, archetype swarm != burst)"
  }
 ]
