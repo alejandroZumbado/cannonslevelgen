@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:48:39+00:00",
-  "target": "swarm",
-  "note": "Design note: A steady swarm of low‑HP pirates fills 3‑5 columns each round, letting the player safely build up cannon damage early and then testing that damage across a dense, multi‑column finale.",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:48:47+00:00",
   "target": "swarm",
   "note": "Design note: A steady swarm of low‑HP pirates fills three to five columns each round, letting the player seed a cannon in every column early and then testing that spread with mixed 1‑ and 2‑HP threats",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Early waves stack damage in columns 0 and 1 while a single low‑HP cannon is placed in column 2; the final wave spawns an HP‑6 pirate in column 2 that can only be killed by dragging the hi",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-20T05:08:39+00:00",
+  "target": "drag:any",
+  "note": "Design note: Early waves force the player to spread damage across columns 0‑4, then a late HP‑8 pirate appears in column 2 where no pre‑stacked damage exists, making the level only winnable by draggin",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI)"
  }
 ]
