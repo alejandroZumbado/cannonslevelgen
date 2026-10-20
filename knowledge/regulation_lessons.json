@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:33:49+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level builds a single “hero” column that grows in HP each wave while the other columns stay low‑HP, letting the player safely seed cannons early and then merge them into a high‑damage",
-  "success": false,
-  "reason": "not winnable (15 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:34:18+00:00",
   "target": "switch",
   "note": "Design note: The level pressures the left side (columns 0‑1) for the first half with multiple low‑HP pirates, then abruptly switches to the right side (columns 3‑4) while still keeping a few filler pi",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-20T05:00:09+00:00",
   "target": "drag:any",
   "note": "Design note: Build damage early in column 0 by repeatedly spawning 1‑HP pirates, then introduce a lone HP‑9 pirate in column 2 as the final enemy so the player must drag the accumulated high‑damage ca",
+  "success": false,
+  "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-20T05:00:15+00:00",
+  "target": "drag:any",
+  "note": "Design note: Stack damage early in column 0 with a series of 1‑HP pirates, then a late HP‑8 pirate appears in column 0 while column 2 has also accumulated damage that must be dragged over to finish it",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
  }
