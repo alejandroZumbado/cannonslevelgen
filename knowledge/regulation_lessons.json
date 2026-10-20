@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:48:34+00:00",
-  "target": "burst",
-  "note": "Design note: Burst – the first three rounds are calm single‑pirate threats that let the player build cannon damage, then the level erupts with 4‑5 pirates in the final rounds to test the reserve canno",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype crescendo != burst)"
- },
- {
   "at": "2026-09-30T00:48:39+00:00",
   "target": "swarm",
   "note": "Design note: A steady swarm of low‑HP pirates fills 3‑5 columns each round, letting the player safely build up cannon damage early and then testing that damage across a dense, multi‑column finale.",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A short 5‑round breather that builds pressure on the left‑most columns (0‑1) for two waves, then switches to the right‑most columns (3‑4) for two waves, ending with a modest HP‑3 pirate i",
   "success": true,
   "reason": "breather goal met, archetype switch, naive_won True"
+ },
+ {
+  "at": "2026-10-20T05:08:23+00:00",
+  "target": "drag:any",
+  "note": "Design note: Early waves stack damage in columns 0 and 1 while a single low‑HP cannon is placed in column 2; the final wave spawns an HP‑6 pirate in column 2 that can only be killed by dragging the hi",
+  "success": false,
+  "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
  }
 ]
