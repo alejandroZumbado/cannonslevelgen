@@ -1,8 +1,8 @@
 {
  "counts": {
   "regulated": 197,
-  "llm_proposal": 17,
-  "unresolved_skill": 18
+  "llm_proposal": 20,
+  "unresolved_skill": 15
  },
  "files": [
   "Level_002.asset",
@@ -87,6 +87,7 @@
   "Level_134.asset",
   "Level_135.asset",
   "Level_137.asset",
+  "Level_139.asset",
   "Level_141.asset",
   "Level_145.asset",
   "Level_149.asset",
@@ -150,6 +151,7 @@
   "Level_311.asset",
   "Level_312.asset",
   "Level_313.asset",
+  "Level_315.asset",
   "Level_318.asset",
   "Level_323.asset",
   "Level_324.asset",
@@ -184,6 +186,7 @@
   "Level_411.asset",
   "Level_421.asset",
   "Level_422.asset",
+  "Level_423.asset",
   "Level_426.asset",
   "Level_427.asset",
   "Level_429.asset",

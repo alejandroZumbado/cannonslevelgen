@@ -2585,7 +2585,8 @@
    "max_hp": 9,
    "needs_drag": true
   },
-  "skill_goal": "drag"
+  "skill_goal": "drag",
+  "applied_in": "skill"
  },
  "328": {
   "level": {
@@ -5373,7 +5374,8 @@
    "max_hp": 3,
    "needs_drag": null
   },
-  "skill_goal": "breather"
+  "skill_goal": "breather",
+  "applied_in": "skill"
  },
  "423": {
   "level": {
@@ -5479,6 +5481,7 @@
    "max_hp": 3,
    "needs_drag": null
   },
-  "skill_goal": "breather"
+  "skill_goal": "breather",
+  "applied_in": "skill"
  }
 }
