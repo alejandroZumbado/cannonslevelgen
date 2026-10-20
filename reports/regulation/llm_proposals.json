@@ -2455,7 +2455,7 @@
   "level": {
    "levelNumber": 315,
    "password": "J1801",
-   "isHard": true,
+   "isHard": false,
    "filas": [
     {
      "cuadros": [
@@ -2466,7 +2466,7 @@
       },
       {
        "index": 1,
-       "tipo": 2,
+       "tipo": 1,
        "hp": 1
       }
      ]
@@ -2480,7 +2480,7 @@
       },
       {
        "index": 1,
-       "tipo": 3,
+       "tipo": 1,
        "hp": 1
       }
      ]
@@ -2489,7 +2489,7 @@
      "cuadros": [
       {
        "index": 0,
-       "tipo": 2,
+       "tipo": 1,
        "hp": 2
       },
       {
@@ -2503,96 +2503,89 @@
      "cuadros": [
       {
        "index": 0,
-       "tipo": 3,
+       "tipo": 1,
        "hp": 3
       },
       {
        "index": 1,
-       "tipo": 2,
-       "hp": 2
-      }
-     ]
-    },
-    {
-     "cuadros": [
-      {
-       "index": 3,
-       "tipo": 1,
-       "hp": 1
-      },
-      {
-       "index": 4,
-       "tipo": 2,
-       "hp": 1
-      }
-     ]
-    },
-    {
-     "cuadros": [
-      {
-       "index": 3,
-       "tipo": 2,
-       "hp": 2
-      },
-      {
-       "index": 4,
-       "tipo": 3,
-       "hp": 1
-      }
-     ]
-    },
-    {
-     "cuadros": [
-      {
-       "index": 3,
        "tipo": 1,
        "hp": 2
-      },
-      {
-       "index": 4,
-       "tipo": 2,
-       "hp": 2
       }
      ]
     },
     {
      "cuadros": [
       {
-       "index": 3,
+       "index": 0,
+       "tipo": 1,
+       "hp": 3
+      },
+      {
+       "index": 1,
+       "tipo": 1,
+       "hp": 3
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 0,
+       "tipo": 1,
+       "hp": 4
+      },
+      {
+       "index": 1,
+       "tipo": 1,
+       "hp": 3
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 1,
+       "hp": 9
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
        "tipo": 4,
-       "hp": 3
-      },
-      {
-       "index": 4,
-       "tipo": 1,
-       "hp": 3
+       "hp": 1
       }
      ]
     }
    ]
   },
   "after": {
+   "champion_won": true,
+   "winnable": true,
    "classification": "champion_win",
-   "difficulty": 13.45,
+   "naive_won": false,
+   "tension": 2,
    "pacing": {
     "filas": 8,
-    "pirates_per_fila": 2.0,
-    "single_pirate_share": 0.0,
-    "late_demand": 0.8,
+    "pirates_per_fila": 1.75,
+    "single_pirate_share": 0.25,
+    "late_demand": 1.01,
     "archetypes": [
      "wall",
-     "swarm",
      "crescendo"
     ],
     "primary": "wall",
     "problems": []
    },
-   "pirates_left": 0,
-   "primary": "wall"
+   "primary": "wall",
+   "pirates": 14,
+   "filas": 8,
+   "max_hp": 9,
+   "needs_drag": true
   },
-  "fitness": 992.35,
-  "improves_on_fitness": 992.2,
-  "applied_in": "pass1"
+  "skill_goal": "drag"
  },
  "328": {
   "level": {

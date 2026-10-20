@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:46:33+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level starts with sparse 1‑HP pirates to let the player safely build damage, then gradually adds more pirates and higher HP, culminating in dense waves of 5‑ and 6‑HP enemies for a te",
-  "success": false,
-  "reason": "not winnable (5 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:46:36+00:00",
   "target": "crescendo",
   "note": "Design note: The level begins with lone 1‑HP pirates so the player can safely stack cannon damage, then introduces paired columns with 2‑HP foes that force early merges, and finishes with a dense fina",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build damage early in column 0, then force the player to drag that high‑damage cannon to column 4 in time to slay a late HP‑8 pirate that cannot be killed by drops alone.",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI)"
+ },
+ {
+  "at": "2026-10-20T05:06:12+00:00",
+  "target": "drag:any",
+  "note": "Design note: Build damage in columns 0 and 1 during the first six waves, then spawn a tall HP‑9 pirate in column 2 on wave 7 (with no pre‑stacked damage there), forcing the player to drag the high‑dam",
+  "success": true,
+  "reason": "drag goal met, archetype wall, naive_won False"
  }
 ]
