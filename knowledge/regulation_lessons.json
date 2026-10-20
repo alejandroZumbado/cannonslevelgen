@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:41:02+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level builds a gentle start with isolated 1‑HP pirates, then adds modest multi‑column waves to let the player accumulate and merge cannons, before culminating in a dense, high‑HP fina",
-  "success": true,
-  "reason": "fitness 1000 -> 1025, archetype crescendo"
- },
- {
   "at": "2026-09-30T00:41:38+00:00",
   "target": "burst",
   "note": "**Design note:** The level begins with three calm rounds of one‑or‑two low‑HP pirates to let the player safely accumulate damage, then erupts in three consecutive burst rounds packed with pirates in e",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A gentle two‑round start builds a small damage pool, then a sudden four‑pirate burst forces the player to spread cannons before a brief mixed finale wraps up the breather.",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses), archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-10-20T05:03:37+00:00",
+  "target": "breather:crescendo",
+  "note": "Design note: A gentle start with a couple of tiny pirates builds a small damage pool, then the wave count and HP climb steadily to a modest climax that remains easy for a casual player.",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
  }
 ]
