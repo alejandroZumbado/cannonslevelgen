@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:37:56+00:00",
-  "target": "switch",
-  "note": "Design note: The level builds early pressure on the left columns (0‑1) with multiple low‑HP pirates, then abruptly switches to a heavier rush on the right columns (3‑4) while still keeping some filler",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype wall != switch)"
- },
- {
   "at": "2026-09-30T00:39:07+00:00",
   "target": "swarm",
   "note": "**Design note:** The level opens with a balanced spread of 1‑HP pirates across all five columns, letting the player place and merge cannons early, then gradually introduces slightly tougher 2‑HP pirat",
@@ -1398,5 +1391,12 @@
   "note": "Design note: early stacking in column 0 builds a high‑damage cannon that must be dragged to column 2 to finish the late HP‑8 pirate, which cannot be killed by drop‑only play.",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon, pacing: gets easier as it goes: last-third pressure 0.68 (min 0.7). The player gains a cannon every round, so later rounds must bring MORE total danger (more pirates per round, HP split across columns), not the same or less)"
+ },
+ {
+  "at": "2026-10-20T05:01:57+00:00",
+  "target": "drag:any",
+  "note": "Design note: Build high damage early in columns 0 and 1 by repeatedly merging cannons there, then a late HP‑8 pirate appears in column 2 with no pre‑stacked damage, forcing the player to drag a merged",
+  "success": false,
+  "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
  }
 ]
