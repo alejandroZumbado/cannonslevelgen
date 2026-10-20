@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:45:02+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level opens with solitary 1‑HP pirates to let the player safely build up cannon damage, then gradually adds more columns and higher‑HP foes, culminating in a dense, high‑HP wave in th",
-  "success": false,
-  "reason": "not winnable (8 pirates survive the solver)"
- },
- {
   "at": "2026-09-30T00:45:49+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with isolated 1‑HP pirates to let the player safely build cannon damage, then introduces paired 2‑HP foes, followed by three‑pirate waves of 3‑HP, and culminates in a den",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-20T05:04:54+00:00",
   "target": "breather:crescendo",
   "note": "Design note: A short 5‑round crescendo that starts with a few 1‑HP pirates spread across columns, ramps up to 2‑HP and 3‑HP groups, and ends with a modest 4‑HP threat, keeping the difficulty low enoug",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
+ },
+ {
+  "at": "2026-10-20T05:04:58+00:00",
+  "target": "breather:swarm",
+  "note": "Design note: A short 5‑round swarm breather with several low‑HP pirates spread across the columns each round, keeping the total danger low and guaranteeing a win for a naive player.",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
  }
