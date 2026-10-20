@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:46:27+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level begins with isolated 1‑HP pirates to let the player safely stack cannon damage, then introduces paired 2‑HP foes that force early merges, followed by three‑pirate waves of 3‑HP ",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype burst != crescendo)"
- },
- {
   "at": "2026-09-30T00:46:33+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with sparse 1‑HP pirates to let the player safely build damage, then gradually adds more pirates and higher HP, culminating in dense waves of 5‑ and 6‑HP enemies for a te",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A six‑round level that forces the player to stack damage in column 1 across the first four waves, then drag that high‑damage cannon to column 0 in the final wave to kill an HP‑5 pirate th",
   "success": false,
   "reason": "goal not met (the naive player still wins, winnable without ever dragging a placed cannon)"
+ },
+ {
+  "at": "2026-10-20T05:05:52+00:00",
+  "target": "drag:any",
+  "note": "Design note: Build damage early in column 0, then force the player to drag that high‑damage cannon to column 4 in time to slay a late HP‑8 pirate that cannot be killed by drops alone.",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI)"
  }
 ]
