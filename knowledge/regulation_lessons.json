@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:41:43+00:00",
-  "target": "burst",
-  "note": "Design note: The level starts with three light, low‑pirate rounds to let the player safely build and merge cannons, then erupts in five‑column bursts of 1‑HP pirates followed by tougher 2‑HP bursts, c",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != burst)"
- },
- {
   "at": "2026-09-30T00:42:46+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with sparse, low‑HP pirates to let the player build and merge cannons, then ramps up both the number of simultaneous pirates and their HP in the final third for a tense c",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A gentle five‑round crescendo that starts with a few 1‑HP pirates, ramps up both the number of pirates and their HP, and ends with a modest cluster of 3‑HP foes, staying well within breat",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
+ },
+ {
+  "at": "2026-10-20T05:03:44+00:00",
+  "target": "drag:any",
+  "note": "Design note: A modest early build‑up of 1‑HP pirates forces the player to spread damage, then a late tall HP‑7 pirate appears in column 2 with no pre‑stacked cannons, making a simple drop‑only strateg",
+  "success": false,
+  "reason": "goal not met (winnable without ever dragging a placed cannon)"
  }
 ]
