@@ -5374,5 +5374,111 @@
    "needs_drag": null
   },
   "skill_goal": "breather"
+ },
+ "423": {
+  "level": {
+   "levelNumber": 423,
+   "password": "I9557",
+   "isHard": false,
+   "filas": [
+    {
+     "cuadros": [
+      {
+       "index": 0,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 1,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 0,
+       "tipo": 1,
+       "hp": 2
+      },
+      {
+       "index": 1,
+       "tipo": 1,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 3,
+       "tipo": 1,
+       "hp": 1
+      },
+      {
+       "index": 4,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 3,
+       "tipo": 1,
+       "hp": 2
+      },
+      {
+       "index": 4,
+       "tipo": 1,
+       "hp": 2
+      }
+     ]
+    },
+    {
+     "cuadros": [
+      {
+       "index": 2,
+       "tipo": 4,
+       "hp": 3
+      },
+      {
+       "index": 0,
+       "tipo": 1,
+       "hp": 1
+      }
+     ]
+    }
+   ]
+  },
+  "after": {
+   "champion_won": true,
+   "winnable": true,
+   "classification": "champion_win",
+   "naive_won": true,
+   "tension": 2,
+   "pacing": {
+    "filas": 5,
+    "pirates_per_fila": 2.0,
+    "single_pirate_share": 0.0,
+    "late_demand": 1.2,
+    "archetypes": [
+     "switch",
+     "swarm",
+     "wall",
+     "crescendo"
+    ],
+    "primary": "switch",
+    "problems": []
+   },
+   "primary": "switch",
+   "pirates": 10,
+   "filas": 5,
+   "max_hp": 3,
+   "needs_drag": null
+  },
+  "skill_goal": "breather"
  }
 }
