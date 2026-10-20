@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:40:58+00:00",
-  "target": "burst",
-  "note": "**Design note:** The level starts with three calm, single‑pirate waves that let the player build up and merge cannons, then erupts in three consecutive full‑column bursts of 1‑HP pirates that test the",
-  "success": false,
-  "reason": "not better than the regulator's version (archetype swarm != burst)"
- },
- {
   "at": "2026-09-30T00:41:02+00:00",
   "target": "crescendo",
   "note": "Design note: The level builds a gentle start with isolated 1‑HP pirates, then adds modest multi‑column waves to let the player accumulate and merge cannons, before culminating in a dense, high‑HP fina",
@@ -1396,6 +1389,13 @@
   "at": "2026-10-20T05:02:57+00:00",
   "target": "breather:burst",
   "note": "Design note: A calm two‑round start with single pirates builds a small reserve, then a sudden four‑pirate burst forces the player to split damage, followed by a brief finale that still leaves a safe w",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses), archetype crescendo != burst)"
+ },
+ {
+  "at": "2026-10-20T05:03:16+00:00",
+  "target": "breather:burst",
+  "note": "Design note: A gentle two‑round start builds a small damage pool, then a sudden four‑pirate burst forces the player to spread cannons before a brief mixed finale wraps up the breather.",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses), archetype crescendo != burst)"
  }
