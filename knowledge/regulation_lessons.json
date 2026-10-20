@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:47:17+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level starts with a lone low‑HP pirate to let the player safely build cannon damage, then gradually adds more columns and higher‑HP pirates, culminating in the last third with multipl",
-  "success": true,
-  "reason": "fitness 1000 -> 1012, archetype crescendo"
- },
- {
   "at": "2026-09-30T00:47:38+00:00",
   "target": "crescendo",
   "note": "Design note: The level starts with isolated 1‑HP pirates to let the player safely build cannon damage, then gradually adds more columns and 2‑HP foes, culminating in a dense final wave with multiple 2",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A short 5‑round swarm breather that floods the board with many HP‑1 pirates across all columns each wave and ends with a single modest HP‑3 pirate, keeping the total threat low enough for",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
+ },
+ {
+  "at": "2026-10-20T05:07:24+00:00",
+  "target": "drag:any",
+  "note": "Design note: Build early damage in columns 0 and 1, then introduce a late HP‑9 pirate in column 2 with no pre‑stacked cannons, forcing the player to drag a high‑damage cannon from column 0 or 1 to fin",
+  "success": false,
+  "reason": "goal not met (winnable without ever dragging a placed cannon)"
  }
 ]
