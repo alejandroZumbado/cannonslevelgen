@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:46:36+00:00",
-  "target": "crescendo",
-  "note": "Design note: The level begins with lone 1‑HP pirates so the player can safely stack cannon damage, then introduces paired columns with 2‑HP foes that force early merges, and finishes with a dense fina",
-  "success": false,
-  "reason": "more pacing problems than the current version (0 -> 1: 60% of rounds have a single pirate (max 50%) — spread the threat over several pirates/columns)"
- },
- {
   "at": "2026-09-30T00:47:03+00:00",
   "target": "crescendo",
   "note": "Design note: The level opens with isolated 1‑HP pirates to let the player safely accumulate cannon damage, then introduces paired 2‑HP threats that require early merges, and culminates in a dense fina",
@@ -1398,5 +1391,12 @@
   "note": "Design note: Build damage in columns 0 and 1 during the first six waves, then spawn a tall HP‑9 pirate in column 2 on wave 7 (with no pre‑stacked damage there), forcing the player to drag the high‑dam",
   "success": true,
   "reason": "drag goal met, archetype wall, naive_won False"
+ },
+ {
+  "at": "2026-10-20T05:06:34+00:00",
+  "target": "breather:swarm",
+  "note": "Design note: A short 5‑round swarm breather that spreads low‑HP pirates across all columns each wave, ending with a single tougher HP‑3 pirate to give a tiny spike without requiring dragging.",
+  "success": false,
+  "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses))"
  }
 ]
