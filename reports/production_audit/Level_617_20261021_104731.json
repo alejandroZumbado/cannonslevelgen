@@ -1,0 +1,26 @@
+{
+  "levelNumber": 617,
+  "password": "G7952",
+  "generated_at": "2026-10-21T10:47:31+00:00",
+  "champion_classification": "solved_by_search_only",
+  "champion_difficulty_score": 111.0,
+  "champion_rounds_played": 10,
+  "baseline_won": false,
+  "baseline_rounds_played": 9,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": false,
+  "pacing": {
+    "filas": 8,
+    "pirates_per_fila": 2.0,
+    "single_pirate_share": 0.5,
+    "late_demand": 1.19,
+    "archetypes": [
+      "crescendo",
+      "burst",
+      "switch",
+      "swarm"
+    ],
+    "primary": "crescendo",
+    "problems": []
+  }
+}
