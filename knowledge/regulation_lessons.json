@@ -1,12 +1,5 @@
 [
  {
-  "at": "2026-09-30T00:48:50+00:00",
-  "target": "crescendo",
-  "note": "Design note: A gentle start with single low‑HP pirates lets the player build cannon damage, then the final third ramps up both the number of columns used and the HP of pirates for a tense, crescendo c",
-  "success": true,
-  "reason": "fitness 1000 -> 1024, archetype crescendo"
- },
- {
   "at": "2026-09-30T00:49:06+00:00",
   "target": "burst",
   "note": "Design note: A calm opening with one‑pirate rows lets the player safely accumulate cannon damage, then a sudden burst of five pirates across all columns (including a high‑HP blocker) forces the player",
@@ -1398,5 +1391,12 @@
   "note": "Design note: A 5‑round breather that piles low‑HP pirates on the left (columns 0‑1) for two waves, then shifts the threat to the right (columns 3‑4) for the remaining waves, with a lone mid‑column pir",
   "success": false,
   "reason": "goal not met (not winnable by the trained AI, too hard for a breather (the naive player loses), archetype swarm != switch)"
+ },
+ {
+  "at": "2026-10-21T01:41:07+00:00",
+  "target": "breather:switch",
+  "note": "Design note: A short 5‑round breather that first piles low‑HP pirates in columns 0‑1, then shifts the pressure to columns 3‑4, ending with a mixed but still easy final wave, encouraging the player to ",
+  "success": true,
+  "reason": "breather goal met, archetype swarm, naive_won True"
  }
 ]
