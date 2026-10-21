@@ -1,10 +1,10 @@
 # Release gate — GO
 
-_2026-10-20T22:12:42+00:00_
+_2026-10-21T17:45:01+00:00_
 
 ## Warnings
 - [batches] 491 of 500 already-deployed positions changed level (first: position 2) — players' saved progress would point elsewhere (allowed only because the game isn't published)
-- [live] live WebGL built 2026-10-01 21:11 but levels changed 2026-10-19 21:06 — site serves the old campaign
+- [live] live WebGL built 2026-10-01 21:11 but levels changed 2026-10-21 11:32 — site serves the old campaign
 
 ## levels
 ```json
@@ -39,7 +39,7 @@ null
 ```json
 {
  "built_at": "2026-10-01T21:11:26-06:00",
- "levels_changed_at": "2026-10-19T21:06:16-06:00",
+ "levels_changed_at": "2026-10-21T11:32:17-06:00",
  "stale": true
 }
 ```
@@ -52,11 +52,11 @@ null
 ## forecast
 ```json
 {
- "daily_levels_last_days": 19,
+ "daily_levels_last_days": 22,
  "days": 14,
- "expected_next_week": 9.5,
- "reserve_levels": 111,
- "reserve_pacing_ok": 110,
+ "expected_next_week": 11.0,
+ "reserve_levels": 114,
+ "reserve_pacing_ok": 113,
  "weeks_to_next_batch_from_daily_bot": 0.0
 }
 ```
