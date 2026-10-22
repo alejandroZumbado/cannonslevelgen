@@ -1,10 +1,9 @@
-# Release gate — GO
+# Release gate — HOLD
 
-_2026-10-21T17:45:01+00:00_
+_2026-10-22T01:03:15+00:00_
 
-## Warnings
-- [batches] 491 of 500 already-deployed positions changed level (first: position 2) — players' saved progress would point elsewhere (allowed only because the game isn't published)
-- [live] live WebGL built 2026-10-01 21:11 but levels changed 2026-10-21 11:32 — site serves the old campaign
+## HOLD
+- [batches] nothing new to ship since the last deploy
 
 ## levels
 ```json
@@ -24,8 +23,8 @@ _2026-10-21T17:45:01+00:00_
  "deployed": 500,
  "current": 500,
  "new": 0,
- "moved_positions": 491,
- "deployed_at": "2026-10-02T03:11:37+00:00",
+ "moved_positions": 0,
+ "deployed_at": "2026-10-21T17:48:59+00:00",
  "snapshot_derived": false
 }
 ```
@@ -38,9 +37,9 @@ null
 ## build
 ```json
 {
- "built_at": "2026-10-01T21:11:26-06:00",
+ "built_at": "2026-10-21T11:48:48-06:00",
  "levels_changed_at": "2026-10-21T11:32:17-06:00",
- "stale": true
+ "stale": false
 }
 ```
 
