@@ -1,0 +1,25 @@
+{
+  "levelNumber": 618,
+  "password": "X7792",
+  "generated_at": "2026-10-22T10:47:50+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 12.73,
+  "champion_rounds_played": 8,
+  "baseline_won": false,
+  "baseline_rounds_played": 6,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 6,
+    "pirates_per_fila": 2.17,
+    "single_pirate_share": 0.33,
+    "late_demand": 1.38,
+    "archetypes": [
+      "switch",
+      "wall",
+      "swarm"
+    ],
+    "primary": "switch",
+    "problems": []
+  }
+}
