@@ -1,0 +1,24 @@
+{
+  "levelNumber": 623,
+  "password": "K8392",
+  "generated_at": "2026-10-23T10:41:40+00:00",
+  "champion_classification": "solved_by_search_only",
+  "champion_difficulty_score": 109.0,
+  "champion_rounds_played": 9,
+  "baseline_won": false,
+  "baseline_rounds_played": 3,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 7,
+    "pirates_per_fila": 1.57,
+    "single_pirate_share": 0.43,
+    "late_demand": 0.83,
+    "archetypes": [
+      "wall",
+      "swarm"
+    ],
+    "primary": "wall",
+    "problems": []
+  }
+}
