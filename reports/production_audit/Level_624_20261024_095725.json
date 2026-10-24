@@ -1,0 +1,25 @@
+{
+  "levelNumber": 624,
+  "password": "V1980",
+  "generated_at": "2026-10-24T09:57:25+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 12.83,
+  "champion_rounds_played": 9,
+  "baseline_won": false,
+  "baseline_rounds_played": 6,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 7,
+    "pirates_per_fila": 1.71,
+    "single_pirate_share": 0.43,
+    "late_demand": 1.15,
+    "archetypes": [
+      "crescendo",
+      "tank",
+      "wall"
+    ],
+    "primary": "crescendo",
+    "problems": []
+  }
+}
