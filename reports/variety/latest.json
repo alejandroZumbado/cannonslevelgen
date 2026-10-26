@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-20T02:48:43+00:00",
+  "generated_at": "2026-10-26T14:56:42+00:00",
   "release_size": 500,
   "pacing_pass": 500,
   "primary_archetypes": {
-    "wall": 117,
-    "crescendo": 107,
+    "wall": 116,
+    "crescendo": 106,
     "swarm": 137,
-    "burst": 85,
-    "switch": 54
+    "burst": 86,
+    "switch": 55
   },
   "repetitive_arcs": [],
   "pacing_failures": [],
@@ -33,7 +33,7 @@
   "challenge_mix": {
     "drag_share": {
       "1-100": 0.02,
-      "101-200": 0.13,
+      "101-200": 0.14,
       "201-300": 0.19,
       "301-400": 0.26,
       "401-500": 0.34
