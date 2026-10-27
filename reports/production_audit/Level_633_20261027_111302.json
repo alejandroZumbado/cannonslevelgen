@@ -1,0 +1,26 @@
+{
+  "levelNumber": 633,
+  "password": "U2019",
+  "generated_at": "2026-10-27T11:13:02+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 13.11,
+  "champion_rounds_played": 8,
+  "baseline_won": false,
+  "baseline_rounds_played": 7,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": false,
+  "pacing": {
+    "filas": 7,
+    "pirates_per_fila": 2.14,
+    "single_pirate_share": 0.43,
+    "late_demand": 1.33,
+    "archetypes": [
+      "burst",
+      "swarm",
+      "switch",
+      "wall"
+    ],
+    "primary": "burst",
+    "problems": []
+  }
+}
