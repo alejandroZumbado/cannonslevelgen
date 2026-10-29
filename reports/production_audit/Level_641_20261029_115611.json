@@ -1,0 +1,28 @@
+{
+  "levelNumber": 641,
+  "password": "C2820",
+  "generated_at": "2026-10-29T11:56:11+00:00",
+  "champion_classification": "solved_by_search_only",
+  "champion_difficulty_score": 111.5,
+  "champion_rounds_played": 10,
+  "baseline_won": false,
+  "baseline_rounds_played": 4,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 8,
+    "pirates_per_fila": 2.12,
+    "single_pirate_share": 0.38,
+    "late_demand": 1.12,
+    "archetypes": [
+      "burst",
+      "crescendo",
+      "wall",
+      "switch",
+      "swarm",
+      "tank"
+    ],
+    "primary": "burst",
+    "problems": []
+  }
+}
