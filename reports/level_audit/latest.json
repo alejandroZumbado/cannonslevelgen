@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T15:05:54+00:00",
+  "generated_at": "2026-11-02T18:07:08+00:00",
   "policy_name": "kill_priority_two_step_lookahead_fixed_plus_next_kill_better_coverage_reserve",
   "policy_source_chars": 8946,
   "escalation_beam_widths": [
@@ -9,7 +9,7 @@
   ],
   "max_rounds": 60,
   "total_levels": 614,
-  "elapsed_seconds": 293.8,
+  "elapsed_seconds": 293.6,
   "counts": {
     "champion_win": 564,
     "solved_by_search_only": 49,
@@ -9843,10 +9843,10 @@
   ],
   "comparison_to_previous_run": {
     "has_previous": true,
-    "previous_generated_at": "2026-10-19T15:27:52+00:00",
+    "previous_generated_at": "2026-10-26T15:05:54+00:00",
     "previous_counts": {
-      "champion_win": 562,
-      "solved_by_search_only": 42,
+      "champion_win": 564,
+      "solved_by_search_only": 49,
       "no_win_found": 1
     },
     "current_counts": {
@@ -9854,15 +9854,7 @@
       "solved_by_search_only": 49,
       "no_win_found": 1
     },
-    "newly_champion_win": [
-      405
-    ],
-    "regressed_from_champion_win": [
-      66,
-      103,
-      117,
-      149,
-      369
-    ]
+    "newly_champion_win": [],
+    "regressed_from_champion_win": []
   }
 }
