@@ -1,0 +1,26 @@
+{
+  "levelNumber": 654,
+  "password": "S4555",
+  "generated_at": "2026-11-03T13:11:16+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 11.7,
+  "champion_rounds_played": 7,
+  "baseline_won": false,
+  "baseline_rounds_played": 5,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": false,
+  "pacing": {
+    "filas": 5,
+    "pirates_per_fila": 2.2,
+    "single_pirate_share": 0.4,
+    "late_demand": 2.2,
+    "archetypes": [
+      "crescendo",
+      "burst",
+      "swarm",
+      "wall"
+    ],
+    "primary": "crescendo",
+    "problems": []
+  }
+}
