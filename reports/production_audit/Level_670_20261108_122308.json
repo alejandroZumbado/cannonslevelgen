@@ -1,0 +1,25 @@
+{
+  "levelNumber": 670,
+  "password": "J3462",
+  "generated_at": "2026-11-08T12:23:08+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 15.06,
+  "champion_rounds_played": 11,
+  "baseline_won": false,
+  "baseline_rounds_played": 8,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 9,
+    "pirates_per_fila": 2.0,
+    "single_pirate_share": 0.0,
+    "late_demand": 1.01,
+    "archetypes": [
+      "wall",
+      "crescendo",
+      "swarm"
+    ],
+    "primary": "wall",
+    "problems": []
+  }
+}
