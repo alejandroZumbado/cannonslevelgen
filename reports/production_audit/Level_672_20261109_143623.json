@@ -1,0 +1,25 @@
+{
+  "levelNumber": 672,
+  "password": "F9595",
+  "generated_at": "2026-11-09T14:36:23+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 17.1,
+  "champion_rounds_played": 11,
+  "baseline_won": false,
+  "baseline_rounds_played": 6,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": false,
+  "pacing": {
+    "filas": 10,
+    "pirates_per_fila": 2.8,
+    "single_pirate_share": 0.1,
+    "late_demand": 1.04,
+    "archetypes": [
+      "swarm",
+      "wall",
+      "burst"
+    ],
+    "primary": "swarm",
+    "problems": []
+  }
+}
