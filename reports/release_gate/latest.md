@@ -1,9 +1,12 @@
 # Release gate — HOLD
 
-_2026-10-28T20:09:40+00:00_
+_2026-11-13T00:25:18+00:00_
 
 ## HOLD
 - [batches] nothing new to ship since the last deploy
+
+## Warnings
+- [live] live WebGL built 2026-10-28 14:12 but levels changed 2026-11-12 12:28 — site serves the old campaign
 
 ## levels
 ```json
@@ -24,7 +27,7 @@ _2026-10-28T20:09:40+00:00_
  "current": 500,
  "new": 0,
  "moved_positions": 0,
- "deployed_at": "2026-10-22T01:06:37+00:00",
+ "deployed_at": "2026-10-28T20:12:49+00:00",
  "snapshot_derived": false
 }
 ```
@@ -37,9 +40,9 @@ null
 ## build
 ```json
 {
- "built_at": "2026-10-21T19:06:28-06:00",
- "levels_changed_at": "2026-10-21T11:32:17-06:00",
- "stale": false
+ "built_at": "2026-10-28T14:12:41-06:00",
+ "levels_changed_at": "2026-11-12T12:28:31-06:00",
+ "stale": true
 }
 ```
 
@@ -51,11 +54,11 @@ null
 ## forecast
 ```json
 {
- "daily_levels_last_days": 34,
+ "daily_levels_last_days": 39,
  "days": 14,
- "expected_next_week": 17.0,
- "reserve_levels": 135,
- "reserve_pacing_ok": 134,
+ "expected_next_week": 19.5,
+ "reserve_levels": 180,
+ "reserve_pacing_ok": 179,
  "weeks_to_next_batch_from_daily_bot": 0.0
 }
 ```
