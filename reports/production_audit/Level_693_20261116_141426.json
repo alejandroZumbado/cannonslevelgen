@@ -1,0 +1,24 @@
+{
+  "levelNumber": 693,
+  "password": "A6060",
+  "generated_at": "2026-11-16T14:14:26+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 11.4,
+  "champion_rounds_played": 7,
+  "baseline_won": false,
+  "baseline_rounds_played": 5,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": false,
+  "pacing": {
+    "filas": 5,
+    "pirates_per_fila": 2.2,
+    "single_pirate_share": 0.2,
+    "late_demand": 1.4,
+    "archetypes": [
+      "swarm",
+      "wall"
+    ],
+    "primary": "swarm",
+    "problems": []
+  }
+}
