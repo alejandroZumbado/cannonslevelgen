@@ -1,0 +1,26 @@
+{
+  "levelNumber": 699,
+  "password": "A0581",
+  "generated_at": "2026-11-18T14:44:10+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 13.63,
+  "champion_rounds_played": 8,
+  "baseline_won": false,
+  "baseline_rounds_played": 4,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 6,
+    "pirates_per_fila": 1.83,
+    "single_pirate_share": 0.33,
+    "late_demand": 1.43,
+    "archetypes": [
+      "tank",
+      "wall",
+      "crescendo",
+      "swarm"
+    ],
+    "primary": "tank",
+    "problems": []
+  }
+}
