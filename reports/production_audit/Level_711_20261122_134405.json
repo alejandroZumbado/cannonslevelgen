@@ -1,0 +1,28 @@
+{
+  "levelNumber": 711,
+  "password": "V4318",
+  "generated_at": "2026-11-22T13:44:05+00:00",
+  "champion_classification": "champion_win",
+  "champion_difficulty_score": 14.76,
+  "champion_rounds_played": 11,
+  "baseline_won": false,
+  "baseline_rounds_played": 6,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 9,
+    "pirates_per_fila": 2.0,
+    "single_pirate_share": 0.44,
+    "late_demand": 1.17,
+    "archetypes": [
+      "switch",
+      "wall",
+      "burst",
+      "crescendo",
+      "swarm",
+      "tank"
+    ],
+    "primary": "switch",
+    "problems": []
+  }
+}
