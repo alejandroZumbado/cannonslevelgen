@@ -1,0 +1,26 @@
+{
+  "levelNumber": 716,
+  "password": "T4565",
+  "generated_at": "2026-11-23T16:48:21+00:00",
+  "champion_classification": "solved_by_search_only",
+  "champion_difficulty_score": 111.0,
+  "champion_rounds_played": 8,
+  "baseline_won": false,
+  "baseline_rounds_played": 6,
+  "difficulty_tag": "requires_learned_strategy",
+  "needs_drag": true,
+  "pacing": {
+    "filas": 6,
+    "pirates_per_fila": 2.67,
+    "single_pirate_share": 0.0,
+    "late_demand": 1.63,
+    "archetypes": [
+      "swarm",
+      "crescendo",
+      "burst",
+      "wall"
+    ],
+    "primary": "swarm",
+    "problems": []
+  }
+}
